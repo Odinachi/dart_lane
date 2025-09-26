@@ -12,61 +12,68 @@ class DashboardScreen extends StatefulWidget {
   State<DashboardScreen> createState() => _DashboardScreenState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> {
+class _DashboardScreenState extends State<DashboardScreen>
+    with TickerProviderStateMixin {
+  late TabController tabController;
+  @override
+  void initState() {
+    super.initState();
+    tabController = TabController(length: 4, vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 4,
-      child: Scaffold(
-        bottomSheet: Container(
-          height: 70.h,
-          padding: EdgeInsets.only(bottom: 5.h),
-          decoration: BoxDecoration(
-            color: Theme.of(context).scaffoldBackgroundColor,
-            boxShadow: [
-              BoxShadow(
-                color: AppColors.grey.withValues(alpha: 0.05),
-                blurRadius: 10,
-                offset: const Offset(0, -5),
-              ),
-            ],
-          ),
-          child: SafeArea(
-            child: TabBar(
-              tabs: [
-                navItem(
-                    label: AppString.home,
-                    icon: Assets.svgs.home,
-                    isActive: true),
-                navItem(
-                    label: AppString.courses,
-                    icon: Assets.svgs.course,
-                    isActive: true),
-                navItem(
-                    label: AppString.editor,
-                    icon: Assets.svgs.editor,
-                    isActive: true),
-                navItem(
-                    label: AppString.profile,
-                    icon: Assets.svgs.person,
-                    isActive: true),
-              ],
-              indicatorColor: Colors.transparent,
-              dividerColor: Colors.transparent,
-              indicator: BoxDecoration(),
+    return Scaffold(
+      bottomSheet: Container(
+        height: 70.h,
+        padding: EdgeInsets.only(bottom: 5.h),
+        decoration: BoxDecoration(
+          color: Theme.of(context).scaffoldBackgroundColor,
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.grey.withValues(alpha: 0.05),
+              blurRadius: 10,
+              offset: const Offset(0, -5),
             ),
+          ],
+        ),
+        child: SafeArea(
+          child: TabBar(
+            onTap: (value) => setState(() {}),
+            controller: tabController,
+            tabs: [
+              navItem(
+                  label: AppString.home,
+                  icon: Assets.svgs.home,
+                  isActive: tabController.index == 0),
+              navItem(
+                  label: AppString.courses,
+                  icon: Assets.svgs.course,
+                  isActive: tabController.index == 1),
+              navItem(
+                  label: AppString.editor,
+                  icon: Assets.svgs.editor,
+                  isActive: tabController.index == 2),
+              navItem(
+                  label: AppString.profile,
+                  icon: Assets.svgs.person,
+                  isActive: tabController.index == 3),
+            ],
+            indicatorColor: Colors.transparent,
+            dividerColor: Colors.transparent,
+            indicator: BoxDecoration(),
           ),
         ),
-        appBar: AppBar(
-          title: Text("Dashboard"),
-        ),
-        body: TabBarView(children: [
-          HomeScreen(),
-          SizedBox(),
-          SizedBox(),
-          SizedBox(),
-        ]),
       ),
+      appBar: AppBar(
+        title: Text("Dashboard"),
+      ),
+      body: TabBarView(children: [
+        HomeScreen(),
+        SizedBox(),
+        SizedBox(),
+        SizedBox(),
+      ], controller: tabController),
     );
   }
 
