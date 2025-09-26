@@ -9,6 +9,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "76.0.0"
+  _flutterfire_internals:
+    dependency: transitive
+    description:
+      name: _flutterfire_internals
+      sha256: "23d16f00a2da8ffa997c782453c73867b0609bd90435195671a54de38a3566df"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.62"
   _macros:
     dependency: transitive
     description: dart
@@ -199,6 +207,94 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.0.1"
+  firebase_analytics:
+    dependency: "direct main"
+    description:
+      name: firebase_analytics
+      sha256: fce78440ab7b95563054039aac5e342088efed9dc009ac6f81d5cac07155d509
+      url: "https://pub.dev"
+    source: hosted
+    version: "12.0.2"
+  firebase_analytics_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_analytics_platform_interface
+      sha256: "75bdcd2d2635c4cdcd7ec13727527751ddf2f9933e5bf1264a2387920246f3c5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.2"
+  firebase_analytics_web:
+    dependency: transitive
+    description:
+      name: firebase_analytics_web
+      sha256: ed5767695b131cdd425ee6d49934dca80689d9df40609c0d0aa8907ee6f0f785
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.0+2"
+  firebase_auth:
+    dependency: "direct main"
+    description:
+      name: firebase_auth
+      sha256: "735f857c9363376eeb585e7ba57e67e5f495202cd3f609902b8769795fd823bc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.0"
+  firebase_auth_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_auth_platform_interface
+      sha256: "5badda0ea5048ffbb1726169cf5530539490de8055c3bd43f4f9cd5fcef8e556"
+      url: "https://pub.dev"
+    source: hosted
+    version: "8.1.2"
+  firebase_auth_web:
+    dependency: transitive
+    description:
+      name: firebase_auth_web
+      sha256: "07c889d2c56e648ed30225e819801d7e45542747a658d9c385520de35d312dec"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.0.3"
+  firebase_core:
+    dependency: "direct main"
+    description:
+      name: firebase_core
+      sha256: "4dd96f05015c0dcceaa47711394c32971aee70169625d5e2477e7676c01ce0ee"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.1"
+  firebase_core_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_core_platform_interface
+      sha256: "5873a370f0d232918e23a5a6137dbe4c2c47cf017301f4ea02d9d636e52f60f0"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.0.1"
+  firebase_core_web:
+    dependency: transitive
+    description:
+      name: firebase_core_web
+      sha256: "61a51037312dac781f713308903bb7a1762a7f92f7bc286a3a0947fb2a713b82"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.1"
+  firebase_crashlytics:
+    dependency: "direct main"
+    description:
+      name: firebase_crashlytics
+      sha256: a636096df0d2a4bc72397bfc669a4fffc8896016a58de1a6f45a49d9ba064f94
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.2"
+  firebase_crashlytics_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_crashlytics_platform_interface
+      sha256: "1ccad077a6fc7bace97d8eace263f42e66dc23a23a839de864a4f10ac4a7c264"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.8.13"
   flutter:
     dependency: "direct main"
     description: flutter
