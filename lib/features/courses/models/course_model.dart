@@ -6,6 +6,7 @@ class CourseModel {
   final bool? canPractice;
   final bool? isCourse;
   final bool? completed;
+  final List<String>? videos;
 
   CourseModel({
     this.title,
@@ -15,6 +16,7 @@ class CourseModel {
     this.canPractice = true,
     this.isCourse = true,
     this.completed = false,
+    this.videos,
   });
 
   factory CourseModel.fromJson(Map<String, dynamic> json) => CourseModel(
@@ -25,6 +27,7 @@ class CourseModel {
         canPractice: json["canPractice"],
         isCourse: json["isCourse"],
         completed: json["completed"],
+        videos: List<String>.from(json["videos"] ?? []),
       );
 
   Map<String, dynamic> toJson() => {
@@ -35,5 +38,6 @@ class CourseModel {
         "canPractice": canPractice,
         "isCourse": isCourse,
         "completed": completed,
+        "videos": videos,
       };
 }

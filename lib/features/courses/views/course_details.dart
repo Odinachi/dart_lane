@@ -6,8 +6,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 
-import '../features/courses/models/course_model.dart';
-import '../main.dart';
+import '../models/course_model.dart';
+import '../../../main.dart';
 
 class CourseDetails extends StatefulWidget {
   const CourseDetails({super.key, this.arg});
@@ -43,7 +43,7 @@ class _CourseDetailsState extends State<CourseDetails> {
   @override
   void initState() {
     super.initState();
-    loadData(courseNotifier.value);
+    loadData(widget.arg?.course ?? courseNotifier.value);
     showNav.value = false;
   }
 

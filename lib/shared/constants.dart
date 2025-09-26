@@ -11,7 +11,10 @@ class AppData {
           title: "Introduction",
           path: "assets/courses/main.md",
           id: 0,
-          desc: "Introduction to Dart programming language."),
+          desc: "Introduction to Dart programming language.",
+          videos: [
+            "https://www.youtube.com/watch?v=Gd97ql0gW9Q&list=PLeKQz1VjpjFqqXLvQ8rTnYxZcUqEGA0dm"
+          ]),
       CourseModel(
           title: "Variables and Data Types",
           path: "assets/courses/variables.md",
@@ -272,6 +275,3 @@ class AppButton extends StatelessWidget {
     );
   }
 }
-
-
-

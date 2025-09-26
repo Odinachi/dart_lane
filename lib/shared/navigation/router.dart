@@ -3,7 +3,7 @@ import 'package:dartcoder/features/dashboard/views/dashboard_screen.dart';
 import 'package:dartcoder/features/dashboard/views/home.dart';
 import 'package:dartcoder/features/editor/views/editor_screen.dart';
 import 'package:dartcoder/shared/theme.dart';
-import 'package:dartcoder/views/course_details.dart';
+import 'package:dartcoder/features/courses/views/course_details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

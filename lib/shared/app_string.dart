@@ -28,4 +28,6 @@ class AppString {
   static const String practice = "Practice";
   static const String takeQuiz = "Take Quiz";
   static const String previous = "Previous";
+
+  static const String videos = "Videos";
 }
