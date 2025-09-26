@@ -1,9 +1,14 @@
+import 'package:dartcoder/shared/app_string.dart';
+import 'package:dartcoder/shared/constants.dart';
+import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AnimatedBottomNav extends StatefulWidget {
   final bool isVisible;
   final VoidCallback onPrevious;
   final VoidCallback onEditor;
+  final VoidCallback onQuiz;
   final VoidCallback onNext;
 
   const AnimatedBottomNav({
@@ -12,6 +17,7 @@ class AnimatedBottomNav extends StatefulWidget {
     required this.onPrevious,
     required this.onEditor,
     required this.onNext,
+    required this.onQuiz,
   });
 
   @override
@@ -29,41 +35,59 @@ class _AnimatedBottomNavState extends State<AnimatedBottomNav> {
         duration: const Duration(milliseconds: 450),
         opacity: widget.isVisible ? 1.0 : 0.0,
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.only(
+            bottom: 10.h,
+          ),
           child: SafeArea(
-            child: Container(
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Theme.of(context)
-                        .textTheme
-                        .bodyLarge!
-                        .color!
-                        .withOpacity(.2),
-                    spreadRadius: 1,
-                    blurRadius: 5,
-                  )
-                ],
-                borderRadius: BorderRadius.circular(20),
-                color: Theme.of(context).scaffoldBackgroundColor,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  TextButton(
-                    onPressed: widget.onPrevious,
-                    child: const Text("Previous"),
-                  ),
-                  TextButton(
-                    onPressed: widget.onEditor,
-                    child: const Text("Editor"),
-                  ),
-                  TextButton(
-                    onPressed: widget.onNext,
-                    child: const Text("Next"),
-                  ),
-                ],
-              ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(height: 10.h),
+                Row(
+                  children: [
+                    Expanded(
+                      child: AppButton(
+                        onTap: widget.onPrevious,
+                        text: AppString.previous,
+                        backgroundColor:
+                            AppColors.appBlue.withValues(alpha: 0.2),
+                        textColor: AppColors.appBlue,
+                      ),
+                    ),
+                    SizedBox(width: 15.w),
+                    Expanded(
+                      child: AppButton(
+                        onTap: widget.onNext,
+                        text: AppString.nextCourse,
+                        textColor: AppColors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10.h),
+                Row(
+                  children: [
+                    Expanded(
+                      child: AppButton(
+                        backgroundColor:
+                            AppColors.appBlue.withValues(alpha: 0.2),
+                        textColor: AppColors.appBlue,
+                        onTap: widget.onEditor,
+                        text: AppString.practice,
+                      ),
+                    ),
+                    SizedBox(width: 15.w),
+                    Expanded(
+                      child: AppButton(
+                        backgroundColor: AppColors.grey.withValues(alpha: 0.2),
+                        textColor: AppColors.grey,
+                        onTap: widget.onQuiz,
+                        text: AppString.takeQuiz,
+                      ),
+                    ),
+                  ],
+                )
+              ],
             ),
           ),
         ),

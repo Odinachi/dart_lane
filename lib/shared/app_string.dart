@@ -24,4 +24,8 @@ class AppString {
       "Start your journey into Dart programming language.";
 
   static const String dashboard = "Dashboard";
+  static const String nextCourse = "Next course";
+  static const String practice = "Practice";
+  static const String takeQuiz = "Take Quiz";
+  static const String previous = "Previous";
 }
