@@ -22,6 +22,10 @@ class AssetsSvgs {
 
   SvgImage get apple => const SvgImage("assets/svgs/apple.svg");
   SvgImage get google => const SvgImage("assets/svgs/google.svg");
+  SvgImage get course => const SvgImage("assets/svgs/course.svg");
+  SvgImage get home => const SvgImage("assets/svgs/home.svg");
+  SvgImage get editor => const SvgImage("assets/svgs/editor.svg");
+  SvgImage get person => const SvgImage("assets/svgs/person.svg");
 }
 
 class Assets {

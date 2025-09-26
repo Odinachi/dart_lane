@@ -11,9 +11,15 @@ final ThemeData lightTheme = ThemeData(
     bodyMedium:
         TextStyle(color: AppColors.blackText, fontFamily: "SpaceGrotesk"),
   ),
-  appBarTheme: const AppBarTheme(
-    backgroundColor: AppColors.appBlue,
-    foregroundColor: Colors.white,
+  appBarTheme: AppBarTheme(
+    backgroundColor: Colors.white,
+    foregroundColor: AppColors.blackText,
+    centerTitle: true,
+    elevation: 5,
+    shadowColor: AppColors.grey.withValues(alpha: 0.1),
+    surfaceTintColor: Colors.transparent,
+    titleTextStyle: const TextStyle(
+        color: AppColors.blackText, fontFamily: "SpaceGrotesk", fontSize: 20),
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
@@ -45,10 +51,15 @@ final darkTheme = ThemeData(
     bodyLarge: TextStyle(color: AppColors.white, fontFamily: "SpaceGrotesk"),
     bodyMedium: TextStyle(color: AppColors.white, fontFamily: "SpaceGrotesk"),
   ),
-  appBarTheme: const AppBarTheme(
-    backgroundColor: Colors.blueGrey,
-    foregroundColor: Colors.white,
-  ),
+  appBarTheme: AppBarTheme(
+      elevation: 5,
+      shadowColor: AppColors.grey.withValues(alpha: 0.1),
+      backgroundColor: AppColors.appGrey,
+      foregroundColor: Colors.white,
+      centerTitle: true,
+      surfaceTintColor: Colors.transparent,
+      titleTextStyle: const TextStyle(
+          color: Colors.white, fontFamily: "SpaceGrotesk", fontSize: 20)),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       backgroundColor: Colors.blueGrey,
@@ -80,5 +91,3 @@ class AppColors {
   static const blackText = Color(0xff121727);
   static const appGrey = Color(0xff111C22);
 }
-
-

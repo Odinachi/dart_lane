@@ -2,6 +2,7 @@ import 'package:dartcoder/main.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
 import 'package:dartcoder/shared/constants.dart';
+import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -43,6 +44,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     height: 20.h,
                   ),
                   AppButton(
+                    onTap: () => AppRouter.push(AppRouter.dashboard),
                     textColor: AppColors.white,
                     backgroundColor: AppColors.black,
                     text: AppString.continueWithApple,

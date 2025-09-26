@@ -8,4 +8,8 @@ class AppString {
   static const String termsOfService = "Terms of Service ";
   static const String privacyPolicy = "Privacy Policy ";
   static const String andText = "and ";
+  static const String home = "Home";
+  static const String courses = "Courses";
+  static const String editor = "Editor";
+  static const String profile = "Profile";
 }

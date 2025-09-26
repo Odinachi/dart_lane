@@ -1,6 +1,6 @@
 import 'package:dartcoder/features/authetication/views/onboarding_screen.dart';
 import 'package:dartcoder/features/dashboard/views/dashboard_screen.dart';
-import 'package:dartcoder/views/home.dart';
+import 'package:dartcoder/features/dashboard/views/home.dart';
 import 'package:flutter/cupertino.dart';
 
 class AppRouter {
@@ -11,13 +11,16 @@ class AppRouter {
       case onboarding:
         return CupertinoPageRoute(builder: (_) => const OnboardingScreen());
 
+      case dashboard:
+        return CupertinoPageRoute(builder: (_) => const DashboardScreen());
+
       default:
-        return CupertinoPageRoute(builder: (_) => const HomeScreen());
+        return CupertinoPageRoute(builder: (_) => const OnboardingScreen());
     }
   }
 
-  static const String courseDetails = "/course_details";
   static const String onboarding = "/";
+  static const String dashboard = "/dashboard";
   static const String editor = "/editor";
 
   static Future push(String routeName, {Object? arg}) async =>
