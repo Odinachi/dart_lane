@@ -1,3 +1,4 @@
+import 'package:dartcoder/main.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
 import 'package:dartcoder/shared/constants.dart';
@@ -42,6 +43,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     height: 20.h,
                   ),
                   AppButton(
+                    textColor: AppColors.white,
                     backgroundColor: AppColors.black,
                     text: AppString.continueWithApple,
                     leftIcon: Assets.svgs.apple
@@ -59,9 +61,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                   SizedBox(height: 10.h),
                   AppButton(
-                    backgroundColor: Color(0xff12455E),
+                    backgroundColor: AppColors.appBlue.withValues(alpha: 0.2),
                     textColor: AppColors.appBlue,
-                    onTap: () {},
+                    onTap: () {
+                      isDarkTheme.value = !isDarkTheme.value;
+                      setState(() {});
+                      print("kkkkk");
+                    },
                     text: AppString.continueAsGuest,
                   ),
                 ],

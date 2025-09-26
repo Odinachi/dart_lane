@@ -204,24 +204,30 @@ class AppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: 40.h,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.r),
-          border: borderColor != null ? Border.all(color: borderColor!) : null,
-          color: backgroundColor ?? AppColors.appBlue),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          if (leftIcon != null) leftIcon!,
-          if (leftIcon != null) SizedBox(width: 10.w),
-          Text(
-            text,
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                fontSize: 14.sp, fontWeight: FontWeight.bold, color: textColor),
-          )
-        ],
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: double.infinity,
+        height: 40.h,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.r),
+            border:
+                borderColor != null ? Border.all(color: borderColor!) : null,
+            color: backgroundColor ?? AppColors.appBlue),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (leftIcon != null) leftIcon!,
+            if (leftIcon != null) SizedBox(width: 10.w),
+            Text(
+              text,
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.bold,
+                  color: textColor),
+            )
+          ],
+        ),
       ),
     );
   }
