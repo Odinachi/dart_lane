@@ -125,10 +125,12 @@ class _CourseDetailsState extends State<CourseDetails> {
                                 ],
                               ),
                             ),
-                            ...?courseNotifier.value.videos?.map((e) => Padding(
-                                  padding: EdgeInsets.only(bottom: 15.h),
-                                  child: CustomVideoPlayer(videoUrl: e),
-                                )),
+                            ...?courseNotifier.value.videos?.map(
+                              (e) => Padding(
+                                padding: EdgeInsets.only(bottom: 15.h),
+                                child: CustomVideoPlayer(videoUrl: e),
+                              ),
+                            ),
                             SizedBox(height: 200.h),
                           ]
                         ],
