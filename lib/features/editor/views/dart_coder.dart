@@ -193,7 +193,7 @@ class _EditorState extends State<Editor> with SingleTickerProviderStateMixin {
           },
           child: const Icon(Icons.arrow_back_ios),
         ),
-        title: const Text('Dart Lane'),
+        title: const Text('Dartic'),
         actions: [
           ValueListenableBuilder(
               valueListenable: editor.state,
