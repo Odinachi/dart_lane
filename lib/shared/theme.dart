@@ -5,6 +5,7 @@ final ThemeData lightTheme = ThemeData(
   primaryColor: AppColors.appBlue,
   dividerColor: Colors.blueGrey.withOpacity(.3),
   scaffoldBackgroundColor: Colors.white,
+  // secondaryHeaderColor: AppColors.grey,
   textTheme: const TextTheme(
     bodyLarge:
         TextStyle(color: AppColors.blackText, fontFamily: "SpaceGrotesk"),
@@ -24,7 +25,7 @@ final ThemeData lightTheme = ThemeData(
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       backgroundColor: AppColors.appBlue,
-      foregroundColor: Colors.white,
+      foregroundColor: AppColors.white,
     ),
   ),
   inputDecorationTheme: const InputDecorationTheme(
@@ -47,6 +48,7 @@ final darkTheme = ThemeData(
   brightness: Brightness.dark,
   primaryColor: Colors.blueGrey,
   scaffoldBackgroundColor: AppColors.appGrey,
+  secondaryHeaderColor: AppColors.black,
   textTheme: const TextTheme(
     bodyLarge: TextStyle(color: AppColors.white, fontFamily: "SpaceGrotesk"),
     bodyMedium: TextStyle(color: AppColors.white, fontFamily: "SpaceGrotesk"),
@@ -55,7 +57,7 @@ final darkTheme = ThemeData(
       elevation: 5,
       shadowColor: AppColors.grey.withValues(alpha: 0.1),
       backgroundColor: AppColors.appGrey,
-      foregroundColor: Colors.white,
+      foregroundColor: AppColors.white,
       centerTitle: true,
       surfaceTintColor: Colors.transparent,
       titleTextStyle: const TextStyle(
@@ -63,7 +65,7 @@ final darkTheme = ThemeData(
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       backgroundColor: Colors.blueGrey,
-      foregroundColor: Colors.white,
+      foregroundColor: AppColors.white,
     ),
   ),
   inputDecorationTheme: const InputDecorationTheme(

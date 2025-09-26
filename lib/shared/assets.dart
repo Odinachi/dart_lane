@@ -6,9 +6,11 @@ import 'package:lottie/lottie.dart';
 class AssetsImageFile {
   const AssetsImageFile();
   //sample
-  AssetImage get appImg => const AssetImage('assets/pngs/dartic.png');
+  AppAssetImage get appImg => const AppAssetImage('assets/pngs/dartic.png');
+  AppAssetImage get dart => const AppAssetImage('assets/pngs/dart.jpg');
+  AppAssetImage get dsa => const AppAssetImage('assets/pngs/dsa.jpg');
 
-  List<AssetImage> get values => [appImg];
+  List<AppAssetImage> get values => [appImg];
 }
 
 class AssetsJson {
@@ -36,8 +38,8 @@ class Assets {
   static const AssetsSvgs svgs = AssetsSvgs();
 }
 
-class AssetImage {
-  const AssetImage(this._assetName);
+class AppAssetImage {
+  const AppAssetImage(this._assetName);
 
   final String _assetName;
 
@@ -94,7 +96,7 @@ class AssetImage {
     );
   }
 
-  AssetImage provider() => AssetImage(_assetName);
+  AppAssetImage provider() => AppAssetImage(_assetName);
 
   String get path => _assetName;
 

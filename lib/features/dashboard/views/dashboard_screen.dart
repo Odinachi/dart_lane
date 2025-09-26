@@ -68,12 +68,15 @@ class _DashboardScreenState extends State<DashboardScreen>
       appBar: AppBar(
         title: Text("Dashboard"),
       ),
-      body: TabBarView(children: [
-        HomeScreen(),
-        SizedBox(),
-        SizedBox(),
-        SizedBox(),
-      ], controller: tabController),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
+        child: TabBarView(children: [
+          HomeScreen(),
+          SizedBox(),
+          SizedBox(),
+          SizedBox(),
+        ], controller: tabController),
+      ),
     );
   }
 
