@@ -11,12 +11,14 @@
 .svn/
 .swiftpm/
 migrate_working_dir/
+.firebase.json
 
 # IntelliJ related
 *.iml
 *.ipr
 *.iws
 .idea/
+lib/firebase_options.dart
 
 
 
