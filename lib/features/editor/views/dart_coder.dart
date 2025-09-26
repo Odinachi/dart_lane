@@ -254,31 +254,11 @@ class _EditorState extends State<Editor> with SingleTickerProviderStateMixin {
                 controller.text = baseCode;
               } else if (v == "format") {
                 controller.text = beautify(controller.text);
-              } else if (v == "theme") {
-                isDarkTheme.value = !isDarkTheme.value;
               }
             },
             itemBuilder: (BuildContext context) => <PopupMenuEntry>[
               const PopupMenuItem(value: "clear", child: Text('Clear')),
               const PopupMenuItem(value: "format", child: Text('Format')),
-              PopupMenuItem(
-                  value: "theme",
-                  child: ValueListenableBuilder(
-                      valueListenable: isDarkTheme,
-                      builder: (_, isDark, __) {
-                        return Row(
-                          children: [
-                            Icon(
-                              isDark ? Icons.sunny : Icons.dark_mode,
-                              color: isDark ? AppColors.white : AppColors.black,
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(left: 3.0),
-                              child: Text("Theme"),
-                            ),
-                          ],
-                        );
-                      })),
             ],
             child: const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),

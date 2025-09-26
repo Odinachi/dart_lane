@@ -63,21 +63,21 @@ class _DashboardScreenState extends State<DashboardScreen>
             ],
             indicatorColor: Colors.transparent,
             dividerColor: Colors.transparent,
-            indicator: BoxDecoration(),
+            indicator: const BoxDecoration(),
           ),
         ),
       ),
       body: Padding(
         padding: EdgeInsets.only(bottom: 60.h),
         child: TabBarView(
-            children: [
+            controller: tabController,
+            physics: const NeverScrollableScrollPhysics(),
+            children: const [
               HomeScreen(),
               SizedBox(),
               Editor(),
               SizedBox(),
-            ],
-            controller: tabController,
-            physics: const NeverScrollableScrollPhysics()),
+            ]),
       ),
     );
   }
