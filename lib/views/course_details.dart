@@ -109,6 +109,9 @@ class _CourseDetailsState extends State<CourseDetails> {
                                 if (item != null) {
                                   loadData(item);
                                 }
+                              } else {
+                                AppRouter.showMessage(
+                                    "This is the first course");
                               }
                             },
                             onEditor: () {
@@ -125,6 +128,9 @@ class _CourseDetailsState extends State<CourseDetails> {
                                 if (item != null) {
                                   loadData(item);
                                 }
+                              } else {
+                                AppRouter.showMessage(
+                                    "This is the last course");
                               }
                             },
                           ),
