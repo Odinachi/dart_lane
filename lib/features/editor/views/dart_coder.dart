@@ -10,17 +10,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_code_editor/flutter_code_editor.dart';
 import 'package:flutter_highlight/themes/atom-one-light.dart';
 import 'package:flutter_highlight/themes/nord.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:highlight/languages/dart.dart';
 
-class DartCompilerApp extends StatefulWidget {
-  const DartCompilerApp({super.key});
+class Editor extends StatefulWidget {
+  const Editor({super.key});
 
   @override
-  State<DartCompilerApp> createState() => _DartCompilerAppState();
+  State<Editor> createState() => _EditorState();
 }
 
-class _DartCompilerAppState extends State<DartCompilerApp>
-    with SingleTickerProviderStateMixin {
+class _EditorState extends State<Editor> with SingleTickerProviderStateMixin {
   final controller = CodeController(
     language: dart,
   );
@@ -291,7 +291,7 @@ class _DartCompilerAppState extends State<DartCompilerApp>
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10.0),
+        padding: EdgeInsets.only(top: 10.0, bottom: 10.h),
         child: Column(
           children: [
             Padding(

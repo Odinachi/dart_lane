@@ -1,3 +1,4 @@
+import 'package:dartcoder/features/editor/views/dart_coder.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
 import 'package:dartcoder/shared/theme.dart';
@@ -39,6 +40,7 @@ class _DashboardScreenState extends State<DashboardScreen>
         ),
         child: SafeArea(
           child: TabBar(
+            physics: const NeverScrollableScrollPhysics(),
             onTap: (value) => setState(() {}),
             controller: tabController,
             tabs: [
@@ -65,12 +67,18 @@ class _DashboardScreenState extends State<DashboardScreen>
           ),
         ),
       ),
-      body: TabBarView(children: [
-        HomeScreen(),
-        SizedBox(),
-        SizedBox(),
-        SizedBox(),
-      ], controller: tabController),
+      body: Padding(
+        padding: EdgeInsets.only(bottom: 60.h),
+        child: TabBarView(
+            children: [
+              HomeScreen(),
+              SizedBox(),
+              Editor(),
+              SizedBox(),
+            ],
+            controller: tabController,
+            physics: const NeverScrollableScrollPhysics()),
+      ),
     );
   }
 
