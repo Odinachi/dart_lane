@@ -66,7 +66,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     onTap: () {
                       isDarkTheme.value = !isDarkTheme.value;
                       setState(() {});
-                      print("kkkkk");
                     },
                     text: AppString.continueAsGuest,
                   ),
