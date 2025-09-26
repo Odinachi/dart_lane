@@ -1,0 +1,92 @@
+import 'package:dartcoder/shared/app_string.dart';
+import 'package:dartcoder/shared/constants.dart';
+import 'package:dartcoder/shared/theme.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class CoursesListScreen extends StatefulWidget {
+  const CoursesListScreen({super.key, this.title});
+  final String? title;
+
+  @override
+  State<CoursesListScreen> createState() => _CoursesListScreenState();
+}
+
+class _CoursesListScreenState extends State<CoursesListScreen> {
+  final coursesMap = AppData.courses;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title ?? AppString.dartCourse),
+      ),
+      body: Padding(
+        padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 20.h),
+        child: SingleChildScrollView(
+          child: Column(
+            children: coursesMap.entries.map((e) {
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(e.key,
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          fontSize: 20.sp, fontWeight: FontWeight.bold)),
+                  SizedBox(height: 10.h),
+                  ListView.builder(
+                      itemBuilder: (_, i) {
+                        return Container(
+                          margin: EdgeInsets.only(
+                              bottom: 10.h, left: 5.w, right: 5.w),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.r),
+                            color: Theme.of(context).scaffoldBackgroundColor,
+                            boxShadow: [
+                              BoxShadow(
+                                color: AppColors.grey.withValues(alpha: .12),
+                                blurRadius: 8,
+                                spreadRadius: 2,
+                                offset: const Offset(0, 4),
+                              ),
+                              BoxShadow(
+                                color: AppColors.grey.withValues(alpha: .01),
+                                blurRadius: 4,
+                                spreadRadius: 1,
+                                offset: const Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 15.w),
+                            child: ListTile(
+                              contentPadding: EdgeInsets.zero,
+                              title: Text(e.value[i].title ?? '',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyLarge
+                                      ?.copyWith(
+                                          fontSize: 15.sp,
+                                          fontWeight: FontWeight.w500)),
+                              subtitle: e.value[i].desc != null
+                                  ? Text(e.value[i].desc!,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyMedium
+                                          ?.copyWith(fontSize: 12.sp))
+                                  : null,
+                            ),
+                          ),
+                        );
+                      },
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: e.value.length)
+                ],
+              );
+            }).toList(),
+          ),
+        ),
+      ),
+    );
+  }
+}

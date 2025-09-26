@@ -1,3 +1,4 @@
+import 'package:dartcoder/features/courses/views/courses_list_screen.dart';
 import 'package:dartcoder/features/editor/views/dart_coder.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
@@ -74,7 +75,7 @@ class _DashboardScreenState extends State<DashboardScreen>
             physics: const NeverScrollableScrollPhysics(),
             children: const [
               HomeScreen(),
-              SizedBox(),
+              CoursesListScreen(),
               Editor(),
               SizedBox(),
             ]),
