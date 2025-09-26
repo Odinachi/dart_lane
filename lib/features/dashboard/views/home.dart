@@ -15,18 +15,26 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          SizedBox(height: 20.h),
-          dashboardCard(),
-          SizedBox(height: 20.h),
-          dashboardCard(
-              image: Assets.images.dsa,
-              title: AppString.dsaCourse,
-              desc: AppString.learnDsa,
-              onTap: () {}),
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(AppString.dashboard),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          child: Column(
+            children: [
+              SizedBox(height: 20.h),
+              dashboardCard(),
+              SizedBox(height: 20.h),
+              dashboardCard(
+                  image: Assets.images.dsa,
+                  title: AppString.dsaCourse,
+                  desc: AppString.learnDsa,
+                  onTap: () {}),
+            ],
+          ),
+        ),
       ),
     );
   }

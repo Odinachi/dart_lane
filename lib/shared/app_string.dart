@@ -22,4 +22,6 @@ class AppString {
       "Learn the basics of Dart Programming Language with interractive lessons and quizzes.";
   static const String startLearningDart =
       "Start your journey into Dart programming language.";
+
+  static const String dashboard = "Dashboard";
 }
