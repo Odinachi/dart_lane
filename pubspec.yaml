@@ -44,6 +44,7 @@ dependencies:
   firebase_analytics: ^12.0.2
   firebase_crashlytics: ^5.0.2
   firebase_auth: ^6.1.0
+  flutter_bloc: ^9.0.1
 
 
 
@@ -91,12 +92,18 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: SpaceGrotesk
+      fonts:
+        - asset: assets/fonts/space-grotesk/SpaceGrotesk-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/space-grotesk/SpaceGrotesk-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/space-grotesk/SpaceGrotesk-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/space-grotesk/SpaceGrotesk-SemiBold.ttf
+          weight: 600
+
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

@@ -1,9 +1,8 @@
-import 'package:dartcoder/helpers/assets.dart';
-import 'package:dartcoder/helpers/navigation/router.dart';
+import 'package:dartcoder/shared/assets.dart';
+import 'package:dartcoder/shared/navigation/router.dart';
+import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-
-import '../helpers/theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,12 +14,12 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: AppColors.white,
       body: Stack(
         children: [
-           Image.asset(
-             AppAssets.nerd,
-             height: size.height,
-             width: size.width,
-             fit: BoxFit.cover,
-           ),
+          Image.asset(
+            AppAssets.nerd,
+            height: size.height,
+            width: size.width,
+            fit: BoxFit.cover,
+          ),
           Container(
             color: AppColors.black.withOpacity(.95),
           ),
@@ -31,9 +30,8 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                    child: Lottie.asset(AppAssets.animate)
-                  ),
+                      padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                      child: Lottie.asset(AppAssets.animate)),
                   const SizedBox(
                     height: 30,
                   ),
@@ -82,10 +80,10 @@ class HomeScreen extends StatelessWidget {
                                     fontSize: 17,
                                   ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Icon(Icons.arrow_forward)
+                        const Icon(Icons.arrow_forward)
                       ],
                     ),
                   ),

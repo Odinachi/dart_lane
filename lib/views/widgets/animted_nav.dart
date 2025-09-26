@@ -7,12 +7,12 @@ class AnimatedBottomNav extends StatefulWidget {
   final VoidCallback onNext;
 
   const AnimatedBottomNav({
-    Key? key,
+    super.key,
     required this.isVisible,
     required this.onPrevious,
     required this.onEditor,
     required this.onNext,
-  }) : super(key: key);
+  });
 
   @override
   State<AnimatedBottomNav> createState() => _AnimatedBottomNavState();

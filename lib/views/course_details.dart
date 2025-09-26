@@ -1,6 +1,6 @@
-import 'package:dartcoder/helpers/app_data.dart';
-import 'package:dartcoder/helpers/navigation/router.dart';
 import 'package:dartcoder/models/course_model.dart';
+import 'package:dartcoder/shared/app_data.dart';
+import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/views/widgets/animted_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -202,7 +202,7 @@ class _CourseDetailsState extends State<CourseDetails> {
                       return true;
                     },
                     child: MarkdownWidget(
-                      padding: EdgeInsets.only(bottom: 150),
+                      padding: const EdgeInsets.only(bottom: 150),
                       data: dataStr,
                       config: config,
                       tocController: tocController,

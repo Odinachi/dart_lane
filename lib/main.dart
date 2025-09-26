@@ -1,9 +1,8 @@
-import 'package:dartcoder/helpers/navigation/router.dart';
-import 'package:dartcoder/helpers/theme.dart';
 import 'package:dartcoder/services/cache_service.dart';
+import 'package:dartcoder/shared/navigation/router.dart';
+import 'package:dartcoder/shared/text_editor.dart';
+import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
-
-import 'helpers/text_editor.dart';
 
 final isDarkTheme = ValueNotifier<bool>(true);
 

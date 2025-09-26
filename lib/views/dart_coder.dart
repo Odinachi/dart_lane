@@ -2,16 +2,15 @@ import 'dart:async';
 
 import 'package:dart_eval/dart_eval.dart';
 import 'package:dart_style/dart_style.dart';
-import 'package:dartcoder/helpers/navigation/router.dart';
-import 'package:dartcoder/helpers/theme.dart';
 import 'package:dartcoder/main.dart';
+import 'package:dartcoder/shared/navigation/router.dart';
+import 'package:dartcoder/shared/text_editor.dart';
+import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_code_editor/flutter_code_editor.dart';
 import 'package:flutter_highlight/themes/atom-one-light.dart';
 import 'package:flutter_highlight/themes/nord.dart';
 import 'package:highlight/languages/dart.dart';
-
-import '../helpers/text_editor.dart';
 
 class DartCompilerApp extends StatefulWidget {
   const DartCompilerApp({super.key});
@@ -192,7 +191,7 @@ class _DartCompilerAppState extends State<DartCompilerApp>
               _tabController.animateTo(0);
             }
           },
-          child: Icon(Icons.arrow_back_ios),
+          child: const Icon(Icons.arrow_back_ios),
         ),
         title: const Text('Dart Lane'),
         actions: [
@@ -202,7 +201,7 @@ class _DartCompilerAppState extends State<DartCompilerApp>
                 return Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     GestureDetector(
@@ -223,7 +222,7 @@ class _DartCompilerAppState extends State<DartCompilerApp>
                         size: 30,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     GestureDetector(
@@ -273,8 +272,8 @@ class _DartCompilerAppState extends State<DartCompilerApp>
                               isDark ? Icons.sunny : Icons.dark_mode,
                               color: isDark ? AppColors.white : AppColors.black,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 3.0),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 3.0),
                               child: Text("Theme"),
                             ),
                           ],
