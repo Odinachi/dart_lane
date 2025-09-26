@@ -1,11 +1,11 @@
-import 'package:dartcoder/models/course_model.dart';
-import 'package:dartcoder/shared/app_data.dart';
+import 'package:dartcoder/shared/constants.dart';
 import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/views/widgets/animted_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 
+import '../features/courses/models/course_model.dart';
 import '../main.dart';
 
 class CourseDetails extends StatefulWidget {

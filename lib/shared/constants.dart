@@ -1,4 +1,8 @@
-import '../models/course_model.dart';
+import 'package:dartcoder/shared/theme.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../features/courses/models/course_model.dart';
 
 class AppData {
   static final courses = {
@@ -180,4 +184,45 @@ class AppData {
       ),
     ]
   };
+}
+
+class AppButton extends StatelessWidget {
+  const AppButton(
+      {super.key,
+      this.leftIcon,
+      this.text = '',
+      this.backgroundColor,
+      this.textColor,
+      this.onTap,
+      this.borderColor});
+  final Widget? leftIcon;
+  final String text;
+  final Color? backgroundColor;
+  final Color? borderColor;
+  final Color? textColor;
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: 40.h,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.r),
+          border: borderColor != null ? Border.all(color: borderColor!) : null,
+          color: backgroundColor ?? AppColors.appBlue),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          if (leftIcon != null) leftIcon!,
+          if (leftIcon != null) SizedBox(width: 10.w),
+          Text(
+            text,
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                fontSize: 14.sp, fontWeight: FontWeight.bold, color: textColor),
+          )
+        ],
+      ),
+    );
+  }
 }
