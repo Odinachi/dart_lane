@@ -1,3 +1,5 @@
+import 'package:dartcoder/features/courses/views/widget/video_player.dart';
+import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/constants.dart';
 import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/views/widgets/animted_nav.dart';
@@ -19,6 +21,7 @@ class CourseDetails extends StatefulWidget {
 
 class _CourseDetailsState extends State<CourseDetails> {
   final tocController = TocController();
+  final scrollController = ScrollController();
 
   final courseNotifier = ValueNotifier(
     CourseModel(
@@ -35,6 +38,12 @@ class _CourseDetailsState extends State<CourseDetails> {
       showNav.value = false;
       setState(() {});
       tocController.jumpToIndex(0);
+      // Reset scroll position to top when loading new data
+      scrollController.animateTo(
+        0,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+      );
     });
   }
 
@@ -45,6 +54,12 @@ class _CourseDetailsState extends State<CourseDetails> {
     super.initState();
     loadData(widget.arg?.course ?? courseNotifier.value);
     showNav.value = false;
+  }
+
+  @override
+  void dispose() {
+    scrollController.dispose();
+    super.dispose();
   }
 
   MarkdownConfig config = isDarkTheme.value
@@ -81,11 +96,43 @@ class _CourseDetailsState extends State<CourseDetails> {
                       }
                       return true;
                     },
-                    child: MarkdownWidget(
-                      padding: EdgeInsets.only(bottom: 150.h),
-                      data: dataStr,
-                      config: config,
-                      tocController: tocController,
+                    child: SingleChildScrollView(
+                      controller: scrollController,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          MarkdownWidget(
+                            physics: const NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
+                            padding: EdgeInsets.zero,
+                            data: dataStr,
+                            config: config,
+                            tocController: tocController,
+                          ),
+                          SizedBox(height: 20.h),
+                          if (courseNotifier.value.videos != null) ...[
+                            Padding(
+                              padding: EdgeInsets.only(bottom: 10.h, top: 10.h),
+                              child: Column(
+                                children: [
+                                  Text(AppString.videos,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyLarge
+                                          ?.copyWith(
+                                              fontSize: 20.sp,
+                                              fontWeight: FontWeight.bold))
+                                ],
+                              ),
+                            ),
+                            ...?courseNotifier.value.videos?.map((e) => Padding(
+                                  padding: EdgeInsets.only(bottom: 15.h),
+                                  child: CustomVideoPlayer(videoUrl: e),
+                                )),
+                            SizedBox(height: 200.h),
+                          ]
+                        ],
+                      ),
                     ),
                   ),
                   ValueListenableBuilder(

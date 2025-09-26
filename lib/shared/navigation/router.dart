@@ -47,18 +47,21 @@ class AppRouter {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
-            decoration: BoxDecoration(
-                color: AppColors.black, borderRadius: BorderRadius.circular(8)),
-            child: Text(message,
-                style: Theme.of(navKey.currentContext!)
-                    .textTheme
-                    .bodyMedium
-                    ?.copyWith(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w400,
-                        color: AppColors.white)),
+          Flexible(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
+              decoration: BoxDecoration(
+                  color: AppColors.black,
+                  borderRadius: BorderRadius.circular(8)),
+              child: Text(message,
+                  style: Theme.of(navKey.currentContext!)
+                      .textTheme
+                      .bodyMedium
+                      ?.copyWith(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.white)),
+            ),
           ),
         ],
       ),

@@ -48,7 +48,7 @@ dependencies:
   flutter_svg: ^1.1.6
   flutter_screenutil: ^5.9.3
   shimmer_animation: ^2.2.2
-
+  youtube_player_flutter: ^9.0.3
   video_player: ^2.8.1
 
   # The following adds the Cupertino Icons font to your application.

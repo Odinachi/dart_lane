@@ -13,7 +13,8 @@ class AppData {
           id: 0,
           desc: "Introduction to Dart programming language.",
           videos: [
-            "https://www.youtube.com/watch?v=Gd97ql0gW9Q&list=PLeKQz1VjpjFqqXLvQ8rTnYxZcUqEGA0dm"
+            "https://youtu.be/Gd97ql0gW9Q?si=qK3oJ5dE6RzfaG05",
+            "https://youtu.be/XUuS82_lUTk?si=MUvf25uPgYh0n8ev",
           ]),
       CourseModel(
           title: "Variables and Data Types",
