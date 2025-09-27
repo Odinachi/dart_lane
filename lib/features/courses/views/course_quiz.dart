@@ -114,9 +114,6 @@ class _CourseQuizState extends State<CourseQuiz> {
                 itemBuilder: (context, index) {
                   final e = quizzes[index];
 
-                  print(
-                      "kkkkk user answer ${e.userAnswer} \n correct answer ${e.answer}\n is correct ${e.isCorrect} ${e.userAnswer == e.answer}\n==========");
-
                   return SingleChildScrollView(
                     child: Column(
                       key: ValueKey(e.question),
