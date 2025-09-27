@@ -39,6 +39,7 @@ class _CourseQuizState extends State<CourseQuiz> {
     super.initState();
   }
 
+  int currentQuestion = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,17 +69,12 @@ class _CourseQuizState extends State<CourseQuiz> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Questions 1/2",
+                Text("Questions $currentQuestion/${quizzes.length}",
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         fontSize: 13.sp, fontWeight: FontWeight.bold)),
                 SizedBox(height: 5.h),
                 LinearProgressIndicator(
-                  value: quizzes.isEmpty
-                      ? 0
-                      : quizzes
-                              .where((element) => element.userAnswer != null)
-                              .length /
-                          quizzes.length,
+                  value: quizzes.isEmpty ? 0 : currentQuestion / quizzes.length,
                   backgroundColor: AppColors.grey.withValues(alpha: .3),
                   valueColor:
                       const AlwaysStoppedAnimation<Color>(AppColors.appBlue),
@@ -89,165 +85,176 @@ class _CourseQuizState extends State<CourseQuiz> {
             ),
             SizedBox(height: 20.h),
             Expanded(
-              child: DefaultTabController(
-                length: quizzes.length,
-                child: PageView(
-                  children: quizzes.map((e) {
-                    return SingleChildScrollView(
-                      child: Column(
-                        key: ValueKey(e.question),
-                        children: [
-                          QuestionWidget(
-                              question: e.question ?? "",
-                              key: ValueKey(e.question)),
-                          SizedBox(height: 20.h),
-                          if (e.type == "order")
-                            Wrap(spacing: 10.w, runSpacing: 10.h, children: [
-                              ...?e.options?.map((op) {
-                                final selected =
-                                    e.userAnswer?.contains(op) == true;
-                                return GestureDetector(
-                                  onTap: () {
-                                    final index = quizzes.indexOf(e);
+              child: PageView.builder(
+                itemCount: quizzes.length,
+                onPageChanged: (value) {
+                  currentQuestion = value + 1;
+                  setState(() {});
+                  FocusScope.of(context).unfocus();
+                },
+                itemBuilder: (context, index) {
+                  final e = quizzes[index];
 
-                                    if (selected) {
-                                      final updatedAnswers =
-                                          List<String>.from(e.userAnswer ?? []);
-                                      updatedAnswers.remove(op);
-                                      quizzes[index] = e.copyWith(
-                                          userAnswer: updatedAnswers);
-                                    } else {
-                                      final updatedAnswers =
-                                          List<String>.from(e.userAnswer ?? []);
-                                      updatedAnswers.add(op);
-                                      quizzes[index] = e.copyWith(
-                                          userAnswer: updatedAnswers);
-                                    }
-
-                                    setState(() {});
-                                  },
-                                  child: Container(
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 10.w, vertical: 8.h),
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(4),
-                                        color: selected
-                                            ? AppColors.appBlue
-                                                .withValues(alpha: .2)
-                                            : Theme.of(context)
-                                                .scaffoldBackgroundColor,
-                                        border: Border.all(
-                                            color: (selected
-                                                    ? AppColors.appBlue
-                                                    : AppColors.grey)
-                                                .withValues(alpha: .5)),
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: AppColors.grey
-                                                .withValues(alpha: .05),
-                                            blurRadius: 8,
-                                            spreadRadius: 2,
-                                            offset: const Offset(0, 4),
-                                          ),
-                                          BoxShadow(
-                                            color: AppColors.grey
-                                                .withValues(alpha: .01),
-                                            blurRadius: 4,
-                                            spreadRadius: 1,
-                                            offset: const Offset(0, 2),
-                                          ),
-                                        ],
-                                      ),
-                                      child: Text(op)),
-                                );
-                              }).toList()
-                            ]),
-                          if (e.type == "mcq")
+                  return SingleChildScrollView(
+                    child: Column(
+                      key: ValueKey(e.question),
+                      children: [
+                        QuestionWidget(
+                            onType: (val) {
+                              quizzes[index] = e.copyWith(userAnswer: val);
+                              setState(() {});
+                            },
+                            answerType: e.type ?? "mcq",
+                            userAnswer: e.userAnswer,
+                            question: e.question ?? "",
+                            key: ValueKey(e.question)),
+                        SizedBox(height: 20.h),
+                        if (e.type == "order")
+                          Wrap(spacing: 10.w, runSpacing: 10.h, children: [
                             ...?e.options?.map((op) {
-                              final selected = e.userAnswer == op;
-                              return GestureDetector(
+                              final selected =
+                                  e.userAnswer?.contains(op) == true;
+                              return InkWell(
+                                highlightColor: Colors.transparent,
+                                splashFactory: NoSplash.splashFactory,
                                 onTap: () {
-                                  final index = quizzes.indexOf(e);
-                                  quizzes[index] = e.copyWith(
-                                      userAnswer: selected ? null : op);
+                                  if (selected) {
+                                    final updatedAnswers =
+                                        List<String>.from(e.userAnswer ?? []);
+                                    updatedAnswers.remove(op);
+                                    quizzes[index] =
+                                        e.copyWith(userAnswer: updatedAnswers);
+                                  } else {
+                                    final updatedAnswers =
+                                        List<String>.from(e.userAnswer ?? []);
+                                    updatedAnswers.add(op);
+                                    quizzes[index] =
+                                        e.copyWith(userAnswer: updatedAnswers);
+                                  }
 
                                   setState(() {});
                                 },
                                 child: Container(
-                                  margin: EdgeInsets.only(bottom: 10.h),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10.r),
-                                    color: selected
-                                        ? AppColors.appBlue
-                                            .withValues(alpha: .2)
-                                        : Theme.of(context)
-                                            .scaffoldBackgroundColor,
-                                    border: Border.all(
-                                        color: (selected
-                                                ? AppColors.appBlue
-                                                : AppColors.grey)
-                                            .withValues(alpha: .5)),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: AppColors.grey
-                                            .withValues(alpha: .05),
-                                        blurRadius: 8,
-                                        spreadRadius: 2,
-                                        offset: const Offset(0, 4),
-                                      ),
-                                      BoxShadow(
-                                        color: AppColors.grey
-                                            .withValues(alpha: .01),
-                                        blurRadius: 4,
-                                        spreadRadius: 1,
-                                        offset: const Offset(0, 2),
-                                      ),
-                                    ],
-                                  ),
-                                  child: Padding(
                                     padding: EdgeInsets.symmetric(
-                                        horizontal: 15.w, vertical: 10.h),
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                          padding: EdgeInsets.all(1.sp),
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            border: Border.all(
-                                                color: selected
-                                                    ? AppColors.appBlue
-                                                    : AppColors.grey),
-                                          ),
-                                          child: Icon(
-                                            Icons.circle,
-                                            size: 10.sp,
-                                            color: selected
-                                                ? AppColors.appBlue
-                                                : Colors.transparent,
-                                          ),
+                                        horizontal: 10.w, vertical: 8.h),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(4),
+                                      color: selected
+                                          ? AppColors.appBlue
+                                              .withValues(alpha: .2)
+                                          : Theme.of(context)
+                                              .scaffoldBackgroundColor,
+                                      border: Border.all(
+                                          color: (selected
+                                                  ? AppColors.appBlue
+                                                  : AppColors.grey)
+                                              .withValues(alpha: .5)),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: AppColors.grey
+                                              .withValues(alpha: .05),
+                                          blurRadius: 8,
+                                          spreadRadius: 2,
+                                          offset: const Offset(0, 4),
                                         ),
-                                        SizedBox(width: 15.w),
-                                        Expanded(
-                                          child: Text(
-                                              op
-                                                  .replaceAll("\n", "\n")
-                                                  .replaceAll("\\n", "\n"),
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .bodyLarge
-                                                  ?.copyWith(fontSize: 15.sp)),
+                                        BoxShadow(
+                                          color: AppColors.grey
+                                              .withValues(alpha: .01),
+                                          blurRadius: 4,
+                                          spreadRadius: 1,
+                                          offset: const Offset(0, 2),
                                         ),
                                       ],
                                     ),
+                                    child: Text(op)),
+                              );
+                            }).toList()
+                          ]),
+                        if (e.type == "mcq")
+                          ...?e.options?.map((op) {
+                            final selected = e.userAnswer == op;
+                            return InkWell(
+                              splashFactory: NoSplash.splashFactory,
+                              highlightColor: Colors.transparent,
+                              onTap: () {
+                                quizzes[index] = e.copyWith(
+                                    userAnswer: selected ? null : op);
+
+                                setState(() {});
+                              },
+                              child: Container(
+                                margin: EdgeInsets.only(bottom: 10.h),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.r),
+                                  color: selected
+                                      ? AppColors.appBlue.withValues(alpha: .2)
+                                      : Theme.of(context)
+                                          .scaffoldBackgroundColor,
+                                  border: Border.all(
+                                      color: (selected
+                                              ? AppColors.appBlue
+                                              : AppColors.grey)
+                                          .withValues(alpha: .5)),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color:
+                                          AppColors.grey.withValues(alpha: .05),
+                                      blurRadius: 8,
+                                      spreadRadius: 2,
+                                      offset: const Offset(0, 4),
+                                    ),
+                                    BoxShadow(
+                                      color:
+                                          AppColors.grey.withValues(alpha: .01),
+                                      blurRadius: 4,
+                                      spreadRadius: 1,
+                                      offset: const Offset(0, 2),
+                                    ),
+                                  ],
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 15.w, vertical: 10.h),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        padding: EdgeInsets.all(1.sp),
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          border: Border.all(
+                                              color: selected
+                                                  ? AppColors.appBlue
+                                                  : AppColors.grey),
+                                        ),
+                                        child: Icon(
+                                          Icons.circle,
+                                          size: 10.sp,
+                                          color: selected
+                                              ? AppColors.appBlue
+                                              : Colors.transparent,
+                                        ),
+                                      ),
+                                      SizedBox(width: 15.w),
+                                      Expanded(
+                                        child: Text(
+                                            op
+                                                .replaceAll("\n", "\n")
+                                                .replaceAll("\\n", "\n"),
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodyLarge
+                                                ?.copyWith(fontSize: 15.sp)),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                              );
-                            }).toList(),
-                        ],
-                      ),
-                    );
-                  }).toList(),
-                ),
+                              ),
+                            );
+                          }).toList(),
+                      ],
+                    ),
+                  );
+                },
               ),
             ),
           ],

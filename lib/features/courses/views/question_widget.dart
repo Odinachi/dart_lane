@@ -3,14 +3,32 @@ import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class QuestionWidget extends StatefulWidget {
-  const QuestionWidget({super.key, required this.question});
+  const QuestionWidget({
+    super.key,
+    required this.question,
+    required this.answerType,
+    this.userAnswer,
+    this.onType,
+  });
   final String question;
+  final String answerType;
+  final dynamic userAnswer;
+  final Function(String)? onType;
 
   @override
   State<QuestionWidget> createState() => _QuestionWidgetState();
 }
 
 class _QuestionWidgetState extends State<QuestionWidget> {
+  final answerCon = TextEditingController();
+  @override
+  void initState() {
+    super.initState();
+    if (widget.userAnswer != null && widget.answerType == "fill") {
+      answerCon.text = widget.userAnswer;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return _buildQuestionContent();
@@ -85,6 +103,8 @@ class _QuestionWidgetState extends State<QuestionWidget> {
             height: 30,
             margin: const EdgeInsets.symmetric(horizontal: 2),
             child: TextFormField(
+              controller: answerCon,
+              onChanged: widget.onType,
               style: const TextStyle(fontSize: 12),
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
