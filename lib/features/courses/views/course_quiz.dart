@@ -139,7 +139,63 @@ class _CourseQuizState extends State<CourseQuiz> {
                   ),
                   SizedBox(height: 20.h),
                   if (e.type == "order")
-                    ...?e.options?.map((op) => Text(op)).toList(),
+                    Wrap(spacing: 10.w, runSpacing: 10.h, children: [
+                      ...?e.options?.map((op) {
+                        final selected = e.userAnswer?.contains(op) == true;
+                        return GestureDetector(
+                          onTap: () {
+                            final index = quizzes.indexOf(e);
+
+                            if (selected) {
+                              final updatedAnswers =
+                                  List<String>.from(e.userAnswer ?? []);
+                              updatedAnswers.remove(op);
+                              quizzes[index] =
+                                  e.copyWith(userAnswer: updatedAnswers);
+                            } else {
+                              final updatedAnswers =
+                                  List<String>.from(e.userAnswer ?? []);
+                              updatedAnswers.add(op);
+                              quizzes[index] =
+                                  e.copyWith(userAnswer: updatedAnswers);
+                            }
+
+                            setState(() {});
+                          },
+                          child: Container(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 10.w, vertical: 8.h),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4),
+                                color: selected
+                                    ? AppColors.appBlue.withValues(alpha: .2)
+                                    : Theme.of(context).scaffoldBackgroundColor,
+                                border: Border.all(
+                                    color: (selected
+                                            ? AppColors.appBlue
+                                            : AppColors.grey)
+                                        .withValues(alpha: .5)),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color:
+                                        AppColors.grey.withValues(alpha: .05),
+                                    blurRadius: 8,
+                                    spreadRadius: 2,
+                                    offset: const Offset(0, 4),
+                                  ),
+                                  BoxShadow(
+                                    color:
+                                        AppColors.grey.withValues(alpha: .01),
+                                    blurRadius: 4,
+                                    spreadRadius: 1,
+                                    offset: const Offset(0, 2),
+                                  ),
+                                ],
+                              ),
+                              child: Text(op)),
+                        );
+                      }).toList()
+                    ]),
                   if (e.type == "mcq")
                     ...?e.options?.map((op) {
                       final selected = e.userAnswer == op;
