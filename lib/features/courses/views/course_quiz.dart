@@ -25,9 +25,20 @@ class _CourseQuizState extends State<CourseQuiz> {
 
   void loadData(CourseModel course) async {
     await rootBundle.loadString(course.quiz ?? "").then((e) {
-      quizzes = e == ""
+      List<QuizModel> allQuizzes = e == ""
           ? []
           : (json.decode(e) as List).map((e) => QuizModel.fromJson(e)).toList();
+
+      // Select 10 random questions
+      if (allQuizzes.length <= 10) {
+        // If we have 10 or fewer questions, use them all
+        quizzes = allQuizzes;
+      } else {
+        // Randomly select 10 questions
+        List<QuizModel> shuffled = List.from(allQuizzes);
+        shuffled.shuffle();
+        quizzes = shuffled.take(10).toList();
+      }
 
       setState(() {});
     });
@@ -103,13 +114,16 @@ class _CourseQuizState extends State<CourseQuiz> {
                 itemBuilder: (context, index) {
                   final e = quizzes[index];
 
+                  print(
+                      "kkkkk user answer ${e.userAnswer} \n correct answer ${e.answer}\n is correct ${e.isCorrect} ${e.userAnswer == e.answer}\n==========");
+
                   return SingleChildScrollView(
                     child: Column(
                       key: ValueKey(e.question),
                       children: [
                         QuestionWidget(
                             onType: (val) {
-                              quizzes[index] = e.copyWith(userAnswer: val);
+                              quizzes[index] = e.copyWith(userAnswer: [val]);
                               setState(() {});
                             },
                             answerType: e.type ?? "mcq",
@@ -180,13 +194,14 @@ class _CourseQuizState extends State<CourseQuiz> {
                           ]),
                         if (e.type == "mcq")
                           ...?e.options?.map((op) {
-                            final selected = e.userAnswer == op;
+                            final selected = e.userAnswer?.firstOrNull == op;
+
                             return InkWell(
                               splashFactory: NoSplash.splashFactory,
                               highlightColor: Colors.transparent,
                               onTap: () {
                                 quizzes[index] = e.copyWith(
-                                    userAnswer: selected ? null : op);
+                                    userAnswer: selected ? null : [op]);
 
                                 setState(() {});
                               },
