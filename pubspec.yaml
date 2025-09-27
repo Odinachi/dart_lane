@@ -50,6 +50,7 @@ dependencies:
   shimmer_animation: ^2.2.2
   youtube_player_flutter: ^9.0.3
   video_player: ^2.8.1
+  equatable: ^2.0.7
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -82,6 +83,7 @@ flutter:
     - assets/svgs/
     - assets/courses/
     - assets/jsons/
+    - assets/jsons/quizzes/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

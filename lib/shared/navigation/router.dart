@@ -1,4 +1,5 @@
 import 'package:dartcoder/features/authetication/views/onboarding_screen.dart';
+import 'package:dartcoder/features/courses/views/course_quiz.dart';
 import 'package:dartcoder/features/dashboard/views/dashboard_screen.dart';
 import 'package:dartcoder/features/dashboard/views/home.dart';
 import 'package:dartcoder/features/editor/views/editor_screen.dart';
@@ -24,6 +25,10 @@ class AppRouter {
                 CourseDetails(arg: settings.arguments as CourseDetailsArgs?));
       case editor:
         return CupertinoPageRoute(builder: (_) => const Editor());
+      case quiz:
+        return CupertinoPageRoute(
+            builder: (_) =>
+                CourseQuiz(arg: settings.arguments as CourseQuizArg?));
 
       default:
         return CupertinoPageRoute(builder: (_) => const OnboardingScreen());
@@ -34,6 +39,7 @@ class AppRouter {
   static const String dashboard = "/dashboard";
   static const String courseDetails = "/courseDetails";
   static const String editor = "/editor";
+  static const String quiz = "/quiz";
 
   static Future push(String routeName, {Object? arg}) async =>
       await navKey.currentState?.pushNamed(routeName, arguments: arg);

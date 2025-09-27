@@ -2,6 +2,7 @@ class CourseModel {
   final String? title;
   final String? path;
   final String? desc;
+  final String? quiz;
   final int? id;
   final bool? canPractice;
   final bool? isCourse;
@@ -13,6 +14,7 @@ class CourseModel {
     this.path,
     this.id,
     this.desc,
+    this.quiz,
     this.canPractice = true,
     this.isCourse = true,
     this.completed = false,
@@ -24,6 +26,7 @@ class CourseModel {
         path: json["path"],
         id: json["id"],
         desc: json["desc"],
+        quiz: json["quiz"],
         canPractice: json["canPractice"],
         isCourse: json["isCourse"],
         completed: json["completed"],
@@ -35,6 +38,7 @@ class CourseModel {
         "path": path,
         "id": id,
         "desc": desc,
+        "quiz": quiz,
         "canPractice": canPractice,
         "isCourse": isCourse,
         "completed": completed,

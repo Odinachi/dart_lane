@@ -11,6 +11,7 @@ class AppData {
           title: "Introduction",
           path: "assets/courses/main.md",
           id: 0,
+          quiz: "assets/jsons/quizzes/main.json",
           desc: "Introduction to Dart programming language.",
           videos: [
             "https://youtu.be/Gd97ql0gW9Q?si=qK3oJ5dE6RzfaG05",

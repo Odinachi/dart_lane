@@ -1,3 +1,4 @@
+import 'package:dartcoder/features/courses/views/course_quiz.dart';
 import 'package:dartcoder/features/courses/views/widget/video_player.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/constants.dart';
@@ -145,7 +146,14 @@ class _CourseDetailsState extends State<CourseDetails> {
                           right: 0,
                           bottom: 0,
                           child: AnimatedBottomNav(
-                            onQuiz: () {},
+                            onQuiz: () {
+                              AppRouter.push(
+                                AppRouter.quiz,
+                                arg: CourseQuizArg(
+                                  course: courseNotifier.value,
+                                ),
+                              );
+                            },
                             isVisible: show,
                             onPrevious: () {
                               if (courseNotifier.value.id != 0) {
