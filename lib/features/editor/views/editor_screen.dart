@@ -33,7 +33,7 @@ class _EditorState extends State<Editor> with SingleTickerProviderStateMixin {
   Timer? _debounce;
 
   final baseCode = '''void main() {
-  print("Hello, Dart Lane!");
+  print("Hello, Dartic!");
 }''';
 
   @override

@@ -73,8 +73,13 @@ class _DashboardScreenState extends State<DashboardScreen>
         child: TabBarView(
             controller: tabController,
             physics: const NeverScrollableScrollPhysics(),
-            children: const [
-              HomeScreen(),
+            children: [
+              HomeScreen(
+                onCourseTap: () {
+                  tabController.index = 1;
+                  setState(() {});
+                },
+              ),
               CoursesListScreen(),
               Editor(),
               SizedBox(),

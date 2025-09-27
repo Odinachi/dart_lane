@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:dartcoder/main.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
@@ -7,7 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({super.key, this.onCourseTap});
+  final VoidCallback? onCourseTap;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -64,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: [
               SizedBox(height: 20.h),
-              dashboardCard(),
+              dashboardCard(onTap: widget.onCourseTap),
               SizedBox(height: 20.h),
               dashboardCard(
                   image: Assets.images.dsa,
