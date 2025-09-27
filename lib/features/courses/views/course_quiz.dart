@@ -39,6 +39,8 @@ class _CourseQuizState extends State<CourseQuiz> {
     super.initState();
   }
 
+  final pageController = PageController();
+
   int currentQuestion = 1;
   @override
   Widget build(BuildContext context) {
@@ -52,7 +54,11 @@ class _CourseQuizState extends State<CourseQuiz> {
           ),
           height: 40.h,
           child: AppButton(
-            onTap: () {},
+            onTap: () {
+              pageController.nextPage(
+                  duration: const Duration(milliseconds: 300),
+                  curve: Curves.easeInOut);
+            },
             textColor: AppColors.white,
             text: AppString.next,
           ),
@@ -86,6 +92,8 @@ class _CourseQuizState extends State<CourseQuiz> {
             SizedBox(height: 20.h),
             Expanded(
               child: PageView.builder(
+                controller: pageController,
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: quizzes.length,
                 onPageChanged: (value) {
                   currentQuestion = value + 1;

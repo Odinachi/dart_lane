@@ -73,6 +73,8 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     final RegExp placeholderRegex = RegExp(r'(%order%|%fill%)');
 
     int lastEnd = 0;
+
+    int currentOrder = 0;
     for (final match in placeholderRegex.allMatches(codeText)) {
       // Add syntax highlighted text before placeholder
       if (match.start > lastEnd) {
@@ -84,18 +86,71 @@ class _QuestionWidgetState extends State<QuestionWidget> {
       // Add interactive element for placeholder
       String placeholder = match.group(0)!;
       if (placeholder == '%order%') {
-        codeSpans.add(WidgetSpan(
-          child: Container(
-            width: 60,
-            height: 30,
-            margin: const EdgeInsets.symmetric(horizontal: 2),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(4),
-              border: Border.all(color: Colors.grey),
+        currentOrder += 1;
+
+        final answer = widget.userAnswer;
+
+        final hasInput =
+            (answer != null && answer is List && answer.length >= currentOrder);
+
+        if (hasInput) {
+          codeSpans.add(WidgetSpan(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  height: 30,
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  margin: const EdgeInsets.symmetric(horizontal: 2),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    color: AppColors.appBlue.withValues(alpha: .2),
+                    border: Border.all(
+                        color: AppColors.appBlue.withValues(alpha: .5)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: AppColors.grey.withValues(alpha: .05),
+                        blurRadius: 8,
+                        spreadRadius: 2,
+                        offset: const Offset(0, 4),
+                      ),
+                      BoxShadow(
+                        color: AppColors.grey.withValues(alpha: .01),
+                        blurRadius: 4,
+                        spreadRadius: 1,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: hasInput
+                      ? Center(
+                          child: Text(
+                            hasInput ? answer[currentOrder - 1] : '',
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium
+                                ?.copyWith(fontSize: 12),
+                          ),
+                        )
+                      : null,
+                ),
+              ],
             ),
-          ),
-        ));
+          ));
+        } else {
+          codeSpans.add(WidgetSpan(
+            child: Container(
+              width: 60,
+              height: 30,
+              margin: const EdgeInsets.symmetric(horizontal: 2),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(4),
+                border: Border.all(color: Colors.grey),
+              ),
+            ),
+          ));
+        }
       } else if (placeholder == '%fill%') {
         codeSpans.add(WidgetSpan(
           child: Container(
