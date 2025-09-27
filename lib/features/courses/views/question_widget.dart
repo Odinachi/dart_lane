@@ -56,15 +56,10 @@ class _QuestionWidgetState extends State<QuestionWidget> {
 
     int lastEnd = 0;
     for (final match in placeholderRegex.allMatches(codeText)) {
-      // Add text before placeholder
+      // Add syntax highlighted text before placeholder
       if (match.start > lastEnd) {
-        codeSpans.add(TextSpan(
-          text: codeText.substring(lastEnd, match.start),
-          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                fontFamily: 'Courier',
-                color: Colors.green[300],
-                fontSize: 17,
-              ),
+        codeSpans.addAll(_buildSyntaxHighlightedSpans(
+          codeText.substring(lastEnd, match.start),
         ));
       }
 
@@ -104,21 +99,175 @@ class _QuestionWidgetState extends State<QuestionWidget> {
       lastEnd = match.end;
     }
 
-    // Add remaining text
+    // Add remaining syntax highlighted text
     if (lastEnd < codeText.length) {
-      codeSpans.add(TextSpan(
-        text: codeText.substring(lastEnd),
-        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              fontFamily: 'Courier',
-              color: Colors.green[300],
-              fontSize: 16,
-            ),
+      codeSpans.addAll(_buildSyntaxHighlightedSpans(
+        codeText.substring(lastEnd),
       ));
     }
 
     return RichText(
       text: TextSpan(children: codeSpans),
     );
+  }
+
+  List<InlineSpan> _buildSyntaxHighlightedSpans(String text) {
+    final List<InlineSpan> spans = [];
+    final RegExp improvedTokenRegex = RegExp(
+        // GROUP 1: Type Keywords
+        r"(void|int|double|bool|String|var|const|final)\b"
+
+        // GROUP 2: Access Modifiers
+        r"|(public|private|protected|static|abstract)\b"
+
+        // GROUP 3: Control Flow Keywords
+        r"|(if|else|for|while|return)\b"
+
+        // GROUP 4: Object-Oriented Keywords
+        r"|(class|extends|implements)\b"
+
+        // GROUP 5: Built-in Functions
+        r"|(main|print)\b"
+
+        // GROUP 7: Punctuation
+        r"|([{}();,.])"
+
+        // GROUP 8: Numbers
+        r"|(\d+\.?\d*)"
+
+        // GROUP 9: User-defined Identifiers
+        r"|([A-Za-z_]\w*)"
+
+        // GROUP 10: Whitespace
+        r"|(\s+)");
+
+    int lastEnd = 0;
+    for (final match in improvedTokenRegex.allMatches(text)) {
+      if (match.start > lastEnd) {
+        spans.add(TextSpan(
+          text: text.substring(lastEnd, match.start),
+          style: _getCodeTextStyle().copyWith(
+            color: isDarkTheme.value ? Colors.white70 : Colors.black87,
+          ),
+        ));
+      }
+
+      final token = match.group(0)!;
+
+      if (match.group(1) != null) {
+        // Type Keywords - Blue/Purple
+        spans.add(TextSpan(
+          text: token,
+          style: _getCodeTextStyle().copyWith(
+            color: Colors.purpleAccent,
+            fontWeight: FontWeight.bold,
+          ),
+        ));
+      } else if (match.group(2) != null) {
+        // Access Modifiers - Orange
+
+        spans.add(TextSpan(
+          text: token,
+          style: _getCodeTextStyle().copyWith(
+            color: isDarkTheme.value ? Colors.orange[300] : Colors.orange[700],
+            fontWeight: FontWeight.bold,
+          ),
+        ));
+      } else if (match.group(3) != null) {
+        // Control Flow Keywords - Purple/Magenta
+        spans.add(TextSpan(
+          text: token,
+          style: _getCodeTextStyle().copyWith(
+            color: isDarkTheme.value ? Colors.purple[300] : Colors.purple[700],
+            fontWeight: FontWeight.bold,
+          ),
+        ));
+      } else if (match.group(4) != null) {
+        // Object-Oriented Keywords - Teal
+        spans.add(TextSpan(
+          text: token,
+          style: _getCodeTextStyle().copyWith(
+            color: isDarkTheme.value ? Colors.teal[300] : Colors.teal[700],
+            fontWeight: FontWeight.bold,
+          ),
+        ));
+      } else if (match.group(5) != null) {
+        // Built-in Functions - Green
+
+        spans.add(TextSpan(
+          text: token,
+          style: _getCodeTextStyle().copyWith(
+            color: Colors.blueAccent,
+            fontWeight: FontWeight.bold,
+          ),
+        ));
+      } else if (match.group(7) != null) {
+        // Punctuation - Yellow/Amber
+        spans.add(TextSpan(
+          text: token,
+          style: _getCodeTextStyle().copyWith(
+            color: isDarkTheme.value ? Colors.amber[300] : Colors.amber[800],
+          ),
+        ));
+      } else if (match.group(8) != null) {
+        // Numbers - Light Green
+        spans.add(TextSpan(
+          text: token,
+          style: _getCodeTextStyle().copyWith(
+            color: isDarkTheme.value
+                ? Colors.lightGreen[300]
+                : Colors.lightGreen[700],
+          ),
+        ));
+      } else if (match.group(9) != null) {
+        // Identifiers - Cyan
+        spans.add(TextSpan(
+          text: token,
+          style: _getCodeTextStyle().copyWith(
+            color: isDarkTheme.value ? Colors.cyan[300] : Colors.cyan[700],
+          ),
+        ));
+      }
+
+      // else if (match.group(10) != null) {
+      //   // Whitespace
+      //   spans.add(TextSpan(
+      //     text: token,
+      //     style: _getCodeTextStyle(),
+      //   ));
+      // }
+      else {
+        // Fallback
+        spans.add(TextSpan(
+          text: token,
+          style: _getCodeTextStyle().copyWith(
+            color: isDarkTheme.value ? Colors.white70 : Colors.black87,
+          ),
+        ));
+      }
+
+      lastEnd = match.end;
+    }
+
+    // Add any remaining text that wasn't matched
+    if (lastEnd < text.length) {
+      spans.add(TextSpan(
+        text: text.substring(lastEnd),
+        style: _getCodeTextStyle().copyWith(
+          color: isDarkTheme.value ? Colors.white70 : Colors.black87,
+        ),
+      ));
+    }
+
+    return spans;
+  }
+
+  TextStyle _getCodeTextStyle() {
+    return Theme.of(context).textTheme.bodyMedium?.copyWith(
+              fontFamily: 'Courier',
+              fontSize: 16,
+            ) ??
+        const TextStyle(fontFamily: 'Courier', fontSize: 16);
   }
 
   List<Map<String, dynamic>> _parseQuestionText(String text) {
