@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:dartcoder/features/courses/models/course_model.dart';
 import 'package:dartcoder/features/courses/models/quiz_model.dart';
+import 'package:dartcoder/features/courses/views/question_widget.dart';
 import 'package:dartcoder/main.dart';
 import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
@@ -130,13 +131,7 @@ class _CourseQuizState extends State<CourseQuiz> {
               return Column(
                 key: ValueKey(e.question),
                 children: [
-                  MarkdownWidget(
-                    physics: const NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    padding: EdgeInsets.zero,
-                    data: e.question ?? "",
-                    config: config,
-                  ),
+                  QuestionWidget(question: e.question ?? ""),
                   SizedBox(height: 20.h),
                   if (e.type == "order")
                     Wrap(spacing: 10.w, runSpacing: 10.h, children: [
