@@ -30,4 +30,6 @@ class AppString {
   static const String previous = "Previous";
 
   static const String videos = "Videos";
+
+  static const String next = "Next";
 }
