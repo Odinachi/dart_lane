@@ -44,7 +44,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     height: 20.h,
                   ),
                   AppButton(
-                    onTap: () => AppRouter.push(AppRouter.dashboard),
+                    onTap: () => AppRouter.pushAndClear(AppRouter.dashboard),
                     textColor: AppColors.white,
                     backgroundColor: AppColors.black,
                     text: AppString.continueWithApple,
@@ -65,10 +65,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   AppButton(
                     backgroundColor: AppColors.appBlue.withValues(alpha: 0.2),
                     textColor: AppColors.appBlue,
-                    onTap: () {
-                      isDarkTheme.value = !isDarkTheme.value;
-                      setState(() {});
-                    },
+                    onTap: () {},
                     text: AppString.continueAsGuest,
                   ),
                 ],

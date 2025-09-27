@@ -45,6 +45,9 @@ class AppRouter {
       await navKey.currentState?.pushNamed(routeName, arguments: arg);
 
   static void pop({Object? arg}) async => navKey.currentState?.pop(arg);
+  static void pushAndClear(String routeName, {Object? arg}) async => navKey
+      .currentState
+      ?.pushNamedAndRemoveUntil(routeName, (route) => false, arguments: arg);
 
   static void showMessage(String message) {
     ScaffoldMessenger.of(navKey.currentContext!).showSnackBar(SnackBar(

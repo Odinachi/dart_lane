@@ -5,7 +5,6 @@ final ThemeData lightTheme = ThemeData(
   primaryColor: AppColors.appBlue,
   dividerColor: Colors.blueGrey.withOpacity(.3),
   scaffoldBackgroundColor: Colors.white,
-  // secondaryHeaderColor: AppColors.grey,
   textTheme: const TextTheme(
     bodyLarge:
         TextStyle(color: AppColors.blackText, fontFamily: "SpaceGrotesk"),

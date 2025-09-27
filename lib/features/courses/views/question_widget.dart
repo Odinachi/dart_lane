@@ -1,3 +1,4 @@
+import 'package:dartcoder/main.dart';
 import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +13,6 @@ class QuestionWidget extends StatefulWidget {
 class _QuestionWidgetState extends State<QuestionWidget> {
   @override
   Widget build(BuildContext context) {
-    print("kkkk ${widget.question}");
-
     return _buildQuestionContent();
   }
 
@@ -30,7 +29,9 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                 margin: const EdgeInsets.symmetric(vertical: 8.0),
                 padding: const EdgeInsets.all(12.0),
                 decoration: BoxDecoration(
-                  color: AppColors.grey[800],
+                  color: isDarkTheme.value
+                      ? AppColors.grey[800]
+                      : AppColors.grey[200],
                   borderRadius: BorderRadius.circular(6.0),
                 ),
                 child: _buildCodeContent(part['text'] ?? ""),

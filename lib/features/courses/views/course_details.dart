@@ -132,8 +132,8 @@ class _CourseDetailsState extends State<CourseDetails> {
                                 child: CustomVideoPlayer(videoUrl: e),
                               ),
                             ),
-                            SizedBox(height: 200.h),
-                          ]
+                          ],
+                          SizedBox(height: 200.h),
                         ],
                       ),
                     ),
