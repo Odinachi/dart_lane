@@ -3,9 +3,11 @@ import 'dart:convert';
 import 'package:dartcoder/features/courses/models/course_model.dart';
 import 'package:dartcoder/features/courses/models/quiz_model.dart';
 import 'package:dartcoder/features/courses/views/question_widget.dart';
+import 'package:dartcoder/features/courses/views/quiz_score_screen.dart';
 import 'package:dartcoder/main.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/constants.dart';
+import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -66,9 +68,19 @@ class _CourseQuizState extends State<CourseQuiz> {
           height: 40.h,
           child: AppButton(
             onTap: () {
-              pageController.nextPage(
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut);
+              if (currentQuestion == quizzes.length) {
+                AppRouter.pushReplacement(AppRouter.quizScore,
+                    arg: QuizScoreScreenArgs(
+                      totalQuestions: quizzes.length,
+                      correctAnswers:
+                          quizzes.where((e) => e.isCorrect == true).length,
+                      courseId: widget.arg?.course?.id,
+                    ));
+              } else {
+                pageController.nextPage(
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOut);
+              }
             },
             textColor: AppColors.white,
             text: AppString.next,

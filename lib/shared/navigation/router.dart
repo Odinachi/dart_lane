@@ -1,5 +1,6 @@
 import 'package:dartcoder/features/authetication/views/onboarding_screen.dart';
 import 'package:dartcoder/features/courses/views/course_quiz.dart';
+import 'package:dartcoder/features/courses/views/quiz_score_screen.dart';
 import 'package:dartcoder/features/dashboard/views/dashboard_screen.dart';
 import 'package:dartcoder/features/dashboard/views/home.dart';
 import 'package:dartcoder/features/editor/views/editor_screen.dart';
@@ -30,6 +31,11 @@ class AppRouter {
             builder: (_) =>
                 CourseQuiz(arg: settings.arguments as CourseQuizArg?));
 
+      case quizScore:
+        return CupertinoPageRoute(
+            builder: (_) => QuizScoreScreen(
+                arg: settings.arguments as QuizScoreScreenArgs?));
+
       default:
         return CupertinoPageRoute(builder: (_) => const OnboardingScreen());
     }
@@ -40,11 +46,14 @@ class AppRouter {
   static const String courseDetails = "/courseDetails";
   static const String editor = "/editor";
   static const String quiz = "/quiz";
+  static const String quizScore = "/quiz_score";
 
   static Future push(String routeName, {Object? arg}) async =>
       await navKey.currentState?.pushNamed(routeName, arguments: arg);
 
   static void pop({Object? arg}) async => navKey.currentState?.pop(arg);
+  static void pushReplacement(String routeName, {Object? arg}) async =>
+      navKey.currentState?.pushReplacementNamed(routeName, arguments: arg);
   static void pushAndClear(String routeName, {Object? arg}) async => navKey
       .currentState
       ?.pushNamedAndRemoveUntil(routeName, (route) => false, arguments: arg);

@@ -83,8 +83,8 @@ flutter:
     - assets/pngs/
     - assets/svgs/
     - assets/courses/
-    - assets/jsons/
     - assets/jsons/quizzes/
+    - assets/jsons/lottie/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

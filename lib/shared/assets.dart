@@ -16,7 +16,8 @@ class AssetsImageFile {
 class AssetsJson {
   const AssetsJson();
 //Sample
-  LottieImage get greenLocationBlinker => const LottieImage('');
+  LottieImage get trophy =>
+      const LottieImage('assets/jsons/lottie/trophy.json');
 }
 
 class AssetsSvgs {
