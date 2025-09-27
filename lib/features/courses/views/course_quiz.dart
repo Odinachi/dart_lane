@@ -118,6 +118,7 @@ class _CourseQuizState extends State<CourseQuiz> {
 //         "type": "fill"
 //       }
 //     ];
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.arg?.course?.title ?? "Quiz"),
@@ -131,7 +132,8 @@ class _CourseQuizState extends State<CourseQuiz> {
               return Column(
                 key: ValueKey(e.question),
                 children: [
-                  QuestionWidget(question: e.question ?? ""),
+                  QuestionWidget(
+                      question: e.question ?? "", key: ValueKey(e.question)),
                   SizedBox(height: 20.h),
                   if (e.type == "order")
                     Wrap(spacing: 10.w, runSpacing: 10.h, children: [

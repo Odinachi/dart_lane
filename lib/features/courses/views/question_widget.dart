@@ -63,7 +63,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 fontFamily: 'Courier',
                 color: Colors.green[300],
-                fontSize: 16,
+                fontSize: 17,
               ),
         ));
       }
@@ -73,8 +73,8 @@ class _QuestionWidgetState extends State<QuestionWidget> {
       if (placeholder == '%order%') {
         codeSpans.add(WidgetSpan(
           child: Container(
-            width: 30,
-            height: 20,
+            width: 60,
+            height: 30,
             margin: const EdgeInsets.symmetric(horizontal: 2),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -87,7 +87,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
         codeSpans.add(WidgetSpan(
           child: Container(
             width: 60,
-            height: 20,
+            height: 30,
             margin: const EdgeInsets.symmetric(horizontal: 2),
             child: TextFormField(
               style: const TextStyle(fontSize: 12),
