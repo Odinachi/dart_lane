@@ -1,11 +1,15 @@
 [
   {
-    "question": "Complete the async function declaration:\n\n```dart\nFuture<String> getIceCream() %order% {\n  await Future.delayed(Duration(seconds: 2));\n  return '🍦 Ice cream is here!';\n}\n```",
+    "question": "Complete the async function declaration with keywords and return type:\n\n```dart\n%order%<String> getIceCream() %order% {\n  %order% Future.delayed(Duration(seconds: 2));\n  return '🍦 Ice cream is here!';\n}\n```",
     "options": [
-      "async"
+      "Future",
+      "async",
+      "await"
     ],
     "answer": [
-      "async"
+      "Future",
+      "async",
+      "await"
     ],
     "type": "order"
   },
@@ -26,12 +30,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the main function to use await:\n\n```dart\nvoid main() %order% {\n  String data = await fetchData();\n  print(data);\n}\n```",
+    "question": "Complete the main function to use await with proper syntax:\n\n```dart\nvoid %order%() %order% {\n  String data = %order% fetchData();\n  print(data);\n}\n```",
     "options": [
-      "async"
+      "main",
+      "async",
+      "await"
     ],
     "answer": [
-      "async"
+      "main",
+      "async",
+      "await"
     ],
     "type": "order"
   },
@@ -52,13 +60,15 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async function with return type:\n\n```dart\n%order%<String> getMessage() %order% {\n  await Future.delayed(Duration(seconds: 1));\n  return 'Hello World!';\n}\n```",
+    "question": "Complete the async function with return type, name, and modifier:\n\n```dart\n%order%<String> %order%() %order% {\n  await Future.delayed(Duration(seconds: 1));\n  return 'Hello World!';\n}\n```",
     "options": [
       "Future",
+      "getMessage",
       "async"
     ],
     "answer": [
       "Future",
+      "getMessage",
       "async"
     ],
     "type": "order"
@@ -80,12 +90,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sequential async operations:\n\n```dart\nvoid main() async {\n  %order% doHomework();\n  %order% cleanRoom();\n  print('All tasks completed!');\n}\n```",
+    "question": "Complete the sequential async operations with proper keywords:\n\n```dart\nvoid main() %order% {\n  %order% doHomework();\n  %order% cleanRoom();\n  print('All tasks completed!');\n}\n```",
     "options": [
+      "async",
       "await",
       "await"
     ],
     "answer": [
+      "async",
       "await",
       "await"
     ],
@@ -136,14 +148,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async function with void return:\n\n```dart\nFuture<%order%> doWork() %order% {\n  await Future.delayed(Duration(seconds: 2));\n  print('Work completed!');\n}\n```",
+    "question": "Complete the async function with void return:\n\n```dart\nFuture<%order%> doWork() %order% {\n  %order% Future.delayed(Duration(seconds: 2));\n  print('Work completed!');\n}\n```",
     "options": [
       "void",
-      "async"
+      "async",
+      "await"
     ],
     "answer": [
       "void",
-      "async"
+      "async",
+      "await"
     ],
     "type": "order"
   },
@@ -164,14 +178,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the parallel async operations:\n\n```dart\nvoid main() async {\n  List<Future<String>> futures = [task1(), task2(), task3()];\n  List<String> results = await %order%.%order%(futures);\n  print('All results: $results');\n}\n```",
+    "question": "Complete the parallel async operations:\n\n```dart\nvoid main() async {\n  List<Future<String>> futures = [task1(), task2(), task3()];\n  List<String> results = await %order%.%order%(%order%);\n  print('All results: $results');\n}\n```",
     "options": [
       "Future",
-      "wait"
+      "wait",
+      "futures"
     ],
     "answer": [
       "Future",
-      "wait"
+      "wait",
+      "futures"
     ],
     "type": "order"
   },
@@ -192,11 +208,15 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async loop:\n\n```dart\nvoid main() async {\n  for (int i = 0; i < 3; i++) {\n    %order% processItem(i);\n    print('Processed item $i');\n  }\n}\n```",
+    "question": "Complete the async loop:\n\n```dart\nvoid main() %order% {\n  %order% (int i = 0; i < 3; i++) {\n    %order% processItem(i);\n    print('Processed item $i');\n  }\n}\n```",
     "options": [
+      "async",
+      "for",
       "await"
     ],
     "answer": [
+      "async",
+      "for",
       "await"
     ],
     "type": "order"
@@ -218,14 +238,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the conditional async operation:\n\n```dart\nvoid main() async {\n  bool condition = true;\n  %order% (condition) {\n    String result = %order% fetchData();\n    print('Data: $result');\n  }\n}\n```",
+    "question": "Complete the conditional async operation:\n\n```dart\nvoid main() %order% {\n  bool condition = true;\n  %order% (%order%) {\n    String result = await fetchData();\n    print('Data: $result');\n  }\n}\n```",
     "options": [
+      "async",
       "if",
-      "await"
+      "condition"
     ],
     "answer": [
+      "async",
       "if",
-      "await"
+      "condition"
     ],
     "type": "order"
   },
@@ -246,12 +268,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async timeout handling:\n\n```dart\nvoid main() async {\n  try {\n    String result = await fetchData().%order%(Duration(seconds: 5));\n    print('Result: $result');\n  } catch (e) {\n    print('Timeout or error: $e');\n  }\n}\n```",
+    "question": "Complete the async timeout handling:\n\n```dart\nvoid main() async {\n  try {\n    String result = await fetchData().%order%(%order%(seconds: 5));\n    print('Result: $result');\n  } catch (e) {\n    print('Timeout or error: $e');\n  }\n}\n```",
     "options": [
-      "timeout"
+      "timeout",
+      "Duration"
     ],
     "answer": [
-      "timeout"
+      "timeout",
+      "Duration"
     ],
     "type": "order"
   },
@@ -272,14 +296,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async function with multiple awaits:\n\n```dart\nFuture<String> complexOperation() async {\n  String step1 = %order% firstStep();\n  String step2 = %order% secondStep(step1);\n  String step3 = %order% thirdStep(step2);\n  return step3;\n}\n```",
+    "question": "Complete the async function with multiple awaits:\n\n```dart\nFuture<String> complexOperation() %order% {\n  String step1 = %order% firstStep();\n  String step2 = %order% secondStep(step1);\n  String step3 = await thirdStep(step2);\n  return step3;\n}\n```",
     "options": [
-      "await",
+      "async",
       "await",
       "await"
     ],
     "answer": [
-      "await",
+      "async",
       "await",
       "await"
     ],
@@ -302,12 +326,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async callback pattern:\n\n```dart\nFuture<void> processWithCallback(Function callback) async {\n  String data = await fetchData();\n  %order%(data);\n}\n\nvoid main() async {\n  await processWithCallback((result) {\n    print('Callback received: $result');\n  });\n}\n```",
+    "question": "Complete the async callback pattern:\n\n```dart\nFuture<void> processWithCallback(Function %order%) %order% {\n  String data = %order% fetchData();\n  callback(data);\n}\n\nvoid main() async {\n  await processWithCallback((result) {\n    print('Callback received: $result');\n  });\n}\n```",
     "options": [
-      "callback"
+      "callback",
+      "async",
+      "await"
     ],
     "answer": [
-      "callback"
+      "callback",
+      "async",
+      "await"
     ],
     "type": "order"
   },
@@ -328,12 +356,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async stream handling:\n\n```dart\nvoid main() async {\n  %order% %order% (String data in dataStream) {\n    print('Received: $data');\n  }\n}\n```",
+    "question": "Complete the async stream handling:\n\n```dart\nvoid main() %order% {\n  %order% %order% (String data in dataStream) {\n    print('Received: $data');\n  }\n}\n```",
     "options": [
+      "async",
       "await",
       "for"
     ],
     "answer": [
+      "async",
       "await",
       "for"
     ],
@@ -386,12 +416,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async/await with finally:\n\n```dart\nvoid main() async {\n  try {\n    String result = await fetchData();\n    print('Success: $result');\n  } catch (e) {\n    print('Error: $e');\n  } %order% {\n    print('Cleanup completed');\n  }\n}\n```",
+    "question": "Complete the async/await with finally:\n\n```dart\nvoid main() %order% {\n  %order% {\n    String result = %order% fetchData();\n    print('Success: $result');\n  } catch (e) {\n    print('Error: $e');\n  } finally {\n    print('Cleanup completed');\n  }\n}\n```",
     "options": [
-      "finally"
+      "async",
+      "try",
+      "await"
     ],
     "answer": [
-      "finally"
+      "async",
+      "try",
+      "await"
     ],
     "type": "order"
   },
@@ -412,12 +446,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async method in a class:\n\n```dart\nclass DataService {\n  Future<String> %order%() %order% {\n    await Future.delayed(Duration(seconds: 1));\n    return 'Data loaded';\n  }\n}\n```",
+    "question": "Complete the async method in a class:\n\n```dart\nclass DataService {\n  %order%<String> %order%() %order% {\n    await Future.delayed(Duration(seconds: 1));\n    return 'Data loaded';\n  }\n}\n```",
     "options": [
+      "Future",
       "loadData",
       "async"
     ],
     "answer": [
+      "Future",
       "loadData",
       "async"
     ],
@@ -440,12 +476,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async constructor alternative:\n\n```dart\nclass DatabaseConnection {\n  DatabaseConnection._();\n  \n  static Future<DatabaseConnection> %order%() %order% {\n    var connection = DatabaseConnection._();\n    await connection._initialize();\n    return connection;\n  }\n}\n```",
+    "question": "Complete the async constructor alternative:\n\n```dart\nclass DatabaseConnection {\n  DatabaseConnection._();\n  \n  static %order%<DatabaseConnection> %order%() %order% {\n    var connection = DatabaseConnection._();\n    await connection._initialize();\n    return connection;\n  }\n}\n```",
     "options": [
+      "Future",
       "create",
       "async"
     ],
     "answer": [
+      "Future",
       "create",
       "async"
     ],
@@ -468,16 +506,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async error propagation:\n\n```dart\nFuture<String> innerFunction() async {\n  throw Exception('Inner error');\n}\n\nFuture<String> outerFunction() async {\n  %order% {\n    return await innerFunction();\n  } %order% (e) {\n    print('Caught in outer: $e');\n    %order%;\n  }\n}\n```",
+    "question": "Complete the async error propagation:\n\n```dart\nFuture<String> innerFunction() %order% {\n  throw Exception('Inner error');\n}\n\nFuture<String> outerFunction() %order% {\n  %order% {\n    return await innerFunction();\n  } catch (e) {\n    print('Caught in outer: $e');\n    rethrow;\n  }\n}\n```",
     "options": [
-      "try",
-      "catch",
-      "rethrow"
+      "async",
+      "async",
+      "try"
     ],
     "answer": [
-      "try",
-      "catch",
-      "rethrow"
+      "async",
+      "async",
+      "try"
     ],
     "type": "order"
   },
@@ -498,16 +536,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async testing pattern:\n\n```dart\nvoid main() async {\n  %order%(expectAsync0(() %order% {\n    String result = %order% fetchTestData();\n    expect(result, equals('test data'));\n  }));\n}\n```",
+    "question": "Complete the async testing pattern:\n\n```dart\nvoid main() %order% {\n  %order%('async test', () %order% {\n    String result = await fetchTestData();\n    expect(result, equals('test data'));\n  });\n}\n```",
     "options": [
-      "test",
       "async",
-      "await"
+      "test",
+      "async"
     ],
     "answer": [
-      "test",
       "async",
-      "await"
+      "test",
+      "async"
     ],
     "type": "order"
   },
@@ -528,18 +566,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the async/await best practices:\n\n```dart\n// Good practice\nFuture<String> goodExample() async {\n  %order% {\n    String data = %order% fetchData();\n    return processData(data);\n  } %order% (e) {\n    print('Error: $e');\n    %order%;\n  }\n}\n```",
+    "question": "Complete the async/await best practices:\n\n```dart\n// Good practice\nFuture<String> goodExample() %order% {\n  %order% {\n    String data = %order% fetchData();\n    return processData(data);\n  } catch (e) {\n    print('Error: $e');\n    rethrow;\n  }\n}\n```",
     "options": [
-      "try",
-      "await", 
-      "catch",
-      "rethrow"
+      "async",
+      "try", 
+      "await"
     ],
     "answer": [
+      "async",
       "try",
-      "await",
-      "catch",
-      "rethrow"
+      "await"
     ],
     "type": "order"
   },
@@ -560,28 +596,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the final comprehensive async/await example:\n\n```dart\nclass %order% {\n  Future<Map<String, dynamic>> %order%() %order% {\n    %order% {\n      // Fetch user data\n      String userData = %order% _fetchUserData();\n      \n      // Process the data\n      Map<String, dynamic> processed = %order% _processData(userData);\n      \n      // Cache the result\n      %order% _cacheResult(processed);\n      \n      return processed;\n    } %order% (e) {\n      print('Error in loadUserProfile: $e');\n      %order%;\n    }\n  }\n}\n```",
+    "question": "Complete the final comprehensive async/await example:\n\n```dart\nclass %order% {\n  %order%<Map<String, dynamic>> %order%() %order% {\n    try {\n      // Fetch user data\n      String userData = %order% _fetchUserData();\n      \n      // Process the data\n      Map<String, dynamic> processed = await _processData(userData);\n      \n      // Cache the result\n      await _cacheResult(processed);\n      \n      return processed;\n    } catch (e) {\n      print('Error in loadUserProfile: $e');\n      rethrow;\n    }\n  }\n}\n```",
     "options": [
       "UserService",
-      "loadUserProfile",
+      "Future",
+      "loadUserProfile", 
       "async",
-      "try",
-      "await",
-      "await", 
-      "await",
-      "catch",
-      "rethrow"
+      "await"
     ],
     "answer": [
       "UserService",
+      "Future",
       "loadUserProfile", 
       "async",
-      "try",
-      "await",
-      "await",
-      "await",
-      "catch",
-      "rethrow"
+      "await"
     ],
     "type": "order"
   }

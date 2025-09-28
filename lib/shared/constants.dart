@@ -226,7 +226,7 @@ class AppData {
       ),
       CourseModel(
           title: "Higher-Order Functions",
-          path: "assets/courses/higher_order_function.md",
+          path: "assets/courses/high_order_function.md",
           id: 21,
           desc:
               "Learn about higher-order functions in Dart and how to use them.",
@@ -234,7 +234,7 @@ class AppData {
             "https://www.youtube.com/watch?v=DfZoyUDCbSg",
             "https://www.youtube.com/watch?v=nyzH2IM1bM0"
           ],
-          quiz: "assets/jsons/quizzes/higher_order_function.json"),
+          quiz: "assets/jsons/quizzes/high_order_function.json"),
       CourseModel(
           title: "Closures",
           path: "assets/courses/closure.md",

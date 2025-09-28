@@ -1,14 +1,5 @@
 [
-  {
-    "question": "Complete the custom exception class declaration:\n\n```dart\nclass CookieException %order% Exception {\n  final String message;\n  CookieException(this.message);\n}\n```",
-    "options": [
-      "implements"
-    ],
-    "answer": [
-      "implements"
-    ],
-    "type": "order"
-  },
+ 
   {
     "question": "What does this custom exception do?\n\n```dart\nclass ToyBrokenException implements Exception {\n  final String toy;\n  ToyBrokenException(this.toy);\n  \n  @override\n  String toString() => 'Oh no! Your $toy is broken!';\n}\n```",
     "options": [
@@ -109,16 +100,7 @@
     "answer": ["toString"],
     "type": "fill"
   },
-  {
-    "question": "Complete the exception with additional properties:\n\n```dart\nclass ValidationException implements Exception {\n  final String message;\n  final %order% errorCode;\n  \n  ValidationException(this.message, this.errorCode);\n}\n```",
-    "options": [
-      "int"
-    ],
-    "answer": [
-      "int"
-    ],
-    "type": "order"
-  },
+ 
   {
     "question": "What will this code print?\n\n```dart\nclass FoodException implements Exception {\n  final String food;\n  FoodException(this.food);\n  \n  @override\n  String toString() => 'Cannot eat $food!';\n}\n\nvoid main() {\n  try {\n    throw FoodException('broccoli');\n  } catch (e) {\n    print(e);\n  }\n}\n```",
     "options": [
@@ -163,16 +145,7 @@
     "answer": ["final", "final"],
     "type": "fill"
   },
-  {
-    "question": "Complete the exception with stack trace:\n\n```dart\nvoid throwError() {\n  try {\n    throw CustomException('Error occurred');\n  } catch (e, %order%) {\n    print('Error: $e');\n    print('Stack: $stackTrace');\n  }\n}\n```",
-    "options": [
-      "stackTrace"
-    ],
-    "answer": [
-      "stackTrace"
-    ],
-    "type": "order"
-  },
+  
   {
     "question": "What is the benefit of implementing Exception?\n\n```dart\nclass MyException implements Exception {\n  // implementation\n}\n```",
     "options": [
@@ -189,16 +162,7 @@
     "answer": ["message"],
     "type": "fill"
   },
-  {
-    "question": "Complete the exception rethrow pattern:\n\n```dart\nvoid handleError() {\n  try {\n    dangerousOperation();\n  } catch (e) {\n    print('Logging error: $e');\n    %order%; // Pass the error up\n  }\n}\n```",
-    "options": [
-      "rethrow"
-    ],
-    "answer": [
-      "rethrow"
-    ],
-    "type": "order"
-  },
+  
   {
     "question": "What will happen with this exception?\n\n```dart\nvoid main() {\n  try {\n    throw WeatherException('Too sunny!');\n  } catch (e) {\n    print('Weather problem: $e');\n  } finally {\n    print('Check weather app');\n  }\n}\n```",
     "options": [
@@ -243,16 +207,7 @@
     "answer": ["Exception", "extends"],
     "type": "fill"
   },
-  {
-    "question": "Complete the exception factory constructor:\n\n```dart\nclass HttpException implements Exception {\n  final String message;\n  \n  HttpException(this.message);\n  \n  factory HttpException.%order%(int code) {\n    return HttpException('HTTP Error: $code');\n  }\n}\n```",
-    "options": [
-      "fromStatusCode"
-    ],
-    "answer": [
-      "fromStatusCode"
-    ],
-    "type": "order"
-  },
+ 
   {
     "question": "What happens when no catch block handles an exception?\n\n```dart\nvoid main() {\n  throw CustomException('Unhandled error');\n}\n```",
     "options": [
@@ -269,16 +224,7 @@
     "answer": ["cause"],
     "type": "fill"
   },
-  {
-    "question": "Complete the exception assertion pattern:\n\n```dart\nvoid validateAge(int age) {\n  %order% (age >= 0) {\n    throw AgeException('Age cannot be negative');\n  }\n}\n```",
-    "options": [
-      "if"
-    ],
-    "answer": [
-      "if"
-    ],
-    "type": "order"
-  },
+  
   {
     "question": "What is the purpose of the toString() method in exceptions?\n\n```dart\nclass MyException implements Exception {\n  @override\n  String toString() => 'My custom error message';\n}\n```",
     "options": [
@@ -353,16 +299,7 @@
     "answer": ["reason", "timestamp"],
     "type": "fill"
   },
-  {
-    "question": "Complete the exception utility method:\n\n```dart\nclass ExceptionUtils {\n  static void %order%(bool condition, String message) {\n    if (!condition) {\n      throw ValidationException(message);\n    }\n  }\n}\n```",
-    "options": [
-      "checkArgument"
-    ],
-    "answer": [
-      "checkArgument"
-    ],
-    "type": "order"
-  },
+ 
   {
     "question": "What will this exception chain produce?\n\n```dart\nvoid main() {\n  try {\n    try {\n      throw InnerException('Inner error');\n    } catch (e) {\n      throw OuterException('Outer error', e);\n    }\n  } catch (e) {\n    print(e);\n  }\n}\n```",
     "options": [

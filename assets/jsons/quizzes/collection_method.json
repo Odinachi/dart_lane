@@ -393,16 +393,7 @@
     "answer": ["reversed"],
     "type": "fill"
   },
-  {
-    "question": "Complete the toList conversion:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3];\n  var doubled = numbers.map((n) => n * 2);\n  var result = doubled.%order%();\n  print(result);\n}\n```",
-    "options": [
-      "toList"
-    ],
-    "answer": [
-      "toList"
-    ],
-    "type": "order"
-  },
+ 
   {
     "question": "Why do we need toList() after map()?\n\n```dart\nvar numbers = [1, 2, 3];\nvar doubled = numbers.map((n) => n * 2);\nprint(doubled.toList());\n```",
     "options": [

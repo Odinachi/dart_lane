@@ -1,11 +1,15 @@
 [
   {
-    "question": "Complete the getter method:\n\n```dart\nclass ToyBox {\n  String _toy = 'Teddy Bear';\n  \n  String %order% toy {\n    return _toy;\n  }\n}\n```",
+    "question": "Complete the getter method with keyword, return type, and name:\n\n```dart\nclass ToyBox {\n  String _toy = 'Teddy Bear';\n  \n  %order% %order% %order% {\n    return _toy;\n  }\n}\n```",
     "options": [
-      "get"
+      "String",
+      "get",
+      "toy"
     ],
     "answer": [
-      "get"
+      "String",
+      "get",
+      "toy"
     ],
     "type": "order"
   },
@@ -26,12 +30,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the setter method:\n\n```dart\nclass ToyBox {\n  String _toy = 'Teddy Bear';\n  \n  %order% toy(String newToy) {\n    _toy = newToy;\n  }\n}\n```",
+    "question": "Complete the setter method with keyword, name, and parameter:\n\n```dart\nclass ToyBox {\n  String _toy = 'Teddy Bear';\n  \n  %order% %order%(%order% newToy) {\n    _toy = newToy;\n  }\n}\n```",
     "options": [
-      "set"
+      "set",
+      "toy",
+      "String"
     ],
     "answer": [
-      "set"
+      "set",
+      "toy",
+      "String"
     ],
     "type": "order"
   },
@@ -52,12 +60,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the getter and setter together:\n\n```dart\nclass Circle {\n  double _radius = 1.0;\n  \n  double %order% radius {\n    return _radius;\n  }\n  \n  %order% radius(double newRadius) {\n    _radius = newRadius;\n  }\n}\n```",
+    "question": "Complete the getter and setter together with keywords:\n\n```dart\nclass Circle {\n  double _radius = 1.0;\n  \n  %order% %order% radius {\n    return _radius;\n  }\n  \n  %order% radius(double newRadius) {\n    _radius = newRadius;\n  }\n}\n```",
     "options": [
+      "double",
       "get",
       "set"
     ],
     "answer": [
+      "double",
       "get",
       "set"
     ],
@@ -80,12 +90,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the computed getter:\n\n```dart\nclass Rectangle {\n  double width = 5.0;\n  double height = 3.0;\n  \n  double %order% area {\n    return width * height;\n  }\n}\n```",
+    "question": "Complete the computed getter with return type and keyword:\n\n```dart\nclass Rectangle {\n  double width = 5.0;\n  double height = 3.0;\n  \n  %order% %order% %order% {\n    return width * height;\n  }\n}\n```",
     "options": [
-      "get"
+      "double",
+      "get",
+      "area"
     ],
     "answer": [
-      "get"
+      "double",
+      "get",
+      "area"
     ],
     "type": "order"
   },
@@ -106,12 +120,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the setter with validation:\n\n```dart\nclass Person {\n  int _age = 0;\n  \n  set age(%order% newAge) {\n    %order% (newAge >= 0) {\n      _age = newAge;\n    }\n  }\n}\n```",
+    "question": "Complete the setter with validation including type, keyword, and condition:\n\n```dart\nclass Person {\n  int _age = 0;\n  \n  %order% age(%order% newAge) {\n    %order% (newAge >= 0) {\n      _age = newAge;\n    }\n  }\n}\n```",
     "options": [
+      "set",
       "int",
       "if"
     ],
     "answer": [
+      "set",
       "int",
       "if"
     ],
@@ -134,11 +150,15 @@
     "type": "fill"
   },
   {
-    "question": "Complete the getter with arrow syntax:\n\n```dart\nclass Square {\n  double side = 5.0;\n  \n  double get area %order% side * side;\n}\n```",
+    "question": "Complete the getter with arrow syntax including return type and operator:\n\n```dart\nclass Square {\n  double side = 5.0;\n  \n  %order% %order% area %order% side * side;\n}\n```",
     "options": [
+      "double",
+      "get",
       "=>"
     ],
     "answer": [
+      "double",
+      "get",
       "=>"
     ],
     "type": "order"
@@ -160,13 +180,15 @@
     "type": "fill"
   },
   {
-    "question": "Complete the setter with arrow syntax:\n\n```dart\nclass Temperature {\n  double _celsius = 0.0;\n  \n  double get celsius => _celsius;\n  \n  %order% celsius(double value) %order% _celsius = value;\n}\n```",
+    "question": "Complete the setter with arrow syntax including keyword and operator:\n\n```dart\nclass Temperature {\n  double _celsius = 0.0;\n  \n  double get celsius => _celsius;\n  \n  %order% %order%(double value) %order% _celsius = value;\n}\n```",
     "options": [
       "set",
+      "celsius",
       "=>"
     ],
     "answer": [
       "set",
+      "celsius",
       "=>"
     ],
     "type": "order"
@@ -188,12 +210,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the read-only property:\n\n```dart\nclass Car {\n  String _model = 'Tesla';\n  \n  String %order% model => _model;\n  \n  // No setter - read-only!\n}\n```",
+    "question": "Complete the read-only property with return type and keyword:\n\n```dart\nclass Car {\n  String _model = 'Tesla';\n  \n  %order% %order% %order% => _model;\n  \n  // No setter - read-only!\n}\n```",
     "options": [
-      "get"
+      "String",
+      "get",
+      "model"
     ],
     "answer": [
-      "get"
+      "String",
+      "get",
+      "model"
     ],
     "type": "order"
   },
@@ -214,64 +240,46 @@
     "type": "fill"
   },
   {
-    "question": "Complete the getter with transformation:\n\n```dart\nclass User {\n  String _name = 'john doe';\n  \n  String %order% name {\n    return _name.toUpperCase();\n  }\n}\n```",
+    "question": "Complete the getter with transformation including keyword and method:\n\n```dart\nclass User {\n  String _name = 'john doe';\n  \n  %order% %order% name {\n    return _name.%order%();\n  }\n}\n```",
     "options": [
-      "get"
+      "String",
+      "get",
+      "toUpperCase"
     ],
     "answer": [
-      "get"
+      "String",
+      "get",
+      "toUpperCase"
     ],
     "type": "order"
   },
   {
-    "question": "What will this transforming getter return?\n\n```dart\nclass Email {\n  String _email = 'John@Example.COM';\n  \n  String get email {\n    return _email.toLowerCase();\n  }\n}\n\nvoid main() {\n  Email emailObj = Email();\n  print(emailObj.email);\n}\n```",
+    "question": "Complete the setter with transformation including keyword and methods:\n\n```dart\nclass Name {\n  String _name = '';\n  \n  %order% %order%(String newName) {\n    _name = newName.%order%().%order%();\n  }\n}\n```",
     "options": [
-      "john@example.com",
-      "John@Example.COM",
-      "JOHN@EXAMPLE.COM",
-      "Error"
-    ],
-    "answer": ["john@example.com"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the string method:\n\n```dart\nclass Title {\n  String _title = 'dart programming';\n  \n  String get title {\n    return _title.%fill%();\n  }\n}\n```",
-    "answer": ["toUpperCase"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the setter with transformation:\n\n```dart\nclass Name {\n  String _name = '';\n  \n  %order% name(String newName) {\n    _name = newName.trim().toLowerCase();\n  }\n}\n```",
-    "options": [
-      "set"
+      "set",
+      "name",
+      "trim",
+      "toLowerCase"
     ],
     "answer": [
-      "set"
+      "set",
+      "name",
+      "trim",
+      "toLowerCase"
     ],
     "type": "order"
   },
   {
-    "question": "What will this transforming setter store?\n\n```dart\nclass Username {\n  String _username = '';\n  \n  set username(String value) {\n    _username = value.trim().toLowerCase();\n  }\n  \n  String get username => _username;\n}\n\nvoid main() {\n  Username user = Username();\n  user.username = '  ALICE  ';\n  print(user.username);\n}\n```",
+    "question": "Complete the calculated property with return type and keyword:\n\n```dart\nclass Employee {\n  double hourlyRate = 20.0;\n  int hoursWorked = 40;\n  \n  %order% %order% %order% {\n    return hourlyRate * hoursWorked;\n  }\n}\n```",
     "options": [
-      "alice",
-      "  ALICE  ",
-      "ALICE",
-      "Error"
-    ],
-    "answer": ["alice"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the string methods:\n\n```dart\nclass CleanText {\n  String _text = '';\n  \n  set text(String value) {\n    _text = value.%fill%().%fill%();\n  }\n}\n```",
-    "answer": ["trim", "toLowerCase"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the calculated property:\n\n```dart\nclass Employee {\n  double hourlyRate = 20.0;\n  int hoursWorked = 40;\n  \n  double %order% salary {\n    return hourlyRate * hoursWorked;\n  }\n}\n```",
-    "options": [
-      "get"
+      "double",
+      "get",
+      "salary"
     ],
     "answer": [
-      "get"
+      "double",
+      "get",
+      "salary"
     ],
     "type": "order"
   },
@@ -292,12 +300,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the cached property:\n\n```dart\nclass ExpensiveCalculation {\n  int _input = 10;\n  double? _cachedResult;\n  \n  double %order% result {\n    _cachedResult ??= _input * _input * 1.5;\n    return _cachedResult!;\n  }\n}\n```",
+    "question": "Complete the cached property with return type and keyword:\n\n```dart\nclass ExpensiveCalculation {\n  int _input = 10;\n  double? _cachedResult;\n  \n  %order% %order% %order% {\n    _cachedResult ??= _input * _input * 1.5;\n    return _cachedResult!;\n  }\n}\n```",
     "options": [
-      "get"
+      "double",
+      "get",
+      "result"
     ],
     "answer": [
-      "get"
+      "double",
+      "get",
+      "result"
     ],
     "type": "order"
   },
@@ -318,12 +330,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the property with both getter and setter:\n\n```dart\nclass Temperature {\n  double _fahrenheit = 32.0;\n  \n  double %order% celsius {\n    return (_fahrenheit - 32) * 5 / 9;\n  }\n  \n  %order% celsius(double value) {\n    _fahrenheit = value * 9 / 5 + 32;\n  }\n}\n```",
+    "question": "Complete the property with both getter and setter including keywords:\n\n```dart\nclass Temperature {\n  double _fahrenheit = 32.0;\n  \n  %order% %order% celsius {\n    return (_fahrenheit - 32) * 5 / 9;\n  }\n  \n  %order% celsius(double value) {\n    _fahrenheit = value * 9 / 5 + 32;\n  }\n}\n```",
     "options": [
+      "double",
       "get",
       "set"
     ],
     "answer": [
+      "double",
       "get",
       "set"
     ],
@@ -346,39 +360,34 @@
     "type": "fill"
   },
   {
-    "question": "Complete the boolean property:\n\n```dart\nclass Light {\n  bool _isOn = false;\n  \n  bool %order% isOn => _isOn;\n  \n  %order% isOn(bool value) {\n    _isOn = value;\n    print(value ? 'Light turned on' : 'Light turned off');\n  }\n}\n```",
+    "question": "Complete the boolean property with keywords and return type:\n\n```dart\nclass Light {\n  bool _isOn = false;\n  \n  %order% %order% %order% => _isOn;\n  \n  set isOn(bool value) {\n    _isOn = value;\n    print(value ? 'Light turned on' : 'Light turned off');\n  }\n}\n```",
     "options": [
+      "bool",
       "get",
-      "set"
+      "isOn"
     ],
     "answer": [
+      "bool",
       "get",
-      "set"
+      "isOn"
     ],
     "type": "order"
   },
   {
-    "question": "What will this boolean property output?\n\n```dart\nclass Switch {\n  bool _state = false;\n  \n  bool get state => _state;\n  \n  set state(bool value) {\n    _state = value;\n    print('Switch is ${value ? \"ON\" : \"OFF\"}');\n  }\n}\n\nvoid main() {\n  Switch mySwitch = Switch();\n  mySwitch.state = true;\n  mySwitch.state = false;\n}\n```",
-    "options": [
-      "Switch is ON\\nSwitch is OFF",
-      "Switch is OFF\\nSwitch is ON",
-      "true\\nfalse",
-      "Error"
-    ],
-    "answer": ["Switch is ON\\nSwitch is OFF"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the conditional operator:\n\n```dart\nclass Status {\n  bool active = true;\n  \n  String get status => active %fill% 'Active' : 'Inactive';\n}\n```",
+    "question": "Complete the conditional operator:\n\n```dart\nclass Status {\n  bool active = true;\n  \n  String get status => active %fill% 'Active' : 'Inactive';\n}\n```",
     "answer": ["?"],
     "type": "fill"
   },
   {
-    "question": "Complete the list property:\n\n```dart\nclass ShoppingCart {\n  List<String> _items = [];\n  \n  List<String> %order% items => List.unmodifiable(_items);\n  \n  void addItem(String item) {\n    _items.add(item);\n  }\n}\n```",
+    "question": "Complete the list property with return type and keyword:\n\n```dart\nclass ShoppingCart {\n  List<String> _items = [];\n  \n  %order%<%order%> %order% items => List.unmodifiable(_items);\n  \n  void addItem(String item) {\n    _items.add(item);\n  }\n}\n```",
     "options": [
+      "List",
+      "String",
       "get"
     ],
     "answer": [
+      "List",
+      "String",
       "get"
     ],
     "type": "order"
@@ -400,11 +409,17 @@
     "type": "fill"
   },
   {
-    "question": "Complete the map property:\n\n```dart\nclass Student {\n  Map<String, int> _grades = {'Math': 90, 'Science': 85};\n  \n  Map<String, int> %order% grades {\n    return Map.unmodifiable(_grades);\n  }\n}\n```",
+    "question": "Complete the map property with types and keyword:\n\n```dart\nclass Student {\n  Map<String, int> _grades = {'Math': 90, 'Science': 85};\n  \n  %order%<%order%, %order%> %order% grades {\n    return Map.unmodifiable(_grades);\n  }\n}\n```",
     "options": [
+      "Map",
+      "String",
+      "int",
       "get"
     ],
     "answer": [
+      "Map",
+      "String",
+      "int",
       "get"
     ],
     "type": "order"
@@ -426,12 +441,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the lazy initialization:\n\n```dart\nclass DatabaseConnection {\n  Database? _database;\n  \n  Database %order% database {\n    _database ??= Database.connect();\n    return _database!;\n  }\n}\n```",
+    "question": "Complete the lazy initialization with return type and keyword:\n\n```dart\nclass DatabaseConnection {\n  Database? _database;\n  \n  %order% %order% %order% {\n    _database ??= Database.connect();\n    return _database!;\n  }\n}\n```",
     "options": [
-      "get"
+      "Database",
+      "get",
+      "database"
     ],
     "answer": [
-      "get"
+      "Database",
+      "get",
+      "database"
     ],
     "type": "order"
   },
@@ -452,40 +471,30 @@
     "type": "fill"
   },
   {
-    "question": "Complete the validation setter:\n\n```dart\nclass Age {\n  int _age = 0;\n  \n  %order% age(int value) {\n    if (value >= 0 && value <= 120) {\n      _age = value;\n    } else {\n      throw ArgumentError('Invalid age: $value');\n    }\n  }\n}\n```",
+    "question": "Complete the validation setter with keyword and error handling:\n\n```dart\nclass Age {\n  int _age = 0;\n  \n  %order% %order%(int value) {\n    if (value >= 0 && value <= 120) {\n      _age = value;\n    } else {\n      %order% ArgumentError('Invalid age: $value');\n    }\n  }\n}\n```",
     "options": [
-      "set"
+      "set",
+      "age",
+      "throw"
     ],
     "answer": [
-      "set"
+      "set",
+      "age",
+      "throw"
     ],
     "type": "order"
   },
   {
-    "question": "What happens with invalid input to this setter?\n\n```dart\nclass Score {\n  int _score = 0;\n  \n  set score(int value) {\n    if (value >= 0 && value <= 100) {\n      _score = value;\n    } else {\n      throw RangeError('Score must be between 0 and 100');\n    }\n  }\n}\n\nvoid main() {\n  Score gameScore = Score();\n  gameScore.score = 150;\n}\n```",
+    "question": "Complete the static property with keywords and modifier:\n\n```dart\nclass Counter {\n  static int _count = 0;\n  \n  %order% %order% %order% count => _count;\n  \n  static set count(int value) {\n    _count = value;\n  }\n}\n```",
     "options": [
-      "Throws RangeError exception",
-      "Sets score to 150",
-      "Sets score to 100",
-      "Sets score to 0"
-    ],
-    "answer": ["Throws RangeError exception"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the validation range:\n\n```dart\nclass Percentage {\n  double _value = 0.0;\n  \n  set value(double percent) {\n    if (percent >= 0 && percent <= %fill%) {\n      _value = percent;\n    }\n  }\n}\n```",
-    "answer": ["100"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the static property:\n\n```dart\nclass Counter {\n  static int _count = 0;\n  \n  static int %order% count => _count;\n  \n  static %order% count(int value) {\n    _count = value;\n  }\n}\n```",
-    "options": [
-      "get",
-      "set"
+      "static",
+      "int",
+      "get"
     ],
     "answer": [
-      "get",
-      "set"
+      "static",
+      "int",
+      "get"
     ],
     "type": "order"
   },

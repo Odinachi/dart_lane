@@ -33,16 +33,7 @@
     ],
     "type": "fill"
   },
-  {
-    "question": "Complete the else statement:\n\n```dart\nvoid main() {\n  int age = 3;\n  if (age >= 5) {\n    print('You can ride!');\n  } %order% {\n    print('Too young!');\n  }\n}\n```",
-    "options": [
-      "else"
-    ],
-    "answer": [
-      "else"
-    ],
-    "type": "order"
-  },
+  
   {
     "question": "What will this code print?\n\n```dart\nvoid main() {\n  String color = 'red';\n  if (color == 'red') {\n    print('Stop! 🛑');\n  } else if (color == 'green') {\n    print('Go! 🏃‍♂️');\n  }\n}\n```",
     "options": [

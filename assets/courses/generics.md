@@ -1,173 +1,885 @@
-# Generics
+# Generics in Dart
 
-Imagine you have a **magic toy box** 🧰.
-You can fill it with **anything** — toy cars 🚗, dolls 👧, Legos 🧱, or even snacks 🍪!
+Imagine you're running a **magical storage facility** 🏪✨!
 
-But… if you say,
+You have different types of containers:
 
-> “This box is only for toy cars,”
+- A **cookie jar** 🍪 that should only hold cookies
+- A **toy chest** 🧸 that should only hold toys
+- A **book shelf** 📚 that should only hold books
 
-Then nobody puts snacks in it by mistake.
+But what if you had ONE **smart container** that could safely hold ANY type of item, but once you decide what goes in it, it ONLY accepts that type?
 
-👉 That’s **Generics** in Dart!
+👉 That's exactly what **Generics** do in Dart:
 
-> “A way to tell Dart **what type of thing** you want in a box — so it keeps things safe and neat.”
-
----
-
-## 🎁 Real-Life Analogy
-
-| Real Life                          | Dart Code        |
-|------------------------------------|------------------|
-| Toy box for **only dolls** 👧      | `Box<Doll>`      |
-| Jar for **only cookies** 🍪        | `Box<Cookie>`    |
-| Puzzle board with **any shape** 🧩 | `PuzzlePiece<T>` |
+> They let you create **flexible, reusable code** that works with different types while keeping everything **type-safe**!
 
 ---
 
-## 🧰 Basic Dart Example Without Generics
+## 🚫 The Problem: Unsafe Storage
 
 ```dart
-class ToyBox {
-  Object? toy;
+class UnsafeBox {
+  dynamic item; // Can hold ANYTHING!
 
-  void put(Object newToy) {
-    toy = newToy;
+  void store(dynamic something) {
+    item = something;
   }
 
-  Object? get() {
-    return toy;
+  dynamic retrieve() {
+    return item;
   }
-}
-```
-
-### ❗ Problem:
-
-You can accidentally put the **wrong thing** inside and Dart won’t complain until it breaks.
-
----
-
-## ✅ Now with Generics: Safe and Smart
-
-```dart
-class ToyBox<T> {
-  T? toy;
-
-  void put(T newToy) {
-    toy = newToy;
-  }
-
-  T? get() {
-    return toy;
-  }
-}
-```
-
-> `T` means: "You tell me what **type** you want to use."
-
----
-
-## 🧒 Let’s Use the ToyBox
-
-```dart
-void main() {
-  var carBox = ToyBox<String>(); // Only strings (e.g., car names)
-  carBox.put('Red Racing Car');
-  print('Inside the box: ${carBox.get()}');
-
-  var numberBox = ToyBox<int>(); // Only numbers
-  numberBox.put(42);
-  print('Magic number: ${numberBox.get()}');
-}
-```
-
-### 🧠 Output:
-
-```
-Inside the box: Red Racing Car
-Magic number: 42
-```
-
-Now Dart knows **exactly what type** is inside each box — no confusion!
-
----
-
-## 💡 Why Use Generics?
-
-| Without Generics           | With Generics            |
-|----------------------------|--------------------------|
-| Dart doesn’t know the type | Dart knows what’s inside |
-| You need to cast manually  | No casting needed        |
-| Bugs might happen 🐞       | Bugs are less likely ✅   |
-
----
-
-## 🎯 Generics with Lists
-
-```dart
-
-List<int> numbers = [1, 2, 3];
-List<String> names = ['Alice', 'Bob'];
-
-print
-(
-numbers[0] + 2); // Safe math ✅
-print(names[
-0
-]
-.
-toUpperCase
-(
-)
-); // Safe string ✅
-```
-
-Without generics, Dart wouldn’t know what type is inside the list!
-
----
-
-## 🧩 More Fun: Generic Functions
-
-```dart
-T pickFirst<T>(List<T> items) {
-  return items[0];
 }
 
 void main() {
-  print(pickFirst<int>([10, 20, 30])); // 10
-  print(pickFirst<String>(['A', 'B', 'C'])); // A
+  UnsafeBox box = UnsafeBox();
+
+  box.store('Cookie'); // Store a string
+  String cookie = box.retrieve(); // ❌ Might crash if wrong type!
+
+  box.store(42); // Now it has a number
+  String number = box.retrieve(); // ❌ CRASH! Expected string, got int
 }
 ```
 
-> The function works for **any type**, but safely!
+**Problems:**
+
+- No type safety! 💥
+- Runtime crashes! 😱
+- Hard to debug! 🐛
+- No IDE help! 🤷‍♀️
 
 ---
 
-## 🧠 What Does `<T>` Mean?
+## ✅ The Solution: Generic Magic Box
 
-* `<T>` = “Type Placeholder”
-* You can use `<T>`, `<E>`, `<K, V>`, etc.
-* Dart replaces `T` with the real type you give it (like `int`, `String`, etc.)
+```dart
+class MagicBox<T> {
+  T? item;
+
+  void store(T something) {
+    item = something;
+    print('📦 Stored ${something.runtimeType}: $something');
+  }
+
+  T? retrieve() {
+    if (item != null) {
+      print('📤 Retrieved: $item');
+      return item;
+    }
+    print('📭 Box is empty!');
+    return null;
+  }
+
+  bool get isEmpty => item == null;
+  bool get isNotEmpty => item != null;
+}
+
+void main() {
+  // Create boxes for specific types
+  MagicBox<String> cookieBox = MagicBox<String>();
+  MagicBox<int> numberBox = MagicBox<int>();
+
+  cookieBox.store('Chocolate Chip Cookie');
+  numberBox.store(42);
+
+  String? cookie = cookieBox.retrieve(); // ✅ Type-safe!
+  int? number = numberBox.retrieve();     // ✅ Type-safe!
+
+  print('🍪 Cookie: $cookie');
+  print('🔢 Number: $number');
+
+  // cookieBox.store(123); // ❌ Compiler error - can't store int in String box!
+}
+```
+
+**Output:**
+
+```
+📦 Stored String: Chocolate Chip Cookie
+📦 Stored int: 42
+📤 Retrieved: Chocolate Chip Cookie
+📤 Retrieved: 42
+🍪 Cookie: Chocolate Chip Cookie
+🔢 Number: 42
+```
 
 ---
 
-## 📦 Summary
+## 🎮 Gaming Example: Inventory System
 
-| Word         | What It Means                               |
-|--------------|---------------------------------------------|
-| `Generic<T>` | A smart box that only holds one **type**    |
-| `T`          | A placeholder for the type you want to use  |
-| `List<T>`    | A list of things that are all the same type |
-| `Map<K, V>`  | A map where key is `K` and value is `V`     |
-| Safe typing  | Fewer bugs, more safety                     |
+```dart
+class GameInventory<T> {
+  List<T> _items = [];
+  int maxCapacity;
+
+  GameInventory(this.maxCapacity);
+
+  bool addItem(T item) {
+    if (_items.length < maxCapacity) {
+      _items.add(item);
+      print('✅ Added ${item.toString()} to inventory');
+      return true;
+    } else {
+      print('❌ Inventory full! Cannot add ${item.toString()}');
+      return false;
+    }
+  }
+
+  T? removeItem(int index) {
+    if (index >= 0 && index < _items.length) {
+      T item = _items.removeAt(index);
+      print('🗑️ Removed ${item.toString()} from inventory');
+      return item;
+    }
+    print('❌ Invalid index: $index');
+    return null;
+  }
+
+  void displayInventory() {
+    print('\n🎒 INVENTORY (${_items.length}/$maxCapacity):');
+    if (_items.isEmpty) {
+      print('   📭 Empty inventory');
+    } else {
+      for (int i = 0; i < _items.length; i++) {
+        print('   ${i + 1}. ${_items[i]}');
+      }
+    }
+    print('');
+  }
+
+  List<T> get items => List.unmodifiable(_items);
+  int get count => _items.length;
+  bool get isFull => _items.length >= maxCapacity;
+  bool get isEmpty => _items.isEmpty;
+}
+
+// Different item types
+class Weapon {
+  String name;
+  int damage;
+
+  Weapon(this.name, this.damage);
+
+  @override
+  String toString() => '$name (⚔️ $damage dmg)';
+}
+
+class Potion {
+  String name;
+  int healing;
+
+  Potion(this.name, this.healing);
+
+  @override
+  String toString() => '$name (💚 +$healing HP)';
+}
+
+void main() {
+  print('🎮 RPG INVENTORY SYSTEM\n');
+
+  // Create different inventories for different item types
+  GameInventory<Weapon> weaponInventory = GameInventory<Weapon>(3);
+  GameInventory<Potion> potionInventory = GameInventory<Potion>(5);
+
+  // Add weapons
+  print('=== WEAPON INVENTORY ===');
+  weaponInventory.addItem(Weapon('Iron Sword', 25));
+  weaponInventory.addItem(Weapon('Magic Staff', 35));
+  weaponInventory.addItem(Weapon('Silver Bow', 30));
+  weaponInventory.addItem(Weapon('Dragon Blade', 50)); // Should fail - inventory full
+
+  weaponInventory.displayInventory();
+
+  // Add potions
+  print('=== POTION INVENTORY ===');
+  potionInventory.addItem(Potion('Health Potion', 50));
+  potionInventory.addItem(Potion('Mana Potion', 30));
+  potionInventory.addItem(Potion('Super Healing', 100));
+
+  potionInventory.displayInventory();
+
+  // Use items
+  print('=== USING ITEMS ===');
+  Weapon? weapon = weaponInventory.removeItem(0);
+  Potion? potion = potionInventory.removeItem(1);
+
+  if (weapon != null) {
+    print('⚔️ Equipped: ${weapon.name}');
+  }
+  if (potion != null) {
+    print('🧪 Drank: ${potion.name}');
+  }
+
+  weaponInventory.displayInventory();
+  potionInventory.displayInventory();
+}
+```
+
+**Output:**
+
+```
+🎮 RPG INVENTORY SYSTEM
+
+=== WEAPON INVENTORY ===
+✅ Added Iron Sword (⚔️ 25 dmg) to inventory
+✅ Added Magic Staff (⚔️ 35 dmg) to inventory
+✅ Added Silver Bow (⚔️ 30 dmg) to inventory
+❌ Inventory full! Cannot add Dragon Blade (⚔️ 50 dmg)
+
+🎒 INVENTORY (3/3):
+   1. Iron Sword (⚔️ 25 dmg)
+   2. Magic Staff (⚔️ 35 dmg)
+   3. Silver Bow (⚔️ 30 dmg)
+
+=== POTION INVENTORY ===
+✅ Added Health Potion (💚 +50 HP) to inventory
+✅ Added Mana Potion (💚 +30 HP) to inventory
+✅ Added Super Healing (💚 +100 HP) to inventory
+
+🎒 INVENTORY (3/5):
+   1. Health Potion (💚 +50 HP)
+   2. Mana Potion (💚 +30 HP)
+   3. Super Healing (💚 +100 HP)
+
+=== USING ITEMS ===
+🗑️ Removed Iron Sword (⚔️ 25 dmg) from inventory
+🗑️ Removed Mana Potion (💚 +30 HP) from inventory
+⚔️ Equipped: Iron Sword
+🧪 Drank: Mana Potion
+
+🎒 INVENTORY (2/3):
+   1. Magic Staff (⚔️ 35 dmg)
+   2. Silver Bow (⚔️ 30 dmg)
+
+🎒 INVENTORY (2/5):
+   1. Health Potion (💚 +50 HP)
+   2. Super Healing (💚 +100 HP)
+```
 
 ---
 
-## 🎉 Final Thoughts
+## 🏪 Shopping Cart with Multiple Types
 
-Generics are like **labeled toy boxes**:
-You tell Dart exactly what you want inside, and it keeps everything organized, safe, and fun!
+```dart
+class ShoppingCart<T> {
+  List<CartItem<T>> _items = [];
 
-> “It’s like telling your little brother:
-> ‘This box is **only for Legos**, not for cookies!’” 🍪🚫🧱✅
+  void addItem(T product, int quantity, double price) {
+    // Check if item already exists
+    int existingIndex = _items.indexWhere((item) =>
+      item.product.toString() == product.toString());
 
+    if (existingIndex != -1) {
+      _items[existingIndex].quantity += quantity;
+      print('📦 Updated ${product.toString()}: +$quantity (total: ${_items[existingIndex].quantity})');
+    } else {
+      _items.add(CartItem<T>(product, quantity, price));
+      print('🛒 Added ${product.toString()}: $quantity × \$${price.toStringAsFixed(2)}');
+    }
+  }
+
+  void removeItem(T product) {
+    int index = _items.indexWhere((item) =>
+      item.product.toString() == product.toString());
+
+    if (index != -1) {
+      CartItem<T> removed = _items.removeAt(index);
+      print('🗑️ Removed ${removed.product.toString()} from cart');
+    } else {
+      print('❌ ${product.toString()} not found in cart');
+    }
+  }
+
+  double get totalPrice {
+    return _items.fold(0.0, (sum, item) => sum + item.totalPrice);
+  }
+
+  int get totalItems {
+    return _items.fold(0, (sum, item) => sum + item.quantity);
+  }
+
+  void displayCart() {
+    print('\n🛒 SHOPPING CART:');
+    if (_items.isEmpty) {
+      print('   📭 Cart is empty');
+    } else {
+      for (int i = 0; i < _items.length; i++) {
+        CartItem<T> item = _items[i];
+        print('   ${i + 1}. ${item.product} x${item.quantity} = \$${item.totalPrice.toStringAsFixed(2)}');
+      }
+      print('   ─' * 30);
+      print('   📊 Total Items: $totalItems');
+      print('   💰 Total Price: \$${totalPrice.toStringAsFixed(2)}');
+    }
+    print('');
+  }
+}
+
+class CartItem<T> {
+  T product;
+  int quantity;
+  double pricePerUnit;
+
+  CartItem(this.product, this.quantity, this.pricePerUnit);
+
+  double get totalPrice => quantity * pricePerUnit;
+}
+
+// Product classes
+class Electronics {
+  String name;
+  String brand;
+
+  Electronics(this.name, this.brand);
+
+  @override
+  String toString() => '$brand $name';
+}
+
+class Clothing {
+  String name;
+  String size;
+  String color;
+
+  Clothing(this.name, this.size, this.color);
+
+  @override
+  String toString() => '$color $name ($size)';
+}
+
+class Food {
+  String name;
+  DateTime expiry;
+
+  Food(this.name, this.expiry);
+
+  @override
+  String toString() => '$name (exp: ${expiry.day}/${expiry.month})';
+}
+
+void main() {
+  print('🛍️ MULTI-CATEGORY SHOPPING\n');
+
+  // Create different carts for different product types
+  ShoppingCart<Electronics> electronicsCart = ShoppingCart<Electronics>();
+  ShoppingCart<Clothing> clothingCart = ShoppingCart<Clothing>();
+  ShoppingCart<Food> foodCart = ShoppingCart<Food>();
+
+  // Electronics shopping
+  print('=== ELECTRONICS STORE ===');
+  electronicsCart.addItem(Electronics('iPhone 15', 'Apple'), 1, 999.99);
+  electronicsCart.addItem(Electronics('AirPods', 'Apple'), 2, 179.99);
+  electronicsCart.addItem(Electronics('Gaming Mouse', 'Logitech'), 1, 49.99);
+  electronicsCart.displayCart();
+
+  // Clothing shopping
+  print('=== CLOTHING STORE ===');
+  clothingCart.addItem(Clothing('T-Shirt', 'M', 'Blue'), 3, 19.99);
+  clothingCart.addItem(Clothing('Jeans', 'L', 'Black'), 1, 59.99);
+  clothingCart.addItem(Clothing('Sneakers', '10', 'White'), 1, 89.99);
+  clothingCart.displayCart();
+
+  // Food shopping
+  print('=== GROCERY STORE ===');
+  DateTime nextWeek = DateTime.now().add(Duration(days: 7));
+  DateTime nextMonth = DateTime.now().add(Duration(days: 30));
+
+  foodCart.addItem(Food('Milk', nextWeek), 2, 3.99);
+  foodCart.addItem(Food('Bread', DateTime(2024, 2, 15)), 1, 2.49);
+  foodCart.addItem(Food('Apples', nextMonth), 5, 0.99);
+  foodCart.displayCart();
+
+  // Calculate grand total
+  double grandTotal = electronicsCart.totalPrice +
+                     clothingCart.totalPrice +
+                     foodCart.totalPrice;
+
+  print('🧾 GRAND TOTAL ACROSS ALL STORES: \$${grandTotal.toStringAsFixed(2)}');
+}
+```
+
+---
+
+## 🏥 Generic Data Structures
+
+### Stack Implementation
+
+```dart
+class Stack<T> {
+  List<T> _items = [];
+
+  void push(T item) {
+    _items.add(item);
+    print('📚 Pushed: $item (Stack size: ${_items.length})');
+  }
+
+  T? pop() {
+    if (_items.isEmpty) {
+      print('❌ Cannot pop from empty stack');
+      return null;
+    }
+    T item = _items.removeLast();
+    print('📖 Popped: $item (Stack size: ${_items.length})');
+    return item;
+  }
+
+  T? peek() {
+    if (_items.isEmpty) {
+      print('👀 Stack is empty');
+      return null;
+    }
+    return _items.last;
+  }
+
+  bool get isEmpty => _items.isEmpty;
+  bool get isNotEmpty => _items.isNotEmpty;
+  int get size => _items.length;
+
+  void display() {
+    print('\n📚 STACK CONTENTS (top to bottom):');
+    if (_items.isEmpty) {
+      print('   📭 Stack is empty');
+    } else {
+      for (int i = _items.length - 1; i >= 0; i--) {
+        String indicator = i == _items.length - 1 ? ' ← top' : '';
+        print('   ${_items[i]}$indicator');
+      }
+    }
+    print('');
+  }
+}
+
+void main() {
+  print('📚 GENERIC STACK DEMO\n');
+
+  // String stack for web pages
+  Stack<String> browserHistory = Stack<String>();
+
+  print('=== BROWSER HISTORY ===');
+  browserHistory.push('google.com');
+  browserHistory.push('youtube.com');
+  browserHistory.push('github.com');
+  browserHistory.display();
+
+  print('Going back...');
+  browserHistory.pop();
+  browserHistory.pop();
+  browserHistory.display();
+
+  // Number stack for calculations
+  Stack<int> calculatorStack = Stack<int>();
+
+  print('=== CALCULATOR STACK ===');
+  calculatorStack.push(10);
+  calculatorStack.push(5);
+  calculatorStack.push(3);
+  calculatorStack.display();
+
+  print('Performing operations...');
+  int? b = calculatorStack.pop();
+  int? a = calculatorStack.pop();
+  if (a != null && b != null) {
+    int result = a + b;
+    calculatorStack.push(result);
+    print('🧮 Calculated: $a + $b = $result');
+  }
+  calculatorStack.display();
+}
+```
+
+### Queue Implementation
+
+```dart
+class Queue<T> {
+  List<T> _items = [];
+
+  void enqueue(T item) {
+    _items.add(item);
+    print('➡️ Enqueued: $item (Queue size: ${_items.length})');
+  }
+
+  T? dequeue() {
+    if (_items.isEmpty) {
+      print('❌ Cannot dequeue from empty queue');
+      return null;
+    }
+    T item = _items.removeAt(0);
+    print('⬅️ Dequeued: $item (Queue size: ${_items.length})');
+    return item;
+  }
+
+  T? front() {
+    return _items.isEmpty ? null : _items.first;
+  }
+
+  T? rear() {
+    return _items.isEmpty ? null : _items.last;
+  }
+
+  bool get isEmpty => _items.isEmpty;
+  int get size => _items.length;
+
+  void display() {
+    print('\n🚶 QUEUE CONTENTS (front to rear):');
+    if (_items.isEmpty) {
+      print('   📭 Queue is empty');
+    } else {
+      for (int i = 0; i < _items.length; i++) {
+        String indicator = i == 0 ? ' ← front' : i == _items.length - 1 ? ' ← rear' : '';
+        print('   ${_items[i]}$indicator');
+      }
+    }
+    print('');
+  }
+}
+
+void main() {
+  print('🚶 CUSTOMER SERVICE QUEUE\n');
+
+  Queue<String> customerQueue = Queue<String>();
+
+  // Customers arrive
+  customerQueue.enqueue('Alice (Account Issue)');
+  customerQueue.enqueue('Bob (Billing Question)');
+  customerQueue.enqueue('Charlie (Technical Support)');
+  customerQueue.enqueue('Diana (Product Information)');
+
+  customerQueue.display();
+
+  // Serve customers
+  print('=== SERVING CUSTOMERS ===');
+  while (customerQueue.isNotEmpty) {
+    String? customer = customerQueue.dequeue();
+    if (customer != null) {
+      print('👨‍💼 Now serving: $customer');
+      if (customerQueue.isNotEmpty) {
+        print('👥 Next in line: ${customerQueue.front()}');
+      }
+    }
+    print('');
+  }
+
+  print('✅ All customers served!');
+}
+```
+
+---
+
+## 🔧 Generic Functions and Methods
+
+```dart
+// Generic function to find maximum
+T findMax<T extends Comparable<T>>(List<T> items) {
+  if (items.isEmpty) {
+    throw ArgumentError('Cannot find max of empty list');
+  }
+
+  T max = items[0];
+  for (T item in items) {
+    if (item.compareTo(max) > 0) {
+      max = item;
+    }
+  }
+  return max;
+}
+
+// Generic function to swap elements
+void swap<T>(List<T> list, int index1, int index2) {
+  if (index1 < 0 || index1 >= list.length || index2 < 0 || index2 >= list.length) {
+    throw RangeError('Invalid indices');
+  }
+
+  T temp = list[index1];
+  list[index1] = list[index2];
+  list[index2] = temp;
+
+  print('🔄 Swapped positions $index1 and $index2');
+}
+
+// Generic function to filter items
+List<T> filterItems<T>(List<T> items, bool Function(T) predicate) {
+  List<T> filtered = [];
+  for (T item in items) {
+    if (predicate(item)) {
+      filtered.add(item);
+    }
+  }
+  return filtered;
+}
+
+// Generic function to transform items
+List<R> transformItems<T, R>(List<T> items, R Function(T) transformer) {
+  List<R> transformed = [];
+  for (T item in items) {
+    transformed.add(transformer(item));
+  }
+  return transformed;
+}
+
+void main() {
+  print('🔧 GENERIC FUNCTIONS DEMO\n');
+
+  // Find max with different types
+  print('=== FINDING MAXIMUM VALUES ===');
+  List<int> numbers = [3, 7, 2, 9, 1, 8];
+  List<String> words = ['apple', 'zebra', 'banana', 'orange'];
+
+  print('Numbers: $numbers');
+  print('Max number: ${findMax(numbers)}');
+
+  print('Words: $words');
+  print('Max word (alphabetically): ${findMax(words)}');
+
+  // Swap elements
+  print('\n=== SWAPPING ELEMENTS ===');
+  List<String> colors = ['red', 'blue', 'green', 'yellow'];
+  print('Before swap: $colors');
+  swap(colors, 0, 2);
+  print('After swap: $colors');
+
+  // Filter items
+  print('\n=== FILTERING ITEMS ===');
+  List<int> allNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  List<int> evenNumbers = filterItems(allNumbers, (n) => n % 2 == 0);
+  print('All numbers: $allNumbers');
+  print('Even numbers: $evenNumbers');
+
+  List<String> allWords = ['hello', 'world', 'dart', 'programming', 'fun'];
+  List<String> longWords = filterItems(allWords, (word) => word.length > 4);
+  print('All words: $allWords');
+  print('Long words: $longWords');
+
+  // Transform items
+  print('\n=== TRANSFORMING ITEMS ===');
+  List<int> lengths = transformItems(allWords, (word) => word.length);
+  print('Words: $allWords');
+  print('Lengths: $lengths');
+
+  List<String> upperCaseWords = transformItems(allWords, (word) => word.toUpperCase());
+  print('Uppercase: $upperCaseWords');
+}
+```
+
+---
+
+## 🎯 Generic Constraints
+
+```dart
+// Constraint: T must implement Comparable
+class SortedList<T extends Comparable<T>> {
+  List<T> _items = [];
+
+  void add(T item) {
+    _items.add(item);
+    _items.sort(); // This works because T implements Comparable
+    print('➕ Added $item. Sorted list: $_items');
+  }
+
+  T? get smallest => _items.isEmpty ? null : _items.first;
+  T? get largest => _items.isEmpty ? null : _items.last;
+}
+
+// Constraint: T must extend a specific class
+abstract class Animal {
+  String name;
+  Animal(this.name);
+  void makeSound();
+}
+
+class Dog extends Animal {
+  Dog(String name) : super(name);
+  @override
+  void makeSound() => print('$name says: Woof! 🐕');
+}
+
+class Cat extends Animal {
+  Cat(String name) : super(name);
+  @override
+  void makeSound() => print('$name says: Meow! 🐱');
+}
+
+class AnimalShelter<T extends Animal> {
+  List<T> animals = [];
+
+  void addAnimal(T animal) {
+    animals.add(animal);
+    print('🏠 Added ${animal.name} to the shelter');
+  }
+
+  void makeAllSounds() {
+    print('🔊 All animals making sounds:');
+    for (T animal in animals) {
+      animal.makeSound(); // This works because T extends Animal
+    }
+  }
+}
+
+void main() {
+  print('🎯 GENERIC CONSTRAINTS DEMO\n');
+
+  // Sorted list demo
+  print('=== SORTED LIST ===');
+  SortedList<int> sortedNumbers = SortedList<int>();
+  sortedNumbers.add(5);
+  sortedNumbers.add(2);
+  sortedNumbers.add(8);
+  sortedNumbers.add(1);
+
+  print('Smallest: ${sortedNumbers.smallest}');
+  print('Largest: ${sortedNumbers.largest}');
+
+  // Animal shelter demo
+  print('\n=== ANIMAL SHELTER ===');
+  AnimalShelter<Dog> dogShelter = AnimalShelter<Dog>();
+  dogShelter.addAnimal(Dog('Buddy'));
+  dogShelter.addAnimal(Dog('Max'));
+  dogShelter.makeAllSounds();
+
+  AnimalShelter<Cat> catShelter = AnimalShelter<Cat>();
+  catShelter.addAnimal(Cat('Whiskers'));
+  catShelter.addAnimal(Cat('Luna'));
+  catShelter.makeAllSounds();
+}
+```
+
+---
+
+## 🧠 Built-in Generic Collections
+
+```dart
+void main() {
+  print('📦 BUILT-IN GENERIC COLLECTIONS\n');
+
+  // Lists
+  List<String> fruits = ['apple', 'banana', 'orange'];
+  List<int> scores = [95, 87, 92, 78];
+
+  print('🍎 Fruits: $fruits');
+  print('📊 Scores: $scores');
+
+  // Sets (no duplicates)
+  Set<String> uniqueColors = {'red', 'blue', 'green', 'red'}; // 'red' appears only once
+  print('🎨 Unique colors: $uniqueColors');
+
+  // Maps (key-value pairs)
+  Map<String, int> ages = {
+    'Alice': 25,
+    'Bob': 30,
+    'Charlie': 22
+  };
+  print('👥 Ages: $ages');
+
+  // Nested generics
+  List<Map<String, dynamic>> students = [
+    {'name': 'Alice', 'grade': 'A', 'age': 20},
+    {'name': 'Bob', 'grade': 'B', 'age': 21},
+  ];
+  print('🎓 Students: $students');
+
+  // Generic methods on collections
+  print('\n=== GENERIC COLLECTION METHODS ===');
+
+  // Where (filter)
+  List<int> evenScores = scores.where((score) => score % 2 == 0).toList();
+  print('Even scores: $evenScores');
+
+  // Map (transform)
+  List<String> fruitLengths = fruits.map((fruit) => '${fruit.length} chars').toList();
+  print('Fruit lengths: $fruitLengths');
+
+  // Reduce
+  int totalScore = scores.reduce((a, b) => a + b);
+  print('Total score: $totalScore');
+
+  // Fold
+  String allFruits = fruits.fold('Fruits: ', (prev, fruit) => prev + fruit + ' ');
+  print(allFruits);
+}
+```
+
+---
+
+## 📊 Quick Reference Guide
+
+### Generic Syntax
+
+```dart
+// Generic class
+class Container<T> {
+  T item;
+  Container(this.item);
+}
+
+// Generic function
+T identity<T>(T value) => value;
+
+// Generic with constraints
+class NumberContainer<T extends num> {
+  T number;
+  NumberContainer(this.number);
+}
+
+// Multiple type parameters
+class Pair<K, V> {
+  K key;
+  V value;
+  Pair(this.key, this.value);
+}
+```
+
+### Common Generic Types
+
+| Type          | Description        | Example                   |
+| ------------- | ------------------ | ------------------------- |
+| `List<T>`     | Ordered collection | `List<String> names`      |
+| `Set<T>`      | Unique items       | `Set<int> uniqueNumbers`  |
+| `Map<K, V>`   | Key-value pairs    | `Map<String, int> ages`   |
+| `Iterable<T>` | Sequence of items  | `Iterable<double> values` |
+| `Future<T>`   | Async result       | `Future<String> data`     |
+| `Stream<T>`   | Async sequence     | `Stream<int> numbers`     |
+
+---
+
+## 🎯 When to Use Generics
+
+**✅ Perfect for:**
+
+- **Collections** that hold items of the same type
+- **Reusable code** that works with multiple types
+- **Type-safe APIs** that prevent runtime errors
+- **Data structures** like stacks, queues, trees
+
+**❌ Not needed for:**
+
+- **Simple functions** that don't work with types
+- **One-time use** code that won't be reused
+- **Dynamic content** where type changes frequently
+
+---
+
+## 🚀 Practice Challenges
+
+Try creating these generic classes:
+
+1. **🎯 GenericPair**: Hold two values of potentially different types
+2. **📊 Statistics**: Calculate averages, min, max for any numeric type
+3. **🔄 CircularBuffer**: Fixed-size buffer that overwrites old data
+4. **🌳 BinaryTree**: Tree structure that works with comparable types
+
+---
+
+## 🎉 Remember This!
+
+Generics are like **smart molds** 🏭:
+
+- **🔧 Flexible**: One mold, many shapes
+- **🛡️ Safe**: Only the right type fits
+- **♻️ Reusable**: Use the same code for different types
+- **⚡ Efficient**: No boxing/unboxing, no type checking at runtime
+
+**The Magic**: You write the code once, but it works safely with many different types!
+
+> **Think of it like**: "I'm making a cookie cutter that can cut ANY shape, but once I tell it to cut stars, it ONLY cuts perfect stars!" ⭐🍪
+
+Generics make your code **flexible** AND **safe** at the same time! 🎪✨

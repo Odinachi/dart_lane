@@ -1,11 +1,13 @@
 [
   {
-    "question": "Complete the class declaration:\n\n```dart\n%order% TeddyBear {\n  String color = 'Brown';\n  String size = 'Medium';\n}\n```",
+    "question": "Complete the class declaration with keyword and name:\n\n```dart\n%order% %order% {\n  String color = 'Brown';\n  String size = 'Medium';\n}\n```",
     "options": [
-      "class"
+      "class",
+      "TeddyBear"
     ],
     "answer": [
-      "class"
+      "class",
+      "TeddyBear"
     ],
     "type": "order"
   },
@@ -26,13 +28,15 @@
     "type": "fill"
   },
   {
-    "question": "Complete the object creation:\n\n```dart\nclass Toy {\n  String name = 'Ball';\n}\n\nvoid main() {\n  %order% toy = %order%();\n}\n```",
+    "question": "Complete the object creation with type and constructor:\n\n```dart\nclass Toy {\n  String name = 'Ball';\n}\n\nvoid main() {\n  %order% %order% = %order%();\n}\n```",
     "options": [
       "Toy",
+      "toy",
       "Toy"
     ],
     "answer": [
       "Toy",
+      "toy",
       "Toy"
     ],
     "type": "order"
@@ -54,16 +58,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the constructor:\n\n```dart\nclass Student {\n  String name;\n  int age;\n  \n  %order%(%order% %order%, %order% %order%);\n}\n```",
+    "question": "Complete the constructor with name and parameters:\n\n```dart\nclass Student {\n  String name;\n  int age;\n  \n  %order%(%order%.%order%, %order%.%order%);\n}\n```",
     "options": [
       "Student",
-      "this.name",
-      "this.age"
+      "this",
+      "name",
+      "this",
+      "age"
     ],
     "answer": [
       "Student",
-      "this.name",
-      "this.age"
+      "this",
+      "name",
+      "this",
+      "age"
     ],
     "type": "order"
   },
@@ -84,12 +92,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the method definition:\n\n```dart\nclass Dog {\n  String name = 'Buddy';\n  \n  %order% bark() {\n    print('$name says: Woof!');\n  }\n}\n```",
+    "question": "Complete the method definition with return type and name:\n\n```dart\nclass Dog {\n  String name = 'Buddy';\n  \n  %order% %order%() {\n    print('$name says: Woof!');\n  }\n}\n```",
     "options": [
-      "void"
+      "void",
+      "bark"
     ],
     "answer": [
-      "void"
+      "void",
+      "bark"
     ],
     "type": "order"
   },
@@ -110,15 +120,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the class with multiple properties:\n\n```dart\nclass Person {\n  String %order%;\n  int %order%;\n  String %order%;\n  \n  Person(this.name, this.age, this.city);\n}\n```",
+    "question": "Complete the class with multiple properties and types:\n\n```dart\nclass Person {\n  %order% %order%;\n  %order% %order%;\n  %order% %order%;\n  \n  Person(this.name, this.age, this.city);\n}\n```",
     "options": [
+      "String",
       "name",
+      "int",
       "age",
+      "String",
       "city"
     ],
     "answer": [
+      "String",
       "name",
+      "int",
       "age", 
+      "String",
       "city"
     ],
     "type": "order"
@@ -140,12 +156,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the return type method:\n\n```dart\nclass Calculator {\n  %order% add(int a, int b) {\n    return a + b;\n  }\n}\n```",
+    "question": "Complete the return type method with type and name:\n\n```dart\nclass Calculator {\n  %order% %order%(int a, int b) {\n    return a + b;\n  }\n}\n```",
     "options": [
-      "int"
+      "int",
+      "add"
     ],
     "answer": [
-      "int"
+      "int",
+      "add"
     ],
     "type": "order"
   },
@@ -166,12 +184,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the class with default constructor:\n\n```dart\nclass Laptop {\n  String brand = 'Dell';\n  int ram = 8;\n  \n  %order%() {\n    print('Laptop created!');\n  }\n}\n```",
+    "question": "Complete the class with default constructor and name:\n\n```dart\nclass Laptop {\n  String brand = 'Dell';\n  int ram = 8;\n  \n  %order%() {\n    %order%('Laptop created!');\n  }\n}\n```",
     "options": [
-      "Laptop"
+      "Laptop",
+      "print"
     ],
     "answer": [
-      "Laptop"
+      "Laptop",
+      "print"
     ],
     "type": "order"
   },
@@ -192,11 +212,13 @@
     "type": "fill"
   },
   {
-    "question": "Complete the named constructor:\n\n```dart\nclass Rectangle {\n  double width;\n  double height;\n  \n  Rectangle(this.width, this.height);\n  \n  Rectangle.%order%(double side) : width = side, height = side;\n}\n```",
+    "question": "Complete the named constructor with keyword and name:\n\n```dart\nclass Rectangle {\n  double width;\n  double height;\n  \n  Rectangle(this.width, this.height);\n  \n  %order%.%order%(double side) : width = side, height = side;\n}\n```",
     "options": [
+      "Rectangle",
       "square"
     ],
     "answer": [
+      "Rectangle",
       "square"
     ],
     "type": "order"
@@ -218,12 +240,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the private property:\n\n```dart\nclass BankAccount {\n  double %order%balance = 1000.0;\n  \n  double getBalance() {\n    return _balance;\n  }\n}\n```",
+    "question": "Complete the private property with prefix and name:\n\n```dart\nclass BankAccount {\n  double %order%%order% = 1000.0;\n  \n  double getBalance() {\n    return _balance;\n  }\n}\n```",
     "options": [
-      "_"
+      "_",
+      "balance"
     ],
     "answer": [
-      "_"
+      "_",
+      "balance"
     ],
     "type": "order"
   },
@@ -244,12 +268,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the static property:\n\n```dart\nclass Counter {\n  %order% int count = 0;\n  \n  void increment() {\n    count++;\n  }\n}\n```",
+    "question": "Complete the static property with keyword, type, and name:\n\n```dart\nclass Counter {\n  %order% %order% %order% = 0;\n  \n  void increment() {\n    count++;\n  }\n}\n```",
     "options": [
-      "static"
+      "static",
+      "int",
+      "count"
     ],
     "answer": [
-      "static"
+      "static",
+      "int",
+      "count"
     ],
     "type": "order"
   },
@@ -270,14 +298,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the static method:\n\n```dart\nclass Utility {\n  %order% %order% max(int a, int b) {\n    return a > b ? a : b;\n  }\n}\n```",
+    "question": "Complete the static method with keyword, return type, and name:\n\n```dart\nclass Utility {\n  %order% %order% %order%(int a, int b) {\n    return a > b ? a : b;\n  }\n}\n```",
     "options": [
       "static",
-      "int"
+      "int",
+      "max"
     ],
     "answer": [
       "static",
-      "int"
+      "int",
+      "max"
     ],
     "type": "order"
   },
@@ -298,14 +328,18 @@
     "type": "fill"
   },
   {
-    "question": "Complete the final property:\n\n```dart\nclass Constants {\n  %order% String appName = 'MyApp';\n  %order% double version = 1.5;\n}\n```",
+    "question": "Complete the final properties with keyword and type:\n\n```dart\nclass Constants {\n  %order% %order% appName = 'MyApp';\n  %order% %order% version = 1.5;\n}\n```",
     "options": [
       "final",
-      "final"
+      "String",
+      "final",
+      "double"
     ],
     "answer": [
       "final",
-      "final"
+      "String",
+      "final",
+      "double"
     ],
     "type": "order"
   },
@@ -326,13 +360,15 @@
     "type": "fill"
   },
   {
-    "question": "Complete the toString method:\n\n```dart\nclass Product {\n  String name;\n  double price;\n  \n  Product(this.name, this.price);\n  \n  %order%\n  String %order%() {\n    return 'Product: $name - \\$$price';\n  }\n}\n```",
+    "question": "Complete the toString method with annotation and signature:\n\n```dart\nclass Product {\n  String name;\n  double price;\n  \n  Product(this.name, this.price);\n  \n  %order%\n  %order% %order%() {\n    return 'Product: $name - \\$$price';\n  }\n}\n```",
     "options": [
       "@override",
+      "String",
       "toString"
     ],
     "answer": [
       "@override",
+      "String",
       "toString"
     ],
     "type": "order"
@@ -354,13 +390,15 @@
     "type": "fill"
   },
   {
-    "question": "Complete the factory constructor:\n\n```dart\nclass Singleton {\n  static Singleton? _instance;\n  \n  Singleton._internal();\n  \n  %order% Singleton.%order%() {\n    _instance ??= Singleton._internal();\n    return _instance!;\n  }\n}\n```",
+    "question": "Complete the factory constructor with keyword, class name, and method name:\n\n```dart\nclass Singleton {\n  static Singleton? _instance;\n  \n  Singleton._internal();\n  \n  %order% %order%.%order%() {\n    _instance ??= Singleton._internal();\n    return _instance!;\n  }\n}\n```",
     "options": [
       "factory",
+      "Singleton",
       "getInstance"
     ],
     "answer": [
       "factory",
+      "Singleton",
       "getInstance"
     ],
     "type": "order"
@@ -382,12 +420,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the operator overloading:\n\n```dart\nclass Point {\n  int x, y;\n  \n  Point(this.x, this.y);\n  \n  Point %order%(Point other) {\n    return Point(x + other.x, y + other.y);\n  }\n}\n```",
+    "question": "Complete the operator overloading with keyword and operator:\n\n```dart\nclass Point {\n  int x, y;\n  \n  Point(this.x, this.y);\n  \n  Point %order% %order%(Point other) {\n    return Point(x + other.x, y + other.y);\n  }\n}\n```",
     "options": [
-      "operator +"
+      "operator",
+      "+"
     ],
     "answer": [
-      "operator +"
+      "operator",
+      "+"
     ],
     "type": "order"
   },
@@ -408,14 +448,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the equality operator:\n\n```dart\nclass Person {\n  String name;\n  int age;\n  \n  Person(this.name, this.age);\n  \n  %order%\n  bool %order%(Object other) {\n    return other is Person && name == other.name && age == other.age;\n  }\n}\n```",
+    "question": "Complete the equality operator with annotation, keyword, and signature:\n\n```dart\nclass Person {\n  String name;\n  int age;\n  \n  Person(this.name, this.age);\n  \n  %order%\n  bool %order% %order%(Object other) {\n    return other is Person && name == other.name && age == other.age;\n  }\n}\n```",
     "options": [
       "@override",
-      "operator =="
+      "operator",
+      "=="
     ],
     "answer": [
       "@override",
-      "operator =="
+      "operator",
+      "=="
     ],
     "type": "order"
   },
@@ -436,7 +478,7 @@
     "type": "fill"
   },
   {
-    "question": "Complete the cascade notation usage:\n\n```dart\nclass Car {\n  String? brand;\n  String? model;\n  int? year;\n  \n  void setBrand(String b) => brand = b;\n  void setModel(String m) => model = m;\n  void setYear(int y) => year = y;\n}\n\nvoid main() {\n  Car car = Car()\n    %order%setBrand('Toyota')\n    %order%setModel('Camry')\n    %order%setYear(2023);\n}\n```",
+    "question": "Complete the cascade notation usage with operators:\n\n```dart\nclass Car {\n  String? brand;\n  String? model;\n  int? year;\n  \n  void setBrand(String b) => brand = b;\n  void setModel(String m) => model = m;\n  void setYear(int y) => year = y;\n}\n\nvoid main() {\n  Car car = Car()\n    %order%setBrand('Toyota')\n    %order%setModel('Camry')\n    %order%setYear(2023);\n}\n```",
     "options": [
       "..",
       "..",
@@ -466,12 +508,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the mixin usage:\n\n```dart\nmixin Flyable {\n  void fly() {\n    print('Flying!');\n  }\n}\n\nclass Bird %order% Flyable {\n  void chirp() {\n    print('Chirp!');\n  }\n}\n```",
+    "question": "Complete the mixin usage with keyword:\n\n```dart\nmixin Flyable {\n  void fly() {\n    print('Flying!');\n  }\n}\n\nclass Bird %order% %order% {\n  void chirp() {\n    print('Chirp!');\n  }\n}\n```",
     "options": [
-      "with"
+      "with",
+      "Flyable"
     ],
     "answer": [
-      "with"
+      "with",
+      "Flyable"
     ],
     "type": "order"
   },
@@ -492,14 +536,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the abstract class:\n\n```dart\n%order% class Animal {\n  %order% void makeSound();\n  \n  void sleep() {\n    print('Sleeping...');\n  }\n}\n```",
+    "question": "Complete the abstract class with keyword, class keyword, and name:\n\n```dart\n%order% %order% %order% {\n  void makeSound();\n  \n  void sleep() {\n    print('Sleeping...');\n  }\n}\n```",
     "options": [
       "abstract",
-      "void"
+      "class",
+      "Animal"
     ],
     "answer": [
       "abstract",
-      "void"
+      "class",
+      "Animal"
     ],
     "type": "order"
   },
@@ -520,12 +566,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the interface implementation:\n\n```dart\nabstract class Drawable {\n  void draw();\n}\n\nclass Circle %order% Drawable {\n  @override\n  void draw() {\n    print('Drawing a circle');\n  }\n}\n```",
+    "question": "Complete the interface implementation with keyword:\n\n```dart\nabstract class Drawable {\n  void draw();\n}\n\nclass Circle %order% %order% {\n  @override\n  void draw() {\n    print('Drawing a circle');\n  }\n}\n```",
     "options": [
-      "implements"
+      "implements",
+      "Drawable"
     ],
     "answer": [
-      "implements"
+      "implements",
+      "Drawable"
     ],
     "type": "order"
   },
@@ -546,11 +594,15 @@
     "type": "fill"
   },
   {
-    "question": "Complete the generic class:\n\n```dart\nclass Container<%order%> {\n  T value;\n  \n  Container(this.value);\n  \n  T getValue() {\n    return value;\n  }\n}\n```",
+    "question": "Complete the generic class with type parameter:\n\n```dart\nclass Container<%order%> {\n  %order% value;\n  \n  Container(this.value);\n  \n  %order% getValue() {\n    return value;\n  }\n}\n```",
     "options": [
+      "T",
+      "T",
       "T"
     ],
     "answer": [
+      "T",
+      "T",
       "T"
     ],
     "type": "order"
@@ -567,47 +619,30 @@
     "type": "mcq"
   },
   {
-    "question": "Fill in the generic type:\n\n```dart\nclass Stack<%fill%> {\n  List<T> _items = [];\n  \n  void push(T item) {\n    _items.add(item);\n  }\n  \n  T? pop() {\n    return _items.isNotEmpty ? _items.removeLast() : null;\n  }\n}\n```",
-    "answer": ["T"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the extension method:\n\n```dart\n%order% StringExtension %order% String {\n  String capitalize() {\n    return this.substring(0, 1).toUpperCase() + this.substring(1);\n  }\n}\n```",
+    "question": "Fill in the extension method with keyword, name, and target type:\n\n```dart\n%order% %order% %order% String {\n  String capitalize() {\n    return this.substring(0, 1).toUpperCase() + this.substring(1);\n  }\n}\n```",
     "options": [
       "extension",
+      "StringExtension",
       "on"
     ],
     "answer": [
       "extension",
+      "StringExtension",
       "on"
     ],
     "type": "order"
   },
   {
-    "question": "What will this extension method do?\n\n```dart\nextension MathExtension on int {\n  int square() {\n    return this * this;\n  }\n}\n\nvoid main() {\n  print(5.square());\n}\n```",
+    "question": "Complete the final class example with class keyword, name, and properties:\n\n```dart\n%order% %order% {\n  final String %order%;\n  final int %order%;\n  final List<String> %order%;\n  \n  GamePlayer(this.name, this.level, this.achievements);\n  \n  void displayInfo() {\n    print('Player: $name, Level: $level');\n    print('Achievements: ${achievements.join(', ')}');\n  }\n  \n  @override\n  String toString() {\n    return 'GamePlayer: $name (Level $level)';\n  }\n}\n```",
     "options": [
-      "25",
-      "10",
-      "5",
-      "Error"
-    ],
-    "answer": ["25"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the extension usage:\n\n```dart\nextension ListExtension<T> on List<T> {\n  T? get firstOrNull {\n    return isEmpty ? null : first;\n  }\n}\n\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.%fill%);\n}\n```",
-    "answer": ["firstOrNull"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the final class example:\n\n```dart\nclass %order% {\n  final String %order%;\n  final int %order%;\n  final List<String> %order%;\n  \n  GamePlayer(this.name, this.level, this.achievements);\n  \n  void displayInfo() {\n    print('Player: $name, Level: $level');\n    print('Achievements: ${achievements.join(', ')}');\n  }\n  \n  @override\n  String toString() {\n    return 'GamePlayer: $name (Level $level)';\n  }\n}\n```",
-    "options": [
+      "class",
       "GamePlayer",
       "name",
       "level", 
       "achievements"
     ],
     "answer": [
+      "class",
       "GamePlayer",
       "name",
       "level",

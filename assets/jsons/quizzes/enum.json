@@ -1,14 +1,5 @@
 [
-  {
-    "question": "Complete the enum declaration:\n\n```dart\n%order% Color {\n  red,\n  green, \n  blue\n}\n\nvoid main() {\n  print(Color.red);\n}\n```",
-    "options": [
-      "enum"
-    ],
-    "answer": [
-      "enum"
-    ],
-    "type": "order"
-  },
+ 
   {
     "question": "What will this code output?\n\n```dart\nenum Day {\n  monday,\n  tuesday,\n  wednesday\n}\n\nvoid main() {\n  print(Day.tuesday);\n}\n```",
     "options": [
@@ -25,16 +16,7 @@
     "answer": ["."],
     "type": "fill"
   },
-  {
-    "question": "Complete the enum with multiple values:\n\n```dart\n%order% Season {\n  spring,\n  summer,\n  autumn,\n  winter\n}\n\nvoid main() {\n  print(Season.summer);\n}\n```",
-    "options": [
-      "enum"
-    ],
-    "answer": [
-      "enum"
-    ],
-    "type": "order"
-  },
+ 
   {
     "question": "What is the index of the first enum value?\n\n```dart\nenum Priority {\n  low,\n  medium,\n  high\n}\n\nvoid main() {\n  print(Priority.low.index);\n}\n```",
     "options": [
@@ -177,16 +159,7 @@
     "answer": ["level"],
     "type": "fill"
   },
-  {
-    "question": "Complete the enum method:\n\n```dart\nenum Temperature {\n  cold,\n  warm,\n  hot;\n  \n  %order% %order% isComfortable() {\n    return this == Temperature.warm;\n  }\n}\n\nvoid main() {\n  print(Temperature.warm.isComfortable());\n}\n```",
-    "options": [
-      "bool"
-    ],
-    "answer": [
-      "bool"
-    ],
-    "type": "order"
-  },
+  
   {
     "question": "What does this enum method return?\n\n```dart\nenum Size {\n  small,\n  medium,\n  large;\n  \n  bool isBig() {\n    return this == Size.large;\n  }\n}\n\nvoid main() {\n  print(Size.small.isBig());\n}\n```",
     "options": [

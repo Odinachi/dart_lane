@@ -1,11 +1,15 @@
 [
   {
-    "question": "Complete the closure that remembers a variable:\n\n```dart\nFunction packLunch() {\n  String snack = 'Cookie';\n  \n  %order% () {\n    print('Your snack is: $snack');\n  };\n}\n```",
+    "question": "Complete the closure that remembers a variable with keyword and function:\n\n```dart\nFunction packLunch() {\n  String snack = 'Cookie';\n  \n  %order% () {\n    %order%('Your snack is: %order%');\n  };\n}\n```",
     "options": [
-      "return"
+      "return",
+      "print",
+      "$snack"
     ],
     "answer": [
-      "return"
+      "return",
+      "print",
+      "$snack"
     ],
     "type": "order"
   },
@@ -26,12 +30,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure usage pattern:\n\n```dart\nvoid main() {\n  var counter = createCounter();\n  %order%(); // Count: 1\n  %order%(); // Count: 2  \n}\n```",
+    "question": "Complete the closure usage pattern with function calls:\n\n```dart\nvoid main() {\n  var %order% = createCounter();\n  %order%(); // Count: 1\n  %order%(); // Count: 2  \n}\n```",
     "options": [
+      "counter",
       "counter",
       "counter"
     ],
     "answer": [
+      "counter",
       "counter",
       "counter"
     ],
@@ -54,12 +60,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure with parameter:\n\n```dart\nFunction createMultiplier(%order% factor) {\n  return (int number) {\n    return number * factor;\n  };\n}\n```",
+    "question": "Complete the closure with parameter type and return:\n\n```dart\nFunction createMultiplier(%order% %order%) {\n  %order% (int number) {\n    return number * factor;\n  };\n}\n```",
     "options": [
-      "int"
+      "int",
+      "factor",
+      "return"
     ],
     "answer": [
-      "int"
+      "int",
+      "factor",
+      "return"
     ],
     "type": "order"
   },
@@ -80,11 +90,15 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure with mutable variable:\n\n```dart\nFunction createBankAccount(double initialBalance) {\n  double %order% = initialBalance;\n  \n  return () {\n    balance += 10;\n    return balance;\n  };\n}\n```",
+    "question": "Complete the closure with mutable variable and operation:\n\n```dart\nFunction createBankAccount(double initialBalance) {\n  double %order% = %order%;\n  \n  return () {\n    %order% += 10;\n    return balance;\n  };\n}\n```",
     "options": [
+      "balance",
+      "initialBalance",
       "balance"
     ],
     "answer": [
+      "balance",
+      "initialBalance",
       "balance"
     ],
     "type": "order"
@@ -106,12 +120,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure factory pattern:\n\n```dart\nFunction %order%(String operation) {\n  switch (operation) {\n    case 'add':\n      return (a, b) => a + b;\n    case 'multiply':\n      return (a, b) => a * b;\n    default:\n      return (a, b) => 0;\n  }\n}\n```",
+    "question": "Complete the closure factory pattern with function name and parameters:\n\n```dart\nFunction %order%(%order% %order%) {\n  switch (operation) {\n    case 'add':\n      return (a, b) => a + b;\n    case 'multiply':\n      return (a, b) => a * b;\n    default:\n      return (a, b) => 0;\n  }\n}\n```",
     "options": [
-      "createCalculator"
+      "createCalculator",
+      "String",
+      "operation"
     ],
     "answer": [
-      "createCalculator"
+      "createCalculator",
+      "String",
+      "operation"
     ],
     "type": "order"
   },
@@ -132,12 +150,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure with conditional logic:\n\n```dart\nFunction createValidator(int minLength) {\n  return (%order% input) {\n    if (input.length >= minLength) {\n      return 'Valid';\n    } else {\n      return 'Too short';\n    }\n  };\n}\n```",
+    "question": "Complete the closure with conditional logic and parameter type:\n\n```dart\nFunction createValidator(int minLength) {\n  return (%order% %order%) {\n    %order% (input.length >= minLength) {\n      return 'Valid';\n    } else {\n      return 'Too short';\n    }\n  };\n}\n```",
     "options": [
-      "String"
+      "String",
+      "input",
+      "if"
     ],
     "answer": [
-      "String"
+      "String",
+      "input",
+      "if"
     ],
     "type": "order"
   },
@@ -158,12 +180,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure callback pattern:\n\n```dart\nvoid processData(Function callback) {\n  String data = 'processed';\n  %order%(data);\n}\n\nvoid main() {\n  processData((result) {\n    print('Got: $result');\n  });\n}\n```",
+    "question": "Complete the closure callback pattern with parameter and invocation:\n\n```dart\nvoid processData(Function %order%) {\n  String data = 'processed';\n  %order%(%order%);\n}\n\nvoid main() {\n  processData((result) {\n    print('Got: $result');\n  });\n}\n```",
     "options": [
-      "callback"
+      "callback",
+      "callback",
+      "data"
     ],
     "answer": [
-      "callback"
+      "callback",
+      "callback",
+      "data"
     ],
     "type": "order"
   },
@@ -184,12 +210,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure with default parameter:\n\n```dart\nFunction createGreeter([String defaultName = 'Guest']) {\n  return ([%order%? name]) {\n    print('Hello, ${name ?? defaultName}!');\n  };\n}\n```",
+    "question": "Complete the closure with default parameter and type:\n\n```dart\nFunction createGreeter([String defaultName = 'Guest']) {\n  return ([%order%? %order%]) {\n    print('Hello, ${%order% ?? defaultName}!');\n  };\n}\n```",
     "options": [
-      "String"
+      "String",
+      "name",
+      "name"
     ],
     "answer": [
-      "String"
+      "String",
+      "name",
+      "name"
     ],
     "type": "order"
   },
@@ -210,12 +240,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure iteration pattern:\n\n```dart\nList<Function> createProcessors() {\n  List<Function> processors = [];\n  \n  for (int i = 0; i < 3; i++) {\n    processors.add(() => print('Processor %order%'));\n  }\n  \n  return processors;\n}\n```",
+    "question": "Complete the closure iteration pattern with variable interpolation:\n\n```dart\nList<Function> createProcessors() {\n  List<Function> processors = [];\n  \n  for (int %order% = 0; %order% < 3; %order%++) {\n    processors.add(() => print('Processor $i'));\n  }\n  \n  return processors;\n}\n```",
     "options": [
-      "$i"
+      "i",
+      "i",
+      "i"
     ],
     "answer": [
-      "$i"
+      "i",
+      "i",
+      "i"
     ],
     "type": "order"
   },
@@ -236,12 +270,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure with async operation:\n\n```dart\nFunction createAsyncProcessor() {\n  String status = 'ready';\n  \n  return () %order% {\n    await Future.delayed(Duration(seconds: 1));\n    print('Status: $status');\n  };\n}\n```",
+    "question": "Complete the closure with async operation and keyword:\n\n```dart\nFunction createAsyncProcessor() {\n  String %order% = 'ready';\n  \n  return () %order% {\n    %order% Future.delayed(Duration(seconds: 1));\n    print('Status: $status');\n  };\n}\n```",
     "options": [
-      "async"
+      "status",
+      "async",
+      "await"
     ],
     "answer": [
-      "async"
+      "status",
+      "async",
+      "await"
     ],
     "type": "order"
   },
@@ -262,12 +300,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure composition pattern:\n\n```dart\nFunction compose(Function f, Function g) {\n  return (%order% x) {\n    return f(g(x));\n  };\n}\n\nvoid main() {\n  var addOne = (int x) => x + 1;\n  var double = (int x) => x * 2;\n  var composed = compose(addOne, double);\n}\n```",
+    "question": "Complete the closure composition pattern with parameter type and variable:\n\n```dart\nFunction compose(Function f, Function g) {\n  return (%order% %order%) {\n    return %order%(g(x));\n  };\n}\n\nvoid main() {\n  var addOne = (int x) => x + 1;\n  var double = (int x) => x * 2;\n  var composed = compose(addOne, double);\n}\n```",
     "options": [
-      "dynamic"
+      "dynamic",
+      "x",
+      "f"
     ],
     "answer": [
-      "dynamic"
+      "dynamic",
+      "x",
+      "f"
     ],
     "type": "order"
   },
@@ -288,11 +330,15 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure with error handling:\n\n```dart\nFunction createSafeDivider() {\n  return (double a, double b) {\n    %order% (b != 0) {\n      return a / b;\n    } else {\n      return 0.0;\n    }\n  };\n}\n```",
+    "question": "Complete the closure with error handling and conditional:\n\n```dart\nFunction createSafeDivider() {\n  return (%order% a, %order% b) {\n    %order% (b != 0) {\n      return a / b;\n    } else {\n      return 0.0;\n    }\n  };\n}\n```",
     "options": [
+      "double",
+      "double",
       "if"
     ],
     "answer": [
+      "double",
+      "double",
       "if"
     ],
     "type": "order"
@@ -314,12 +360,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure memory pattern:\n\n```dart\nFunction createHistory() {\n  List<String> %order% = [];\n  \n  return (String action) {\n    history.add(action);\n    return List.from(history);\n  };\n}\n```",
+    "question": "Complete the closure memory pattern with type and initialization:\n\n```dart\nFunction createHistory() {\n  %order%<String> %order% = %order%;\n  \n  return (String action) {\n    history.add(action);\n    return List.from(history);\n  };\n}\n```",
     "options": [
-      "history"
+      "List",
+      "history",
+      "[]"
     ],
     "answer": [
-      "history"
+      "List",
+      "history",
+      "[]"
     ],
     "type": "order"
   },
@@ -340,40 +390,32 @@
     "type": "fill"
   },
   {
-    "question": "Complete the closure with map operations:\n\n```dart\nFunction createCache() {\n  Map<String, dynamic> %order% = {};\n  \n  return (String key, dynamic value) {\n    cache[key] = value;\n    return cache;\n  };\n}\n```",
+    "question": "Complete the closure with map operations and type:\n\n```dart\nFunction createCache() {\n  %order%<String, dynamic> %order% = %order%;\n  \n  return (String key, dynamic value) {\n    cache[key] = value;\n    return cache;\n  };\n}\n```",
     "options": [
-      "cache"
+      "Map",
+      "cache",
+      "{}"
     ],
     "answer": [
-      "cache"
+      "Map",
+      "cache",
+      "{}"
     ],
     "type": "order"
   },
   {
-    "question": "How do closures help with encapsulation?\n\n```dart\nFunction createSecureCounter() {\n  int _private = 0;\n  \n  return {\n    'increment': () => ++_private,\n    'getValue': () => _private,\n    'reset': () => _private = 0\n  };\n}\n```",
-    "options": [
-      "They hide private variables while providing controlled access",
-      "They make all variables global",
-      "They prevent any variable access",
-      "They automatically encrypt data"
-    ],
-    "answer": ["They hide private variables while providing controlled access"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the closure with timer functionality:\n\n```dart\nFunction createTimer() {\n  DateTime %fill% = DateTime.now();\n  \n  return () {\n    return DateTime.now().difference(start).inSeconds;\n  };\n}\n```",
-    "answer": ["start"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the final closure example:\n\n```dart\nFunction createCustomLogger(String service) {\n  int logCount = 0;\n  \n  return (%order% level, %order% message) {\n    logCount++;\n    print('[$service] Log #$logCount [$level]: $message');\n  };\n}\n```",
+    "question": "Complete the final closure example with parameter types:\n\n```dart\nFunction createCustomLogger(String service) {\n  int logCount = 0;\n  \n  return (%order% %order%, %order% %order%) {\n    logCount++;\n    print('[$service] Log #$logCount [$level]: $message');\n  };\n}\n```",
     "options": [
       "String",
-      "String"
+      "level",
+      "String",
+      "message"
     ],
     "answer": [
       "String",
-      "String"
+      "level",
+      "String",
+      "message"
     ],
     "type": "order"
   }
