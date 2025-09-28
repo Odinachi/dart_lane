@@ -1,0 +1,588 @@
+[
+  {
+    "question": "Complete the async function declaration:\n\n```dart\nFuture<String> getIceCream() %order% {\n  await Future.delayed(Duration(seconds: 2));\n  return '🍦 Ice cream is here!';\n}\n```",
+    "options": [
+      "async"
+    ],
+    "answer": [
+      "async"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this async/await code output?\n\n```dart\nFuture<String> getIceCream() async {\n  await Future.delayed(Duration(seconds: 1));\n  return '🍦 Ice cream is here!';\n}\n\nvoid main() async {\n  print('Playing outside...');\n  String iceCream = await getIceCream();\n  print(iceCream);\n  print('Now eating ice cream! 😋');\n}\n```",
+    "options": [
+      "Playing outside...\\n🍦 Ice cream is here!\\nNow eating ice cream! 😋",
+      "🍦 Ice cream is here!\\nPlaying outside...\\nNow eating ice cream! 😋",
+      "Playing outside...\\nNow eating ice cream! 😋",
+      "Error"
+    ],
+    "answer": ["Playing outside...\\n🍦 Ice cream is here!\\nNow eating ice cream! 😋"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the keyword to wait for a Future to complete:\n\n```dart\nvoid main() async {\n  String result = %fill% getResult();\n  print(result);\n}\n```",
+    "answer": ["await"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the main function to use await:\n\n```dart\nvoid main() %order% {\n  String data = await fetchData();\n  print(data);\n}\n```",
+    "options": [
+      "async"
+    ],
+    "answer": [
+      "async"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the async keyword do?\n\n```dart\nFuture<String> processData() async {\n  // function body\n}\n```",
+    "options": [
+      "Marks the function as asynchronous, allowing use of await",
+      "Makes the function run faster",
+      "Prevents the function from running",
+      "Makes the function synchronous"
+    ],
+    "answer": ["Marks the function as asynchronous, allowing use of await"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the delay duration:\n\n```dart\nFuture<void> waitForFood() async {\n  await Future.delayed(%fill%(seconds: 3));\n  print('Food ready! 🍕');\n}\n```",
+    "answer": ["Duration"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async function with return type:\n\n```dart\n%order%<String> getMessage() %order% {\n  await Future.delayed(Duration(seconds: 1));\n  return 'Hello World!';\n}\n```",
+    "options": [
+      "Future",
+      "async"
+    ],
+    "answer": [
+      "Future",
+      "async"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when you use await?\n\n```dart\nvoid main() async {\n  print('Before await');\n  await Future.delayed(Duration(seconds: 1));\n  print('After await');\n}\n```",
+    "options": [
+      "Code waits for the Future to complete before continuing",
+      "Code continues immediately without waiting",
+      "Code runs in parallel",
+      "Code throws an error"
+    ],
+    "answer": ["Code waits for the Future to complete before continuing"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the await keyword:\n\n```dart\nvoid main() async {\n  %fill% doHomework();\n  print('Homework done!');\n}\n```",
+    "answer": ["await"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sequential async operations:\n\n```dart\nvoid main() async {\n  %order% doHomework();\n  %order% cleanRoom();\n  print('All tasks completed!');\n}\n```",
+    "options": [
+      "await",
+      "await"
+    ],
+    "answer": [
+      "await",
+      "await"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this sequential code output?\n\n```dart\nFuture<void> task1() async {\n  await Future.delayed(Duration(seconds: 1));\n  print('Task 1 done');\n}\n\nFuture<void> task2() async {\n  await Future.delayed(Duration(seconds: 1));\n  print('Task 2 done');\n}\n\nvoid main() async {\n  await task1();\n  await task2();\n  print('All done!');\n}\n```",
+    "options": [
+      "Task 1 done\\nTask 2 done\\nAll done!",
+      "All done!\\nTask 1 done\\nTask 2 done",
+      "Task 2 done\\nTask 1 done\\nAll done!",
+      "Error"
+    ],
+    "answer": ["Task 1 done\\nTask 2 done\\nAll done!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the async modifier:\n\n```dart\nFuture<int> calculate() %fill% {\n  await Future.delayed(Duration(seconds: 1));\n  return 42;\n}\n```",
+    "answer": ["async"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the error handling with async/await:\n\n```dart\nvoid main() async {\n  %order% {\n    String result = await riskyOperation();\n    print('Success: $result');\n  } %order% (e) {\n    print('Error: $e');\n  }\n}\n```",
+    "options": [
+      "try",
+      "catch"
+    ],
+    "answer": [
+      "try",
+      "catch"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when an async function throws an error?\n\n```dart\nFuture<String> failingFunction() async {\n  await Future.delayed(Duration(seconds: 1));\n  throw Exception('Something went wrong!');\n}\n\nvoid main() async {\n  try {\n    String result = await failingFunction();\n  } catch (e) {\n    print('Caught: $e');\n  }\n}\n```",
+    "options": [
+      "Caught: Exception: Something went wrong!",
+      "Program crashes",
+      "Error is ignored",
+      "Function returns null"
+    ],
+    "answer": ["Caught: Exception: Something went wrong!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception handling:\n\n```dart\nvoid main() async {\n  try {\n    await dangerousTask();\n  } %fill% (e) {\n    print('Error occurred: $e');\n  }\n}\n```",
+    "answer": ["catch"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async function with void return:\n\n```dart\nFuture<%order%> doWork() %order% {\n  await Future.delayed(Duration(seconds: 2));\n  print('Work completed!');\n}\n```",
+    "options": [
+      "void",
+      "async"
+    ],
+    "answer": [
+      "void",
+      "async"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's the difference between Future<void> and void?\n\n```dart\nFuture<void> asyncFunction() async { }\nvoid syncFunction() { }\n```",
+    "options": [
+      "Future<void> is asynchronous, void is synchronous",
+      "No difference in functionality",
+      "Future<void> is faster",
+      "void cannot be used with async"
+    ],
+    "answer": ["Future<void> is asynchronous, void is synchronous"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the Future return type:\n\n```dart\n%fill%<int> getNumber() async {\n  await Future.delayed(Duration(seconds: 1));\n  return 100;\n}\n```",
+    "answer": ["Future"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the parallel async operations:\n\n```dart\nvoid main() async {\n  List<Future<String>> futures = [task1(), task2(), task3()];\n  List<String> results = await %order%.%order%(futures);\n  print('All results: $results');\n}\n```",
+    "options": [
+      "Future",
+      "wait"
+    ],
+    "answer": [
+      "Future",
+      "wait"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Future.wait() do with async/await?\n\n```dart\nvoid main() async {\n  List<String> results = await Future.wait([\n    fetchData1(),\n    fetchData2(),\n    fetchData3()\n  ]);\n}\n```",
+    "options": [
+      "Runs all futures in parallel and waits for all to complete",
+      "Runs futures one by one sequentially",
+      "Only waits for the first future to complete",
+      "Cancels all futures"
+    ],
+    "answer": ["Runs all futures in parallel and waits for all to complete"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the parallel execution:\n\n```dart\nvoid main() async {\n  List<String> results = await Future.%fill%([\n    getData1(),\n    getData2()\n  ]);\n}\n```",
+    "answer": ["wait"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async loop:\n\n```dart\nvoid main() async {\n  for (int i = 0; i < 3; i++) {\n    %order% processItem(i);\n    print('Processed item $i');\n  }\n}\n```",
+    "options": [
+      "await"
+    ],
+    "answer": [
+      "await"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this async loop output?\n\n```dart\nFuture<void> processItem(int item) async {\n  await Future.delayed(Duration(milliseconds: 500));\n  print('Item $item processed');\n}\n\nvoid main() async {\n  for (int i = 1; i <= 2; i++) {\n    await processItem(i);\n  }\n  print('All items done!');\n}\n```",
+    "options": [
+      "Item 1 processed\\nItem 2 processed\\nAll items done!",
+      "All items done!\\nItem 1 processed\\nItem 2 processed",
+      "Item 2 processed\\nItem 1 processed\\nAll items done!",
+      "Error"
+    ],
+    "answer": ["Item 1 processed\\nItem 2 processed\\nAll items done!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the loop await:\n\n```dart\nvoid main() async {\n  for (var item in items) {\n    %fill% processItem(item);\n  }\n}\n```",
+    "answer": ["await"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the conditional async operation:\n\n```dart\nvoid main() async {\n  bool condition = true;\n  %order% (condition) {\n    String result = %order% fetchData();\n    print('Data: $result');\n  }\n}\n```",
+    "options": [
+      "if",
+      "await"
+    ],
+    "answer": [
+      "if",
+      "await"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens with conditional await?\n\n```dart\nvoid main() async {\n  bool shouldFetch = false;\n  \n  if (shouldFetch) {\n    String data = await fetchData();\n    print('Got data: $data');\n  } else {\n    print('Skipped fetching');\n  }\n}\n```",
+    "options": [
+      "Skipped fetching",
+      "Got data: [some data]",
+      "Error",
+      "Nothing prints"
+    ],
+    "answer": ["Skipped fetching"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the conditional check:\n\n```dart\nvoid main() async {\n  %fill% (needsData) {\n    await loadData();\n  }\n}\n```",
+    "answer": ["if"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async timeout handling:\n\n```dart\nvoid main() async {\n  try {\n    String result = await fetchData().%order%(Duration(seconds: 5));\n    print('Result: $result');\n  } catch (e) {\n    print('Timeout or error: $e');\n  }\n}\n```",
+    "options": [
+      "timeout"
+    ],
+    "answer": [
+      "timeout"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when an async operation times out?\n\n```dart\nvoid main() async {\n  try {\n    String data = await slowOperation()\n        .timeout(Duration(seconds: 2));\n  } catch (e) {\n    print('Caught: $e');\n  }\n}\n```",
+    "options": [
+      "Throws TimeoutException that can be caught",
+      "Returns null automatically",
+      "Continues waiting forever",
+      "Restarts the operation"
+    ],
+    "answer": ["Throws TimeoutException that can be caught"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the timeout duration:\n\n```dart\nvoid main() async {\n  try {\n    await longTask().timeout(%fill%(seconds: 10));\n  } catch (e) {\n    print('Timeout!');\n  }\n}\n```",
+    "answer": ["Duration"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async function with multiple awaits:\n\n```dart\nFuture<String> complexOperation() async {\n  String step1 = %order% firstStep();\n  String step2 = %order% secondStep(step1);\n  String step3 = %order% thirdStep(step2);\n  return step3;\n}\n```",
+    "options": [
+      "await",
+      "await",
+      "await"
+    ],
+    "answer": [
+      "await",
+      "await",
+      "await"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's the execution pattern of chained awaits?\n\n```dart\nFuture<String> chainedOperations() async {\n  String a = await step1();\n  String b = await step2(a);\n  String c = await step3(b);\n  return c;\n}\n```",
+    "options": [
+      "Sequential - each step waits for the previous to complete",
+      "Parallel - all steps run at the same time",
+      "Random order execution",
+      "Only the last step executes"
+    ],
+    "answer": ["Sequential - each step waits for the previous to complete"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the chained await:\n\n```dart\nFuture<int> calculate() async {\n  int a = %fill% getA();\n  int b = %fill% getB(a);\n  return a + b;\n}\n```",
+    "answer": ["await", "await"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async callback pattern:\n\n```dart\nFuture<void> processWithCallback(Function callback) async {\n  String data = await fetchData();\n  %order%(data);\n}\n\nvoid main() async {\n  await processWithCallback((result) {\n    print('Callback received: $result');\n  });\n}\n```",
+    "options": [
+      "callback"
+    ],
+    "answer": [
+      "callback"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do callbacks work with async/await?\n\n```dart\nFuture<void> asyncWithCallback(Function onComplete) async {\n  await doWork();\n  onComplete('Work done');\n}\n```",
+    "options": [
+      "Callbacks are called after await completes",
+      "Callbacks run before await",
+      "Callbacks don't work with async/await",
+      "Callbacks run in parallel"
+    ],
+    "answer": ["Callbacks are called after await completes"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the callback invocation:\n\n```dart\nFuture<void> asyncTask(Function onDone) async {\n  await performWork();\n  %fill%('Task completed');\n}\n```",
+    "answer": ["onDone"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async stream handling:\n\n```dart\nvoid main() async {\n  %order% %order% (String data in dataStream) {\n    print('Received: $data');\n  }\n}\n```",
+    "options": [
+      "await",
+      "for"
+    ],
+    "answer": [
+      "await",
+      "for"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does await for do with streams?\n\n```dart\nvoid main() async {\n  await for (int value in numberStream()) {\n    print('Value: $value');\n  }\n}\n```",
+    "options": [
+      "Waits for each stream item one by one",
+      "Collects all stream items at once",
+      "Only gets the first stream item",
+      "Cancels the stream"
+    ],
+    "answer": ["Waits for each stream item one by one"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the stream iteration:\n\n```dart\nvoid main() async {\n  await %fill% (var item in itemStream) {\n    print('Processing: $item');\n  }\n}\n```",
+    "answer": ["for"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async generator function:\n\n```dart\nStream<int> countStream() %order%* {\n  for (int i = 1; i <= 3; i++) {\n    %order% Future.delayed(Duration(seconds: 1));\n    %order% i;\n  }\n}\n```",
+    "options": [
+      "async",
+      "await",
+      "yield"
+    ],
+    "answer": [
+      "async",
+      "await",
+      "yield"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does async* do in a function?\n\n```dart\nStream<String> messageStream() async* {\n  yield 'Message 1';\n  yield 'Message 2';\n}\n```",
+    "options": [
+      "Creates an asynchronous generator that returns a Stream",
+      "Makes the function run faster",
+      "Creates a Future instead of Stream",
+      "Prevents the function from being async"
+    ],
+    "answer": ["Creates an asynchronous generator that returns a Stream"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the stream generator:\n\n```dart\nStream<String> dataStream() %fill%* {\n  yield 'Data 1';\n  yield 'Data 2';\n}\n```",
+    "answer": ["async"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async/await with finally:\n\n```dart\nvoid main() async {\n  try {\n    String result = await fetchData();\n    print('Success: $result');\n  } catch (e) {\n    print('Error: $e');\n  } %order% {\n    print('Cleanup completed');\n  }\n}\n```",
+    "options": [
+      "finally"
+    ],
+    "answer": [
+      "finally"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens with finally in async functions?\n\n```dart\nvoid main() async {\n  try {\n    await riskyOperation();\n  } catch (e) {\n    print('Error handled');\n  } finally {\n    print('This always runs');\n  }\n}\n```",
+    "options": [
+      "Finally block runs regardless of success or failure",
+      "Finally only runs on success",
+      "Finally only runs on error",
+      "Finally doesn't work with async"
+    ],
+    "answer": ["Finally block runs regardless of success or failure"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the cleanup block:\n\n```dart\nvoid main() async {\n  try {\n    await processData();\n  } catch (e) {\n    print('Error: $e');\n  } %fill% {\n    await cleanup();\n  }\n}\n```",
+    "answer": ["finally"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async method in a class:\n\n```dart\nclass DataService {\n  Future<String> %order%() %order% {\n    await Future.delayed(Duration(seconds: 1));\n    return 'Data loaded';\n  }\n}\n```",
+    "options": [
+      "loadData",
+      "async"
+    ],
+    "answer": [
+      "loadData",
+      "async"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do you call an async method from a class?\n\n```dart\nclass ApiService {\n  Future<String> fetchUser() async {\n    return 'User data';\n  }\n}\n\nvoid main() async {\n  ApiService api = ApiService();\n  String user = await api.fetchUser();\n}\n```",
+    "options": [
+      "Same as calling any method, but with await",
+      "You cannot call async methods from classes",
+      "Need special syntax for class methods",
+      "Must use .then() instead of await"
+    ],
+    "answer": ["Same as calling any method, but with await"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method call:\n\n```dart\nclass Service {\n  Future<int> calculate() async { return 42; }\n}\n\nvoid main() async {\n  Service service = Service();\n  int result = %fill% service.calculate();\n}\n```",
+    "answer": ["await"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async constructor alternative:\n\n```dart\nclass DatabaseConnection {\n  DatabaseConnection._();\n  \n  static Future<DatabaseConnection> %order%() %order% {\n    var connection = DatabaseConnection._();\n    await connection._initialize();\n    return connection;\n  }\n}\n```",
+    "options": [
+      "create",
+      "async"
+    ],
+    "answer": [
+      "create",
+      "async"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why can't constructors be async?\n\n```dart\nclass MyClass {\n  // This won't work:\n  // MyClass() async { }\n  \n  // This works:\n  static Future<MyClass> create() async {\n    return MyClass._();\n  }\n}\n```",
+    "options": [
+      "Constructors must return an instance immediately",
+      "Async keyword doesn't work with classes",
+      "It's a Dart language limitation",
+      "Constructors are always synchronous by design"
+    ],
+    "answer": ["Constructors must return an instance immediately"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the factory method:\n\n```dart\nclass HttpClient {\n  HttpClient._();\n  \n  static Future<HttpClient> %fill%() async {\n    var client = HttpClient._();\n    await client.initialize();\n    return client;\n  }\n}\n```",
+    "answer": ["create"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async error propagation:\n\n```dart\nFuture<String> innerFunction() async {\n  throw Exception('Inner error');\n}\n\nFuture<String> outerFunction() async {\n  %order% {\n    return await innerFunction();\n  } %order% (e) {\n    print('Caught in outer: $e');\n    %order%;\n  }\n}\n```",
+    "options": [
+      "try",
+      "catch",
+      "rethrow"
+    ],
+    "answer": [
+      "try",
+      "catch",
+      "rethrow"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do errors propagate in async functions?\n\n```dart\nFuture<void> level1() async {\n  throw Exception('Level 1 error');\n}\n\nFuture<void> level2() async {\n  await level1(); // What happens?\n}\n```",
+    "options": [
+      "Error automatically propagates up the call chain",
+      "Error is automatically caught and ignored",
+      "Error only stays in level1",
+      "Program crashes immediately"
+    ],
+    "answer": ["Error automatically propagates up the call chain"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the error handling:\n\n```dart\nFuture<void> caller() async {\n  try {\n    await riskyFunction();\n  } catch (e) {\n    print('Error: $e');\n    %fill%; // Re-throw the error\n  }\n}\n```",
+    "answer": ["rethrow"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async testing pattern:\n\n```dart\nvoid main() async {\n  %order%(expectAsync0(() %order% {\n    String result = %order% fetchTestData();\n    expect(result, equals('test data'));\n  }));\n}\n```",
+    "options": [
+      "test",
+      "async",
+      "await"
+    ],
+    "answer": [
+      "test",
+      "async",
+      "await"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do you test async functions?\n\n```dart\ntest('async function test', () async {\n  String result = await asyncFunction();\n  expect(result, equals('expected'));\n});\n```",
+    "options": [
+      "Make test callback async and use await",
+      "Cannot test async functions",
+      "Only use .then() in tests",
+      "Use special async test framework"
+    ],
+    "answer": ["Make test callback async and use await"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the test function:\n\n```dart\n%fill%('should return data', () async {\n  var result = await getData();\n  expect(result, isNotNull);\n});\n```",
+    "answer": ["test"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async/await best practices:\n\n```dart\n// Good practice\nFuture<String> goodExample() async {\n  %order% {\n    String data = %order% fetchData();\n    return processData(data);\n  } %order% (e) {\n    print('Error: $e');\n    %order%;\n  }\n}\n```",
+    "options": [
+      "try",
+      "await", 
+      "catch",
+      "rethrow"
+    ],
+    "answer": [
+      "try",
+      "await",
+      "catch",
+      "rethrow"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's considered a best practice with async/await?\n\n```dart\n// Option A\nFuture<String> option1() async {\n  return await fetchData();\n}\n\n// Option B\nFuture<String> option2() {\n  return fetchData();\n}\n```",
+    "options": [
+      "Option B - avoid unnecessary async/await when just returning Future",
+      "Option A - always use async/await",
+      "Both are equally good",
+      "Neither approach is recommended"
+    ],
+    "answer": ["Option B - avoid unnecessary async/await when just returning Future"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the efficient pattern:\n\n```dart\n// Instead of: return await fetchData();\n// Better:\n%fill% fetchData();\n```",
+    "answer": ["return"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final comprehensive async/await example:\n\n```dart\nclass %order% {\n  Future<Map<String, dynamic>> %order%() %order% {\n    %order% {\n      // Fetch user data\n      String userData = %order% _fetchUserData();\n      \n      // Process the data\n      Map<String, dynamic> processed = %order% _processData(userData);\n      \n      // Cache the result\n      %order% _cacheResult(processed);\n      \n      return processed;\n    } %order% (e) {\n      print('Error in loadUserProfile: $e');\n      %order%;\n    }\n  }\n}\n```",
+    "options": [
+      "UserService",
+      "loadUserProfile",
+      "async",
+      "try",
+      "await",
+      "await", 
+      "await",
+      "catch",
+      "rethrow"
+    ],
+    "answer": [
+      "UserService",
+      "loadUserProfile", 
+      "async",
+      "try",
+      "await",
+      "await",
+      "await",
+      "catch",
+      "rethrow"
+    ],
+    "type": "order"
+  }
+]

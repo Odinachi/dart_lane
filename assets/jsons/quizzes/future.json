@@ -1,0 +1,552 @@
+[
+  {
+    "question": "Complete the Future declaration:\n\n```dart\n%order%<String> getToy() {\n  return Future.delayed(Duration(seconds: 2), () {\n    return '🧸 Your toy is here!';\n  });\n}\n```",
+    "options": [
+      "Future"
+    ],
+    "answer": [
+      "Future"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Future code output?\n\n```dart\nvoid main() {\n  print('Ordering toy...');\n  \n  getToy().then((toy) {\n    print(toy);\n  });\n  \n  print('Playing while waiting... ⚽');\n}\n\nFuture<String> getToy() {\n  return Future.delayed(Duration(seconds: 1), () {\n    return '🧸 Your toy is here!';\n  });\n}\n```",
+    "options": [
+      "Ordering toy...\\nPlaying while waiting... ⚽\\n🧸 Your toy is here!",
+      "Ordering toy...\\n🧸 Your toy is here!\\nPlaying while waiting... ⚽",
+      "🧸 Your toy is here!",
+      "Error"
+    ],
+    "answer": ["Ordering toy...\\nPlaying while waiting... ⚽\\n🧸 Your toy is here!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to handle Future completion:\n\n```dart\nvoid main() {\n  getFruit().%fill%((fruit) {\n    print('Got: $fruit');\n  });\n}\n```",
+    "answer": ["then"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Future.delayed syntax:\n\n```dart\nFuture<String> getSnack() {\n  return %order%.%order%(Duration(seconds: 2), () {\n    return 'Cookie 🍪';\n  });\n}\n```",
+    "options": [
+      "Future",
+      "delayed"
+    ],
+    "answer": [
+      "Future",
+      "delayed"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is a Future in Dart?\n\n```dart\nFuture<String> downloadFile() {\n  return Future.delayed(Duration(seconds: 3), () => 'File downloaded');\n}\n```",
+    "options": [
+      "A value that will be available later",
+      "A function that runs immediately",
+      "A variable that stores current data",
+      "An error handling mechanism"
+    ],
+    "answer": ["A value that will be available later"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the return type for a Future that returns an integer:\n\n```dart\n%fill%<int> getNumber() {\n  return Future.delayed(Duration(seconds: 1), () => 42);\n}\n```",
+    "answer": ["Future"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Future error handling:\n\n```dart\nvoid main() {\n  brokenToy().then((toy) {\n    print(toy);\n  }).%order%((e) {\n    print('Error: $e');\n  });\n}\n```",
+    "options": [
+      "catchError"
+    ],
+    "answer": [
+      "catchError"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this error handling Future output?\n\n```dart\nFuture<String> brokenToy() {\n  return Future.error('Oh no! The toy is broken 💔');\n}\n\nvoid main() {\n  brokenToy().then((toy) {\n    print(toy);\n  }).catchError((e) {\n    print('Error: $e');\n  });\n}\n```",
+    "options": [
+      "Error: Oh no! The toy is broken 💔",
+      "Oh no! The toy is broken 💔",
+      "toy",
+      "Nothing prints"
+    ],
+    "answer": ["Error: Oh no! The toy is broken 💔"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the Duration parameter:\n\n```dart\nFuture<String> waitForFood() {\n  return Future.delayed(%fill%(seconds: 3), () {\n    return 'Food ready! 🍕';\n  });\n}\n```",
+    "answer": ["Duration"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Future.value constructor:\n\n```dart\nFuture<String> getInstantMessage() {\n  return %order%.%order%('Hello instantly!');\n}\n```",
+    "options": [
+      "Future",
+      "value"
+    ],
+    "answer": [
+      "Future",
+      "value"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Future.value() do?\n\n```dart\nFuture<int> getImmediateNumber() {\n  return Future.value(100);\n}\n```",
+    "options": [
+      "Creates a Future that completes immediately with the given value",
+      "Creates a Future that never completes",
+      "Creates a Future that takes time to complete",
+      "Creates a Future that always throws an error"
+    ],
+    "answer": ["Creates a Future that completes immediately with the given value"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the completion callback parameter:\n\n```dart\nvoid main() {\n  downloadData().then((%fill%) {\n    print('Downloaded: $data');\n  });\n}\n```",
+    "answer": ["data"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the whenComplete usage:\n\n```dart\nvoid main() {\n  processFile()\n    .then((result) => print('Success: $result'))\n    .catchError((e) => print('Error: $e'))\n    .%order%(() => print('Cleanup done'));\n}\n```",
+    "options": [
+      "whenComplete"
+    ],
+    "answer": [
+      "whenComplete"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does whenComplete() do?\n\n```dart\nfutureTask()\n  .then((value) => print('Success'))\n  .catchError((e) => print('Error'))\n  .whenComplete(() => print('Always runs'));\n```",
+    "options": [
+      "Runs regardless of success or failure",
+      "Only runs on success",
+      "Only runs on error",
+      "Prevents the Future from completing"
+    ],
+    "answer": ["Runs regardless of success or failure"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the Future.error constructor:\n\n```dart\nFuture<String> failedOperation() {\n  return Future.%fill%('Operation failed!');\n}\n```",
+    "answer": ["error"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the chained Future operations:\n\n```dart\nvoid main() {\n  getNumber()\n    .%order%((n) => n * 2)\n    .%order%((doubled) => print('Result: $doubled'));\n}\n```",
+    "options": [
+      "then",
+      "then"
+    ],
+    "answer": [
+      "then",
+      "then"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this chained Future output?\n\n```dart\nFuture<int> getNumber() {\n  return Future.value(5);\n}\n\nvoid main() {\n  getNumber()\n    .then((n) => n + 3)\n    .then((result) => print('Final: $result'));\n}\n```",
+    "options": [
+      "Final: 8",
+      "Final: 5",
+      "Final: 3",
+      "Error"
+    ],
+    "answer": ["Final: 8"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the transformation in then():\n\n```dart\nvoid main() {\n  getText()\n    .then((text) => %fill%)\n    .then((upper) => print(upper));\n}\n```",
+    "answer": ["text.toUpperCase()"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Future wait operation:\n\n```dart\nvoid main() async {\n  List<Future<String>> futures = [getToy1(), getToy2(), getToy3()];\n  \n  List<String> results = await %order%.%order%(futures);\n  print('All toys: $results');\n}\n```",
+    "options": [
+      "Future",
+      "wait"
+    ],
+    "answer": [
+      "Future",
+      "wait"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Future.wait() do?\n\n```dart\nFuture.wait([task1(), task2(), task3()])\n  .then((results) => print('All done: $results'));\n```",
+    "options": [
+      "Waits for all Futures to complete and returns their results",
+      "Waits for the first Future to complete",
+      "Cancels all running Futures",
+      "Runs Futures one after another"
+    ],
+    "answer": ["Waits for all Futures to complete and returns their results"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the await keyword:\n\n```dart\nvoid main() async {\n  String toy = %fill% getToy();\n  print('Got: $toy');\n}\n```",
+    "answer": ["await"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async function with Future return:\n\n```dart\n%order%<String> fetchData() %order% {\n  await Future.delayed(Duration(seconds: 2));\n  return 'Data fetched!';\n}\n```",
+    "options": [
+      "Future",
+      "async"
+    ],
+    "answer": [
+      "Future",
+      "async"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's the difference between then() and await?\n\n```dart\n// Using then()\ngetData().then((data) => print(data));\n\n// Using await\nString data = await getData();\nprint(data);\n```",
+    "options": [
+      "await makes code look synchronous, then() uses callbacks",
+      "then() is faster than await",
+      "await can only be used with errors",
+      "No difference in functionality"
+    ],
+    "answer": ["await makes code look synchronous, then() uses callbacks"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the async keyword:\n\n```dart\nvoid main() %fill% {\n  String result = await processData();\n  print('Result: $result');\n}\n```",
+    "answer": ["async"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Future timeout operation:\n\n```dart\nvoid main() {\n  slowOperation()\n    .%order%(Duration(seconds: 5))\n    .then((result) => print('Success: $result'))\n    .catchError((e) => print('Timeout or error: $e'));\n}\n```",
+    "options": [
+      "timeout"
+    ],
+    "answer": [
+      "timeout"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when a Future times out?\n\n```dart\nslowTask()\n  .timeout(Duration(seconds: 3))\n  .catchError((e) => print('Error: $e'));\n```",
+    "options": [
+      "Throws a TimeoutException that can be caught",
+      "Returns null automatically",
+      "Continues running in background",
+      "Restarts the Future"
+    ],
+    "answer": ["Throws a TimeoutException that can be caught"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the timeout duration:\n\n```dart\nvoid main() {\n  downloadFile()\n    .timeout(%fill%(seconds: 10))\n    .then((file) => print('Downloaded: $file'));\n}\n```",
+    "answer": ["Duration"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Future.any operation:\n\n```dart\nvoid main() {\n  %order%.%order%([server1(), server2(), server3()])\n    .then((firstResult) => print('First to respond: $firstResult'));\n}\n```",
+    "options": [
+      "Future",
+      "any"
+    ],
+    "answer": [
+      "Future",
+      "any"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Future.any() do?\n\n```dart\nFuture.any([task1(), task2(), task3()])\n  .then((result) => print('Winner: $result'));\n```",
+    "options": [
+      "Returns the result of whichever Future completes first",
+      "Waits for all Futures to complete",
+      "Returns results from all Futures",
+      "Cancels all other Futures"
+    ],
+    "answer": ["Returns the result of whichever Future completes first"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the first completion result:\n\n```dart\nvoid main() {\n  Future.any([fastTask(), slowTask()])\n    .then((%fill%) => print('First done: $result'));\n}\n```",
+    "answer": ["result"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Future.sync operation:\n\n```dart\nFuture<int> computeSync() {\n  return %order%.%order%(() {\n    return heavyComputation();\n  });\n}\n```",
+    "options": [
+      "Future",
+      "sync"
+    ],
+    "answer": [
+      "Future",
+      "sync"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Future.sync() do?\n\n```dart\nFuture.sync(() {\n  return expensiveCalculation();\n});\n```",
+    "options": [
+      "Runs the function synchronously and wraps result in Future",
+      "Always runs asynchronously",
+      "Prevents the function from running",
+      "Makes the function run faster"
+    ],
+    "answer": ["Runs the function synchronously and wraps result in Future"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the sync function parameter:\n\n```dart\nFuture<String> processSync() {\n  return Future.sync(%fill% => performWork());\n}\n```",
+    "answer": ["()"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Future microtask operation:\n\n```dart\nvoid main() {\n  print('1');\n  %order%.%order%(() => print('3'));\n  print('2');\n}\n```",
+    "options": [
+      "Future",
+      "microtask"
+    ],
+    "answer": [
+      "Future",
+      "microtask"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this microtask code output?\n\n```dart\nvoid main() {\n  print('Start');\n  Future.microtask(() => print('Microtask'));\n  print('End');\n}\n```",
+    "options": [
+      "Start\\nEnd\\nMicrotask",
+      "Start\\nMicrotask\\nEnd",
+      "Microtask\\nStart\\nEnd",
+      "Error"
+    ],
+    "answer": ["Start\\nEnd\\nMicrotask"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the microtask callback:\n\n```dart\nvoid main() {\n  Future.microtask(%fill% => print('Quick task'));\n}\n```",
+    "answer": ["()"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Completer usage:\n\n```dart\nimport 'dart:async';\n\nFuture<String> createCustomFuture() {\n  %order%<String> completer = %order%();\n  \n  Timer(Duration(seconds: 2), () {\n    completer.complete('Custom result');\n  });\n  \n  return completer.future;\n}\n```",
+    "options": [
+      "Completer",
+      "Completer"
+    ],
+    "answer": [
+      "Completer",
+      "Completer"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is a Completer in Dart?\n\n```dart\nCompleter<String> completer = Completer();\ncompleter.complete('Done!');\nreturn completer.future;\n```",
+    "options": [
+      "A way to manually control when a Future completes",
+      "A built-in Future type",
+      "An error handling mechanism",
+      "A timeout controller"
+    ],
+    "answer": ["A way to manually control when a Future completes"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the complete method:\n\n```dart\nCompleter<int> completer = Completer();\nTimer(Duration(seconds: 1), () {\n  completer.%fill%(42);\n});\n```",
+    "answer": ["complete"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Future forEach operation:\n\n```dart\nvoid main() async {\n  List<int> numbers = [1, 2, 3];\n  \n  await %order%.%order%(numbers, (number) async {\n    await Future.delayed(Duration(seconds: 1));\n    print('Processed: $number');\n  });\n}\n```",
+    "options": [
+      "Future",
+      "forEach"
+    ],
+    "answer": [
+      "Future",
+      "forEach"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Future.forEach() do?\n\n```dart\nawait Future.forEach([1, 2, 3], (item) async {\n  await processItem(item);\n});\n```",
+    "options": [
+      "Processes each item sequentially, waiting for each to complete",
+      "Processes all items in parallel",
+      "Only processes the first item",
+      "Skips items that take too long"
+    ],
+    "answer": ["Processes each item sequentially, waiting for each to complete"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the forEach callback:\n\n```dart\nawait Future.forEach(items, (%fill%) async {\n  await processItem(item);\n});\n```",
+    "answer": ["item"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Future doWhile operation:\n\n```dart\nvoid main() async {\n  int count = 0;\n  \n  await %order%.%order%(() async {\n    await Future.delayed(Duration(milliseconds: 100));\n    count++;\n    print('Count: $count');\n    return count < 3;\n  });\n}\n```",
+    "options": [
+      "Future",
+      "doWhile"
+    ],
+    "answer": [
+      "Future",
+      "doWhile"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Future.doWhile() do?\n\n```dart\nawait Future.doWhile(() async {\n  await someTask();\n  return shouldContinue;\n});\n```",
+    "options": [
+      "Repeatedly executes a function while condition is true",
+      "Executes function only once",
+      "Executes function in parallel",
+      "Never executes the function"
+    ],
+    "answer": ["Repeatedly executes a function while condition is true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the condition return:\n\n```dart\nint attempts = 0;\nawait Future.doWhile(() async {\n  attempts++;\n  await tryOperation();\n  %fill% attempts < 3;\n});\n```",
+    "answer": ["return"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the error propagation:\n\n```dart\nvoid main() {\n  riskyOperation()\n    .then((result) => print('Success: $result'))\n    .catchError((e) {\n      print('Caught: $e');\n      %fill% e; // Re-throw the error\n    });\n}\n```",
+    "options": [
+      "throw"
+    ],
+    "answer": [
+      "throw"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when you throw an error in catchError?\n\n```dart\nfutureTask()\n  .catchError((e) {\n    log(e);\n    throw e; // What does this do?\n  });\n```",
+    "options": [
+      "Propagates the error to the next error handler",
+      "Stops error propagation",
+      "Converts error to success",
+      "Restarts the Future"
+    ],
+    "answer": ["Propagates the error to the next error handler"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the error logging:\n\n```dart\nprocessData()\n  .catchError((e) {\n    %fill%('Error occurred: $e');\n    throw e;\n  });\n```",
+    "answer": ["print"],
+    "type": "fill"
+  },
+ 
+  {
+    "question": "When should you use dynamic with Futures?\n\n```dart\nFuture<dynamic> flexibleOperation() {\n  // Could return String, int, bool, etc.\n}\n```",
+    "options": [
+      "When the Future might return different types",
+      "Always for better performance",
+      "Never, it's bad practice",
+      "Only with error handling"
+    ],
+    "answer": ["When the Future might return different types"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the return type:\n\n```dart\nFuture<%fill%> getFlexibleData() async {\n  if (condition) return 'text';\n  return 123;\n}\n```",
+    "answer": ["dynamic"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Future.catchError with test:\n\n```dart\nvoid main() {\n  networkCall()\n    .catchError((e) {\n      print('Network error: $e');\n    }, test: (e) => e %order% %order%);\n}\n```",
+    "options": [
+      "is",
+      "NetworkException"
+    ],
+    "answer": [
+      "is",
+      "NetworkException"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the test parameter in catchError do?\n\n```dart\nfutureTask()\n  .catchError(\n    (e) => handleSpecificError(e),\n    test: (e) => e is CustomException\n  );\n```",
+    "options": [
+      "Only catches errors that match the test condition",
+      "Tests if the Future will succeed",
+      "Prevents all errors from occurring",
+      "Runs the test after catching the error"
+    ],
+    "answer": ["Only catches errors that match the test condition"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the error type test:\n\n```dart\noperation()\n  .catchError(\n    (e) => print('Timeout!'),\n    test: (%fill%) => e is TimeoutException\n  );\n```",
+    "answer": ["e"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the stream from Future:\n\n```dart\nStream<String> createStream() {\n  return %order%.%order%(() async* {\n    yield await getFuture1();\n    yield await getFuture2();\n    yield await getFuture3();\n  });\n}\n```",
+    "options": [
+      "Stream",
+      "fromFuture"
+    ],
+    "answer": [
+      "Stream",
+      "fromFuture"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do Futures relate to Streams?\n\n```dart\nFuture<String> singleValue = Future.value('one');\nStream<String> multipleValues = Stream.fromIterable(['one', 'two', 'three']);\n```",
+    "options": [
+      "Future provides one value, Stream provides multiple values over time",
+      "Future is faster than Stream",
+      "Stream is just multiple Futures",
+      "They are completely unrelated"
+    ],
+    "answer": ["Future provides one value, Stream provides multiple values over time"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the Stream conversion:\n\n```dart\nFuture<String> future = getData();\nStream<String> stream = %fill%.fromFuture(future);\n```",
+    "answer": ["Stream"],
+    "type": "fill"
+  },
+ 
+  {
+    "question": "What are zones useful for with Futures?\n\n```dart\nrunZoned(() {\n  // All Futures run in this zone\n}, onError: (e, s) => print('Zone error: $e'));\n```",
+    "options": [
+      "Centralized error handling and context management",
+      "Making Futures run faster",
+      "Preventing Futures from completing",
+      "Converting Futures to Streams"
+    ],
+    "answer": ["Centralized error handling and context management"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the zone runner:\n\n```dart\n%fill%(() {\n  riskyFutureOperation();\n}, onError: (e, s) => handleError(e));\n```",
+    "answer": ["runZoned"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final comprehensive Future example:\n\n```dart\nFuture<%order%> processUserData(String userId) %order% {\n  try {\n    // Fetch user data\n    Map<String, dynamic> userData = %order% fetchUser(userId);\n    \n    // Process the data\n    String processedData = %order% processData(userData);\n    \n    // Save results  \n    %order% saveResults(processedData);\n    \n    return processedData;\n  } %order% (e) {\n    print('Error processing user $userId: $e');\n    %order%;\n  }\n}\n```",
+    "options": [
+      "String",
+      "async",
+      "await",
+      "await",
+      "await",
+      "catch",
+      "rethrow"
+    ],
+    "answer": [
+      "String",
+      "async",
+      "await",
+      "await",
+      "await", 
+      "catch",
+      "rethrow"
+    ],
+    "type": "order"
+  }
+]

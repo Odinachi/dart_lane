@@ -1,0 +1,550 @@
+[
+  {
+    "question": "Complete the sealed class declaration:\n\n```dart\n%order% class Animal {\n  void %order%();\n}\n```",
+    "options": [
+      "sealed",
+      "makeSound"
+    ],
+    "answer": [
+      "sealed",
+      "makeSound"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this sealed class code output?\n\n```dart\nsealed class Animal {\n  void makeSound();\n}\n\nclass Dog extends Animal {\n  @override\n  void makeSound() {\n    print('Woof!');\n  }\n}\n\nclass Cat extends Animal {\n  @override\n  void makeSound() {\n    print('Meow!');\n  }\n}\n\nvoid main() {\n  Animal dog = Dog();\n  dog.makeSound();\n}\n```",
+    "options": [
+      "Woof!",
+      "Meow!",
+      "Animal sound",
+      "Error"
+    ],
+    "answer": ["Woof!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the keyword to create a sealed class:\n\n```dart\n%fill% class Vehicle {\n  void drive();\n}\n```",
+    "answer": ["sealed"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sealed class with allowed subclasses:\n\n```dart\n%order% class Shape {\n  double %order%();\n}\n\nclass Circle %order% Shape {\n  double radius;\n  Circle(this.radius);\n  \n  @override\n  double calculateArea() {\n    return 3.14 * radius * radius;\n  }\n}\n```",
+    "options": [
+      "sealed",
+      "calculateArea",
+      "extends"
+    ],
+    "answer": [
+      "sealed",
+      "calculateArea", 
+      "extends"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is a sealed class in Dart?\n\n```dart\nsealed class Color {\n  String get name;\n}\n```",
+    "options": [
+      "A class that restricts which classes can inherit from it",
+      "A class that cannot be extended at all",
+      "A class that is faster than regular classes",
+      "A class that is automatically private"
+    ],
+    "answer": ["A class that restricts which classes can inherit from it"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in what you cannot do with sealed classes:\n\n```dart\nsealed class MagicBook {\n  void cast();\n}\n\nvoid main() {\n  MagicBook book = MagicBook(); // This causes %fill%\n}\n```",
+    "answer": ["error"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the pattern matching with sealed classes:\n\n```dart\nsealed class Result {\n}\n\nclass Success extends Result {\n  final String data;\n  Success(this.data);\n}\n\nclass Error extends Result {\n  final String message;\n  Error(this.message);\n}\n\nString handleResult(Result result) {\n  return %order% (result) {\n    Success(data: var d) => 'Got: $d',\n    Error(message: var m) => 'Error: $m',\n  };\n}\n```",
+    "options": [
+      "switch"
+    ],
+    "answer": [
+      "switch"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when you try to instantiate a sealed class directly?\n\n```dart\nsealed class Superhero {\n  void usePower();\n}\n\nvoid main() {\n  Superhero hero = Superhero(); // What happens?\n}\n```",
+    "options": [
+      "Compilation error - cannot instantiate sealed class",
+      "Creates a new Superhero instance",
+      "Returns null",
+      "Creates an abstract instance"
+    ],
+    "answer": ["Compilation error - cannot instantiate sealed class"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the extends keyword:\n\n```dart\nsealed class Pet {\n  void play();\n}\n\nclass Dog %fill% Pet {\n  @override\n  void play() {\n    print('Playing fetch!');\n  }\n}\n```",
+    "answer": ["extends"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sealed class hierarchy:\n\n```dart\n%order% class Transport {\n  void %order%();\n}\n\nclass Car %order% Transport {\n  @override\n  void move() {\n    print('Driving on road');\n  }\n}\n\nclass Boat %order% Transport {\n  @override\n  void move() {\n    print('Sailing on water');\n  }\n}\n```",
+    "options": [
+      "sealed",
+      "move",
+      "extends",
+      "extends"
+    ],
+    "answer": [
+      "sealed",
+      "move",
+      "extends",
+      "extends"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this sealed class pattern matching return?\n\n```dart\nsealed class Status {\n}\n\nclass Loading extends Status {}\nclass Success extends Status {\n  final String data;\n  Success(this.data);\n}\nclass Failed extends Status {}\n\nString getStatusMessage(Status status) {\n  return switch (status) {\n    Loading() => 'Loading...',\n    Success(data: var d) => 'Success: $d',\n    Failed() => 'Failed!',\n  };\n}\n\nvoid main() {\n  print(getStatusMessage(Success('Done!')));\n}\n```",
+    "options": [
+      "Success: Done!",
+      "Loading...",
+      "Failed!",
+      "Error"
+    ],
+    "answer": ["Success: Done!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the sealed keyword:\n\n```dart\n%fill% class GameCharacter {\n  String name;\n  GameCharacter(this.name);\n  \n  void attack();\n}\n```",
+    "answer": ["sealed"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exhaustive switch with sealed class:\n\n```dart\nsealed class Weather {\n}\n\nclass Sunny extends Weather {}\nclass Rainy extends Weather {}\nclass Snowy extends Weather {}\n\nString getAdvice(Weather weather) {\n  return %order% (weather) {\n    %order%() => 'Wear sunglasses',\n    %order%() => 'Take umbrella', \n    %order%() => 'Wear warm clothes',\n  };\n}\n```",
+    "options": [
+      "switch",
+      "Sunny",
+      "Rainy",
+      "Snowy"
+    ],
+    "answer": [
+      "switch",
+      "Sunny",
+      "Rainy",
+      "Snowy"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the main benefit of sealed classes?\n\n```dart\nsealed class PaymentMethod {\n}\n\nclass CreditCard extends PaymentMethod {}\nclass PayPal extends PaymentMethod {}\nclass Cash extends PaymentMethod {}\n```",
+    "options": [
+      "Compiler ensures exhaustive pattern matching",
+      "They run faster than regular classes",
+      "They use less memory",
+      "They are automatically private"
+    ],
+    "answer": ["Compiler ensures exhaustive pattern matching"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the missing case in pattern matching:\n\n```dart\nsealed class Direction {\n}\n\nclass North extends Direction {}\nclass South extends Direction {}\nclass East extends Direction {}\nclass West extends Direction {}\n\nString getInstruction(Direction dir) {\n  return switch (dir) {\n    North() => 'Go up',\n    South() => 'Go down',\n    East() => 'Go right',\n    %fill%() => 'Go left',\n  };\n}\n```",
+    "answer": ["West"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sealed class with properties:\n\n```dart\n%order% class Response {\n  final int %order%;\n  Response(this.statusCode);\n}\n\nclass SuccessResponse %order% Response {\n  final String data;\n  SuccessResponse(this.data) : %order%(200);\n}\n\nclass ErrorResponse %order% Response {\n  final String error;\n  ErrorResponse(this.error) : %order%(500);\n}\n```",
+    "options": [
+      "sealed",
+      "statusCode",
+      "extends",
+      "super",
+      "extends",
+      "super"
+    ],
+    "answer": [
+      "sealed",
+      "statusCode",
+      "extends",
+      "super",
+      "extends", 
+      "super"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens if you miss a case in sealed class pattern matching?\n\n```dart\nsealed class Color {\n}\n\nclass Red extends Color {}\nclass Green extends Color {}\nclass Blue extends Color {}\n\nString getColorName(Color color) {\n  return switch (color) {\n    Red() => 'Red',\n    Green() => 'Green',\n    // Missing Blue case\n  };\n}\n```",
+    "options": [
+      "Compilation error - non-exhaustive pattern",
+      "Runtime error",
+      "Returns null for missing case",
+      "Code works fine"
+    ],
+    "answer": ["Compilation error - non-exhaustive pattern"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the constructor call:\n\n```dart\nsealed class Animal {\n  String name;\n  Animal(this.name);\n}\n\nclass Cat extends Animal {\n  Cat(String name) : %fill%(name);\n}\n```",
+    "answer": ["super"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sealed class with abstract methods:\n\n```dart\n%order% class Drawable {\n  void %order%();\n  void %order%(String color);\n}\n\nclass Circle %order% Drawable {\n  @override\n  void draw() {\n    print('Drawing circle');\n  }\n  \n  @override\n  void setColor(String color) {\n    print('Circle color: $color');\n  }\n}\n```",
+    "options": [
+      "sealed",
+      "draw",
+      "setColor",
+      "extends"
+    ],
+    "answer": [
+      "sealed",
+      "draw",
+      "setColor",
+      "extends"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What must subclasses of sealed classes do?\n\n```dart\nsealed class Vehicle {\n  void startEngine();\n  void stop();\n}\n\nclass Car extends Vehicle {\n  // What must be here?\n}\n```",
+    "options": [
+      "Must implement all abstract methods",
+      "Must call super constructor",
+      "Must be in the same file as sealed class",
+      "Must be marked as final"
+    ],
+    "answer": ["Must implement all abstract methods"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method implementation:\n\n```dart\nsealed class Bird {\n  void fly();\n}\n\nclass Eagle extends Bird {\n  @override\n  void %fill%() {\n    print('Eagle soars high');\n  }\n}\n```",
+    "answer": ["fly"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sealed class with data:\n\n```dart\n%order% class ApiResult<%order%> {\n}\n\nclass Success<%order%> %order% ApiResult<%order%> {\n  final %order% data;\n  Success(this.data);\n}\n\nclass Failure<%order%> %order% ApiResult<%order%> {\n  final String error;\n  Failure(this.error);\n}\n```",
+    "options": [
+      "sealed",
+      "T",
+      "T", 
+      "extends",
+      "T",
+      "T",
+      "T",
+      "extends",
+      "T"
+    ],
+    "answer": [
+      "sealed",
+      "T",
+      "T",
+      "extends",
+      "T",
+      "T",
+      "T",
+      "extends",
+      "T"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this generic sealed class return?\n\n```dart\nsealed class Option<T> {\n}\n\nclass Some<T> extends Option<T> {\n  final T value;\n  Some(this.value);\n}\n\nclass None<T> extends Option<T> {}\n\nString handleOption(Option<String> option) {\n  return switch (option) {\n    Some(value: var v) => 'Value: $v',\n    None() => 'No value',\n  };\n}\n\nvoid main() {\n  print(handleOption(Some('Hello')));\n}\n```",
+    "options": [
+      "Value: Hello",
+      "No value", 
+      "Some",
+      "Error"
+    ],
+    "answer": ["Value: Hello"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the generic type:\n\n```dart\nsealed class Either<L, R> {\n}\n\nclass Left<L, R> extends Either<L, R> {\n  final %fill% value;\n  Left(this.value);\n}\n```",
+    "answer": ["L"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sealed class with mixins:\n\n```dart\nmixin Flyable {\n  void fly() => print('Flying');\n}\n\n%order% class Bird {\n  void chirp();\n}\n\nclass Sparrow %order% Bird %order% Flyable {\n  @override\n  void chirp() {\n    print('Chirp chirp');\n  }\n}\n```",
+    "options": [
+      "sealed",
+      "extends",
+      "with"
+    ],
+    "answer": [
+      "sealed",
+      "extends",
+      "with"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Can sealed classes use mixins?\n\n```dart\nmixin Swimmable {\n  void swim() => print('Swimming');\n}\n\nsealed class Amphibian with Swimmable {\n  void breathe();\n}\n```",
+    "options": [
+      "Yes, sealed classes can use mixins",
+      "No, sealed classes cannot use mixins",
+      "Only if the mixin is also sealed",
+      "Only in the same library"
+    ],
+    "answer": ["Yes, sealed classes can use mixins"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the mixin usage:\n\n```dart\nmixin Printable {\n  void print() => print('Printing...');\n}\n\nsealed class Document %fill% Printable {\n  void save();\n}\n```",
+    "answer": ["with"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sealed class with interfaces:\n\n```dart\nabstract class Comparable {\n  int compare(Object other);\n}\n\n%order% class Priority %order% Comparable {\n  int value;\n  Priority(this.value);\n}\n\nclass High %order% Priority {\n  High() : %order%(1);\n  \n  @override\n  int compare(Object other) {\n    return value.compareTo((other as Priority).value);\n  }\n}\n```",
+    "options": [
+      "sealed",
+      "implements",
+      "extends",
+      "super"
+    ],
+    "answer": [
+      "sealed",
+      "implements",
+      "extends", 
+      "super"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's the difference between sealed and abstract classes?\n\n```dart\nabstract class AbstractAnimal {\n  void makeSound();\n}\n\nsealed class SealedAnimal {\n  void makeSound();\n}\n```",
+    "options": [
+      "Sealed classes enable exhaustive pattern matching",
+      "Abstract classes are faster",
+      "Sealed classes cannot have abstract methods",
+      "There is no difference"
+    ],
+    "answer": ["Sealed classes enable exhaustive pattern matching"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the implements keyword:\n\n```dart\nabstract class Drawable {\n  void draw();\n}\n\nsealed class Shape %fill% Drawable {\n  void calculateArea();\n}\n```",
+    "answer": ["implements"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the nested sealed class pattern:\n\n```dart\n%order% class Expr {\n}\n\nclass Number %order% Expr {\n  final double value;\n  Number(this.value);\n}\n\nclass BinaryOp %order% Expr {\n  final Expr left;\n  final String operator;\n  final Expr right;\n  BinaryOp(this.left, this.operator, this.right);\n}\n\ndouble evaluate(Expr expr) {\n  return %order% (expr) {\n    Number(value: var v) => v,\n    BinaryOp(left: var l, operator: '+', right: var r) => \n      evaluate(l) + evaluate(r),\n    BinaryOp(left: var l, operator: '-', right: var r) => \n      evaluate(l) - evaluate(r),\n  };\n}\n```",
+    "options": [
+      "sealed",
+      "extends", 
+      "extends",
+      "switch"
+    ],
+    "answer": [
+      "sealed",
+      "extends",
+      "extends",
+      "switch"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this expression evaluator return?\n\n```dart\nsealed class Expr {\n}\n\nclass Num extends Expr {\n  final int value;\n  Num(this.value);\n}\n\nclass Add extends Expr {\n  final Expr left, right;\n  Add(this.left, this.right);\n}\n\nint eval(Expr expr) {\n  return switch (expr) {\n    Num(value: var v) => v,\n    Add(left: var l, right: var r) => eval(l) + eval(r),\n  };\n}\n\nvoid main() {\n  print(eval(Add(Num(3), Num(4))));\n}\n```",
+    "options": [
+      "7",
+      "3",
+      "4",
+      "Error"
+    ],
+    "answer": ["7"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the recursive evaluation:\n\n```dart\nint eval(Expr expr) {\n  return switch (expr) {\n    Num(value: var v) => v,\n    Add(left: var l, right: var r) => %fill%(l) + %fill%(r),\n  };\n}\n```",
+    "answer": ["eval", "eval"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sealed class with factory constructor:\n\n```dart\n%order% class Logger {\n  final String level;\n  Logger._(this.level);\n  \n  %order% Logger.info() => Logger._('INFO');\n  %order% Logger.error() => Logger._('ERROR');\n}\n\nclass InfoLogger %order% Logger {\n  InfoLogger() : %order%._('INFO');\n}\n\nclass ErrorLogger %order% Logger {\n  ErrorLogger() : %order%._('ERROR');\n}\n```",
+    "options": [
+      "sealed",
+      "factory",
+      "factory", 
+      "extends",
+      "super",
+      "extends",
+      "super"
+    ],
+    "answer": [
+      "sealed",
+      "factory",
+      "factory",
+      "extends",
+      "super",
+      "extends",
+      "super"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Can sealed classes have factory constructors?\n\n```dart\nsealed class Connection {\n  factory Connection.tcp() = TcpConnection;\n  factory Connection.udp() = UdpConnection;\n}\n\nclass TcpConnection extends Connection {}\nclass UdpConnection extends Connection {}\n```",
+    "options": [
+      "Yes, sealed classes can have factory constructors",
+      "No, sealed classes cannot have factory constructors",
+      "Only if they are generic",
+      "Only private factory constructors"
+    ],
+    "answer": ["Yes, sealed classes can have factory constructors"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the factory constructor redirect:\n\n```dart\nsealed class Database {\n  factory Database.mysql() = %fill%;\n}\n\nclass MySqlDatabase extends Database {}\n```",
+    "answer": ["MySqlDatabase"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sealed class with const constructor:\n\n```dart\n%order% class Color {\n  final int value;\n  %order% Color(this.value);\n}\n\nclass Red %order% Color {\n  %order% Red() : %order%(0xFF0000);\n}\n\nclass Green %order% Color {\n  %order% Green() : %order%(0x00FF00);\n}\n```",
+    "options": [
+      "sealed",
+      "const",
+      "extends",
+      "const",
+      "super",
+      "extends", 
+      "const",
+      "super"
+    ],
+    "answer": [
+      "sealed",
+      "const",
+      "extends",
+      "const",
+      "super",
+      "extends",
+      "const",
+      "super"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's special about const constructors in sealed classes?\n\n```dart\nsealed class Status {\n  const Status();\n}\n\nclass Loading extends Status {\n  const Loading();\n}\n\nconst loading = Loading();\n```",
+    "options": [
+      "They create compile-time constants that can be used in patterns",
+      "They make the class faster",
+      "They prevent inheritance",
+      "They are automatically private"
+    ],
+    "answer": ["They create compile-time constants that can be used in patterns"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the const keyword:\n\n```dart\nsealed class State {\n  %fill% State();\n}\n\nclass Initial extends State {\n  %fill% Initial();\n}\n```",
+    "answer": ["const", "const"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sealed class with private constructor:\n\n```dart\n%order% class Singleton {\n  static final Singleton _instance = Singleton._();\n  %order%._();\n  \n  static Singleton get instance => _instance;\n}\n\nclass ConcreteSingleton %order% Singleton {\n  ConcreteSingleton._() : %order%._();\n}\n```",
+    "options": [
+      "sealed",
+      "Singleton",
+      "extends",
+      "super"
+    ],
+    "answer": [
+      "sealed",
+      "Singleton",
+      "extends",
+      "super"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why might you use private constructors in sealed classes?\n\n```dart\nsealed class Config {\n  Config._();\n  \n  factory Config.dev() => DevConfig._();\n  factory Config.prod() => ProdConfig._();\n}\n\nclass DevConfig extends Config {\n  DevConfig._() : super._();\n}\n```",
+    "options": [
+      "To control instantiation and enforce factory patterns",
+      "To make the class faster",
+      "To prevent inheritance",
+      "To hide implementation details"
+    ],
+    "answer": ["To control instantiation and enforce factory patterns"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the private constructor:\n\n```dart\nsealed class Parser {\n  Parser%fill%();\n}\n\nclass JsonParser extends Parser {\n  JsonParser._() : super._();\n}\n```",
+    "answer": ["._"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sealed class with static methods:\n\n```dart\n%order% class MathOperation {\n  %order% MathOperation calculate(double a, double b) {\n    if (a > b) return Max(a);\n    return Min(b);\n  }\n}\n\nclass Max %order% MathOperation {\n  final double value;\n  Max(this.value);\n}\n\nclass Min %order% MathOperation {\n  final double value;\n  Min(this.value);\n}\n```",
+    "options": [
+      "sealed",
+      "static",
+      "extends",
+      "extends"
+    ],
+    "answer": [
+      "sealed",
+      "static",
+      "extends",
+      "extends"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Can sealed classes have static members?\n\n```dart\nsealed class Utils {\n  static void printMessage(String msg) {\n    print('Message: $msg');\n  }\n}\n```",
+    "options": [
+      "Yes, sealed classes can have static members",
+      "No, sealed classes cannot have static members",
+      "Only static fields",
+      "Only static methods"
+    ],
+    "answer": ["Yes, sealed classes can have static members"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the static method call:\n\n```dart\nsealed class Helper {\n  static void help() {\n    print('Helping...');\n  }\n}\n\nvoid main() {\n  Helper.%fill%();\n}\n```",
+    "answer": ["help"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the sealed class library scope:\n\n```dart\n// file: shapes.dart\n%order% class Shape {\n  void draw();\n}\n\nclass Circle %order% Shape {\n  @override\n  void draw() => print('Circle');\n}\n\n// file: main.dart\n%order% 'shapes.dart';\n\n// This would cause an error:\n// class Triangle extends Shape { } // Error!\n```",
+    "options": [
+      "sealed",
+      "extends",
+      "import"
+    ],
+    "answer": [
+      "sealed",
+      "extends",
+      "import"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Where must subclasses of sealed classes be defined?\n\n```dart\nsealed class Animal {\n  void makeSound();\n}\n\n// Where can Dog be defined?\nclass Dog extends Animal {\n  @override\n  void makeSound() => print('Woof');\n}\n```",
+    "options": [
+      "In the same library as the sealed class",
+      "In any library",
+      "Only in the same file",
+      "Only in subpackages"
+    ],
+    "answer": ["In the same library as the sealed class"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the import statement:\n\n```dart\n// file: models.dart\nsealed class Model {\n  void save();\n}\n\n// file: user.dart\n%fill% 'models.dart';\n\nclass User extends Model {\n  @override\n  void save() => print('Saving user');\n}\n```",
+    "answer": ["import"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the comprehensive sealed class example:\n\n```dart\n%order% class %order% {\n  final String name;\n  final int level;\n  \n  GameCharacter(this.name, this.level);\n  \n  void %order%();\n  void %order%();\n}\n\nclass Warrior %order% GameCharacter {\n  Warrior(String name, int level) : %order%(name, level);\n  \n  @override\n  void attack() {\n    print('$name swings sword! ⚔️');\n  }\n  \n  @override\n  void defend() {\n    print('$name raises shield! 🛡️');\n  }\n}\n\nclass Mage %order% GameCharacter {\n  Mage(String name, int level) : %order%(name, level);\n  \n  @override\n  void attack() {\n    print('$name casts spell! ✨');\n  }\n  \n  @override\n  void defend() {\n    print('$name creates magic barrier! 🔮');\n  }\n}\n```",
+    "options": [
+      "sealed",
+      "GameCharacter",
+      "attack",
+      "defend",
+      "extends",
+      "super",
+      "extends",
+      "super"
+    ],
+    "answer": [
+      "sealed",
+      "GameCharacter",
+      "attack",
+      "defend",
+      "extends",
+      "super",
+      "extends",
+      "super"
+    ],
+    "type": "order"
+  }
+]

@@ -1,0 +1,652 @@
+[
+  {
+    "question": "Complete the extension method declaration:\n\n```dart\n%order% StringShouter %order% String {\n  String %order%() {\n    return toUpperCase() + '!!!';\n  }\n}\n```",
+    "options": [
+      "extension",
+      "on",
+      "shout"
+    ],
+    "answer": [
+      "extension",
+      "on",
+      "shout"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this extension method output?\n\n```dart\nextension StringShouter on String {\n  String shout() {\n    return toUpperCase() + '!!!';\n  }\n}\n\nvoid main() {\n  String name = 'david';\n  print(name.shout());\n}\n```",
+    "options": [
+      "DAVID!!!",
+      "david!!!",
+      "David!!!",
+      "Error"
+    ],
+    "answer": ["DAVID!!!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the keyword to create an extension:\n\n```dart\n%fill% NumberMagic on int {\n  int square() => this * this;\n}\n```",
+    "answer": ["extension"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension method for integers:\n\n```dart\nextension NumberMagic %order% int {\n  int %order%() => %order% * %order%;\n}\n```",
+    "options": [
+      "on",
+      "square",
+      "this",
+      "this"
+    ],
+    "answer": [
+      "on",
+      "square",
+      "this",
+      "this"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What are extension methods in Dart?\n\n```dart\nextension MathUtils on int {\n  int double() => this * 2;\n}\n```",
+    "options": [
+      "A way to add new functionality to existing classes without modifying them",
+      "A way to create new classes",
+      "A way to inherit from existing classes",
+      "A way to make classes run faster"
+    ],
+    "answer": ["A way to add new functionality to existing classes without modifying them"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the target type for the extension:\n\n```dart\nextension WeekendChecker on %fill% {\n  bool isWeekend() => weekday == 6 || weekday == 7;\n}\n```",
+    "answer": ["DateTime"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension usage:\n\n```dart\nextension NumberMagic on int {\n  int square() => this * this;\n}\n\nvoid main() {\n  print(%order%.%order%());\n}\n```",
+    "options": [
+      "4",
+      "square"
+    ],
+    "answer": [
+      "4",
+      "square"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this extension method return?\n\n```dart\nextension MathHelper on int {\n  int cube() => this * this * this;\n}\n\nvoid main() {\n  print(3.cube());\n}\n```",
+    "options": [
+      "27",
+      "9",
+      "6",
+      "Error"
+    ],
+    "answer": ["27"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the extension method name:\n\n```dart\nextension StringHelper on String {\n  String %fill%() {\n    return substring(0, 1).toUpperCase() + substring(1);\n  }\n}\n```",
+    "answer": ["capitalize"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension for DateTime:\n\n```dart\nextension DateHelper %order% DateTime {\n  bool %order%() {\n    return weekday == 6 || weekday == 7;\n  }\n}\n```",
+    "options": [
+      "on",
+      "isWeekend"
+    ],
+    "answer": [
+      "on",
+      "isWeekend"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the 'this' keyword refer to in extensions?\n\n```dart\nextension NumberUtils on double {\n  double get half => this / 2;\n}\n```",
+    "options": [
+      "The current instance being extended",
+      "The extension class itself",
+      "A static reference",
+      "Nothing specific"
+    ],
+    "answer": ["The current instance being extended"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the getter syntax in extension:\n\n```dart\nextension CircleArea on double {\n  double %fill% area => 3.14159 * this * this;\n}\n```",
+    "answer": ["get"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension with getter:\n\n```dart\nextension ListHelper<%order%> %order% List<%order%> {\n  %order%? %order% firstOrNull {\n    return isEmpty ? null : first;\n  }\n}\n```",
+    "options": [
+      "T",
+      "on",
+      "T",
+      "T",
+      "get"
+    ],
+    "answer": [
+      "T",
+      "on",
+      "T",
+      "T",
+      "get"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this generic extension return?\n\n```dart\nextension SafeList<T> on List<T> {\n  T? get safeFirst => isEmpty ? null : first;\n}\n\nvoid main() {\n  List<String> empty = [];\n  print(empty.safeFirst);\n}\n```",
+    "options": [
+      "null",
+      "Empty list",
+      "Error",
+      "First element"
+    ],
+    "answer": ["null"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the generic type parameter:\n\n```dart\nextension CollectionUtils<%fill%> on Iterable<T> {\n  bool get isNotEmpty => !isEmpty;\n}\n```",
+    "answer": ["T"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension with setter:\n\n```dart\nextension StringBuffer %order% StringBuffer {\n  %order% appendLine(String value) {\n    write(value);\n    write('\\n');\n  }\n}\n```",
+    "options": [
+      "on",
+      "void"
+    ],
+    "answer": [
+      "on",
+      "void"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the benefit of extension methods?\n\n```dart\nextension StringUtils on String {\n  bool get isEmail => contains('@');\n}\n```",
+    "options": [
+      "Add functionality without changing the original class",
+      "Make classes run faster",
+      "Create new classes",
+      "Remove existing functionality"
+    ],
+    "answer": ["Add functionality without changing the original class"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method call:\n\n```dart\nextension NumberHelper on int {\n  bool get isEven => this % 2 == 0;\n}\n\nvoid main() {\n  print(4.%fill%);\n}\n```",
+    "answer": ["isEven"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension for List with multiple methods:\n\n```dart\nextension ListExtensions<%order%> %order% List<%order%> {\n  %order%? %order% secondOrNull {\n    return length > 1 ? this[1] : null;\n  }\n  \n  %order%? %order% lastOrNull {\n    return isEmpty ? null : last;\n  }\n}\n```",
+    "options": [
+      "T",
+      "on",
+      "T",
+      "T",
+      "get",
+      "T",
+      "get"
+    ],
+    "answer": [
+      "T",
+      "on",
+      "T",
+      "T",
+      "get",
+      "T",
+      "get"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this extension method return?\n\n```dart\nextension ListHelper on List<int> {\n  int get sum {\n    int total = 0;\n    for (int item in this) {\n      total += item;\n    }\n    return total;\n  }\n}\n\nvoid main() {\n  print([1, 2, 3, 4, 5].sum);\n}\n```",
+    "options": [
+      "15",
+      "5",
+      "25",
+      "Error"
+    ],
+    "answer": ["15"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the extension method body:\n\n```dart\nextension StringValidator on String {\n  bool get isValidEmail {\n    return %fill%('@') && contains('.');\n  }\n}\n```",
+    "answer": ["contains"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension with conditional logic:\n\n```dart\nextension NumberRange %order% int {\n  bool %order%(int min, int max) {\n    return %order% >= min && %order% <= max;\n  }\n}\n```",
+    "options": [
+      "on",
+      "isBetween",
+      "this",
+      "this"
+    ],
+    "answer": [
+      "on",
+      "isBetween",
+      "this",
+      "this"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this range extension return?\n\n```dart\nextension NumberRange on int {\n  bool isBetween(int min, int max) {\n    return this >= min && this <= max;\n  }\n}\n\nvoid main() {\n  print(5.isBetween(1, 10));\n  print(15.isBetween(1, 10));\n}\n```",
+    "options": [
+      "true\\nfalse",
+      "false\\ntrue",
+      "true\\ntrue",
+      "false\\nfalse"
+    ],
+    "answer": ["true\\nfalse"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the parameter type:\n\n```dart\nextension ListOperations on List<int> {\n  List<int> multiplyBy(%fill% factor) {\n    return map((e) => e * factor).toList();\n  }\n}\n```",
+    "answer": ["int"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension with map operation:\n\n```dart\nextension StringTransform %order% String {\n  List<String> %order%(String separator) {\n    return %order%(separator);\n  }\n}\n```",
+    "options": [
+      "on",
+      "splitToList",
+      "split"
+    ],
+    "answer": [
+      "on",
+      "splitToList",
+      "split"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does this extension method do?\n\n```dart\nextension StringUtils on String {\n  String reverse() {\n    return split('').reversed.join('');\n  }\n}\n\nvoid main() {\n  print('hello'.reverse());\n}\n```",
+    "options": [
+      "olleh",
+      "hello",
+      "HELLO",
+      "Error"
+    ],
+    "answer": ["olleh"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the join method:\n\n```dart\nextension StringReverse on String {\n  String reverse() {\n    return split('').reversed.%fill%('');\n  }\n}\n```",
+    "answer": ["join"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension for nullable types:\n\n```dart\nextension NullableString %order% String? {\n  bool %order% isNullOrEmpty {\n    return %order% == null || %order%!.isEmpty;\n  }\n}\n```",
+    "options": [
+      "on",
+      "get",
+      "this",
+      "this"
+    ],
+    "answer": [
+      "on",
+      "get",
+      "this",
+      "this"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this nullable extension return?\n\n```dart\nextension NullableString on String? {\n  bool get isNullOrEmpty {\n    return this == null || this!.isEmpty;\n  }\n}\n\nvoid main() {\n  String? nullStr = null;\n  String? emptyStr = '';\n  String? validStr = 'hello';\n  \n  print(nullStr.isNullOrEmpty);\n  print(emptyStr.isNullOrEmpty);\n  print(validStr.isNullOrEmpty);\n}\n```",
+    "options": [
+      "true\\ntrue\\nfalse",
+      "false\\nfalse\\ntrue",
+      "true\\nfalse\\nfalse",
+      "Error"
+    ],
+    "answer": ["true\\ntrue\\nfalse"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null check:\n\n```dart\nextension SafeString on String? {\n  String get orEmpty {\n    return %fill% ?? '';\n  }\n}\n```",
+    "answer": ["this"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension with static-like behavior:\n\n```dart\nextension DateTimeHelper %order% DateTime {\n  static DateTime %order%() {\n    return DateTime.now();\n  }\n  \n  bool %order% {\n    return isAfter(DateTime.now());\n  }\n}\n```",
+    "options": [
+      "on",
+      "current",
+      "get",
+      "isFuture"
+    ],
+    "answer": [
+      "on",
+      "current",
+      "get",
+      "isFuture"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Can extensions have static methods?\n\n```dart\nextension MathUtils on int {\n  static int max(int a, int b) => a > b ? a : b;\n  int double() => this * 2;\n}\n```",
+    "options": [
+      "Yes, extensions can have static methods",
+      "No, extensions cannot have static methods",
+      "Only if they extend built-in types",
+      "Only if they are generic"
+    ],
+    "answer": ["Yes, extensions can have static methods"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the static method call:\n\n```dart\nextension MathHelper on int {\n  static int add(int a, int b) => a + b;\n}\n\nvoid main() {\n  print(MathHelper.%fill%(3, 4));\n}\n```",
+    "answer": ["add"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension with operator overloading:\n\n```dart\nextension StringMultiply %order% String {\n  String %order% *(int times) {\n    String result = '';\n    for (int i = 0; i < times; i++) {\n      result += %order%;\n    }\n    return result;\n  }\n}\n```",
+    "options": [
+      "on",
+      "operator",
+      "this"
+    ],
+    "answer": [
+      "on",
+      "operator",
+      "this"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this operator extension do?\n\n```dart\nextension StringMultiply on String {\n  String operator *(int times) {\n    return List.filled(times, this).join();\n  }\n}\n\nvoid main() {\n  print('Hi' * 3);\n}\n```",
+    "options": [
+      "HiHiHi",
+      "Hi3",
+      "HiHi",
+      "Error"
+    ],
+    "answer": ["HiHiHi"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the operator symbol:\n\n```dart\nextension ListConcat<T> on List<T> {\n  List<T> operator %fill%(List<T> other) {\n    return [...this, ...other];\n  }\n}\n```",
+    "answer": ["+"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension with cascading methods:\n\n```dart\nextension FluentList<%order%> %order% List<%order%> {\n  List<%order%> %order%(T item) {\n    add(item);\n    return %order%;\n  }\n}\n```",
+    "options": [
+      "T",
+      "on",
+      "T",
+      "T",
+      "addFluent",
+      "this"
+    ],
+    "answer": [
+      "T",
+      "on",
+      "T",
+      "T",
+      "addFluent",
+      "this"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does a fluent extension enable?\n\n```dart\nextension FluentStringBuilder on StringBuffer {\n  StringBuffer addLine(String text) {\n    writeln(text);\n    return this;\n  }\n}\n\nvoid main() {\n  var result = StringBuffer()\n    .addLine('Hello')\n    .addLine('World');\n}\n```",
+    "options": [
+      "Method chaining for fluent API",
+      "Faster execution",
+      "Memory optimization",
+      "Error prevention"
+    ],
+    "answer": ["Method chaining for fluent API"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the return type for fluent method:\n\n```dart\nextension FluentInt on int {\n  %fill% increment() {\n    return this + 1;\n  }\n}\n```",
+    "answer": ["int"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension with conditional methods:\n\n```dart\nextension ConditionalList<%order%> %order% List<%order%> {\n  List<%order%> %order%(bool condition, T item) {\n    if (condition) {\n      add(item);\n    }\n    return %order%;\n  }\n}\n```",
+    "options": [
+      "T",
+      "on",
+      "T",
+      "T",
+      "addIf",
+      "this"
+    ],
+    "answer": [
+      "T",
+      "on",
+      "T",
+      "T",
+      "addIf",
+      "this"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this conditional extension do?\n\n```dart\nextension ConditionalString on String {\n  String addIf(bool condition, String suffix) {\n    return condition ? this + suffix : this;\n  }\n}\n\nvoid main() {\n  print('Hello'.addIf(true, ' World'));\n  print('Hello'.addIf(false, ' World'));\n}\n```",
+    "options": [
+      "Hello World\\nHello",
+      "Hello\\nHello World",
+      "Hello World\\nHello World",
+      "Error"
+    ],
+    "answer": ["Hello World\\nHello"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the condition parameter:\n\n```dart\nextension ConditionalAction<T> on T {\n  T doIf(%fill% condition, void Function(T) action) {\n    if (condition) action(this);\n    return this;\n  }\n}\n```",
+    "answer": ["bool"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension with async methods:\n\n```dart\nextension AsyncString %order% String {\n  Future<String> %order%() %order% {\n    await Future.delayed(Duration(seconds: 1));\n    return toUpperCase();\n  }\n}\n```",
+    "options": [
+      "on",
+      "asyncUpper",
+      "async"
+    ],
+    "answer": [
+      "on",
+      "asyncUpper",
+      "async"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Can extensions have async methods?\n\n```dart\nextension AsyncListHelper<T> on List<T> {\n  Future<void> forEachAsync(Future<void> Function(T) action) async {\n    for (T item in this) {\n      await action(item);\n    }\n  }\n}\n```",
+    "options": [
+      "Yes, extensions can have async methods",
+      "No, extensions cannot be async",
+      "Only if they extend Future types",
+      "Only static methods can be async"
+    ],
+    "answer": ["Yes, extensions can have async methods"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the async keyword:\n\n```dart\nextension AsyncProcessor on String {\n  Future<String> process() %fill% {\n    await Future.delayed(Duration(milliseconds: 100));\n    return trim().toLowerCase();\n  }\n}\n```",
+    "answer": ["async"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension naming:\n\n```dart\n%order% %order% %order% String {\n  String %order%() {\n    return split(' ').map((word) => \n      word.isEmpty ? '' : \n      word[0].toUpperCase() + word.substring(1)\n    ).join(' ');\n  }\n}\n```",
+    "options": [
+      "extension",
+      "TitleCase",
+      "on",
+      "toTitleCase"
+    ],
+    "answer": [
+      "extension",
+      "TitleCase",
+      "on",
+      "toTitleCase"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's a good naming convention for extensions?\n\n```dart\nextension StringUtils on String { }\nextension ListExtensions<T> on List<T> { }\nextension DateTimeHelper on DateTime { }\n```",
+    "options": [
+      "Use descriptive names that indicate the extended type and functionality",
+      "Always use 'Extension' suffix",
+      "Use only single letters",
+      "Names don't matter"
+    ],
+    "answer": ["Use descriptive names that indicate the extended type and functionality"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the extension name:\n\n```dart\nextension %fill% on List<int> {\n  double get average {\n    return isEmpty ? 0 : fold(0, (a, b) => a + b) / length;\n  }\n}\n```",
+    "answer": ["MathList"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension with error handling:\n\n```dart\nextension SafeList<%order%> %order% List<%order%> {\n  %order%? %order%(int index) {\n    return index >= 0 && index < length ? this[index] : null;\n  }\n}\n```",
+    "options": [
+      "T",
+      "on",
+      "T",
+      "T",
+      "safeElementAt"
+    ],
+    "answer": [
+      "T",
+      "on",
+      "T",
+      "T",
+      "safeElementAt"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does this safe extension prevent?\n\n```dart\nextension SafeAccess<T> on List<T> {\n  T? safeGet(int index) {\n    return index >= 0 && index < length ? this[index] : null;\n  }\n}\n\nvoid main() {\n  List<String> list = ['a', 'b', 'c'];\n  print(list.safeGet(5));\n  print(list.safeGet(1));\n}\n```",
+    "options": [
+      "Index out of bounds errors",
+      "Memory leaks",
+      "Performance issues",
+      "Compilation errors"
+    ],
+    "answer": ["Index out of bounds errors"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the bounds check:\n\n```dart\nextension SafeString on String {\n  String safeSubstring(int start, [int? end]) {\n    if (start < 0 || start >= %fill%) return '';\n    return substring(start, end);\n  }\n}\n```",
+    "answer": ["length"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension visibility:\n\n```dart\n%order% _%order% %order% String {\n  String _internalMethod() {\n    return 'internal';\n  }\n}\n```",
+    "options": [
+      "extension",
+      "PrivateStringUtils",
+      "on"
+    ],
+    "answer": [
+      "extension",
+      "PrivateStringUtils",
+      "on"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Can extensions be private?\n\n```dart\nextension _PrivateExtension on int {\n  int _privateMethod() => this * 2;\n}\n```",
+    "options": [
+      "Yes, extensions can be private with underscore prefix",
+      "No, all extensions are public",
+      "Only methods can be private, not extensions",
+      "Privacy doesn't apply to extensions"
+    ],
+    "answer": ["Yes, extensions can be private with underscore prefix"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the import statement:\n\n```dart\n%fill% 'package:my_app/extensions/string_extensions.dart';\n\nvoid main() {\n  print('hello'.capitalize());\n}\n```",
+    "answer": ["import"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension with type constraints:\n\n```dart\nextension NumericOperations<%order% %order% num> %order% T {\n  %order% %order% isPositive => %order% > 0;\n  %order% %order% isNegative => %order% < 0;\n}\n```",
+    "options": [
+      "T",
+      "extends",
+      "on",
+      "bool",
+      "get",
+      "this",
+      "bool",
+      "get",
+      "this"
+    ],
+    "answer": [
+      "T",
+      "extends",
+      "on",
+      "bool",
+      "get",
+      "this",
+      "bool",
+      "get",
+      "this"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What do type constraints in extensions do?\n\n```dart\nextension MathExtension<T extends num> on T {\n  T get doubled => this * 2 as T;\n}\n```",
+    "options": [
+      "Restrict the extension to specific types or type hierarchies",
+      "Make extensions faster",
+      "Prevent compilation errors",
+      "Add runtime type checking"
+    ],
+    "answer": ["Restrict the extension to specific types or type hierarchies"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the constraint keyword:\n\n```dart\nextension ComparableExtension<T %fill% Comparable<T>> on T {\n  bool isBetween(T min, T max) {\n    return compareTo(min) >= 0 && compareTo(max) <= 0;\n  }\n}\n```",
+    "answer": ["extends"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final comprehensive extension example:\n\n```dart\n%order% %order%<%order%> %order% List<%order%> {\n  // Safe access\n  %order%? %order%(int index) {\n    return index >= 0 && index < length ? this[index] : null;\n  }\n  \n  // Fluent operations\n  List<%order%> %order%(bool condition, %order% item) {\n    if (condition) add(item);\n    return %order%;\n  }\n  \n  // Utility methods\n  bool %order% hasAny => isNotEmpty;\n  List<%order%> %order% unique => toSet().toList();\n}\n```",
+    "options": [
+      "extension",
+      "SuperList",
+      "T",
+      "on", 
+      "T",
+      "T",
+      "safeGet",
+      "T",
+      "addIf",
+      "T",
+      "this",
+      "get",
+      "T",
+      "get"
+    ],
+    "answer": [
+      "extension",
+      "SuperList",
+      "T",
+      "on",
+      "T", 
+      "T",
+      "safeGet",
+      "T",
+      "addIf",
+      "T",
+      "this",
+      "get",
+      "T",
+      "get"
+    ],
+    "type": "order"
+  }
+]

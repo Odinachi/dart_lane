@@ -1,0 +1,794 @@
+[
+  {
+    "question": "Complete the Stream generator function:\n\n```dart\nStream<String> watchCartoons() %order%* {\n  %order% Future.delayed(Duration(seconds: 1));\n  %order% 'Episode 1 🎬';\n}\n```",
+    "options": [
+      "async",
+      "await",
+      "yield"
+    ],
+    "answer": [
+      "async",
+      "await",
+      "yield"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Stream code output?\n\n```dart\nStream<String> watchCartoons() async* {\n  await Future.delayed(Duration(seconds: 1));\n  yield 'Episode 1 🎬';\n  await Future.delayed(Duration(seconds: 1));\n  yield 'Episode 2 🎬';\n}\n\nvoid main() async {\n  print('Starting...');\n  await for (String episode in watchCartoons()) {\n    print('Watching: $episode');\n  }\n  print('Done!');\n}\n```",
+    "options": [
+      "Starting...\\nWatching: Episode 1 🎬\\nWatching: Episode 2 🎬\\nDone!",
+      "Starting...\\nDone!\\nWatching: Episode 1 🎬\\nWatching: Episode 2 🎬",
+      "Watching: Episode 1 🎬\\nWatching: Episode 2 🎬",
+      "Error"
+    ],
+    "answer": ["Starting...\\nWatching: Episode 1 🎬\\nWatching: Episode 2 🎬\\nDone!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the keyword to emit values from a Stream:\n\n```dart\nStream<int> countStream() async* {\n  for (int i = 1; i <= 3; i++) {\n    %fill% i;\n  }\n}\n```",
+    "answer": ["yield"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream listening pattern:\n\n```dart\nvoid main() {\n  Stream<String> stream = getMessages();\n  stream.%order%((message) {\n    print('Received: %order%');\n  });\n}\n```",
+    "options": [
+      "listen",
+      "$message"
+    ],
+    "answer": [
+      "listen",
+      "$message"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is a Stream in Dart?\n\n```dart\nStream<String> dataStream() async* {\n  yield 'Data 1';\n  yield 'Data 2';\n}\n```",
+    "options": [
+      "A sequence of asynchronous events delivered over time",
+      "A single value that comes later",
+      "A function that runs once",
+      "A variable that stores multiple values"
+    ],
+    "answer": ["A sequence of asynchronous events delivered over time"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the async generator syntax:\n\n```dart\nStream<String> messageStream() %fill%* {\n  yield 'Message 1';\n  yield 'Message 2';\n}\n```",
+    "answer": ["async"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the await for loop with Stream:\n\n```dart\nvoid main() %order% {\n  %order% %order% (String item in itemStream()) {\n    print('Processing: %order%');\n  }\n}\n```",
+    "options": [
+      "async",
+      "await",
+      "for",
+      "$item"
+    ],
+    "answer": [
+      "async",
+      "await",
+      "for",
+      "$item"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does await for do with Streams?\n\n```dart\nvoid main() async {\n  await for (int value in numberStream()) {\n    print('Value: $value');\n  }\n}\n```",
+    "options": [
+      "Waits for each stream item one by one",
+      "Collects all stream items at once",
+      "Only gets the first stream item",
+      "Cancels the stream"
+    ],
+    "answer": ["Waits for each stream item one by one"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the Stream yield statement:\n\n```dart\nStream<int> numberStream() async* {\n  for (int i = 1; i <= 3; i++) {\n    await Future.delayed(Duration(seconds: 1));\n    %fill% i;\n  }\n}\n```",
+    "answer": ["yield"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream error handling:\n\n```dart\nvoid main() {\n  streamData().listen(\n    (%order%) {\n      print('Data: %order%');\n    },\n    %order%: (%order%) {\n      print('Error: $error');\n    }\n  );\n}\n```",
+    "options": [
+      "data",
+      "$data",
+      "onError",
+      "error"
+    ],
+    "answer": [
+      "data",
+      "$data",
+      "onError",
+      "error"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when a Stream encounters an error?\n\n```dart\nStream<String> brokenStream() async* {\n  yield 'Data 1';\n  throw 'Stream broke!';\n  yield 'Data 2'; // Will this execute?\n}\n```",
+    "options": [
+      "Stream stops and error is emitted, Data 2 won't be yielded",
+      "Error is ignored and Data 2 is yielded",
+      "Both Data 2 and error are emitted",
+      "Stream restarts automatically"
+    ],
+    "answer": ["Stream stops and error is emitted, Data 2 won't be yielded"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the error handling parameter:\n\n```dart\nvoid main() {\n  dataStream().listen(\n    (data) => print(data),\n    onError: (%fill%) => print('Error: $e')\n  );\n}\n```",
+    "answer": ["e"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream completion handling:\n\n```dart\nvoid main() {\n  dataStream().listen(\n    (%order%) => print('Data: %order%'),\n    %order%: (%order%) => print('Error: %order%'),\n    %order%: () => print('Stream completed')\n  );\n}\n```",
+    "options": [
+      "data",
+      "$data",
+      "onError",
+      "error",
+      "$error",
+      "onDone"
+    ],
+    "answer": [
+      "data",
+      "$data",
+      "onError",
+      "error",
+      "$error",
+      "onDone"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does onDone do in Stream listening?\n\n```dart\nstream.listen(\n  (data) => print(data),\n  onDone: () => print('All done!')\n);\n```",
+    "options": [
+      "Executes when the stream completes successfully",
+      "Executes when an error occurs",
+      "Executes for each data item",
+      "Cancels the stream"
+    ],
+    "answer": ["Executes when the stream completes successfully"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the completion callback:\n\n```dart\nvoid main() {\n  messageStream().listen(\n    (msg) => print(msg),\n    %fill%: () => print('Messages finished')\n  );\n}\n```",
+    "answer": ["onDone"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream transformation with map:\n\n```dart\nvoid main() {\n  numberStream()\n    .%order%((%order%) => %order% * 2)\n    .%order%((%order%) => print('Double: %order%'));\n}\n```",
+    "options": [
+      "map",
+      "n",
+      "n",
+      "listen", 
+      "doubled",
+      "$doubled"
+    ],
+    "answer": [
+      "map",
+      "n",
+      "n",
+      "listen",
+      "doubled", 
+      "$doubled"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does map() do to a Stream?\n\n```dart\nStream<int> numbers = numberStream();\nStream<String> messages = numbers.map((n) => 'Number: $n');\n```",
+    "options": [
+      "Transforms each item in the stream to a different type or value",
+      "Filters items from the stream",
+      "Counts the number of items",
+      "Cancels the stream"
+    ],
+    "answer": ["Transforms each item in the stream to a different type or value"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the map transformation:\n\n```dart\nvoid main() {\n  stringStream()\n    .%fill%((str) => str.toUpperCase())\n    .listen((upper) => print(upper));\n}\n```",
+    "answer": ["map"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream filtering with where:\n\n```dart\nvoid main() {\n  numberStream()\n    .%order%((%order%) => %order% > 5)\n    .%order%((%order%) => print('Big number: %order%'));\n}\n```",
+    "options": [
+      "where",
+      "n",
+      "n",
+      "listen",
+      "big",
+      "$big"
+    ],
+    "answer": [
+      "where",
+      "n", 
+      "n",
+      "listen",
+      "big",
+      "$big"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does where() do to a Stream?\n\n```dart\nStream<int> allNumbers = numberStream();\nStream<int> evenNumbers = allNumbers.where((n) => n % 2 == 0);\n```",
+    "options": [
+      "Filters stream items based on a condition",
+      "Transforms stream items to different values",
+      "Counts stream items",
+      "Stops the stream"
+    ],
+    "answer": ["Filters stream items based on a condition"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the filtering condition:\n\n```dart\nvoid main() {\n  wordStream()\n    .%fill%((word) => word.length > 3)\n    .listen((longWord) => print(longWord));\n}\n```",
+    "answer": ["where"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream take operation:\n\n```dart\nvoid main() {\n  infiniteStream()\n    .%order%(%order%)\n    .%order%((%order%) => print('Item: %order%'));\n}\n```",
+    "options": [
+      "take",
+      "3",
+      "listen",
+      "item",
+      "$item"
+    ],
+    "answer": [
+      "take",
+      "3",
+      "listen", 
+      "item",
+      "$item"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does take(n) do to a Stream?\n\n```dart\nStream<String> limitedStream = dataStream().take(5);\n```",
+    "options": [
+      "Takes only the first n items from the stream",
+      "Takes items from the end of the stream", 
+      "Takes every nth item",
+      "Takes items randomly"
+    ],
+    "answer": ["Takes only the first n items from the stream"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the take parameter:\n\n```dart\nvoid main() {\n  longStream()\n    .take(%fill%)\n    .listen((item) => print(item));\n}\n```",
+    "answer": ["5"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream skip operation:\n\n```dart\nvoid main() {\n  dataStream()\n    .%order%(%order%)\n    .%order%((%order%) => print('After skip: %order%'));\n}\n```",
+    "options": [
+      "skip",
+      "2",
+      "listen",
+      "data", 
+      "$data"
+    ],
+    "answer": [
+      "skip",
+      "2",
+      "listen",
+      "data",
+      "$data"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does skip(n) do to a Stream?\n\n```dart\nStream<int> afterSkip = numberStream().skip(3);\n```",
+    "options": [
+      "Skips the first n items and emits the rest",
+      "Skips every nth item",
+      "Skips the last n items",
+      "Stops the stream after n items"
+    ],
+    "answer": ["Skips the first n items and emits the rest"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the skip count:\n\n```dart\nvoid main() {\n  messageStream()\n    .skip(%fill%)\n    .listen((msg) => print('Received: $msg'));\n}\n```",
+    "answer": ["1"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream first operation:\n\n```dart\nvoid main() %order% {\n  String %order% = %order% dataStream().%order%;\n  print('First item: %order%');\n}\n```",
+    "options": [
+      "async",
+      "first",
+      "await",
+      "first",
+      "$first"
+    ],
+    "answer": [
+      "async",
+      "first", 
+      "await",
+      "first",
+      "$first"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does first do with a Stream?\n\n```dart\nvoid main() async {\n  String firstItem = await messageStream().first;\n  print('First: $firstItem');\n}\n```",
+    "options": [
+      "Gets the first item from the stream and completes",
+      "Gets all items from the stream",
+      "Gets the last item from the stream",
+      "Cancels the stream immediately"
+    ],
+    "answer": ["Gets the first item from the stream and completes"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the first property:\n\n```dart\nvoid main() async {\n  int firstNumber = await numberStream().%fill%;\n  print('First number: $firstNumber');\n}\n```",
+    "answer": ["first"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream last operation:\n\n```dart\nvoid main() %order% {\n  String %order% = %order% finiteStream().%order%;\n  print('Last item: %order%');\n}\n```",
+    "options": [
+      "async",
+      "last",
+      "await",
+      "last",
+      "$last"
+    ],
+    "answer": [
+      "async",
+      "last",
+      "await", 
+      "last",
+      "$last"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does last do with a Stream?\n\n```dart\nvoid main() async {\n  String lastItem = await dataStream().last;\n  print('Last: $lastItem');\n}\n```",
+    "options": [
+      "Waits for the stream to complete and gets the last item",
+      "Gets the first item from the stream",
+      "Gets a random item from the stream", 
+      "Cancels the stream"
+    ],
+    "answer": ["Waits for the stream to complete and gets the last item"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the last property:\n\n```dart\nvoid main() async {\n  String finalMessage = await messageStream().%fill%;\n  print('Final: $finalMessage');\n}\n```",
+    "answer": ["last"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream toList conversion:\n\n```dart\nvoid main() %order% {\n  List<String> %order% = %order% dataStream().%order%();\n  print('All items: %order%');\n}\n```",
+    "options": [
+      "async",
+      "items",
+      "await",
+      "toList",
+      "$items"
+    ],
+    "answer": [
+      "async",
+      "items",
+      "await",
+      "toList", 
+      "$items"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does toList() do with a Stream?\n\n```dart\nvoid main() async {\n  List<String> allData = await dataStream().toList();\n  print('Count: ${allData.length}');\n}\n```",
+    "options": [
+      "Collects all stream items into a List",
+      "Converts the stream to a single item",
+      "Filters the stream items",
+      "Cancels the stream"
+    ],
+    "answer": ["Collects all stream items into a List"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the list conversion method:\n\n```dart\nvoid main() async {\n  List<int> numbers = await numberStream().%fill%();\n  print('Numbers: $numbers');\n}\n```",
+    "answer": ["toList"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream length operation:\n\n```dart\nvoid main() %order% {\n  int %order% = %order% itemStream().%order%;\n  print('Stream has %order% items');\n}\n```",
+    "options": [
+      "async",
+      "count",
+      "await", 
+      "length",
+      "$count"
+    ],
+    "answer": [
+      "async",
+      "count",
+      "await",
+      "length",
+      "$count"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does length do with a Stream?\n\n```dart\nvoid main() async {\n  int itemCount = await dataStream().length;\n  print('Total items: $itemCount');\n}\n```",
+    "options": [
+      "Counts all items in the stream by consuming it completely",
+      "Gets the first item count",
+      "Estimates the stream size",
+      "Returns a random number"
+    ],
+    "answer": ["Counts all items in the stream by consuming it completely"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the length property:\n\n```dart\nvoid main() async {\n  int totalMessages = await messageStream().%fill%;\n  print('Total: $totalMessages');\n}\n```",
+    "answer": ["length"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream controller creation:\n\n```dart\nimport 'dart:async';\n\nvoid main() {\n  %order%<%order%> controller = %order%();\n  Stream<%order%> stream = controller.stream;\n}\n```",
+    "options": [
+      "StreamController",
+      "String",
+      "StreamController",
+      "String"
+    ],
+    "answer": [
+      "StreamController",
+      "String",
+      "StreamController", 
+      "String"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is a StreamController?\n\n```dart\nStreamController<int> controller = StreamController();\ncontroller.add(1);\ncontroller.add(2);\n```",
+    "options": [
+      "A way to manually control and add items to a stream",
+      "A built-in stream type",
+      "A stream transformation method",
+      "An error handling mechanism"
+    ],
+    "answer": ["A way to manually control and add items to a stream"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the controller add method:\n\n```dart\nStreamController<String> controller = StreamController();\ncontroller.%fill%('Hello');\ncontroller.%fill%('World');\n```",
+    "answer": ["add", "add"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the StreamController usage:\n\n```dart\nvoid main() {\n  StreamController<int> controller = StreamController();\n  \n  controller.stream.%order%((data) => print('Received: %order%'));\n  \n  controller.%order%(1);\n  controller.%order%(2);\n  controller.%order%();\n}\n```",
+    "options": [
+      "listen",
+      "$data",
+      "add",
+      "add", 
+      "close"
+    ],
+    "answer": [
+      "listen",
+      "$data",
+      "add",
+      "add",
+      "close"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does controller.close() do?\n\n```dart\nStreamController<String> controller = StreamController();\ncontroller.add('Data');\ncontroller.close();\n```",
+    "options": [
+      "Closes the stream and triggers onDone",
+      "Deletes all stream data",
+      "Pauses the stream temporarily",
+      "Restarts the stream"
+    ],
+    "answer": ["Closes the stream and triggers onDone"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the close method:\n\n```dart\nStreamController<int> controller = StreamController();\ncontroller.add(42);\ncontroller.%fill%();\n```",
+    "answer": ["close"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the broadcast stream creation:\n\n```dart\nvoid main() {\n  StreamController<String> controller = StreamController.%order%();\n  Stream<String> %order% = controller.stream;\n}\n```",
+    "options": [
+      "broadcast",
+      "broadcastStream"
+    ],
+    "answer": [
+      "broadcast",
+      "broadcastStream"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the difference between regular and broadcast streams?\n\n```dart\n// Regular stream\nStreamController<int> regular = StreamController();\n\n// Broadcast stream  \nStreamController<int> broadcast = StreamController.broadcast();\n```",
+    "options": [
+      "Broadcast streams can have multiple listeners, regular streams only one",
+      "Broadcast streams are faster",
+      "Regular streams can have multiple listeners",
+      "No difference between them"
+    ],
+    "answer": ["Broadcast streams can have multiple listeners, regular streams only one"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the broadcast constructor:\n\n```dart\nStreamController<double> controller = StreamController.%fill%();\n```",
+    "answer": ["broadcast"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream subscription management:\n\n```dart\nvoid main() {\n  %order% subscription = dataStream().%order%((data) {\n    print('Data: %order%');\n  });\n  \n  // Later...\n  subscription.%order%();\n}\n```",
+    "options": [
+      "StreamSubscription",
+      "listen",
+      "$data",
+      "cancel"
+    ],
+    "answer": [
+      "StreamSubscription",
+      "listen",
+      "$data",
+      "cancel"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does subscription.cancel() do?\n\n```dart\nStreamSubscription subscription = stream.listen((data) => print(data));\nsubscription.cancel();\n```",
+    "options": [
+      "Stops listening to the stream and frees resources",
+      "Pauses the stream temporarily",
+      "Restarts the stream from beginning",
+      "Deletes all stream data"
+    ],
+    "answer": ["Stops listening to the stream and frees resources"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the subscription cancel:\n\n```dart\nStreamSubscription sub = messageStream().listen((msg) => print(msg));\n// Stop listening\nsub.%fill%();\n```",
+    "answer": ["cancel"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream pause and resume:\n\n```dart\nvoid main() {\n  StreamSubscription sub = dataStream().listen((data) => print(data));\n  \n  sub.%order%(); // Stop temporarily\n  \n  // Later...\n  sub.%order%(); // Start again\n}\n```",
+    "options": [
+      "pause",
+      "resume"
+    ],
+    "answer": [
+      "pause",
+      "resume"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's the difference between pause() and cancel()?\n\n```dart\nStreamSubscription sub = stream.listen((data) => print(data));\nsub.pause(); // vs sub.cancel();\n```",
+    "options": [
+      "pause() can be resumed, cancel() permanently stops the subscription",
+      "pause() is permanent, cancel() is temporary",
+      "No difference between them",
+      "pause() is faster than cancel()"
+    ],
+    "answer": ["pause() can be resumed, cancel() permanently stops the subscription"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the resume method:\n\n```dart\nStreamSubscription sub = stream.listen((data) => print(data));\nsub.pause();\n// Continue listening\nsub.%fill%();\n```",
+    "answer": ["resume"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream periodic creation:\n\n```dart\nvoid main() {\n  Stream<int> %order% = Stream.%order%(Duration(seconds: 1), (%order%) => %order%);\n  periodicStream.%order%((value) => print('Count: %order%'));\n}\n```",
+    "options": [
+      "periodicStream",
+      "periodic",
+      "count", 
+      "count",
+      "listen",
+      "$value"
+    ],
+    "answer": [
+      "periodicStream",
+      "periodic",
+      "count",
+      "count",
+      "listen",
+      "$value"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Stream.periodic() create?\n\n```dart\nStream<int> timer = Stream.periodic(Duration(seconds: 1), (count) => count);\n```",
+    "options": [
+      "A stream that emits values at regular intervals",
+      "A stream that emits values randomly",
+      "A stream that emits values once",
+      "A stream that never emits values"
+    ],
+    "answer": ["A stream that emits values at regular intervals"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the periodic constructor:\n\n```dart\nStream<DateTime> clock = Stream.%fill%(Duration(seconds: 1), (i) => DateTime.now());\n```",
+    "answer": ["periodic"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream fromIterable creation:\n\n```dart\nvoid main() {\n  List<String> items = ['A', 'B', 'C'];\n  Stream<String> %order% = Stream.%order%(%order%);\n  itemStream.%order%((%order%) => print('Item: %order%'));\n}\n```",
+    "options": [
+      "itemStream",
+      "fromIterable",
+      "items",
+      "listen",
+      "item",
+      "$item"
+    ],
+    "answer": [
+      "itemStream",
+      "fromIterable", 
+      "items",
+      "listen",
+      "item",
+      "$item"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Stream.fromIterable() do?\n\n```dart\nList<int> numbers = [1, 2, 3, 4, 5];\nStream<int> numberStream = Stream.fromIterable(numbers);\n```",
+    "options": [
+      "Creates a stream from a list or other iterable",
+      "Creates an empty stream",
+      "Creates a periodic stream",
+      "Creates a broadcast stream"
+    ],
+    "answer": ["Creates a stream from a list or other iterable"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the fromIterable constructor:\n\n```dart\nList<String> words = ['hello', 'world'];\nStream<String> wordStream = Stream.%fill%(words);\n```",
+    "answer": ["fromIterable"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream value creation:\n\n```dart\nvoid main() {\n  Stream<String> %order% = Stream.%order%('Single value');\n  singleStream.%order%((%order%) => print('Value: %order%'));\n}\n```",
+    "options": [
+      "singleStream",
+      "value",
+      "listen",
+      "val",
+      "$val"
+    ],
+    "answer": [
+      "singleStream",
+      "value",
+      "listen",
+      "val", 
+      "$val"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Stream.value() create?\n\n```dart\nStream<int> singleValue = Stream.value(42);\n```",
+    "options": [
+      "A stream that emits one value and then completes",
+      "A stream that emits values continuously",
+      "An empty stream",
+      "A stream that never completes"
+    ],
+    "answer": ["A stream that emits one value and then completes"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the value constructor:\n\n```dart\nStream<bool> flag = Stream.%fill%(true);\n```",
+    "answer": ["value"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream empty creation:\n\n```dart\nvoid main() {\n  Stream<String> %order% = Stream.%order%();\n  emptyStream.%order%(\n    (%order%) => print('This won\\'t print'),\n    %order%: () => print('Stream completed')\n  );\n}\n```",
+    "options": [
+      "emptyStream",
+      "empty",
+      "listen",
+      "data",
+      "onDone"
+    ],
+    "answer": [
+      "emptyStream",
+      "empty",
+      "listen",
+      "data",
+      "onDone"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Stream.empty() create?\n\n```dart\nStream<int> nothing = Stream.empty();\n```",
+    "options": [
+      "A stream that immediately completes without emitting any values",
+      "A stream that emits zero values",
+      "A stream that waits forever",
+      "A stream that emits null values"
+    ],
+    "answer": ["A stream that immediately completes without emitting any values"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the empty constructor:\n\n```dart\nStream<double> noData = Stream.%fill%();\n```",
+    "answer": ["empty"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Stream error creation:\n\n```dart\nvoid main() {\n  Stream<String> %order% = Stream.%order%('Something went wrong');\n  errorStream.%order%(\n    (%order%) => print('Data: %order%'),\n    %order%: (%order%) => print('Error: %order%')\n  );\n}\n```",
+    "options": [
+      "errorStream",
+      "error",
+      "listen",
+      "data",
+      "$data",
+      "onError",
+      "e",
+      "$e"
+    ],
+    "answer": [
+      "errorStream",
+      "error", 
+      "listen",
+      "data",
+      "$data",
+      "onError",
+      "e",
+      "$e"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Stream.error() create?\n\n```dart\nStream<String> failed = Stream.error('Failed to load');\n```",
+    "options": [
+      "A stream that immediately emits an error",
+      "A stream that emits error messages as data",
+      "A stream that never emits anything",
+      "A stream that fixes errors automatically"
+    ],
+    "answer": ["A stream that immediately emits an error"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the error constructor:\n\n```dart\nStream<int> broken = Stream.%fill%(Exception('Broken stream'));\n```",
+    "answer": ["error"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final comprehensive Stream example:\n\n```dart\nStream<String> %order%() %order%* {\n  for (int i = 1; i <= 3; i++) {\n    %order% Future.delayed(Duration(seconds: 1));\n    %order% 'Message $i 📧';\n  }\n}\n\nvoid main() %order% {\n  print('Starting message stream...');\n  \n  %order% %order% (String message in messageStream()) {\n    print('📨 Received: %order%');\n  }\n  \n  print('All messages processed! ✅');\n}\n```",
+    "options": [
+      "messageStream",
+      "async",
+      "await",
+      "yield",
+      "async",
+      "await",
+      "for",
+      "$message"
+    ],
+    "answer": [
+      "messageStream",
+      "async",
+      "await", 
+      "yield",
+      "async",
+      "await",
+      "for",
+      "$message"
+    ],
+    "type": "order"
+  }
+]

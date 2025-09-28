@@ -1,0 +1,576 @@
+[
+  {
+    "question": "Complete the isolate spawn function:\n\n```dart\nimport 'dart:async';\nimport 'dart:isolate';\n\nvoid main() async {\n  ReceivePort receivePort = ReceivePort();\n  await %order%.%order%(workerFunction, receivePort.sendPort);\n}\n```",
+    "options": [
+      "Isolate",
+      "spawn"
+    ],
+    "answer": [
+      "Isolate",
+      "spawn"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this isolate code output?\n\n```dart\nimport 'dart:async';\nimport 'dart:isolate';\n\nvoid workerFunction(SendPort sendPort) {\n  sendPort.send('Hello from isolate! 👋');\n}\n\nvoid main() async {\n  ReceivePort receivePort = ReceivePort();\n  await Isolate.spawn(workerFunction, receivePort.sendPort);\n  \n  receivePort.listen((data) {\n    print('Received: $data');\n  });\n}\n```",
+    "options": [
+      "Received: Hello from isolate! 👋",
+      "Hello from isolate! 👋",
+      "workerFunction",
+      "Error"
+    ],
+    "answer": ["Received: Hello from isolate! 👋"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the import statement for isolates:\n\n```dart\nimport 'dart:%fill%';\nimport 'dart:isolate';\n\nvoid main() {\n  // isolate code\n}\n```",
+    "answer": ["async"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the worker function for an isolate:\n\n```dart\nvoid %order%(%order% sendPort) {\n  int result = 5 + 5;\n  sendPort.%order%(result);\n}\n```",
+    "options": [
+      "workerFunction",
+      "SendPort",
+      "send"
+    ],
+    "answer": [
+      "workerFunction",
+      "SendPort",
+      "send"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What are isolates in Dart?\n\n```dart\nimport 'dart:isolate';\n\nvoid main() async {\n  await Isolate.spawn(backgroundTask, data);\n}\n```",
+    "options": [
+      "Separate workers that run independently in their own memory space",
+      "Functions that run faster than normal functions",
+      "Variables that store multiple values",
+      "Loops that run in the background"
+    ],
+    "answer": ["Separate workers that run independently in their own memory space"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the receive port creation:\n\n```dart\nimport 'dart:async';\n\nvoid main() async {\n  %fill% receivePort = ReceivePort();\n}\n```",
+    "answer": ["ReceivePort"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isolate communication setup:\n\n```dart\nvoid main() async {\n  %order% receivePort = %order%();\n  await Isolate.spawn(worker, receivePort.%order%);\n}\n```",
+    "options": [
+      "ReceivePort",
+      "ReceivePort",
+      "sendPort"
+    ],
+    "answer": [
+      "ReceivePort",
+      "ReceivePort", 
+      "sendPort"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does ReceivePort do in isolates?\n\n```dart\nReceivePort receivePort = ReceivePort();\nreceivePort.listen((data) {\n  print('Got: $data');\n});\n```",
+    "options": [
+      "Receives messages from other isolates",
+      "Sends messages to other isolates",
+      "Creates new isolates",
+      "Stops isolates from running"
+    ],
+    "answer": ["Receives messages from other isolates"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the send method:\n\n```dart\nvoid worker(SendPort sendPort) {\n  String message = 'Work completed!';\n  sendPort.%fill%(message);\n}\n```",
+    "answer": ["send"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isolate listener:\n\n```dart\nvoid main() async {\n  ReceivePort receivePort = ReceivePort();\n  await Isolate.spawn(worker, receivePort.sendPort);\n  \n  receivePort.%order%((%order%) {\n    print('Message: %order%');\n  });\n}\n```",
+    "options": [
+      "listen",
+      "data",
+      "$data"
+    ],
+    "answer": [
+      "listen",
+      "data",
+      "$data"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this calculation isolate return?\n\n```dart\nvoid calculateSum(SendPort sendPort) {\n  int sum = 10 + 20 + 30;\n  sendPort.send(sum);\n}\n\nvoid main() async {\n  ReceivePort receivePort = ReceivePort();\n  await Isolate.spawn(calculateSum, receivePort.sendPort);\n  \n  receivePort.listen((result) {\n    print('Sum: $result');\n  });\n}\n```",
+    "options": [
+      "Sum: 60",
+      "Sum: 50",
+      "Sum: 100",
+      "Error"
+    ],
+    "answer": ["Sum: 60"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the calculation in isolate:\n\n```dart\nvoid multiplyNumbers(SendPort sendPort) {\n  int result = 6 %fill% 7;\n  sendPort.send(result);\n}\n```",
+    "answer": ["*"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async isolate spawn:\n\n```dart\nvoid main() %order% {\n  ReceivePort receivePort = ReceivePort();\n  %order% Isolate.spawn(backgroundWork, receivePort.sendPort);\n}\n```",
+    "options": [
+      "async",
+      "await"
+    ],
+    "answer": [
+      "async",
+      "await"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why would you use isolates instead of regular functions?\n\n```dart\n// Regular function\nint heavyCalculation() {\n  return calculatePrimes(1000000);\n}\n\n// Isolate function\nvoid heavyCalculationIsolate(SendPort sendPort) {\n  int result = calculatePrimes(1000000);\n  sendPort.send(result);\n}\n```",
+    "options": [
+      "Isolates don't block the main thread during heavy computations",
+      "Isolates are faster than regular functions",
+      "Isolates use less memory",
+      "Isolates are easier to write"
+    ],
+    "answer": ["Isolates don't block the main thread during heavy computations"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the heavy computation function:\n\n```dart\nvoid processData(SendPort sendPort) {\n  List<int> numbers = List.generate(1000, (i) => i);\n  int sum = numbers.%fill%((a, b) => a + b);\n  sendPort.send(sum);\n}\n```",
+    "answer": ["reduce"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the multiple isolates setup:\n\n```dart\nvoid main() async {\n  %order% receivePort1 = %order%();\n  %order% receivePort2 = %order%();\n  \n  await Isolate.spawn(worker1, receivePort1.sendPort);\n  await Isolate.spawn(worker2, receivePort2.sendPort);\n}\n```",
+    "options": [
+      "ReceivePort",
+      "ReceivePort",
+      "ReceivePort", 
+      "ReceivePort"
+    ],
+    "answer": [
+      "ReceivePort",
+      "ReceivePort",
+      "ReceivePort",
+      "ReceivePort"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when you run multiple isolates?\n\n```dart\nvoid main() async {\n  await Isolate.spawn(task1, sendPort1);\n  await Isolate.spawn(task2, sendPort2);\n  await Isolate.spawn(task3, sendPort3);\n}\n```",
+    "options": [
+      "All tasks run in parallel independently",
+      "Tasks run one after another sequentially", 
+      "Only the first task runs",
+      "All tasks share the same memory"
+    ],
+    "answer": ["All tasks run in parallel independently"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the parallel task function:\n\n```dart\nvoid %fill%(SendPort sendPort) {\n  // Do some work\n  sendPort.send('Task 1 completed');\n}\n```",
+    "answer": ["task1"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isolate with parameters:\n\n```dart\nvoid processNumbers(%order% data) {\n  Map<String, dynamic> params = data;\n  %order% sendPort = params['sendPort'];\n  List<int> numbers = params['numbers'];\n  \n  int sum = numbers.fold(0, (a, b) => a + b);\n  sendPort.%order%(sum);\n}\n```",
+    "options": [
+      "dynamic",
+      "SendPort",
+      "send"
+    ],
+    "answer": [
+      "dynamic",
+      "SendPort",
+      "send"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do you pass multiple parameters to an isolate?\n\n```dart\nMap<String, dynamic> data = {\n  'sendPort': receivePort.sendPort,\n  'numbers': [1, 2, 3, 4, 5],\n  'operation': 'sum'\n};\nawait Isolate.spawn(processData, data);\n```",
+    "options": [
+      "Use a Map or custom object to package multiple values",
+      "Pass parameters as separate arguments",
+      "Use global variables",
+      "Cannot pass multiple parameters"
+    ],
+    "answer": ["Use a Map or custom object to package multiple values"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the parameter extraction:\n\n```dart\nvoid worker(dynamic data) {\n  Map<String, dynamic> params = %fill%;\n  SendPort sendPort = params['sendPort'];\n  String message = params['message'];\n}\n```",
+    "answer": ["data"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isolate error handling:\n\n```dart\nvoid riskyWorker(SendPort sendPort) {\n  %order% {\n    int result = 10 ~/ 0; // Division by zero\n    sendPort.send(result);\n  } %order% (e) {\n    sendPort.send('Error: %order%');\n  }\n}\n```",
+    "options": [
+      "try",
+      "catch", 
+      "$e"
+    ],
+    "answer": [
+      "try",
+      "catch",
+      "$e"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when an isolate encounters an error?\n\n```dart\nvoid faultyWorker(SendPort sendPort) {\n  throw Exception('Something went wrong!');\n}\n```",
+    "options": [
+      "The isolate terminates but doesn't crash the main program",
+      "The entire program crashes",
+      "The error is automatically fixed",
+      "The isolate restarts automatically"
+    ],
+    "answer": ["The isolate terminates but doesn't crash the main program"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the error message:\n\n```dart\nvoid errorWorker(SendPort sendPort) {\n  try {\n    throw Exception('Worker failed');\n  } catch (e) {\n    sendPort.send('%fill%: $e');\n  }\n}\n```",
+    "answer": ["Error"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isolate cleanup:\n\n```dart\nvoid main() async {\n  ReceivePort receivePort = ReceivePort();\n  %order% isolate = await Isolate.spawn(worker, receivePort.sendPort);\n  \n  // Later, clean up\n  isolate.%order%();\n  receivePort.%order%();\n}\n```",
+    "options": [
+      "Isolate",
+      "kill",
+      "close"
+    ],
+    "answer": [
+      "Isolate",
+      "kill",
+      "close"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why is it important to clean up isolates?\n\n```dart\nIsolate isolate = await Isolate.spawn(worker, sendPort);\n// Use isolate\nisolate.kill(); // Cleanup\nreceivePort.close(); // Cleanup\n```",
+    "options": [
+      "To free up system resources and prevent memory leaks",
+      "To make isolates run faster",
+      "To prevent errors in the code",
+      "Cleanup is not necessary"
+    ],
+    "answer": ["To free up system resources and prevent memory leaks"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the cleanup method:\n\n```dart\nvoid cleanup(Isolate isolate, ReceivePort port) {\n  isolate.%fill%();\n  port.close();\n}\n```",
+    "answer": ["kill"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isolate with return value:\n\n```dart\nFuture<int> runCalculationInIsolate() async {\n  %order% receivePort = %order%();\n  await Isolate.spawn(calculateSquare, {\n    'sendPort': receivePort.sendPort,\n    'number': 5\n  });\n  \n  %order% completer = %order%<int>();\n  \n  receivePort.listen((result) {\n    completer.complete(result);\n    receivePort.close();\n  });\n  \n  return completer.future;\n}\n```",
+    "options": [
+      "ReceivePort",
+      "ReceivePort",
+      "Completer",
+      "Completer"
+    ],
+    "answer": [
+      "ReceivePort",
+      "ReceivePort",
+      "Completer",
+      "Completer"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does a Completer do in isolate communication?\n\n```dart\nCompleter<String> completer = Completer<String>();\nreceivePort.listen((data) {\n  completer.complete(data);\n});\nreturn completer.future;\n```",
+    "options": [
+      "Converts isolate communication to a Future-based API",
+      "Speeds up isolate communication",
+      "Handles isolate errors automatically",
+      "Creates new isolates"
+    ],
+    "answer": ["Converts isolate communication to a Future-based API"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the completer completion:\n\n```dart\nCompleter<int> completer = Completer<int>();\nreceivePort.listen((result) {\n  completer.%fill%(result);\n});\n```",
+    "answer": ["complete"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isolate pool management:\n\n```dart\nclass IsolatePool {\n  List<%order%> _isolates = [];\n  List<%order%> _receivePorts = [];\n  \n  Future<void> createPool(int size) async {\n    for (int i = 0; i < size; i++) {\n      ReceivePort port = ReceivePort();\n      Isolate isolate = await Isolate.%order%(worker, port.sendPort);\n      \n      _isolates.add(isolate);\n      _receivePorts.add(port);\n    }\n  }\n}\n```",
+    "options": [
+      "Isolate",
+      "ReceivePort",
+      "spawn"
+    ],
+    "answer": [
+      "Isolate",
+      "ReceivePort",
+      "spawn"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is an isolate pool useful for?\n\n```dart\nclass WorkerPool {\n  List<Isolate> workers = [];\n  \n  Future<void> distributeWork(List<Task> tasks) async {\n    for (int i = 0; i < tasks.length; i++) {\n      Isolate worker = workers[i % workers.length];\n      // Assign task to worker\n    }\n  }\n}\n```",
+    "options": [
+      "Managing multiple isolates for parallel processing of many tasks",
+      "Making isolates run faster",
+      "Reducing memory usage",
+      "Simplifying isolate creation"
+    ],
+    "answer": ["Managing multiple isolates for parallel processing of many tasks"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the worker selection:\n\n```dart\nclass IsolatePool {\n  List<Isolate> workers = [];\n  \n  Isolate getNextWorker(int taskIndex) {\n    return workers[taskIndex %fill% workers.length];\n  }\n}\n```",
+    "answer": ["%"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the compute function usage:\n\n```dart\nimport 'dart:isolate';\n\nint expensiveFunction(int n) {\n  return n * n * n;\n}\n\nvoid main() async {\n  int result = await %order%.%order%(expensiveFunction, 100);\n  print('Result: %order%');\n}\n```",
+    "options": [
+      "Isolate",
+      "run",
+      "$result"
+    ],
+    "answer": [
+      "Isolate",
+      "run",
+      "$result"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does Isolate.run() do?\n\n```dart\nint result = await Isolate.run(() {\n  return heavyComputation();\n});\n```",
+    "options": [
+      "Runs a function in a new isolate and returns the result directly",
+      "Creates a permanent isolate",
+      "Runs the function on the main thread",
+      "Only works with void functions"
+    ],
+    "answer": ["Runs a function in a new isolate and returns the result directly"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the isolate run function:\n\n```dart\nvoid main() async {\n  String result = await Isolate.%fill%(() {\n    return 'Hello from isolate';\n  });\n  print(result);\n}\n```",
+    "answer": ["run"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isolate capability check:\n\n```dart\nimport 'dart:isolate';\n\nvoid main() {\n  if (%order%.current != null) {\n    print('Running in an isolate');\n  } else {\n    print('Running on main thread');\n  }\n}\n```",
+    "options": [
+      "Isolate"
+    ],
+    "answer": [
+      "Isolate"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How can you check if code is running in an isolate?\n\n```dart\nif (Isolate.current != null) {\n  // Code is running in an isolate\n}\n```",
+    "options": [
+      "Use Isolate.current to check the current isolate context",
+      "Use a global variable",
+      "Check the thread ID",
+      "Cannot determine isolate context"
+    ],
+    "answer": ["Use Isolate.current to check the current isolate context"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the current isolate property:\n\n```dart\nvoid checkIsolate() {\n  Isolate? current = Isolate.%fill%;\n  print('Current isolate: $current');\n}\n```",
+    "answer": ["current"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isolate pause and resume:\n\n```dart\nvoid main() async {\n  Isolate isolate = await Isolate.spawn(longRunningTask, sendPort);\n  \n  // Pause the isolate\n  %order% capability = isolate.%order%();\n  \n  // Resume the isolate later\n  isolate.%order%(capability);\n}\n```",
+    "options": [
+      "Capability",
+      "pause",
+      "resume"
+    ],
+    "answer": [
+      "Capability",
+      "pause",
+      "resume"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does pausing an isolate do?\n\n```dart\nIsolate isolate = await Isolate.spawn(worker, data);\nCapability pauseCapability = isolate.pause();\n// Later...\nisolate.resume(pauseCapability);\n```",
+    "options": [
+      "Temporarily stops isolate execution until resumed",
+      "Permanently stops the isolate",
+      "Makes the isolate run slower",
+      "Saves isolate state to disk"
+    ],
+    "answer": ["Temporarily stops isolate execution until resumed"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the pause method:\n\n```dart\nIsolate isolate = await Isolate.spawn(worker, data);\nCapability cap = isolate.%fill%();\n```",
+    "answer": ["pause"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isolate exit handling:\n\n```dart\nvoid main() async {\n  ReceivePort %order% = ReceivePort();\n  \n  Isolate isolate = await Isolate.spawn(\n    worker,\n    sendPort,\n    %order%: exitPort.sendPort\n  );\n  \n  exitPort.listen((%order%) {\n    print('Isolate exited');\n  });\n}\n```",
+    "options": [
+      "exitPort",
+      "onExit",
+      "message"
+    ],
+    "answer": [
+      "exitPort",
+      "onExit",
+      "message"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the onExit parameter do when spawning an isolate?\n\n```dart\nIsolate isolate = await Isolate.spawn(\n  worker,\n  data,\n  onExit: exitPort.sendPort\n);\n```",
+    "options": [
+      "Sends a message to the specified port when the isolate exits",
+      "Prevents the isolate from exiting",
+      "Restarts the isolate when it exits",
+      "Logs isolate exit information"
+    ],
+    "answer": ["Sends a message to the specified port when the isolate exits"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exit parameter:\n\n```dart\nIsolate isolate = await Isolate.spawn(\n  workerFunction,\n  data,\n  %fill%: exitReceivePort.sendPort\n);\n```",
+    "answer": ["onExit"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isolate error port setup:\n\n```dart\nvoid main() async {\n  ReceivePort errorPort = ReceivePort();\n  \n  Isolate isolate = await Isolate.spawn(\n    riskyWorker,\n    sendPort,\n    %order%: errorPort.%order%\n  );\n  \n  errorPort.%order%((error) {\n    print('Isolate error: %order%');\n  });\n}\n```",
+    "options": [
+      "onError",
+      "sendPort",
+      "listen",
+      "$error"
+    ],
+    "answer": [
+      "onError",
+      "sendPort",
+      "listen",
+      "$error"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do you handle uncaught errors in isolates?\n\n```dart\nIsolate.spawn(\n  riskyFunction,\n  data,\n  onError: errorPort.sendPort\n);\n\nerrorPort.listen((error) {\n  print('Caught error: $error');\n});\n```",
+    "options": [
+      "Use the onError parameter to receive error messages",
+      "Wrap all isolate code in try-catch",
+      "Errors in isolates cannot be handled",
+      "Use global error handlers"
+    ],
+    "answer": ["Use the onError parameter to receive error messages"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the error handling parameter:\n\n```dart\nIsolate.spawn(\n  worker,\n  data,\n  %fill%: errorReceivePort.sendPort\n);\n```",
+    "answer": ["onError"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the bidirectional isolate communication:\n\n```dart\nvoid worker(SendPort mainSendPort) {\n  %order% workerReceivePort = %order%();\n  \n  // Send worker's receive port to main\n  mainSendPort.send(workerReceivePort.%order%);\n  \n  // Listen for messages from main\n  workerReceivePort.%order%((message) {\n    print('Worker received: %order%');\n  });\n}\n```",
+    "options": [
+      "ReceivePort",
+      "ReceivePort",
+      "sendPort",
+      "listen",
+      "$message"
+    ],
+    "answer": [
+      "ReceivePort",
+      "ReceivePort",
+      "sendPort",
+      "listen",
+      "$message"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is bidirectional communication in isolates?\n\n```dart\n// Main can send to worker\nworkerSendPort.send('Hello worker');\n\n// Worker can send to main\nmainSendPort.send('Hello main');\n```",
+    "options": [
+      "Both isolate and main thread can send messages to each other",
+      "Isolates can only receive messages",
+      "Main thread can only receive messages",
+      "Communication only works one way"
+    ],
+    "answer": ["Both isolate and main thread can send messages to each other"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the bidirectional setup:\n\n```dart\nvoid setupBidirectional(SendPort mainPort) {\n  ReceivePort workerPort = ReceivePort();\n  mainPort.send(workerPort.%fill%);\n}\n```",
+    "answer": ["sendPort"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isolate performance monitoring:\n\n```dart\nvoid main() async {\n  %order% stopwatch = %order%();\n  stopwatch.%order%();\n  \n  int result = await Isolate.run(() {\n    return heavyComputation();\n  });\n  \n  stopwatch.%order%();\n  print('Isolate took: ${stopwatch.elapsedMilliseconds}ms');\n}\n```",
+    "options": [
+      "Stopwatch",
+      "Stopwatch",
+      "start",
+      "stop"
+    ],
+    "answer": [
+      "Stopwatch",
+      "Stopwatch", 
+      "start",
+      "stop"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why would you measure isolate performance?\n\n```dart\nStopwatch timer = Stopwatch()..start();\nawait Isolate.run(() => expensiveTask());\ntimer.stop();\nprint('Task took: ${timer.elapsedMilliseconds}ms');\n```",
+    "options": [
+      "To compare isolate performance vs main thread execution",
+      "To make isolates run faster",
+      "To count the number of isolates",
+      "To debug isolate communication"
+    ],
+    "answer": ["To compare isolate performance vs main thread execution"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the timing measurement:\n\n```dart\nStopwatch timer = Stopwatch();\ntimer.start();\n// Run isolate work\ntimer.%fill%();\nprint('Duration: ${timer.elapsedMilliseconds}ms');\n```",
+    "answer": ["stop"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final comprehensive isolate example:\n\n```dart\nimport 'dart:%order%';\nimport 'dart:%order%';\n\nvoid %order%(dynamic data) {\n  Map<String, dynamic> params = data;\n  %order% sendPort = params['sendPort'];\n  List<int> numbers = params['numbers'];\n  \n  // Heavy computation\n  int sum = 0;\n  for (int number in numbers) {\n    sum += number * number;\n  }\n  \n  sendPort.%order%(sum);\n}\n\nvoid main() %order% {\n  print('Starting heavy computation in isolate...');\n  \n  %order% receivePort = %order%();\n  \n  Map<String, dynamic> data = {\n    'sendPort': receivePort.sendPort,\n    'numbers': List.generate(1000, (i) => i + 1)\n  };\n  \n  %order% Isolate.spawn(heavyComputation, data);\n  \n  receivePort.%order%((result) {\n    print('Computation result: %order%');\n    receivePort.close();\n  });\n}\n```",
+    "options": [
+      "async",
+      "isolate",
+      "heavyComputation",
+      "SendPort",
+      "send",
+      "async",
+      "ReceivePort",
+      "ReceivePort",
+      "await",
+      "listen",
+      "$result"
+    ],
+    "answer": [
+      "async",
+      "isolate",
+      "heavyComputation",
+      "SendPort",
+      "send",
+      "async",
+      "ReceivePort",
+      "ReceivePort",
+      "await",
+      "listen",
+      "$result"
+    ],
+    "type": "order"
+  }
+]

@@ -1,0 +1,572 @@
+[
+  {
+    "question": "Complete the basic unit test structure:\n\n```dart\nimport 'package:test/test.dart';\n\nvoid main() {\n  %order%('Test add function', () {\n    int result = add(2, 3);\n    %order%(result, equals(5));\n  });\n}\n```",
+    "options": [
+      "test",
+      "expect"
+    ],
+    "answer": [
+      "test",
+      "expect"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this test output if the add function works correctly?\n\n```dart\nimport 'package:test/test.dart';\n\nint add(int a, int b) {\n  return a + b;\n}\n\nvoid main() {\n  test('Test add function', () {\n    int result = add(3, 4);\n    expect(result, equals(7));\n  });\n}\n```",
+    "options": [
+      "Test passes (PASS)",
+      "Test fails (FAIL)",
+      "Error",
+      "Nothing prints"
+    ],
+    "answer": ["Test passes (PASS)"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the import statement for testing:\n\n```dart\nimport 'package:%fill%/test.dart';\n\nvoid main() {\n  test('My test', () {\n    expect(2 + 2, equals(4));\n  });\n}\n```",
+    "answer": ["test"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the test function with description and body:\n\n```dart\nimport 'package:test/test.dart';\n\nvoid main() {\n  %order%(%order%, %order% {\n    expect(multiply(3, 4), equals(12));\n  });\n}\n```",
+    "options": [
+      "test",
+      "'Test multiply function'",
+      "()"
+    ],
+    "answer": [
+      "test",
+      "'Test multiply function'",
+      "()"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the purpose of unit testing?\n\n```dart\ntest('Test calculator', () {\n  expect(calculator.add(2, 2), equals(4));\n});\n```",
+    "options": [
+      "To check if individual parts of code work correctly",
+      "To make code run faster",
+      "To add new features to code",
+      "To make code look prettier"
+    ],
+    "answer": ["To check if individual parts of code work correctly"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the assertion method:\n\n```dart\ntest('Test subtraction', () {\n  int result = subtract(10, 3);\n  %fill%(result, equals(7));\n});\n```",
+    "answer": ["expect"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the test with arrange, act, assert pattern:\n\n```dart\ntest('Test division', () {\n  // %order%\n  int a = 10;\n  int b = 2;\n  \n  // %order%\n  int result = divide(a, b);\n  \n  // %order%\n  expect(result, equals(5));\n});\n```",
+    "options": [
+      "Arrange",
+      "Act", 
+      "Assert"
+    ],
+    "answer": [
+      "Arrange",
+      "Act",
+      "Assert"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will happen if this test fails?\n\n```dart\ntest('Test wrong calculation', () {\n  expect(add(2, 2), equals(5)); // Wrong expectation\n});\n```",
+    "options": [
+      "Test fails and shows error message",
+      "Test passes anyway",
+      "Code stops working",
+      "Nothing happens"
+    ],
+    "answer": ["Test fails and shows error message"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the expected value:\n\n```dart\ntest('Test string length', () {\n  String text = 'Hello';\n  expect(text.length, equals(%fill%));\n});\n```",
+    "answer": ["5"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the test for edge case with zero:\n\n```dart\ntest('Test adding zero', () {\n  int result = add(%order%, 5);\n  expect(result, %order%(%order%));\n});\n```",
+    "options": [
+      "0",
+      "equals",
+      "5"
+    ],
+    "answer": [
+      "0",
+      "equals", 
+      "5"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is an edge case in testing?\n\n```dart\ntest('Test division by zero', () {\n  expect(() => divide(10, 0), throwsA(isA<ArgumentError>()));\n});\n```",
+    "options": [
+      "Testing with unusual or extreme inputs",
+      "Testing the fastest code path",
+      "Testing only positive numbers",
+      "Testing the most common case"
+    ],
+    "answer": ["Testing with unusual or extreme inputs"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the test for negative numbers:\n\n```dart\ntest('Test negative addition', () {\n  int result = add(%fill%, 5);\n  expect(result, equals(2));\n});\n```",
+    "answer": ["-3"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception testing:\n\n```dart\ntest('Test exception throwing', () {\n  expect(%order% => divide(10, 0), %order%);\n});\n```",
+    "options": [
+      "()",
+      "throwsException"
+    ],
+    "answer": [
+      "()",
+      "throwsException"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do you test if a function throws an exception?\n\n```dart\ntest('Test invalid input', () {\n  expect(() => processAge(-5), throwsArgumentError);\n});\n```",
+    "options": [
+      "Use expect with throwsException matcher",
+      "Use try-catch in the test",
+      "Cannot test exceptions",
+      "Exceptions automatically fail tests"
+    ],
+    "answer": ["Use expect with throwsException matcher"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the throws matcher:\n\n```dart\ntest('Test invalid operation', () {\n  expect(() => sqrt(-1), %fill%);\n});\n```",
+    "answer": ["throwsException"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the test group structure:\n\n```dart\n%order%('Calculator tests', () {\n  %order%('Addition test', () {\n    expect(add(2, 3), equals(5));\n  });\n  \n  %order%('Subtraction test', () {\n    expect(subtract(5, 2), equals(3));\n  });\n});\n```",
+    "options": [
+      "group",
+      "test",
+      "test"
+    ],
+    "answer": [
+      "group",
+      "test",
+      "test"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the purpose of grouping tests?\n\n```dart\ngroup('String operations', () {\n  test('Test uppercase', () { });\n  test('Test lowercase', () { });\n});\n```",
+    "options": [
+      "To organize related tests together",
+      "To make tests run faster",
+      "To share variables between tests",
+      "To prevent test failures"
+    ],
+    "answer": ["To organize related tests together"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the group description:\n\n```dart\ngroup('%fill%', () {\n  test('Test addition', () {\n    expect(add(1, 1), equals(2));\n  });\n});\n```",
+    "answer": ["Math operations"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the setUp function for test preparation:\n\n```dart\ngroup('List tests', () {\n  List<int>? numbers;\n  \n  %order%(() {\n    numbers = [1, 2, 3];\n  });\n  \n  test('Test list length', () {\n    expect(numbers!.length, equals(3));\n  });\n});\n```",
+    "options": [
+      "setUp"
+    ],
+    "answer": [
+      "setUp"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does setUp() do in tests?\n\n```dart\nsetUp(() {\n  database = TestDatabase();\n  user = TestUser();\n});\n```",
+    "options": [
+      "Runs before each test to prepare test data",
+      "Runs after each test to clean up",
+      "Runs only once before all tests",
+      "Runs only when tests fail"
+    ],
+    "answer": ["Runs before each test to prepare test data"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the tearDown function:\n\n```dart\ngroup('Database tests', () {\n  setUp(() {\n    database.connect();\n  });\n  \n  %fill%(() {\n    database.disconnect();\n  });\n});\n```",
+    "answer": ["tearDown"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the matcher for checking types:\n\n```dart\ntest('Test object type', () {\n  var result = createObject();\n  expect(result, %order%<%order%>());\n});\n```",
+    "options": [
+      "isA",
+      "String"
+    ],
+    "answer": [
+      "isA",
+      "String"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What are matchers in unit testing?\n\n```dart\nexpect(value, equals(5));\nexpect(list, contains('item'));\nexpect(text, startsWith('Hello'));\n```",
+    "options": [
+      "Functions that define what you expect the result to be",
+      "Variables that store test results",
+      "Functions that run the tests",
+      "Classes that create test objects"
+    ],
+    "answer": ["Functions that define what you expect the result to be"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the contains matcher:\n\n```dart\ntest('Test list contains item', () {\n  List<String> fruits = ['apple', 'banana'];\n  expect(fruits, %fill%('apple'));\n});\n```",
+    "answer": ["contains"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the string matcher test:\n\n```dart\ntest('Test string operations', () {\n  String greeting = 'Hello World';\n  expect(greeting, %order%('Hello'));\n  expect(greeting, %order%('World'));\n  expect(greeting.length, %order%(11));\n});\n```",
+    "options": [
+      "startsWith",
+      "endsWith",
+      "equals"
+    ],
+    "answer": [
+      "startsWith",
+      "endsWith",
+      "equals"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the startsWith matcher check?\n\n```dart\nexpect('Hello World', startsWith('Hello'));\n```",
+    "options": [
+      "If the string begins with the specified substring",
+      "If the string ends with the specified substring",
+      "If the string contains the substring anywhere",
+      "If the strings are exactly equal"
+    ],
+    "answer": ["If the string begins with the specified substring"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the endsWith matcher:\n\n```dart\ntest('Test file extension', () {\n  String filename = 'document.pdf';\n  expect(filename, %fill%('.pdf'));\n});\n```",
+    "answer": ["endsWith"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the numeric range test:\n\n```dart\ntest('Test number in range', () {\n  double temperature = 23.5;\n  expect(temperature, %order%(20, 30));\n  expect(temperature, %order%(0));\n});\n```",
+    "options": [
+      "inInclusiveRange",
+      "greaterThan"
+    ],
+    "answer": [
+      "inInclusiveRange",
+      "greaterThan"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does greaterThan matcher verify?\n\n```dart\nexpect(score, greaterThan(50));\n```",
+    "options": [
+      "That the value is larger than the specified number",
+      "That the value is smaller than the specified number",
+      "That the value equals the specified number",
+      "That the value is between two numbers"
+    ],
+    "answer": ["That the value is larger than the specified number"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the comparison matcher:\n\n```dart\ntest('Test age validation', () {\n  int age = 25;\n  expect(age, %fill%(18));\n  expect(age, %fill%(65));\n});\n```",
+    "answer": ["greaterThanOrEqualTo", "lessThan"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the collection testing:\n\n```dart\ntest('Test list operations', () {\n  List<int> numbers = [1, 2, 3, 4, 5];\n  expect(numbers, %order%(5));\n  expect(numbers, %order%);\n  expect(numbers.first, %order%(1));\n});\n```",
+    "options": [
+      "hasLength",
+      "isNotEmpty", 
+      "equals"
+    ],
+    "answer": [
+      "hasLength",
+      "isNotEmpty",
+      "equals"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does hasLength matcher check?\n\n```dart\nexpect(myList, hasLength(3));\n```",
+    "options": [
+      "That the collection has the specified number of elements",
+      "That the collection contains the specified element",
+      "That the collection is not empty",
+      "That the collection is sorted"
+    ],
+    "answer": ["That the collection has the specified number of elements"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the empty collection test:\n\n```dart\ntest('Test empty list', () {\n  List<String> emptyList = [];\n  expect(emptyList, %fill%);\n  expect(emptyList, hasLength(0));\n});\n```",
+    "answer": ["isEmpty"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async test structure:\n\n```dart\ntest('Test async function', () %order% {\n  String result = %order% fetchData();\n  expect(result, equals('data'));\n});\n```",
+    "options": [
+      "async",
+      "await"
+    ],
+    "answer": [
+      "async",
+      "await"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do you test asynchronous functions?\n\n```dart\ntest('Test async operation', () async {\n  var result = await asyncFunction();\n  expect(result, isNotNull);\n});\n```",
+    "options": [
+      "Mark test as async and use await",
+      "Use different test framework",
+      "Cannot test async functions",
+      "Use special async matchers only"
+    ],
+    "answer": ["Mark test as async and use await"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the async keyword:\n\n```dart\ntest('Test future completion', () %fill% {\n  Future<int> future = calculate();\n  int result = await future;\n  expect(result, equals(42));\n});\n```",
+    "answer": ["async"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Future testing with completion:\n\n```dart\ntest('Test future completes', () {\n  Future<String> future = loadData();\n  expect(future, %order%);\n});\n```",
+    "options": [
+      "completes"
+    ],
+    "answer": [
+      "completes"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the completes matcher verify?\n\n```dart\nexpect(myFuture, completes);\n```",
+    "options": [
+      "That the Future completes without throwing an exception",
+      "That the Future returns a specific value",
+      "That the Future completes quickly",
+      "That the Future never completes"
+    ],
+    "answer": ["That the Future completes without throwing an exception"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the Future error test:\n\n```dart\ntest('Test future throws error', () {\n  Future<void> future = failingOperation();\n  expect(future, %fill%);\n});\n```",
+    "answer": ["throwsException"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mock object creation:\n\n```dart\nclass %order% %order% Mock %order% Calculator {}\n\ntest('Test with mock', () {\n  var mockCalc = MockCalculator();\n  when(mockCalc.add(2, 3)).thenReturn(5);\n  expect(mockCalc.add(2, 3), equals(5));\n});\n```",
+    "options": [
+      "MockCalculator",
+      "extends",
+      "implements"
+    ],
+    "answer": [
+      "MockCalculator",
+      "extends", 
+      "implements"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What are mock objects in testing?\n\n```dart\nvar mockService = MockService();\nwhen(mockService.getData()).thenReturn('test data');\n```",
+    "options": [
+      "Fake objects that simulate real objects for testing",
+      "Real objects used in production",
+      "Objects that always fail",
+      "Objects that test performance"
+    ],
+    "answer": ["Fake objects that simulate real objects for testing"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the when-then mock setup:\n\n```dart\ntest('Test with mock service', () {\n  var mock = MockService();\n  %fill%(mock.process('input')).thenReturn('output');\n  expect(mock.process('input'), equals('output'));\n});\n```",
+    "answer": ["when"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the test description best practices:\n\n```dart\ntest('%order% should %order% when %order%', () {\n  // Test implementation\n});\n```",
+    "options": [
+      "Calculator",
+      "return sum",
+      "adding two numbers"
+    ],
+    "answer": [
+      "Calculator",
+      "return sum", 
+      "adding two numbers"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What makes a good test description?\n\n```dart\ntest('Calculator should return 5 when adding 2 and 3', () {\n  // Clear and descriptive\n});\n\ntest('test1', () {\n  // Poor description\n});\n```",
+    "options": [
+      "Clear, descriptive, explains what is being tested",
+      "Short and simple",
+      "Uses technical jargon",
+      "Includes implementation details"
+    ],
+    "answer": ["Clear, descriptive, explains what is being tested"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in a descriptive test name:\n\n```dart\ntest('%fill%', () {\n  User user = User('John', 25);\n  expect(user.isAdult(), isTrue);\n});\n```",
+    "answer": ["User should be adult when age is 25"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the test isolation pattern:\n\n```dart\ngroup('Calculator tests', () {\n  Calculator? calculator;\n  \n  setUp(() {\n    calculator = %order%();\n  });\n  \n  tearDown(() {\n    calculator = %order%;\n  });\n});\n```",
+    "options": [
+      "Calculator",
+      "null"
+    ],
+    "answer": [
+      "Calculator",
+      "null"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why is test isolation important?\n\n```dart\n// Bad: Tests depend on each other\ntest('Test 1', () => globalVar = 5);\ntest('Test 2', () => expect(globalVar, equals(5)));\n\n// Good: Tests are independent\ntest('Test 1', () => expect(calculate(2,3), equals(5)));\ntest('Test 2', () => expect(calculate(1,1), equals(2)));\n```",
+    "options": [
+      "Ensures tests don't affect each other and can run in any order",
+      "Makes tests run faster",
+      "Reduces the number of tests needed",
+      "Makes tests easier to write"
+    ],
+    "answer": ["Ensures tests don't affect each other and can run in any order"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the test boundary:\n\n```dart\ntest('Password validation should fail for short passwords', () {\n  bool result = validatePassword('%fill%');\n  expect(result, isFalse);\n});\n```",
+    "answer": ["123"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the parameterized testing approach:\n\n```dart\ngroup('Addition tests', () {\n  var testCases = [\n    {'a': 1, 'b': 2, 'expected': 3},\n    {'a': 0, 'b': 0, 'expected': 0},\n    {'a': -1, 'b': 1, 'expected': 0},\n  ];\n  \n  for (var testCase in testCases) {\n    test('${testCase['a']} + ${testCase['b']} = ${testCase['expected']}', () {\n      expect(add(testCase['a']!, testCase['b']!), equals(testCase['%order%']));\n    });\n  }\n});\n```",
+    "options": [
+      "expected"
+    ],
+    "answer": [
+      "expected"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the benefit of parameterized tests?\n\n```dart\nfor (var input in [0, 1, 5, 10, 100]) {\n  test('Factorial of $input', () {\n    expect(factorial(input), greaterThanOrEqualTo(1));\n  });\n}\n```",
+    "options": [
+      "Test the same logic with multiple different inputs",
+      "Make tests run in parallel",
+      "Reduce test execution time",
+      "Eliminate the need for assertions"
+    ],
+    "answer": ["Test the same logic with multiple different inputs"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the test data:\n\n```dart\nvar invalidEmails = [\n  'invalid-email',\n  '@domain.com',\n  'user@',\n  '%fill%'\n];\n```",
+    "answer": ["user@.com"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the test coverage example:\n\n```dart\nint divide(int a, int b) {\n  if (b == 0) {\n    throw ArgumentError('Division by zero');\n  }\n  return a ~/ b;\n}\n\n// Tests needed for full coverage:\ntest('Normal division', () => expect(divide(10, 2), equals(5)));\ntest('Division by zero', () => expect(() => divide(10, 0), %order%));\n```",
+    "options": [
+      "throwsArgumentError"
+    ],
+    "answer": [
+      "throwsArgumentError"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is test coverage?\n\n```dart\n// Function has 2 branches:\nif (condition) {\n  return 'A';  // Branch 1\n} else {\n  return 'B';  // Branch 2\n}\n// Need tests for both branches\n```",
+    "options": [
+      "Measure of how much code is tested by unit tests",
+      "Number of tests in the test suite",
+      "Time taken to run all tests", 
+      "Number of assertions in tests"
+    ],
+    "answer": ["Measure of how much code is tested by unit tests"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the missing test case:\n\n```dart\n// Function: isEven(int n) => n % 2 == 0\ntest('Even number', () => expect(isEven(4), isTrue));\ntest('Odd number', () => expect(isEven(3), isFalse));\ntest('Zero', () => expect(isEven(0), %fill%));\n```",
+    "answer": ["isTrue"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the TDD cycle:\n\n```dart\n// %order%: Write failing test\ntest('Add function', () {\n  expect(add(2, 3), equals(5));\n});\n\n// %order%: Write minimal code to pass\nint add(int a, int b) => a + b;\n\n// %order%: Improve code quality\nint add(int a, int b) {\n  return a + b; // More readable\n}\n```",
+    "options": [
+      "Red",
+      "Green", 
+      "Refactor"
+    ],
+    "answer": [
+      "Red",
+      "Green",
+      "Refactor"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is Test-Driven Development (TDD)?\n\n```dart\n// 1. Write test first (fails)\n// 2. Write minimal code to pass\n// 3. Refactor and improve\n// 4. Repeat\n```",
+    "options": [
+      "Writing tests before writing the implementation code",
+      "Writing tests after implementation is complete",
+      "Writing tests only for complex functions",
+      "Avoiding tests altogether"
+    ],
+    "answer": ["Writing tests before writing the implementation code"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the TDD step:\n\n```dart\n// Step 1: Write %fill% test\n// Step 2: Make it pass\n// Step 3: Refactor\n```",
+    "answer": ["failing"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the comprehensive test example:\n\n```dart\ngroup('%order% Calculator Tests', () {\n  Calculator? calculator;\n  \n  %order%(() {\n    calculator = Calculator();\n  });\n  \n  group('Addition', () {\n    %order%('should return sum of two positive numbers', () {\n      expect(calculator!.add(2, 3), %order%(5));\n    });\n    \n    %order%('should handle zero addition', () {\n      expect(calculator!.add(0, 5), %order%(5));\n    });\n    \n    %order%('should handle negative numbers', () {\n      expect(calculator!.add(-2, 3), %order%(1));\n    });\n  });\n  \n  group('Division', () {\n    %order%('should throw error on division by zero', () {\n      expect(() => calculator!.divide(10, 0), %order%);\n    });\n  });\n});\n```",
+    "options": [
+      "Comprehensive",
+      "setUp",
+      "test",
+      "equals",
+      "test", 
+      "equals",
+      "test",
+      "equals",
+      "test",
+      "throwsArgumentError"
+    ],
+    "answer": [
+      "Comprehensive",
+      "setUp",
+      "test",
+      "equals",
+      "test",
+      "equals", 
+      "test",
+      "equals",
+      "test",
+      "throwsArgumentError"
+    ],
+    "type": "order"
+  }
+]

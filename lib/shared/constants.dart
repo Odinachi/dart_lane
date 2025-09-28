@@ -263,6 +263,7 @@ class AppData {
         path: "assets/courses/future.md",
         id: 25,
         desc: "Learn about futures in Dart and how to use them.",
+        quiz: "assets/jsons/quizzes/future.json",
       ),
       CourseModel(
           title: "Async/Await",
@@ -272,7 +273,8 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=OTS-ap9_aXc&t=72s",
             "https://www.youtube.com/watch?v=i5qLpkfa8NQ"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/async_await.json"),
       CourseModel(
           title: "Streams",
           path: "assets/courses/stream.md",
@@ -281,7 +283,8 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=nQBpOIHE4eE",
             "https://www.youtube.com/watch?v=tnYTHacU8Z0"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/stream.json"),
       CourseModel(
           title: "Generics",
           path: "assets/courses/generics.md",
@@ -290,7 +293,8 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=8MywaeBqFmI",
             "https://www.youtube.com/watch?v=Te6M8gVqKv4"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/generics.json"),
       CourseModel(
           title: "Extension Methods",
           path: "assets/courses/extension.md",
@@ -299,18 +303,21 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=D3j0OSfT9ZI",
             "https://www.youtube.com/watch?v=B8tjpyg7A3k"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/extension.json"),
       CourseModel(
           title: "Sealed Classes",
           path: "assets/courses/sealed_classes.md",
           id: 30,
           desc: "Learn about sealed classes in Dart and how to use them.",
-          videos: ["https://www.youtube.com/watch?v=JHbtQLPOy3o"]),
+          videos: ["https://www.youtube.com/watch?v=JHbtQLPOy3o"],
+          quiz: "assets/jsons/quizzes/sealed_classes.json"),
       CourseModel(
         title: "Unit Testing (Basic)",
         path: "assets/courses/unit_test.md",
         id: 31,
         desc: "Learn about unit testing in Dart and how to use it.",
+        quiz: "assets/jsons/quizzes/unit_test.json",
       ),
       CourseModel(
           title: "Isolates",
@@ -320,12 +327,14 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=PPwJ75vqP_s",
             "https://www.youtube.com/watch?v=vl_AaCgudcY&t=27s"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/isolates.json"),
       CourseModel(
         title: "Collection Methods",
         path: "assets/courses/collection_method.md",
         id: 33,
         desc: "Learn about collection methods in Dart and how to use them.",
+        quiz: "assets/jsons/quizzes/collection_method.json",
       ),
     ]
   };

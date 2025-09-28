@@ -1,0 +1,700 @@
+[
+  {
+    "question": "Complete the map method to double each number:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3];\n  var doubled = numbers.%order%((%order%) => %order% * 2);\n  print(doubled);\n}\n```",
+    "options": [
+      "map",
+      "n",
+      "n"
+    ],
+    "answer": [
+      "map",
+      "n",
+      "n"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this map method output?\n\n```dart\nvoid main() {\n  var fruits = ['apple', 'banana', 'cherry'];\n  var uppercased = fruits.map((fruit) => fruit.toUpperCase());\n  print(uppercased.toList());\n}\n```",
+    "options": [
+      "[APPLE, BANANA, CHERRY]",
+      "[apple, banana, cherry]",
+      "Error",
+      "[Apple, Banana, Cherry]"
+    ],
+    "answer": ["[APPLE, BANANA, CHERRY]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to filter even numbers:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3, 4, 5];\n  var evens = numbers.%fill%((n) => n % 2 == 0);\n  print(evens.toList());\n}\n```",
+    "answer": ["where"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the where method to keep only big toys:\n\n```dart\nvoid main() {\n  var toys = ['🧸', '🚂', '🎲', '🏀'];\n  var bigToys = toys.%order%((%order%) => %order%.length > 1);\n  print(bigToys.toList());\n}\n```",
+    "options": [
+      "where",
+      "toy",
+      "toy"
+    ],
+    "answer": [
+      "where",
+      "toy",
+      "toy"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the map() method do?\n\n```dart\nvar numbers = [1, 2, 3];\nvar doubled = numbers.map((n) => n * 2);\n```",
+    "options": [
+      "Transforms each item in the collection",
+      "Filters items from the collection",
+      "Counts items in the collection",
+      "Removes items from the collection"
+    ],
+    "answer": ["Transforms each item in the collection"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the reduce operation to sum all numbers:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3, 4];\n  var sum = numbers.%fill%((a, b) => a + b);\n  print(sum);\n}\n```",
+    "answer": ["reduce"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the reduce method to find the maximum:\n\n```dart\nvoid main() {\n  var numbers = [5, 2, 8, 1];\n  var max = numbers.%order%((%order%, %order%) => %order% > %order% ? %order% : %order%);\n  print(max);\n}\n```",
+    "options": [
+      "reduce",
+      "a",
+      "b",
+      "a",
+      "b",
+      "a",
+      "b"
+    ],
+    "answer": [
+      "reduce",
+      "a",
+      "b",
+      "a",
+      "b",
+      "a",
+      "b"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this reduce operation return?\n\n```dart\nvoid main() {\n  var numbers = [2, 3, 4];\n  var product = numbers.reduce((a, b) => a * b);\n  print(product);\n}\n```",
+    "options": [
+      "24",
+      "9",
+      "6",
+      "Error"
+    ],
+    "answer": ["24"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the fold method with starting value:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3];\n  var sum = numbers.%fill%(0, (a, b) => a + b);\n  print(sum);\n}\n```",
+    "answer": ["fold"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the fold operation to calculate product:\n\n```dart\nvoid main() {\n  var items = [2, 3, 4];\n  var product = items.%order%(%order%, (%order%, %order%) => %order% * %order%);\n  print(product);\n}\n```",
+    "options": [
+      "fold",
+      "1",
+      "a",
+      "b",
+      "a",
+      "b"
+    ],
+    "answer": [
+      "fold",
+      "1",
+      "a",
+      "b",
+      "a",
+      "b"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's the difference between reduce and fold?\n\n```dart\n// Reduce\nvar sum1 = [1, 2, 3].reduce((a, b) => a + b);\n\n// Fold\nvar sum2 = [1, 2, 3].fold(0, (a, b) => a + b);\n```",
+    "options": [
+      "fold() lets you specify a starting value, reduce() doesn't",
+      "reduce() is faster than fold()",
+      "fold() only works with numbers",
+      "There is no difference"
+    ],
+    "answer": ["fold() lets you specify a starting value, reduce() doesn't"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the any method to check for red items:\n\n```dart\nvoid main() {\n  var colors = ['red', 'blue', 'green'];\n  var hasRed = colors.%fill%((color) => color == 'red');\n  print(hasRed);\n}\n```",
+    "answer": ["any"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the any method usage:\n\n```dart\nvoid main() {\n  var numbers = [1, 3, 5, 7];\n  var hasEven = numbers.%order%((%order%) => %order% % 2 == 0);\n  print(hasEven);\n}\n```",
+    "options": [
+      "any",
+      "n",
+      "n"
+    ],
+    "answer": [
+      "any",
+      "n",
+      "n"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this any() method return?\n\n```dart\nvoid main() {\n  var ages = [15, 16, 21, 19];\n  var hasAdult = ages.any((age) => age >= 18);\n  print(hasAdult);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "21",
+      "Error"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the every method to check all items:\n\n```dart\nvoid main() {\n  var grades = [85, 90, 92, 88];\n  var allPassing = grades.%fill%((grade) => grade >= 60);\n  print(allPassing);\n}\n```",
+    "answer": ["every"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the every method check:\n\n```dart\nvoid main() {\n  var words = ['apple', 'banana', 'cherry'];\n  var allLong = words.%order%((%order%) => %order%.length > 3);\n  print(allLong);\n}\n```",
+    "options": [
+      "every",
+      "word",
+      "word"
+    ],
+    "answer": [
+      "every",
+      "word",
+      "word"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this every() method return?\n\n```dart\nvoid main() {\n  var numbers = [2, 4, 6, 8];\n  var allEven = numbers.every((n) => n % 2 == 0);\n  print(allEven);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "8",
+      "Error"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the firstWhere method:\n\n```dart\nvoid main() {\n  var sizes = [1, 5, 10, 2];\n  var firstBig = sizes.%fill%((n) => n > 5);\n  print(firstBig);\n}\n```",
+    "answer": ["firstWhere"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the firstWhere usage:\n\n```dart\nvoid main() {\n  var fruits = ['apple', 'banana', 'cherry'];\n  var firstLong = fruits.%order%((%order%) => %order%.length > 5);\n  print(firstLong);\n}\n```",
+    "options": [
+      "firstWhere",
+      "fruit",
+      "fruit"
+    ],
+    "answer": [
+      "firstWhere",
+      "fruit",
+      "fruit"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will firstWhere return?\n\n```dart\nvoid main() {\n  var numbers = [1, 3, 6, 9, 12];\n  var firstEven = numbers.firstWhere((n) => n % 2 == 0);\n  print(firstEven);\n}\n```",
+    "options": [
+      "6",
+      "1",
+      "12",
+      "Error"
+    ],
+    "answer": ["6"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the take method to get first 3 items:\n\n```dart\nvoid main() {\n  var snacks = ['cookie', 'cake', 'chips', 'soda'];\n  var few = snacks.%fill%(3);\n  print(few.toList());\n}\n```",
+    "answer": ["take"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the take method usage:\n\n```dart\nvoid main() {\n  var colors = ['red', 'blue', 'green', 'yellow', 'purple'];\n  var firstThree = colors.%order%(%order%);\n  print(firstThree.toList());\n}\n```",
+    "options": [
+      "take",
+      "3"
+    ],
+    "answer": [
+      "take",
+      "3"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will take(2) return?\n\n```dart\nvoid main() {\n  var letters = ['A', 'B', 'C', 'D', 'E'];\n  var first2 = letters.take(2);\n  print(first2.toList());\n}\n```",
+    "options": [
+      "[A, B]",
+      "[A, B, C]",
+      "[D, E]",
+      "Error"
+    ],
+    "answer": ["[A, B]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the skip method to skip first 2 items:\n\n```dart\nvoid main() {\n  var steps = [1, 2, 3, 4, 5];\n  var afterTwo = steps.%fill%(2);\n  print(afterTwo.toList());\n}\n```",
+    "answer": ["skip"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the skip method usage:\n\n```dart\nvoid main() {\n  var items = ['first', 'second', 'third', 'fourth'];\n  var remaining = items.%order%(%order%);\n  print(remaining.toList());\n}\n```",
+    "options": [
+      "skip",
+      "2"
+    ],
+    "answer": [
+      "skip",
+      "2"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will skip(1) return?\n\n```dart\nvoid main() {\n  var numbers = [10, 20, 30, 40];\n  var afterFirst = numbers.skip(1);\n  print(afterFirst.toList());\n}\n```",
+    "options": [
+      "[20, 30, 40]",
+      "[10, 20, 30]",
+      "[30, 40]",
+      "Error"
+    ],
+    "answer": ["[20, 30, 40]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the forEach method to print each animal:\n\n```dart\nvoid main() {\n  var animals = ['dog', 'cat', 'fish'];\n  animals.%fill%((animal) => print('Hello, $animal!'));\n}\n```",
+    "answer": ["forEach"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the forEach usage:\n\n```dart\nvoid main() {\n  var toys = ['🧸', '🚂', '⚽'];\n  toys.%order%((%order%) => print('Playing with %order%'));\n}\n```",
+    "options": [
+      "forEach",
+      "toy",
+      "$toy"
+    ],
+    "answer": [
+      "forEach",
+      "toy",
+      "$toy"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does forEach do?\n\n```dart\nvar items = ['a', 'b', 'c'];\nitems.forEach((item) => print(item));\n```",
+    "options": [
+      "Executes a function for each item in the collection",
+      "Returns a new collection with transformed items",
+      "Filters items from the collection",
+      "Counts the items in the collection"
+    ],
+    "answer": ["Executes a function for each item in the collection"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the contains method:\n\n```dart\nvoid main() {\n  var fruits = ['apple', 'banana', 'cherry'];\n  var hasApple = fruits.%fill%('apple');\n  print(hasApple);\n}\n```",
+    "answer": ["contains"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the contains check:\n\n```dart\nvoid main() {\n  var colors = ['red', 'blue', 'green'];\n  var hasYellow = colors.%order%(%order%);\n  print(hasYellow);\n}\n```",
+    "options": [
+      "contains",
+      "'yellow'"
+    ],
+    "answer": [
+      "contains",
+      "'yellow'"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will contains return?\n\n```dart\nvoid main() {\n  var numbers = [1, 3, 5, 7];\n  var hasEven = numbers.contains(4);\n  print(hasEven);\n}\n```",
+    "options": [
+      "false",
+      "true",
+      "4",
+      "Error"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the length property:\n\n```dart\nvoid main() {\n  var items = ['a', 'b', 'c', 'd'];\n  var count = items.%fill%;\n  print('We have $count items');\n}\n```",
+    "answer": ["length"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the isEmpty check:\n\n```dart\nvoid main() {\n  var emptyList = [];\n  var fullList = [1, 2, 3];\n  \n  print(emptyList.%order%);\n  print(fullList.%order%);\n}\n```",
+    "options": [
+      "isEmpty",
+      "isEmpty"
+    ],
+    "answer": [
+      "isEmpty",
+      "isEmpty"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will isEmpty return for an empty list?\n\n```dart\nvoid main() {\n  var list = [];\n  print(list.isEmpty);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "0",
+      "Error"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the isNotEmpty check:\n\n```dart\nvoid main() {\n  var toys = ['🧸', '🚂'];\n  if (toys.%fill%) {\n    print('We have toys!');\n  }\n}\n```",
+    "answer": ["isNotEmpty"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the first and last access:\n\n```dart\nvoid main() {\n  var letters = ['A', 'B', 'C', 'D'];\n  print('First: ${letters.%order%}');\n  print('Last: ${letters.%order%}');\n}\n```",
+    "options": [
+      "first",
+      "last"
+    ],
+    "answer": [
+      "first",
+      "last"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will first and last return?\n\n```dart\nvoid main() {\n  var numbers = [10, 20, 30, 40, 50];\n  print(numbers.first);\n  print(numbers.last);\n}\n```",
+    "options": [
+      "10\\n50",
+      "50\\n10",
+      "10\\n40",
+      "Error"
+    ],
+    "answer": ["10\\n50"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the reversed property:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3];\n  var backwards = numbers.%fill%;\n  print(backwards.toList());\n}\n```",
+    "answer": ["reversed"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the toList conversion:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3];\n  var doubled = numbers.map((n) => n * 2);\n  var result = doubled.%order%();\n  print(result);\n}\n```",
+    "options": [
+      "toList"
+    ],
+    "answer": [
+      "toList"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why do we need toList() after map()?\n\n```dart\nvar numbers = [1, 2, 3];\nvar doubled = numbers.map((n) => n * 2);\nprint(doubled.toList());\n```",
+    "options": [
+      "map() returns an Iterable, toList() converts it to a List",
+      "map() doesn't work without toList()",
+      "toList() makes it faster",
+      "It's not necessary"
+    ],
+    "answer": ["map() returns an Iterable, toList() converts it to a List"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the toSet conversion:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 2, 3, 3];\n  var unique = numbers.%fill%();\n  print(unique);\n}\n```",
+    "answer": ["toSet"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the method chaining:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3, 4, 5, 6];\n  var result = numbers\n    .%order%((n) => n % 2 == 0)\n    .%order%((n) => n * 3)\n    .%order%();\n  print(result);\n}\n```",
+    "options": [
+      "where",
+      "map",
+      "toList"
+    ],
+    "answer": [
+      "where",
+      "map",
+      "toList"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this method chain produce?\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3, 4, 5];\n  var result = numbers\n    .where((n) => n > 2)\n    .map((n) => n * 2)\n    .toList();\n  print(result);\n}\n```",
+    "options": [
+      "[6, 8, 10]",
+      "[2, 4, 6, 8, 10]",
+      "[3, 4, 5]",
+      "Error"
+    ],
+    "answer": ["[6, 8, 10]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the join method to create a string:\n\n```dart\nvoid main() {\n  var words = ['Hello', 'World', 'Dart'];\n  var sentence = words.%fill%(' ');\n  print(sentence);\n}\n```",
+    "answer": ["join"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the expand method usage:\n\n```dart\nvoid main() {\n  var words = ['hello', 'world'];\n  var letters = words.%order%((%order%) => %order%.split(''));\n  print(letters.toList());\n}\n```",
+    "options": [
+      "expand",
+      "word",
+      "word"
+    ],
+    "answer": [
+      "expand",
+      "word",
+      "word"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does expand() do?\n\n```dart\nvar words = ['hi', 'bye'];\nvar letters = words.expand((word) => word.split(''));\nprint(letters.toList());\n```",
+    "options": [
+      "Flattens nested collections into a single collection",
+      "Expands each item to double size",
+      "Duplicates each item",
+      "Makes text bigger"
+    ],
+    "answer": ["Flattens nested collections into a single collection"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the singleWhere method:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3, 4, 5];\n  var three = numbers.%fill%((n) => n == 3);\n  print(three);\n}\n```",
+    "answer": ["singleWhere"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the elementAt access:\n\n```dart\nvoid main() {\n  var fruits = ['apple', 'banana', 'cherry'];\n  var second = fruits.%order%(%order%);\n  print(second);\n}\n```",
+    "options": [
+      "elementAt",
+      "1"
+    ],
+    "answer": [
+      "elementAt",
+      "1"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will elementAt(0) return?\n\n```dart\nvoid main() {\n  var colors = ['red', 'green', 'blue'];\n  var first = colors.elementAt(0);\n  print(first);\n}\n```",
+    "options": [
+      "red",
+      "green",
+      "0",
+      "Error"
+    ],
+    "answer": ["red"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the indexWhere method:\n\n```dart\nvoid main() {\n  var fruits = ['apple', 'banana', 'cherry'];\n  var index = fruits.%fill%((fruit) => fruit.startsWith('c'));\n  print(index);\n}\n```",
+    "answer": ["indexWhere"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the lastWhere usage:\n\n```dart\nvoid main() {\n  var numbers = [1, 3, 5, 6, 8, 9];\n  var lastEven = numbers.%order%((%order%) => %order% % 2 == 0);\n  print(lastEven);\n}\n```",
+    "options": [
+      "lastWhere",
+      "n",
+      "n"
+    ],
+    "answer": [
+      "lastWhere",
+      "n",
+      "n"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will lastWhere return?\n\n```dart\nvoid main() {\n  var numbers = [2, 4, 6, 1, 8, 3];\n  var lastEven = numbers.lastWhere((n) => n % 2 == 0);\n  print(lastEven);\n}\n```",
+    "options": [
+      "8",
+      "2",
+      "6",
+      "Error"
+    ],
+    "answer": ["8"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the cast method:\n\n```dart\nvoid main() {\n  var objects = <Object>[1, 2, 3];\n  var numbers = objects.%fill%<int>();\n  print(numbers.first + 5);\n}\n```",
+    "answer": ["cast"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the followedBy method:\n\n```dart\nvoid main() {\n  var first = [1, 2];\n  var second = [3, 4];\n  var combined = first.%order%(%order%);\n  print(combined.toList());\n}\n```",
+    "options": [
+      "followedBy",
+      "second"
+    ],
+    "answer": [
+      "followedBy",
+      "second"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does followedBy do?\n\n```dart\nvar list1 = ['a', 'b'];\nvar list2 = ['c', 'd'];\nvar result = list1.followedBy(list2);\nprint(result.toList());\n```",
+    "options": [
+      "Combines two collections in sequence",
+      "Replaces the first collection with the second",
+      "Finds common elements",
+      "Sorts both collections"
+    ],
+    "answer": ["Combines two collections in sequence"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the whereType method:\n\n```dart\nvoid main() {\n  var mixed = [1, 'hello', 2, 'world', 3];\n  var strings = mixed.%fill%<String>();\n  print(strings.toList());\n}\n```",
+    "answer": ["whereType"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the skipWhile usage:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3, 4, 5];\n  var result = numbers.%order%((%order%) => %order% < 3);\n  print(result.toList());\n}\n```",
+    "options": [
+      "skipWhile",
+      "n",
+      "n"
+    ],
+    "answer": [
+      "skipWhile",
+      "n",
+      "n"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will skipWhile produce?\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 5, 3, 6];\n  var result = numbers.skipWhile((n) => n < 4);\n  print(result.toList());\n}\n```",
+    "options": [
+      "[5, 3, 6]",
+      "[3, 6]",
+      "[1, 2]",
+      "[6]"
+    ],
+    "answer": ["[5, 3, 6]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the takeWhile method:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3, 6, 4];\n  var result = numbers.%fill%((n) => n < 5);\n  print(result.toList());\n}\n```",
+    "answer": ["takeWhile"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Set operations:\n\n```dart\nvoid main() {\n  var set1 = {1, 2, 3};\n  var set2 = {3, 4, 5};\n  \n  var union = set1.%order%(set2);\n  var intersection = set1.%order%(set2);\n  \n  print(union);\n  print(intersection);\n}\n```",
+    "options": [
+      "union",
+      "intersection"
+    ],
+    "answer": [
+      "union",
+      "intersection"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will set union return?\n\n```dart\nvoid main() {\n  var set1 = {1, 2, 3};\n  var set2 = {3, 4, 5};\n  var result = set1.union(set2);\n  print(result);\n}\n```",
+    "options": [
+      "{1, 2, 3, 4, 5}",
+      "{3}",
+      "{1, 2, 4, 5}",
+      "Error"
+    ],
+    "answer": ["{1, 2, 3, 4, 5}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the difference operation:\n\n```dart\nvoid main() {\n  var set1 = {1, 2, 3, 4};\n  var set2 = {3, 4, 5};\n  var result = set1.%fill%(set2);\n  print(result);\n}\n```",
+    "answer": ["difference"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the Map operations:\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2, 'c': 3};\n  \n  print(map.%order%);\n  print(map.%order%);\n  print(map.%order%);\n}\n```",
+    "options": [
+      "keys",
+      "values",
+      "entries"
+    ],
+    "answer": [
+      "keys",
+      "values",
+      "entries"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will map.keys return?\n\n```dart\nvoid main() {\n  var fruits = {'apple': 5, 'banana': 3, 'cherry': 8};\n  print(fruits.keys.toList());\n}\n```",
+    "options": [
+      "[apple, banana, cherry]",
+      "[5, 3, 8]",
+      "{apple, banana, cherry}",
+      "Error"
+    ],
+    "answer": ["[apple, banana, cherry]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the Map forEach:\n\n```dart\nvoid main() {\n  var scores = {'Alice': 95, 'Bob': 87};\n  scores.%fill%((name, score) => print('$name: $score'));\n}\n```",
+    "answer": ["forEach"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the comprehensive collection pipeline:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];\n  \n  var result = numbers\n    .%order%((%order%) => %order% % 2 == 0)  // Keep even numbers\n    .%order%((%order%) => %order% * 3)       // Multiply by 3\n    .%order%((%order%) => %order% > 10)      // Keep numbers > 10\n    .%order%()                               // Convert to List\n    ;\n  \n  print(result);\n}\n```",
+    "options": [
+      "where",
+      "n",
+      "n",
+      "map",
+      "n",
+      "n",
+      "where",
+      "n",
+      "n",
+      "toList"
+    ],
+    "answer": [
+      "where",
+      "n",
+      "n",
+      "map",
+      "n",
+      "n",
+      "where",
+      "n",
+      "n",
+      "toList"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this complete pipeline produce?\n\n```dart\nvoid main() {\n  var words = ['apple', 'banana', 'cherry', 'date'];\n  \n  var result = words\n    .where((word) => word.length > 4)\n    .map((word) => word.toUpperCase())\n    .map((word) => '$word!')\n    .toList();\n  \n  print(result);\n}\n```",
+    "options": [
+      "[APPLE!, BANANA!, CHERRY!]",
+      "[APPLE, BANANA, CHERRY]",
+      "[apple!, banana!, cherry!]",
+      "[DATE!]"
+    ],
+    "answer": ["[APPLE!, BANANA!, CHERRY!]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the final method chain:\n\n```dart\nvoid main() {\n  var data = [1, 2, 3, 4, 5, 6];\n  \n  var summary = data\n    .where((n) => n > 2)\n    .%fill%(0, (sum, n) => sum + n);\n    \n  print('Sum of numbers > 2: $summary');\n}\n```",
+    "answer": ["fold"],
+    "type": "fill"
+  }
+]
