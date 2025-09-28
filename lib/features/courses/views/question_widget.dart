@@ -13,22 +13,13 @@ class QuestionWidget extends StatefulWidget {
   final String question;
   final String answerType;
   final dynamic userAnswer;
-  final Function(String)? onType;
+  final Function(int, String)? onType;
 
   @override
   State<QuestionWidget> createState() => _QuestionWidgetState();
 }
 
 class _QuestionWidgetState extends State<QuestionWidget> {
-  final answerCon = TextEditingController();
-  @override
-  void initState() {
-    super.initState();
-    if (widget.userAnswer != null && widget.answerType == "fill") {
-      answerCon.text = widget.userAnswer;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return _buildQuestionContent();
@@ -75,6 +66,8 @@ class _QuestionWidgetState extends State<QuestionWidget> {
     int lastEnd = 0;
 
     int currentOrder = 0;
+    int currentFillIndex = 0;
+
     for (final match in placeholderRegex.allMatches(codeText)) {
       // Add syntax highlighted text before placeholder
       if (match.start > lastEnd) {
@@ -158,8 +151,17 @@ class _QuestionWidgetState extends State<QuestionWidget> {
             height: 30,
             margin: const EdgeInsets.symmetric(horizontal: 2),
             child: TextFormField(
-              controller: answerCon,
-              onChanged: widget.onType,
+              textInputAction: TextInputAction.done,
+              initialValue: (widget.userAnswer != null &&
+                      widget.userAnswer is List &&
+                      widget.userAnswer.length > currentFillIndex)
+                  ? widget.userAnswer[currentFillIndex]
+                  : '',
+              onFieldSubmitted: (newValue) {
+                if (widget.onType != null) {
+                  widget.onType!(currentFillIndex, newValue ?? '');
+                }
+              },
               style: const TextStyle(fontSize: 12),
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
@@ -169,6 +171,7 @@ class _QuestionWidgetState extends State<QuestionWidget> {
             ),
           ),
         ));
+        currentFillIndex += 1;
       }
 
       lastEnd = match.end;

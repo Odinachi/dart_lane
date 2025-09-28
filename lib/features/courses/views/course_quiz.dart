@@ -66,24 +66,58 @@ class _CourseQuizState extends State<CourseQuiz> {
             horizontal: 20.w,
           ),
           height: 40.h,
-          child: AppButton(
-            onTap: () {
-              if (currentQuestion == quizzes.length) {
-                AppRouter.pushReplacement(AppRouter.quizScore,
-                    arg: QuizScoreScreenArgs(
-                      totalQuestions: quizzes.length,
-                      correctAnswers:
-                          quizzes.where((e) => e.isCorrect == true).length,
-                      courseId: widget.arg?.course?.id,
-                    ));
-              } else {
-                pageController.nextPage(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeInOut);
-              }
-            },
-            textColor: AppColors.white,
-            text: AppString.next,
+          child: Row(
+            children: [
+              InkWell(
+                splashFactory: NoSplash.splashFactory,
+                highlightColor: Colors.transparent,
+                onTap: () {
+                  if (currentQuestion > 1) {
+                    pageController.previousPage(
+                        duration: const Duration(milliseconds: 300),
+                        curve: Curves.easeInOut);
+                  } else {
+                    AppRouter.showMessage(
+                      "You are on the first question",
+                    );
+                  }
+                },
+                child: Container(
+                  height: 40.h,
+                  width: 30.w,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.r),
+                      border: Border.all(color: AppColors.appBlue)),
+                  child: Center(
+                    child: Icon(Icons.arrow_back_ios,
+                        size: 15.sp, color: AppColors.appBlue),
+                  ),
+                ),
+              ),
+              SizedBox(width: 10.w),
+              Expanded(
+                child: AppButton(
+                  onTap: () {
+                    if (currentQuestion == quizzes.length) {
+                      AppRouter.pushReplacement(AppRouter.quizScore,
+                          arg: QuizScoreScreenArgs(
+                            totalQuestions: quizzes.length,
+                            correctAnswers: quizzes
+                                .where((e) => e.isCorrect == true)
+                                .length,
+                            courseId: widget.arg?.course?.id,
+                          ));
+                    } else {
+                      pageController.nextPage(
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.easeInOut);
+                    }
+                  },
+                  textColor: AppColors.white,
+                  text: AppString.next,
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -131,7 +165,9 @@ class _CourseQuizState extends State<CourseQuiz> {
                       key: ValueKey(e.question),
                       children: [
                         QuestionWidget(
-                            onType: (val) {
+                            onType: (index, val) {
+                              print("kkkkk Answer: $val $index");
+
                               quizzes[index] = e.copyWith(userAnswer: [val]);
                               setState(() {});
                             },
