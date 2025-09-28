@@ -1,0 +1,510 @@
+[
+  {
+    "question": "Complete the higher-order function that takes another function as parameter:\n\n```dart\nvoid bakeCookies(%order% onFinished) {\n  print('Baking cookies... 🍪');\n  onFinished();\n}\n```",
+    "options": [
+      "Function"
+    ],
+    "answer": [
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this higher-order function output?\n\n```dart\nvoid bakeCookies(Function onFinished) {\n  print('Baking cookies... 🍪');\n  onFinished();\n}\n\nvoid main() {\n  bakeCookies(() {\n    print('Cookies are ready! Time to eat! 😋');\n  });\n}\n```",
+    "options": [
+      "Baking cookies... 🍪\\nCookies are ready! Time to eat! 😋",
+      "Cookies are ready! Time to eat! 😋",
+      "Baking cookies... 🍪",
+      "Error"
+    ],
+    "answer": ["Baking cookies... 🍪\\nCookies are ready! Time to eat! 😋"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the parameter type for a function parameter:\n\n```dart\nvoid doSomething(%fill% taskDone) {\n  print('Doing something important...');\n  taskDone();\n}\n```",
+    "answer": ["Function"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the higher-order function that returns a function:\n\n```dart\n%order% createGreeter(String name) {\n  return () {\n    print('Hello, $name!');\n  };\n}\n```",
+    "options": [
+      "Function"
+    ],
+    "answer": [
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this function factory produce?\n\n```dart\nFunction createGreeter(String name) {\n  return () {\n    print('Hello, $name!');\n  };\n}\n\nvoid main() {\n  var greetTom = createGreeter('Tom');\n  greetTom();\n}\n```",
+    "options": [
+      "Hello, Tom!",
+      "Hello, name!",
+      "Tom",
+      "Error"
+    ],
+    "answer": ["Hello, Tom!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the function call:\n\n```dart\nvoid sayDone() {\n  print('I\\'m done! ✅');\n}\n\nvoid doSomething(Function taskDone) {\n  print('Doing something important...');\n  %fill%();\n}\n```",
+    "answer": ["taskDone"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the function parameter passing:\n\n```dart\nvoid main() {\n  doSomething(%order%);\n}\n\nvoid sayDone() {\n  print('Done!');\n}\n```",
+    "options": [
+      "sayDone"
+    ],
+    "answer": [
+      "sayDone"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is a higher-order function?\n\n```dart\nvoid processData(Function callback) {\n  callback('processed data');\n}\n```",
+    "options": [
+      "A function that takes or returns another function",
+      "A function that runs faster",
+      "A function with multiple parameters",
+      "A function that handles errors"
+    ],
+    "answer": ["A function that takes or returns another function"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the anonymous function parameter:\n\n```dart\nvoid processData(Function callback) {\n  String data = 'processed';\n  callback(%fill%);\n}\n```",
+    "answer": ["data"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the callback function usage:\n\n```dart\nvoid main() {\n  processData((%order%) {\n    print('Got: $result');\n  });\n}\n```",
+    "options": [
+      "result"
+    ],
+    "answer": [
+      "result"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this higher-order function with parameters output?\n\n```dart\nvoid calculate(int a, int b, Function operation) {\n  int result = operation(a, b);\n  print('Result: $result');\n}\n\nvoid main() {\n  calculate(5, 3, (x, y) => x + y);\n}\n```",
+    "options": [
+      "Result: 8",
+      "Result: 5",
+      "Result: 3",
+      "Error"
+    ],
+    "answer": ["Result: 8"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the operation function call:\n\n```dart\nvoid calculate(int a, int b, Function operation) {\n  int result = %fill%(a, b);\n  print('Result: $result');\n}\n```",
+    "answer": ["operation"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the function that returns a function:\n\n```dart\nFunction createMultiplier(int factor) {\n  %order% (int number) {\n    return number * factor;\n  };\n}\n```",
+    "options": [
+      "return"
+    ],
+    "answer": [
+      "return"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this function generator create?\n\n```dart\nFunction createAdder(int x) {\n  return (int y) => x + y;\n}\n\nvoid main() {\n  var add5 = createAdder(5);\n  print(add5(3));\n}\n```",
+    "options": [
+      "8",
+      "5",
+      "3",
+      "Error"
+    ],
+    "answer": ["8"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the arrow function syntax:\n\n```dart\nFunction createDoubler() {\n  return (int x) %fill% x * 2;\n}\n```",
+    "answer": ["=>"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the list processing with higher-order function:\n\n```dart\nvoid processList(List<int> numbers, %order% processor) {\n  for (int num in numbers) {\n    processor(num);\n  }\n}\n```",
+    "options": [
+      "Function"
+    ],
+    "answer": [
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this list processor output?\n\n```dart\nvoid processList(List<int> numbers, Function processor) {\n  for (int num in numbers) {\n    processor(num);\n  }\n}\n\nvoid main() {\n  processList([1, 2, 3], (n) => print('Number: $n'));\n}\n```",
+    "options": [
+      "Number: 1\\nNumber: 2\\nNumber: 3",
+      "1\\n2\\n3",
+      "[1, 2, 3]",
+      "Error"
+    ],
+    "answer": ["Number: 1\\nNumber: 2\\nNumber: 3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the function type for specific parameters:\n\n```dart\nvoid mathOperation(int a, int b, int %fill%(int, int) operation) {\n  print(operation(a, b));\n}\n```",
+    "answer": ["Function"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the conditional function return:\n\n```dart\nFunction createOperation(String type) {\n  %order% (type == 'add') {\n    return (a, b) => a + b;\n  } else {\n    return (a, b) => a * b;\n  }\n}\n```",
+    "options": [
+      "if"
+    ],
+    "answer": [
+      "if"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this conditional function factory return?\n\n```dart\nFunction createOperation(String type) {\n  if (type == 'multiply') {\n    return (a, b) => a * b;\n  } else {\n    return (a, b) => a + b;\n  }\n}\n\nvoid main() {\n  var multiply = createOperation('multiply');\n  print(multiply(4, 5));\n}\n```",
+    "options": [
+      "20",
+      "9",
+      "4",
+      "Error"
+    ],
+    "answer": ["20"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the switch case for function factory:\n\n```dart\nFunction createCalculator(String operation) {\n  switch (%fill%) {\n    case 'add':\n      return (a, b) => a + b;\n    default:\n      return (a, b) => 0;\n  }\n}\n```",
+    "answer": ["operation"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the higher-order function with multiple callbacks:\n\n```dart\nvoid processData(String data, %order% onSuccess, %order% onError) {\n  if (data.isNotEmpty) {\n    onSuccess(data);\n  } else {\n    onError('Empty data');\n  }\n}\n```",
+    "options": [
+      "Function",
+      "Function"
+    ],
+    "answer": [
+      "Function",
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this dual callback function do with valid data?\n\n```dart\nvoid processData(String data, Function onSuccess, Function onError) {\n  if (data.isNotEmpty) {\n    onSuccess(data);\n  } else {\n    onError('Empty data');\n  }\n}\n\nvoid main() {\n  processData('Hello', \n    (data) => print('Success: $data'),\n    (error) => print('Error: $error')\n  );\n}\n```",
+    "options": [
+      "Success: Hello",
+      "Error: Empty data",
+      "Hello",
+      "Error"
+    ],
+    "answer": ["Success: Hello"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the callback invocation:\n\n```dart\nvoid asyncOperation(Function onComplete) {\n  print('Processing...');\n  %fill%('Finished!');\n}\n```",
+    "answer": ["onComplete"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the function composition:\n\n```dart\nFunction compose(Function f, Function g) {\n  return (%order% x) {\n    return f(g(x));\n  };\n}\n```",
+    "options": [
+      "dynamic"
+    ],
+    "answer": [
+      "dynamic"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this function composition produce?\n\n```dart\nFunction compose(Function f, Function g) {\n  return (x) => f(g(x));\n}\n\nvoid main() {\n  var addOne = (int x) => x + 1;\n  var double = (int x) => x * 2;\n  var composed = compose(addOne, double);\n  print(composed(3));\n}\n```",
+    "options": [
+      "7",
+      "8",
+      "6",
+      "Error"
+    ],
+    "answer": ["7"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the composed function call:\n\n```dart\nvoid main() {\n  var addOne = (int x) => x + 1;\n  var triple = (int x) => x * 3;\n  var composed = compose(%fill%, %fill%);\n}\n```",
+    "answer": ["addOne", "triple"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the filter function with predicate:\n\n```dart\nList<T> filter<T>(List<T> items, bool %order%(T) predicate) {\n  List<T> result = [];\n  for (T item in items) {\n    if (predicate(item)) result.add(item);\n  }\n  return result;\n}\n```",
+    "options": [
+      "Function"
+    ],
+    "answer": [
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this filter function return?\n\n```dart\nList<int> filter(List<int> items, Function predicate) {\n  List<int> result = [];\n  for (int item in items) {\n    if (predicate(item)) result.add(item);\n  }\n  return result;\n}\n\nvoid main() {\n  var numbers = [1, 2, 3, 4, 5];\n  var evens = filter(numbers, (n) => n % 2 == 0);\n  print(evens);\n}\n```",
+    "options": [
+      "[2, 4]",
+      "[1, 3, 5]",
+      "[1, 2, 3, 4, 5]",
+      "[]"
+    ],
+    "answer": ["[2, 4]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the predicate condition:\n\n```dart\nvoid main() {\n  var words = ['cat', 'elephant', 'dog'];\n  var longWords = filter(words, (w) => w.length %fill% 3);\n}\n```",
+    "answer": [">"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the map function with transformer:\n\n```dart\nList<R> map<T, R>(List<T> items, R %order%(T) transformer) {\n  List<R> result = [];\n  for (T item in items) {\n    result.add(transformer(item));\n  }\n  return result;\n}\n```",
+    "options": [
+      "Function"
+    ],
+    "answer": [
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this map function produce?\n\n```dart\nList<String> map(List<int> items, Function transformer) {\n  List<String> result = [];\n  for (int item in items) {\n    result.add(transformer(item));\n  }\n  return result;\n}\n\nvoid main() {\n  var numbers = [1, 2, 3];\n  var strings = map(numbers, (n) => 'Number: $n');\n  print(strings);\n}\n```",
+    "options": [
+      "[Number: 1, Number: 2, Number: 3]",
+      "[1, 2, 3]",
+      "Number: 1\\nNumber: 2\\nNumber: 3",
+      "Error"
+    ],
+    "answer": ["[Number: 1, Number: 2, Number: 3]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the transformer function:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3];\n  var doubled = map(numbers, (n) => %fill%);\n}\n```",
+    "answer": ["n * 2"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the reduce function:\n\n```dart\nT reduce<T>(List<T> items, T %order%(T, T) combiner, T initialValue) {\n  T result = initialValue;\n  for (T item in items) {\n    result = combiner(result, item);\n  }\n  return result;\n}\n```",
+    "options": [
+      "Function"
+    ],
+    "answer": [
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this reduce function calculate?\n\n```dart\nint reduce(List<int> items, Function combiner, int initialValue) {\n  int result = initialValue;\n  for (int item in items) {\n    result = combiner(result, item);\n  }\n  return result;\n}\n\nvoid main() {\n  var numbers = [1, 2, 3, 4];\n  var sum = reduce(numbers, (a, b) => a + b, 0);\n  print(sum);\n}\n```",
+    "options": [
+      "10",
+      "4",
+      "0",
+      "Error"
+    ],
+    "answer": ["10"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the combiner function for multiplication:\n\n```dart\nvoid main() {\n  var numbers = [2, 3, 4];\n  var product = reduce(numbers, (a, b) => %fill%, 1);\n}\n```",
+    "answer": ["a * b"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the event handler creator:\n\n```dart\n%order% createEventHandler(String eventType) {\n  return (String data) {\n    print('$eventType: $data');\n  };\n}\n```",
+    "options": [
+      "Function"
+    ],
+    "answer": [
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this event handler factory create?\n\n```dart\nFunction createEventHandler(String eventType) {\n  return (String data) {\n    print('$eventType: $data');\n  };\n}\n\nvoid main() {\n  var clickHandler = createEventHandler('CLICK');\n  clickHandler('Button pressed');\n}\n```",
+    "options": [
+      "CLICK: Button pressed",
+      "Button pressed",
+      "CLICK",
+      "Error"
+    ],
+    "answer": ["CLICK: Button pressed"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the event data parameter:\n\n```dart\nvoid main() {\n  var submitHandler = createEventHandler('SUBMIT');\n  submitHandler(%fill%);\n}\n```",
+    "answer": ["'Form submitted'"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the validator function factory:\n\n```dart\nFunction createValidator(int %order%) {\n  return (String input) {\n    return input.length >= minLength;\n  };\n}\n```",
+    "options": [
+      "minLength"
+    ],
+    "answer": [
+      "minLength"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this validator return?\n\n```dart\nFunction createValidator(int minLength) {\n  return (String input) {\n    return input.length >= minLength;\n  };\n}\n\nvoid main() {\n  var validator = createValidator(5);\n  print(validator('hello'));\n  print(validator('hi'));\n}\n```",
+    "options": [
+      "true\\nfalse",
+      "false\\ntrue",
+      "true\\ntrue",
+      "false\\nfalse"
+    ],
+    "answer": ["true\\nfalse"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the validation check:\n\n```dart\nFunction createValidator(int minLength) {\n  return (String input) {\n    return input.length %fill% minLength;\n  };\n}\n```",
+    "answer": [">="],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the throttle function:\n\n```dart\nFunction throttle(%order% func, int delayMs) {\n  bool canExecute = true;\n  return () {\n    if (canExecute) {\n      func();\n      canExecute = false;\n      Future.delayed(Duration(milliseconds: delayMs), () {\n        canExecute = true;\n      });\n    }\n  };\n}\n```",
+    "options": [
+      "Function"
+    ],
+    "answer": [
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does a throttle function do?\n\n```dart\nFunction throttle(Function func, int delayMs) {\n  // implementation\n}\n```",
+    "options": [
+      "Limits how often a function can be called",
+      "Makes functions run faster",
+      "Caches function results",
+      "Handles function errors"
+    ],
+    "answer": ["Limits how often a function can be called"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the function execution condition:\n\n```dart\nFunction throttle(Function func, int delayMs) {\n  bool canExecute = true;\n  return () {\n    if (%fill%) {\n      func();\n    }\n  };\n}\n```",
+    "answer": ["canExecute"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the debounce function:\n\n```dart\nFunction debounce(%order% func, int delayMs) {\n  Timer? timer;\n  return () {\n    timer?.cancel();\n    timer = Timer(Duration(milliseconds: delayMs), func);\n  };\n}\n```",
+    "options": [
+      "Function"
+    ],
+    "answer": [
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does a debounce function do?\n\n```dart\nFunction debounce(Function func, int delayMs) {\n  Timer? timer;\n  return () {\n    timer?.cancel();\n    timer = Timer(Duration(milliseconds: delayMs), func);\n  };\n}\n```",
+    "options": [
+      "Delays function execution until calls stop",
+      "Makes functions run immediately",
+      "Cancels all function calls",
+      "Runs functions multiple times"
+    ],
+    "answer": ["Delays function execution until calls stop"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the timer cancellation:\n\n```dart\nFunction debounce(Function func, int delayMs) {\n  Timer? timer;\n  return () {\n    timer?.%fill%();\n    timer = Timer(Duration(milliseconds: delayMs), func);\n  };\n}\n```",
+    "answer": ["cancel"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the curry function:\n\n```dart\nFunction curry2(%order% func) {\n  return (a) {\n    return (b) {\n      return func(a, b);\n    };\n  };\n}\n```",
+    "options": [
+      "Function"
+    ],
+    "answer": [
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this curried function produce?\n\n```dart\nFunction curry2(Function func) {\n  return (a) {\n    return (b) {\n      return func(a, b);\n    };\n  };\n}\n\nvoid main() {\n  var add = (a, b) => a + b;\n  var curriedAdd = curry2(add);\n  var add5 = curriedAdd(5);\n  print(add5(3));\n}\n```",
+    "options": [
+      "8",
+      "5",
+      "3",
+      "Error"
+    ],
+    "answer": ["8"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the curried function call:\n\n```dart\nvoid main() {\n  var multiply = (a, b) => a * b;\n  var curriedMultiply = curry2(multiply);\n  var double = curriedMultiply(%fill%);\n  print(double(4));\n}\n```",
+    "answer": ["2"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the memoization function:\n\n```dart\nFunction memoize(%order% func) {\n  Map<dynamic, dynamic> cache = {};\n  return (arg) {\n    if (cache.containsKey(arg)) {\n      return cache[arg];\n    }\n    var result = func(arg);\n    cache[arg] = result;\n    return result;\n  };\n}\n```",
+    "options": [
+      "Function"
+    ],
+    "answer": [
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does memoization do?\n\n```dart\nFunction memoize(Function func) {\n  Map cache = {};\n  return (arg) {\n    if (cache.containsKey(arg)) {\n      return cache[arg];\n    }\n    var result = func(arg);\n    cache[arg] = result;\n    return result;\n  };\n}\n```",
+    "options": [
+      "Caches function results to avoid recomputation",
+      "Makes functions run faster",
+      "Stores functions in memory",
+      "Handles function errors"
+    ],
+    "answer": ["Caches function results to avoid recomputation"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the cache check:\n\n```dart\nFunction memoize(Function func) {\n  Map cache = {};\n  return (arg) {\n    if (cache.%fill%(arg)) {\n      return cache[arg];\n    }\n    var result = func(arg);\n    cache[arg] = result;\n    return result;\n  };\n}\n```",
+    "answer": ["containsKey"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the partial application function:\n\n```dart\nFunction partial(%order% func, List fixedArgs) {\n  return (List remainingArgs) {\n    return Function.apply(func, [...fixedArgs, ...remainingArgs]);\n  };\n}\n```",
+    "options": [
+      "Function"
+    ],
+    "answer": [
+      "Function"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does partial application do?\n\n```dart\nFunction partial(Function func, List fixedArgs) {\n  return (List remainingArgs) {\n    return Function.apply(func, [...fixedArgs, ...remainingArgs]);\n  };\n}\n```",
+    "options": [
+      "Pre-fills some arguments of a function",
+      "Splits functions into parts",
+      "Makes functions run partially",
+      "Handles incomplete functions"
+    ],
+    "answer": ["Pre-fills some arguments of a function"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the function application:\n\n```dart\nFunction partial(Function func, List fixedArgs) {\n  return (List remainingArgs) {\n    return Function.%fill%(func, [...fixedArgs, ...remainingArgs]);\n  };\n}\n```",
+    "answer": ["apply"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final higher-order function example:\n\n```dart\n%order% createLogger(String level) {\n  return (%order% message) {\n    print('[$level] ${DateTime.now()}: $message');\n  };\n}\n\nvoid main() {\n  var errorLog = createLogger('ERROR');\n  var infoLog = createLogger('INFO');\n  \n  errorLog('Something went wrong!');\n  infoLog('Application started');\n}\n```",
+    "options": [
+      "Function",
+      "String"
+    ],
+    "answer": [
+      "Function",
+      "String"
+    ],
+    "type": "order"
+  }
+]

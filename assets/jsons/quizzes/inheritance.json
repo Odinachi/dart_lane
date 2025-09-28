@@ -1,0 +1,522 @@
+[
+  {
+    "question": "Complete the inheritance syntax:\n\n```dart\nclass SuperKid %order% SuperDad {\n  void play() {\n    print('Playing with toys 🧸');\n  }\n}\n```",
+    "options": [
+      "extends"
+    ],
+    "answer": [
+      "extends"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this inheritance example output?\n\n```dart\nclass SuperDad {\n  void fly() {\n    print('Flying high in the sky! ☁️');\n  }\n}\n\nclass SuperKid extends SuperDad {\n  void play() {\n    print('Playing with toys 🧸');\n  }\n}\n\nvoid main() {\n  SuperKid kid = SuperKid();\n  kid.play();\n  kid.fly();\n}\n```",
+    "options": [
+      "Playing with toys 🧸\\nFlying high in the sky! ☁️",
+      "Flying high in the sky! ☁️\\nPlaying with toys 🧸",
+      "Playing with toys 🧸",
+      "Error"
+    ],
+    "answer": ["Playing with toys 🧸\\nFlying high in the sky! ☁️"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the keyword for inheritance:\n\n```dart\nclass Animal {\n  void eat() {\n    print('Eating food');\n  }\n}\n\nclass Dog %fill% Animal {\n  void bark() {\n    print('Woof!');\n  }\n}\n```",
+    "answer": ["extends"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the parent class:\n\n```dart\nclass %order% {\n  void fly() {\n    print('Flying high in the sky! ☁️');\n  }\n  \n  void savePeople() {\n    print('Saving people from danger! 🛡️');\n  }\n}\n```",
+    "options": [
+      "SuperDad"
+    ],
+    "answer": [
+      "SuperDad"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is inheritance in Dart?\n\n```dart\nclass Parent {\n  void parentMethod() { }\n}\n\nclass Child extends Parent {\n  void childMethod() { }\n}\n```",
+    "options": [
+      "A way for child classes to get properties and methods from parent classes",
+      "A way to create multiple objects",
+      "A way to delete classes",
+      "A way to make classes private"
+    ],
+    "answer": ["A way for child classes to get properties and methods from parent classes"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the inherited method call:\n\n```dart\nclass Vehicle {\n  void start() {\n    print('Vehicle starting');\n  }\n}\n\nclass Car extends Vehicle {\n  void honk() {\n    print('Beep beep!');\n  }\n}\n\nvoid main() {\n  Car myCar = Car();\n  myCar.%fill%();\n  myCar.honk();\n}\n```",
+    "answer": ["start"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the child class with inheritance:\n\n```dart\nclass Animal {\n  String name = 'Pet';\n  void sleep() {\n    print('Sleeping...');\n  }\n}\n\nclass %order% %order% %order% {\n  void bark() {\n    print('Woof! Woof!');\n  }\n}\n```",
+    "options": [
+      "Dog",
+      "extends",
+      "Animal"
+    ],
+    "answer": [
+      "Dog",
+      "extends",
+      "Animal"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What can a child class access from its parent?\n\n```dart\nclass Parent {\n  String publicVar = 'visible';\n  void publicMethod() { }\n}\n\nclass Child extends Parent {\n  void test() {\n    // What can Child access?\n  }\n}\n```",
+    "options": [
+      "All public properties and methods from the parent",
+      "Only private properties",
+      "Nothing from the parent",
+      "Only the constructor"
+    ],
+    "answer": ["All public properties and methods from the parent"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the parent property access:\n\n```dart\nclass Person {\n  String name = 'John';\n}\n\nclass Student extends Person {\n  void introduce() {\n    print('Hi, I am %fill%');\n  }\n}\n```",
+    "answer": ["$name"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the method override:\n\n```dart\nclass SuperDad {\n  void fly() {\n    print('Flying normally');\n  }\n}\n\nclass SuperKid extends SuperDad {\n  %order%\n  void fly() {\n    print('Zooming through the sky! 🛩️');\n  }\n}\n```",
+    "options": [
+      "@override"
+    ],
+    "answer": [
+      "@override"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this override example output?\n\n```dart\nclass Bird {\n  void fly() {\n    print('Bird is flying');\n  }\n}\n\nclass Eagle extends Bird {\n  @override\n  void fly() {\n    print('Eagle soars high!');\n  }\n}\n\nvoid main() {\n  Eagle eagle = Eagle();\n  eagle.fly();\n}\n```",
+    "options": [
+      "Eagle soars high!",
+      "Bird is flying",
+      "Both messages",
+      "Error"
+    ],
+    "answer": ["Eagle soars high!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the override annotation:\n\n```dart\nclass Shape {\n  void draw() {\n    print('Drawing a shape');\n  }\n}\n\nclass Circle extends Shape {\n  %fill%\n  void draw() {\n    print('Drawing a circle');\n  }\n}\n```",
+    "answer": ["@override"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the constructor inheritance:\n\n```dart\nclass Animal {\n  String name;\n  Animal(this.name);\n}\n\nclass Dog extends Animal {\n  String breed;\n  \n  Dog(String name, this.breed) : %order%(name);\n}\n```",
+    "options": [
+      "super"
+    ],
+    "answer": [
+      "super"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the super keyword do?\n\n```dart\nclass Parent {\n  String name;\n  Parent(this.name);\n}\n\nclass Child extends Parent {\n  Child(String name) : super(name);\n}\n```",
+    "options": [
+      "Calls the parent class constructor",
+      "Creates a new parent object",
+      "Deletes the parent class",
+      "Makes the class static"
+    ],
+    "answer": ["Calls the parent class constructor"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the super constructor call:\n\n```dart\nclass Vehicle {\n  String brand;\n  Vehicle(this.brand);\n}\n\nclass Car extends Vehicle {\n  int doors;\n  \n  Car(String brand, this.doors) : %fill%(brand);\n}\n```",
+    "answer": ["super"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the multilevel inheritance:\n\n```dart\nclass Grandparent {\n  void wisdom() {\n    print('Life advice from grandparent');\n  }\n}\n\nclass Parent %order% Grandparent {\n  void care() {\n    print('Caring from parent');\n  }\n}\n\nclass Child %order% Parent {\n  void play() {\n    print('Playing as a child');\n  }\n}\n```",
+    "options": [
+      "extends",
+      "extends"
+    ],
+    "answer": [
+      "extends",
+      "extends"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What can the grandchild class access?\n\n```dart\nclass Grandparent {\n  void cookCookies() { }\n}\n\nclass Parent extends Grandparent {\n  void workHard() { }\n}\n\nclass Child extends Parent {\n  void study() { }\n}\n```",
+    "options": [
+      "All methods from Grandparent and Parent classes",
+      "Only methods from Parent class",
+      "Only its own methods",
+      "Only methods from Grandparent class"
+    ],
+    "answer": ["All methods from Grandparent and Parent classes"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the inherited method from grandparent:\n\n```dart\nclass Grandparent {\n  void tellStories() {\n    print('Once upon a time...');\n  }\n}\n\nclass Parent extends Grandparent { }\n\nclass Child extends Parent {\n  void listenToStories() {\n    %fill%();\n  }\n}\n```",
+    "answer": ["tellStories"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the protected member access:\n\n```dart\nclass BankAccount {\n  double _balance = 1000.0;\n  \n  double get balance => _balance;\n}\n\nclass SavingsAccount %order% BankAccount {\n  void addInterest() {\n    _balance += _balance * 0.05;\n  }\n}\n```",
+    "options": [
+      "extends"
+    ],
+    "answer": [
+      "extends"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Can a child class access private members of parent class?\n\n```dart\nclass Parent {\n  String _privateData = 'secret';\n  String publicData = 'visible';\n}\n\nclass Child extends Parent {\n  void showData() {\n    // Can access _privateData?\n  }\n}\n```",
+    "options": [
+      "No, private members are not inherited",
+      "Yes, all members are inherited",
+      "Only if using super keyword",
+      "Only in the same file"
+    ],
+    "answer": ["No, private members are not inherited"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the public property access:\n\n```dart\nclass Toy {\n  String color = 'red';\n  String _material = 'plastic';\n}\n\nclass Robot extends Toy {\n  void describe() {\n    print('I am a %fill% robot');\n    // Cannot access _material directly\n  }\n}\n```",
+    "answer": ["$color"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the method chaining with super:\n\n```dart\nclass Animal {\n  void eat() {\n    print('Animal is eating');\n  }\n}\n\nclass Dog extends Animal {\n  @override\n  void eat() {\n    %order%.eat();\n    print('Dog is eating dog food');\n  }\n}\n```",
+    "options": [
+      "super"
+    ],
+    "answer": [
+      "super"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this super method call output?\n\n```dart\nclass Parent {\n  void greet() {\n    print('Hello from parent');\n  }\n}\n\nclass Child extends Parent {\n  @override\n  void greet() {\n    super.greet();\n    print('Hello from child');\n  }\n}\n\nvoid main() {\n  Child child = Child();\n  child.greet();\n}\n```",
+    "options": [
+      "Hello from parent\\nHello from child",
+      "Hello from child\\nHello from parent",
+      "Hello from child",
+      "Error"
+    ],
+    "answer": ["Hello from parent\\nHello from child"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the super method call:\n\n```dart\nclass Vehicle {\n  void start() {\n    print('Vehicle engine starting');\n  }\n}\n\nclass Car extends Vehicle {\n  @override\n  void start() {\n    %fill%.start();\n    print('Car is ready to drive');\n  }\n}\n```",
+    "answer": ["super"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the abstract inheritance:\n\n```dart\nabstract class Shape {\n  void draw();\n}\n\nclass Circle %order% Shape {\n  @override\n  void draw() {\n    print('Drawing a circle');\n  }\n}\n```",
+    "options": [
+      "extends"
+    ],
+    "answer": [
+      "extends"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What must a child class do when extending an abstract class?\n\n```dart\nabstract class Animal {\n  void makeSound();\n  void sleep() {\n    print('Sleeping...');\n  }\n}\n\nclass Dog extends Animal {\n  // What must be implemented?\n}\n```",
+    "options": [
+      "Must implement all abstract methods",
+      "Must implement all methods",
+      "Nothing special required",
+      "Must call super constructor"
+    ],
+    "answer": ["Must implement all abstract methods"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the required method implementation:\n\n```dart\nabstract class Bird {\n  void fly();\n}\n\nclass Eagle extends Bird {\n  @override\n  void %fill%() {\n    print('Eagle flies high');\n  }\n}\n```",
+    "answer": ["fly"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the interface implementation:\n\n```dart\nclass Flyable {\n  void fly() {\n    print('Can fly');\n  }\n}\n\nclass Bird %order% Flyable {\n  @override\n  void fly() {\n    print('Bird is flying');\n  }\n}\n```",
+    "options": [
+      "implements"
+    ],
+    "answer": [
+      "implements"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's the difference between extends and implements?\n\n```dart\nclass A extends B { }  // inheritance\nclass A implements B { }  // interface\n```",
+    "options": [
+      "extends inherits implementation, implements requires full implementation",
+      "No difference",
+      "implements is faster",
+      "extends is only for abstract classes"
+    ],
+    "answer": ["extends inherits implementation, implements requires full implementation"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the interface keyword:\n\n```dart\nclass Drawable {\n  void draw() {\n    print('Drawing...');\n  }\n}\n\nclass Shape %fill% Drawable {\n  @override\n  void draw() {\n    print('Drawing a shape');\n  }\n}\n```",
+    "answer": ["implements"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the multiple inheritance with mixins:\n\n```dart\nmixin Flyable {\n  void fly() => print('Flying');\n}\n\nmixin Swimmable {\n  void swim() => print('Swimming');\n}\n\nclass Duck %order% Flyable, Swimmable {\n  void quack() => print('Quack');\n}\n```",
+    "options": [
+      "with"
+    ],
+    "answer": [
+      "with"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why doesn't Dart support multiple class inheritance?\n\n```dart\n// This is not allowed:\n// class Child extends Parent1, Parent2 { }\n```",
+    "options": [
+      "To avoid the diamond problem and complexity",
+      "Dart doesn't support inheritance at all",
+      "Multiple inheritance is slower",
+      "It's not needed in programming"
+    ],
+    "answer": ["To avoid the diamond problem and complexity"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the mixin usage:\n\n```dart\nmixin Printable {\n  void print() => print('Printing...');\n}\n\nclass Document %fill% Printable {\n  String content = 'Document content';\n}\n```",
+    "answer": ["with"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the polymorphism example:\n\n```dart\nclass Animal {\n  void makeSound() {\n    print('Some sound');\n  }\n}\n\nclass Dog extends Animal {\n  @override\n  void makeSound() {\n    print('Woof!');\n  }\n}\n\nvoid main() {\n  %order% animal = Dog();\n  animal.makeSound();\n}\n```",
+    "options": [
+      "Animal"
+    ],
+    "answer": [
+      "Animal"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this polymorphism example output?\n\n```dart\nclass Shape {\n  void draw() {\n    print('Drawing a shape');\n  }\n}\n\nclass Circle extends Shape {\n  @override\n  void draw() {\n    print('Drawing a circle');\n  }\n}\n\nvoid main() {\n  Shape shape = Circle();\n  shape.draw();\n}\n```",
+    "options": [
+      "Drawing a circle",
+      "Drawing a shape",
+      "Both messages",
+      "Error"
+    ],
+    "answer": ["Drawing a circle"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the polymorphic variable:\n\n```dart\nclass Vehicle {\n  void move() => print('Moving');\n}\n\nclass Car extends Vehicle {\n  @override\n  void move() => print('Driving');\n}\n\nvoid main() {\n  %fill% vehicle = Car();\n  vehicle.move();\n}\n```",
+    "answer": ["Vehicle"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the inheritance with properties:\n\n```dart\nclass Person {\n  String %order%;\n  int %order%;\n  \n  Person(this.name, this.age);\n}\n\nclass Student extends Person {\n  String school;\n  \n  Student(String name, int age, this.school) : super(name, age);\n}\n```",
+    "options": [
+      "name",
+      "age"
+    ],
+    "answer": [
+      "name",
+      "age"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What properties does the child class have?\n\n```dart\nclass Animal {\n  String species = 'Unknown';\n  int age = 0;\n}\n\nclass Dog extends Animal {\n  String breed = 'Mixed';\n}\n```",
+    "options": [
+      "species, age, and breed",
+      "Only breed",
+      "Only species and age",
+      "None of them"
+    ],
+    "answer": ["species, age, and breed"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the inherited property access:\n\n```dart\nclass Robot {\n  String model = 'R2D2';\n}\n\nclass SmartRobot extends Robot {\n  void introduce() {\n    print('I am robot model %fill%');\n  }\n}\n```",
+    "answer": ["$model"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the getter inheritance:\n\n```dart\nclass Rectangle {\n  double width = 5.0;\n  double height = 3.0;\n  \n  double get area => width * height;\n}\n\nclass Square %order% Rectangle {\n  Square(double side) {\n    width = side;\n    height = side;\n  }\n}\n```",
+    "options": [
+      "extends"
+    ],
+    "answer": [
+      "extends"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Can a child class access parent's getters?\n\n```dart\nclass Circle {\n  double radius = 5.0;\n  double get area => 3.14 * radius * radius;\n}\n\nclass ColoredCircle extends Circle {\n  String color = 'red';\n  \n  void showInfo() {\n    // Can access area getter?\n  }\n}\n```",
+    "options": [
+      "Yes, getters are inherited like methods",
+      "No, getters are not inherited",
+      "Only if marked as public",
+      "Only with super keyword"
+    ],
+    "answer": ["Yes, getters are inherited like methods"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the getter access:\n\n```dart\nclass Account {\n  double _balance = 1000.0;\n  double get balance => _balance;\n}\n\nclass SavingsAccount extends Account {\n  void showBalance() {\n    print('Balance: \\$%fill%');\n  }\n}\n```",
+    "answer": ["$balance"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the setter inheritance:\n\n```dart\nclass Temperature {\n  double _celsius = 0.0;\n  \n  set celsius(double value) {\n    _celsius = value;\n  }\n}\n\nclass Thermometer %order% Temperature {\n  void setTemperature(double temp) {\n    celsius = temp;\n  }\n}\n```",
+    "options": [
+      "extends"
+    ],
+    "answer": [
+      "extends"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this setter inheritance do?\n\n```dart\nclass Person {\n  String _name = '';\n  \n  set name(String value) {\n    _name = value.toUpperCase();\n  }\n  \n  String get name => _name;\n}\n\nclass Student extends Person {\n  void setName(String studentName) {\n    name = studentName;\n  }\n}\n\nvoid main() {\n  Student student = Student();\n  student.setName('alice');\n  print(student.name);\n}\n```",
+    "options": [
+      "ALICE",
+      "alice",
+      "Alice",
+      "Error"
+    ],
+    "answer": ["ALICE"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the inherited setter usage:\n\n```dart\nclass Box {\n  double _size = 1.0;\n  \n  set size(double value) {\n    _size = value;\n  }\n}\n\nclass ColoredBox extends Box {\n  void makeSmall() {\n    %fill% = 0.5;\n  }\n}\n```",
+    "answer": ["size"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final class restriction:\n\n```dart\n%order% class SealedClass {\n  void doSomething() {\n    print('Doing something');\n  }\n}\n\n// This will cause an error:\n// class ChildClass extends SealedClass { }\n```",
+    "options": [
+      "final"
+    ],
+    "answer": [
+      "final"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the final keyword do to a class?\n\n```dart\nfinal class CannotExtend {\n  void method() { }\n}\n```",
+    "options": [
+      "Prevents the class from being extended",
+      "Makes all methods final",
+      "Makes the class abstract",
+      "Makes the class static"
+    ],
+    "answer": ["Prevents the class from being extended"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the composition alternative:\n\n```dart\nclass Engine {\n  void start() => print('Engine starting');\n}\n\nclass Car {\n  Engine %fill% = Engine();\n  \n  void startCar() {\n    engine.start();\n  }\n}\n```",
+    "answer": ["engine"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the is-a relationship check:\n\n```dart\nclass Animal { }\nclass Dog extends Animal { }\n\nvoid main() {\n  Dog dog = Dog();\n  \n  %order% (dog %order% Animal) {\n    print('Dog is an Animal');\n  }\n}\n```",
+    "options": [
+      "if",
+      "is"
+    ],
+    "answer": [
+      "if",
+      "is"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this type checking return?\n\n```dart\nclass Vehicle { }\nclass Car extends Vehicle { }\n\nvoid main() {\n  Car car = Car();\n  print(car is Vehicle);\n  print(car is Car);\n}\n```",
+    "options": [
+      "true\\ntrue",
+      "false\\ntrue",
+      "true\\nfalse",
+      "false\\nfalse"
+    ],
+    "answer": ["true\\ntrue"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the type check operator:\n\n```dart\nclass Shape { }\nclass Circle extends Shape { }\n\nvoid main() {\n  Shape shape = Circle();\n  if (shape %fill% Circle) {\n    print('It\\'s a circle!');\n  }\n}\n```",
+    "answer": ["is"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the casting example:\n\n```dart\nclass Animal {\n  void eat() => print('Eating');\n}\n\nclass Dog extends Animal {\n  void bark() => print('Woof!');\n}\n\nvoid main() {\n  Animal animal = Dog();\n  \n  if (animal is Dog) {\n    (%order% %order% %order%).bark();\n  }\n}\n```",
+    "options": [
+      "animal",
+      "as",
+      "Dog"
+    ],
+    "answer": [
+      "animal",
+      "as",
+      "Dog"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does casting allow you to do?\n\n```dart\nAnimal animal = Dog();\nif (animal is Dog) {\n  (animal as Dog).bark();\n}\n```",
+    "options": [
+      "Access child class specific methods",
+      "Create new objects",
+      "Delete parent methods",
+      "Change the object type permanently"
+    ],
+    "answer": ["Access child class specific methods"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the safe casting:\n\n```dart\nclass Bird { }\nclass Eagle extends Bird {\n  void soar() => print('Soaring high!');\n}\n\nvoid main() {\n  Bird bird = Eagle();\n  Eagle? eagle = bird %fill% Eagle;\n  eagle?.soar();\n}\n```",
+    "answer": ["as"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the inheritance best practices:\n\n```dart\nclass BankAccount {\n  double _balance;\n  \n  BankAccount(this._balance);\n  \n  %order% double get balance => _balance;\n}\n\nclass SavingsAccount extends BankAccount {\n  SavingsAccount(double initialBalance) : super(initialBalance);\n}\n```",
+    "options": [
+      "double"
+    ],
+    "answer": [
+      "double"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the Liskov Substitution Principle?\n\n```dart\nAnimal animal = Dog(); // Should work\nanimal.makeSound(); // Should work correctly\n```",
+    "options": [
+      "Child objects should be substitutable for parent objects",
+      "Parent objects should be substitutable for child objects",
+      "Objects should not be substitutable",
+      "Only interfaces should be substitutable"
+    ],
+    "answer": ["Child objects should be substitutable for parent objects"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the proper inheritance design:\n\n```dart\nabstract class %fill% {\n  void move();\n}\n\nclass Car extends Vehicle {\n  @override\n  void move() {\n    print('Driving on road');\n  }\n}\n\nclass Boat extends Vehicle {\n  @override\n  void move() {\n    print('Sailing on water');\n  }\n}\n```",
+    "answer": ["Vehicle"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final inheritance example:\n\n```dart\nclass %order% {\n  String name;\n  SuperHero(this.name);\n  \n  void usePower() {\n    print('$name uses superpowers!');\n  }\n}\n\nclass %order% extends SuperHero {\n  FlyingHero(String name) : super(name);\n  \n  @override\n  void usePower() {\n    super.usePower();\n    print('$name flies through the sky! ✈️');\n  }\n}\n```",
+    "options": [
+      "SuperHero",
+      "FlyingHero"
+    ],
+    "answer": [
+      "SuperHero",
+      "FlyingHero"
+    ],
+    "type": "order"
+  }
+]

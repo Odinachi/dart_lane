@@ -47,17 +47,19 @@ class QuizModel extends Equatable {
     this.userAnswer,
   });
 
-  factory QuizModel.fromJson(Map<String, dynamic> json) => QuizModel(
-        question: json["question"],
-        options: json["options"] == null
-            ? []
-            : List<String>.from(json["options"]!.map((x) => x)),
-        // answer: json["answer"],
-        answer: json["answer"] == null
-            ? []
-            : List<String>.from(json["answer"]!.map((x) => x)),
-        type: json["type"],
-      );
+  factory QuizModel.fromJson(Map<String, dynamic> json) {
+    final opt = json["options"] == null ? [] : json["options"] as List?;
+    opt?.shuffle();
+    return QuizModel(
+      question: json["question"],
+      options: List<String>.from((opt ?? []).map((x) => x)),
+      // answer: json["answer"],
+      answer: json["answer"] == null
+          ? []
+          : List<String>.from(json["answer"]!.map((x) => x)),
+      type: json["type"],
+    );
+  }
 
   Map<String, dynamic> toJson() => {
         "question": question,

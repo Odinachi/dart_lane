@@ -175,7 +175,8 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=5PZj0MXckz4",
             "https://www.youtube.com/watch?v=dKrFJojxavU"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/classes.json"),
       CourseModel(
           title: "Inheritance",
           path: "assets/courses/inheritance.md",
@@ -184,7 +185,8 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=IPoHzLZZu08",
             "https://www.youtube.com/watch?v=m8QiP8L1T_4"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/inheritance.json"),
       CourseModel(
           title: "Abstract Class",
           path: "assets/courses/abstract_class.md",
@@ -193,7 +195,8 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=cTp9cV-tB_E",
             "https://www.youtube.com/watch?v=VAs7eHX-8fQ"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/abstract_class.json"),
       CourseModel(
           title: "Mixins",
           path: "assets/courses/mixins.md",
@@ -202,13 +205,15 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=VlG-K14YMe0",
             "https://www.youtube.com/watch?v=03X0QWT6zCw"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/mixins.json"),
       CourseModel(
           title: "Getters and Setters",
           path: "assets/courses/getters_setters.md",
           id: 19,
           desc: "Learn about getters and setters in Dart and how to use them.",
-          videos: ["https://www.youtube.com/watch?v=BPmqmaLY2_o"]),
+          videos: ["https://www.youtube.com/watch?v=BPmqmaLY2_o"],
+          quiz: "assets/jsons/quizzes/getters_setters.json"),
       CourseModel(
         title: "Anonymous Functions",
         path: "assets/courses/anonymous_functions.md",
@@ -217,6 +222,7 @@ class AppData {
         videos: [
           "https://www.youtube.com/watch?v=XTKKQdTAR0U",
         ],
+        quiz: "assets/jsons/quizzes/anonymous_functions.json",
       ),
       CourseModel(
           title: "Higher-Order Functions",
@@ -227,25 +233,29 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=DfZoyUDCbSg",
             "https://www.youtube.com/watch?v=nyzH2IM1bM0"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/higher_order_function.json"),
       CourseModel(
           title: "Closures",
           path: "assets/courses/closure.md",
           id: 22,
           desc: "Learn about closures in Dart and how to use them.",
-          videos: ["https://www.youtube.com/watch?v=NaxyY2Rq0j8"]),
+          videos: ["https://www.youtube.com/watch?v=NaxyY2Rq0j8"],
+          quiz: "assets/jsons/quizzes/closure.json"),
       CourseModel(
         title: "Try-Catch, finally",
         path: "assets/courses/try_catch_finally.md",
         id: 23,
         desc: "Learn about try-catch-finally in Dart and how to use it.",
+        quiz: "assets/jsons/quizzes/try_catch_finally.json",
       ),
       CourseModel(
           title: "Custom Exception",
           path: "assets/courses/custom_exception.md",
           id: 24,
           desc: "Learn about custom exceptions in Dart and how to use them.",
-          videos: ["https://www.youtube.com/watch?v=2uyMvzTr9xI"]),
+          videos: ["https://www.youtube.com/watch?v=2uyMvzTr9xI"],
+          quiz: "assets/jsons/quizzes/custom_exception.json"),
     ],
     "Advanced": [
       CourseModel(

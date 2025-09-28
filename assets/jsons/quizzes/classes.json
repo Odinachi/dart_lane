@@ -1,0 +1,618 @@
+[
+  {
+    "question": "Complete the class declaration:\n\n```dart\n%order% TeddyBear {\n  String color = 'Brown';\n  String size = 'Medium';\n}\n```",
+    "options": [
+      "class"
+    ],
+    "answer": [
+      "class"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nclass TeddyBear {\n  String color = 'Brown';\n  \n  void talk() {\n    print('Hi! I\\'m a $color teddy bear!');\n  }\n}\n\nvoid main() {\n  TeddyBear teddy = TeddyBear();\n  teddy.talk();\n}\n```",
+    "options": [
+      "Hi! I'm a Brown teddy bear!",
+      "Hi! I'm a color teddy bear!",
+      "TeddyBear",
+      "Error"
+    ],
+    "answer": ["Hi! I'm a Brown teddy bear!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the keyword to create a class:\n\n```dart\n%fill% Robot {\n  String name = 'Robo';\n}\n```",
+    "answer": ["class"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the object creation:\n\n```dart\nclass Toy {\n  String name = 'Ball';\n}\n\nvoid main() {\n  %order% toy = %order%();\n}\n```",
+    "options": [
+      "Toy",
+      "Toy"
+    ],
+    "answer": [
+      "Toy",
+      "Toy"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is a class in Dart?\n\n```dart\nclass Animal {\n  String name = 'Pet';\n  void makeSound() {\n    print('Some sound');\n  }\n}\n```",
+    "options": [
+      "A blueprint or template for creating objects",
+      "A function that returns values",
+      "A variable that stores data",
+      "A loop that repeats code"
+    ],
+    "answer": ["A blueprint or template for creating objects"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the property access:\n\n```dart\nclass Car {\n  String brand = 'Toyota';\n}\n\nvoid main() {\n  Car myCar = Car();\n  print(myCar%fill%brand);\n}\n```",
+    "answer": ["."],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the constructor:\n\n```dart\nclass Student {\n  String name;\n  int age;\n  \n  %order%(%order% %order%, %order% %order%);\n}\n```",
+    "options": [
+      "Student",
+      "this.name",
+      "this.age"
+    ],
+    "answer": [
+      "Student",
+      "this.name",
+      "this.age"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this constructor do?\n\n```dart\nclass Book {\n  String title;\n  String author;\n  \n  Book(this.title, this.author);\n}\n\nvoid main() {\n  Book myBook = Book('Dart Guide', 'John Doe');\n  print('${myBook.title} by ${myBook.author}');\n}\n```",
+    "options": [
+      "Dart Guide by John Doe",
+      "title by author",
+      "Book by Book",
+      "Error"
+    ],
+    "answer": ["Dart Guide by John Doe"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the this keyword:\n\n```dart\nclass Circle {\n  double radius;\n  \n  Circle(%fill%.radius);\n}\n```",
+    "answer": ["this"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the method definition:\n\n```dart\nclass Dog {\n  String name = 'Buddy';\n  \n  %order% bark() {\n    print('$name says: Woof!');\n  }\n}\n```",
+    "options": [
+      "void"
+    ],
+    "answer": [
+      "void"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this method output?\n\n```dart\nclass Cat {\n  String name = 'Whiskers';\n  \n  void meow() {\n    print('$name says: Meow!');\n  }\n}\n\nvoid main() {\n  Cat myCat = Cat();\n  myCat.meow();\n}\n```",
+    "options": [
+      "Whiskers says: Meow!",
+      "name says: Meow!",
+      "Cat says: Meow!",
+      "Error"
+    ],
+    "answer": ["Whiskers says: Meow!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method call:\n\n```dart\nclass Robot {\n  void move() {\n    print('Robot is moving');\n  }\n}\n\nvoid main() {\n  Robot bot = Robot();\n  bot.%fill%();\n}\n```",
+    "answer": ["move"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the class with multiple properties:\n\n```dart\nclass Person {\n  String %order%;\n  int %order%;\n  String %order%;\n  \n  Person(this.name, this.age, this.city);\n}\n```",
+    "options": [
+      "name",
+      "age",
+      "city"
+    ],
+    "answer": [
+      "name",
+      "age", 
+      "city"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is an object?\n\n```dart\nclass Phone {\n  String brand = 'iPhone';\n}\n\nvoid main() {\n  Phone myPhone = Phone(); // This is an object\n}\n```",
+    "options": [
+      "An instance created from a class",
+      "A method inside a class",
+      "A property of a class",
+      "A constructor parameter"
+    ],
+    "answer": ["An instance created from a class"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the object variable:\n\n```dart\nclass Game {\n  String title = 'Chess';\n}\n\nvoid main() {\n  Game %fill% = Game();\n  print(myGame.title);\n}\n```",
+    "answer": ["myGame"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the return type method:\n\n```dart\nclass Calculator {\n  %order% add(int a, int b) {\n    return a + b;\n  }\n}\n```",
+    "options": [
+      "int"
+    ],
+    "answer": [
+      "int"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this method return?\n\n```dart\nclass MathHelper {\n  int multiply(int x, int y) {\n    return x * y;\n  }\n}\n\nvoid main() {\n  MathHelper helper = MathHelper();\n  print(helper.multiply(5, 4));\n}\n```",
+    "options": [
+      "20",
+      "9",
+      "5",
+      "Error"
+    ],
+    "answer": ["20"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the return statement:\n\n```dart\nclass StringHelper {\n  String greet(String name) {\n    %fill% 'Hello, $name!';\n  }\n}\n```",
+    "answer": ["return"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the class with default constructor:\n\n```dart\nclass Laptop {\n  String brand = 'Dell';\n  int ram = 8;\n  \n  %order%() {\n    print('Laptop created!');\n  }\n}\n```",
+    "options": [
+      "Laptop"
+    ],
+    "answer": [
+      "Laptop"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this constructor print?\n\n```dart\nclass Smartphone {\n  String model = 'Galaxy';\n  \n  Smartphone() {\n    print('New smartphone: $model');\n  }\n}\n\nvoid main() {\n  Smartphone phone = Smartphone();\n}\n```",
+    "options": [
+      "New smartphone: Galaxy",
+      "New smartphone: model",
+      "Smartphone",
+      "Error"
+    ],
+    "answer": ["New smartphone: Galaxy"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the constructor body:\n\n```dart\nclass Tablet {\n  String name;\n  \n  Tablet(this.name) {\n    print('Created tablet: %fill%');\n  }\n}\n```",
+    "answer": ["$name"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the named constructor:\n\n```dart\nclass Rectangle {\n  double width;\n  double height;\n  \n  Rectangle(this.width, this.height);\n  \n  Rectangle.%order%(double side) : width = side, height = side;\n}\n```",
+    "options": [
+      "square"
+    ],
+    "answer": [
+      "square"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this named constructor create?\n\n```dart\nclass Circle {\n  double radius;\n  \n  Circle(this.radius);\n  \n  Circle.small() : radius = 1.0;\n}\n\nvoid main() {\n  Circle smallCircle = Circle.small();\n  print('Radius: ${smallCircle.radius}');\n}\n```",
+    "options": [
+      "Radius: 1.0",
+      "Radius: 0.0",
+      "Error",
+      "Radius: small"
+    ],
+    "answer": ["Radius: 1.0"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the initializer list:\n\n```dart\nclass Point {\n  int x;\n  int y;\n  \n  Point.origin() %fill% x = 0, y = 0;\n}\n```",
+    "answer": [":"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the private property:\n\n```dart\nclass BankAccount {\n  double %order%balance = 1000.0;\n  \n  double getBalance() {\n    return _balance;\n  }\n}\n```",
+    "options": [
+      "_"
+    ],
+    "answer": [
+      "_"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the underscore prefix mean?\n\n```dart\nclass User {\n  String _password = 'secret123';\n  String name = 'John';\n}\n```",
+    "options": [
+      "Makes the property private to the library",
+      "Makes the property constant",
+      "Makes the property static",
+      "It's just a naming convention"
+    ],
+    "answer": ["Makes the property private to the library"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the private variable access:\n\n```dart\nclass Account {\n  double _amount = 500.0;\n  \n  void showAmount() {\n    print('Amount: %fill%');\n  }\n}\n```",
+    "answer": ["$_amount"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the static property:\n\n```dart\nclass Counter {\n  %order% int count = 0;\n  \n  void increment() {\n    count++;\n  }\n}\n```",
+    "options": [
+      "static"
+    ],
+    "answer": [
+      "static"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do you access a static property?\n\n```dart\nclass MathUtils {\n  static double pi = 3.14159;\n}\n\nvoid main() {\n  print(???);\n}\n```",
+    "options": [
+      "MathUtils.pi",
+      "MathUtils().pi",
+      "static.pi",
+      "pi"
+    ],
+    "answer": ["MathUtils.pi"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the static access:\n\n```dart\nclass AppConfig {\n  static String version = '1.0.0';\n}\n\nvoid main() {\n  print(AppConfig%fill%version);\n}\n```",
+    "answer": ["."],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the static method:\n\n```dart\nclass Utility {\n  %order% %order% max(int a, int b) {\n    return a > b ? a : b;\n  }\n}\n```",
+    "options": [
+      "static",
+      "int"
+    ],
+    "answer": [
+      "static",
+      "int"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this static method return?\n\n```dart\nclass Helper {\n  static String capitalize(String text) {\n    return text.substring(0, 1).toUpperCase() + text.substring(1);\n  }\n}\n\nvoid main() {\n  print(Helper.capitalize('hello'));\n}\n```",
+    "options": [
+      "Hello",
+      "HELLO",
+      "hello",
+      "Error"
+    ],
+    "answer": ["Hello"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the static method call:\n\n```dart\nclass DateHelper {\n  static String getCurrentYear() {\n    return DateTime.now().year.toString();\n  }\n}\n\nvoid main() {\n  print(DateHelper.%fill%());\n}\n```",
+    "answer": ["getCurrentYear"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final property:\n\n```dart\nclass Constants {\n  %order% String appName = 'MyApp';\n  %order% double version = 1.5;\n}\n```",
+    "options": [
+      "final",
+      "final"
+    ],
+    "answer": [
+      "final",
+      "final"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens with final properties?\n\n```dart\nclass Settings {\n  final String theme = 'dark';\n}\n\nvoid main() {\n  Settings config = Settings();\n  config.theme = 'light'; // What happens?\n}\n```",
+    "options": [
+      "Compilation error - cannot modify final property",
+      "Property changes to 'light'",
+      "Runtime error",
+      "Nothing happens"
+    ],
+    "answer": ["Compilation error - cannot modify final property"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the const keyword:\n\n```dart\nclass Colors {\n  %fill% String primary = 'blue';\n  %fill% String secondary = 'green';\n}\n```",
+    "answer": ["static const", "static const"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the toString method:\n\n```dart\nclass Product {\n  String name;\n  double price;\n  \n  Product(this.name, this.price);\n  \n  %order%\n  String %order%() {\n    return 'Product: $name - \\$$price';\n  }\n}\n```",
+    "options": [
+      "@override",
+      "toString"
+    ],
+    "answer": [
+      "@override",
+      "toString"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this toString method output?\n\n```dart\nclass Employee {\n  String name;\n  int id;\n  \n  Employee(this.name, this.id);\n  \n  @override\n  String toString() {\n    return 'Employee: $name (ID: $id)';\n  }\n}\n\nvoid main() {\n  Employee emp = Employee('Alice', 123);\n  print(emp);\n}\n```",
+    "options": [
+      "Employee: Alice (ID: 123)",
+      "Employee",
+      "Alice 123",
+      "Error"
+    ],
+    "answer": ["Employee: Alice (ID: 123)"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the override annotation:\n\n```dart\nclass Vehicle {\n  String model;\n  \n  Vehicle(this.model);\n  \n  %fill%\n  String toString() {\n    return 'Vehicle: $model';\n  }\n}\n```",
+    "answer": ["@override"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the factory constructor:\n\n```dart\nclass Singleton {\n  static Singleton? _instance;\n  \n  Singleton._internal();\n  \n  %order% Singleton.%order%() {\n    _instance ??= Singleton._internal();\n    return _instance!;\n  }\n}\n```",
+    "options": [
+      "factory",
+      "getInstance"
+    ],
+    "answer": [
+      "factory",
+      "getInstance"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does a factory constructor do?\n\n```dart\nclass Logger {\n  static Logger? _instance;\n  \n  Logger._();\n  \n  factory Logger() {\n    return _instance ??= Logger._();\n  }\n}\n```",
+    "options": [
+      "Can return existing instances instead of always creating new ones",
+      "Always creates new instances",
+      "Cannot return any value",
+      "Only works with static methods"
+    ],
+    "answer": ["Can return existing instances instead of always creating new ones"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-aware operator:\n\n```dart\nclass Cache {\n  static Cache? _instance;\n  \n  Cache._private();\n  \n  factory Cache() {\n    return _instance %fill%%fill% Cache._private();\n  }\n}\n```",
+    "answer": ["?", "="],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the operator overloading:\n\n```dart\nclass Point {\n  int x, y;\n  \n  Point(this.x, this.y);\n  \n  Point %order%(Point other) {\n    return Point(x + other.x, y + other.y);\n  }\n}\n```",
+    "options": [
+      "operator +"
+    ],
+    "answer": [
+      "operator +"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this operator do?\n\n```dart\nclass Vector {\n  double x, y;\n  \n  Vector(this.x, this.y);\n  \n  Vector operator *(double scalar) {\n    return Vector(x * scalar, y * scalar);\n  }\n}\n\nvoid main() {\n  Vector v = Vector(2, 3);\n  Vector result = v * 2;\n  print('${result.x}, ${result.y}');\n}\n```",
+    "options": [
+      "4.0, 6.0",
+      "2.0, 3.0",
+      "4, 5",
+      "Error"
+    ],
+    "answer": ["4.0, 6.0"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the operator keyword:\n\n```dart\nclass Money {\n  double amount;\n  \n  Money(this.amount);\n  \n  Money %fill% +(Money other) {\n    return Money(amount + other.amount);\n  }\n}\n```",
+    "answer": ["operator"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the equality operator:\n\n```dart\nclass Person {\n  String name;\n  int age;\n  \n  Person(this.name, this.age);\n  \n  %order%\n  bool %order%(Object other) {\n    return other is Person && name == other.name && age == other.age;\n  }\n}\n```",
+    "options": [
+      "@override",
+      "operator =="
+    ],
+    "answer": [
+      "@override",
+      "operator =="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this equality check return?\n\n```dart\nclass Student {\n  String name;\n  int id;\n  \n  Student(this.name, this.id);\n  \n  @override\n  bool operator ==(Object other) {\n    return other is Student && name == other.name && id == other.id;\n  }\n}\n\nvoid main() {\n  Student s1 = Student('John', 1);\n  Student s2 = Student('John', 1);\n  print(s1 == s2);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the hashCode override:\n\n```dart\nclass Item {\n  String name;\n  double price;\n  \n  Item(this.name, this.price);\n  \n  @override\n  bool operator ==(Object other) {\n    return other is Item && name == other.name && price == other.price;\n  }\n  \n  @override\n  int get %fill% => Object.hash(name, price);\n}\n```",
+    "answer": ["hashCode"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the cascade notation usage:\n\n```dart\nclass Car {\n  String? brand;\n  String? model;\n  int? year;\n  \n  void setBrand(String b) => brand = b;\n  void setModel(String m) => model = m;\n  void setYear(int y) => year = y;\n}\n\nvoid main() {\n  Car car = Car()\n    %order%setBrand('Toyota')\n    %order%setModel('Camry')\n    %order%setYear(2023);\n}\n```",
+    "options": [
+      "..",
+      "..",
+      ".."
+    ],
+    "answer": [
+      "..",
+      "..",
+      ".."
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does cascade notation do?\n\n```dart\nList<int> numbers = []\n  ..add(1)\n  ..add(2)\n  ..add(3);\n```",
+    "options": [
+      "Allows multiple operations on the same object",
+      "Creates multiple objects",
+      "Performs operations in parallel",
+      "Only works with lists"
+    ],
+    "answer": ["Allows multiple operations on the same object"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the cascade operator:\n\n```dart\nclass StringBuilder {\n  String _content = '';\n  \n  void append(String text) {\n    _content += text;\n  }\n  \n  @override\n  String toString() => _content;\n}\n\nvoid main() {\n  String result = (StringBuilder()\n    %fill%append('Hello')\n    %fill%append(' ')\n    %fill%append('World')).toString();\n}\n```",
+    "answer": ["..", "..", ".."],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin usage:\n\n```dart\nmixin Flyable {\n  void fly() {\n    print('Flying!');\n  }\n}\n\nclass Bird %order% Flyable {\n  void chirp() {\n    print('Chirp!');\n  }\n}\n```",
+    "options": [
+      "with"
+    ],
+    "answer": [
+      "with"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this mixin combination do?\n\n```dart\nmixin Swimmer {\n  void swim() => print('Swimming');\n}\n\nmixin Flyer {\n  void fly() => print('Flying');\n}\n\nclass Duck with Swimmer, Flyer {\n  void quack() => print('Quack');\n}\n\nvoid main() {\n  Duck duck = Duck();\n  duck.swim();\n  duck.fly();\n  duck.quack();\n}\n```",
+    "options": [
+      "Swimming\\nFlying\\nQuack",
+      "Quack\\nSwimming\\nFlying",
+      "Error",
+      "Only Quack"
+    ],
+    "answer": ["Swimming\\nFlying\\nQuack"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the mixin keyword:\n\n```dart\n%fill% Drawable {\n  void draw() {\n    print('Drawing...');\n  }\n}\n\nclass Shape with Drawable {\n  String color = 'red';\n}\n```",
+    "answer": ["mixin"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the abstract class:\n\n```dart\n%order% class Animal {\n  %order% void makeSound();\n  \n  void sleep() {\n    print('Sleeping...');\n  }\n}\n```",
+    "options": [
+      "abstract",
+      "void"
+    ],
+    "answer": [
+      "abstract",
+      "void"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What must a class do when extending an abstract class?\n\n```dart\nabstract class Vehicle {\n  void startEngine();\n}\n\nclass Car extends Vehicle {\n  // What must be here?\n}\n```",
+    "options": [
+      "Must implement all abstract methods",
+      "Must call super constructor",
+      "Must be abstract too",
+      "Nothing special required"
+    ],
+    "answer": ["Must implement all abstract methods"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the implementation:\n\n```dart\nabstract class Shape {\n  double calculateArea();\n}\n\nclass Rectangle extends Shape {\n  double width, height;\n  \n  Rectangle(this.width, this.height);\n  \n  %fill%\n  double calculateArea() {\n    return width * height;\n  }\n}\n```",
+    "answer": ["@override"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the interface implementation:\n\n```dart\nabstract class Drawable {\n  void draw();\n}\n\nclass Circle %order% Drawable {\n  @override\n  void draw() {\n    print('Drawing a circle');\n  }\n}\n```",
+    "options": [
+      "implements"
+    ],
+    "answer": [
+      "implements"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's the difference between extends and implements?\n\n```dart\nclass A extends B { }  // inheritance\nclass A implements B { }  // interface\n```",
+    "options": [
+      "extends inherits implementation, implements only requires interface",
+      "No difference between them",
+      "implements is faster than extends",
+      "extends is for abstract classes only"
+    ],
+    "answer": ["extends inherits implementation, implements only requires interface"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the implements keyword:\n\n```dart\nabstract class Comparable {\n  int compareTo(Object other);\n}\n\nclass Person %fill% Comparable {\n  String name;\n  Person(this.name);\n  \n  @override\n  int compareTo(Object other) {\n    return name.compareTo((other as Person).name);\n  }\n}\n```",
+    "answer": ["implements"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the generic class:\n\n```dart\nclass Container<%order%> {\n  T value;\n  \n  Container(this.value);\n  \n  T getValue() {\n    return value;\n  }\n}\n```",
+    "options": [
+      "T"
+    ],
+    "answer": [
+      "T"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this generic class store?\n\n```dart\nclass Box<T> {\n  T item;\n  \n  Box(this.item);\n  \n  T getItem() => item;\n}\n\nvoid main() {\n  Box<String> stringBox = Box('Hello');\n  Box<int> intBox = Box(42);\n  \n  print(stringBox.getItem());\n  print(intBox.getItem());\n}\n```",
+    "options": [
+      "Hello\\n42",
+      "String\\nint",
+      "Box\\nBox",
+      "Error"
+    ],
+    "answer": ["Hello\\n42"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the generic type:\n\n```dart\nclass Stack<%fill%> {\n  List<T> _items = [];\n  \n  void push(T item) {\n    _items.add(item);\n  }\n  \n  T? pop() {\n    return _items.isNotEmpty ? _items.removeLast() : null;\n  }\n}\n```",
+    "answer": ["T"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the extension method:\n\n```dart\n%order% StringExtension %order% String {\n  String capitalize() {\n    return this.substring(0, 1).toUpperCase() + this.substring(1);\n  }\n}\n```",
+    "options": [
+      "extension",
+      "on"
+    ],
+    "answer": [
+      "extension",
+      "on"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this extension method do?\n\n```dart\nextension MathExtension on int {\n  int square() {\n    return this * this;\n  }\n}\n\nvoid main() {\n  print(5.square());\n}\n```",
+    "options": [
+      "25",
+      "10",
+      "5",
+      "Error"
+    ],
+    "answer": ["25"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the extension usage:\n\n```dart\nextension ListExtension<T> on List<T> {\n  T? get firstOrNull {\n    return isEmpty ? null : first;\n  }\n}\n\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.%fill%);\n}\n```",
+    "answer": ["firstOrNull"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final class example:\n\n```dart\nclass %order% {\n  final String %order%;\n  final int %order%;\n  final List<String> %order%;\n  \n  GamePlayer(this.name, this.level, this.achievements);\n  \n  void displayInfo() {\n    print('Player: $name, Level: $level');\n    print('Achievements: ${achievements.join(', ')}');\n  }\n  \n  @override\n  String toString() {\n    return 'GamePlayer: $name (Level $level)';\n  }\n}\n```",
+    "options": [
+      "GamePlayer",
+      "name",
+      "level", 
+      "achievements"
+    ],
+    "answer": [
+      "GamePlayer",
+      "name",
+      "level",
+      "achievements"
+    ],
+    "type": "order"
+  }
+]

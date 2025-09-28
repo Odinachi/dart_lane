@@ -1,0 +1,526 @@
+[
+  {
+    "question": "Complete the getter method:\n\n```dart\nclass ToyBox {\n  String _toy = 'Teddy Bear';\n  \n  String %order% toy {\n    return _toy;\n  }\n}\n```",
+    "options": [
+      "get"
+    ],
+    "answer": [
+      "get"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this getter return?\n\n```dart\nclass ToyBox {\n  String _toy = 'Robot';\n  \n  String get toy {\n    print('Opening the toy box...');\n    return _toy;\n  }\n}\n\nvoid main() {\n  ToyBox box = ToyBox();\n  print(box.toy);\n}\n```",
+    "options": [
+      "Opening the toy box...\\nRobot",
+      "Robot",
+      "_toy",
+      "Error"
+    ],
+    "answer": ["Opening the toy box...\\nRobot"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the private variable prefix:\n\n```dart\nclass Container {\n  String %fill%item = 'Book';\n  \n  String get item {\n    return _item;\n  }\n}\n```",
+    "answer": ["_"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the setter method:\n\n```dart\nclass ToyBox {\n  String _toy = 'Teddy Bear';\n  \n  %order% toy(String newToy) {\n    _toy = newToy;\n  }\n}\n```",
+    "options": [
+      "set"
+    ],
+    "answer": [
+      "set"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this setter do?\n\n```dart\nclass ToyBox {\n  String _toy = 'Teddy Bear';\n  \n  set toy(String newToy) {\n    print('Putting $newToy in the toy box...');\n    _toy = newToy;\n  }\n}\n\nvoid main() {\n  ToyBox box = ToyBox();\n  box.toy = 'Robot';\n}\n```",
+    "options": [
+      "Prints message and changes _toy to 'Robot'",
+      "Only prints the message",
+      "Only changes _toy to 'Robot'",
+      "Error"
+    ],
+    "answer": ["Prints message and changes _toy to 'Robot'"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the setter parameter:\n\n```dart\nclass Box {\n  String _content = '';\n  \n  set content(String %fill%) {\n    _content = newContent;\n  }\n}\n```",
+    "answer": ["newContent"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the getter and setter together:\n\n```dart\nclass Circle {\n  double _radius = 1.0;\n  \n  double %order% radius {\n    return _radius;\n  }\n  \n  %order% radius(double newRadius) {\n    _radius = newRadius;\n  }\n}\n```",
+    "options": [
+      "get",
+      "set"
+    ],
+    "answer": [
+      "get",
+      "set"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's the purpose of the underscore in `_radius`?\n\n```dart\nclass Circle {\n  double _radius = 1.0;\n}\n```",
+    "options": [
+      "Makes the variable private to the library",
+      "Makes the variable public",
+      "It's just a naming convention with no effect",
+      "Makes the variable constant"
+    ],
+    "answer": ["Makes the variable private to the library"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the return statement in getter:\n\n```dart\nclass Student {\n  String _name = 'Alice';\n  \n  String get name {\n    %fill% _name;\n  }\n}\n```",
+    "answer": ["return"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the computed getter:\n\n```dart\nclass Rectangle {\n  double width = 5.0;\n  double height = 3.0;\n  \n  double %order% area {\n    return width * height;\n  }\n}\n```",
+    "options": [
+      "get"
+    ],
+    "answer": [
+      "get"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this computed getter return?\n\n```dart\nclass Rectangle {\n  double width = 4.0;\n  double height = 6.0;\n  \n  double get area {\n    return width * height;\n  }\n}\n\nvoid main() {\n  Rectangle rect = Rectangle();\n  print(rect.area);\n}\n```",
+    "options": [
+      "24.0",
+      "10.0",
+      "4.0",
+      "Error"
+    ],
+    "answer": ["24.0"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the computation in getter:\n\n```dart\nclass Circle {\n  double radius = 5.0;\n  \n  double get circumference {\n    return 2 * 3.14159 * %fill%;\n  }\n}\n```",
+    "answer": ["radius"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the setter with validation:\n\n```dart\nclass Person {\n  int _age = 0;\n  \n  set age(%order% newAge) {\n    %order% (newAge >= 0) {\n      _age = newAge;\n    }\n  }\n}\n```",
+    "options": [
+      "int",
+      "if"
+    ],
+    "answer": [
+      "int",
+      "if"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this validated setter do with negative input?\n\n```dart\nclass Person {\n  int _age = 0;\n  \n  set age(int newAge) {\n    if (newAge >= 0) {\n      _age = newAge;\n    } else {\n      print('Age cannot be negative!');\n    }\n  }\n}\n\nvoid main() {\n  Person person = Person();\n  person.age = -5;\n}\n```",
+    "options": [
+      "Age cannot be negative!",
+      "Sets age to -5",
+      "Sets age to 0",
+      "Error"
+    ],
+    "answer": ["Age cannot be negative!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the validation condition:\n\n```dart\nclass BankAccount {\n  double _balance = 0.0;\n  \n  set balance(double amount) {\n    if (amount %fill% 0) {\n      _balance = amount;\n    }\n  }\n}\n```",
+    "answer": [">="],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the getter with arrow syntax:\n\n```dart\nclass Square {\n  double side = 5.0;\n  \n  double get area %order% side * side;\n}\n```",
+    "options": [
+      "=>"
+    ],
+    "answer": [
+      "=>"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this arrow getter return?\n\n```dart\nclass Triangle {\n  double base = 8.0;\n  double height = 6.0;\n  \n  double get area => (base * height) / 2;\n}\n\nvoid main() {\n  Triangle triangle = Triangle();\n  print(triangle.area);\n}\n```",
+    "options": [
+      "24.0",
+      "14.0",
+      "48.0",
+      "Error"
+    ],
+    "answer": ["24.0"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the arrow syntax:\n\n```dart\nclass Person {\n  String firstName = 'John';\n  String lastName = 'Doe';\n  \n  String get fullName %fill% '$firstName $lastName';\n}\n```",
+    "answer": ["=>"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the setter with arrow syntax:\n\n```dart\nclass Temperature {\n  double _celsius = 0.0;\n  \n  double get celsius => _celsius;\n  \n  %order% celsius(double value) %order% _celsius = value;\n}\n```",
+    "options": [
+      "set",
+      "=>"
+    ],
+    "answer": [
+      "set",
+      "=>"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when you call both getter and setter?\n\n```dart\nclass Counter {\n  int _count = 0;\n  \n  int get count {\n    print('Getting count: $_count');\n    return _count;\n  }\n  \n  set count(int value) {\n    print('Setting count to: $value');\n    _count = value;\n  }\n}\n\nvoid main() {\n  Counter counter = Counter();\n  counter.count = 5;\n  print(counter.count);\n}\n```",
+    "options": [
+      "Setting count to: 5\\nGetting count: 5\\n5",
+      "Getting count: 5\\nSetting count to: 5\\n5",
+      "5",
+      "Error"
+    ],
+    "answer": ["Setting count to: 5\\nGetting count: 5\\n5"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the getter call:\n\n```dart\nclass Book {\n  String _title = 'Dart Guide';\n  \n  String get title => _title;\n}\n\nvoid main() {\n  Book book = Book();\n  print(book.%fill%);\n}\n```",
+    "answer": ["title"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the read-only property:\n\n```dart\nclass Car {\n  String _model = 'Tesla';\n  \n  String %order% model => _model;\n  \n  // No setter - read-only!\n}\n```",
+    "options": [
+      "get"
+    ],
+    "answer": [
+      "get"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when you try to set a read-only property?\n\n```dart\nclass ReadOnly {\n  String _value = 'constant';\n  \n  String get value => _value;\n  // No setter provided\n}\n\nvoid main() {\n  ReadOnly obj = ReadOnly();\n  obj.value = 'new'; // What happens?\n}\n```",
+    "options": [
+      "Compilation error - no setter defined",
+      "Value changes to 'new'",
+      "Runtime error",
+      "Nothing happens"
+    ],
+    "answer": ["Compilation error - no setter defined"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the write-only property:\n\n```dart\nclass Password {\n  String _password = '';\n  \n  %fill% password(String newPassword) {\n    _password = newPassword;\n  }\n  \n  // No getter - write-only!\n}\n```",
+    "answer": ["set"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the getter with transformation:\n\n```dart\nclass User {\n  String _name = 'john doe';\n  \n  String %order% name {\n    return _name.toUpperCase();\n  }\n}\n```",
+    "options": [
+      "get"
+    ],
+    "answer": [
+      "get"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this transforming getter return?\n\n```dart\nclass Email {\n  String _email = 'John@Example.COM';\n  \n  String get email {\n    return _email.toLowerCase();\n  }\n}\n\nvoid main() {\n  Email emailObj = Email();\n  print(emailObj.email);\n}\n```",
+    "options": [
+      "john@example.com",
+      "John@Example.COM",
+      "JOHN@EXAMPLE.COM",
+      "Error"
+    ],
+    "answer": ["john@example.com"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the string method:\n\n```dart\nclass Title {\n  String _title = 'dart programming';\n  \n  String get title {\n    return _title.%fill%();\n  }\n}\n```",
+    "answer": ["toUpperCase"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the setter with transformation:\n\n```dart\nclass Name {\n  String _name = '';\n  \n  %order% name(String newName) {\n    _name = newName.trim().toLowerCase();\n  }\n}\n```",
+    "options": [
+      "set"
+    ],
+    "answer": [
+      "set"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this transforming setter store?\n\n```dart\nclass Username {\n  String _username = '';\n  \n  set username(String value) {\n    _username = value.trim().toLowerCase();\n  }\n  \n  String get username => _username;\n}\n\nvoid main() {\n  Username user = Username();\n  user.username = '  ALICE  ';\n  print(user.username);\n}\n```",
+    "options": [
+      "alice",
+      "  ALICE  ",
+      "ALICE",
+      "Error"
+    ],
+    "answer": ["alice"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the string methods:\n\n```dart\nclass CleanText {\n  String _text = '';\n  \n  set text(String value) {\n    _text = value.%fill%().%fill%();\n  }\n}\n```",
+    "answer": ["trim", "toLowerCase"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the calculated property:\n\n```dart\nclass Employee {\n  double hourlyRate = 20.0;\n  int hoursWorked = 40;\n  \n  double %order% salary {\n    return hourlyRate * hoursWorked;\n  }\n}\n```",
+    "options": [
+      "get"
+    ],
+    "answer": [
+      "get"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this calculated property return?\n\n```dart\nclass Product {\n  double price = 10.0;\n  double taxRate = 0.08;\n  \n  double get totalPrice {\n    return price + (price * taxRate);\n  }\n}\n\nvoid main() {\n  Product product = Product();\n  print(product.totalPrice);\n}\n```",
+    "options": [
+      "10.8",
+      "10.0",
+      "0.8",
+      "Error"
+    ],
+    "answer": ["10.8"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the calculation:\n\n```dart\nclass Rectangle {\n  double width = 5.0;\n  double height = 3.0;\n  \n  double get perimeter {\n    return 2 * (%fill% + %fill%);\n  }\n}\n```",
+    "answer": ["width", "height"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the cached property:\n\n```dart\nclass ExpensiveCalculation {\n  int _input = 10;\n  double? _cachedResult;\n  \n  double %order% result {\n    _cachedResult ??= _input * _input * 1.5;\n    return _cachedResult!;\n  }\n}\n```",
+    "options": [
+      "get"
+    ],
+    "answer": [
+      "get"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does caching in getters do?\n\n```dart\nclass SlowCalculation {\n  int value = 5;\n  int? _cachedSquare;\n  \n  int get square {\n    if (_cachedSquare == null) {\n      print('Computing square...');\n      _cachedSquare = value * value;\n    }\n    return _cachedSquare!;\n  }\n}\n```",
+    "options": [
+      "Calculates once and stores result for future calls",
+      "Always recalculates the value",
+      "Makes the calculation faster every time",
+      "Prevents the getter from working"
+    ],
+    "answer": ["Calculates once and stores result for future calls"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-aware operator:\n\n```dart\nclass Cached {\n  int _value = 10;\n  int? _cached;\n  \n  int get processed {\n    _cached %fill%%fill% _value * 2;\n    return _cached!;\n  }\n}\n```",
+    "answer": ["?", "="],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the property with both getter and setter:\n\n```dart\nclass Temperature {\n  double _fahrenheit = 32.0;\n  \n  double %order% celsius {\n    return (_fahrenheit - 32) * 5 / 9;\n  }\n  \n  %order% celsius(double value) {\n    _fahrenheit = value * 9 / 5 + 32;\n  }\n}\n```",
+    "options": [
+      "get",
+      "set"
+    ],
+    "answer": [
+      "get",
+      "set"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this temperature converter do?\n\n```dart\nclass TempConverter {\n  double _fahrenheit = 68.0;\n  \n  double get celsius => (_fahrenheit - 32) * 5 / 9;\n  \n  set celsius(double value) {\n    _fahrenheit = value * 9 / 5 + 32;\n  }\n}\n\nvoid main() {\n  TempConverter temp = TempConverter();\n  print(temp.celsius);\n  temp.celsius = 0;\n  print(temp.celsius);\n}\n```",
+    "options": [
+      "20.0\\n0.0",
+      "68.0\\n32.0",
+      "20.0\\n32.0",
+      "Error"
+    ],
+    "answer": ["20.0\\n0.0"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the conversion formula:\n\n```dart\nclass Distance {\n  double _meters = 1000.0;\n  \n  double get kilometers => _meters / %fill%;\n  \n  set kilometers(double value) {\n    _meters = value * 1000;\n  }\n}\n```",
+    "answer": ["1000"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the boolean property:\n\n```dart\nclass Light {\n  bool _isOn = false;\n  \n  bool %order% isOn => _isOn;\n  \n  %order% isOn(bool value) {\n    _isOn = value;\n    print(value ? 'Light turned on' : 'Light turned off');\n  }\n}\n```",
+    "options": [
+      "get",
+      "set"
+    ],
+    "answer": [
+      "get",
+      "set"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this boolean property output?\n\n```dart\nclass Switch {\n  bool _state = false;\n  \n  bool get state => _state;\n  \n  set state(bool value) {\n    _state = value;\n    print('Switch is ${value ? \"ON\" : \"OFF\"}');\n  }\n}\n\nvoid main() {\n  Switch mySwitch = Switch();\n  mySwitch.state = true;\n  mySwitch.state = false;\n}\n```",
+    "options": [
+      "Switch is ON\\nSwitch is OFF",
+      "Switch is OFF\\nSwitch is ON",
+      "true\\nfalse",
+      "Error"
+    ],
+    "answer": ["Switch is ON\\nSwitch is OFF"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the conditional operator:\n\n```dart\nclass Status {\n  bool active = true;\n  \n  String get status => active %fill% 'Active' : 'Inactive';\n}\n```",
+    "answer": ["?"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the list property:\n\n```dart\nclass ShoppingCart {\n  List<String> _items = [];\n  \n  List<String> %order% items => List.unmodifiable(_items);\n  \n  void addItem(String item) {\n    _items.add(item);\n  }\n}\n```",
+    "options": [
+      "get"
+    ],
+    "answer": [
+      "get"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why return an unmodifiable list in the getter?\n\n```dart\nclass Container {\n  List<int> _numbers = [1, 2, 3];\n  \n  List<int> get numbers => List.unmodifiable(_numbers);\n}\n```",
+    "options": [
+      "Prevents external code from modifying the internal list",
+      "Makes the list faster to access",
+      "Reduces memory usage",
+      "It's required by Dart"
+    ],
+    "answer": ["Prevents external code from modifying the internal list"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the list method:\n\n```dart\nclass Library {\n  List<String> _books = ['Book1', 'Book2'];\n  \n  List<String> get books => List.%fill%(_books);\n}\n```",
+    "answer": ["unmodifiable"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the map property:\n\n```dart\nclass Student {\n  Map<String, int> _grades = {'Math': 90, 'Science': 85};\n  \n  Map<String, int> %order% grades {\n    return Map.unmodifiable(_grades);\n  }\n}\n```",
+    "options": [
+      "get"
+    ],
+    "answer": [
+      "get"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this map getter return?\n\n```dart\nclass Inventory {\n  Map<String, int> _stock = {'apples': 10, 'bananas': 5};\n  \n  Map<String, int> get stock => Map.from(_stock);\n}\n\nvoid main() {\n  Inventory inv = Inventory();\n  var items = inv.stock;\n  items['apples'] = 0; // This won't affect _stock\n  print(inv.stock['apples']);\n}\n```",
+    "options": [
+      "10",
+      "0",
+      "null",
+      "Error"
+    ],
+    "answer": ["10"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the map method:\n\n```dart\nclass Config {\n  Map<String, String> _settings = {'theme': 'dark'};\n  \n  Map<String, String> get settings => Map.%fill%(_settings);\n}\n```",
+    "answer": ["from"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the lazy initialization:\n\n```dart\nclass DatabaseConnection {\n  Database? _database;\n  \n  Database %order% database {\n    _database ??= Database.connect();\n    return _database!;\n  }\n}\n```",
+    "options": [
+      "get"
+    ],
+    "answer": [
+      "get"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does lazy initialization do?\n\n```dart\nclass ExpensiveResource {\n  HeavyObject? _resource;\n  \n  HeavyObject get resource {\n    _resource ??= HeavyObject.create();\n    return _resource!;\n  }\n}\n```",
+    "options": [
+      "Creates the object only when first accessed",
+      "Creates the object immediately",
+      "Prevents object creation",
+      "Makes object creation faster"
+    ],
+    "answer": ["Creates the object only when first accessed"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-aware assignment:\n\n```dart\nclass LazyLoader {\n  String? _data;\n  \n  String get data {\n    _data %fill%%fill% loadData();\n    return _data!;\n  }\n}\n```",
+    "answer": ["?", "="],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the validation setter:\n\n```dart\nclass Age {\n  int _age = 0;\n  \n  %order% age(int value) {\n    if (value >= 0 && value <= 120) {\n      _age = value;\n    } else {\n      throw ArgumentError('Invalid age: $value');\n    }\n  }\n}\n```",
+    "options": [
+      "set"
+    ],
+    "answer": [
+      "set"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens with invalid input to this setter?\n\n```dart\nclass Score {\n  int _score = 0;\n  \n  set score(int value) {\n    if (value >= 0 && value <= 100) {\n      _score = value;\n    } else {\n      throw RangeError('Score must be between 0 and 100');\n    }\n  }\n}\n\nvoid main() {\n  Score gameScore = Score();\n  gameScore.score = 150;\n}\n```",
+    "options": [
+      "Throws RangeError exception",
+      "Sets score to 150",
+      "Sets score to 100",
+      "Sets score to 0"
+    ],
+    "answer": ["Throws RangeError exception"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the validation range:\n\n```dart\nclass Percentage {\n  double _value = 0.0;\n  \n  set value(double percent) {\n    if (percent >= 0 && percent <= %fill%) {\n      _value = percent;\n    }\n  }\n}\n```",
+    "answer": ["100"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the static property:\n\n```dart\nclass Counter {\n  static int _count = 0;\n  \n  static int %order% count => _count;\n  \n  static %order% count(int value) {\n    _count = value;\n  }\n}\n```",
+    "options": [
+      "get",
+      "set"
+    ],
+    "answer": [
+      "get",
+      "set"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do you access static getters and setters?\n\n```dart\nclass AppConfig {\n  static String _version = '1.0';\n  \n  static String get version => _version;\n  static set version(String v) => _version = v;\n}\n```",
+    "options": [
+      "AppConfig.version",
+      "AppConfig().version",
+      "version",
+      "static.version"
+    ],
+    "answer": ["AppConfig.version"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the static access:\n\n```dart\nclass GlobalSettings {\n  static String _theme = 'light';\n  \n  static String get theme => _theme;\n}\n\nvoid main() {\n  print(GlobalSettings%fill%theme);\n}\n```",
+    "answer": ["."],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final getter and setter example:\n\n```dart\nclass %order% {\n  String _name = '';\n  int _level = 1;\n  \n  String %order% name {\n    return _name.isEmpty ? 'Unknown Hero' : _name;\n  }\n  \n  %order% name(String newName) {\n    if (newName.trim().isNotEmpty) {\n      _name = newName.trim();\n      print('Hero renamed to: $_name');\n    }\n  }\n  \n  int %order% level => _level;\n  \n  %order% level(int newLevel) {\n    if (newLevel > 0 && newLevel <= 100) {\n      _level = newLevel;\n      print('$_name leveled up to $_level!');\n    }\n  }\n}\n```",
+    "options": [
+      "GameHero",
+      "get",
+      "set",
+      "get",
+      "set"
+    ],
+    "answer": [
+      "GameHero",
+      "get",
+      "set",
+      "get",
+      "set"
+    ],
+    "type": "order"
+  }
+]

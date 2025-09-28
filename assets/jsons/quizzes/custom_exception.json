@@ -1,0 +1,466 @@
+[
+  {
+    "question": "Complete the custom exception class declaration:\n\n```dart\nclass CookieException %order% Exception {\n  final String message;\n  CookieException(this.message);\n}\n```",
+    "options": [
+      "implements"
+    ],
+    "answer": [
+      "implements"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does this custom exception do?\n\n```dart\nclass ToyBrokenException implements Exception {\n  final String toy;\n  ToyBrokenException(this.toy);\n  \n  @override\n  String toString() => 'Oh no! Your $toy is broken!';\n}\n```",
+    "options": [
+      "Creates a custom error for broken toys",
+      "Fixes broken toys automatically",
+      "Creates new toys",
+      "Deletes broken toys"
+    ],
+    "answer": ["Creates a custom error for broken toys"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the keyword to throw a custom exception:\n\n```dart\nvoid checkCookieArea(bool eatingCookies) {\n  if (eatingCookies) {\n    %fill% CookieException('No eating cookies here!');\n  }\n}\n```",
+    "answer": ["throw"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception handling:\n\n```dart\nvoid main() {\n  %order% {\n    throw ToyBrokenException('robot');\n  } %order% (e) {\n    print(e);\n  }\n}\n```",
+    "options": [
+      "try",
+      "catch"
+    ],
+    "answer": [
+      "try",
+      "catch"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nclass GameException implements Exception {\n  final String message;\n  GameException(this.message);\n  \n  @override\n  String toString() => 'GameException: $message';\n}\n\nvoid main() {\n  try {\n    throw GameException('Game Over!');\n  } catch (e) {\n    print(e);\n  }\n}\n```",
+    "options": [
+      "GameException: Game Over!",
+      "Game Over!",
+      "Exception: Game Over!",
+      "Error"
+    ],
+    "answer": ["GameException: Game Over!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the override annotation:\n\n```dart\nclass MyException implements Exception {\n  final String message;\n  MyException(this.message);\n  \n  %fill%\n  String toString() => 'MyException: $message';\n}\n```",
+    "answer": ["@override"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the custom exception with constructor:\n\n```dart\nclass BookException implements Exception {\n  final String %order%;\n  \n  BookException(%order%);\n}\n```",
+    "options": [
+      "message",
+      "this.message"
+    ],
+    "answer": [
+      "message",
+      "this.message"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Which keyword is used to create custom exceptions?\n\n```dart\nclass MyException ??? Exception {\n  // ...\n}\n```",
+    "options": [
+      "implements",
+      "extends",
+      "with",
+      "mixin"
+    ],
+    "answer": ["implements"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception type in catch block:\n\n```dart\nvoid main() {\n  try {\n    throw CookieException('No cookies!');\n  } catch (%fill% e) {\n    print('Caught: $e');\n  }\n}\n```",
+    "answer": ["CookieException"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the specific exception handling:\n\n```dart\nvoid main() {\n  try {\n    checkToy(true);\n  } %order% %order% (e) {\n    print('Toy error: $e');\n  } catch (e) {\n    print('Other error: $e');\n  }\n}\n```",
+    "options": [
+      "on",
+      "ToyException"
+    ],
+    "answer": [
+      "on",
+      "ToyException"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when you throw an exception?\n\n```dart\nvoid riskyFunction() {\n  throw CustomException('Something went wrong!');\n  print('This will never print');\n}\n```",
+    "options": [
+      "Code execution stops and looks for catch block",
+      "Print statement executes normally",
+      "Exception is ignored",
+      "Program continues normally"
+    ],
+    "answer": ["Code execution stops and looks for catch block"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to convert exception to string:\n\n```dart\nclass MyException implements Exception {\n  final String message;\n  MyException(this.message);\n  \n  @override\n  String %fill%() => 'MyException: $message';\n}\n```",
+    "answer": ["toString"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception with additional properties:\n\n```dart\nclass ValidationException implements Exception {\n  final String message;\n  final %order% errorCode;\n  \n  ValidationException(this.message, this.errorCode);\n}\n```",
+    "options": [
+      "int"
+    ],
+    "answer": [
+      "int"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nclass FoodException implements Exception {\n  final String food;\n  FoodException(this.food);\n  \n  @override\n  String toString() => 'Cannot eat $food!';\n}\n\nvoid main() {\n  try {\n    throw FoodException('broccoli');\n  } catch (e) {\n    print(e);\n  }\n}\n```",
+    "options": [
+      "Cannot eat broccoli!",
+      "FoodException: broccoli",
+      "broccoli",
+      "Error"
+    ],
+    "answer": ["Cannot eat broccoli!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception interface:\n\n```dart\nclass NetworkException implements %fill% {\n  final String url;\n  NetworkException(this.url);\n}\n```",
+    "answer": ["Exception"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception handling with multiple catch blocks:\n\n```dart\nvoid main() {\n  try {\n    riskyOperation();\n  } on %order% catch (e) {\n    print('Network error: $e');\n  } on %order% catch (e) {\n    print('File error: $e');\n  }\n}\n```",
+    "options": [
+      "NetworkException",
+      "FileException"
+    ],
+    "answer": [
+      "NetworkException",
+      "FileException"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why create custom exceptions instead of using Exception?\n\n```dart\nthrow Exception('Generic error');\nvs\nthrow CustomException('Specific error');\n```",
+    "options": [
+      "More specific error handling and better code organization",
+      "Custom exceptions run faster",
+      "Exception class doesn't work",
+      "No real difference"
+    ],
+    "answer": ["More specific error handling and better code organization"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the final keyword for immutable exception:\n\n```dart\nclass UserException implements Exception {\n  %fill% String username;\n  %fill% String reason;\n  \n  UserException(this.username, this.reason);\n}\n```",
+    "answer": ["final", "final"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception with stack trace:\n\n```dart\nvoid throwError() {\n  try {\n    throw CustomException('Error occurred');\n  } catch (e, %order%) {\n    print('Error: $e');\n    print('Stack: $stackTrace');\n  }\n}\n```",
+    "options": [
+      "stackTrace"
+    ],
+    "answer": [
+      "stackTrace"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the benefit of implementing Exception?\n\n```dart\nclass MyException implements Exception {\n  // implementation\n}\n```",
+    "options": [
+      "Makes the class work with try-catch blocks",
+      "Automatically fixes errors",
+      "Makes code run faster",
+      "Creates better user interfaces"
+    ],
+    "answer": ["Makes the class work with try-catch blocks"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception message parameter:\n\n```dart\nclass PasswordException implements Exception {\n  final String %fill%;\n  \n  PasswordException(this.message);\n  \n  @override\n  String toString() => 'Password Error: $message';\n}\n```",
+    "answer": ["message"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception rethrow pattern:\n\n```dart\nvoid handleError() {\n  try {\n    dangerousOperation();\n  } catch (e) {\n    print('Logging error: $e');\n    %order%; // Pass the error up\n  }\n}\n```",
+    "options": [
+      "rethrow"
+    ],
+    "answer": [
+      "rethrow"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will happen with this exception?\n\n```dart\nvoid main() {\n  try {\n    throw WeatherException('Too sunny!');\n  } catch (e) {\n    print('Weather problem: $e');\n  } finally {\n    print('Check weather app');\n  }\n}\n```",
+    "options": [
+      "Prints both messages and runs finally block",
+      "Only prints weather problem",
+      "Only runs finally block",
+      "Program crashes"
+    ],
+    "answer": ["Prints both messages and runs finally block"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception creation pattern:\n\n```dart\nclass ApiException implements Exception {\n  final int statusCode;\n  final String message;\n  \n  ApiException(this.%fill%, this.%fill%);\n}\n```",
+    "answer": ["statusCode", "message"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception with named constructor:\n\n```dart\nclass DatabaseException implements Exception {\n  final String message;\n  \n  DatabaseException(this.message);\n  \n  %order%.connectionFailed() : %order%('Database connection failed');\n}\n```",
+    "options": [
+      "DatabaseException",
+      "this"
+    ],
+    "answer": [
+      "DatabaseException",
+      "this"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Which approach is better for error handling?\n\n```dart\n// Option A\nthrow Exception('Something broke');\n\n// Option B\nthrow DeviceException('Camera not working');\n```",
+    "options": [
+      "Option B - more specific and meaningful",
+      "Option A - simpler and faster",
+      "Both are equally good",
+      "Neither approach works"
+    ],
+    "answer": ["Option B - more specific and meaningful"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception inheritance:\n\n```dart\nclass BaseException implements %fill% {\n  final String message;\n  BaseException(this.message);\n}\n\nclass SpecificException %fill% BaseException {\n  SpecificException(String msg) : super(msg);\n}\n```",
+    "answer": ["Exception", "extends"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception factory constructor:\n\n```dart\nclass HttpException implements Exception {\n  final String message;\n  \n  HttpException(this.message);\n  \n  factory HttpException.%order%(int code) {\n    return HttpException('HTTP Error: $code');\n  }\n}\n```",
+    "options": [
+      "fromStatusCode"
+    ],
+    "answer": [
+      "fromStatusCode"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when no catch block handles an exception?\n\n```dart\nvoid main() {\n  throw CustomException('Unhandled error');\n}\n```",
+    "options": [
+      "Program terminates with unhandled exception error",
+      "Exception is ignored",
+      "Program continues normally",
+      "Exception becomes null"
+    ],
+    "answer": ["Program terminates with unhandled exception error"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception with cause:\n\n```dart\nclass ProcessingException implements Exception {\n  final String message;\n  final Exception %fill%;\n  \n  ProcessingException(this.message, this.cause);\n}\n```",
+    "answer": ["cause"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception assertion pattern:\n\n```dart\nvoid validateAge(int age) {\n  %order% (age >= 0) {\n    throw AgeException('Age cannot be negative');\n  }\n}\n```",
+    "options": [
+      "if"
+    ],
+    "answer": [
+      "if"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the purpose of the toString() method in exceptions?\n\n```dart\nclass MyException implements Exception {\n  @override\n  String toString() => 'My custom error message';\n}\n```",
+    "options": [
+      "Defines how the exception appears when printed",
+      "Converts exception to integer",
+      "Makes exception serializable",
+      "Handles the exception automatically"
+    ],
+    "answer": ["Defines how the exception appears when printed"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception with validation:\n\n```dart\nclass EmailException implements Exception {\n  final String email;\n  \n  EmailException(this.email) {\n    %fill% (!email.contains('@')) {\n      throw ArgumentError('Invalid email format');\n    }\n  }\n}\n```",
+    "answer": ["if"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception wrapping pattern:\n\n```dart\nvoid processFile(String path) {\n  try {\n    // file operations\n  } %order% (e) {\n    throw FileProcessingException('Failed to process $path', %order%);\n  }\n}\n```",
+    "options": [
+      "catch",
+      "e"
+    ],
+    "answer": [
+      "catch",
+      "e"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this exception hierarchy do?\n\n```dart\nclass PaymentException implements Exception {\n  final String message;\n  PaymentException(this.message);\n}\n\nclass CreditCardException extends PaymentException {\n  CreditCardException(String msg) : super(msg);\n}\n```",
+    "options": [
+      "Creates specialized payment error handling",
+      "Processes credit card payments",
+      "Validates payment amounts",
+      "Encrypts payment data"
+    ],
+    "answer": ["Creates specialized payment error handling"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception with multiple properties:\n\n```dart\nclass ValidationException implements Exception {\n  final String %fill%;\n  final String %fill%;\n  final List<String> %fill%;\n  \n  ValidationException(this.field, this.message, this.errors);\n}\n```",
+    "answer": ["field", "message", "errors"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception handling strategy:\n\n```dart\nvoid robustOperation() {\n  try {\n    riskyCall();\n  } on %order% {\n    // Handle network issues\n  } on %order% {\n    // Handle data issues  \n  } %order% (e) {\n    // Handle everything else\n  }\n}\n```",
+    "options": [
+      "NetworkException",
+      "DataException", 
+      "catch"
+    ],
+    "answer": [
+      "NetworkException",
+      "DataException",
+      "catch"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why use specific exception types?\n\n```dart\ncatch (NetworkException e) { /* specific handling */ }\ncatch (DatabaseException e) { /* different handling */ }\n```",
+    "options": [
+      "Different errors need different solutions",
+      "Makes code look more professional",
+      "Specific exceptions run faster",
+      "Required by Dart language"
+    ],
+    "answer": ["Different errors need different solutions"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception with context:\n\n```dart\nclass OperationException implements Exception {\n  final String operation;\n  final String %fill%;\n  final DateTime %fill%;\n  \n  OperationException(this.operation, this.reason, this.timestamp);\n}\n```",
+    "answer": ["reason", "timestamp"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception utility method:\n\n```dart\nclass ExceptionUtils {\n  static void %order%(bool condition, String message) {\n    if (!condition) {\n      throw ValidationException(message);\n    }\n  }\n}\n```",
+    "options": [
+      "checkArgument"
+    ],
+    "answer": [
+      "checkArgument"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this exception chain produce?\n\n```dart\nvoid main() {\n  try {\n    try {\n      throw InnerException('Inner error');\n    } catch (e) {\n      throw OuterException('Outer error', e);\n    }\n  } catch (e) {\n    print(e);\n  }\n}\n```",
+    "options": [
+      "OuterException with InnerException as cause",
+      "Only InnerException",
+      "Only OuterException", 
+      "Both exceptions separately"
+    ],
+    "answer": ["OuterException with InnerException as cause"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception with severity level:\n\n```dart\nenum Severity { low, medium, high, critical }\n\nclass SystemException implements Exception {\n  final String message;\n  final %fill% severity;\n  \n  SystemException(this.message, this.severity);\n}\n```",
+    "answer": ["Severity"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception handling with recovery:\n\n```dart\nvoid reliableOperation() {\n  try {\n    primaryOperation();\n  } %order% (NetworkException e) {\n    print('Network failed, trying backup');\n    %order%;\n  }\n}\n```",
+    "options": [
+      "catch",
+      "backupOperation()"
+    ],
+    "answer": [
+      "catch", 
+      "backupOperation()"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the advantage of exception hierarchies?\n\n```dart\nabstract class AppException implements Exception {}\nclass NetworkException extends AppException {}\nclass StorageException extends AppException {}\n```",
+    "options": [
+      "Can catch related exceptions with common parent type",
+      "Exceptions run faster in hierarchies",
+      "Automatically fixes errors",
+      "Required for all applications"
+    ],
+    "answer": ["Can catch related exceptions with common parent type"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception documentation:\n\n```dart\n/// Thrown when user authentication fails\nclass %fill% implements Exception {\n  /// The username that failed authentication  \n  final String username;\n  \n  AuthenticationException(this.username);\n}\n```",
+    "answer": ["AuthenticationException"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception handling with finally:\n\n```dart\nvoid resourceOperation() {\n  Resource? resource;\n  try {\n    resource = acquireResource();\n    processResource(resource);\n  } %order% (e) {\n    handleError(e);\n  } %order% {\n    resource?.dispose();\n  }\n}\n```",
+    "options": [
+      "catch",
+      "finally"
+    ],
+    "answer": [
+      "catch",
+      "finally"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens with async exception handling?\n\n```dart\nFuture<void> asyncOperation() async {\n  try {\n    await riskyAsyncCall();\n  } catch (e) {\n    throw ProcessingException('Async operation failed', e);\n  }\n}\n```",
+    "options": [
+      "Exceptions are caught and wrapped as expected",
+      "Async exceptions cannot be caught",
+      "Only synchronous exceptions work",
+      "Program will crash"
+    ],
+    "answer": ["Exceptions are caught and wrapped as expected"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception test pattern:\n\n```dart\nvoid testExceptions() {\n  %fill% {\n    riskyFunction();\n    fail('Expected exception was not thrown');\n  } catch (CustomException e) {\n    // Test passed - exception was thrown\n  }\n}\n```",
+    "answer": ["try"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception with builder pattern:\n\n```dart\nclass ExceptionBuilder {\n  String? _message;\n  int? _code;\n  \n  ExceptionBuilder %order%(String message) {\n    _message = message;\n    return this;\n  }\n  \n  CustomException %order%() {\n    return CustomException(_message!, _code!);\n  }\n}\n```",
+    "options": [
+      "message",
+      "build"
+    ],
+    "answer": [
+      "message", 
+      "build"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the main purpose of custom exceptions?\n\n```dart\nclass BusinessLogicException implements Exception {\n  final String businessRule;\n  final String violation;\n  \n  BusinessLogicException(this.businessRule, this.violation);\n}\n```",
+    "options": [
+      "Provide meaningful, domain-specific error information",
+      "Make programs run faster",
+      "Replace all built-in exceptions",
+      "Automatically fix business logic errors"
+    ],
+    "answer": ["Provide meaningful, domain-specific error information"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the final exception example:\n\n```dart\nclass %fill% implements Exception {\n  final String %fill%;\n  final String %fill%;\n  \n  ShoppingException(this.item, this.problem);\n  \n  @override\n  String %fill%() => 'Shopping Error: Cannot buy $item - $problem';\n}\n```",
+    "answer": ["ShoppingException", "item", "problem", "toString"],
+    "type": "fill"
+  }
+]

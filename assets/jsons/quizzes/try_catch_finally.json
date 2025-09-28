@@ -1,0 +1,552 @@
+[
+  {
+    "question": "Complete the try-catch-finally structure:\n\n```dart\nvoid main() {\n  %order% {\n    print('Trying something');\n  } %order% (e) {\n    print('Caught error: $e');\n  } %order% {\n    print('This always runs');\n  }\n}\n```",
+    "options": [
+      "try",
+      "catch",
+      "finally"
+    ],
+    "answer": [
+      "try",
+      "catch",
+      "finally"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  try {\n    int result = 10 ~/ 0;\n    print('Result: $result');\n  } catch (e) {\n    print('Something went wrong: $e');\n  } finally {\n    print('Cleaning up! 🧼');\n  }\n}\n```",
+    "options": [
+      "Something went wrong: IntegerDivisionByZeroException\\nCleaning up! 🧼",
+      "Result: 0\\nCleaning up! 🧼",
+      "Cleaning up! 🧼",
+      "Error"
+    ],
+    "answer": ["Something went wrong: IntegerDivisionByZeroException\\nCleaning up! 🧼"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the keyword to handle errors:\n\n```dart\nvoid main() {\n  try {\n    throw Exception('Oops!');\n  } %fill% (e) {\n    print('Handled: $e');\n  }\n}\n```",
+    "answer": ["catch"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the basic try-catch structure:\n\n```dart\nvoid main() {\n  %order% {\n    print('This might fail');\n  } %order% (error) {\n    print('Error occurred: $error');\n  }\n}\n```",
+    "options": [
+      "try",
+      "catch"
+    ],
+    "answer": [
+      "try",
+      "catch"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the try block do?\n\n```dart\ntry {\n  // risky code here\n}\n```",
+    "options": [
+      "Executes code that might throw an exception",
+      "Catches all exceptions automatically",
+      "Always throws exceptions",
+      "Prevents all errors from happening"
+    ],
+    "answer": ["Executes code that might throw an exception"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception parameter:\n\n```dart\nvoid main() {\n  try {\n    throw Exception('Test error');\n  } catch (%fill%) {\n    print('Caught: $e');\n  }\n}\n```",
+    "answer": ["e"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the finally block usage:\n\n```dart\nvoid main() {\n  try {\n    print('Opening cookie jar 🍪');\n  } catch (e) {\n    print('Cookie jar broke!');\n  } %order% {\n    print('Always wash hands 🧼');\n  }\n}\n```",
+    "options": [
+      "finally"
+    ],
+    "answer": [
+      "finally"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this finally block do?\n\n```dart\nvoid main() {\n  try {\n    print('Playing with toys 🧸');\n  } catch (e) {\n    print('Toy broke!');\n  } finally {\n    print('Put toys away 📦');\n  }\n}\n```",
+    "options": [
+      "Playing with toys 🧸\\nPut toys away 📦",
+      "Put toys away 📦",
+      "Playing with toys 🧸",
+      "Error"
+    ],
+    "answer": ["Playing with toys 🧸\\nPut toys away 📦"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the keyword that always executes:\n\n```dart\nvoid main() {\n  try {\n    // code\n  } catch (e) {\n    // error handling\n  } %fill% {\n    // this always runs\n  }\n}\n```",
+    "answer": ["finally"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception throwing:\n\n```dart\nvoid playWithToy() {\n  %order% {\n    print('Playing with toy 🚂');\n    %order% Exception('Toy broke!');\n  } catch (e) {\n    print('Caught: $e');\n  }\n}\n```",
+    "options": [
+      "try",
+      "throw"
+    ],
+    "answer": [
+      "try",
+      "throw"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when an exception is thrown?\n\n```dart\nvoid main() {\n  try {\n    print('Before exception');\n    throw Exception('Something broke');\n    print('After exception'); // Will this run?\n  } catch (e) {\n    print('Caught: $e');\n  }\n}\n```",
+    "options": [
+      "Before exception\\nCaught: Exception: Something broke",
+      "Before exception\\nAfter exception\\nCaught: Exception: Something broke",
+      "After exception\\nCaught: Exception: Something broke",
+      "Error"
+    ],
+    "answer": ["Before exception\\nCaught: Exception: Something broke"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the throw keyword:\n\n```dart\nvoid checkCookie() {\n  bool noCookies = true;\n  if (noCookies) {\n    %fill% Exception('No cookies left! 🍪');\n  }\n}\n```",
+    "answer": ["throw"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the specific exception handling:\n\n```dart\nvoid main() {\n  try {\n    int result = int.parse('abc');\n  } %order% %order% catch (e) {\n    print('Number format error: $e');\n  }\n}\n```",
+    "options": [
+      "on",
+      "FormatException"
+    ],
+    "answer": [
+      "on",
+      "FormatException"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the 'on' keyword do?\n\n```dart\ntry {\n  // risky code\n} on FormatException catch (e) {\n  // handle format errors\n} on Exception catch (e) {\n  // handle other exceptions\n}\n```",
+    "options": [
+      "Catches specific types of exceptions",
+      "Throws exceptions",
+      "Prevents exceptions",
+      "Logs exceptions"
+    ],
+    "answer": ["Catches specific types of exceptions"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the specific exception type:\n\n```dart\nvoid main() {\n  try {\n    int result = 10 ~/ 0;\n  } on %fill% catch (e) {\n    print('Division by zero!');\n  }\n}\n```",
+    "answer": ["IntegerDivisionByZeroException"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the multiple catch blocks:\n\n```dart\nvoid main() {\n  try {\n    riskyOperation();\n  } %order% NetworkException catch (e) {\n    print('Network error');\n  } %order% Exception catch (e) {\n    print('Other error');\n  }\n}\n```",
+    "options": [
+      "on",
+      "on"
+    ],
+    "answer": [
+      "on",
+      "on"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens with multiple catch blocks?\n\n```dart\ntry {\n  throw FormatException('Bad format');\n} on FormatException catch (e) {\n  print('Format error: $e');\n} on Exception catch (e) {\n  print('General error: $e');\n}\n```",
+    "options": [
+      "Format error: FormatException: Bad format",
+      "General error: FormatException: Bad format",
+      "Both messages print",
+      "Error"
+    ],
+    "answer": ["Format error: FormatException: Bad format"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the general catch block:\n\n```dart\nvoid main() {\n  try {\n    dangerousCode();\n  } on SpecificException catch (e) {\n    print('Specific error');\n  } %fill% (e) {\n    print('Any other error');\n  }\n}\n```",
+    "answer": ["catch"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the stack trace capture:\n\n```dart\nvoid main() {\n  try {\n    throw Exception('Error occurred');\n  } catch (e, %order%) {\n    print('Error: $e');\n    print('Stack: $stackTrace');\n  }\n}\n```",
+    "options": [
+      "stackTrace"
+    ],
+    "answer": [
+      "stackTrace"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What information does stack trace provide?\n\n```dart\ntry {\n  problematicFunction();\n} catch (e, stackTrace) {\n  print('Stack: $stackTrace');\n}\n```",
+    "options": [
+      "Shows the sequence of function calls that led to the error",
+      "Shows only the error message",
+      "Shows the current time",
+      "Shows memory usage"
+    ],
+    "answer": ["Shows the sequence of function calls that led to the error"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the stack trace parameter:\n\n```dart\nvoid main() {\n  try {\n    failingFunction();\n  } catch (e, %fill%) {\n    print('Trace: $st');\n  }\n}\n```",
+    "answer": ["st"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the rethrow statement:\n\n```dart\nvoid handleError() {\n  try {\n    dangerousCode();\n  } catch (e) {\n    print('Logging error: $e');\n    %order%; // Pass the error up\n  }\n}\n```",
+    "options": [
+      "rethrow"
+    ],
+    "answer": [
+      "rethrow"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does rethrow do?\n\n```dart\ntry {\n  processData();\n} catch (e) {\n  log(e);\n  rethrow; // What happens here?\n}\n```",
+    "options": [
+      "Passes the same exception to the next catch block or caller",
+      "Creates a new exception",
+      "Ignores the exception",
+      "Stops the program"
+    ],
+    "answer": ["Passes the same exception to the next catch block or caller"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the rethrow keyword:\n\n```dart\nvoid wrapper() {\n  try {\n    criticalOperation();\n  } catch (e) {\n    cleanup();\n    %fill%;\n  }\n}\n```",
+    "answer": ["rethrow"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the nested try-catch:\n\n```dart\nvoid main() {\n  %order% {\n    %order% {\n      throw Exception('Inner error');\n    } %order% (e) {\n      print('Inner catch: $e');\n      throw Exception('Outer error');\n    }\n  } catch (e) {\n    print('Outer catch: $e');\n  }\n}\n```",
+    "options": [
+      "try",
+      "try", 
+      "catch"
+    ],
+    "answer": [
+      "try",
+      "try",
+      "catch"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will nested try-catch blocks output?\n\n```dart\nvoid main() {\n  try {\n    try {\n      throw Exception('Level 1');\n    } catch (e) {\n      print('Caught: $e');\n      throw Exception('Level 2');\n    }\n  } catch (e) {\n    print('Final: $e');\n  }\n}\n```",
+    "options": [
+      "Caught: Exception: Level 1\\nFinal: Exception: Level 2",
+      "Final: Exception: Level 1",
+      "Caught: Exception: Level 1",
+      "Error"
+    ],
+    "answer": ["Caught: Exception: Level 1\\nFinal: Exception: Level 2"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the inner exception handling:\n\n```dart\nvoid main() {\n  try {\n    try {\n      riskyCode();\n    } %fill% (e) {\n      print('Inner handled: $e');\n    }\n  } catch (e) {\n    print('Outer handled: $e');\n  }\n}\n```",
+    "answer": ["catch"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the async exception handling:\n\n```dart\nFuture<void> asyncOperation() %order% {\n  %order% {\n    await riskyAsyncCall();\n  } %order% (e) {\n    print('Async error: $e');\n  }\n}\n```",
+    "options": [
+      "async",
+      "try",
+      "catch"
+    ],
+    "answer": [
+      "async",
+      "try",
+      "catch"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do you handle exceptions in async functions?\n\n```dart\nFuture<void> fetchData() async {\n  try {\n    await getData();\n  } catch (e) {\n    print('Error: $e');\n  }\n}\n```",
+    "options": [
+      "Same as synchronous code with try-catch",
+      "Use different keywords",
+      "Cannot handle async exceptions",
+      "Only use finally blocks"
+    ],
+    "answer": ["Same as synchronous code with try-catch"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the async keyword:\n\n```dart\nFuture<void> processAsync() %fill% {\n  try {\n    await longRunningTask();\n  } catch (e) {\n    print('Failed: $e');\n  }\n}\n```",
+    "answer": ["async"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the resource cleanup pattern:\n\n```dart\nvoid useResource() {\n  Resource? resource;\n  try {\n    resource = Resource.acquire();\n    resource.use();\n  } catch (e) {\n    print('Error: $e');\n  } %order% {\n    resource?.dispose();\n  }\n}\n```",
+    "options": [
+      "finally"
+    ],
+    "answer": [
+      "finally"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why is finally important for resource cleanup?\n\n```dart\nvoid processFile() {\n  File? file;\n  try {\n    file = File.open('data.txt');\n    processData(file);\n  } catch (e) {\n    print('Error: $e');\n  } finally {\n    file?.close(); // Why here?\n  }\n}\n```",
+    "options": [
+      "Finally runs whether exception occurs or not, ensuring cleanup",
+      "Finally runs faster than try block",
+      "Finally prevents exceptions",
+      "Finally is optional for cleanup"
+    ],
+    "answer": ["Finally runs whether exception occurs or not, ensuring cleanup"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the resource cleanup:\n\n```dart\nvoid workWithDatabase() {\n  Database? db;\n  try {\n    db = Database.connect();\n    db.query('SELECT * FROM users');\n  } catch (e) {\n    print('DB Error: $e');\n  } finally {\n    db?.%fill%();\n  }\n}\n```",
+    "answer": ["close"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception without catch:\n\n```dart\nvoid main() {\n  try {\n    print('Starting operation');\n    dangerousCode();\n    print('Operation completed');\n  } %order% {\n    print('Cleanup performed');\n  }\n}\n```",
+    "options": [
+      "finally"
+    ],
+    "answer": [
+      "finally"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens with try-finally (no catch)?\n\n```dart\nvoid main() {\n  try {\n    throw Exception('Unhandled');\n    print('This won\\'t print');\n  } finally {\n    print('Finally runs');\n  }\n}\n```",
+    "options": [
+      "Finally runs\\n(then exception propagates up)",
+      "Finally runs and exception is handled",
+      "Exception is ignored",
+      "Program continues normally"
+    ],
+    "answer": ["Finally runs\\n(then exception propagates up)"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the cleanup code:\n\n```dart\nvoid temporarySetup() {\n  try {\n    setupTemporaryState();\n    doWork();\n  } finally {\n    %fill%(); // Always cleanup\n  }\n}\n```",
+    "answer": ["cleanupTemporaryState"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the custom exception handling:\n\n```dart\nclass CustomError implements Exception {\n  final String message;\n  CustomError(this.message);\n}\n\nvoid main() {\n  try {\n    throw CustomError('Custom problem');\n  } %order% %order% catch (e) {\n    print('Custom error: ${e.message}');\n  }\n}\n```",
+    "options": [
+      "on",
+      "CustomError"
+    ],
+    "answer": [
+      "on",
+      "CustomError"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do you catch custom exceptions?\n\n```dart\nclass NetworkError implements Exception {\n  final String url;\n  NetworkError(this.url);\n}\n\ntry {\n  throw NetworkError('api.example.com');\n} on NetworkError catch (e) {\n  print('Network failed: ${e.url}');\n}\n```",
+    "options": [
+      "Use 'on CustomExceptionType catch (e)' syntax",
+      "Custom exceptions cannot be caught",
+      "Use only generic catch",
+      "Custom exceptions auto-handle"
+    ],
+    "answer": ["Use 'on CustomExceptionType catch (e)' syntax"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the custom exception catch:\n\n```dart\nclass ValidationError implements Exception {\n  final String field;\n  ValidationError(this.field);\n}\n\nvoid main() {\n  try {\n    throw ValidationError('email');\n  } on %fill% catch (e) {\n    print('Invalid ${e.field}');\n  }\n}\n```",
+    "answer": ["ValidationError"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception handling priority:\n\n```dart\nvoid main() {\n  try {\n    throw Exception('General error');\n  } %order% SpecificException catch (e) {\n    print('Specific: $e');\n  } %order% Exception catch (e) {\n    print('General: $e');\n  }\n}\n```",
+    "options": [
+      "on",
+      "on"
+    ],
+    "answer": [
+      "on",
+      "on"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the correct order for exception handlers?\n\n```dart\ntry {\n  riskyOperation();\n} on SpecificException catch (e) {\n  // Handle specific\n} on Exception catch (e) {\n  // Handle general\n} catch (e) {\n  // Handle any\n}\n```",
+    "options": [
+      "Most specific to most general",
+      "Most general to most specific",
+      "Order doesn't matter",
+      "Random order is fine"
+    ],
+    "answer": ["Most specific to most general"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the most general catch:\n\n```dart\nvoid main() {\n  try {\n    unpredictableCode();\n  } on IOException catch (e) {\n    print('IO Error: $e');\n  } on Exception catch (e) {\n    print('Exception: $e');\n  } %fill% (e) {\n    print('Any error: $e');\n  }\n}\n```",
+    "answer": ["catch"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the exception conversion:\n\n```dart\nvoid wrapException() {\n  try {\n    lowLevelOperation();\n  } catch (e) {\n    %order% HighLevelException('Operation failed', e);\n  }\n}\n```",
+    "options": [
+      "throw"
+    ],
+    "answer": [
+      "throw"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why convert exceptions?\n\n```dart\ntry {\n  database.connect();\n} catch (DatabaseException e) {\n  throw UserFriendlyException('Unable to connect to service');\n}\n```",
+    "options": [
+      "To provide more meaningful errors to higher-level code",
+      "To make exceptions run faster",
+      "To prevent all errors",
+      "To reduce memory usage"
+    ],
+    "answer": ["To provide more meaningful errors to higher-level code"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the exception wrapping:\n\n```dart\nvoid highlevelFunction() {\n  try {\n    lowlevelFunction();\n  } catch (e) {\n    throw ServiceException('Service unavailable', %fill%);\n  }\n}\n```",
+    "answer": ["e"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the conditional exception throwing:\n\n```dart\nvoid validateInput(String input) {\n  %order% (input.isEmpty) {\n    throw ArgumentError('Input cannot be empty');\n  }\n  %order% (input.length > 100) {\n    throw ArgumentError('Input too long');\n  }\n}\n```",
+    "options": [
+      "if",
+      "if"
+    ],
+    "answer": [
+      "if",
+      "if"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "When should you throw exceptions?\n\n```dart\nvoid divide(int a, int b) {\n  if (b == 0) {\n    throw ArgumentError('Division by zero');\n  }\n  return a / b;\n}\n```",
+    "options": [
+      "When encountering invalid input or unrecoverable errors",
+      "For all function calls",
+      "Only in finally blocks",
+      "Never throw exceptions"
+    ],
+    "answer": ["When encountering invalid input or unrecoverable errors"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the validation condition:\n\n```dart\nvoid setAge(int age) {\n  if (age %fill% 0 || age > 150) {\n    throw RangeError('Invalid age: $age');\n  }\n  this.age = age;\n}\n```",
+    "answer": ["<"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the assertion with exception:\n\n```dart\nvoid processData(List data) {\n  %order%(data != null, 'Data cannot be null');\n  %order%(data.isNotEmpty, 'Data cannot be empty');\n  // Process data\n}\n```",
+    "options": [
+      "assert",
+      "assert"
+    ],
+    "answer": [
+      "assert",
+      "assert"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when assertions fail?\n\n```dart\nvoid main() {\n  int value = -5;\n  assert(value >= 0, 'Value must be positive');\n  print('Value: $value');\n}\n```",
+    "options": [
+      "Throws AssertionError in debug mode",
+      "Continues normally",
+      "Throws in all modes",
+      "Returns false"
+    ],
+    "answer": ["Throws AssertionError in debug mode"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the assertion message:\n\n```dart\nvoid calculate(double input) {\n  assert(input.isFinite, %fill%);\n  // perform calculation\n}\n```",
+    "answer": ["'Input must be a finite number'"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the error logging pattern:\n\n```dart\nvoid robustOperation() {\n  try {\n    criticalTask();\n  } catch (e, stackTrace) {\n    %order%.error('Operation failed', e, stackTrace);\n    %order%; // Re-throw after logging\n  }\n}\n```",
+    "options": [
+      "logger",
+      "rethrow"
+    ],
+    "answer": [
+      "logger",
+      "rethrow"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why log exceptions before rethrowing?\n\n```dart\ntry {\n  serviceCall();\n} catch (e, st) {\n  log.error('Service failed', e, st);\n  rethrow;\n}\n```",
+    "options": [
+      "To record the error for debugging while still propagating it",
+      "To make exceptions disappear",
+      "To slow down the program",
+      "To change the exception type"
+    ],
+    "answer": ["To record the error for debugging while still propagating it"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the logging call:\n\n```dart\nvoid handleRequest() {\n  try {\n    processRequest();\n  } catch (e, st) {\n    %fill%.severe('Request processing failed', e, st);\n    throw ServiceException('Request failed');\n  }\n}\n```",
+    "answer": ["log"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the fallback exception handling:\n\n```dart\nvoid resilientOperation() {\n  try {\n    primaryMethod();\n  } catch (e) {\n    %order% {\n      fallbackMethod();\n    } catch (fallbackError) {\n      throw OperationException('All methods failed');\n    }\n  }\n}\n```",
+    "options": [
+      "try"
+    ],
+    "answer": [
+      "try"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the benefit of fallback error handling?\n\n```dart\ntry {\n  fastMethod();\n} catch (e) {\n  try {\n    slowMethod();\n  } catch (e2) {\n    throw Exception('Both methods failed');\n  }\n}\n```",
+    "options": [
+      "Provides alternative approaches when primary method fails",
+      "Makes code run faster",
+      "Prevents all exceptions",
+      "Reduces memory usage"
+    ],
+    "answer": ["Provides alternative approaches when primary method fails"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the fallback method:\n\n```dart\nvoid connectToService() {\n  try {\n    connectToPrimary();\n  } catch (e) {\n    try {\n      %fill%();\n    } catch (e2) {\n      throw ConnectionException('No service available');\n    }\n  }\n}\n```",
+    "answer": ["connectToBackup"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final comprehensive example:\n\n```dart\nFuture<void> %order%() async {\n  Database? db;\n  %order% {\n    db = await Database.connect();\n    await db.processData();\n  } %order% NetworkException catch (e) {\n    print('Network error: ${e.message}');\n    %order%;\n  } %order% DatabaseException catch (e) {\n    print('Database error: ${e.message}');\n    %order%;\n  } %order% (e, stackTrace) {\n    logger.error('Unexpected error', e, stackTrace);\n    %order%;\n  } %order% {\n    await db?.disconnect();\n    print('Cleanup completed 🧼');\n  }\n}\n```",
+    "options": [
+      "processDataSafely",
+      "try",
+      "on",
+      "rethrow",
+      "on",
+      "rethrow",
+      "catch",
+      "rethrow",
+      "finally"
+    ],
+    "answer": [
+      "processDataSafely",
+      "try",
+      "on",
+      "rethrow",
+      "on", 
+      "rethrow",
+      "catch",
+      "rethrow",
+      "finally"
+    ],
+    "type": "order"
+  }
+]

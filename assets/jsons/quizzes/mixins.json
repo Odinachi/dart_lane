@@ -1,0 +1,470 @@
+[
+  {
+    "question": "Complete the mixin declaration:\n\n```dart\n%order% CanFly {\n  void fly() {\n    print('Flying high in the sky! ☁️🛩️');\n  }\n}\n```",
+    "options": [
+      "mixin"
+    ],
+    "answer": [
+      "mixin"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this mixin usage output?\n\n```dart\nmixin CanFly {\n  void fly() {\n    print('Flying high! ✈️');\n  }\n}\n\nclass Bird with CanFly {\n  void chirp() {\n    print('Tweet tweet! 🐦');\n  }\n}\n\nvoid main() {\n  Bird bird = Bird();\n  bird.fly();\n  bird.chirp();\n}\n```",
+    "options": [
+      "Flying high! ✈️\\nTweet tweet! 🐦",
+      "Tweet tweet! 🐦\\nFlying high! ✈️",
+      "Flying high! ✈️",
+      "Error"
+    ],
+    "answer": ["Flying high! ✈️\\nTweet tweet! 🐦"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the keyword to use a mixin:\n\n```dart\nmixin Swimmable {\n  void swim() {\n    print('Swimming! 🏊');\n  }\n}\n\nclass Fish %fill% Swimmable {\n  void breathe() {\n    print('Breathing underwater');\n  }\n}\n```",
+    "answer": ["with"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the class using a mixin:\n\n```dart\nmixin CanFly {\n  void fly() {\n    print('Flying!');\n  }\n}\n\nclass SuperDog extends Dog %order% CanFly {\n  void bark() {\n    print('Super woof!');\n  }\n}\n```",
+    "options": [
+      "with"
+    ],
+    "answer": [
+      "with"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is a mixin in Dart?\n\n```dart\nmixin Flyable {\n  void fly() {\n    print('I can fly!');\n  }\n}\n```",
+    "options": [
+      "A way to add functionality to classes without inheritance",
+      "A type of class that runs faster",
+      "A way to create multiple objects",
+      "A special kind of variable"
+    ],
+    "answer": ["A way to add functionality to classes without inheritance"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the mixin method call:\n\n```dart\nmixin Talkative {\n  void talk() {\n    print('Hello there!');\n  }\n}\n\nclass Robot with Talkative {\n  void work() {\n    print('Working hard');\n    %fill%();\n  }\n}\n```",
+    "answer": ["talk"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the multiple mixin usage:\n\n```dart\nmixin CanFly {\n  void fly() => print('Flying');\n}\n\nmixin CanSwim {\n  void swim() => print('Swimming');\n}\n\nclass Duck %order% CanFly, CanSwim {\n  void quack() => print('Quack');\n}\n```",
+    "options": [
+      "with"
+    ],
+    "answer": [
+      "with"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this multiple mixin example output?\n\n```dart\nmixin CanRun {\n  void run() => print('Running! 🏃');\n}\n\nmixin CanJump {\n  void jump() => print('Jumping! 🦘');\n}\n\nclass Athlete with CanRun, CanJump {\n  void compete() => print('Competing! 🏆');\n}\n\nvoid main() {\n  Athlete athlete = Athlete();\n  athlete.run();\n  athlete.jump();\n  athlete.compete();\n}\n```",
+    "options": [
+      "Running! 🏃\\nJumping! 🦘\\nCompeting! 🏆",
+      "Competing! 🏆\\nRunning! 🏃\\nJumping! 🦘",
+      "Running! 🏃",
+      "Error"
+    ],
+    "answer": ["Running! 🏃\\nJumping! 🦘\\nCompeting! 🏆"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the multiple mixin declaration:\n\n```dart\nmixin Walkable {\n  void walk() => print('Walking');\n}\n\nmixin Talkative {\n  void talk() => print('Talking');\n}\n\nclass Person with Walkable%fill% Talkative {\n  void think() => print('Thinking');\n}\n```",
+    "answer": [", "],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin with properties:\n\n```dart\nmixin HasEngine {\n  %order% horsePower = 100;\n  \n  void startEngine() {\n    print('Engine with $horsePower HP started!');\n  }\n}\n```",
+    "options": [
+      "int"
+    ],
+    "answer": [
+      "int"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Can mixins have properties?\n\n```dart\nmixin Colorful {\n  String color = 'red';\n  \n  void showColor() {\n    print('My color is $color');\n  }\n}\n```",
+    "options": [
+      "Yes, mixins can have properties",
+      "No, mixins can only have methods",
+      "Only if they are final",
+      "Only if they are static"
+    ],
+    "answer": ["Yes, mixins can have properties"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the property access from mixin:\n\n```dart\nmixin Sized {\n  double size = 10.0;\n}\n\nclass Box with Sized {\n  void showInfo() {\n    print('Box size: %fill%');\n  }\n}\n```",
+    "answer": ["$size"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin with abstract method:\n\n```dart\nmixin Drawable {\n  %order% draw();\n  \n  void prepare() {\n    print('Preparing to draw');\n    draw();\n  }\n}\n```",
+    "options": [
+      "void"
+    ],
+    "answer": [
+      "void"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens with abstract methods in mixins?\n\n```dart\nmixin Playable {\n  void play();\n  \n  void start() {\n    print('Starting...');\n    play();\n  }\n}\n\nclass MusicPlayer with Playable {\n  // What must be here?\n}\n```",
+    "options": [
+      "Must implement the abstract method play()",
+      "Nothing needs to be implemented",
+      "Cannot use this mixin",
+      "Only concrete methods are inherited"
+    ],
+    "answer": ["Must implement the abstract method play()"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the abstract method implementation:\n\n```dart\nmixin Singable {\n  void sing();\n}\n\nclass Bird with Singable {\n  @override\n  void %fill%() {\n    print('Tweet tweet!');\n  }\n}\n```",
+    "answer": ["sing"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin with constructor-like initialization:\n\n```dart\nmixin Initializable {\n  bool _initialized = false;\n  \n  %order% init() {\n    if (!_initialized) {\n      print('Initializing...');\n      _initialized = true;\n    }\n  }\n}\n```",
+    "options": [
+      "void"
+    ],
+    "answer": [
+      "void"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Can mixins have constructors?\n\n```dart\nmixin MyMixin {\n  // Can this have a constructor?\n  String name = 'default';\n}\n```",
+    "options": [
+      "No, mixins cannot have constructors",
+      "Yes, mixins can have constructors",
+      "Only if they extend a class",
+      "Only named constructors are allowed"
+    ],
+    "answer": ["No, mixins cannot have constructors"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the mixin method override:\n\n```dart\nmixin Greetable {\n  void greet() {\n    print('Hello!');\n  }\n}\n\nclass FriendlyPerson with Greetable {\n  %fill%\n  void greet() {\n    print('Hey there, friend!');\n  }\n}\n```",
+    "answer": ["@override"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the inheritance with mixin:\n\n```dart\nclass Animal {\n  void breathe() {\n    print('Breathing');\n  }\n}\n\nmixin CanFly {\n  void fly() {\n    print('Flying');\n  }\n}\n\nclass Bird %order% Animal %order% CanFly {\n  void chirp() {\n    print('Chirping');\n  }\n}\n```",
+    "options": [
+      "extends",
+      "with"
+    ],
+    "answer": [
+      "extends",
+      "with"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What methods can Bird access?\n\n```dart\nclass Animal {\n  void eat() => print('Eating');\n}\n\nmixin CanFly {\n  void fly() => print('Flying');\n}\n\nclass Bird extends Animal with CanFly {\n  void sing() => print('Singing');\n}\n```",
+    "options": [
+      "eat(), fly(), and sing()",
+      "Only sing()",
+      "Only fly() and sing()",
+      "Only eat() and sing()"
+    ],
+    "answer": ["eat(), fly(), and sing()"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in all available methods:\n\n```dart\nclass Vehicle {\n  void start() => print('Starting');\n}\n\nmixin HasWheels {\n  void roll() => print('Rolling');\n}\n\nclass Car extends Vehicle with HasWheels {\n  void honk() {\n    %fill%(); // From Vehicle\n    %fill%(); // From HasWheels  \n    print('Beep beep!');\n  }\n}\n```",
+    "answer": ["start", "roll"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin order:\n\n```dart\nmixin A {\n  void test() => print('A');\n}\n\nmixin B {\n  void test() => print('B');\n}\n\nclass MyClass %order% A, B {\n  // Which test() method will be used?\n}\n```",
+    "options": [
+      "with"
+    ],
+    "answer": [
+      "with"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will happen with conflicting mixin methods?\n\n```dart\nmixin First {\n  void greet() => print('Hello from First');\n}\n\nmixin Second {\n  void greet() => print('Hello from Second');\n}\n\nclass Test with First, Second {\n}\n\nvoid main() {\n  Test().greet();\n}\n```",
+    "options": [
+      "Hello from Second",
+      "Hello from First",
+      "Both messages print",
+      "Error"
+    ],
+    "answer": ["Hello from Second"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the mixin that will be used:\n\n```dart\nmixin Early {\n  void speak() => print('Early bird');\n}\n\nmixin Late {\n  void speak() => print('Night owl');\n}\n\nclass Person with Early, Late {\n  void talk() {\n    speak(); // This will call from %fill% mixin\n  }\n}\n```",
+    "answer": ["Late"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin with super call:\n\n```dart\nmixin Base {\n  void work() {\n    print('Base work');\n  }\n}\n\nmixin Enhanced {\n  void work() {\n    %order%.work();\n    print('Enhanced work');\n  }\n}\n```",
+    "options": [
+      "super"
+    ],
+    "answer": [
+      "super"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens with super in mixins?\n\n```dart\nmixin Logger {\n  void log() {\n    print('Logging...');\n  }\n}\n\nclass Service with Logger {\n  void process() {\n    super.toString(); // What happens here?\n  }\n}\n```",
+    "options": [
+      "Calls the method from the superclass chain",
+      "Calls the mixin method",
+      "Causes an error",
+      "Does nothing"
+    ],
+    "answer": ["Calls the method from the superclass chain"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the super usage in mixin:\n\n```dart\nclass Base {\n  void init() {\n    print('Base initialization');\n  }\n}\n\nmixin Configurable {\n  void init() {\n    %fill%.init();\n    print('Configurable initialization');\n  }\n}\n\nclass App extends Base with Configurable {\n}\n```",
+    "answer": ["super"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin restriction:\n\n```dart\nmixin CanFly %order% Bird {\n  void fly() {\n    print('Flying like a bird');\n  }\n}\n\nclass Bird {\n  void chirp() => print('Chirp');\n}\n\nclass Eagle extends Bird with CanFly {\n}\n```",
+    "options": [
+      "on"
+    ],
+    "answer": [
+      "on"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the 'on' keyword do in mixins?\n\n```dart\nmixin Swimmer on Animal {\n  void swim() {\n    print('Swimming');\n  }\n}\n```",
+    "options": [
+      "Restricts the mixin to only be used on Animal or its subclasses",
+      "Makes the mixin extend Animal",
+      "Creates a dependency on Animal",
+      "Has no effect"
+    ],
+    "answer": ["Restricts the mixin to only be used on Animal or its subclasses"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the mixin constraint:\n\n```dart\nclass Animal {\n  String species = 'Unknown';\n}\n\nmixin Carnivore %fill% Animal {\n  void hunt() {\n    print('$species is hunting');\n  }\n}\n```",
+    "answer": ["on"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin with getter:\n\n```dart\nmixin Measurable {\n  double width = 0.0;\n  double height = 0.0;\n  \n  %order% get area => width * height;\n}\n```",
+    "options": [
+      "double"
+    ],
+    "answer": [
+      "double"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this mixin getter return?\n\n```dart\nmixin Rectangular {\n  double length = 5.0;\n  double width = 3.0;\n  \n  double get area => length * width;\n}\n\nclass Table with Rectangular {\n}\n\nvoid main() {\n  Table table = Table();\n  print(table.area);\n}\n```",
+    "options": [
+      "15.0",
+      "8.0",
+      "5.0",
+      "Error"
+    ],
+    "answer": ["15.0"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the getter access:\n\n```dart\nmixin Circular {\n  double radius = 4.0;\n  double get circumference => 2 * 3.14159 * radius;\n}\n\nclass Wheel with Circular {\n  void showInfo() {\n    print('Circumference: %fill%');\n  }\n}\n```",
+    "answer": ["$circumference"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin with setter:\n\n```dart\nmixin Configurable {\n  String _config = 'default';\n  \n  String get config => _config;\n  \n  %order% config(%order% value) {\n    _config = value;\n    print('Config set to: $value');\n  }\n}\n```",
+    "options": [
+      "set",
+      "String"
+    ],
+    "answer": [
+      "set",
+      "String"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when using mixin setters?\n\n```dart\nmixin Themed {\n  String _theme = 'light';\n  \n  set theme(String newTheme) {\n    _theme = newTheme;\n    print('Theme changed to: $newTheme');\n  }\n}\n\nclass App with Themed {\n}\n\nvoid main() {\n  App app = App();\n  app.theme = 'dark';\n}\n```",
+    "options": [
+      "Theme changed to: dark",
+      "Error",
+      "Nothing prints",
+      "Theme changed to: light"
+    ],
+    "answer": ["Theme changed to: dark"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the setter usage:\n\n```dart\nmixin Resizable {\n  double _size = 1.0;\n  \n  set size(double newSize) {\n    _size = newSize;\n  }\n}\n\nclass Window with Resizable {\n  void makeSmall() {\n    %fill% = 0.5;\n  }\n}\n```",
+    "answer": ["size"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin with static members:\n\n```dart\nmixin MathUtils {\n  %order% %order% double pi = 3.14159;\n  \n  %order% %order% double square(double x) {\n    return x * x;\n  }\n}\n```",
+    "options": [
+      "static",
+      "const",
+      "static",
+      "double"
+    ],
+    "answer": [
+      "static",
+      "const",
+      "static", 
+      "double"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do you access static members from mixins?\n\n```dart\nmixin Constants {\n  static const String version = '1.0.0';\n  static int getValue() => 42;\n}\n```",
+    "options": [
+      "Constants.version and Constants.getValue()",
+      "Cannot access static members from mixins",
+      "Only through instances",
+      "Using super keyword"
+    ],
+    "answer": ["Constants.version and Constants.getValue()"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the static member access:\n\n```dart\nmixin AppInfo {\n  static const String name = 'MyApp';\n}\n\nvoid main() {\n  print(AppInfo%fill%name);\n}\n```",
+    "answer": ["."],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin with private members:\n\n```dart\nmixin Secure {\n  String %order% = 'secret123';\n  \n  void showPublic() {\n    print('Public info');\n  }\n  \n  void _showPrivate() {\n    print('Private: $_password');\n  }\n}\n```",
+    "options": [
+      "_password"
+    ],
+    "answer": [
+      "_password"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Can other classes access private members from mixins?\n\n```dart\nmixin Database {\n  String _connectionString = 'localhost';\n  \n  void connect() {\n    print('Connecting to $_connectionString');\n  }\n}\n\nclass Service with Database {\n  void showConnection() {\n    // Can access _connectionString?\n  }\n}\n```",
+    "options": [
+      "No, private members are not accessible outside the mixin",
+      "Yes, all mixin members are accessible",
+      "Only if using super",
+      "Only in the same file"
+    ],
+    "answer": ["No, private members are not accessible outside the mixin"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the public method call:\n\n```dart\nmixin Loggable {\n  void _log(String message) {\n    print('Log: $message');\n  }\n  \n  void info(String message) {\n    _log('INFO: $message');\n  }\n}\n\nclass Service with Loggable {\n  void doWork() {\n    %fill%('Work completed');\n  }\n}\n```",
+    "answer": ["info"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin implements interface:\n\n```dart\nabstract class Drawable {\n  void draw();\n}\n\nmixin CircleMixin %order% Drawable {\n  @override\n  void draw() {\n    print('Drawing a circle');\n  }\n}\n```",
+    "options": [
+      "implements"
+    ],
+    "answer": [
+      "implements"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when a mixin implements an interface?\n\n```dart\nabstract class Printable {\n  void print();\n}\n\nmixin DocumentMixin implements Printable {\n  @override\n  void print() {\n    print('Printing document');\n  }\n}\n```",
+    "options": [
+      "The mixin must implement all interface methods",
+      "The mixin cannot implement interfaces",
+      "Only classes using the mixin must implement methods",
+      "Interface methods are optional"
+    ],
+    "answer": ["The mixin must implement all interface methods"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the interface implementation:\n\n```dart\nabstract class Closeable {\n  void close();\n}\n\nmixin ResourceMixin implements Closeable {\n  @override\n  void %fill%() {\n    print('Closing resource');\n  }\n}\n```",
+    "answer": ["close"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin composition chain:\n\n```dart\nmixin A {\n  void methodA() => print('A');\n}\n\nmixin B %order% A {\n  void methodB() {\n    methodA();\n    print('B');\n  }\n}\n\nclass MyClass %order% B {\n}\n```",
+    "options": [
+      "with",
+      "with"
+    ],
+    "answer": [
+      "with",
+      "with"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What methods are available in this mixin chain?\n\n```dart\nmixin Walkable {\n  void walk() => print('Walking');\n}\n\nmixin Runnable with Walkable {\n  void run() {\n    walk();\n    print('Running');\n  }\n}\n\nclass Athlete with Runnable {\n}\n```",
+    "options": [
+      "Both walk() and run()",
+      "Only run()",
+      "Only walk()",
+      "Neither method"
+    ],
+    "answer": ["Both walk() and run()"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the mixin chaining:\n\n```dart\nmixin Base {\n  void base() => print('Base');\n}\n\nmixin Enhanced %fill% Base {\n  void enhanced() {\n    base();\n    print('Enhanced');\n  }\n}\n```",
+    "answer": ["with"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the mixin factory pattern:\n\n```dart\nmixin Creatable {\n  %order% create(String type) {\n    switch (type) {\n      case 'A':\n        return ClassA();\n      case 'B':\n        return ClassB();\n      default:\n        return null;\n    }\n  }\n}\n```",
+    "options": [
+      "dynamic"
+    ],
+    "answer": [
+      "dynamic"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why are mixins useful?\n\n```dart\nmixin Flyable {\n  void fly() => print('Flying');\n}\n\nmixin Swimmable {\n  void swim() => print('Swimming');\n}\n\nclass Duck with Flyable, Swimmable {\n  void quack() => print('Quack');\n}\n```",
+    "options": [
+      "They allow multiple inheritance-like behavior without complexity",
+      "They make classes run faster",
+      "They reduce memory usage",
+      "They prevent errors"
+    ],
+    "answer": ["They allow multiple inheritance-like behavior without complexity"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the mixin benefit:\n\n```dart\n// Mixins provide %fill% without the diamond problem\nmixin Printable {\n  void print() => print('Printing');\n}\n\nmixin Scannable {\n  void scan() => print('Scanning');\n}\n\nclass Printer with Printable, Scannable {\n}\n```",
+    "answer": ["code reuse"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final mixin example:\n\n```dart\nmixin %order% {\n  String name = 'Hero';\n  int level = 1;\n  \n  void %order%() {\n    print('$name attacks with power ${level * 10}!');\n  }\n  \n  void %order%() {\n    level++;\n    print('$name leveled up to $level!');\n  }\n}\n\nclass Warrior with SuperPowers {\n  void train() {\n    print('Training hard...');\n    levelUp();\n  }\n}\n```",
+    "options": [
+      "SuperPowers",
+      "attack",
+      "levelUp"
+    ],
+    "answer": [
+      "SuperPowers",
+      "attack", 
+      "levelUp"
+    ],
+    "type": "order"
+  }
+]

@@ -142,7 +142,7 @@ class _CourseQuizState extends State<CourseQuiz> {
                         SizedBox(height: 20.h),
                         if (e.type == "order")
                           Wrap(spacing: 10.w, runSpacing: 10.h, children: [
-                            ...?e.options?.map((op) {
+                            ...?(e.options)?.map((op) {
                               final selected =
                                   e.userAnswer?.contains(op) == true;
                               return InkWell(

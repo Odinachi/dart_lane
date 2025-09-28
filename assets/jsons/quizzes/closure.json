@@ -1,0 +1,380 @@
+[
+  {
+    "question": "Complete the closure that remembers a variable:\n\n```dart\nFunction packLunch() {\n  String snack = 'Cookie';\n  \n  %order% () {\n    print('Your snack is: $snack');\n  };\n}\n```",
+    "options": [
+      "return"
+    ],
+    "answer": [
+      "return"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this closure output?\n\n```dart\nFunction createGreeter() {\n  String name = 'Alice';\n  return () {\n    print('Hello, $name!');\n  };\n}\n\nvoid main() {\n  var greet = createGreeter();\n  greet();\n}\n```",
+    "options": [
+      "Hello, Alice!",
+      "Hello, name!",
+      "Error",
+      "Nothing"
+    ],
+    "answer": ["Hello, Alice!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the variable that the closure remembers:\n\n```dart\nFunction createCounter() {\n  int %fill% = 0;\n  \n  return () {\n    count++;\n    print('Count: $count');\n  };\n}\n```",
+    "answer": ["count"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure usage pattern:\n\n```dart\nvoid main() {\n  var counter = createCounter();\n  %order%(); // Count: 1\n  %order%(); // Count: 2  \n}\n```",
+    "options": [
+      "counter",
+      "counter"
+    ],
+    "answer": [
+      "counter",
+      "counter"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is special about closures?\n\n```dart\nFunction outer() {\n  int value = 10;\n  return () => print(value);\n}\n```",
+    "options": [
+      "They remember variables from their creation environment",
+      "They run faster than regular functions",
+      "They can only use global variables", 
+      "They cannot access any variables"
+    ],
+    "answer": ["They remember variables from their creation environment"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the closure return statement:\n\n```dart\nFunction makeAdder(int x) {\n  %fill% (int y) => x + y;\n}\n```",
+    "answer": ["return"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure with parameter:\n\n```dart\nFunction createMultiplier(%order% factor) {\n  return (int number) {\n    return number * factor;\n  };\n}\n```",
+    "options": [
+      "int"
+    ],
+    "answer": [
+      "int"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this closure chain produce?\n\n```dart\nFunction createAdder(int a) {\n  return (int b) {\n    return (int c) => a + b + c;\n  };\n}\n\nvoid main() {\n  var add5 = createAdder(5);\n  var add5and3 = add5(3);\n  print(add5and3(2));\n}\n```",
+    "options": [
+      "10",
+      "5",
+      "8", 
+      "Error"
+    ],
+    "answer": ["10"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the variable access in closure:\n\n```dart\nFunction createPrinter() {\n  String message = 'Hello World';\n  \n  return () {\n    print(%fill%);\n  };\n}\n```",
+    "answer": ["message"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure with mutable variable:\n\n```dart\nFunction createBankAccount(double initialBalance) {\n  double %order% = initialBalance;\n  \n  return () {\n    balance += 10;\n    return balance;\n  };\n}\n```",
+    "options": [
+      "balance"
+    ],
+    "answer": [
+      "balance"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when multiple closures share the same variable?\n\n```dart\nList<Function> createCounters() {\n  int shared = 0;\n  return [\n    () => ++shared,\n    () => ++shared\n  ];\n}\n\nvoid main() {\n  var counters = createCounters();\n  print(counters[0]()); // ?\n  print(counters[1]()); // ?\n}\n```",
+    "options": [
+      "1, 2 - they share the same variable",
+      "1, 1 - they have separate variables",
+      "0, 0 - variables reset",
+      "Error"
+    ],
+    "answer": ["1, 2 - they share the same variable"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the closure parameter:\n\n```dart\nFunction createFormatter(String prefix) {\n  return (%fill% text) {\n    return '$prefix: $text';\n  };\n}\n```",
+    "answer": ["String"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure factory pattern:\n\n```dart\nFunction %order%(String operation) {\n  switch (operation) {\n    case 'add':\n      return (a, b) => a + b;\n    case 'multiply':\n      return (a, b) => a * b;\n    default:\n      return (a, b) => 0;\n  }\n}\n```",
+    "options": [
+      "createCalculator"
+    ],
+    "answer": [
+      "createCalculator"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this closure remember?\n\n```dart\nFunction createReminder(String task, DateTime deadline) {\n  return () {\n    print('Remember to: $task by $deadline');\n  };\n}\n```",
+    "options": [
+      "Both task and deadline variables",
+      "Only the task variable",
+      "Only the deadline variable", 
+      "Neither variable"
+    ],
+    "answer": ["Both task and deadline variables"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the closure invocation:\n\n```dart\nvoid main() {\n  var doubler = createMultiplier(2);\n  int result = %fill%(5);\n  print(result); // 10\n}\n```",
+    "answer": ["doubler"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure with conditional logic:\n\n```dart\nFunction createValidator(int minLength) {\n  return (%order% input) {\n    if (input.length >= minLength) {\n      return 'Valid';\n    } else {\n      return 'Too short';\n    }\n  };\n}\n```",
+    "options": [
+      "String"
+    ],
+    "answer": [
+      "String"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Why are closures useful?\n\n```dart\nFunction createLogger(String level) {\n  return (String message) {\n    print('[$level] $message');\n  };\n}\n\nvar errorLogger = createLogger('ERROR');\nvar infoLogger = createLogger('INFO');\n```",
+    "options": [
+      "They create specialized functions with embedded context",
+      "They run faster than regular functions",
+      "They use less memory",
+      "They automatically handle errors"
+    ],
+    "answer": ["They create specialized functions with embedded context"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the closure with list operation:\n\n```dart\nFunction createFilter(int threshold) {\n  return (List<int> numbers) {\n    return numbers.where((n) => n > %fill%).toList();\n  };\n}\n```",
+    "answer": ["threshold"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure callback pattern:\n\n```dart\nvoid processData(Function callback) {\n  String data = 'processed';\n  %order%(data);\n}\n\nvoid main() {\n  processData((result) {\n    print('Got: $result');\n  });\n}\n```",
+    "options": [
+      "callback"
+    ],
+    "answer": [
+      "callback"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this nested closure output?\n\n```dart\nFunction createNested(String outer) {\n  return (String middle) {\n    return (String inner) {\n      return '$outer-$middle-$inner';\n    };\n  };\n}\n\nvoid main() {\n  var result = createNested('A')('B')('C');\n  print(result);\n}\n```",
+    "options": [
+      "A-B-C",
+      "C-B-A",
+      "A-B",
+      "Error"
+    ],
+    "answer": ["A-B-C"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the closure state management:\n\n```dart\nFunction createToggle() {\n  bool %fill% = false;\n  \n  return () {\n    state = !state;\n    return state;\n  };\n}\n```",
+    "answer": ["state"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure with default parameter:\n\n```dart\nFunction createGreeter([String defaultName = 'Guest']) {\n  return ([%order%? name]) {\n    print('Hello, ${name ?? defaultName}!');\n  };\n}\n```",
+    "options": [
+      "String"
+    ],
+    "answer": [
+      "String"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do closures differ from regular functions?\n\n```dart\n// Regular function\nvoid regularFunction() {\n  print('Hello');\n}\n\n// Closure\nFunction createClosure() {\n  String msg = 'Hello';\n  return () => print(msg);\n}\n```",
+    "options": [
+      "Closures capture and remember variables from their lexical scope",
+      "Closures are faster to execute",
+      "Regular functions cannot be stored in variables",
+      "There is no difference"
+    ],
+    "answer": ["Closures capture and remember variables from their lexical scope"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the closure with arithmetic:\n\n```dart\nFunction createAccumulator(int initial) {\n  int sum = %fill%;\n  \n  return (int value) {\n    sum += value;\n    return sum;\n  };\n}\n```",
+    "answer": ["initial"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure iteration pattern:\n\n```dart\nList<Function> createProcessors() {\n  List<Function> processors = [];\n  \n  for (int i = 0; i < 3; i++) {\n    processors.add(() => print('Processor %order%'));\n  }\n  \n  return processors;\n}\n```",
+    "options": [
+      "$i"
+    ],
+    "answer": [
+      "$i"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens with closure variable capture?\n\n```dart\nvoid main() {\n  var functions = <Function>[];\n  \n  for (int i = 0; i < 3; i++) {\n    functions.add(() => print(i));\n  }\n  \n  functions.forEach((f) => f());\n}\n```",
+    "options": [
+      "Prints 3, 3, 3 - all closures capture final value",
+      "Prints 0, 1, 2 - each closure captures current value",
+      "Prints nothing",
+      "Error"
+    ],
+    "answer": ["Prints 3, 3, 3 - all closures capture final value"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the closure with proper variable capture:\n\n```dart\nList<Function> createProperCounters() {\n  var functions = <Function>[];\n  \n  for (int i = 0; i < 3; i++) {\n    int %fill% = i; // Capture current value\n    functions.add(() => print(captured));\n  }\n  \n  return functions;\n}\n```",
+    "answer": ["captured"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure with async operation:\n\n```dart\nFunction createAsyncProcessor() {\n  String status = 'ready';\n  \n  return () %order% {\n    await Future.delayed(Duration(seconds: 1));\n    print('Status: $status');\n  };\n}\n```",
+    "options": [
+      "async"
+    ],
+    "answer": [
+      "async"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is lexical scoping in closures?\n\n```dart\nFunction outer() {\n  int x = 10;\n  \n  Function inner() {\n    return () => x; // Accesses x from outer\n  }\n  \n  return inner();\n}\n```",
+    "options": [
+      "Closures can access variables from their defining scope",
+      "Closures can only access global variables",
+      "Closures create their own isolated scope",
+      "Closures cannot access any external variables"
+    ],
+    "answer": ["Closures can access variables from their defining scope"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the closure with object interaction:\n\n```dart\nclass Counter {\n  int value = 0;\n  \n  Function getIncrementer() {\n    return () {\n      %fill%++;\n      return value;\n    };\n  }\n}\n```",
+    "answer": ["value"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure composition pattern:\n\n```dart\nFunction compose(Function f, Function g) {\n  return (%order% x) {\n    return f(g(x));\n  };\n}\n\nvoid main() {\n  var addOne = (int x) => x + 1;\n  var double = (int x) => x * 2;\n  var composed = compose(addOne, double);\n}\n```",
+    "options": [
+      "dynamic"
+    ],
+    "answer": [
+      "dynamic"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this closure factory produce?\n\n```dart\nFunction createEventHandler(String eventType) {\n  int count = 0;\n  \n  return (String data) {\n    count++;\n    print('$eventType #$count: $data');\n  };\n}\n\nvoid main() {\n  var onClick = createEventHandler('CLICK');\n  onClick('Button 1');\n  onClick('Button 2');\n}\n```",
+    "options": [
+      "CLICK #1: Button 1\\nCLICK #2: Button 2",
+      "CLICK #1: Button 1\\nCLICK #1: Button 2",
+      "Button 1\\nButton 2",
+      "Error"
+    ],
+    "answer": ["CLICK #1: Button 1\\nCLICK #2: Button 2"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the closure with type annotation:\n\n```dart\nFunction createConverter() {\n  double rate = 1.5;\n  \n  return (%fill% value) {\n    return value * rate;\n  };\n}\n```",
+    "answer": ["double"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure with error handling:\n\n```dart\nFunction createSafeDivider() {\n  return (double a, double b) {\n    %order% (b != 0) {\n      return a / b;\n    } else {\n      return 0.0;\n    }\n  };\n}\n```",
+    "options": [
+      "if"
+    ],
+    "answer": [
+      "if"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What makes closures powerful for callbacks?\n\n```dart\nvoid asyncOperation(Function onComplete) {\n  Future.delayed(Duration(seconds: 1), () {\n    onComplete('Done!');\n  });\n}\n\nvoid main() {\n  String context = 'MyOperation';\n  asyncOperation((result) {\n    print('$context completed: $result');\n  });\n}\n```",
+    "options": [
+      "They can capture context from where they were created",
+      "They run faster than named functions",
+      "They automatically handle async operations",
+      "They prevent memory leaks"
+    ],
+    "answer": ["They can capture context from where they were created"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the closure with list transformation:\n\n```dart\nFunction createMapper(String prefix) {\n  return (List<String> items) {\n    return items.map((item) => '$%fill%$item').toList();\n  };\n}\n```",
+    "answer": ["prefix"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure memory pattern:\n\n```dart\nFunction createHistory() {\n  List<String> %order% = [];\n  \n  return (String action) {\n    history.add(action);\n    return List.from(history);\n  };\n}\n```",
+    "options": [
+      "history"
+    ],
+    "answer": [
+      "history"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this closure with recursion do?\n\n```dart\nFunction createFactorial() {\n  Function fact;\n  \n  fact = (int n) {\n    if (n <= 1) return 1;\n    return n * fact(n - 1);\n  };\n  \n  return fact;\n}\n\nvoid main() {\n  var factorial = createFactorial();\n  print(factorial(5));\n}\n```",
+    "options": [
+      "Calculate factorial: 120",
+      "Infinite recursion",
+      "Error: fact is not defined",
+      "Return 5"
+    ],
+    "answer": ["Calculate factorial: 120"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the closure with conditional creation:\n\n```dart\nFunction? createProcessor(bool enabled) {\n  if (%fill%) {\n    String mode = 'active';\n    return (String data) => 'Processing in $mode: $data';\n  }\n  return null;\n}\n```",
+    "answer": ["enabled"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the closure with map operations:\n\n```dart\nFunction createCache() {\n  Map<String, dynamic> %order% = {};\n  \n  return (String key, dynamic value) {\n    cache[key] = value;\n    return cache;\n  };\n}\n```",
+    "options": [
+      "cache"
+    ],
+    "answer": [
+      "cache"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do closures help with encapsulation?\n\n```dart\nFunction createSecureCounter() {\n  int _private = 0;\n  \n  return {\n    'increment': () => ++_private,\n    'getValue': () => _private,\n    'reset': () => _private = 0\n  };\n}\n```",
+    "options": [
+      "They hide private variables while providing controlled access",
+      "They make all variables global",
+      "They prevent any variable access",
+      "They automatically encrypt data"
+    ],
+    "answer": ["They hide private variables while providing controlled access"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the closure with timer functionality:\n\n```dart\nFunction createTimer() {\n  DateTime %fill% = DateTime.now();\n  \n  return () {\n    return DateTime.now().difference(start).inSeconds;\n  };\n}\n```",
+    "answer": ["start"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final closure example:\n\n```dart\nFunction createCustomLogger(String service) {\n  int logCount = 0;\n  \n  return (%order% level, %order% message) {\n    logCount++;\n    print('[$service] Log #$logCount [$level]: $message');\n  };\n}\n```",
+    "options": [
+      "String",
+      "String"
+    ],
+    "answer": [
+      "String",
+      "String"
+    ],
+    "type": "order"
+  }
+]
