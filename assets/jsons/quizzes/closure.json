@@ -4,7 +4,12 @@
     "options": [
       "return",
       "print",
-      "$snack"
+      "$snack",
+      "throw",
+      "console",
+      "$food",
+      "display",
+      "snack"
     ],
     "answer": [
       "return",
@@ -34,7 +39,12 @@
     "options": [
       "counter",
       "counter",
-      "counter"
+      "counter",
+      "count",
+      "num",
+      "increment",
+      "function",
+      "closure"
     ],
     "answer": [
       "counter",
@@ -64,7 +74,12 @@
     "options": [
       "int",
       "factor",
-      "return"
+      "return",
+      "double",
+      "value",
+      "yield",
+      "String",
+      "multiplier"
     ],
     "answer": [
       "int",
@@ -94,7 +109,12 @@
     "options": [
       "balance",
       "initialBalance",
-      "balance"
+      "balance",
+      "amount",
+      "money",
+      "total",
+      "value",
+      "sum"
     ],
     "answer": [
       "balance",
@@ -124,7 +144,12 @@
     "options": [
       "createCalculator",
       "String",
-      "operation"
+      "operation",
+      "makeFunction",
+      "int",
+      "type",
+      "buildCalculator",
+      "double"
     ],
     "answer": [
       "createCalculator",
@@ -154,7 +179,12 @@
     "options": [
       "String",
       "input",
-      "if"
+      "if",
+      "int",
+      "text",
+      "while",
+      "bool",
+      "value"
     ],
     "answer": [
       "String",
@@ -184,7 +214,12 @@
     "options": [
       "callback",
       "callback",
-      "data"
+      "data",
+      "handler",
+      "function",
+      "result",
+      "processor",
+      "info"
     ],
     "answer": [
       "callback",
@@ -214,7 +249,12 @@
     "options": [
       "String",
       "name",
-      "name"
+      "name",
+      "int",
+      "user",
+      "person",
+      "double",
+      "text"
     ],
     "answer": [
       "String",
@@ -244,7 +284,12 @@
     "options": [
       "i",
       "i",
-      "i"
+      "i",
+      "j",
+      "index",
+      "count",
+      "x",
+      "num"
     ],
     "answer": [
       "i",
@@ -274,7 +319,12 @@
     "options": [
       "status",
       "async",
-      "await"
+      "await",
+      "state",
+      "sync",
+      "wait",
+      "condition",
+      "future"
     ],
     "answer": [
       "status",
@@ -304,7 +354,12 @@
     "options": [
       "dynamic",
       "x",
-      "f"
+      "f",
+      "int",
+      "y",
+      "g",
+      "Object",
+      "value"
     ],
     "answer": [
       "dynamic",
@@ -334,7 +389,12 @@
     "options": [
       "double",
       "double",
-      "if"
+      "if",
+      "int",
+      "num",
+      "while",
+      "String",
+      "for"
     ],
     "answer": [
       "double",
@@ -364,7 +424,12 @@
     "options": [
       "List",
       "history",
-      "[]"
+      "[]",
+      "Set",
+      "data",
+      "{}",
+      "Map",
+      "records"
     ],
     "answer": [
       "List",
@@ -394,7 +459,12 @@
     "options": [
       "Map",
       "cache",
-      "{}"
+      "{}",
+      "List",
+      "data",
+      "[]",
+      "Set",
+      "storage"
     ],
     "answer": [
       "Map",
@@ -409,7 +479,11 @@
       "String",
       "level",
       "String",
-      "message"
+      "message",
+      "int",
+      "type",
+      "double",
+      "text"
     ],
     "answer": [
       "String",

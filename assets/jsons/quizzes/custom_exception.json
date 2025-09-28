@@ -20,7 +20,11 @@
     "question": "Complete the exception handling:\n\n```dart\nvoid main() {\n  %order% {\n    throw ToyBrokenException('robot');\n  } %order% (e) {\n    print(e);\n  }\n}\n```",
     "options": [
       "try",
-      "catch"
+      "catch",
+      "if",
+      "when",
+      "finally",
+      "handle"
     ],
     "answer": [
       "try",
@@ -45,14 +49,19 @@
     "type": "fill"
   },
   {
-    "question": "Complete the custom exception with constructor:\n\n```dart\nclass BookException implements Exception {\n  final String %order%;\n  \n  BookException(%order%);\n}\n```",
+    "question": "Complete the custom exception with constructor:\n\n```dart\nclass BookException implements Exception {\n  final String %order%;\n  \n  BookException(%order%.%order%);\n}\n```",
     "options": [
       "message",
-      "this.message"
+      "this",
+      "message",
+      "text",
+      "error",
+      "reason"
     ],
     "answer": [
       "message",
-      "this.message"
+      "this",
+      "message"
     ],
     "type": "order"
   },
@@ -76,7 +85,11 @@
     "question": "Complete the specific exception handling:\n\n```dart\nvoid main() {\n  try {\n    checkToy(true);\n  } %order% %order% (e) {\n    print('Toy error: $e');\n  } catch (e) {\n    print('Other error: $e');\n  }\n}\n```",
     "options": [
       "on",
-      "ToyException"
+      "ToyException",
+      "when",
+      "CustomException",
+      "catch",
+      "handle"
     ],
     "answer": [
       "on",
@@ -121,7 +134,11 @@
     "question": "Complete the exception handling with multiple catch blocks:\n\n```dart\nvoid main() {\n  try {\n    riskyOperation();\n  } on %order% catch (e) {\n    print('Network error: $e');\n  } on %order% catch (e) {\n    print('File error: $e');\n  }\n}\n```",
     "options": [
       "NetworkException",
-      "FileException"
+      "FileException",
+      "DataException",
+      "SystemException",
+      "CustomException",
+      "ApiException"
     ],
     "answer": [
       "NetworkException",
@@ -183,7 +200,11 @@
     "question": "Complete the exception with named constructor:\n\n```dart\nclass DatabaseException implements Exception {\n  final String message;\n  \n  DatabaseException(this.message);\n  \n  %order%.connectionFailed() : %order%('Database connection failed');\n}\n```",
     "options": [
       "DatabaseException",
-      "this"
+      "this",
+      "Exception",
+      "super",
+      "factory",
+      "const"
     ],
     "answer": [
       "DatabaseException",
@@ -245,7 +266,11 @@
     "question": "Complete the exception wrapping pattern:\n\n```dart\nvoid processFile(String path) {\n  try {\n    // file operations\n  } %order% (e) {\n    throw FileProcessingException('Failed to process $path', %order%);\n  }\n}\n```",
     "options": [
       "catch",
-      "e"
+      "e",
+      "on",
+      "error",
+      "finally",
+      "exception"
     ],
     "answer": [
       "catch",
@@ -274,7 +299,10 @@
     "options": [
       "NetworkException",
       "DataException", 
-      "catch"
+      "catch",
+      "SystemException",
+      "ApiException",
+      "on"
     ],
     "answer": [
       "NetworkException",
@@ -317,14 +345,18 @@
     "type": "fill"
   },
   {
-    "question": "Complete the exception handling with recovery:\n\n```dart\nvoid reliableOperation() {\n  try {\n    primaryOperation();\n  } %order% (NetworkException e) {\n    print('Network failed, trying backup');\n    %order%;\n  }\n}\n```",
+    "question": "Complete the exception handling with recovery:\n\n```dart\nvoid reliableOperation() {\n  try {\n    primaryOperation();\n  } %order% (NetworkException e) {\n    print('Network failed, trying backup');\n    %order%();\n  }\n}\n```",
     "options": [
       "catch",
-      "backupOperation()"
+      "backupOperation",
+      "on",
+      "retryOperation",
+      "fallbackOperation",
+      "recoveryOperation"
     ],
     "answer": [
       "catch", 
-      "backupOperation()"
+      "backupOperation"
     ],
     "type": "order"
   },
@@ -348,7 +380,11 @@
     "question": "Complete the exception handling with finally:\n\n```dart\nvoid resourceOperation() {\n  Resource? resource;\n  try {\n    resource = acquireResource();\n    processResource(resource);\n  } %order% (e) {\n    handleError(e);\n  } %order% {\n    resource?.dispose();\n  }\n}\n```",
     "options": [
       "catch",
-      "finally"
+      "finally",
+      "on",
+      "always",
+      "cleanup",
+      "dispose"
     ],
     "answer": [
       "catch",
@@ -376,7 +412,11 @@
     "question": "Complete the exception with builder pattern:\n\n```dart\nclass ExceptionBuilder {\n  String? _message;\n  int? _code;\n  \n  ExceptionBuilder %order%(String message) {\n    _message = message;\n    return this;\n  }\n  \n  CustomException %order%() {\n    return CustomException(_message!, _code!);\n  }\n}\n```",
     "options": [
       "message",
-      "build"
+      "build",
+      "withMessage",
+      "create",
+      "construct",
+      "make"
     ],
     "answer": [
       "message", 

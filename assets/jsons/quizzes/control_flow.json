@@ -1,17 +1,21 @@
 [
   {
-    "question": "Complete the if statement to check if age is greater than or equal to 5:\n\n```dart\nvoid main() {\n  int age = 7;\n  %order% %order% %order% %order% {\n    print('You can ride!');\n  }\n}\n```",
+    "question": "Complete the if statement to check if age is greater than or equal to 5:\n\n```dart\nvoid main() {\n  int age = 7;\n  %order% (%order% %order% %order%) {\n    print('You can ride!');\n  }\n}\n```",
     "options": [
       "if",
-      "(age",
+      "age",
       ">=",
-      "5)"
+      "5",
+      "while",
+      "score",
+      "==",
+      "10"
     ],
     "answer": [
       "if",
-      "(age",
+      "age",
       ">=",
-      "5)"
+      "5"
     ],
     "type": "order"
   },
@@ -54,24 +58,27 @@
     "type": "fill"
   },
   {
-    "question": "Complete the for loop to print 'Clap!' 3 times:\n\n```dart\nvoid main() {\n  %order% %order% %order% %order% %order% %order% %order% {\n    print('Clap! 👏');\n  }\n}\n```",
+    "question": "Complete the for loop to print 'Clap!' 3 times:\n\n```dart\nvoid main() {\n  %order% (%order% %order% = %order%; %order% < %order%; %order%) {\n    print('Clap! 👏');\n  }\n}\n```",
     "options": [
       "for",
-      "(int",
+      "int",
       "i",
-      "=",
-      "0;",
-      "i < 3;",
-      "i++)"
+      "0",
+      "i",
+      "3",
+      "i++",
+      "while",
+      "j",
+      "1"
     ],
     "answer": [
       "for",
-      "(int",
+      "int",
       "i",
-      "=",
-      "0;",
-      "i < 3;",
-      "i++)"
+      "0",
+      "i",
+      "3",
+      "i++"
     ],
     "type": "order"
   },
@@ -94,18 +101,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the while loop:\n\n```dart\nvoid main() {\n  int i = 0;\n  %order% %order% %order% %order% {\n    print('Hop!');\n    i++;\n  }\n}\n```",
+    "question": "Complete the while loop:\n\n```dart\nvoid main() {\n  int i = 0;\n  %order% (%order% %order% %order%) {\n    print('Hop!');\n    i++;\n  }\n}\n```",
     "options": [
       "while",
-      "(i",
+      "i",
       "<",
-      "3)"
+      "3",
+      "for",
+      "j",
+      ">",
+      "5"
     ],
     "answer": [
       "while",
-      "(i",
+      "i",
       "<",
-      "3)"
+      "3"
     ],
     "type": "order"
   },
@@ -144,7 +155,11 @@
       "else",
       "if",
       "else",
-      "if"
+      "if",
+      "while",
+      "for",
+      "when",
+      "case"
     ],
     "answer": [
       "else",
@@ -173,18 +188,21 @@
     "type": "mcq"
   },
   {
-    "question": "Complete the for loop initialization:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% i < 3; i++) {\n    print('Step $i');\n  }\n}\n```",
+    "question": "Complete the for loop initialization:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; i < 3; i++) {\n    print('Step $i');\n  }\n}\n```",
     "options": [
       "int",
       "i",
-      "=",
-      "0;"
+      "0",
+      "double",
+      "j",
+      "1",
+      "String",
+      "k"
     ],
     "answer": [
       "int",
       "i",
-      "=",
-      "0;"
+      "0"
     ],
     "type": "order"
   },
@@ -207,18 +225,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the string comparison:\n\n```dart\nvoid main() {\n  String name = 'Alice';\n  %order% %order% %order% %order% {\n    print('Hello Alice!');\n  }\n}\n```",
+    "question": "Complete the string comparison:\n\n```dart\nvoid main() {\n  String name = 'Alice';\n  %order% (%order% %order% %order%) {\n    print('Hello Alice!');\n  }\n}\n```",
     "options": [
       "if",
-      "(name",
+      "name",
       "==",
-      "'Alice')"
+      "'Alice'",
+      "while",
+      "text",
+      "!=",
+      "'Bob'"
     ],
     "answer": [
       "if",
-      "(name",
+      "name",
       "==",
-      "'Alice')"
+      "'Alice'"
     ],
     "type": "order"
   },
@@ -243,7 +265,12 @@
   {
     "question": "Complete the while loop with increment:\n\n```dart\nvoid main() {\n  int counter = 0;\n  while (counter < 2) {\n    print('Beep!');\n    %order%;\n  }\n}\n```",
     "options": [
-      "counter++"
+      "counter++",
+      "counter--",
+      "i++",
+      "j++",
+      "count++",
+      "num++"
     ],
     "answer": [
       "counter++"
@@ -269,26 +296,28 @@
     "type": "fill"
   },
   {
-    "question": "Complete the range check:\n\n```dart\nvoid main() {\n  int temp = 25;\n  %order% %order% %order% %order% %order% %order% %order% {\n    print('Perfect weather!');\n  }\n}\n```",
+    "question": "Complete the range check:\n\n```dart\nvoid main() {\n  int temp = 25;\n  %order% (%order% %order% %order% %order% %order% %order% %order%) {\n    print('Perfect weather!');\n  }\n}\n```",
     "options": [
       "if",
-      "(temp",
+      "temp",
       ">=",
       "20",
       "&&",
       "temp",
       "<=",
-      "30)"
+      "30",
+      "while",
+      "||"
     ],
     "answer": [
       "if",
-      "(temp",
+      "temp",
       ">=",
       "20",
       "&&",
       "temp",
       "<=",
-      "30)"
+      "30"
     ],
     "type": "order"
   },
@@ -311,24 +340,27 @@
     "type": "fill"
   },
   {
-    "question": "Complete the countdown loop:\n\n```dart\nvoid main() {\n  %order% %order% %order% %order% %order% %order% %order% {\n    print('$i');\n  }\n}\n```",
+    "question": "Complete the countdown loop:\n\n```dart\nvoid main() {\n  %order% (%order% %order% = %order%; %order% > %order%; %order%) {\n    print('$i');\n  }\n}\n```",
     "options": [
       "for",
-      "(int",
+      "int",
       "i",
-      "=",
-      "3;",
-      "i > 0;",
-      "i--)"
+      "3",
+      "i",
+      "0",
+      "i--",
+      "while",
+      "j",
+      "5"
     ],
     "answer": [
       "for",
-      "(int",
+      "int",
       "i",
-      "=",
-      "3;",
-      "i > 0;",
-      "i--)"
+      "3",
+      "i",
+      "0",
+      "i--"
     ],
     "type": "order"
   },
@@ -351,20 +383,27 @@
     "type": "fill"
   },
   {
-    "question": "Complete the grade checker:\n\n```dart\nvoid main() {\n  int score = 85;\n  %order% %order% %order% %order% {\n    print('Excellent!');\n  } %order% %order% %order% %order% {\n    print('Good!');\n  }\n}\n```",
+    "question": "Complete the grade checker:\n\n```dart\nvoid main() {\n  int score = 85;\n  %order% (%order% >= %order%) {\n    print('Excellent!');\n  } %order% %order% (%order% >= %order%) {\n    print('Good!');\n  }\n}\n```",
     "options": [
       "if",
-      "(score >= 90)",
+      "score",
+      "90",
       "else",
       "if",
-      "(score >= 80)"
+      "score",
+      "80",
+      "while",
+      "grade",
+      "70"
     ],
     "answer": [
       "if",
-      "(score >= 90)",
+      "score",
+      "90",
       "else",
       "if",
-      "(score >= 80)"
+      "score",
+      "80"
     ],
     "type": "order"
   },
@@ -387,20 +426,24 @@
     "type": "fill"
   },
   {
-    "question": "Complete the even number checker:\n\n```dart\nvoid main() {\n  int num = 8;\n  %order% %order% %order% %order% %order% {\n    print('Even!');\n  }\n}\n```",
+    "question": "Complete the even number checker:\n\n```dart\nvoid main() {\n  int num = 8;\n  %order% (%order% %order% %order% == %order%) {\n    print('Even!');\n  }\n}\n```",
     "options": [
       "if",
-      "(num",
+      "num",
       "%",
       "2",
-      "== 0)"
+      "0",
+      "while",
+      "number",
+      "/",
+      "3"
     ],
     "answer": [
       "if",
-      "(num",
+      "num",
       "%",
       "2",
-      "== 0)"
+      "0"
     ],
     "type": "order"
   },
@@ -423,24 +466,27 @@
     "type": "fill"
   },
   {
-    "question": "Complete the nested loop:\n\n```dart\nvoid main() {\n  for (int i = 0; i < 2; i++) {\n    %order% %order% %order% %order% %order% %order% %order% {\n      print('$i-$j');\n    }\n  }\n}\n```",
+    "question": "Complete the nested loop:\n\n```dart\nvoid main() {\n  for (int i = 0; i < 2; i++) {\n    %order% (%order% %order% = %order%; %order% < %order%; %order%) {\n      print('$i-$j');\n    }\n  }\n}\n```",
     "options": [
       "for",
-      "(int",
+      "int",
       "j",
-      "=",
-      "0;",
-      "j < 2;",
-      "j++)"
+      "0",
+      "j",
+      "2",
+      "j++",
+      "while",
+      "k",
+      "3"
     ],
     "answer": [
       "for",
-      "(int",
+      "int",
       "j",
-      "=",
-      "0;",
-      "j < 2;",
-      "j++)"
+      "0",
+      "j",
+      "2",
+      "j++"
     ],
     "type": "order"
   },
@@ -465,7 +511,12 @@
   {
     "question": "Complete the continue example:\n\n```dart\nvoid main() {\n  for (int i = 0; i < 5; i++) {\n    if (i == 2) {\n      %order%;\n    }\n    print(i);\n  }\n}\n```",
     "options": [
-      "continue"
+      "continue",
+      "break",
+      "return",
+      "skip",
+      "next",
+      "pass"
     ],
     "answer": [
       "continue"
@@ -491,14 +542,18 @@
     "type": "fill"
   },
   {
-    "question": "Complete the switch case:\n\n```dart\nvoid main() {\n  String grade = 'A';\n  switch (grade) {\n    %order% %order%\n      print('Excellent!');\n      break;\n  }\n}\n```",
+    "question": "Complete the switch case:\n\n```dart\nvoid main() {\n  String grade = 'A';\n  switch (grade) {\n    %order% %order%:\n      print('Excellent!');\n      break;\n  }\n}\n```",
     "options": [
       "case",
-      "'A':"
+      "'A'",
+      "when",
+      "'B'",
+      "default",
+      "'C'"
     ],
     "answer": [
       "case",
-      "'A':"
+      "'A'"
     ],
     "type": "order"
   },
@@ -521,20 +576,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the do-while loop:\n\n```dart\nvoid main() {\n  int i = 0;\n  %order% {\n    print('Hello');\n    i++;\n  } %order% %order% %order% %order%;\n}\n```",
+    "question": "Complete the do-while loop:\n\n```dart\nvoid main() {\n  int i = 0;\n  %order% {\n    print('Hello');\n    i++;\n  } %order% (%order% < %order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(i",
-      "<",
-      "3)"
+      "i",
+      "3",
+      "for",
+      "if",
+      "j",
+      "5"
     ],
     "answer": [
       "do",
       "while",
-      "(i",
-      "<",
-      "3)"
+      "i",
+      "3"
     ],
     "type": "order"
   },
@@ -558,24 +615,27 @@
     "type": "fill"
   },
   {
-    "question": "Complete the ternary expression:\n\n```dart\nvoid main() {\n  int score = 75;\n  %order% %order% %order% %order% %order% %order% %order%\n  print(result);\n}\n```",
+    "question": "Complete the ternary expression:\n\n```dart\nvoid main() {\n  int score = 75;\n  %order% %order% = %order% >= %order% %order% %order% : %order%;\n  print(result);\n}\n```",
     "options": [
       "String",
       "result",
-      "=",
-      "score >= 60",
+      "score",
+      "60",
       "?",
       "'Pass'",
-      ": 'Fail';"
+      "'Fail'",
+      "int",
+      "grade",
+      "70"
     ],
     "answer": [
       "String",
       "result",
-      "=",
-      "score >= 60",
+      "score",
+      "60",
       "?",
       "'Pass'",
-      ": 'Fail';"
+      "'Fail'"
     ],
     "type": "order"
   },
@@ -598,19 +658,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the password checker:\n\n```dart\nvoid main() {\n  String password = 'secret123';\n  %order% %order% %order% %order% {\n    print('Access granted');\n  } %order% {\n    print('Access denied');\n  }\n}\n```",
+    "question": "Complete the password checker:\n\n```dart\nvoid main() {\n  String password = 'secret123';\n  %order% (%order% %order% %order%) {\n    print('Access granted');\n  } %order% {\n    print('Access denied');\n  }\n}\n```",
     "options": [
       "if",
-      "(password",
+      "password",
       "==",
-      "'secret123')",
-      "else"
+      "'secret123'",
+      "else",
+      "while",
+      "user",
+      "!=",
+      "'admin'"
     ],
     "answer": [
       "if",
-      "(password",
+      "password",
       "==",
-      "'secret123')",
+      "'secret123'",
       "else"
     ],
     "type": "order"
@@ -634,26 +698,28 @@
     "type": "fill"
   },
   {
-    "question": "Complete the temperature range check:\n\n```dart\nvoid main() {\n  double temp = 22.5;\n  %order% %order% %order% %order% %order% %order% %order% {\n    print('Comfortable');\n  }\n}\n```",
+    "question": "Complete the temperature range check:\n\n```dart\nvoid main() {\n  double temp = 22.5;\n  %order% (%order% %order% %order% %order% %order% %order% %order%) {\n    print('Comfortable');\n  }\n}\n```",
     "options": [
       "if",
-      "(temp",
+      "temp",
       ">=",
       "20.0",
       "&&",
       "temp",
       "<=",
-      "25.0)"
+      "25.0",
+      "while",
+      "||"
     ],
     "answer": [
       "if",
-      "(temp",
+      "temp",
       ">=",
       "20.0",
       "&&",
       "temp",
       "<=",
-      "25.0)"
+      "25.0"
     ],
     "type": "order"
   },
@@ -676,18 +742,25 @@
     "type": "fill"
   },
   {
-    "question": "Complete the list length check:\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  %order% %order% %order% %order% {\n    print('Has items');\n  }\n}\n```",
+    "question": "Complete the list length check:\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  %order% (%order%.%order% %order% %order%) {\n    print('Has items');\n  }\n}\n```",
     "options": [
       "if",
-      "(numbers.length",
+      "numbers",
+      "length",
       ">",
-      "0)"
+      "0",
+      "while",
+      "list",
+      "size",
+      "<",
+      "1"
     ],
     "answer": [
       "if",
-      "(numbers.length",
+      "numbers",
+      "length",
       ">",
-      "0)"
+      "0"
     ],
     "type": "order"
   },
@@ -710,22 +783,26 @@
     "type": "fill"
   },
   {
-    "question": "Complete the multiple condition check:\n\n```dart\nvoid main() {\n  int age = 25;\n  bool hasJob = true;\n  %order% %order% %order% %order% %order% %order% {\n    print('Can apply for loan');\n  }\n}\n```",
+    "question": "Complete the multiple condition check:\n\n```dart\nvoid main() {\n  int age = 25;\n  bool hasJob = true;\n  %order% (%order% %order% %order% %order% %order%) {\n    print('Can apply for loan');\n  }\n}\n```",
     "options": [
       "if",
-      "(age",
+      "age",
       ">=",
       "18",
       "&&",
-      "hasJob)"
+      "hasJob",
+      "while",
+      "score",
+      "||",
+      "isActive"
     ],
     "answer": [
       "if",
-      "(age",
+      "age",
       ">=",
       "18",
       "&&",
-      "hasJob)"
+      "hasJob"
     ],
     "type": "order"
   },
@@ -749,98 +826,79 @@
     "type": "fill"
   },
   {
-    "question": "Complete the early return pattern:\n\n```dart\nvoid checkAge(int age) {\n  %order% %order% %order% %order% {\n    print('Too young');\n    %order%;\n  }\n  print('Old enough');\n}\n```",
+    "question": "Complete the early return pattern:\n\n```dart\nvoid checkAge(int age) {\n  %order% (%order% %order% %order%) {\n    print('Too young');\n    %order%;\n  }\n  print('Old enough');\n}\n```",
     "options": [
       "if",
-      "(age",
+      "age",
       "<",
-      "18)",
-      "return"
+      "18",
+      "return",
+      "while",
+      "score",
+      ">",
+      "break"
     ],
     "answer": [
       "if",
-      "(age",
+      "age",
       "<",
-      "18)",
+      "18",
       "return"
     ],
     "type": "order"
   },
   {
-    "question": "What will this function print when called with age 15?\n\n```dart\nvoid checkAccess(int age) {\n  if (age < 13) {\n    print('Too young');\n    return;\n  }\n  if (age < 18) {\n    print('Teen access');\n    return;\n  }\n  print('Full access');\n}\nvoid main() {\n  checkAccess(15);\n}\n```",
-    "options": [
-      "Too young",
-      "Teen access",
-      "Full access",
-      "Nothing"
-    ],
-    "answer": ["Teen access"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the assert statement:\n\n```dart\nvoid main() {\n  int x = 5;\n  %fill%(x > 0, 'x must be positive');\n  print('x is valid');\n}\n```",
+    "question": "Complete the assert statement:\n\n```dart\nvoid main() {\n  int x = 5;\n  %fill%(x > 0, 'x must be positive');\n  print('x is valid');\n}\n```",
     "answer": [
       "assert"
     ],
     "type": "fill"
   },
   {
-    "question": "Complete the guard clause pattern:\n\n```dart\nvoid processUser(String? name) {\n  %order% %order% %order% %order% %order% %order% {\n    print('Name is required');\n    return;\n  }\n  print('Processing $name');\n}\n```",
+    "question": "Complete the guard clause pattern:\n\n```dart\nvoid processUser(String? name) {\n  %order% (%order% == %order% %order% %order%.%order%) {\n    print('Name is required');\n    return;\n  }\n  print('Processing $name');\n}\n```",
     "options": [
       "if",
-      "(name",
-      "==",
+      "name",
       "null",
       "||",
-      "name.isEmpty)"
+      "name",
+      "isEmpty",
+      "while",
+      "&&",
+      "isNotEmpty"
     ],
     "answer": [
       "if",
-      "(name",
-      "==",
+      "name",
       "null",
       "||",
-      "name.isEmpty)"
+      "name",
+      "isEmpty"
     ],
     "type": "order"
   },
   {
-    "question": "What will this guard clause example print?\n\n```dart\nvoid validate(int? score) {\n  if (score == null) {\n    print('Score is null');\n    return;\n  }\n  if (score < 0) {\n    print('Invalid score');\n    return;\n  }\n  print('Score: $score');\n}\nvoid main() {\n  validate(85);\n}\n```",
-    "options": [
-      "Score is null",
-      "Invalid score",
-      "Score: 85",
-      "Error"
-    ],
-    "answer": ["Score: 85"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the late initialization check:\n\n```dart\nvoid main() {\n  late String message;\n  bool initialized = false;\n  \n  if (%fill%) {\n    message = 'Hello';\n    initialized = true;\n  }\n  \n  if (initialized) {\n    print(message);\n  }\n}\n```",
-    "answer": [
-      "true"
-    ],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the factorial calculation with loop:\n\n```dart\nvoid main() {\n  int n = 5;\n  int factorial = 1;\n  %order% %order% %order% %order% %order% %order% %order% {\n    factorial *= i;\n  }\n  print('Factorial: $factorial');\n}\n```",
+    "question": "Complete the factorial calculation with loop:\n\n```dart\nvoid main() {\n  int n = 5;\n  int factorial = 1;\n  %order% (%order% %order% = %order%; %order% <= %order%; %order%) {\n    factorial *= i;\n  }\n  print('Factorial: $factorial');\n}\n```",
     "options": [
       "for",
-      "(int",
+      "int",
       "i",
-      "=",
-      "1;",
-      "i <= n;",
-      "i++)"
+      "1",
+      "i",
+      "n",
+      "i++",
+      "while",
+      "j",
+      "0"
     ],
     "answer": [
       "for",
-      "(int",
+      "int",
       "i",
-      "=",
-      "1;",
-      "i <= n;",
-      "i++)"
+      "1",
+      "i",
+      "n",
+      "i++"
     ],
     "type": "order"
   },
@@ -863,35 +921,46 @@
     "type": "fill"
   },
   {
-    "question": "Complete the FizzBuzz logic:\n\n```dart\nvoid main() {\n  for (int i = 1; i <= 15; i++) {\n    %order% %order% %order% %order% %order% %order% {\n      print('FizzBuzz');\n    } %order% %order% %order% %order% {\n      print('Fizz');\n    } %order% %order% %order% %order% {\n      print('Buzz');\n    } %order% {\n      print(i);\n    }\n  }\n}\n```",
+    "question": "Complete the FizzBuzz logic:\n\n```dart\nvoid main() {\n  for (int i = 1; i <= 15; i++) {\n    %order% (%order% %order% %order% == %order%) {\n      print('FizzBuzz');\n    } %order% %order% (%order% %order% %order% == %order%) {\n      print('Fizz');\n    } %order% %order% (%order% %order% %order% == %order%) {\n      print('Buzz');\n    } %order% {\n      print(i);\n    }\n  }\n}\n```",
     "options": [
       "if",
-      "(i",
+      "i",
       "%",
       "15",
-      "==",
-      "0)",
+      "0",
       "else",
       "if",
-      "(i % 3 == 0)",
+      "i",
+      "%",
+      "3",
+      "0",
       "else",
       "if",
-      "(i % 5 == 0)",
-      "else"
+      "i",
+      "%",
+      "5",
+      "0",
+      "else",
+      "while"
     ],
     "answer": [
       "if",
-      "(i",
+      "i",
       "%",
       "15",
-      "==",
-      "0)",
+      "0",
       "else",
       "if",
-      "(i % 3 == 0)",
+      "i",
+      "%",
+      "3",
+      "0",
       "else",
       "if",
-      "(i % 5 == 0)",
+      "i",
+      "%",
+      "5",
+      "0",
       "else"
     ],
     "type": "order"

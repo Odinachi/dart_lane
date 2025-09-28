@@ -3,7 +3,11 @@
     "question": "Complete the class declaration with keyword and name:\n\n```dart\n%order% %order% {\n  String color = 'Brown';\n  String size = 'Medium';\n}\n```",
     "options": [
       "class",
-      "TeddyBear"
+      "TeddyBear",
+      "struct",
+      "Animal",
+      "object",
+      "Pet"
     ],
     "answer": [
       "class",
@@ -32,7 +36,12 @@
     "options": [
       "Toy",
       "toy",
-      "Toy"
+      "Toy",
+      "Object",
+      "item",
+      "new",
+      "Game",
+      "ball"
     ],
     "answer": [
       "Toy",
@@ -64,7 +73,11 @@
       "this",
       "name",
       "this",
-      "age"
+      "age",
+      "Person",
+      "self",
+      "id",
+      "grade"
     ],
     "answer": [
       "Student",
@@ -95,7 +108,13 @@
     "question": "Complete the method definition with return type and name:\n\n```dart\nclass Dog {\n  String name = 'Buddy';\n  \n  %order% %order%() {\n    print('$name says: Woof!');\n  }\n}\n```",
     "options": [
       "void",
-      "bark"
+      "bark",
+      "String",
+      "speak",
+      "int",
+      "sound",
+      "bool",
+      "talk"
     ],
     "answer": [
       "void",
@@ -127,7 +146,11 @@
       "int",
       "age",
       "String",
-      "city"
+      "city",
+      "double",
+      "height",
+      "bool",
+      "active"
     ],
     "answer": [
       "String",
@@ -159,7 +182,13 @@
     "question": "Complete the return type method with type and name:\n\n```dart\nclass Calculator {\n  %order% %order%(int a, int b) {\n    return a + b;\n  }\n}\n```",
     "options": [
       "int",
-      "add"
+      "add",
+      "double",
+      "multiply",
+      "String",
+      "calculate",
+      "bool",
+      "compare"
     ],
     "answer": [
       "int",
@@ -187,7 +216,13 @@
     "question": "Complete the class with default constructor and name:\n\n```dart\nclass Laptop {\n  String brand = 'Dell';\n  int ram = 8;\n  \n  %order%() {\n    %order%('Laptop created!');\n  }\n}\n```",
     "options": [
       "Laptop",
-      "print"
+      "print",
+      "Computer",
+      "console",
+      "Device",
+      "log",
+      "Machine",
+      "display"
     ],
     "answer": [
       "Laptop",
@@ -215,7 +250,13 @@
     "question": "Complete the named constructor with keyword and name:\n\n```dart\nclass Rectangle {\n  double width;\n  double height;\n  \n  Rectangle(this.width, this.height);\n  \n  %order%.%order%(double side) : width = side, height = side;\n}\n```",
     "options": [
       "Rectangle",
-      "square"
+      "square",
+      "Shape",
+      "circle",
+      "Triangle",
+      "polygon",
+      "Quad",
+      "box"
     ],
     "answer": [
       "Rectangle",
@@ -243,7 +284,13 @@
     "question": "Complete the private property with prefix and name:\n\n```dart\nclass BankAccount {\n  double %order%%order% = 1000.0;\n  \n  double getBalance() {\n    return _balance;\n  }\n}\n```",
     "options": [
       "_",
-      "balance"
+      "balance",
+      "#",
+      "amount",
+      "$",
+      "money",
+      "@",
+      "value"
     ],
     "answer": [
       "_",
@@ -272,7 +319,13 @@
     "options": [
       "static",
       "int",
-      "count"
+      "count",
+      "final",
+      "double",
+      "number",
+      "const",
+      "String",
+      "value"
     ],
     "answer": [
       "static",
@@ -302,7 +355,13 @@
     "options": [
       "static",
       "int",
-      "max"
+      "max",
+      "final",
+      "double",
+      "min",
+      "const",
+      "String",
+      "compare"
     ],
     "answer": [
       "static",
@@ -333,7 +392,11 @@
       "final",
       "String",
       "final",
-      "double"
+      "double",
+      "static",
+      "int",
+      "const",
+      "bool"
     ],
     "answer": [
       "final",
@@ -364,7 +427,13 @@
     "options": [
       "@override",
       "String",
-      "toString"
+      "toString",
+      "@deprecated",
+      "int",
+      "hashCode",
+      "@required",
+      "bool",
+      "equals"
     ],
     "answer": [
       "@override",
@@ -394,7 +463,13 @@
     "options": [
       "factory",
       "Singleton",
-      "getInstance"
+      "getInstance",
+      "static",
+      "Instance",
+      "create",
+      "const",
+      "Object",
+      "build"
     ],
     "answer": [
       "factory",
@@ -423,7 +498,13 @@
     "question": "Complete the operator overloading with keyword and operator:\n\n```dart\nclass Point {\n  int x, y;\n  \n  Point(this.x, this.y);\n  \n  Point %order% %order%(Point other) {\n    return Point(x + other.x, y + other.y);\n  }\n}\n```",
     "options": [
       "operator",
-      "+"
+      "+",
+      "function",
+      "-",
+      "method",
+      "*",
+      "override",
+      "/"
     ],
     "answer": [
       "operator",
@@ -452,7 +533,13 @@
     "options": [
       "@override",
       "operator",
-      "=="
+      "==",
+      "@deprecated",
+      "function",
+      "!=",
+      "@required",
+      "method",
+      "<"
     ],
     "answer": [
       "@override",
@@ -482,7 +569,12 @@
     "options": [
       "..",
       "..",
-      ".."
+      "..",
+      ".",
+      "->",
+      "=>",
+      "?.",
+      "!."
     ],
     "answer": [
       "..",
@@ -511,7 +603,13 @@
     "question": "Complete the mixin usage with keyword:\n\n```dart\nmixin Flyable {\n  void fly() {\n    print('Flying!');\n  }\n}\n\nclass Bird %order% %order% {\n  void chirp() {\n    print('Chirp!');\n  }\n}\n```",
     "options": [
       "with",
-      "Flyable"
+      "Flyable",
+      "extends",
+      "Swimmer",
+      "implements",
+      "Walker",
+      "uses",
+      "Runner"
     ],
     "answer": [
       "with",
@@ -540,7 +638,13 @@
     "options": [
       "abstract",
       "class",
-      "Animal"
+      "Animal",
+      "interface",
+      "struct",
+      "Pet",
+      "virtual",
+      "object",
+      "Creature"
     ],
     "answer": [
       "abstract",
@@ -569,7 +673,13 @@
     "question": "Complete the interface implementation with keyword:\n\n```dart\nabstract class Drawable {\n  void draw();\n}\n\nclass Circle %order% %order% {\n  @override\n  void draw() {\n    print('Drawing a circle');\n  }\n}\n```",
     "options": [
       "implements",
-      "Drawable"
+      "Drawable",
+      "extends",
+      "Shape",
+      "with",
+      "Paintable",
+      "uses",
+      "Renderable"
     ],
     "answer": [
       "implements",
@@ -598,7 +708,12 @@
     "options": [
       "T",
       "T",
-      "T"
+      "T",
+      "E",
+      "K",
+      "V",
+      "R",
+      "S"
     ],
     "answer": [
       "T",
@@ -623,7 +738,13 @@
     "options": [
       "extension",
       "StringExtension",
-      "on"
+      "on",
+      "mixin",
+      "StringHelper",
+      "for",
+      "class",
+      "StringUtils",
+      "with"
     ],
     "answer": [
       "extension",
@@ -639,7 +760,12 @@
       "GamePlayer",
       "name",
       "level", 
-      "achievements"
+      "achievements",
+      "struct",
+      "Player",
+      "id",
+      "score",
+      "items"
     ],
     "answer": [
       "class",

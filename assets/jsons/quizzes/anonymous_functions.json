@@ -3,7 +3,11 @@
     "question": "Complete the anonymous function assignment:\n\n```dart\nvoid main() {\n  var sayHi = %order% {\n    print('Hi there!');\n  };\n  \n  sayHi%order%;\n}\n```",
     "options": [
       "()",
-      "()"
+      "()",
+      "[]",
+      "{}",
+      "||",
+      "<>"
     ],
     "answer": [
       "()",
@@ -31,7 +35,11 @@
     "question": "Complete the immediately invoked function expression (IIFE):\n\n```dart\nvoid main() {\n  %order% {\n    print('This runs immediately!');\n  }%order%;\n}\n```",
     "options": [
       "()",
-      "()"
+      "()",
+      "[]",
+      "{}",
+      "||",
+      "<>"
     ],
     "answer": [
       "()",
@@ -59,7 +67,13 @@
     "question": "Complete the anonymous function with parameter and return:\n\n```dart\nvoid main() {\n  var doubleIt = (%order% x) {\n    %order% x * 2;\n  };\n  \n  print(doubleIt(5));\n}\n```",
     "options": [
       "int",
-      "return"
+      "return",
+      "double",
+      "yield",
+      "String",
+      "throw",
+      "bool",
+      "print"
     ],
     "answer": [
       "int",
@@ -88,7 +102,13 @@
     "options": [
       "int",
       "=>",
-      "*"
+      "*",
+      "double",
+      "->",
+      "+",
+      "String",
+      "=",
+      "/"
     ],
     "answer": [
       "int",
@@ -118,7 +138,13 @@
     "options": [
       "String",
       "item",
-      "$item"
+      "$item",
+      "int",
+      "fruit",
+      "$fruit",
+      "double",
+      "element",
+      "$element"
     ],
     "answer": [
       "String",
@@ -148,7 +174,13 @@
     "options": [
       "int",
       "n",
-      "n"
+      "n",
+      "double",
+      "x",
+      "x",
+      "String",
+      "num",
+      "item"
     ],
     "answer": [
       "int",
@@ -178,7 +210,13 @@
     "options": [
       "int",
       "age",
-      "age"
+      "age",
+      "double",
+      "person",
+      "person",
+      "String",
+      "num",
+      "value"
     ],
     "answer": [
       "int",
@@ -211,7 +249,11 @@
       "int",
       "b",
       "a",
-      "b"
+      "b",
+      "double",
+      "x",
+      "y",
+      "String"
     ],
     "answer": [
       "int",
@@ -247,7 +289,11 @@
       "String",
       "b",
       "a",
-      "b"
+      "b",
+      "int",
+      "x",
+      "y",
+      "double"
     ],
     "answer": [
       "String",
@@ -280,7 +326,13 @@
     "options": [
       "int",
       "n",
-      "n"
+      "n",
+      "double",
+      "num",
+      "x",
+      "String",
+      "item",
+      "value"
     ],
     "answer": [
       "int",
@@ -310,7 +362,13 @@
     "options": [
       "int",
       "age",
-      "age"
+      "age",
+      "double",
+      "person",
+      "person",
+      "String",
+      "num",
+      "value"
     ],
     "answer": [
       "int",
@@ -344,7 +402,10 @@
       "x",
       "=>",
       "x",
-      "factor"
+      "factor",
+      "double",
+      "num",
+      "->"
     ],
     "answer": [
       "int",
@@ -384,7 +445,9 @@
       "operation",
       "operation",
       "a",
-      "b"
+      "b",
+      "double",
+      "callback"
     ],
     "answer": [
       "int",
@@ -422,7 +485,12 @@
       "n",
       "if",
       "n",
-      "n"
+      "n",
+      "double",
+      "num",
+      "when",
+      "x",
+      "value"
     ],
     "answer": [
       "int",
@@ -457,7 +525,11 @@
       "String",
       "last",
       "$first",
-      "$last"
+      "$last",
+      "int",
+      "name",
+      "text",
+      "double"
     ],
     "answer": [
       "String",
@@ -495,7 +567,10 @@
       "n",
       "n",
       "n",
-      "n"
+      "n",
+      "Set",
+      "double",
+      "items"
     ],
     "answer": [
       "List",
@@ -535,7 +610,10 @@
       "try",
       "a",
       "b",
-      "catch"
+      "catch",
+      "int",
+      "if",
+      "handle"
     ],
     "answer": [
       "double",
@@ -577,7 +655,9 @@
       "=>",
       "$prefix",
       "$text",
-      "$suffix"
+      "$suffix",
+      "int",
+      "template"
     ],
     "answer": [
       "String",

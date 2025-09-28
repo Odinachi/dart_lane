@@ -155,7 +155,8 @@ class _CourseQuizState extends State<CourseQuiz> {
                                     updatedAnswers.remove(op);
                                     quizzes[index] =
                                         e.copyWith(userAnswer: updatedAnswers);
-                                  } else {
+                                  } else if ((e.userAnswer?.length ?? 0) <
+                                      (e.options?.length ?? 0)) {
                                     final updatedAnswers =
                                         List<String>.from(e.userAnswer ?? []);
                                     updatedAnswers.add(op);

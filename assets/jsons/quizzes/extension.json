@@ -4,7 +4,12 @@
     "options": [
       "extension",
       "on",
-      "shout"
+      "shout",
+      "class",
+      "for",
+      "yell",
+      "scream",
+      "loudify"
     ],
     "answer": [
       "extension",
@@ -35,7 +40,11 @@
       "on",
       "square",
       "this",
-      "this"
+      "this",
+      "for",
+      "cube",
+      "self",
+      "value"
     ],
     "answer": [
       "on",
@@ -65,7 +74,13 @@
     "question": "Complete the extension usage:\n\n```dart\nextension NumberMagic on int {\n  int square() => this * this;\n}\n\nvoid main() {\n  print(%order%.%order%());\n}\n```",
     "options": [
       "4",
-      "square"
+      "square",
+      "5",
+      "cube",
+      "3",
+      "double",
+      "2",
+      "triple"
     ],
     "answer": [
       "4",
@@ -93,7 +108,13 @@
     "question": "Complete the extension for DateTime:\n\n```dart\nextension DateHelper %order% DateTime {\n  bool %order%() {\n    return weekday == 6 || weekday == 7;\n  }\n}\n```",
     "options": [
       "on",
-      "isWeekend"
+      "isWeekend",
+      "for",
+      "isWeekday",
+      "isHoliday",
+      "isBusy",
+      "isFree",
+      "isWork"
     ],
     "answer": [
       "on",
@@ -124,7 +145,12 @@
       "on",
       "T",
       "T",
-      "get"
+      "get",
+      "E",
+      "for",
+      "K",
+      "V",
+      "set"
     ],
     "answer": [
       "T",
@@ -155,7 +181,13 @@
     "question": "Complete the extension with setter:\n\n```dart\nextension StringBuffer %order% StringBuffer {\n  %order% appendLine(String value) {\n    write(value);\n    write('\\n');\n  }\n}\n```",
     "options": [
       "on",
-      "void"
+      "void",
+      "for",
+      "int",
+      "String",
+      "bool",
+      "double",
+      "Future"
     ],
     "answer": [
       "on",
@@ -188,7 +220,10 @@
       "T",
       "get",
       "T",
-      "get"
+      "get",
+      "E",
+      "for",
+      "set"
     ],
     "answer": [
       "T",
@@ -223,7 +258,11 @@
       "on",
       "isBetween",
       "this",
-      "this"
+      "this",
+      "for",
+      "isInRange",
+      "self",
+      "value"
     ],
     "answer": [
       "on",
@@ -254,7 +293,12 @@
     "options": [
       "on",
       "splitToList",
-      "split"
+      "split",
+      "for",
+      "divideBy",
+      "cutBy",
+      "separate",
+      "partition"
     ],
     "answer": [
       "on",
@@ -285,7 +329,11 @@
       "on",
       "get",
       "this",
-      "this"
+      "this",
+      "for",
+      "set",
+      "self",
+      "value"
     ],
     "answer": [
       "on",
@@ -312,18 +360,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the extension with static-like behavior:\n\n```dart\nextension DateTimeHelper %order% DateTime {\n  static DateTime %order%() {\n    return DateTime.now();\n  }\n  \n  bool %order% {\n    return isAfter(DateTime.now());\n  }\n}\n```",
+    "question": "Complete the extension with static-like behavior:\n\n```dart\nextension DateTimeHelper %order% DateTime {\n  static DateTime %order%() {\n    return DateTime.now();\n  }\n  \n  bool %order% isFuture {\n    return isAfter(DateTime.now());\n  }\n}\n```",
     "options": [
       "on",
       "current",
       "get",
-      "isFuture"
+      "for",
+      "now",
+      "today",
+      "set",
+      "present"
     ],
     "answer": [
       "on",
       "current",
-      "get",
-      "isFuture"
+      "get"
     ],
     "type": "order"
   },
@@ -348,7 +399,12 @@
     "options": [
       "on",
       "operator",
-      "this"
+      "this",
+      "for",
+      "method",
+      "function",
+      "self",
+      "value"
     ],
     "answer": [
       "on",
@@ -381,7 +437,10 @@
       "T",
       "T",
       "addFluent",
-      "this"
+      "this",
+      "E",
+      "for",
+      "append"
     ],
     "answer": [
       "T",
@@ -417,7 +476,10 @@
       "T",
       "T",
       "addIf",
-      "this"
+      "this",
+      "E",
+      "for",
+      "append"
     ],
     "answer": [
       "T",
@@ -450,7 +512,12 @@
     "options": [
       "on",
       "asyncUpper",
-      "async"
+      "async",
+      "for",
+      "slowUpper",
+      "sync",
+      "await",
+      "delayed"
     ],
     "answer": [
       "on",
@@ -481,7 +548,11 @@
       "extension",
       "TitleCase",
       "on",
-      "toTitleCase"
+      "toTitleCase",
+      "class",
+      "StringHelper",
+      "for",
+      "capitalize"
     ],
     "answer": [
       "extension",
@@ -514,7 +585,11 @@
       "on",
       "T",
       "T",
-      "safeElementAt"
+      "safeElementAt",
+      "E",
+      "for",
+      "get",
+      "safeGet"
     ],
     "answer": [
       "T",
@@ -546,7 +621,12 @@
     "options": [
       "extension",
       "PrivateStringUtils",
-      "on"
+      "on",
+      "class",
+      "PublicStringUtils",
+      "for",
+      "StringHelper",
+      "Util"
     ],
     "answer": [
       "extension",
@@ -582,7 +662,9 @@
       "this",
       "bool",
       "get",
-      "this"
+      "this",
+      "E",
+      "implements"
     ],
     "answer": [
       "T",
@@ -629,7 +711,9 @@
       "this",
       "get",
       "T",
-      "get"
+      "get",
+      "class",
+      "E"
     ],
     "answer": [
       "extension",

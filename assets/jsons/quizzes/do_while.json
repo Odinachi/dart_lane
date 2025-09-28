@@ -1,15 +1,21 @@
 [
   {
-    "question": "Complete the do-while loop structure:\n\n```dart\nvoid main() {\n  int i = 0;\n  %order% {\n    print('Value: $i');\n    i++;\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while loop structure:\n\n```dart\nvoid main() {\n  int i = 0;\n  %order% {\n    print('Value: $i');\n    i++;\n  } %order% (%order% < %order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(i < 3)"
+      "i",
+      "3",
+      "for",
+      "if",
+      "j",
+      "5"
     ],
     "answer": [
       "do", 
       "while",
-      "(i < 3)"
+      "i",
+      "3"
     ],
     "type": "order"
   },
@@ -41,16 +47,22 @@
     "type": "mcq"
   },
   {
-    "question": "Complete the do-while loop to print 'Hello' 3 times:\n\n```dart\nvoid main() {\n  int counter = 0;\n  %order% {\n    print('Hello');\n    counter++;\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while loop to print 'Hello' 3 times:\n\n```dart\nvoid main() {\n  int counter = 0;\n  %order% {\n    print('Hello');\n    counter++;\n  } %order% (%order% < %order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(counter < 3)"
+      "counter",
+      "3",
+      "for",
+      "if",
+      "i",
+      "5"
     ],
     "answer": [
       "do",
       "while", 
-      "(counter < 3)"
+      "counter",
+      "3"
     ],
     "type": "order"
   },
@@ -71,16 +83,22 @@
     "type": "mcq"
   },
   {
-    "question": "Complete the do-while countdown:\n\n```dart\nvoid main() {\n  int countdown = 3;\n  %order% {\n    print('Countdown: $countdown');\n    countdown--;\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while countdown:\n\n```dart\nvoid main() {\n  int countdown = 3;\n  %order% {\n    print('Countdown: $countdown');\n    countdown--;\n  } %order% (%order% > %order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(countdown > 0)"
+      "countdown",
+      "0",
+      "for",
+      "if",
+      "i",
+      "1"
     ],
     "answer": [
       "do",
       "while",
-      "(countdown > 0)"
+      "countdown",
+      "0"
     ],
     "type": "order"
   },
@@ -104,7 +122,13 @@
     "question": "Complete the do-while loop syntax with braces:\n\n```dart\nvoid main() {\n  int i = 0;\n  do %order%\n    print('Hello $i');\n    i++;\n  %order% while (i < 2);\n}\n```",
     "options": [
       "{",
-      "}"
+      "}",
+      "(",
+      ")",
+      "[",
+      "]",
+      "do",
+      "for"
     ],
     "answer": [
       "{",
@@ -129,16 +153,22 @@
     "type": "mcq"
   },
   {
-    "question": "Complete the do-while to print numbers 1, 2, 3:\n\n```dart\nvoid main() {\n  int num = 1;\n  %order% {\n    print('Number: $num');\n    num++;\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while to print numbers 1, 2, 3:\n\n```dart\nvoid main() {\n  int num = 1;\n  %order% {\n    print('Number: $num');\n    num++;\n  } %order% (%order% <= %order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(num <= 3)"
+      "num",
+      "3",
+      "for",
+      "if",
+      "i",
+      "5"
     ],
     "answer": [
       "do",
       "while",
-      "(num <= 3)"
+      "num",
+      "3"
     ],
     "type": "order"
   },
@@ -159,15 +189,21 @@
     "type": "mcq"
   },
   {
-    "question": "Complete the do-while with proper parentheses:\n\n```dart\nvoid main() {\n  int count = 0;\n  do {\n    print('Count: $count');\n    count++;\n  } while %order%%order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while with proper parentheses:\n\n```dart\nvoid main() {\n  int count = 0;\n  do {\n    print('Count: $count');\n    count++;\n  } while %order%%order% < %order%%order%;\n}\n```",
     "options": [
       "(",
-      "count < 2",
-      ")"
+      "count",
+      "2",
+      ")",
+      "[",
+      "i",
+      "3",
+      "]"
     ],
     "answer": [
       "(",
-      "count < 2",
+      "count",
+      "2",
       ")"
     ],
     "type": "order"
@@ -189,16 +225,22 @@
     "type": "mcq"
   },
   {
-    "question": "Complete the do-while to count backwards from 3:\n\n```dart\nvoid main() {\n  int i = 3;\n  %order% {\n    print('Countdown: $i');\n    i--;\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while to count backwards from 3:\n\n```dart\nvoid main() {\n  int i = 3;\n  %order% {\n    print('Countdown: $i');\n    i--;\n  } %order% (%order% >= %order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(i >= 1)"
+      "i",
+      "1",
+      "for",
+      "if",
+      "j",
+      "0"
     ],
     "answer": [
       "do",
       "while",
-      "(i >= 1)"
+      "i",
+      "1"
     ],
     "type": "order"
   },
@@ -219,21 +261,24 @@
     "type": "mcq"
   },
   {
-    "question": "Complete the full do-while loop structure:\n\n```dart\nvoid main() {\n  int i = 0;\n  %order% %order%\n    print('Loop $i');\n    i++;\n  %order% %order% %order%%order%%order%%order%\n}\n```",
+    "question": "Complete the full do-while loop structure:\n\n```dart\nvoid main() {\n  int i = 0;\n  %order% %order%\n    print('Loop $i');\n    i++;\n  %order% %order% (%order% < %order%)%order%\n}\n```",
     "options": [
       "do",
       "{",
       "}",
       "while",
-      "(i < 2)",
-      ";"
+      "i",
+      "2",
+      ";",
+      "for"
     ],
     "answer": [
       "do",
       "{", 
       "}",
       "while",
-      "(i < 2)",
+      "i",
+      "2",
       ";"
     ],
     "type": "order"
@@ -255,16 +300,22 @@
     "type": "mcq"
   },
   {
-    "question": "Complete the do-while to print even numbers 0, 2, 4:\n\n```dart\nvoid main() {\n  int num = 0;\n  %order% {\n    print('Even: $num');\n    num += 2;\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while to print even numbers 0, 2, 4:\n\n```dart\nvoid main() {\n  int num = 0;\n  %order% {\n    print('Even: $num');\n    num += 2;\n  } %order% (%order% <= %order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(num <= 4)"
+      "num",
+      "4",
+      "for",
+      "if",
+      "i",
+      "6"
     ],
     "answer": [
       "do",
       "while",
-      "(num <= 4)"
+      "num",
+      "4"
     ],
     "type": "order"
   },
@@ -285,16 +336,22 @@
     "type": "mcq"
   },
   {
-    "question": "Complete the do-while with string interpolation:\n\n```dart\nvoid main() {\n  int count = 1;\n  %order% {\n    print('Item $count');\n    count++;\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while with string interpolation:\n\n```dart\nvoid main() {\n  int count = 1;\n  %order% {\n    print('Item $count');\n    count++;\n  } %order% (%order% <= %order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(count <= 2)"
+      "count",
+      "2",
+      "for",
+      "if",
+      "i",
+      "3"
     ],
     "answer": [
       "do",
       "while",
-      "(count <= 2)"
+      "count",
+      "2"
     ],
     "type": "order"
   },
@@ -315,25 +372,30 @@
     "type": "mcq"
   },
   {
-    "question": "Complete the nested do-while structure:\n\n```dart\nvoid main() {\n  int outer = 0;\n  %order% {\n    int inner = 0;\n    %order% {\n      print('$outer-$inner');\n      inner++;\n    } %order% %order%%order%%order%;\n    outer++;\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the nested do-while structure:\n\n```dart\nvoid main() {\n  int outer = 0;\n  %order% {\n    int inner = 0;\n    %order% {\n      print('$outer-$inner');\n      inner++;\n    } %order% (%order% < %order%)%order%\n    outer++;\n  } %order% (%order% < %order%)%order%\n}\n```",
     "options": [
       "do",
       "do",
       "while",
-      "(inner < 2)",
+      "inner",
+      "2",
       ";",
       "while",
-      "(outer < 2)",
-      ";"
+      "outer",
+      "2",
+      ";",
+      "for"
     ],
     "answer": [
       "do",
       "do", 
       "while",
-      "(inner < 2)",
+      "inner",
+      "2",
       ";",
       "while", 
-      "(outer < 2)",
+      "outer",
+      "2",
       ";"
     ],
     "type": "order"
@@ -355,16 +417,21 @@
     "type": "mcq"
   },
   {
-    "question": "Complete the do-while with boolean condition:\n\n```dart\nvoid main() {\n  bool continueLoop = true;\n  int count = 0;\n  %order% {\n    print('Count: $count');\n    count++;\n    if (count >= 3) continueLoop = false;\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while with boolean condition:\n\n```dart\nvoid main() {\n  bool continueLoop = true;\n  int count = 0;\n  %order% {\n    print('Count: $count');\n    count++;\n    if (count >= 3) continueLoop = false;\n  } %order% (%order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(continueLoop)"
+      "continueLoop",
+      "for",
+      "if",
+      "active",
+      "running",
+      "flag"
     ],
     "answer": [
       "do",
       "while",
-      "(continueLoop)"
+      "continueLoop"
     ],
     "type": "order"
   },
@@ -385,171 +452,124 @@
     "type": "mcq"
   },
   {
-    "question": "Complete the do-while to print squares:\n\n```dart\nvoid main() {\n  int base = 1;\n  %order% {\n    print('Square of $base: ${base * base}');\n    base++;\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while to print squares:\n\n```dart\nvoid main() {\n  int base = 1;\n  %order% {\n    print('Square of $base: ${base * base}');\n    base++;\n  } %order% (%order% <= %order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(base <= 3)"
+      "base",
+      "3",
+      "for",
+      "if",
+      "num",
+      "5"
     ],
     "answer": [
       "do",
       "while",
-      "(base <= 3)"
+      "base",
+      "3"
     ],
     "type": "order"
   },
   {
-    "question": "Fill in the continue statement:\n\n```dart\nvoid main() {\n  int i = 0;\n  do {\n    i++;\n    if (i == 2) %fill%;\n    print('Number: $i');\n  } while (i < 4);\n}\n```",
-    "answer": ["continue"],
-    "type": "fill"
-  },
-  {
-    "question": "Which loop structure is this?\n\n```dart\ndo {\n  print('Hello');\n} while (false);\n```",
-    "options": [
-      "Do-while loop that executes once",
-      "While loop that doesn't execute",
-      "For loop in disguise", 
-      "Invalid syntax"
-    ],
-    "answer": ["Do-while loop that executes once"],
-    "type": "mcq"
-  },
-  {
-    "question": "Complete the do-while with compound assignment:\n\n```dart\nvoid main() {\n  int sum = 0;\n  int num = 1;\n  %order% {\n    sum += num;\n    print('Sum: $sum');\n    num++;\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while with compound assignment:\n\n```dart\nvoid main() {\n  int sum = 0;\n  int num = 1;\n  %order% {\n    sum += num;\n    print('Sum: $sum');\n    num++;\n  } %order% (%order% <= %order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(num <= 3)"
+      "num",
+      "3",
+      "for",
+      "if",
+      "i",
+      "5"
     ],
     "answer": [
       "do",
       "while",
-      "(num <= 3)"
+      "num",
+      "3"
     ],
     "type": "order"
   },
   {
-    "question": "Fill in the condition with equality operator:\n\n```dart\nvoid main() {\n  int target = 5;\n  int current = 1;\n  do {\n    print('Current: $current');\n    current++;\n  } while (current %fill% target);\n}\n```",
-    "answer": ["!="],
-    "type": "fill"
-  },
-  {
-    "question": "What will this complex do-while loop print?\n\n```dart\nvoid main() {\n  int i = 0;\n  do {\n    if (i % 2 == 0) {\n      print('Even: $i');\n    } else {\n      print('Odd: $i');\n    }\n    i++;\n  } while (i < 3);\n}\n```",
-    "options": [
-      "Even: 0\\nOdd: 1\\nEven: 2",
-      "Odd: 1\\nEven: 2\\nOdd: 3",
-      "Even: 0\\nOdd: 1",
-      "Error"
-    ],
-    "answer": ["Even: 0\\nOdd: 1\\nEven: 2"],
-    "type": "mcq"
-  },
-  {
-    "question": "Complete the do-while with multiple statements:\n\n```dart\nvoid main() {\n  int counter = 0;\n  %order% {\n    counter++;\n    print('Counter: $counter');\n    print('Double: ${counter * 2}');\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while with multiple statements:\n\n```dart\nvoid main() {\n  int counter = 0;\n  %order% {\n    counter++;\n    print('Counter: $counter');\n    print('Double: ${counter * 2}');\n  } %order% (%order% < %order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(counter < 2)"
+      "counter",
+      "2",
+      "for",
+      "if",
+      "i",
+      "3"
     ],
     "answer": [
       "do",
       "while",
-      "(counter < 2)"
+      "counter",
+      "2"
     ],
     "type": "order"
   },
   {
-    "question": "Fill in the post-increment operator:\n\n```dart\nvoid main() {\n  int value = 0;\n  do {\n    print('Before: $value');\n    value%fill%;\n    print('After: $value');\n  } while (value < 2);\n}\n```",
-    "answer": ["++"],
-    "type": "fill"
-  },
-  {
-    "question": "Which statement correctly describes this loop?\n\n```dart\nint i = 5;\ndo {\n  print(i);\n  i--;\n} while (i > 0);\n```",
-    "options": [
-      "Prints 5, 4, 3, 2, 1",
-      "Prints 4, 3, 2, 1, 0",
-      "Prints only 5",
-      "Infinite loop"
-    ],
-    "answer": ["Prints 5, 4, 3, 2, 1"],
-    "type": "mcq"
-  },
-  {
-    "question": "Complete the do-while with list operations:\n\n```dart\nvoid main() {\n  List<int> numbers = [];\n  int i = 1;\n  %order% {\n    numbers.add(i);\n    print('Added: $i');\n    i++;\n  } %order% %order%%order%%order%;\n  print('List: $numbers');\n}\n```",
+    "question": "Complete the do-while with list operations:\n\n```dart\nvoid main() {\n  List<int> numbers = [];\n  int i = 1;\n  %order% {\n    numbers.add(i);\n    print('Added: $i');\n    i++;\n  } %order% (%order% <= %order%);\n  print('List: $numbers');\n}\n```",
     "options": [
       "do",
       "while",
-      "(i <= 3)"
+      "i",
+      "3",
+      "for",
+      "if",
+      "j",
+      "5"
     ],
     "answer": [
       "do",
       "while", 
-      "(i <= 3)"
+      "i",
+      "3"
     ],
     "type": "order"
   },
   {
-    "question": "Fill in the string comparison:\n\n```dart\nvoid main() {\n  String input = 'yes';\n  do {\n    print('Processing...');\n    input = 'no';\n  } while (input %fill% 'yes');\n}\n```",
-    "answer": ["=="],
-    "type": "fill"
-  },
-  {
-    "question": "How many times will 'Hello' be printed?\n\n```dart\nvoid main() {\n  int count = 3;\n  do {\n    print('Hello');\n    count--;\n  } while (count >= 3);\n}\n```",
-    "options": [
-      "1 time",
-      "3 times",
-      "0 times", 
-      "Infinite times"
-    ],
-    "answer": ["1 time"],
-    "type": "mcq"
-  },
-  {
-    "question": "Complete the do-while with function call:\n\n```dart\nvoid displayMessage(int num) {\n  print('Message $num');\n}\n\nvoid main() {\n  int msgCount = 1;\n  %order% {\n    displayMessage(msgCount);\n    msgCount++;\n  } %order% %order%%order%%order%;\n}\n```",
+    "question": "Complete the do-while with function call:\n\n```dart\nvoid displayMessage(int num) {\n  print('Message $num');\n}\n\nvoid main() {\n  int msgCount = 1;\n  %order% {\n    displayMessage(msgCount);\n    msgCount++;\n  } %order% (%order% <= %order%);\n}\n```",
     "options": [
       "do",
       "while",
-      "(msgCount <= 2)"
+      "msgCount",
+      "2",
+      "for",
+      "if",
+      "count",
+      "3"
     ],
     "answer": [
       "do",
       "while",
-      "(msgCount <= 2)"
+      "msgCount",
+      "2"
     ],
     "type": "order"
   },
   {
-    "question": "Fill in the assignment operator:\n\n```dart\nvoid main() {\n  int result = 1;\n  int multiplier = 2;\n  do {\n    result %fill% multiplier;\n    print('Result: $result');\n    multiplier++;\n  } while (multiplier <= 3);\n}\n```",
-    "answer": ["*="],
-    "type": "fill"
-  },
-  {
-    "question": "What is the output of this do-while with complex condition?\n\n```dart\nvoid main() {\n  int x = 1;\n  int y = 1;\n  do {\n    print('x: $x, y: $y');\n    x++;\n    y += 2;\n  } while (x <= 2 && y < 5);\n}\n```",
-    "options": [
-      "x: 1, y: 1\\nx: 2, y: 3",
-      "x: 1, y: 1",
-      "x: 1, y: 1\\nx: 2, y: 3\\nx: 3, y: 5",
-      "Error"
-    ],
-    "answer": ["x: 1, y: 1\\nx: 2, y: 3"],
-    "type": "mcq"
-  },
-  {
-    "question": "Complete the final do-while loop structure:\n\n```dart\nvoid main() {\n  int finalCount = 0;\n  %order% %order%\n    print('Final iteration: ${finalCount + 1}');\n    finalCount++;\n  %order% %order% %order%%order%%order%%order%\n  print('Done!');\n}\n```",
+    "question": "Complete the final do-while loop structure:\n\n```dart\nvoid main() {\n  int finalCount = 0;\n  %order% %order%\n    print('Final iteration: ${finalCount + 1}');\n    finalCount++;\n  %order% %order% (%order% < %order%)%order%\n  print('Done!');\n}\n```",
     "options": [
       "do",
       "{",
       "}",
       "while",
-      "(finalCount < 1)",
-      ";"
+      "finalCount",
+      "1",
+      ";",
+      "for"
     ],
     "answer": [
       "do",
       "{",
       "}",
       "while",
-      "(finalCount < 1)",
+      "finalCount",
+      "1",
       ";"
     ],
     "type": "order"

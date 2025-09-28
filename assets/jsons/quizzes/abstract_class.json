@@ -7,7 +7,9 @@
       "class",
       "void",
       "defend",
-      "move"
+      "move",
+      "interface",
+      "final"
     ],
     "answer": [
       "abstract",
@@ -36,6 +38,7 @@
     "options": [
       "extends",
       "super",
+      "@override",
       "@override",
       "implements",
       "with",
@@ -75,7 +78,9 @@
       "getHabitat",
       "eat",
       "sing",
-      "migrate"
+      "migrate",
+      "nest",
+      "hunt"
     ],
     "answer": [
       "fly",
@@ -245,6 +250,7 @@
     "question": "Complete the abstract class with abstract setter:\n\n```dart\nabstract class Temperature {\n  double _celsius = 0.0;\n  \n  %order% %order% celsius(%order% temp);\n  \n  double get celsius => _celsius;\n  \n  double get fahrenheit => (_celsius * 9 / 5) + 32;\n}\n```",
     "options": [
       "set",
+      "set",
       "double",
       "int",
       "String",
@@ -368,6 +374,7 @@
     "options": [
       "static",
       "const",
+      "static",
       "final",
       "late",
       "var",
@@ -381,22 +388,6 @@
       "static"
     ],
     "type": "order"
-  },
-  {
-    "question": "Can abstract classes have static methods and constants?\n\n```dart\nabstract class DatabaseHelper {\n  void connect();\n  \n  static const String version = '2.1.0';\n  \n  static void logInfo(String message) {\n    print('DB Info: $message');\n  }\n  \n  static DatabaseHelper createConnection(String type) {\n    // Factory method implementation\n    if (type == 'mysql') return MySQLConnection();\n    return PostgreSQLConnection();\n  }\n}\n```",
-    "options": [
-      "Yes, abstract classes can have static methods, constants, and factory methods",
-      "No, abstract classes cannot have static members",
-      "Only if they are final",
-      "Only if they have no abstract methods"
-    ],
-    "answer": ["Yes, abstract classes can have static methods, constants, and factory methods"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the static method call:\n\n```dart\nabstract class Utility {\n  void process();\n  \n  static void logMessage(String message) {\n    print('Log: $message');\n  }\n  \n  static const String appName = 'MyApp';\n}\n\nvoid main() {\n  Utility.%fill%('Application started');\n  print('Running: ${Utility.%fill%}');\n}\n```",
-    "answer": ["logMessage", "appName"],
-    "type": "fill"
   },
   {
     "question": "Complete the interface-like abstract classes:\n\n```dart\nabstract class %order% {\n  void fly();\n  void land();\n  double getMaxAltitude();\n}\n\nabstract class %order% {\n  void swim();\n  void dive();\n  int getMaxDepth();\n}\n\nclass Duck implements Flyable, Swimmable {\n  @override\n  void fly() => print('Duck flying');\n  \n  @override\n  void land() => print('Duck landing');\n  \n  @override\n  double getMaxAltitude() => 100.0;\n  \n  @override\n  void swim() => print('Duck swimming');\n  \n  @override\n  void dive() => print('Duck diving');\n  \n  @override\n  int getMaxDepth() => 2;\n}\n```",
@@ -535,6 +526,12 @@
     "answer": ["Provides a common interface with shared code while enforcing implementation contracts"],
     "type": "mcq"
   },
+  {
+    "question": "Fill in the use case description:\n\n```dart\n// Abstract classes are perfect for defining %fill%\n// when you know WHAT needs to be done but not exactly HOW\nabstract class PaymentProcessor {\n  double processingFee = 2.50;\n  \n  // What varies by payment method\n  bool validatePayment(double amount);\n  void processPayment(double amount);\n  void sendReceipt();\n  \n  // What's common for all payment methods\n  final void handlePayment(double amount) {\n    if (validatePayment(amount)) {\n      double total = amount + processingFee;\n      processPayment(total);\n      sendReceipt();\n      logTransaction(total);\n    }\n  }\n  \n  void logTransaction(double amount) {\n    print('Transaction logged: \\$${amount.toStringAsFixed(2)}');\n  }\n}\n```",
+    "answer": ["contracts"],
+    "type": "fill"
+  }
+,
   {
     "question": "Fill in the use case description:\n\n```dart\n// Abstract classes are perfect for defining %fill%\n// when you know WHAT needs to be done but not exactly HOW\nabstract class PaymentProcessor {\n  double processingFee = 2.50;\n  \n  // What varies by payment method\n  bool validatePayment(double amount);\n  void processPayment(double amount);\n  void sendReceipt();\n  \n  // What's common for all payment methods\n  final void handlePayment(double amount) {\n    if (validatePayment(amount)) {\n      double total = amount + processingFee;\n      processPayment(total);\n      sendReceipt();\n      logTransaction(total);\n    }\n  }\n  \n  void logTransaction(double amount) {\n    print('Transaction logged: \\$${amount.toStringAsFixed(2)}');\n  }\n}\n```",
     "answer": ["contracts"],
