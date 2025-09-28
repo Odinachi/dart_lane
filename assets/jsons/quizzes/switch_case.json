@@ -1,14 +1,21 @@
 [
   {
-    "question": "Complete the following Dart switch-case code:\n\n```dart\nvoid main() {\n  String flavor = 'Chocolate';\n  %order% (flavor) {\n    %order% 'Chocolate':\n      print('Chocolate ice cream!');\n      %order%;\n  }\n}\n```",
+    "question": "Complete the following Dart switch-case code:\n\n```dart\nvoid main() {\n  String flavor = 'Chocolate';\n  %order% (%order%) {\n    %order% %order%:\n      print('Chocolate ice cream!');\n      %order%;\n  }\n}\n```",
     "options": [
       "switch",
+      "flavor",
       "case",
-      "break"
+      "'Chocolate'",
+      "break",
+      "if",
+      "condition",
+      "default"
     ],
     "answer": [
       "switch",
+      "flavor",
       "case",
+      "'Chocolate'",
       "break"
     ],
     "type": "order"
@@ -46,15 +53,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the switch-case for ice cream flavors:\n\n```dart\nvoid main() {\n  String flavor = 'Strawberry';\n  %order% (flavor) {\n    %order% 'Strawberry':\n      print('Strawberry ice cream! 🍓');\n      %order%;\n  }\n}\n```",
+    "question": "Complete the switch-case for ice cream flavors:\n\n```dart\nvoid main() {\n  String flavor = 'Strawberry';\n  %order% (%order%) {\n    %order% %order%:\n      print('Strawberry ice cream! 🍓');\n      %order%;\n  }\n}\n```",
     "options": [
       "switch",
+      "flavor",
       "case",
-      "break"
+      "'Strawberry'",
+      "break",
+      "if",
+      "when",
+      "default"
     ],
     "answer": [
       "switch",
+      "flavor",
       "case",
+      "'Strawberry'",
       "break"
     ],
     "type": "order"
@@ -76,16 +90,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the switch statement for days:\n\n```dart\nvoid main() {\n  String day = 'Friday';\n  %order% (day) {\n    %order% 'Friday':\n      print('TGIF!');\n      %order%;\n    %order%:\n      print('Regular day');\n  }\n}\n```",
+    "question": "Complete the switch statement for days:\n\n```dart\nvoid main() {\n  String day = 'Friday';\n  %order% (%order%) {\n    %order% %order%:\n      print('TGIF!');\n      %order%;\n    %order%:\n      print('Regular day');\n  }\n}\n```",
     "options": [
       "switch",
+      "day",
       "case",
+      "'Friday'",
       "break",
-      "default"
+      "default",
+      "if",
+      "when"
     ],
     "answer": [
       "switch",
+      "day",
       "case",
+      "'Friday'",
       "break",
       "default"
     ],
@@ -108,16 +128,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the ice cream shop code:\n\n```dart\nvoid main() {\n  String order = 'Chocolate';\n  %order% (order) {\n    %order% 'Chocolate':\n      print('Here is your chocolate! 🍫');\n      %order%;\n    %order%:\n      print('We don\\'t have that flavor!');\n  }\n}\n```",
+    "question": "Complete the ice cream shop code:\n\n```dart\nvoid main() {\n  String order = 'Chocolate';\n  %order% (%order%) {\n    %order% %order%:\n      print('Here is your chocolate! 🍫');\n      %order%;\n    %order%:\n      print('We don\\'t have that flavor!');\n  }\n}\n```",
     "options": [
       "switch",
+      "order",
       "case",
+      "'Chocolate'",
       "break",
-      "default"
+      "default",
+      "if",
+      "when"
     ],
     "answer": [
       "switch",
+      "order",
       "case",
+      "'Chocolate'",
       "break",
       "default"
     ],
@@ -140,15 +166,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the weather switch statement:\n\n```dart\nvoid main() {\n  String weather = 'Sunny';\n  %order% (weather) {\n    %order% 'Sunny':\n      print('Wear sunglasses! 🕶️');\n      %order%;\n  }\n}\n```",
+    "question": "Complete the weather switch statement:\n\n```dart\nvoid main() {\n  String weather = 'Sunny';\n  %order% (%order%) {\n    %order% %order%:\n      print('Wear sunglasses! 🕶️');\n      %order%;\n  }\n}\n```",
     "options": [
       "switch",
+      "weather",
       "case",
-      "break"
+      "'Sunny'",
+      "break",
+      "if",
+      "when",
+      "default"
     ],
     "answer": [
       "switch",
+      "weather",
       "case",
+      "'Sunny'",
       "break"
     ],
     "type": "order"
@@ -170,16 +203,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the transportation switch:\n\n```dart\nvoid main() {\n  String transport = 'Car';\n  %order% (transport) {\n    %order% 'Car':\n      print('Drive safely! 🚗');\n      %order%;\n    %order%:\n      print('Have a good trip!');\n  }\n}\n```",
+    "question": "Complete the transportation switch:\n\n```dart\nvoid main() {\n  String transport = 'Car';\n  %order% (%order%) {\n    %order% %order%:\n      print('Drive safely! 🚗');\n      %order%;\n    %order%:\n      print('Have a good trip!');\n  }\n}\n```",
     "options": [
       "switch",
+      "transport",
       "case",
+      "'Car'",
       "break",
-      "default"
+      "default",
+      "if",
+      "when"
     ],
     "answer": [
       "switch",
+      "transport",
       "case",
+      "'Car'",
       "break",
       "default"
     ],
@@ -202,15 +241,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the fruit switch statement:\n\n```dart\nvoid main() {\n  String fruit = 'Apple';\n  %order% (fruit) {\n    %order% 'Apple':\n      print('An apple a day! 🍎');\n      %order%;\n  }\n}\n```",
+    "question": "Complete the fruit switch statement:\n\n```dart\nvoid main() {\n  String fruit = 'Apple';\n  %order% (%order%) {\n    %order% %order%:\n      print('An apple a day! 🍎');\n      %order%;\n  }\n}\n```",
     "options": [
       "switch",
+      "fruit",
       "case",
-      "break"
+      "'Apple'",
+      "break",
+      "if",
+      "when",
+      "default"
     ],
     "answer": [
       "switch",
+      "fruit",
       "case",
+      "'Apple'",
       "break"
     ],
     "type": "order"
@@ -232,16 +278,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the grade switch statement:\n\n```dart\nvoid main() {\n  String grade = 'A';\n  %order% (grade) {\n    %order% 'A':\n      print('Excellent work! ⭐');\n      %order%;\n    %order%:\n      print('Keep trying!');\n  }\n}\n```",
+    "question": "Complete the grade switch statement:\n\n```dart\nvoid main() {\n  String grade = 'A';\n  %order% (%order%) {\n    %order% %order%:\n      print('Excellent work! ⭐');\n      %order%;\n    %order%:\n      print('Keep trying!');\n  }\n}\n```",
     "options": [
       "switch",
+      "grade",
       "case",
+      "'A'",
       "break",
-      "default"
+      "default",
+      "if",
+      "when"
     ],
     "answer": [
       "switch",
+      "grade",
       "case",
+      "'A'",
       "break",
       "default"
     ],
@@ -264,239 +316,265 @@
     "type": "fill"
   },
   {
-    "question": "Complete the food switch statement:\n\n```dart\nvoid main() {\n  String food = 'Pizza';\n  %order% (food) {\n    %order% 'Pizza':\n      print('Delicious! 🍕');\n      %order%;\n  }\n}\n```",
+    "question": "Complete the food switch statement:\n\n```dart\nvoid main() {\n  String food = 'Pizza';\n  %order% (%order%) {\n    %order% %order%:\n      print('Delicious! 🍕');\n      %order%;\n  }\n}\n```",
     "options": [
       "switch",
+      "food",
       "case",
-      "break"
+      "'Pizza'",
+      "break",
+      "if",
+      "when",
+      "default"
     ],
     "answer": [
       "switch",
+      "food",
       "case",
+      "'Pizza'",
       "break"
     ],
     "type": "order"
   },
   {
-    "question": "What will this switch statement output?\n\n```dart\nvoid main() {\n  String vehicle = 'Bike';\n  switch (vehicle) {\n    case 'Car':\n      print('Four wheels');\n      break;\n    case 'Bike':\n      print('Two wheels');\n      break;\n    default:\n      print('Unknown vehicle');\n  }\n}\n```",
-    "options": [
-      "Four wheels",
-      "Two wheels",
-      "Unknown vehicle",
-      "Error"
-    ],
-    "answer": ["Two wheels"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the default keyword:\n\n```dart\nswitch (status) {\n  case 'Active':\n    print('Running');\n    break;\n  %fill%:\n    print('Unknown status');\n}\n```",
-    "answer": ["default"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the number switch statement:\n\n```dart\nvoid main() {\n  int num = 1;\n  %order% (num) {\n    %order% 1:\n      print('One');\n      %order%;\n    %order%:\n      print('Other number');\n  }\n}\n```",
+    "question": "Complete the number switch statement:\n\n```dart\nvoid main() {\n  int num = 1;\n  %order% (%order%) {\n    %order% %order%:\n      print('One');\n      %order%;\n    %order%:\n      print('Other number');\n  }\n}\n```",
     "options": [
       "switch",
+      "num",
       "case",
+      "1",
       "break",
-      "default"
+      "default",
+      "if",
+      "when"
     ],
     "answer": [
       "switch",
+      "num",
       "case",
-      "break",
-      "default"
-    ],
-    "type": "order"
-  },
-  {
-    "question": "What happens in this switch statement?\n\n```dart\nvoid main() {\n  String game = 'Chess';\n  switch (game) {\n    case 'Chess':\n      print('Strategic game');\n      break;\n    case 'Soccer':\n      print('Team sport');\n      break;\n  }\n  print('Game over');\n}\n```",
-    "options": [
-      "Strategic game",
-      "Team sport",
-      "Strategic game\\nGame over",
-      "Game over"
-    ],
-    "answer": ["Strategic game\\nGame over"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the break statement:\n\n```dart\ncase 'Hot':\n  print('Turn on AC');\n  %fill%;\n```",
-    "answer": ["break"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the animal sound switch:\n\n```dart\nvoid main() {\n  String animal = 'Dog';\n  %order% (animal) {\n    %order% 'Dog':\n      print('Woof! 🐕');\n      %order%;\n  }\n}\n```",
-    "options": [
-      "switch",
-      "case",
-      "break"
-    ],
-    "answer": [
-      "switch",
-      "case",
-      "break"
-    ],
-    "type": "order"
-  },
-  {
-    "question": "What is the output when the case doesn't match?\n\n```dart\nvoid main() {\n  String language = 'Python';\n  switch (language) {\n    case 'Dart':\n      print('Flutter development');\n      break;\n    case 'Java':\n      print('Enterprise apps');\n      break;\n    default:\n      print('Great choice!');\n  }\n}\n```",
-    "options": [
-      "Flutter development",
-      "Enterprise apps",
-      "Great choice!",
-      "Nothing"
-    ],
-    "answer": ["Great choice!"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the switch expression:\n\n```dart\nString response = 'Yes';\nswitch (%fill%) {\n  case 'Yes':\n    print('Confirmed!');\n    break;\n}\n```",
-    "answer": ["response"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the size switch statement:\n\n```dart\nvoid main() {\n  String size = 'Large';\n  %order% (size) {\n    %order% 'Large':\n      print('Big size! 📏');\n      %order%;\n    %order%:\n      print('Standard size');\n  }\n}\n```",
-    "options": [
-      "switch",
-      "case",
-      "break",
-      "default"
-    ],
-    "answer": [
-      "switch",
-      "case",
+      "1",
       "break",
       "default"
     ],
     "type": "order"
   },
   {
-    "question": "What will this nested switch output?\n\n```dart\nvoid main() {\n  String category = 'Fruit';\n  String item = 'Apple';\n  switch (category) {\n    case 'Fruit':\n      switch (item) {\n        case 'Apple':\n          print('Red apple');\n          break;\n      }\n      break;\n  }\n}\n```",
-    "options": [
-      "Fruit",
-      "Apple",
-      "Red apple",
-      "Error"
-    ],
-    "answer": ["Red apple"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the case value:\n\n```dart\nswitch (direction) {\n  case %fill%:\n    print('Going up!');\n    break;\n}\n```",
-    "answer": ["'Up'"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the emotion switch:\n\n```dart\nvoid main() {\n  String emotion = 'Excited';\n  %order% (emotion) {\n    %order% 'Excited':\n      print('Yay! 🎉');\n      %order%;\n  }\n}\n```",
+    "question": "Complete the animal sound switch:\n\n```dart\nvoid main() {\n  String animal = 'Dog';\n  %order% (%order%) {\n    %order% %order%:\n      print('Woof! 🐕');\n      %order%;\n  }\n}\n```",
     "options": [
       "switch",
+      "animal",
       "case",
-      "break"
+      "'Dog'",
+      "break",
+      "if",
+      "when",
+      "default"
     ],
     "answer": [
       "switch",
+      "animal",
       "case",
+      "'Dog'",
       "break"
     ],
     "type": "order"
   },
   {
-    "question": "What happens with an empty switch?\n\n```dart\nvoid main() {\n  String value = 'test';\n  switch (value) {\n  }\n  print('Done');\n}\n```",
-    "options": [
-      "Error",
-      "test",
-      "Done",
-      "Nothing"
-    ],
-    "answer": ["Done"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the switch syntax:\n\n```dart\nint score = 100;\n%fill% (score) {\n  case 100:\n    print('Perfect!');\n    break;\n}\n```",
-    "answer": ["switch"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the color switch statement:\n\n```dart\nvoid main() {\n  String color = 'Blue';\n  %order% (color) {\n    %order% 'Blue':\n      print('Sky color! 🌌');\n      %order%;\n    %order%:\n      print('Nice color!');\n  }\n}\n```",
+    "question": "Complete the size switch statement:\n\n```dart\nvoid main() {\n  String size = 'Large';\n  %order% (%order%) {\n    %order% %order%:\n      print('Big size! 📏');\n      %order%;\n    %order%:\n      print('Standard size');\n  }\n}\n```",
     "options": [
       "switch",
+      "size",
       "case",
+      "'Large'",
       "break",
-      "default"
+      "default",
+      "if",
+      "when"
     ],
     "answer": [
       "switch",
+      "size",
       "case",
+      "'Large'",
       "break",
       "default"
     ],
     "type": "order"
   },
   {
-    "question": "What is the purpose of the default case?",
-    "options": [
-      "To handle the first case",
-      "To handle unmatched values",
-      "To end the switch",
-      "To start the switch"
-    ],
-    "answer": ["To handle unmatched values"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the break keyword:\n\n```dart\ncase 'Open':\n  print('Door is open');\n  %fill%;\n```",
-    "answer": ["break"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the book genre switch:\n\n```dart\nvoid main() {\n  String genre = 'Mystery';\n  %order% (genre) {\n    %order% 'Mystery':\n      print('Solve the puzzle! 🔍');\n      %order%;\n  }\n}\n```",
+    "question": "Complete the emotion switch:\n\n```dart\nvoid main() {\n  String emotion = 'Excited';\n  %order% (%order%) {\n    %order% %order%:\n      print('Yay! 🎉');\n      %order%;\n  }\n}\n```",
     "options": [
       "switch",
+      "emotion",
       "case",
-      "break"
+      "'Excited'",
+      "break",
+      "if",
+      "when",
+      "default"
     ],
     "answer": [
       "switch",
+      "emotion",
       "case",
+      "'Excited'",
       "break"
     ],
     "type": "order"
   },
   {
-    "question": "What will this switch output with fall-through?\n\n```dart\nvoid main() {\n  String priority = 'High';\n  switch (priority) {\n    case 'High':\n      print('Urgent!');\n    case 'Medium':\n      print('Important');\n      break;\n    case 'Low':\n      print('When possible');\n  }\n}\n```",
-    "options": [
-      "Urgent!",
-      "Important",
-      "Urgent!\\nImportant",
-      "When possible"
-    ],
-    "answer": ["Urgent!\\nImportant"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the default case:\n\n```dart\nswitch (month) {\n  case 'January':\n    print('New Year!');\n    break;\n  %fill%:\n    print('Regular month');\n}\n```",
-    "answer": ["default"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the temperature switch:\n\n```dart\nvoid main() {\n  String temp = 'Cold';\n  %order% (temp) {\n    %order% 'Cold':\n      print('Wear a jacket! 🧥');\n      %order%;\n    %order%:\n      print('Dress appropriately');\n  }\n}\n```",
+    "question": "Complete the color switch statement:\n\n```dart\nvoid main() {\n  String color = 'Blue';\n  %order% (%order%) {\n    %order% %order%:\n      print('Sky color! 🌌');\n      %order%;\n    %order%:\n      print('Nice color!');\n  }\n}\n```",
     "options": [
       "switch",
+      "color",
       "case",
+      "'Blue'",
       "break",
-      "default"
+      "default",
+      "if",
+      "when"
     ],
     "answer": [
       "switch",
+      "color",
       "case",
+      "'Blue'",
       "break",
       "default"
     ],
     "type": "order"
   },
   {
-    "question": "What is the output of this switch?\n\n```dart\nvoid main() {\n  String browser = 'Chrome';\n  switch (browser) {\n    case 'Firefox':\n      print('Mozilla browser');\n      break;\n    case 'Chrome':\n      print('Google browser');\n      break;\n    case 'Safari':\n      print('Apple browser');\n      break;\n  }\n}\n```",
+    "question": "Complete the book genre switch:\n\n```dart\nvoid main() {\n  String genre = 'Mystery';\n  %order% (%order%) {\n    %order% %order%:\n      print('Solve the puzzle! 🔍');\n      %order%;\n  }\n}\n```",
+    "options": [
+      "switch",
+      "genre",
+      "case",
+      "'Mystery'",
+      "break",
+      "if",
+      "when",
+      "default"
+    ],
+    "answer": [
+      "switch",
+      "genre",
+      "case",
+      "'Mystery'",
+      "break"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Complete the temperature switch:\n\n```dart\nvoid main() {\n  String temp = 'Cold';\n  %order% (%order%) {\n    %order% %order%:\n      print('Wear a jacket! 🧥');\n      %order%;\n    %order%:\n      print('Dress appropriately');\n  }\n}\n```",
+    "options": [
+      "switch",
+      "temp",
+      "case",
+      "'Cold'",
+      "break",
+      "default",
+      "if",
+      "when"
+    ],
+    "answer": [
+      "switch",
+      "temp",
+      "case",
+      "'Cold'",
+      "break",
+      "default"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Complete the music genre switch:\n\n```dart\nvoid main() {\n  String music = 'Rock';\n  %order% (%order%) {\n    %order% %order%:\n      print('Turn it up! 🎸');\n      %order%;\n  }\n}\n```",
+    "options": [
+      "switch",
+      "music",
+      "case",
+      "'Rock'",
+      "break",
+      "if",
+      "when",
+      "default"
+    ],
+    "answer": [
+      "switch",
+      "music",
+      "case",
+      "'Rock'",
+      "break"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Complete the social media switch:\n\n```dart\nvoid main() {\n  String platform = 'Twitter';\n  %order% (%order%) {\n    %order% %order%:\n      print('Tweet away! 🐦');\n      %order%;\n    %order%:\n      print('Great platform!');\n  }\n}\n```",
+    "options": [
+      "switch",
+      "platform",
+      "case",
+      "'Twitter'",
+      "break",
+      "default",
+      "if",
+      "when"
+    ],
+    "answer": [
+      "switch",
+      "platform",
+      "case",
+      "'Twitter'",
+      "break",
+      "default"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Complete the hobby switch:\n\n```dart\nvoid main() {\n  String hobby = 'Reading';\n  %order% (%order%) {\n    %order% %order%:\n      print('Books are great! 📚');\n      %order%;\n  }\n}\n```",
+    "options": [
+      "switch",
+      "hobby",
+      "case",
+      "'Reading'",
+      "break",
+      "if",
+      "when",
+      "default"
+    ],
+    "answer": [
+      "switch",
+      "hobby",
+      "case",
+      "'Reading'",
+      "break"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Complete the course switch statement:\n\n```dart\nvoid main() {\n  String course = 'Dart';\n  %order% (%order%) {\n    %order% %order%:\n      print('Learn Flutter! 📱');\n      %order%;\n    %order%:\n      print('Good choice!');\n  }\n}\n```",
+    "options": [
+      "switch",
+      "course",
+      "case",
+      "'Dart'",
+      "break",
+      "default",
+      "if",
+      "when"
+    ],
+    "answer": [
+      "switch",
+      "course",
+      "case",
+      "'Dart'",
+      "break",
+      "default"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this switch statement output?\n\n```dart\nvoid main() {\n  String browser = 'Chrome';\n  switch (browser) {\n    case 'Firefox':\n      print('Mozilla browser');\n      break;\n    case 'Chrome':\n      print('Google browser');\n      break;\n    case 'Safari':\n      print('Apple browser');\n      break;\n  }\n}\n```",
     "options": [
       "Mozilla browser",
       "Google browser", 
@@ -512,113 +590,33 @@
     "type": "fill"
   },
   {
-    "question": "Complete the music genre switch:\n\n```dart\nvoid main() {\n  String music = 'Rock';\n  %order% (music) {\n    %order% 'Rock':\n      print('Turn it up! 🎸');\n      %order%;\n  }\n}\n```",
+    "question": "Complete the final switch example:\n\n```dart\nvoid main() {\n  String flavor = 'Vanilla';\n  %order% (%order%) {\n    %order% %order%:\n      print('Chocolate ice cream! 🍫');\n      %order%;\n    %order% %order%:\n      print('Vanilla ice cream! 🍨');\n      %order%;\n    %order%:\n      print('We don\\'t have that flavor!');\n  }\n}\n```",
     "options": [
       "switch",
+      "flavor",
       "case",
-      "break"
-    ],
-    "answer": [
-      "switch",
-      "case",
-      "break"
-    ],
-    "type": "order"
-  },
-  {
-    "question": "Can you use variables in case labels?",
-    "options": [
-      "Yes, any variable",
-      "No, only constant values",
-      "Only string variables",
-      "Only integer variables"
-    ],
-    "answer": ["No, only constant values"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the switch variable:\n\n```dart\nString meal = 'Lunch';\nswitch (%fill%) {\n  case 'Breakfast':\n    print('Morning meal');\n    break;\n}\n```",
-    "answer": ["meal"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the social media switch:\n\n```dart\nvoid main() {\n  String platform = 'Twitter';\n  %order% (platform) {\n    %order% 'Twitter':\n      print('Tweet away! 🐦');\n      %order%;\n    %order%:\n      print('Great platform!');\n  }\n}\n```",
-    "options": [
-      "switch",
-      "case",
+      "'Chocolate'",
       "break",
-      "default"
+      "case",
+      "'Vanilla'",
+      "break",
+      "default",
+      "if"
     ],
     "answer": [
       "switch",
+      "flavor",
       "case",
+      "'Chocolate'",
+      "break",
+      "case",
+      "'Vanilla'",
       "break",
       "default"
     ],
     "type": "order"
-  },
-  {
-    "question": "What will this switch statement print?\n\n```dart\nvoid main() {\n  String os = 'Linux';\n  switch (os) {\n    case 'Windows':\n      print('Microsoft OS');\n      break;\n    case 'macOS':\n      print('Apple OS');\n      break;\n    default:\n      print('Other OS');\n  }\n}\n```",
-    "options": [
-      "Microsoft OS",
-      "Apple OS",
-      "Other OS",
-      "Linux"
-    ],
-    "answer": ["Other OS"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the missing break:\n\n```dart\ncase 'Success':\n  print('Well done!');\n  %fill%;\n```",
-    "answer": ["break"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the hobby switch:\n\n```dart\nvoid main() {\n  String hobby = 'Reading';\n  %order% (hobby) {\n    %order% 'Reading':\n      print('Books are great! 📚');\n      %order%;\n  }\n}\n```",
-    "options": [
-      "switch",
-      "case",
-      "break"
-    ],
-    "answer": [
-      "switch",
-      "case",
-      "break"
-    ],
-    "type": "order"
-  },
-  {
-    "question": "What happens with this switch statement?\n\n```dart\nvoid main() {\n  String signal = 'Green';\n  switch (signal) {\n    case 'Red':\n      print('Stop');\n      break;\n    case 'Yellow':\n      print('Slow down');\n      break;\n    case 'Green':\n      print('Go');\n      // No break here\n    default:\n      print('Signal checked');\n  }\n}\n```",
-    "options": [
-      "Go",
-      "Signal checked",
-      "Go\\nSignal checked",
-      "Stop"
-    ],
-    "answer": ["Go\\nSignal checked"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the default keyword:\n\n```dart\nswitch (role) {\n  case 'Admin':\n    print('Full access');\n    break;\n  %fill%:\n    print('Limited access');\n}\n```",
-    "answer": ["default"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the course switch statement:\n\n```dart\nvoid main() {\n  String course = 'Dart';\n  %order% (course) {\n    %order% 'Dart':\n      print('Learn Flutter! 📱');\n      %order%;\n    %order%:\n      print('Good choice!');\n  }\n}\n```",
-    "options": [
-      "switch",
-      "case",
-      "break",
-      "default"
-    ],
-    "answer": [
-      "switch",
-      "case",
-      "break",
-      "default"
-    ],
-    "type": "order"
-  },
+  }
+,
   {
     "question": "Which data types can be used in switch statements?",
     "options": [

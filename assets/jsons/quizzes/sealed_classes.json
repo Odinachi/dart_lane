@@ -1,12 +1,19 @@
 [
   {
-    "question": "Complete the sealed class declaration:\n\n```dart\n%order% class Animal {\n  void %order%();\n}\n```",
+    "question": "Complete the sealed class declaration:\n\n```dart\n%order% class %order% {\n  void %order%();\n}\n```",
     "options": [
       "sealed",
-      "makeSound"
+      "Animal",
+      "makeSound",
+      "abstract",
+      "class",
+      "Pet",
+      "move",
+      "breathe"
     ],
     "answer": [
       "sealed",
+      "Animal",
       "makeSound"
     ],
     "type": "order"
@@ -28,15 +35,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sealed class with allowed subclasses:\n\n```dart\n%order% class Shape {\n  double %order%();\n}\n\nclass Circle %order% Shape {\n  double radius;\n  Circle(this.radius);\n  \n  @override\n  double calculateArea() {\n    return 3.14 * radius * radius;\n  }\n}\n```",
+    "question": "Complete the sealed class with allowed subclasses:\n\n```dart\n%order% class %order% {\n  double %order%();\n}\n\nclass Circle %order% Shape {\n  double radius;\n  Circle(this.radius);\n  \n  @override\n  double calculateArea() {\n    return 3.14 * radius * radius;\n  }\n}\n```",
     "options": [
       "sealed",
+      "Shape",
       "calculateArea",
-      "extends"
+      "extends",
+      "abstract",
+      "Rectangle",
+      "getArea",
+      "implements"
     ],
     "answer": [
       "sealed",
-      "calculateArea", 
+      "Shape",
+      "calculateArea",
       "extends"
     ],
     "type": "order"
@@ -60,7 +73,12 @@
   {
     "question": "Complete the pattern matching with sealed classes:\n\n```dart\nsealed class Result {\n}\n\nclass Success extends Result {\n  final String data;\n  Success(this.data);\n}\n\nclass Error extends Result {\n  final String message;\n  Error(this.message);\n}\n\nString handleResult(Result result) {\n  return %order% (result) {\n    Success(data: var d) => 'Got: $d',\n    Error(message: var m) => 'Error: $m',\n  };\n}\n```",
     "options": [
-      "switch"
+      "switch",
+      "match",
+      "when",
+      "if",
+      "case",
+      "pattern"
     ],
     "answer": [
       "switch"
@@ -84,15 +102,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sealed class hierarchy:\n\n```dart\n%order% class Transport {\n  void %order%();\n}\n\nclass Car %order% Transport {\n  @override\n  void move() {\n    print('Driving on road');\n  }\n}\n\nclass Boat %order% Transport {\n  @override\n  void move() {\n    print('Sailing on water');\n  }\n}\n```",
+    "question": "Complete the sealed class hierarchy:\n\n```dart\n%order% class %order% {\n  void %order%();\n}\n\nclass Car %order% Transport {\n  @override\n  void move() {\n    print('Driving on road');\n  }\n}\n\nclass Boat %order% Transport {\n  @override\n  void move() {\n    print('Sailing on water');\n  }\n}\n```",
     "options": [
       "sealed",
+      "Transport",
       "move",
       "extends",
-      "extends"
+      "extends",
+      "abstract",
+      "Vehicle",
+      "start",
+      "implements"
     ],
     "answer": [
       "sealed",
+      "Transport",
       "move",
       "extends",
       "extends"
@@ -121,7 +145,11 @@
       "switch",
       "Sunny",
       "Rainy",
-      "Snowy"
+      "Snowy",
+      "match",
+      "Cloudy",
+      "Windy",
+      "when"
     ],
     "answer": [
       "switch",
@@ -148,21 +176,26 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sealed class with properties:\n\n```dart\n%order% class Response {\n  final int %order%;\n  Response(this.statusCode);\n}\n\nclass SuccessResponse %order% Response {\n  final String data;\n  SuccessResponse(this.data) : %order%(200);\n}\n\nclass ErrorResponse %order% Response {\n  final String error;\n  ErrorResponse(this.error) : %order%(500);\n}\n```",
+    "question": "Complete the sealed class with properties:\n\n```dart\n%order% class %order% {\n  final int %order%;\n  Response(this.statusCode);\n}\n\nclass SuccessResponse %order% Response {\n  final String data;\n  SuccessResponse(this.data) : %order%(200);\n}\n\nclass ErrorResponse %order% Response {\n  final String error;\n  ErrorResponse(this.error) : %order%(500);\n}\n```",
     "options": [
       "sealed",
+      "Response",
       "statusCode",
       "extends",
       "super",
       "extends",
-      "super"
+      "super",
+      "abstract",
+      "code",
+      "implements"
     ],
     "answer": [
       "sealed",
+      "Response",
       "statusCode",
       "extends",
       "super",
-      "extends", 
+      "extends",
       "super"
     ],
     "type": "order"
@@ -184,15 +217,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sealed class with abstract methods:\n\n```dart\n%order% class Drawable {\n  void %order%();\n  void %order%(String color);\n}\n\nclass Circle %order% Drawable {\n  @override\n  void draw() {\n    print('Drawing circle');\n  }\n  \n  @override\n  void setColor(String color) {\n    print('Circle color: $color');\n  }\n}\n```",
+    "question": "Complete the sealed class with abstract methods:\n\n```dart\n%order% class %order% {\n  void %order%();\n  void %order%(String color);\n}\n\nclass Circle %order% Drawable {\n  @override\n  void draw() {\n    print('Drawing circle');\n  }\n  \n  @override\n  void setColor(String color) {\n    print('Circle color: $color');\n  }\n}\n```",
     "options": [
       "sealed",
+      "Drawable",
       "draw",
       "setColor",
-      "extends"
+      "extends",
+      "abstract",
+      "Paintable",
+      "paint",
+      "fill",
+      "implements"
     ],
     "answer": [
       "sealed",
+      "Drawable",
       "draw",
       "setColor",
       "extends"
@@ -216,20 +256,24 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sealed class with data:\n\n```dart\n%order% class ApiResult<%order%> {\n}\n\nclass Success<%order%> %order% ApiResult<%order%> {\n  final %order% data;\n  Success(this.data);\n}\n\nclass Failure<%order%> %order% ApiResult<%order%> {\n  final String error;\n  Failure(this.error);\n}\n```",
+    "question": "Complete the sealed class with data:\n\n```dart\n%order% class %order%<%order%> {\n}\n\nclass Success<%order%> %order% ApiResult<%order%> {\n  final %order% data;\n  Success(this.data);\n}\n\nclass Failure<%order%> %order% ApiResult<%order%> {\n  final String error;\n  Failure(this.error);\n}\n```",
     "options": [
       "sealed",
-      "T",
-      "T", 
-      "extends",
-      "T",
+      "ApiResult",
       "T",
       "T",
       "extends",
-      "T"
+      "T",
+      "T",
+      "T",
+      "extends",
+      "T",
+      "abstract",
+      "Result"
     ],
     "answer": [
       "sealed",
+      "ApiResult",
       "T",
       "T",
       "extends",
@@ -258,14 +302,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sealed class with mixins:\n\n```dart\nmixin Flyable {\n  void fly() => print('Flying');\n}\n\n%order% class Bird {\n  void chirp();\n}\n\nclass Sparrow %order% Bird %order% Flyable {\n  @override\n  void chirp() {\n    print('Chirp chirp');\n  }\n}\n```",
+    "question": "Complete the sealed class with mixins:\n\n```dart\nmixin Flyable {\n  void fly() => print('Flying');\n}\n\n%order% class %order% {\n  void chirp();\n}\n\nclass Sparrow %order% Bird %order% Flyable {\n  @override\n  void chirp() {\n    print('Chirp chirp');\n  }\n}\n```",
     "options": [
       "sealed",
+      "Bird",
       "extends",
-      "with"
+      "with",
+      "abstract",
+      "Animal",
+      "implements",
+      "using"
     ],
     "answer": [
       "sealed",
+      "Bird",
       "extends",
       "with"
     ],
@@ -288,17 +338,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sealed class with interfaces:\n\n```dart\nabstract class Comparable {\n  int compare(Object other);\n}\n\n%order% class Priority %order% Comparable {\n  int value;\n  Priority(this.value);\n}\n\nclass High %order% Priority {\n  High() : %order%(1);\n  \n  @override\n  int compare(Object other) {\n    return value.compareTo((other as Priority).value);\n  }\n}\n```",
+    "question": "Complete the sealed class with interfaces:\n\n```dart\nabstract class Comparable {\n  int compare(Object other);\n}\n\n%order% class %order% %order% Comparable {\n  int value;\n  Priority(this.value);\n}\n\nclass High %order% Priority {\n  High() : %order%(1);\n  \n  @override\n  int compare(Object other) {\n    return value.compareTo((other as Priority).value);\n  }\n}\n```",
     "options": [
       "sealed",
+      "Priority",
       "implements",
       "extends",
-      "super"
+      "super",
+      "abstract",
+      "Level",
+      "with",
+      "mixin"
     ],
     "answer": [
       "sealed",
+      "Priority",
       "implements",
-      "extends", 
+      "extends",
       "super"
     ],
     "type": "order"
@@ -320,15 +376,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the nested sealed class pattern:\n\n```dart\n%order% class Expr {\n}\n\nclass Number %order% Expr {\n  final double value;\n  Number(this.value);\n}\n\nclass BinaryOp %order% Expr {\n  final Expr left;\n  final String operator;\n  final Expr right;\n  BinaryOp(this.left, this.operator, this.right);\n}\n\ndouble evaluate(Expr expr) {\n  return %order% (expr) {\n    Number(value: var v) => v,\n    BinaryOp(left: var l, operator: '+', right: var r) => \n      evaluate(l) + evaluate(r),\n    BinaryOp(left: var l, operator: '-', right: var r) => \n      evaluate(l) - evaluate(r),\n  };\n}\n```",
+    "question": "Complete the nested sealed class pattern:\n\n```dart\n%order% class %order% {\n}\n\nclass Number %order% Expr {\n  final double value;\n  Number(this.value);\n}\n\nclass BinaryOp %order% Expr {\n  final Expr left;\n  final String operator;\n  final Expr right;\n  BinaryOp(this.left, this.operator, this.right);\n}\n\ndouble evaluate(Expr expr) {\n  return %order% (expr) {\n    Number(value: var v) => v,\n    BinaryOp(left: var l, operator: '+', right: var r) => \n      evaluate(l) + evaluate(r),\n    BinaryOp(left: var l, operator: '-', right: var r) => \n      evaluate(l) - evaluate(r),\n  };\n}\n```",
     "options": [
       "sealed",
-      "extends", 
+      "Expr",
       "extends",
-      "switch"
+      "extends",
+      "switch",
+      "abstract",
+      "Expression",
+      "implements",
+      "match"
     ],
     "answer": [
       "sealed",
+      "Expr",
       "extends",
       "extends",
       "switch"
@@ -352,18 +414,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sealed class with factory constructor:\n\n```dart\n%order% class Logger {\n  final String level;\n  Logger._(this.level);\n  \n  %order% Logger.info() => Logger._('INFO');\n  %order% Logger.error() => Logger._('ERROR');\n}\n\nclass InfoLogger %order% Logger {\n  InfoLogger() : %order%._('INFO');\n}\n\nclass ErrorLogger %order% Logger {\n  ErrorLogger() : %order%._('ERROR');\n}\n```",
+    "question": "Complete the sealed class with factory constructor:\n\n```dart\n%order% class %order% {\n  final String level;\n  Logger._(this.level);\n  \n  %order% Logger.info() => Logger._('INFO');\n  %order% Logger.error() => Logger._('ERROR');\n}\n\nclass InfoLogger %order% Logger {\n  InfoLogger() : %order%._('INFO');\n}\n\nclass ErrorLogger %order% Logger {\n  ErrorLogger() : %order%._('ERROR');\n}\n```",
     "options": [
       "sealed",
+      "Logger",
       "factory",
-      "factory", 
+      "factory",
       "extends",
       "super",
       "extends",
-      "super"
+      "super",
+      "abstract",
+      "static"
     ],
     "answer": [
       "sealed",
+      "Logger",
       "factory",
       "factory",
       "extends",
@@ -390,19 +456,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sealed class with const constructor:\n\n```dart\n%order% class Color {\n  final int value;\n  %order% Color(this.value);\n}\n\nclass Red %order% Color {\n  %order% Red() : %order%(0xFF0000);\n}\n\nclass Green %order% Color {\n  %order% Green() : %order%(0x00FF00);\n}\n```",
+    "question": "Complete the sealed class with const constructor:\n\n```dart\n%order% class %order% {\n  final int value;\n  %order% Color(this.value);\n}\n\nclass Red %order% Color {\n  %order% Red() : %order%(0xFF0000);\n}\n\nclass Green %order% Color {\n  %order% Green() : %order%(0x00FF00);\n}\n```",
     "options": [
       "sealed",
+      "Color",
       "const",
       "extends",
       "const",
       "super",
-      "extends", 
+      "extends",
       "const",
-      "super"
+      "super",
+      "abstract",
+      "static"
     ],
     "answer": [
       "sealed",
+      "Color",
       "const",
       "extends",
       "const",
@@ -430,15 +500,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sealed class with private constructor:\n\n```dart\n%order% class Singleton {\n  static final Singleton _instance = Singleton._();\n  %order%._();\n  \n  static Singleton get instance => _instance;\n}\n\nclass ConcreteSingleton %order% Singleton {\n  ConcreteSingleton._() : %order%._();\n}\n```",
+    "question": "Complete the sealed class with private constructor:\n\n```dart\n%order% class %order% {\n  static final Singleton _instance = Singleton._();\n  %order%._();\n  \n  static Singleton get instance => _instance;\n}\n\nclass ConcreteSingleton %order% Singleton {\n  ConcreteSingleton._() : %order%._();\n}\n```",
     "options": [
       "sealed",
       "Singleton",
+      "Singleton",
       "extends",
-      "super"
+      "super",
+      "abstract",
+      "Instance",
+      "implements",
+      "final"
     ],
     "answer": [
       "sealed",
+      "Singleton",
       "Singleton",
       "extends",
       "super"
@@ -462,15 +538,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sealed class with static methods:\n\n```dart\n%order% class MathOperation {\n  %order% MathOperation calculate(double a, double b) {\n    if (a > b) return Max(a);\n    return Min(b);\n  }\n}\n\nclass Max %order% MathOperation {\n  final double value;\n  Max(this.value);\n}\n\nclass Min %order% MathOperation {\n  final double value;\n  Min(this.value);\n}\n```",
+    "question": "Complete the sealed class with static methods:\n\n```dart\n%order% class %order% {\n  %order% MathOperation calculate(double a, double b) {\n    if (a > b) return Max(a);\n    return Min(b);\n  }\n}\n\nclass Max %order% MathOperation {\n  final double value;\n  Max(this.value);\n}\n\nclass Min %order% MathOperation {\n  final double value;\n  Min(this.value);\n}\n```",
     "options": [
       "sealed",
+      "MathOperation",
       "static",
       "extends",
-      "extends"
+      "extends",
+      "abstract",
+      "Operation",
+      "const",
+      "implements"
     ],
     "answer": [
       "sealed",
+      "MathOperation",
       "static",
       "extends",
       "extends"
@@ -494,14 +576,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the sealed class library scope:\n\n```dart\n// file: shapes.dart\n%order% class Shape {\n  void draw();\n}\n\nclass Circle %order% Shape {\n  @override\n  void draw() => print('Circle');\n}\n\n// file: main.dart\n%order% 'shapes.dart';\n\n// This would cause an error:\n// class Triangle extends Shape { } // Error!\n```",
+    "question": "Complete the sealed class library scope:\n\n```dart\n// file: shapes.dart\n%order% class %order% {\n  void draw();\n}\n\nclass Circle %order% Shape {\n  @override\n  void draw() => print('Circle');\n}\n\n// file: main.dart\n%order% 'shapes.dart';\n\n// This would cause an error:\n// class Triangle extends Shape { } // Error!\n```",
     "options": [
       "sealed",
+      "Shape",
       "extends",
-      "import"
+      "import",
+      "abstract",
+      "Drawable",
+      "implements",
+      "export"
     ],
     "answer": [
       "sealed",
+      "Shape",
       "extends",
       "import"
     ],
@@ -533,7 +621,11 @@
       "extends",
       "super",
       "extends",
-      "super"
+      "super",
+      "abstract",
+      "Player",
+      "move",
+      "implements"
     ],
     "answer": [
       "sealed",

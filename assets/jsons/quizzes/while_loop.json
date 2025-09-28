@@ -1,13 +1,20 @@
 [
   {
-    "question": "Complete the while loop to print numbers 0 to 4:\n\n```dart\nvoid main() {\n  int i = 0;\n  %order% %order%%order%%order% {\n    print(i);\n    i++;\n  }\n}\n```",
+    "question": "Complete the while loop to print numbers 0 to 4:\n\n```dart\nvoid main() {\n  int i = 0;\n  %order% (%order% < %order%) {\n    print(i);\n    i++;\n  }\n}\n```",
     "options": [
       "while",
-      "(i < 5)"
+      "i",
+      "5",
+      "for",
+      "if",
+      "0",
+      "10",
+      "j"
     ],
     "answer": [
       "while",
-      "(i < 5)"
+      "i",
+      "5"
     ],
     "type": "order"
   },
@@ -28,14 +35,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the while loop syntax:\n\n```dart\nvoid main() {\n  int counter = 0;\n  %order% %order%%order% %order% %order% %order% {\n    print('Hello');\n    counter++;\n  }\n}\n```",
+    "question": "Complete the while loop syntax:\n\n```dart\nvoid main() {\n  int counter = 0;\n  %order% (%order% < %order%) {\n    print('Hello');\n    counter++;\n  }\n}\n```",
     "options": [
       "while",
-      "(counter < 3)"
+      "counter",
+      "3",
+      "for",
+      "if",
+      "i",
+      "5",
+      "do"
     ],
     "answer": [
       "while",
-      "(counter < 3)"
+      "counter",
+      "3"
     ],
     "type": "order"
   },
@@ -56,14 +70,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the countdown while loop:\n\n```dart\nvoid main() {\n  int countdown = 5;\n  %order% %order%%order% %order% %order% {\n    print('Countdown: $countdown');\n    countdown--;\n  }\n}\n```",
+    "question": "Complete the countdown while loop:\n\n```dart\nvoid main() {\n  int countdown = 5;\n  %order% (%order% > %order%) {\n    print('Countdown: $countdown');\n    countdown--;\n  }\n}\n```",
     "options": [
       "while",
-      "(countdown > 0)"
+      "countdown",
+      "0",
+      "for",
+      "if",
+      "i",
+      "5",
+      "counter"
     ],
     "answer": [
       "while",
-      "(countdown > 0)"
+      "countdown",
+      "0"
     ],
     "type": "order"
   },
@@ -84,12 +105,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the while loop with braces:\n\n```dart\nvoid main() {\n  int count = 0;\n  while (count < 2) %order%\n    print('Count: $count');\n    count++;\n  %order%\n}\n```",
+    "question": "Complete the while loop with braces:\n\n```dart\nvoid main() {\n  int count = 0;\n  %order% (%order% < %order%) %order%\n    print('Count: $count');\n    count++;\n  %order%\n}\n```",
     "options": [
+      "while",
+      "count",
+      "2",
       "{",
-      "}"
+      "}",
+      "for",
+      "if",
+      "("
     ],
     "answer": [
+      "while",
+      "count",
+      "2",
       "{",
       "}"
     ],
@@ -112,14 +142,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the while loop to print even numbers 0, 2, 4:\n\n```dart\nvoid main() {\n  int num = 0;\n  %order% %order%%order% %order% %order% {\n    print('Even: $num');\n    num += 2;\n  }\n}\n```",
+    "question": "Complete the while loop to print even numbers 0, 2, 4:\n\n```dart\nvoid main() {\n  int num = 0;\n  %order% (%order% <= %order%) {\n    print('Even: $num');\n    num += 2;\n  }\n}\n```",
     "options": [
       "while",
-      "(num <= 4)"
+      "num",
+      "4",
+      "for",
+      "if",
+      "i",
+      "6",
+      "count"
     ],
     "answer": [
       "while",
-      "(num <= 4)"
+      "num",
+      "4"
     ],
     "type": "order"
   },
@@ -140,14 +177,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the while loop with string condition:\n\n```dart\nvoid main() {\n  String word = 'start';\n  int count = 0;\n  %order% %order%%order% %order% %order% %order% %order% {\n    print('Word: $word, Count: $count');\n    count++;\n    if (count >= 2) word = 'stop';\n  }\n}\n```",
+    "question": "Complete the while loop with string condition:\n\n```dart\nvoid main() {\n  String word = 'start';\n  int count = 0;\n  %order% (%order% == %order%) {\n    print('Word: $word, Count: $count');\n    count++;\n    if (count >= 2) word = 'stop';\n  }\n}\n```",
     "options": [
       "while",
-      "(word == 'start')"
+      "word",
+      "'start'",
+      "for",
+      "if",
+      "text",
+      "'stop'",
+      "'end'"
     ],
     "answer": [
       "while",
-      "(word == 'start')"
+      "word",
+      "'start'"
     ],
     "type": "order"
   },
@@ -168,18 +212,24 @@
     "type": "fill"
   },
   {
-    "question": "Complete the nested while loop:\n\n```dart\nvoid main() {\n  int outer = 0;\n  %order% %order%%order% %order% %order% {\n    int inner = 0;\n    %order% %order%%order% %order% %order% {\n      print('$outer-$inner');\n      inner++;\n    }\n    outer++;\n  }\n}\n```",
+    "question": "Complete the nested while loop:\n\n```dart\nvoid main() {\n  int outer = 0;\n  %order% (%order% < %order%) {\n    int inner = 0;\n    %order% (%order% < %order%) {\n      print('$outer-$inner');\n      inner++;\n    }\n    outer++;\n  }\n}\n```",
     "options": [
       "while",
-      "(outer < 2)",
+      "outer",
+      "2",
       "while",
-      "(inner < 2)"
+      "inner",
+      "2",
+      "for",
+      "if"
     ],
     "answer": [
       "while",
-      "(outer < 2)",
-      "while", 
-      "(inner < 2)"
+      "outer",
+      "2",
+      "while",
+      "inner",
+      "2"
     ],
     "type": "order"
   },
@@ -200,14 +250,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the while loop with boolean variable:\n\n```dart\nvoid main() {\n  bool keepGoing = true;\n  int counter = 0;\n  %order% %order%%order% {\n    print('Counter: $counter');\n    counter++;\n    if (counter >= 3) keepGoing = false;\n  }\n}\n```",
+    "question": "Complete the while loop with boolean variable:\n\n```dart\nvoid main() {\n  bool keepGoing = true;\n  int counter = 0;\n  %order% (%order%) {\n    print('Counter: $counter');\n    counter++;\n    if (counter >= 3) keepGoing = false;\n  }\n}\n```",
     "options": [
       "while",
-      "(keepGoing)"
+      "keepGoing",
+      "for",
+      "if",
+      "running",
+      "active",
+      "do",
+      "until"
     ],
     "answer": [
       "while",
-      "(keepGoing)"
+      "keepGoing"
     ],
     "type": "order"
   },
@@ -228,14 +284,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the while loop with break statement:\n\n```dart\nvoid main() {\n  int i = 0;\n  %order% %order%%order% {\n    print('Value: $i');\n    i++;\n    if (i == 3) break;\n  }\n}\n```",
+    "question": "Complete the while loop with break statement:\n\n```dart\nvoid main() {\n  int i = 0;\n  %order% (%order%) {\n    print('Value: $i');\n    i++;\n    if (i == 3) break;\n  }\n}\n```",
     "options": [
       "while",
-      "(true)"
+      "true",
+      "for",
+      "if",
+      "false",
+      "i",
+      "do",
+      "until"
     ],
     "answer": [
       "while",
-      "(true)"
+      "true"
     ],
     "type": "order"
   },
@@ -256,14 +318,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the while loop with list operations:\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3, 4];\n  int index = 0;\n  %order% %order%%order% %order% %order% {\n    print('Number: ${numbers[index]}');\n    index++;\n  }\n}\n```",
+    "question": "Complete the while loop with list operations:\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3, 4];\n  int index = 0;\n  %order% (%order% < %order%) {\n    print('Number: ${numbers[index]}');\n    index++;\n  }\n}\n```",
     "options": [
       "while",
-      "(index < numbers.length)"
+      "index",
+      "numbers.length",
+      "for",
+      "if",
+      "i",
+      "4",
+      "list.size"
     ],
     "answer": [
       "while",
-      "(index < numbers.length)"
+      "index",
+      "numbers.length"
     ],
     "type": "order"
   },
@@ -284,14 +353,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the while loop with function calls:\n\n```dart\nint getNextValue(int current) {\n  return current + 2;\n}\n\nvoid main() {\n  int value = 0;\n  %order% %order%%order% %order% %order% {\n    print('Value: $value');\n    value = getNextValue(value);\n  }\n}\n```",
+    "question": "Complete the while loop with function calls:\n\n```dart\nint getNextValue(int current) {\n  return current + 2;\n}\n\nvoid main() {\n  int value = 0;\n  %order% (%order% < %order%) {\n    print('Value: $value');\n    value = getNextValue(value);\n  }\n}\n```",
     "options": [
       "while",
-      "(value < 6)"
+      "value",
+      "6",
+      "for",
+      "if",
+      "num",
+      "10",
+      "current"
     ],
     "answer": [
       "while",
-      "(value < 6)"
+      "value",
+      "6"
     ],
     "type": "order"
   },
@@ -312,14 +388,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the while loop with error handling:\n\n```dart\nvoid main() {\n  int divisor = 5;\n  %order% %order%%order% %order% %order% {\n    if (divisor == 0) break;\n    print('10 / $divisor = ${10 / divisor}');\n    divisor--;\n  }\n}\n```",
+    "question": "Complete the while loop with error handling:\n\n```dart\nvoid main() {\n  int divisor = 5;\n  %order% (%order% > %order%) {\n    if (divisor == 0) break;\n    print('10 / $divisor = ${10 / divisor}');\n    divisor--;\n  }\n}\n```",
     "options": [
       "while",
-      "(divisor > 0)"
+      "divisor",
+      "0",
+      "for",
+      "if",
+      "num",
+      "1",
+      "counter"
     ],
     "answer": [
       "while",
-      "(divisor > 0)"
+      "divisor",
+      "0"
     ],
     "type": "order"
   },
@@ -340,14 +423,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the while loop with switch statement:\n\n```dart\nvoid main() {\n  int choice = 1;\n  %order% %order%%order% %order% %order% {\n    switch (choice) {\n      case 1:\n        print('Option 1');\n        choice++;\n        break;\n      case 2:\n        print('Option 2');\n        choice++;\n        break;\n      default:\n        choice = 0;\n    }\n  }\n}\n```",
+    "question": "Complete the while loop with switch statement:\n\n```dart\nvoid main() {\n  int choice = 1;\n  %order% (%order% > %order%) {\n    switch (choice) {\n      case 1:\n        print('Option 1');\n        choice++;\n        break;\n      case 2:\n        print('Option 2');\n        choice++;\n        break;\n      default:\n        choice = 0;\n    }\n  }\n}\n```",
     "options": [
       "while",
-      "(choice > 0)"
+      "choice",
+      "0",
+      "for",
+      "if",
+      "option",
+      "1",
+      "selection"
     ],
     "answer": [
       "while",
-      "(choice > 0)"
+      "choice",
+      "0"
     ],
     "type": "order"
   },
@@ -368,16 +458,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the final while loop structure:\n\n```dart\nvoid main() {\n  int finalCounter = 0;\n  %order% %order%%order% %order% %order% %order%\n    print('Final count: $finalCounter');\n    finalCounter++;\n  %order%\n  print('Finished!');\n}\n```",
+    "question": "Complete the final while loop structure:\n\n```dart\nvoid main() {\n  int finalCounter = 0;\n  %order% (%order% < %order%) %order%\n    print('Final count: $finalCounter');\n    finalCounter++;\n  %order%\n  print('Finished!');\n}\n```",
     "options": [
       "while",
-      "(finalCounter < 3)",
-      "{"
+      "finalCounter",
+      "3",
+      "{",
+      "}",
+      "for",
+      "if",
+      "counter"
     ],
     "answer": [
       "while",
-      "(finalCounter < 3)",
-      "{"
+      "finalCounter",
+      "3",
+      "{",
+      "}"
     ],
     "type": "order"
   }

@@ -2,7 +2,10 @@
   {
     "question": "Complete the mixin declaration:\n\n```dart\n%order% CanFly {\n  void fly() {\n    print('Flying high in the sky! ☁️🛩️');\n  }\n}\n```",
     "options": [
-      "mixin"
+      "mixin",
+      "class",
+      "abstract",
+      "interface"
     ],
     "answer": [
       "mixin"
@@ -28,7 +31,10 @@
   {
     "question": "Complete the class using a mixin:\n\n```dart\nmixin CanFly {\n  void fly() {\n    print('Flying!');\n  }\n}\n\nclass SuperDog extends Dog %order% CanFly {\n  void bark() {\n    print('Super woof!');\n  }\n}\n```",
     "options": [
-      "with"
+      "with",
+      "implements",
+      "extends",
+      "uses"
     ],
     "answer": [
       "with"
@@ -54,7 +60,10 @@
   {
     "question": "Complete the multiple mixin usage:\n\n```dart\nmixin CanFly {\n  void fly() => print('Flying');\n}\n\nmixin CanSwim {\n  void swim() => print('Swimming');\n}\n\nclass Duck %order% CanFly, CanSwim {\n  void quack() => print('Quack');\n}\n```",
     "options": [
-      "with"
+      "with",
+      "implements",
+      "extends",
+      "using"
     ],
     "answer": [
       "with"
@@ -80,7 +89,10 @@
   {
     "question": "Complete the mixin with properties:\n\n```dart\nmixin HasEngine {\n  %order% horsePower = 100;\n  \n  void startEngine() {\n    print('Engine with $horsePower HP started!');\n  }\n}\n```",
     "options": [
-      "int"
+      "int",
+      "String",
+      "double",
+      "bool"
     ],
     "answer": [
       "int"
@@ -106,7 +118,10 @@
   {
     "question": "Complete the mixin with abstract method:\n\n```dart\nmixin Drawable {\n  %order% draw();\n  \n  void prepare() {\n    print('Preparing to draw');\n    draw();\n  }\n}\n```",
     "options": [
-      "void"
+      "void",
+      "String",
+      "int",
+      "bool"
     ],
     "answer": [
       "void"
@@ -132,7 +147,10 @@
   {
     "question": "Complete the mixin with constructor-like initialization:\n\n```dart\nmixin Initializable {\n  bool _initialized = false;\n  \n  %order% init() {\n    if (!_initialized) {\n      print('Initializing...');\n      _initialized = true;\n    }\n  }\n}\n```",
     "options": [
-      "void"
+      "void",
+      "String",
+      "bool",
+      "int"
     ],
     "answer": [
       "void"
@@ -159,7 +177,9 @@
     "question": "Complete the inheritance with mixin:\n\n```dart\nclass Animal {\n  void breathe() {\n    print('Breathing');\n  }\n}\n\nmixin CanFly {\n  void fly() {\n    print('Flying');\n  }\n}\n\nclass Bird %order% Animal %order% CanFly {\n  void chirp() {\n    print('Chirping');\n  }\n}\n```",
     "options": [
       "extends",
-      "with"
+      "with",
+      "implements",
+      "using"
     ],
     "answer": [
       "extends",
@@ -186,7 +206,10 @@
   {
     "question": "Complete the mixin order:\n\n```dart\nmixin A {\n  void test() => print('A');\n}\n\nmixin B {\n  void test() => print('B');\n}\n\nclass MyClass %order% A, B {\n  // Which test() method will be used?\n}\n```",
     "options": [
-      "with"
+      "with",
+      "implements",
+      "extends",
+      "using"
     ],
     "answer": [
       "with"
@@ -212,7 +235,10 @@
   {
     "question": "Complete the mixin with super call:\n\n```dart\nmixin Base {\n  void work() {\n    print('Base work');\n  }\n}\n\nmixin Enhanced {\n  void work() {\n    %order%.work();\n    print('Enhanced work');\n  }\n}\n```",
     "options": [
-      "super"
+      "super",
+      "this",
+      "base",
+      "parent"
     ],
     "answer": [
       "super"
@@ -238,7 +264,10 @@
   {
     "question": "Complete the mixin restriction:\n\n```dart\nmixin CanFly %order% Bird {\n  void fly() {\n    print('Flying like a bird');\n  }\n}\n\nclass Bird {\n  void chirp() => print('Chirp');\n}\n\nclass Eagle extends Bird with CanFly {\n}\n```",
     "options": [
-      "on"
+      "on",
+      "extends",
+      "with",
+      "implements"
     ],
     "answer": [
       "on"
@@ -264,7 +293,10 @@
   {
     "question": "Complete the mixin with getter:\n\n```dart\nmixin Measurable {\n  double width = 0.0;\n  double height = 0.0;\n  \n  %order% get area => width * height;\n}\n```",
     "options": [
-      "double"
+      "double",
+      "int",
+      "String",
+      "bool"
     ],
     "answer": [
       "double"
@@ -291,7 +323,9 @@
     "question": "Complete the mixin with setter:\n\n```dart\nmixin Configurable {\n  String _config = 'default';\n  \n  String get config => _config;\n  \n  %order% config(%order% value) {\n    _config = value;\n    print('Config set to: $value');\n  }\n}\n```",
     "options": [
       "set",
-      "String"
+      "String",
+      "void",
+      "get"
     ],
     "answer": [
       "set",
@@ -320,8 +354,9 @@
     "options": [
       "static",
       "const",
-      "static",
-      "double"
+      "double",
+      "final",
+      "var"
     ],
     "answer": [
       "static",
@@ -350,7 +385,10 @@
   {
     "question": "Complete the mixin with private members:\n\n```dart\nmixin Secure {\n  String %order% = 'secret123';\n  \n  void showPublic() {\n    print('Public info');\n  }\n  \n  void _showPrivate() {\n    print('Private: $_password');\n  }\n}\n```",
     "options": [
-      "_password"
+      "_password",
+      "password",
+      "_secret",
+      "secret"
     ],
     "answer": [
       "_password"
@@ -376,7 +414,10 @@
   {
     "question": "Complete the mixin implements interface:\n\n```dart\nabstract class Drawable {\n  void draw();\n}\n\nmixin CircleMixin %order% Drawable {\n  @override\n  void draw() {\n    print('Drawing a circle');\n  }\n}\n```",
     "options": [
-      "implements"
+      "implements",
+      "extends",
+      "with",
+      "on"
     ],
     "answer": [
       "implements"
@@ -403,7 +444,9 @@
     "question": "Complete the mixin composition chain:\n\n```dart\nmixin A {\n  void methodA() => print('A');\n}\n\nmixin B %order% A {\n  void methodB() {\n    methodA();\n    print('B');\n  }\n}\n\nclass MyClass %order% B {\n}\n```",
     "options": [
       "with",
-      "with"
+      "extends",
+      "implements",
+      "on"
     ],
     "answer": [
       "with",
@@ -430,7 +473,10 @@
   {
     "question": "Complete the mixin factory pattern:\n\n```dart\nmixin Creatable {\n  %order% create(String type) {\n    switch (type) {\n      case 'A':\n        return ClassA();\n      case 'B':\n        return ClassB();\n      default:\n        return null;\n    }\n  }\n}\n```",
     "options": [
-      "dynamic"
+      "dynamic",
+      "Object",
+      "String",
+      "int"
     ],
     "answer": [
       "dynamic"
@@ -458,7 +504,10 @@
     "options": [
       "SuperPowers",
       "attack",
-      "levelUp"
+      "levelUp",
+      "HeroPowers",
+      "defend",
+      "upgrade"
     ],
     "answer": [
       "SuperPowers",

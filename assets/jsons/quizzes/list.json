@@ -1,14 +1,5 @@
 [
-  {
-    "question": "Complete the list declaration:\n\n```dart\nvoid main() {\n  %order%%order%%order% numbers = [1, 2, 3];\n  print(numbers);\n}\n```",
-    "options": [
-      "List<int>"
-    ],
-    "answer": [
-      "List<int>"
-    ],
-    "type": "order"
-  },
+  
   {
     "question": "What will this code output?\n\n```dart\nvoid main() {\n  List<String> fruits = ['apple', 'banana', 'orange'];\n  print(fruits[1]);\n}\n```",
     "options": [

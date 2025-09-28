@@ -2,7 +2,10 @@
   {
     "question": "Complete the inheritance syntax:\n\n```dart\nclass SuperKid %order% SuperDad {\n  void play() {\n    print('Playing with toys 🧸');\n  }\n}\n```",
     "options": [
-      "extends"
+      "extends",
+      "implements",
+      "with",
+      "from"
     ],
     "answer": [
       "extends"
@@ -28,7 +31,10 @@
   {
     "question": "Complete the parent class:\n\n```dart\nclass %order% {\n  void fly() {\n    print('Flying high in the sky! ☁️');\n  }\n  \n  void savePeople() {\n    print('Saving people from danger! 🛡️');\n  }\n}\n```",
     "options": [
-      "SuperDad"
+      "SuperDad",
+      "SuperMom",
+      "SuperHero",
+      "SuperPerson"
     ],
     "answer": [
       "SuperDad"
@@ -56,7 +62,10 @@
     "options": [
       "Dog",
       "extends",
-      "Animal"
+      "Animal",
+      "Cat",
+      "implements",
+      "Bird"
     ],
     "answer": [
       "Dog",
@@ -84,7 +93,10 @@
   {
     "question": "Complete the method override:\n\n```dart\nclass SuperDad {\n  void fly() {\n    print('Flying normally');\n  }\n}\n\nclass SuperKid extends SuperDad {\n  %order%\n  void fly() {\n    print('Zooming through the sky! 🛩️');\n  }\n}\n```",
     "options": [
-      "@override"
+      "@override",
+      "@deprecated",
+      "@required",
+      "@immutable"
     ],
     "answer": [
       "@override"
@@ -110,7 +122,10 @@
   {
     "question": "Complete the constructor inheritance:\n\n```dart\nclass Animal {\n  String name;\n  Animal(this.name);\n}\n\nclass Dog extends Animal {\n  String breed;\n  \n  Dog(String name, this.breed) : %order%(name);\n}\n```",
     "options": [
-      "super"
+      "super",
+      "this",
+      "parent",
+      "base"
     ],
     "answer": [
       "super"
@@ -137,7 +152,9 @@
     "question": "Complete the multilevel inheritance:\n\n```dart\nclass Grandparent {\n  void wisdom() {\n    print('Life advice from grandparent');\n  }\n}\n\nclass Parent %order% Grandparent {\n  void care() {\n    print('Caring from parent');\n  }\n}\n\nclass Child %order% Parent {\n  void play() {\n    print('Playing as a child');\n  }\n}\n```",
     "options": [
       "extends",
-      "extends"
+      "implements",
+      "with",
+      "from"
     ],
     "answer": [
       "extends",
@@ -164,7 +181,10 @@
   {
     "question": "Complete the protected member access:\n\n```dart\nclass BankAccount {\n  double _balance = 1000.0;\n  \n  double get balance => _balance;\n}\n\nclass SavingsAccount %order% BankAccount {\n  void addInterest() {\n    _balance += _balance * 0.05;\n  }\n}\n```",
     "options": [
-      "extends"
+      "extends",
+      "implements",
+      "with",
+      "inherits"
     ],
     "answer": [
       "extends"
@@ -190,7 +210,10 @@
   {
     "question": "Complete the method chaining with super:\n\n```dart\nclass Animal {\n  void eat() {\n    print('Animal is eating');\n  }\n}\n\nclass Dog extends Animal {\n  @override\n  void eat() {\n    %order%.eat();\n    print('Dog is eating dog food');\n  }\n}\n```",
     "options": [
-      "super"
+      "super",
+      "this",
+      "parent",
+      "base"
     ],
     "answer": [
       "super"
@@ -198,25 +221,12 @@
     "type": "order"
   },
   {
-    "question": "What will this super method call output?\n\n```dart\nclass Parent {\n  void greet() {\n    print('Hello from parent');\n  }\n}\n\nclass Child extends Parent {\n  @override\n  void greet() {\n    super.greet();\n    print('Hello from child');\n  }\n}\n\nvoid main() {\n  Child child = Child();\n  child.greet();\n}\n```",
-    "options": [
-      "Hello from parent\\nHello from child",
-      "Hello from child\\nHello from parent",
-      "Hello from child",
-      "Error"
-    ],
-    "answer": ["Hello from parent\\nHello from child"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the super method call:\n\n```dart\nclass Vehicle {\n  void start() {\n    print('Vehicle engine starting');\n  }\n}\n\nclass Car extends Vehicle {\n  @override\n  void start() {\n    %fill%.start();\n    print('Car is ready to drive');\n  }\n}\n```",
-    "answer": ["super"],
-    "type": "fill"
-  },
-  {
     "question": "Complete the abstract inheritance:\n\n```dart\nabstract class Shape {\n  void draw();\n}\n\nclass Circle %order% Shape {\n  @override\n  void draw() {\n    print('Drawing a circle');\n  }\n}\n```",
     "options": [
-      "extends"
+      "extends",
+      "implements",
+      "with",
+      "inherits"
     ],
     "answer": [
       "extends"
@@ -242,7 +252,10 @@
   {
     "question": "Complete the interface implementation:\n\n```dart\nclass Flyable {\n  void fly() {\n    print('Can fly');\n  }\n}\n\nclass Bird %order% Flyable {\n  @override\n  void fly() {\n    print('Bird is flying');\n  }\n}\n```",
     "options": [
-      "implements"
+      "implements",
+      "extends",
+      "with",
+      "inherits"
     ],
     "answer": [
       "implements"
@@ -268,7 +281,10 @@
   {
     "question": "Complete the multiple inheritance with mixins:\n\n```dart\nmixin Flyable {\n  void fly() => print('Flying');\n}\n\nmixin Swimmable {\n  void swim() => print('Swimming');\n}\n\nclass Duck %order% Flyable, Swimmable {\n  void quack() => print('Quack');\n}\n```",
     "options": [
-      "with"
+      "with",
+      "implements",
+      "extends",
+      "uses"
     ],
     "answer": [
       "with"
@@ -294,7 +310,10 @@
   {
     "question": "Complete the polymorphism example:\n\n```dart\nclass Animal {\n  void makeSound() {\n    print('Some sound');\n  }\n}\n\nclass Dog extends Animal {\n  @override\n  void makeSound() {\n    print('Woof!');\n  }\n}\n\nvoid main() {\n  %order% animal = Dog();\n  animal.makeSound();\n}\n```",
     "options": [
-      "Animal"
+      "Animal",
+      "Dog",
+      "Object",
+      "dynamic"
     ],
     "answer": [
       "Animal"
@@ -321,7 +340,9 @@
     "question": "Complete the inheritance with properties:\n\n```dart\nclass Person {\n  String %order%;\n  int %order%;\n  \n  Person(this.name, this.age);\n}\n\nclass Student extends Person {\n  String school;\n  \n  Student(String name, int age, this.school) : super(name, age);\n}\n```",
     "options": [
       "name",
-      "age"
+      "age",
+      "id",
+      "email"
     ],
     "answer": [
       "name",
@@ -348,7 +369,10 @@
   {
     "question": "Complete the getter inheritance:\n\n```dart\nclass Rectangle {\n  double width = 5.0;\n  double height = 3.0;\n  \n  double get area => width * height;\n}\n\nclass Square %order% Rectangle {\n  Square(double side) {\n    width = side;\n    height = side;\n  }\n}\n```",
     "options": [
-      "extends"
+      "extends",
+      "implements",
+      "with",
+      "inherits"
     ],
     "answer": [
       "extends"
@@ -374,7 +398,10 @@
   {
     "question": "Complete the setter inheritance:\n\n```dart\nclass Temperature {\n  double _celsius = 0.0;\n  \n  set celsius(double value) {\n    _celsius = value;\n  }\n}\n\nclass Thermometer %order% Temperature {\n  void setTemperature(double temp) {\n    celsius = temp;\n  }\n}\n```",
     "options": [
-      "extends"
+      "extends",
+      "implements",
+      "with",
+      "inherits"
     ],
     "answer": [
       "extends"
@@ -400,7 +427,10 @@
   {
     "question": "Complete the final class restriction:\n\n```dart\n%order% class SealedClass {\n  void doSomething() {\n    print('Doing something');\n  }\n}\n\n// This will cause an error:\n// class ChildClass extends SealedClass { }\n```",
     "options": [
-      "final"
+      "final",
+      "sealed",
+      "abstract",
+      "static"
     ],
     "answer": [
       "final"
@@ -427,7 +457,9 @@
     "question": "Complete the is-a relationship check:\n\n```dart\nclass Animal { }\nclass Dog extends Animal { }\n\nvoid main() {\n  Dog dog = Dog();\n  \n  %order% (dog %order% Animal) {\n    print('Dog is an Animal');\n  }\n}\n```",
     "options": [
       "if",
-      "is"
+      "is",
+      "while",
+      "as"
     ],
     "answer": [
       "if",
@@ -456,7 +488,8 @@
     "options": [
       "animal",
       "as",
-      "Dog"
+      "Dog",
+      "this"
     ],
     "answer": [
       "animal",
@@ -484,7 +517,10 @@
   {
     "question": "Complete the inheritance best practices:\n\n```dart\nclass BankAccount {\n  double _balance;\n  \n  BankAccount(this._balance);\n  \n  %order% double get balance => _balance;\n}\n\nclass SavingsAccount extends BankAccount {\n  SavingsAccount(double initialBalance) : super(initialBalance);\n}\n```",
     "options": [
-      "double"
+      "double",
+      "int",
+      "String",
+      "bool"
     ],
     "answer": [
       "double"
@@ -511,7 +547,9 @@
     "question": "Complete the final inheritance example:\n\n```dart\nclass %order% {\n  String name;\n  SuperHero(this.name);\n  \n  void usePower() {\n    print('$name uses superpowers!');\n  }\n}\n\nclass %order% extends SuperHero {\n  FlyingHero(String name) : super(name);\n  \n  @override\n  void usePower() {\n    super.usePower();\n    print('$name flies through the sky! ✈️');\n  }\n}\n```",
     "options": [
       "SuperHero",
-      "FlyingHero"
+      "FlyingHero",
+      "Hero",
+      "PowerHero"
     ],
     "answer": [
       "SuperHero",
@@ -520,3 +558,4 @@
     "type": "order"
   }
 ]
+  

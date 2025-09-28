@@ -121,7 +121,8 @@
     "question": "Complete the exception testing:\n\n```dart\ntest('Test exception throwing', () {\n  expect(%order% => divide(10, 0), %order%);\n});\n```",
     "options": [
       "()",
-      "throwsException"
+      "throwsException",
+      "equals"
     ],
     "answer": [
       "()",
@@ -178,7 +179,9 @@
   {
     "question": "Complete the setUp function for test preparation:\n\n```dart\ngroup('List tests', () {\n  List<int>? numbers;\n  \n  %order%(() {\n    numbers = [1, 2, 3];\n  });\n  \n  test('Test list length', () {\n    expect(numbers!.length, equals(3));\n  });\n});\n```",
     "options": [
-      "setUp"
+      "setUp",
+      "tearDown",
+      "group"
     ],
     "answer": [
       "setUp"
@@ -205,7 +208,8 @@
     "question": "Complete the matcher for checking types:\n\n```dart\ntest('Test object type', () {\n  var result = createObject();\n  expect(result, %order%<%order%>());\n});\n```",
     "options": [
       "isA",
-      "String"
+      "String",
+      "equals"
     ],
     "answer": [
       "isA",
@@ -263,7 +267,8 @@
     "question": "Complete the numeric range test:\n\n```dart\ntest('Test number in range', () {\n  double temperature = 23.5;\n  expect(temperature, %order%(20, 30));\n  expect(temperature, %order%(0));\n});\n```",
     "options": [
       "inInclusiveRange",
-      "greaterThan"
+      "greaterThan",
+      "lessThan"
     ],
     "answer": [
       "inInclusiveRange",
@@ -321,7 +326,8 @@
     "question": "Complete the async test structure:\n\n```dart\ntest('Test async function', () %order% {\n  String result = %order% fetchData();\n  expect(result, equals('data'));\n});\n```",
     "options": [
       "async",
-      "await"
+      "await",
+      "sync"
     ],
     "answer": [
       "async",
@@ -348,7 +354,9 @@
   {
     "question": "Complete the Future testing with completion:\n\n```dart\ntest('Test future completes', () {\n  Future<String> future = loadData();\n  expect(future, %order%);\n});\n```",
     "options": [
-      "completes"
+      "completes",
+      "throwsException",
+      "equals"
     ],
     "answer": [
       "completes"
@@ -376,7 +384,8 @@
     "options": [
       "MockCalculator",
       "extends",
-      "implements"
+      "implements",
+      "with"
     ],
     "answer": [
       "MockCalculator",
@@ -406,7 +415,8 @@
     "options": [
       "Calculator",
       "return sum",
-      "adding two numbers"
+      "adding two numbers",
+      "User"
     ],
     "answer": [
       "Calculator",
@@ -435,7 +445,8 @@
     "question": "Complete the test isolation pattern:\n\n```dart\ngroup('Calculator tests', () {\n  Calculator? calculator;\n  \n  setUp(() {\n    calculator = %order%();\n  });\n  \n  tearDown(() {\n    calculator = %order%;\n  });\n});\n```",
     "options": [
       "Calculator",
-      "null"
+      "null",
+      "TestCalculator"
     ],
     "answer": [
       "Calculator",
@@ -462,7 +473,9 @@
   {
     "question": "Complete the parameterized testing approach:\n\n```dart\ngroup('Addition tests', () {\n  var testCases = [\n    {'a': 1, 'b': 2, 'expected': 3},\n    {'a': 0, 'b': 0, 'expected': 0},\n    {'a': -1, 'b': 1, 'expected': 0},\n  ];\n  \n  for (var testCase in testCases) {\n    test('${testCase['a']} + ${testCase['b']} = ${testCase['expected']}', () {\n      expect(add(testCase['a']!, testCase['b']!), equals(testCase['%order%']));\n    });\n  }\n});\n```",
     "options": [
-      "expected"
+      "expected",
+      "actual",
+      "result"
     ],
     "answer": [
       "expected"
@@ -488,7 +501,9 @@
   {
     "question": "Complete the test coverage example:\n\n```dart\nint divide(int a, int b) {\n  if (b == 0) {\n    throw ArgumentError('Division by zero');\n  }\n  return a ~/ b;\n}\n\n// Tests needed for full coverage:\ntest('Normal division', () => expect(divide(10, 2), equals(5)));\ntest('Division by zero', () => expect(() => divide(10, 0), %order%));\n```",
     "options": [
-      "throwsArgumentError"
+      "throwsArgumentError",
+      "equals",
+      "isTrue"
     ],
     "answer": [
       "throwsArgumentError"

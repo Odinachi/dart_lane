@@ -4,7 +4,12 @@
     "options": [
       "String",
       "get",
-      "toy"
+      "toy",
+      "int",
+      "set",
+      "double",
+      "item",
+      "value"
     ],
     "answer": [
       "String",
@@ -34,7 +39,12 @@
     "options": [
       "set",
       "toy",
-      "String"
+      "String",
+      "get",
+      "int",
+      "double",
+      "item",
+      "value"
     ],
     "answer": [
       "set",
@@ -64,7 +74,12 @@
     "options": [
       "double",
       "get",
-      "set"
+      "set",
+      "int",
+      "String",
+      "bool",
+      "void",
+      "final"
     ],
     "answer": [
       "double",
@@ -94,7 +109,12 @@
     "options": [
       "double",
       "get",
-      "area"
+      "area",
+      "int",
+      "String",
+      "perimeter",
+      "size",
+      "volume"
     ],
     "answer": [
       "double",
@@ -124,7 +144,12 @@
     "options": [
       "set",
       "int",
-      "if"
+      "if",
+      "get",
+      "double",
+      "while",
+      "for",
+      "switch"
     ],
     "answer": [
       "set",
@@ -154,7 +179,12 @@
     "options": [
       "double",
       "get",
-      "=>"
+      "=>",
+      "int",
+      "String",
+      "=",
+      "set",
+      "perimeter"
     ],
     "answer": [
       "double",
@@ -184,7 +214,12 @@
     "options": [
       "set",
       "celsius",
-      "=>"
+      "=>",
+      "get",
+      "=",
+      "fahrenheit",
+      "kelvin",
+      "temp"
     ],
     "answer": [
       "set",
@@ -214,7 +249,12 @@
     "options": [
       "String",
       "get",
-      "model"
+      "model",
+      "int",
+      "set",
+      "brand",
+      "name",
+      "type"
     ],
     "answer": [
       "String",
@@ -244,7 +284,12 @@
     "options": [
       "String",
       "get",
-      "toUpperCase"
+      "toUpperCase",
+      "int",
+      "set",
+      "toLowerCase",
+      "trim",
+      "substring"
     ],
     "answer": [
       "String",
@@ -259,7 +304,11 @@
       "set",
       "name",
       "trim",
-      "toLowerCase"
+      "toLowerCase",
+      "get",
+      "toUpperCase",
+      "substring",
+      "split"
     ],
     "answer": [
       "set",
@@ -274,7 +323,12 @@
     "options": [
       "double",
       "get",
-      "salary"
+      "salary",
+      "int",
+      "String",
+      "wage",
+      "pay",
+      "income"
     ],
     "answer": [
       "double",
@@ -304,7 +358,12 @@
     "options": [
       "double",
       "get",
-      "result"
+      "result",
+      "int",
+      "String",
+      "value",
+      "output",
+      "data"
     ],
     "answer": [
       "double",
@@ -334,7 +393,12 @@
     "options": [
       "double",
       "get",
-      "set"
+      "set",
+      "int",
+      "String",
+      "bool",
+      "final",
+      "const"
     ],
     "answer": [
       "double",
@@ -364,7 +428,12 @@
     "options": [
       "bool",
       "get",
-      "isOn"
+      "isOn",
+      "int",
+      "String",
+      "state",
+      "status",
+      "active"
     ],
     "answer": [
       "bool",
@@ -383,7 +452,12 @@
     "options": [
       "List",
       "String",
-      "get"
+      "get",
+      "Set",
+      "int",
+      "double",
+      "products",
+      "data"
     ],
     "answer": [
       "List",
@@ -414,7 +488,11 @@
       "Map",
       "String",
       "int",
-      "get"
+      "get",
+      "double",
+      "bool",
+      "scores",
+      "marks"
     ],
     "answer": [
       "Map",
@@ -445,7 +523,12 @@
     "options": [
       "Database",
       "get",
-      "database"
+      "database",
+      "Connection",
+      "Object",
+      "String",
+      "connection",
+      "db"
     ],
     "answer": [
       "Database",
@@ -475,7 +558,12 @@
     "options": [
       "set",
       "age",
-      "throw"
+      "throw",
+      "get",
+      "return",
+      "print",
+      "assert",
+      "error"
     ],
     "answer": [
       "set",
@@ -489,7 +577,12 @@
     "options": [
       "static",
       "int",
-      "get"
+      "get",
+      "final",
+      "const",
+      "double",
+      "value",
+      "number"
     ],
     "answer": [
       "static",
@@ -521,7 +614,10 @@
       "get",
       "set",
       "get",
-      "set"
+      "set",
+      "Player",
+      "Character",
+      "final"
     ],
     "answer": [
       "GameHero",

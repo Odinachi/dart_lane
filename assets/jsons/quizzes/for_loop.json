@@ -1,14 +1,22 @@
 [
   {
-    "question": "Complete the for loop to print numbers 0 to 4:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print(i);\n  }\n}\n```",
+    "question": "Complete the for loop to print numbers 0 to 4:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% < %order%; %order%) {\n    print(i);\n  }\n}\n```",
     "options": [
-      "int i = 0;",
-      "i < 5;",
-      "i++"
+      "int",
+      "i",
+      "0",
+      "5",
+      "i++",
+      "var",
+      "j",
+      "1"
     ],
     "answer": [
-      "int i = 0;",
-      "i < 5;",
+      "int",
+      "i",
+      "0",
+      "i",
+      "5",
       "i++"
     ],
     "type": "order"
@@ -32,15 +40,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the countdown for loop from 5 to 1:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Countdown: $i 🚀');\n  }\n}\n```",
+    "question": "Complete the countdown for loop from 5 to 1:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% > %order%; %order%) {\n    print('Countdown: $i 🚀');\n  }\n}\n```",
     "options": [
-      "int i = 5;",
-      "i > 0;",
-      "i--"
+      "int",
+      "i",
+      "5",
+      "0",
+      "i--",
+      "var",
+      "j",
+      "1"
     ],
     "answer": [
-      "int i = 5;",
-      "i > 0;",
+      "int",
+      "i",
+      "5",
+      "i",
+      "0",
       "i--"
     ],
     "type": "order"
@@ -64,15 +80,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the for loop to give out 4 cupcakes:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Giving cupcake number $i 🧁');\n  }\n}\n```",
+    "question": "Complete the for loop to give out 4 cupcakes:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% <= %order%; %order%) {\n    print('Giving cupcake number $i 🧁');\n  }\n}\n```",
     "options": [
-      "int i = 1;",
-      "i <= 4;",
-      "i++"
+      "int",
+      "i",
+      "1",
+      "4",
+      "i++",
+      "var",
+      "j",
+      "0"
     ],
     "answer": [
-      "int i = 1;",
-      "i <= 4;",
+      "int",
+      "i",
+      "1",
+      "i",
+      "4",
       "i++"
     ],
     "type": "order"
@@ -96,17 +120,24 @@
     "type": "fill"
   },
   {
-    "question": "Complete the for loop syntax:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order% %order% %order% %order%) {\n    print('Hello');\n  }\n}\n```",
+    "question": "Complete the for loop syntax:\n\n```dart\nvoid main() {\n  %order%(%order% %order% = %order%; %order% < %order%; %order%) {\n    print('Hello');\n  }\n}\n```",
     "options": [
       "for",
-      "int i = 0;",
-      "i < 3;",
-      "i++"
+      "int",
+      "i",
+      "0",
+      "3",
+      "i++",
+      "while",
+      "var"
     ],
     "answer": [
       "for",
-      "int i = 0;",
-      "i < 3;",
+      "int",
+      "i",
+      "0",
+      "i",
+      "3",
       "i++"
     ],
     "type": "order"
@@ -130,15 +161,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the loop to print stars from 1 to 5:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Star ${i} ⭐');\n  }\n}\n```",
+    "question": "Complete the loop to print stars from 1 to 5:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% <= %order%; %order%) {\n    print('Star ${i} ⭐');\n  }\n}\n```",
     "options": [
-      "int i = 1;",
-      "i <= 5;",
-      "i++"
+      "int",
+      "i",
+      "1",
+      "5",
+      "i++",
+      "var",
+      "j",
+      "0"
     ],
     "answer": [
-      "int i = 1;",
-      "i <= 5;",
+      "int",
+      "i",
+      "1",
+      "i",
+      "5",
       "i++"
     ],
     "type": "order"
@@ -162,15 +201,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the countdown from 10 to 8:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Count: $i');\n  }\n}\n```",
+    "question": "Complete the countdown from 10 to 8:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% >= %order%; %order%) {\n    print('Count: $i');\n  }\n}\n```",
     "options": [
-      "int i = 10;",
-      "i >= 8;",
-      "i--"
+      "int",
+      "i",
+      "10",
+      "8",
+      "i--",
+      "var",
+      "j",
+      "5"
     ],
     "answer": [
-      "int i = 10;",
-      "i >= 8;",
+      "int",
+      "i",
+      "10",
+      "i",
+      "8",
       "i--"
     ],
     "type": "order"
@@ -194,15 +241,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the loop to count from 2 to 4:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Count: $i');\n  }\n}\n```",
+    "question": "Complete the loop to count from 2 to 4:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% <= %order%; %order%) {\n    print('Count: $i');\n  }\n}\n```",
     "options": [
-      "int i = 2;",
-      "i <= 4;",
-      "i++"
+      "int",
+      "i",
+      "2",
+      "4",
+      "i++",
+      "var",
+      "j",
+      "1"
     ],
     "answer": [
-      "int i = 2;",
-      "i <= 4;",
+      "int",
+      "i",
+      "2",
+      "i",
+      "4",
       "i++"
     ],
     "type": "order"
@@ -226,19 +281,25 @@
     "type": "fill"
   },
   {
-    "question": "Complete the for loop structure:\n\n```dart\nvoid main() {\n  %order% (%order% %order% %order% %order% %order% %order%) %order%\n    print('Hello World');\n  %order%\n}\n```",
+    "question": "Complete the for loop structure:\n\n```dart\nvoid main() {\n  %order% (%order% %order% = %order%; %order% < %order%; %order%) %order%\n    print('Hello World');\n  %order%\n}\n```",
     "options": [
       "for",
-      "int i = 0;",
-      "i < 1;",
+      "int",
+      "i",
+      "0",
+      "1",
       "i++",
       "{",
-      "}"
+      "}",
+      "while"
     ],
     "answer": [
       "for",
-      "int i = 0;",
-      "i < 1;",
+      "int",
+      "i",
+      "0",
+      "i",
+      "1",
       "i++",
       "{",
       "}"
@@ -264,15 +325,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the loop to print 'Hello' 4 times:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Hello');\n  }\n}\n```",
+    "question": "Complete the loop to print 'Hello' 4 times:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% < %order%; %order%) {\n    print('Hello');\n  }\n}\n```",
     "options": [
-      "int i = 0;",
-      "i < 4;",
-      "i++"
+      "int",
+      "i",
+      "0",
+      "4",
+      "i++",
+      "var",
+      "j",
+      "1"
     ],
     "answer": [
-      "int i = 0;",
-      "i < 4;",
+      "int",
+      "i",
+      "0",
+      "i",
+      "4",
       "i++"
     ],
     "type": "order"
@@ -296,15 +365,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the loop to countdown from 4 to 1:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Countdown: $i');\n  }\n}\n```",
+    "question": "Complete the loop to countdown from 4 to 1:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% >= %order%; %order%) {\n    print('Countdown: $i');\n  }\n}\n```",
     "options": [
-      "int i = 4;",
-      "i >= 1;",
-      "i--"
+      "int",
+      "i",
+      "4",
+      "1",
+      "i--",
+      "var",
+      "j",
+      "0"
     ],
     "answer": [
-      "int i = 4;",
-      "i >= 1;",
+      "int",
+      "i",
+      "4",
+      "i",
+      "1",
       "i--"
     ],
     "type": "order"
@@ -328,15 +405,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the loop to print numbers 10, 9, 8:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Number: $i');\n  }\n}\n```",
+    "question": "Complete the loop to print numbers 10, 9, 8:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% >= %order%; %order%) {\n    print('Number: $i');\n  }\n}\n```",
     "options": [
-      "int i = 10;",
-      "i >= 8;",
-      "i--"
+      "int",
+      "i",
+      "10",
+      "8",
+      "i--",
+      "var",
+      "j",
+      "5"
     ],
     "answer": [
-      "int i = 10;",
-      "i >= 8;",
+      "int",
+      "i",
+      "10",
+      "i",
+      "8",
       "i--"
     ],
     "type": "order"
@@ -360,17 +445,24 @@
     "type": "fill"
   },
   {
-    "question": "Complete the basic for loop syntax:\n\n```dart\nvoid main() {\n  %order%(%order%%order%%order%%order%%order%) {\n    print('Loop');\n  }\n}\n```",
+    "question": "Complete the basic for loop syntax:\n\n```dart\nvoid main() {\n  %order%(%order% %order%=%order%; %order%<%order%; %order%) {\n    print('Loop');\n  }\n}\n```",
     "options": [
       "for",
-      "int i=0;",
-      "i<3;",
-      "i++"
+      "int",
+      "i",
+      "0",
+      "3",
+      "i++",
+      "while",
+      "var"
     ],
     "answer": [
       "for",
-      "int i=0;",
-      "i<3;",
+      "int",
+      "i",
+      "0",
+      "i",
+      "3",
       "i++"
     ],
     "type": "order"
@@ -394,15 +486,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the loop to print 'Star' exactly twice:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Star ⭐');\n  }\n}\n```",
+    "question": "Complete the loop to print 'Star' exactly twice:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% < %order%; %order%) {\n    print('Star ⭐');\n  }\n}\n```",
     "options": [
-      "int i = 0;",
-      "i < 2;",
-      "i++"
+      "int",
+      "i",
+      "0",
+      "2",
+      "i++",
+      "var",
+      "j",
+      "1"
     ],
     "answer": [
-      "int i = 0;",
-      "i < 2;",
+      "int",
+      "i",
+      "0",
+      "i",
+      "2",
       "i++"
     ],
     "type": "order"
@@ -426,15 +526,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the for loop to color 7 stars:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Coloring star ${i + 1} ⭐');\n  }\n}\n```",
+    "question": "Complete the for loop to color 7 stars:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% < %order%; %order%) {\n    print('Coloring star ${i + 1} ⭐');\n  }\n}\n```",
     "options": [
-      "int i = 0;",
-      "i < 7;",
-      "i++"
+      "int",
+      "i",
+      "0",
+      "7",
+      "i++",
+      "var",
+      "j",
+      "1"
     ],
     "answer": [
-      "int i = 0;",
-      "i < 7;",
+      "int",
+      "i",
+      "0",
+      "i",
+      "7",
       "i++"
     ],
     "type": "order"
@@ -458,15 +566,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the loop to give out cupcakes numbered 5, 6, 7:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Cupcake $i 🧁');\n  }\n}\n```",
+    "question": "Complete the loop to give out cupcakes numbered 5, 6, 7:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% <= %order%; %order%) {\n    print('Cupcake $i 🧁');\n  }\n}\n```",
     "options": [
-      "int i = 5;",
-      "i <= 7;",
-      "i++"
+      "int",
+      "i",
+      "5",
+      "7",
+      "i++",
+      "var",
+      "j",
+      "3"
     ],
     "answer": [
-      "int i = 5;",
-      "i <= 7;",
+      "int",
+      "i",
+      "5",
+      "i",
+      "7",
       "i++"
     ],
     "type": "order"
@@ -490,26 +606,31 @@
     "type": "fill"
   },
   {
-    "question": "Complete the syntax for a basic counting loop:\n\n```dart\nvoid main() {\n  %order% %order% %order% %order% %order% %order% %order% %order% %order%\n    print('Counting');\n  %order%\n}\n```",
+    "question": "Complete the syntax for a basic counting loop:\n\n```dart\nvoid main() {\n  %order% %order% %order% %order% = %order%; %order% < %order%; %order% %order% %order%\n    print('Counting');\n  %order%\n}\n```",
     "options": [
       "for",
       "(",
-      "int i = 0;",
-      "i < 3;",
+      "int",
+      "i",
+      "0",
+      "3",
       "i++",
       ")",
       "{",
-      "}"
+      "}",
+      "while"
     ],
     "answer": [
       "for",
       "(",
-      "int i = 0;",
-      "i < 3;",
+      "int",
+      "i",
+      "0",
+      "i",
+      "3",
       "i++",
       ")",
-      "{",
-      "}"
+      "{"
     ],
     "type": "order"
   },
@@ -532,15 +653,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the loop to print 'Hello' 6 times:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Hello');\n  }\n}\n```",
+    "question": "Complete the loop to print 'Hello' 6 times:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% <= %order%; %order%) {\n    print('Hello');\n  }\n}\n```",
     "options": [
-      "int i = 1;",
-      "i <= 6;",
-      "i++"
+      "int",
+      "i",
+      "1",
+      "6",
+      "i++",
+      "var",
+      "j",
+      "0"
     ],
     "answer": [
-      "int i = 1;",
-      "i <= 6;",
+      "int",
+      "i",
+      "1",
+      "i",
+      "6",
       "i++"
     ],
     "type": "order"
@@ -564,15 +693,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the loop to count 8, 7, 6, 5:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Number: $i');\n  }\n}\n```",
+    "question": "Complete the loop to count 8, 7, 6, 5:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% >= %order%; %order%) {\n    print('Number: $i');\n  }\n}\n```",
     "options": [
-      "int i = 8;",
-      "i >= 5;",
-      "i--"
+      "int",
+      "i",
+      "8",
+      "5",
+      "i--",
+      "var",
+      "j",
+      "3"
     ],
     "answer": [
-      "int i = 8;",
-      "i >= 5;",
+      "int",
+      "i",
+      "8",
+      "i",
+      "5",
       "i--"
     ],
     "type": "order"
@@ -596,15 +733,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the for loop to print stars 1, 2, 3, 4:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Star $i ⭐');\n  }\n}\n```",
+    "question": "Complete the for loop to print stars 1, 2, 3, 4:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% <= %order%; %order%) {\n    print('Star $i ⭐');\n  }\n}\n```",
     "options": [
-      "int i = 1;",
-      "i <= 4;",
-      "i++"
+      "int",
+      "i",
+      "1",
+      "4",
+      "i++",
+      "var",
+      "j",
+      "0"
     ],
     "answer": [
-      "int i = 1;",
-      "i <= 4;",
+      "int",
+      "i",
+      "1",
+      "i",
+      "4",
       "i++"
     ],
     "type": "order"
@@ -628,15 +773,23 @@
     "type": "fill"
   },
   {
-    "question": "Complete the countdown from 7 to 4:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Countdown: $i');\n  }\n}\n```",
+    "question": "Complete the countdown from 7 to 4:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% >= %order%; %order%) {\n    print('Countdown: $i');\n  }\n}\n```",
     "options": [
-      "int i = 7;",
-      "i >= 4;",
-      "i--"
+      "int",
+      "i",
+      "7",
+      "4",
+      "i--",
+      "var",
+      "j",
+      "2"
     ],
     "answer": [
-      "int i = 7;",
-      "i >= 4;",
+      "int",
+      "i",
+      "7",
+      "i",
+      "4",
       "i--"
     ],
     "type": "order"
@@ -660,45 +813,47 @@
     "type": "fill"
   },
   {
-    "question": "Complete the loop structure with braces:\n\n```dart\nvoid main() {\n  for (int i = 0; i < 2; i++) %order%\n    print('Inside loop');\n  %order%\n}\n```",
+    "question": "Complete the loop structure with braces:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% < %order%; %order%) %order%\n    print('Inside loop');\n  %order%\n}\n```",
     "options": [
+      "int",
+      "i",
+      "0",
+      "2",
+      "i++",
       "{",
-      "}"
+      "}",
+      "var"
     ],
     "answer": [
+      "int",
+      "i",
+      "0",
+      "i",
+      "2",
+      "i++",
       "{",
       "}"
     ],
     "type": "order"
   },
   {
-    "question": "What happens if we change i++ to i+2?\n\n```dart\nvoid main() {\n  for (int i = 0; i < 6; i+2) {\n    print('Number: $i');\n  }\n}\n```",
+    "question": "Complete the loop to print cupcakes 3, 2, 1:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% >= %order%; %order%) {\n    print('Cupcake $i 🧁');\n  }\n}\n```",
     "options": [
-      "Error - should be i+=2 or i=i+2",
-      "Prints 0, 2, 4",
-      "Prints 0, 1, 2, 3, 4, 5",
-      "Runs forever"
-    ],
-    "answer": ["Error - should be i+=2 or i=i+2"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the comparison operator:\n\n```dart\nvoid main() {\n  for (int i = 1; i %fill% 4; i++) {\n    print('Count: $i');\n  }\n}\n```",
-    "answer": [
-      "<="
-    ],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the loop to print cupcakes 3, 2, 1:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Cupcake $i 🧁');\n  }\n}\n```",
-    "options": [
-      "int i = 3;",
-      "i >= 1;",
-      "i--"
+      "int",
+      "i",
+      "3",
+      "1",
+      "i--",
+      "var",
+      "j",
+      "0"
     ],
     "answer": [
-      "int i = 3;",
-      "i >= 1;",
+      "int",
+      "i",
+      "3",
+      "i",
+      "1",
       "i--"
     ],
     "type": "order"
@@ -722,86 +877,72 @@
     "type": "fill"
   },
   {
-    "question": "Complete the for loop to print 'Rocket' 8 times:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Rocket 🚀');\n  }\n}\n```",
+    "question": "Complete the for loop to print 'Rocket' 8 times:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% < %order%; %order%) {\n    print('Rocket 🚀');\n  }\n}\n```",
     "options": [
-      "int i = 0;",
-      "i < 8;",
-      "i++"
+      "int",
+      "i",
+      "0",
+      "8",
+      "i++",
+      "var",
+      "j",
+      "1"
     ],
     "answer": [
-      "int i = 0;",
-      "i < 8;",
+      "int",
+      "i",
+      "0",
+      "i",
+      "8",
       "i++"
     ],
     "type": "order"
   },
   {
-    "question": "Which loop will print more output?\n\n```dart\n// Loop A\nfor (int i = 0; i <= 5; i++) { print(i); }\n\n// Loop B\nfor (int i = 0; i < 5; i++) { print(i); }\n```",
+    "question": "Complete the loop to count from 6 down to 3:\n\n```dart\nvoid main() {\n  for (%order% %order% = %order%; %order% >= %order%; %order%) {\n    print('Value: $i');\n  }\n}\n```",
     "options": [
-      "Loop A prints more",
-      "Loop B prints more", 
-      "Both print the same",
-      "Neither prints anything"
-    ],
-    "answer": ["Loop A prints more"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the variable name:\n\n```dart\nvoid main() {\n  for (int %fill% = 0; i < 3; i++) {\n    print('Number: $i');\n  }\n}\n```",
-    "answer": [
-      "i"
-    ],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the loop to count from 6 down to 3:\n\n```dart\nvoid main() {\n  for (%order% %order% %order% %order% %order% %order%) {\n    print('Value: $i');\n  }\n}\n```",
-    "options": [
-      "int i = 6;",
-      "i >= 3;",
-      "i--"
+      "int",
+      "i",
+      "6",
+      "3",
+      "i--",
+      "var",
+      "j",
+      "1"
     ],
     "answer": [
-      "int i = 6;",
-      "i >= 3;",
+      "int",
+      "i",
+      "6",
+      "i",
+      "3",
       "i--"
     ],
     "type": "order"
   },
   {
-    "question": "What is the total count of executions?\n\n```dart\nvoid main() {\n  for (int i = 10; i > 5; i--) {\n    print('Count: $i');\n  }\n}\n```",
-    "options": [
-      "5 executions",
-      "4 executions",
-      "6 executions",
-      "Error"
-    ],
-    "answer": ["5 executions"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the parentheses to complete the loop:\n\n```dart\nvoid main() {\n  for %fill%int i = 0; i < 3; i++%fill% {\n    print('Hello');\n  }\n}\n```",
-    "answer": [
-      "("
-    ],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the final for loop with all parts:\n\n```dart\nvoid main() {\n  %order% %order%%order% %order% %order% %order% %order% %order% %order%\n    print('Final loop!');\n  %order%\n}\n```",
+    "question": "Complete the final for loop with all parts:\n\n```dart\nvoid main() {\n  %order% %order%%order% %order% = %order%; %order% < %order%; %order%%order% %order%\n    print('Final loop!');\n  %order%\n}\n```",
     "options": [
       "for",
       "(",
-      "int i = 0;",
-      "i < 1;", 
+      "int",
+      "i",
+      "0",
+      "1",
       "i++",
       ")",
       "{",
-      "}"
+      "}",
+      "while"
     ],
     "answer": [
       "for",
       "(",
-      "int i = 0;",
-      "i < 1;",
+      "int",
+      "i",
+      "0",
+      "i",
+      "1",
       "i++",
       ")",
       "{",

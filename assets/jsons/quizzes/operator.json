@@ -1,18 +1,21 @@
 [
   {
-    "question": "Complete the following Dart code to add two numbers:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to add two numbers:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
+      "2",
+      "+",
+      "3",
+      ";",
       "(",
-      "2 + 3",
       ")",
-      ";"
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "2 + 3",
-      ")",
+      "2",
+      "+",
+      "3",
       ";"
     ],
     "type": "order"
@@ -36,19 +39,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to divide 10 by 2:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to divide 10 by 2:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
+      "10",
+      "/",
+      "2",
+      ";",
       "(",
-      "10 / 2",
       ")",
-      ";"
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "10 / 2",
-      ")",
+      "10",
+      "/",
+      "2",
       ";"
     ],
     "type": "order"
@@ -72,19 +78,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to find the modulo:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to find the modulo:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
+      "7",
+      "%",
+      "2",
+      ";",
       "(",
-      "7 % 2",
       ")",
-      ";"
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "7 % 2",
-      ")",
+      "7",
+      "%",
+      "2",
       ";"
     ],
     "type": "order"
@@ -108,19 +117,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to check if 5 is greater than 3:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to check if 5 is greater than 3:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
+      "5",
+      ">",
+      "3",
+      ";",
       "(",
-      "5 > 3",
       ")",
-      ";"
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "5 > 3",
-      ")",
+      "5",
+      ">",
+      "3",
       ";"
     ],
     "type": "order"
@@ -144,19 +156,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to check if numbers are not equal:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to check if numbers are not equal:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
+      "7",
+      "!=",
+      "5",
+      ";",
       "(",
-      "7 != 5",
       ")",
-      ";"
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "7 != 5",
-      ")",
+      "7",
+      "!=",
+      "5",
       ";"
     ],
     "type": "order"
@@ -180,16 +195,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to assign and add:\n\n```dart\nvoid main() {\n  int x = 5;\n  %order%%order%%order%\n  print(x);\n}\n```",
+    "question": "Complete the following Dart code to assign and add:\n\n```dart\nvoid main() {\n  int x = 5;\n  %order% %order% %order%;\n  print(x);\n}\n```",
     "options": [
       "x",
       "+=",
-      "2;"
+      "2",
+      "*=",
+      "5",
+      "y",
+      "-=",
+      "3"
     ],
     "answer": [
       "x",
       "+=",
-      "2;"
+      "2"
     ],
     "type": "order"
   },
@@ -212,19 +232,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code using logical AND:\n\n```dart\nvoid main() {\n  bool hasCandy = true;\n  bool isHappy = true;\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code using logical AND:\n\n```dart\nvoid main() {\n  bool hasCandy = true;\n  bool isHappy = true;\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "hasCandy && isHappy",
-      ")",
-      ";"
+      "hasCandy",
+      "&&",
+      "isHappy",
+      ";",
+      "||",
+      "!",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "hasCandy && isHappy",
-      ")",
+      "hasCandy",
+      "&&",
+      "isHappy",
       ";"
     ],
     "type": "order"
@@ -248,18 +271,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to use logical NOT:\n\n```dart\nvoid main() {\n  bool isHappy = true;\n  %order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to use logical NOT:\n\n```dart\nvoid main() {\n  bool isHappy = true;\n  %order%(%order%%order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "!isHappy",
-      ");"
+      "!",
+      "isHappy",
+      ";",
+      "&&",
+      "||",
+      "console",
+      "false"
     ],
     "answer": [
       "print",
-      "(",
-      "!isHappy",
-      ");"
+      "!",
+      "isHappy",
+      ";"
     ],
     "type": "order"
   },
@@ -282,19 +309,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to subtract:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to subtract:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "9 - 4",
-      ")",
-      ";"
+      "9",
+      "-",
+      "4",
+      ";",
+      "+",
+      "*",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "9 - 4",
-      ")",
+      "9",
+      "-",
+      "4",
       ";"
     ],
     "type": "order"
@@ -318,19 +348,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to check if numbers are equal:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to check if numbers are equal:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "4 == 4",
-      ")",
-      ";"
+      "4",
+      "==",
+      "4",
+      ";",
+      "!=",
+      ">",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "4 == 4",
-      ")",
+      "4",
+      "==",
+      "4",
       ";"
     ],
     "type": "order"
@@ -354,19 +387,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to multiply:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to multiply:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "6 * 3",
-      ")",
-      ";"
+      "6",
+      "*",
+      "3",
+      ";",
+      "+",
+      "/",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "6 * 3",
-      ")",
+      "6",
+      "*",
+      "3",
       ";"
     ],
     "type": "order"
@@ -390,19 +426,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code for logical OR:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code for logical OR:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "true || false",
-      ")",
-      ";"
+      "true",
+      "||",
+      "false",
+      ";",
+      "&&",
+      "!",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "true || false",
-      ")",
+      "true",
+      "||",
+      "false",
       ";"
     ],
     "type": "order"
@@ -426,19 +465,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to check less than:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to check less than:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "2 < 5",
-      ")",
-      ";"
+      "2",
+      "<",
+      "5",
+      ";",
+      ">",
+      "==",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "2 < 5",
-      ")",
+      "2",
+      "<",
+      "5",
       ";"
     ],
     "type": "order"
@@ -462,16 +504,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to add and assign:\n\n```dart\nvoid main() {\n  int y = 3;\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to add and assign:\n\n```dart\nvoid main() {\n  int y = 3;\n  %order% %order% %order%;\n}\n```",
     "options": [
       "y",
       "+=",
-      "5;"
+      "5",
+      "x",
+      "*=",
+      "2",
+      "-=",
+      "3"
     ],
     "answer": [
       "y",
       "+=",
-      "5;"
+      "5"
     ],
     "type": "order"
   },
@@ -494,19 +541,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to divide:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to divide:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "12 / 4",
-      ")",
-      ";"
+      "12",
+      "/",
+      "4",
+      ";",
+      "*",
+      "+",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "12 / 4",
-      ")",
+      "12",
+      "/",
+      "4",
       ";"
     ],
     "type": "order"
@@ -530,19 +580,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code using logical AND:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code using logical AND:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "false && true",
-      ")",
-      ";"
+      "false",
+      "&&",
+      "true",
+      ";",
+      "||",
+      "!",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "false && true",
-      ")",
+      "false",
+      "&&",
+      "true",
       ";"
     ],
     "type": "order"
@@ -566,19 +619,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code for modulo operation:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code for modulo operation:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "8 % 3",
-      ")",
-      ";"
+      "8",
+      "%",
+      "3",
+      ";",
+      "/",
+      "*",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "8 % 3",
-      ")",
+      "8",
+      "%",
+      "3",
       ";"
     ],
     "type": "order"
@@ -602,16 +658,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to subtract and assign:\n\n```dart\nvoid main() {\n  int a = 10;\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to subtract and assign:\n\n```dart\nvoid main() {\n  int a = 10;\n  %order% %order% %order%;\n}\n```",
     "options": [
       "a",
       "-=",
-      "3;"
+      "3",
+      "b",
+      "+=",
+      "5",
+      "*=",
+      "2"
     ],
     "answer": [
       "a",
       "-=",
-      "3;"
+      "3"
     ],
     "type": "order"
   },
@@ -634,19 +695,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code for equality check:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code for equality check:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "7 == 8",
-      ")",
-      ";"
+      "7",
+      "==",
+      "8",
+      ";",
+      "!=",
+      ">",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "7 == 8",
-      ")",
+      "7",
+      "==",
+      "8",
       ";"
     ],
     "type": "order"
@@ -670,19 +734,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to multiply:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to multiply:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "7 * 4",
-      ")",
-      ";"
+      "7",
+      "*",
+      "4",
+      ";",
+      "+",
+      "/",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "7 * 4",
-      ")",
+      "7",
+      "*",
+      "4",
       ";"
     ],
     "type": "order"
@@ -706,19 +773,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code using logical OR:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code using logical OR:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "false || false",
-      ")",
-      ";"
+      "false",
+      "||",
+      "false",
+      ";",
+      "&&",
+      "true",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "false || false",
-      ")",
+      "false",
+      "||",
+      "false",
       ";"
     ],
     "type": "order"
@@ -742,33 +812,25 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to check not equal:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to check not equal:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "9 != 9",
-      ")",
-      ";"
+      "9",
+      "!=",
+      "9",
+      ";",
+      "==",
+      ">",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "9 != 9",
-      ")",
+      "9",
+      "!=",
+      "9",
       ";"
     ],
     "type": "order"
-  },
-  {
-    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print(9 != 9);\n}\n```",
-    "options": [
-      "false",
-      "true",
-      "9",
-      "Error"
-    ],
-    "answer": ["false"],
-    "type": "mcq"
   },
   {
     "question": "Fill in the blank for multiplication:\n\n```dart\nvoid main() {\n  print(3 %fill% 5);\n}\n```",
@@ -778,19 +840,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code for less than comparison:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code for less than comparison:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "10 < 15",
-      ")",
-      ";"
+      "10",
+      "<",
+      "15",
+      ";",
+      ">",
+      "==",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "10 < 15",
-      ")",
+      "10",
+      "<",
+      "15",
       ";"
     ],
     "type": "order"
@@ -814,19 +879,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to add:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to add:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "8 + 7",
-      ")",
-      ";"
+      "8",
+      "+",
+      "7",
+      ";",
+      "-",
+      "*",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "8 + 7",
-      ")",
+      "8",
+      "+",
+      "7",
       ";"
     ],
     "type": "order"
@@ -850,19 +918,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code using logical AND with variables:\n\n```dart\nvoid main() {\n  bool a = true;\n  bool b = false;\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code using logical AND with variables:\n\n```dart\nvoid main() {\n  bool a = true;\n  bool b = false;\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "a && b",
-      ")",
-      ";"
+      "a",
+      "&&",
+      "b",
+      ";",
+      "||",
+      "c",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "a && b",
-      ")",
+      "a",
+      "&&",
+      "b",
       ";"
     ],
     "type": "order"
@@ -886,19 +957,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to find remainder:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to find remainder:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "11 % 4",
-      ")",
-      ";"
+      "11",
+      "%",
+      "4",
+      ";",
+      "/",
+      "*",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "11 % 4",
-      ")",
+      "11",
+      "%",
+      "4",
       ";"
     ],
     "type": "order"
@@ -922,19 +996,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to subtract:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to subtract:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "20 - 8",
-      ")",
-      ";"
+      "20",
+      "-",
+      "8",
+      ";",
+      "+",
+      "*",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "20 - 8",
-      ")",
+      "20",
+      "-",
+      "8",
       ";"
     ],
     "type": "order"
@@ -958,19 +1035,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code for division:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code for division:\n\n```dart\nvoid main() {\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "16 / 4",
-      ")",
-      ";"
+      "16",
+      "/",
+      "4",
+      ";",
+      "*",
+      "+",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "16 / 4",
-      ")",
+      "16",
+      "/",
+      "4",
       ";"
     ],
     "type": "order"
@@ -994,19 +1074,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code to multiply variables:\n\n```dart\nvoid main() {\n  int p = 4;\n  int q = 6;\n  %order%%order%%order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to multiply variables:\n\n```dart\nvoid main() {\n  int p = 4;\n  int q = 6;\n  %order%(%order% %order% %order%)%order%\n}\n```",
     "options": [
       "print",
-      "(",
-      "p * q",
-      ")",
-      ";"
+      "p",
+      "*",
+      "q",
+      ";",
+      "+",
+      "-",
+      "console"
     ],
     "answer": [
       "print",
-      "(",
-      "p * q",
-      ")",
+      "p",
+      "*",
+      "q",
       ";"
     ],
     "type": "order"
@@ -1030,28 +1113,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the following Dart code using compound assignment:\n\n```dart\nvoid main() {\n  int num = 12;\n  %order%%order%%order%\n  print(num);\n}\n```",
+    "question": "Complete the following Dart code using compound assignment:\n\n```dart\nvoid main() {\n  int num = 12;\n  %order% %order% %order%;\n  print(num);\n}\n```",
     "options": [
       "num",
       "+=",
-      "8;"
+      "8",
+      "x",
+      "*=",
+      "3",
+      "-=",
+      "5"
     ],
     "answer": [
       "num",
       "+=",
-      "8;"
+      "8"
     ],
     "type": "order"
-  },
-  {
-    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  int num = 12;\n  num += 8;\n  print(num);\n}\n```",
-    "options": [
-      "20",
-      "12",
-      "8",
-      "4"
-    ],
-    "answer": ["20"],
-    "type": "mcq"
   }
 ]

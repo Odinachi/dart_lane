@@ -1,11 +1,17 @@
 [
   {
-    "question": "Complete the higher-order function that takes another function as parameter:\n\n```dart\nvoid bakeCookies(%order% onFinished) {\n  print('Baking cookies... 🍪');\n  onFinished();\n}\n```",
+    "question": "Complete the higher-order function that takes another function as parameter:\n\n```dart\nvoid bakeCookies(%order% %order%) {\n  print('Baking cookies... 🍪');\n  onFinished();\n}\n```",
     "options": [
-      "Function"
+      "Function",
+      "onFinished",
+      "void",
+      "dynamic",
+      "callback",
+      "done"
     ],
     "answer": [
-      "Function"
+      "Function",
+      "onFinished"
     ],
     "type": "order"
   },
@@ -26,12 +32,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the higher-order function that returns a function:\n\n```dart\n%order% createGreeter(String name) {\n  return () {\n    print('Hello, $name!');\n  };\n}\n```",
+    "question": "Complete the higher-order function that returns a function:\n\n```dart\n%order% createGreeter(%order% %order%) {\n  return () {\n    print('Hello, $name!');\n  };\n}\n```",
     "options": [
-      "Function"
+      "Function",
+      "String",
+      "name",
+      "void",
+      "dynamic",
+      "greeting",
+      "message",
+      "text"
     ],
     "answer": [
-      "Function"
+      "Function",
+      "String",
+      "name"
     ],
     "type": "order"
   },
@@ -52,11 +67,17 @@
     "type": "fill"
   },
   {
-    "question": "Complete the function parameter passing:\n\n```dart\nvoid main() {\n  doSomething(%order%);\n}\n\nvoid sayDone() {\n  print('Done!');\n}\n```",
+    "question": "Complete the function parameter passing:\n\n```dart\nvoid main() {\n  %order%(%order%);\n}\n\nvoid sayDone() {\n  print('Done!');\n}\n```",
     "options": [
-      "sayDone"
+      "doSomething",
+      "sayDone",
+      "executeTask",
+      "runFunction",
+      "callFunction",
+      "Function"
     ],
     "answer": [
+      "doSomething",
       "sayDone"
     ],
     "type": "order"
@@ -78,11 +99,19 @@
     "type": "fill"
   },
   {
-    "question": "Complete the callback function usage:\n\n```dart\nvoid main() {\n  processData((%order%) {\n    print('Got: $result');\n  });\n}\n```",
+    "question": "Complete the callback function usage:\n\n```dart\nvoid main() {\n  processData((%order% %order%) {\n    print('Got: $result');\n  });\n}\n```",
     "options": [
-      "result"
+      "String",
+      "result",
+      "data",
+      "dynamic",
+      "var",
+      "Object",
+      "item",
+      "value"
     ],
     "answer": [
+      "String",
       "result"
     ],
     "type": "order"
@@ -104,11 +133,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the function that returns a function:\n\n```dart\nFunction createMultiplier(int factor) {\n  %order% (int number) {\n    return number * factor;\n  };\n}\n```",
+    "question": "Complete the function that returns a function:\n\n```dart\nFunction createMultiplier(%order% %order%) {\n  %order% (int number) {\n    return number * factor;\n  };\n}\n```",
     "options": [
-      "return"
+      "int",
+      "factor",
+      "return",
+      "double",
+      "num",
+      "yield",
+      "async",
+      "multiplier"
     ],
     "answer": [
+      "int",
+      "factor",
       "return"
     ],
     "type": "order"
@@ -130,11 +168,19 @@
     "type": "fill"
   },
   {
-    "question": "Complete the list processing with higher-order function:\n\n```dart\nvoid processList(List<int> numbers, %order% processor) {\n  for (int num in numbers) {\n    processor(num);\n  }\n}\n```",
+    "question": "Complete the list processing with higher-order function:\n\n```dart\nvoid processList(%order%<int> numbers, %order% processor) {\n  for (int num in numbers) {\n    processor(num);\n  }\n}\n```",
     "options": [
-      "Function"
+      "List",
+      "Function",
+      "Iterable",
+      "Collection",
+      "Array",
+      "void",
+      "dynamic",
+      "processor"
     ],
     "answer": [
+      "List",
       "Function"
     ],
     "type": "order"
@@ -156,11 +202,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the conditional function return:\n\n```dart\nFunction createOperation(String type) {\n  %order% (type == 'add') {\n    return (a, b) => a + b;\n  } else {\n    return (a, b) => a * b;\n  }\n}\n```",
+    "question": "Complete the conditional function return:\n\n```dart\nFunction createOperation(%order% %order%) {\n  %order% (type == 'add') {\n    return (a, b) => a + b;\n  } else {\n    return (a, b) => a * b;\n  }\n}\n```",
     "options": [
-      "if"
+      "String",
+      "type",
+      "if",
+      "var",
+      "dynamic",
+      "while",
+      "for",
+      "operation"
     ],
     "answer": [
+      "String",
+      "type",
       "if"
     ],
     "type": "order"
@@ -185,7 +240,13 @@
     "question": "Complete the higher-order function with multiple callbacks:\n\n```dart\nvoid processData(String data, %order% onSuccess, %order% onError) {\n  if (data.isNotEmpty) {\n    onSuccess(data);\n  } else {\n    onError('Empty data');\n  }\n}\n```",
     "options": [
       "Function",
-      "Function"
+      "Function",
+      "void",
+      "dynamic",
+      "Object",
+      "callback",
+      "handler",
+      "processor"
     ],
     "answer": [
       "Function",
@@ -210,11 +271,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the function composition:\n\n```dart\nFunction compose(Function f, Function g) {\n  return (%order% x) {\n    return f(g(x));\n  };\n}\n```",
+    "question": "Complete the function composition:\n\n```dart\nFunction compose(%order% f, %order% g) {\n  return (%order% x) {\n    return f(g(x));\n  };\n}\n```",
     "options": [
-      "dynamic"
+      "Function",
+      "Function",
+      "dynamic",
+      "var",
+      "Object",
+      "int",
+      "String",
+      "value"
     ],
     "answer": [
+      "Function",
+      "Function",
       "dynamic"
     ],
     "type": "order"
@@ -236,11 +306,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the filter function with predicate:\n\n```dart\nList<T> filter<T>(List<T> items, bool %order%(T) predicate) {\n  List<T> result = [];\n  for (T item in items) {\n    if (predicate(item)) result.add(item);\n  }\n  return result;\n}\n```",
+    "question": "Complete the filter function with predicate:\n\n```dart\nList<T> filter<T>(%order%<T> items, %order% %order%(T) predicate) {\n  List<T> result = [];\n  for (T item in items) {\n    if (predicate(item)) result.add(item);\n  }\n  return result;\n}\n```",
     "options": [
-      "Function"
+      "List",
+      "bool",
+      "Function",
+      "Iterable",
+      "Collection",
+      "dynamic",
+      "Object",
+      "predicate"
     ],
     "answer": [
+      "List",
+      "bool",
       "Function"
     ],
     "type": "order"
@@ -262,11 +341,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the map function with transformer:\n\n```dart\nList<R> map<T, R>(List<T> items, R %order%(T) transformer) {\n  List<R> result = [];\n  for (T item in items) {\n    result.add(transformer(item));\n  }\n  return result;\n}\n```",
+    "question": "Complete the map function with transformer:\n\n```dart\nList<R> map<T, R>(%order%<T> items, %order% %order%(T) transformer) {\n  List<R> result = [];\n  for (T item in items) {\n    result.add(transformer(item));\n  }\n  return result;\n}\n```",
     "options": [
-      "Function"
+      "List",
+      "R",
+      "Function",
+      "Iterable",
+      "T",
+      "dynamic",
+      "Object",
+      "transformer"
     ],
     "answer": [
+      "List",
+      "R",
       "Function"
     ],
     "type": "order"
@@ -288,11 +376,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the reduce function:\n\n```dart\nT reduce<T>(List<T> items, T %order%(T, T) combiner, T initialValue) {\n  T result = initialValue;\n  for (T item in items) {\n    result = combiner(result, item);\n  }\n  return result;\n}\n```",
+    "question": "Complete the reduce function:\n\n```dart\nT reduce<T>(%order%<T> items, %order% %order%(T, T) combiner, T initialValue) {\n  T result = initialValue;\n  for (T item in items) {\n    result = combiner(result, item);\n  }\n  return result;\n}\n```",
     "options": [
-      "Function"
+      "List",
+      "T",
+      "Function",
+      "Iterable",
+      "dynamic",
+      "Object",
+      "combiner",
+      "reducer"
     ],
     "answer": [
+      "List",
+      "T",
       "Function"
     ],
     "type": "order"
@@ -314,12 +411,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the event handler creator:\n\n```dart\n%order% createEventHandler(String eventType) {\n  return (String data) {\n    print('$eventType: $data');\n  };\n}\n```",
+    "question": "Complete the event handler creator:\n\n```dart\n%order% createEventHandler(%order% %order%) {\n  return (String data) {\n    print('$eventType: $data');\n  };\n}\n```",
     "options": [
-      "Function"
+      "Function",
+      "String",
+      "eventType",
+      "void",
+      "dynamic",
+      "type",
+      "handler",
+      "event"
     ],
     "answer": [
-      "Function"
+      "Function",
+      "String",
+      "eventType"
     ],
     "type": "order"
   },
@@ -340,12 +446,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the validator function factory:\n\n```dart\nFunction createValidator(int %order%) {\n  return (String input) {\n    return input.length >= minLength;\n  };\n}\n```",
+    "question": "Complete the validator function factory:\n\n```dart\nFunction createValidator(%order% %order%) {\n  return (%order% input) {\n    return input.length >= minLength;\n  };\n}\n```",
     "options": [
-      "minLength"
+      "int",
+      "minLength",
+      "String",
+      "double",
+      "num",
+      "length",
+      "size",
+      "input"
     ],
     "answer": [
-      "minLength"
+      "int",
+      "minLength",
+      "String"
     ],
     "type": "order"
   },
@@ -366,12 +481,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the throttle function:\n\n```dart\nFunction throttle(%order% func, int delayMs) {\n  bool canExecute = true;\n  return () {\n    if (canExecute) {\n      func();\n      canExecute = false;\n      Future.delayed(Duration(milliseconds: delayMs), () {\n        canExecute = true;\n      });\n    }\n  };\n}\n```",
+    "question": "Complete the throttle function:\n\n```dart\nFunction throttle(%order% %order%, %order% delayMs) {\n  bool canExecute = true;\n  return () {\n    if (canExecute) {\n      func();\n      canExecute = false;\n      Future.delayed(Duration(milliseconds: delayMs), () {\n        canExecute = true;\n      });\n    }\n  };\n}\n```",
     "options": [
-      "Function"
+      "Function",
+      "func",
+      "int",
+      "void",
+      "dynamic",
+      "callback",
+      "double",
+      "delay"
     ],
     "answer": [
-      "Function"
+      "Function",
+      "func",
+      "int"
     ],
     "type": "order"
   },
@@ -392,12 +516,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the debounce function:\n\n```dart\nFunction debounce(%order% func, int delayMs) {\n  Timer? timer;\n  return () {\n    timer?.cancel();\n    timer = Timer(Duration(milliseconds: delayMs), func);\n  };\n}\n```",
+    "question": "Complete the debounce function:\n\n```dart\nFunction debounce(%order% %order%, %order% delayMs) {\n  Timer? timer;\n  return () {\n    timer?.cancel();\n    timer = Timer(Duration(milliseconds: delayMs), func);\n  };\n}\n```",
     "options": [
-      "Function"
+      "Function",
+      "func",
+      "int",
+      "void",
+      "dynamic",
+      "callback",
+      "double",
+      "delay"
     ],
     "answer": [
-      "Function"
+      "Function",
+      "func",
+      "int"
     ],
     "type": "order"
   },
@@ -418,12 +551,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the curry function:\n\n```dart\nFunction curry2(%order% func) {\n  return (a) {\n    return (b) {\n      return func(a, b);\n    };\n  };\n}\n```",
+    "question": "Complete the curry function:\n\n```dart\nFunction curry2(%order% %order%) {\n  return (%order%) {\n    return (b) {\n      return func(a, b);\n    };\n  };\n}\n```",
     "options": [
-      "Function"
+      "Function",
+      "func",
+      "a",
+      "dynamic",
+      "Object",
+      "var",
+      "callback",
+      "x"
     ],
     "answer": [
-      "Function"
+      "Function",
+      "func",
+      "a"
     ],
     "type": "order"
   },
@@ -444,12 +586,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the memoization function:\n\n```dart\nFunction memoize(%order% func) {\n  Map<dynamic, dynamic> cache = {};\n  return (arg) {\n    if (cache.containsKey(arg)) {\n      return cache[arg];\n    }\n    var result = func(arg);\n    cache[arg] = result;\n    return result;\n  };\n}\n```",
+    "question": "Complete the memoization function:\n\n```dart\nFunction memoize(%order% %order%) {\n  %order%<dynamic, dynamic> cache = {};\n  return (arg) {\n    if (cache.containsKey(arg)) {\n      return cache[arg];\n    }\n    var result = func(arg);\n    cache[arg] = result;\n    return result;\n  };\n}\n```",
     "options": [
-      "Function"
+      "Function",
+      "func",
+      "Map",
+      "dynamic",
+      "Object",
+      "var",
+      "HashMap",
+      "cache"
     ],
     "answer": [
-      "Function"
+      "Function",
+      "func",
+      "Map"
     ],
     "type": "order"
   },
@@ -470,12 +621,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the partial application function:\n\n```dart\nFunction partial(%order% func, List fixedArgs) {\n  return (List remainingArgs) {\n    return Function.apply(func, [...fixedArgs, ...remainingArgs]);\n  };\n}\n```",
+    "question": "Complete the partial application function:\n\n```dart\nFunction partial(%order% %order%, %order% fixedArgs) {\n  return (List remainingArgs) {\n    return Function.apply(func, [...fixedArgs, ...remainingArgs]);\n  };\n}\n```",
     "options": [
-      "Function"
+      "Function",
+      "func",
+      "List",
+      "dynamic",
+      "Object",
+      "var",
+      "Iterable",
+      "args"
     ],
     "answer": [
-      "Function"
+      "Function",
+      "func",
+      "List"
     ],
     "type": "order"
   },
@@ -496,13 +656,21 @@
     "type": "fill"
   },
   {
-    "question": "Complete the final higher-order function example:\n\n```dart\n%order% createLogger(String level) {\n  return (%order% message) {\n    print('[$level] ${DateTime.now()}: $message');\n  };\n}\n\nvoid main() {\n  var errorLog = createLogger('ERROR');\n  var infoLog = createLogger('INFO');\n  \n  errorLog('Something went wrong!');\n  infoLog('Application started');\n}\n```",
+    "question": "Complete the final higher-order function example:\n\n```dart\n%order% createLogger(%order% %order%) {\n  return (%order% message) {\n    print('[$level] ${DateTime.now()}: $message');\n  };\n}\n\nvoid main() {\n  var errorLog = createLogger('ERROR');\n  var infoLog = createLogger('INFO');\n  \n  errorLog('Something went wrong!');\n  infoLog('Application started');\n}\n```",
     "options": [
       "Function",
-      "String"
+      "String",
+      "level",
+      "String",
+      "void",
+      "dynamic",
+      "type",
+      "message"
     ],
     "answer": [
       "Function",
+      "String",
+      "level",
       "String"
     ],
     "type": "order"

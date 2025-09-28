@@ -33,7 +33,8 @@
     "question": "Complete the basic try-catch structure:\n\n```dart\nvoid main() {\n  %order% {\n    print('This might fail');\n  } %order% (error) {\n    print('Error occurred: $error');\n  }\n}\n```",
     "options": [
       "try",
-      "catch"
+      "catch",
+      "finally"
     ],
     "answer": [
       "try",
@@ -60,7 +61,9 @@
   {
     "question": "Complete the finally block usage:\n\n```dart\nvoid main() {\n  try {\n    print('Opening cookie jar 🍪');\n  } catch (e) {\n    print('Cookie jar broke!');\n  } %order% {\n    print('Always wash hands 🧼');\n  }\n}\n```",
     "options": [
-      "finally"
+      "finally",
+      "catch",
+      "try"
     ],
     "answer": [
       "finally"
@@ -87,7 +90,8 @@
     "question": "Complete the exception throwing:\n\n```dart\nvoid playWithToy() {\n  %order% {\n    print('Playing with toy 🚂');\n    %order% Exception('Toy broke!');\n  } catch (e) {\n    print('Caught: $e');\n  }\n}\n```",
     "options": [
       "try",
-      "throw"
+      "throw",
+      "catch"
     ],
     "answer": [
       "try",
@@ -115,7 +119,8 @@
     "question": "Complete the specific exception handling:\n\n```dart\nvoid main() {\n  try {\n    int result = int.parse('abc');\n  } %order% %order% catch (e) {\n    print('Number format error: $e');\n  }\n}\n```",
     "options": [
       "on",
-      "FormatException"
+      "FormatException",
+      "Exception"
     ],
     "answer": [
       "on",
@@ -143,7 +148,8 @@
     "question": "Complete the multiple catch blocks:\n\n```dart\nvoid main() {\n  try {\n    riskyOperation();\n  } %order% NetworkException catch (e) {\n    print('Network error');\n  } %order% Exception catch (e) {\n    print('Other error');\n  }\n}\n```",
     "options": [
       "on",
-      "on"
+      "on",
+      "catch"
     ],
     "answer": [
       "on",
@@ -170,7 +176,9 @@
   {
     "question": "Complete the stack trace capture:\n\n```dart\nvoid main() {\n  try {\n    throw Exception('Error occurred');\n  } catch (e, %order%) {\n    print('Error: $e');\n    print('Stack: $stackTrace');\n  }\n}\n```",
     "options": [
-      "stackTrace"
+      "stackTrace",
+      "trace",
+      "stack"
     ],
     "answer": [
       "stackTrace"
@@ -196,7 +204,9 @@
   {
     "question": "Complete the rethrow statement:\n\n```dart\nvoid handleError() {\n  try {\n    dangerousCode();\n  } catch (e) {\n    print('Logging error: $e');\n    %order%; // Pass the error up\n  }\n}\n```",
     "options": [
-      "rethrow"
+      "rethrow",
+      "throw",
+      "return"
     ],
     "answer": [
       "rethrow"
@@ -254,7 +264,8 @@
     "options": [
       "async",
       "try",
-      "catch"
+      "catch",
+      "await"
     ],
     "answer": [
       "async",
@@ -282,7 +293,9 @@
   {
     "question": "Complete the resource cleanup pattern:\n\n```dart\nvoid useResource() {\n  Resource? resource;\n  try {\n    resource = Resource.acquire();\n    resource.use();\n  } catch (e) {\n    print('Error: $e');\n  } %order% {\n    resource?.dispose();\n  }\n}\n```",
     "options": [
-      "finally"
+      "finally",
+      "catch",
+      "try"
     ],
     "answer": [
       "finally"
@@ -308,7 +321,9 @@
   {
     "question": "Complete the exception without catch:\n\n```dart\nvoid main() {\n  try {\n    print('Starting operation');\n    dangerousCode();\n    print('Operation completed');\n  } %order% {\n    print('Cleanup performed');\n  }\n}\n```",
     "options": [
-      "finally"
+      "finally",
+      "catch",
+      "then"
     ],
     "answer": [
       "finally"
@@ -335,7 +350,8 @@
     "question": "Complete the custom exception handling:\n\n```dart\nclass CustomError implements Exception {\n  final String message;\n  CustomError(this.message);\n}\n\nvoid main() {\n  try {\n    throw CustomError('Custom problem');\n  } %order% %order% catch (e) {\n    print('Custom error: ${e.message}');\n  }\n}\n```",
     "options": [
       "on",
-      "CustomError"
+      "CustomError",
+      "Exception"
     ],
     "answer": [
       "on",
@@ -363,7 +379,8 @@
     "question": "Complete the exception handling priority:\n\n```dart\nvoid main() {\n  try {\n    throw Exception('General error');\n  } %order% SpecificException catch (e) {\n    print('Specific: $e');\n  } %order% Exception catch (e) {\n    print('General: $e');\n  }\n}\n```",
     "options": [
       "on",
-      "on"
+      "on",
+      "catch"
     ],
     "answer": [
       "on",
@@ -390,7 +407,9 @@
   {
     "question": "Complete the exception conversion:\n\n```dart\nvoid wrapException() {\n  try {\n    lowLevelOperation();\n  } catch (e) {\n    %order% HighLevelException('Operation failed', e);\n  }\n}\n```",
     "options": [
-      "throw"
+      "throw",
+      "return",
+      "print"
     ],
     "answer": [
       "throw"
@@ -417,7 +436,8 @@
     "question": "Complete the conditional exception throwing:\n\n```dart\nvoid validateInput(String input) {\n  %order% (input.isEmpty) {\n    throw ArgumentError('Input cannot be empty');\n  }\n  %order% (input.length > 100) {\n    throw ArgumentError('Input too long');\n  }\n}\n```",
     "options": [
       "if",
-      "if"
+      "if",
+      "while"
     ],
     "answer": [
       "if",
@@ -445,7 +465,8 @@
     "question": "Complete the assertion with exception:\n\n```dart\nvoid processData(List data) {\n  %order%(data != null, 'Data cannot be null');\n  %order%(data.isNotEmpty, 'Data cannot be empty');\n  // Process data\n}\n```",
     "options": [
       "assert",
-      "assert"
+      "assert",
+      "check"
     ],
     "answer": [
       "assert",
@@ -473,7 +494,8 @@
     "question": "Complete the error logging pattern:\n\n```dart\nvoid robustOperation() {\n  try {\n    criticalTask();\n  } catch (e, stackTrace) {\n    %order%.error('Operation failed', e, stackTrace);\n    %order%; // Re-throw after logging\n  }\n}\n```",
     "options": [
       "logger",
-      "rethrow"
+      "rethrow",
+      "print"
     ],
     "answer": [
       "logger",
@@ -500,7 +522,9 @@
   {
     "question": "Complete the fallback exception handling:\n\n```dart\nvoid resilientOperation() {\n  try {\n    primaryMethod();\n  } catch (e) {\n    %order% {\n      fallbackMethod();\n    } catch (fallbackError) {\n      throw OperationException('All methods failed');\n    }\n  }\n}\n```",
     "options": [
-      "try"
+      "try",
+      "if",
+      "while"
     ],
     "answer": [
       "try"
@@ -530,7 +554,7 @@
       "try",
       "on",
       "rethrow",
-      "on",
+      "on", 
       "rethrow",
       "catch",
       "rethrow",

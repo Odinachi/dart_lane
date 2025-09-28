@@ -4,7 +4,10 @@
     "options": [
       "async",
       "await",
-      "yield"
+      "yield",
+      "sync",
+      "return",
+      "emit"
     ],
     "answer": [
       "async",
@@ -33,7 +36,11 @@
     "question": "Complete the Stream listening pattern:\n\n```dart\nvoid main() {\n  Stream<String> stream = getMessages();\n  stream.%order%((message) {\n    print('Received: %order%');\n  });\n}\n```",
     "options": [
       "listen",
-      "$message"
+      "$message",
+      "subscribe",
+      "watch",
+      "message",
+      "data"
     ],
     "answer": [
       "listen",
@@ -63,7 +70,11 @@
       "async",
       "await",
       "for",
-      "$item"
+      "$item",
+      "sync",
+      "while",
+      "item",
+      "data"
     ],
     "answer": [
       "async",
@@ -95,7 +106,11 @@
       "data",
       "$data",
       "onError",
-      "error"
+      "error",
+      "item",
+      "onException",
+      "e",
+      "exception"
     ],
     "answer": [
       "data",
@@ -129,7 +144,9 @@
       "onError",
       "error",
       "$error",
-      "onDone"
+      "onDone",
+      "onComplete",
+      "e"
     ],
     "answer": [
       "data",
@@ -163,16 +180,18 @@
       "map",
       "n",
       "n",
-      "listen", 
+      "listen",
       "doubled",
-      "$doubled"
+      "$doubled",
+      "transform",
+      "convert"
     ],
     "answer": [
       "map",
       "n",
       "n",
       "listen",
-      "doubled", 
+      "doubled",
       "$doubled"
     ],
     "type": "order"
@@ -201,11 +220,13 @@
       "n",
       "listen",
       "big",
-      "$big"
+      "$big",
+      "filter",
+      "select"
     ],
     "answer": [
       "where",
-      "n", 
+      "n",
       "n",
       "listen",
       "big",
@@ -236,12 +257,15 @@
       "3",
       "listen",
       "item",
-      "$item"
+      "$item",
+      "limit",
+      "first",
+      "data"
     ],
     "answer": [
       "take",
       "3",
-      "listen", 
+      "listen",
       "item",
       "$item"
     ],
@@ -269,8 +293,11 @@
       "skip",
       "2",
       "listen",
-      "data", 
-      "$data"
+      "data",
+      "$data",
+      "ignore",
+      "drop",
+      "item"
     ],
     "answer": [
       "skip",
@@ -304,11 +331,14 @@
       "first",
       "await",
       "first",
-      "$first"
+      "$first",
+      "sync",
+      "initial",
+      "firstItem"
     ],
     "answer": [
       "async",
-      "first", 
+      "first",
       "await",
       "first",
       "$first"
@@ -338,12 +368,15 @@
       "last",
       "await",
       "last",
-      "$last"
+      "$last",
+      "sync",
+      "final",
+      "lastItem"
     ],
     "answer": [
       "async",
       "last",
-      "await", 
+      "await",
       "last",
       "$last"
     ],
@@ -372,13 +405,16 @@
       "items",
       "await",
       "toList",
-      "$items"
+      "$items",
+      "sync",
+      "data",
+      "toArray"
     ],
     "answer": [
       "async",
       "items",
       "await",
-      "toList", 
+      "toList",
       "$items"
     ],
     "type": "order"
@@ -404,9 +440,12 @@
     "options": [
       "async",
       "count",
-      "await", 
+      "await",
       "length",
-      "$count"
+      "$count",
+      "sync",
+      "size",
+      "total"
     ],
     "answer": [
       "async",
@@ -439,12 +478,16 @@
       "StreamController",
       "String",
       "StreamController",
-      "String"
+      "String",
+      "Controller",
+      "StreamManager",
+      "int",
+      "dynamic"
     ],
     "answer": [
       "StreamController",
       "String",
-      "StreamController", 
+      "StreamController",
       "String"
     ],
     "type": "order"
@@ -471,8 +514,11 @@
       "listen",
       "$data",
       "add",
-      "add", 
-      "close"
+      "add",
+      "close",
+      "subscribe",
+      "data",
+      "emit"
     ],
     "answer": [
       "listen",
@@ -503,7 +549,11 @@
     "question": "Complete the broadcast stream creation:\n\n```dart\nvoid main() {\n  StreamController<String> controller = StreamController.%order%();\n  Stream<String> %order% = controller.stream;\n}\n```",
     "options": [
       "broadcast",
-      "broadcastStream"
+      "broadcastStream",
+      "multi",
+      "shared",
+      "multicast",
+      "public"
     ],
     "answer": [
       "broadcast",
@@ -533,7 +583,11 @@
       "StreamSubscription",
       "listen",
       "$data",
-      "cancel"
+      "cancel",
+      "Subscription",
+      "subscribe",
+      "data",
+      "stop"
     ],
     "answer": [
       "StreamSubscription",
@@ -563,7 +617,11 @@
     "question": "Complete the Stream pause and resume:\n\n```dart\nvoid main() {\n  StreamSubscription sub = dataStream().listen((data) => print(data));\n  \n  sub.%order%(); // Stop temporarily\n  \n  // Later...\n  sub.%order%(); // Start again\n}\n```",
     "options": [
       "pause",
-      "resume"
+      "resume",
+      "stop",
+      "start",
+      "suspend",
+      "continue"
     ],
     "answer": [
       "pause",
@@ -592,10 +650,12 @@
     "options": [
       "periodicStream",
       "periodic",
-      "count", 
+      "count",
       "count",
       "listen",
-      "$value"
+      "$value",
+      "timer",
+      "interval"
     ],
     "answer": [
       "periodicStream",
@@ -631,11 +691,13 @@
       "items",
       "listen",
       "item",
-      "$item"
+      "$item",
+      "fromList",
+      "create"
     ],
     "answer": [
       "itemStream",
-      "fromIterable", 
+      "fromIterable",
       "items",
       "listen",
       "item",
@@ -666,13 +728,16 @@
       "value",
       "listen",
       "val",
-      "$val"
+      "$val",
+      "single",
+      "create",
+      "data"
     ],
     "answer": [
       "singleStream",
       "value",
       "listen",
-      "val", 
+      "val",
       "$val"
     ],
     "type": "order"
@@ -700,7 +765,10 @@
       "empty",
       "listen",
       "data",
-      "onDone"
+      "onDone",
+      "voidStream",
+      "nothing",
+      "item"
     ],
     "answer": [
       "emptyStream",
@@ -737,11 +805,12 @@
       "$data",
       "onError",
       "e",
-      "$e"
+      "$e",
+      "exception"
     ],
     "answer": [
       "errorStream",
-      "error", 
+      "error",
       "listen",
       "data",
       "$data",
@@ -777,12 +846,14 @@
       "async",
       "await",
       "for",
-      "$message"
+      "$message",
+      "sync",
+      "return"
     ],
     "answer": [
       "messageStream",
       "async",
-      "await", 
+      "await",
       "yield",
       "async",
       "await",

@@ -1,14 +1,19 @@
 [
   {
-    "question": "Complete the following Dart code to print \"Wake up\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the following Dart code to print \"Wake up\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Wake up')",
-      ";"
+      "'Wake up'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Wake up')",
+      "'Wake up'",
       ";"
     ],
     "type": "order"
@@ -32,15 +37,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Go to school\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Go to school\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Go to school')",
-      ";"
+      "'Go to school'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Go to school')",
+      "'Go to school'",
       ";"
     ],
     "type": "order"
@@ -64,15 +74,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Eat breakfast\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Eat breakfast\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Eat breakfast')",
-      ";"
+      "'Eat breakfast'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Eat breakfast')",
+      "'Eat breakfast'",
       ";"
     ],
     "type": "order"
@@ -96,15 +111,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Brush your teeth\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Brush your teeth\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Brush your teeth')",
-      ";"
+      "'Brush your teeth'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Brush your teeth')",
+      "'Brush your teeth'",
       ";"
     ],
     "type": "order"
@@ -128,15 +148,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Wake up\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Wake up\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Wake up')",
-      ";"
+      "'Wake up'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Wake up')",
+      "'Wake up'",
       ";"
     ],
     "type": "order"
@@ -160,15 +185,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Go to school\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Go to school\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Go to school')",
-      ";"
+      "'Go to school'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Go to school')",
+      "'Go to school'",
       ";"
     ],
     "type": "order"
@@ -192,15 +222,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Eat breakfast\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Eat breakfast\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Eat breakfast')",
-      ";"
+      "'Eat breakfast'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Eat breakfast')",
+      "'Eat breakfast'",
       ";"
     ],
     "type": "order"
@@ -224,79 +259,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Brush your teeth\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Brush your teeth\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Brush your teeth')",
-      ";"
+      "'Brush your teeth'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Brush your teeth')",
-      ";"
-    ],
-    "type": "order"
-  },
-  {
-    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print('Cook on the stove');\n  print('Eat pancakes!');\n}\n```",
-    "options": [
-      "Cook on the stove\\nEat pancakes!",
-      "Eat pancakes!\\nCook on the stove",
-      "Error",
-      "Nothing"
-    ],
-    "answer": ["Cook on the stove\\nEat pancakes!"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the blank to complete the Dart program that prints \"Eat pancakes!\":\n\n```dart\n%fill% main() {\n  print('Eat pancakes!');\n}\n```",
-    "answer": [
-      "void"
-    ],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the Dart code to print \"Wake up\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
-    "options": [
-      "print",
-      "('Wake up')",
-      ";"
-    ],
-    "answer": [
-      "print",
-      "('Wake up')",
-      ";"
-    ],
-    "type": "order"
-  },
-  {
-    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print('Add milk');\n  print('Add eggs');\n}\n```",
-    "options": [
-      "Add milk\\nAdd eggs",
-      "Add eggs\\nAdd milk",
-      "Error",
-      "Nothing"
-    ],
-    "answer": ["Add milk\\nAdd eggs"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the blank to complete the Dart program that prints \"Add eggs\":\n\n```dart\n%fill% main() {\n  print('Add eggs');\n}\n```",
-    "answer": [
-      "void"
-    ],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the Dart code to print \"Go to school\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
-    "options": [
-      "print",
-      "('Go to school')",
-      ";"
-    ],
-    "answer": [
-      "print",
-      "('Go to school')",
+      "'Brush your teeth'",
       ";"
     ],
     "type": "order"
@@ -320,15 +296,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Eat breakfast\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Wake up\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Eat breakfast')",
-      ";"
+      "'Wake up'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Eat breakfast')",
+      "'Wake up'",
       ";"
     ],
     "type": "order"
@@ -352,79 +333,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Brush your teeth\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Go to school\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Brush your teeth')",
-      ";"
+      "'Go to school'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Brush your teeth')",
-      ";"
-    ],
-    "type": "order"
-  },
-  {
-    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print('Cook on the stove');\n  print('Eat pancakes!');\n}\n```",
-    "options": [
-      "Cook on the stove\\nEat pancakes!",
-      "Eat pancakes!\\nCook on the stove",
-      "Error",
-      "Nothing"
-    ],
-    "answer": ["Cook on the stove\\nEat pancakes!"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the blank to complete the Dart program that prints \"Eat pancakes!\":\n\n```dart\n%fill% main() {\n  print('Eat pancakes!');\n}\n```",
-    "answer": [
-      "void"
-    ],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the Dart code to print \"Wake up\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
-    "options": [
-      "print",
-      "('Wake up')",
-      ";"
-    ],
-    "answer": [
-      "print",
-      "('Wake up')",
-      ";"
-    ],
-    "type": "order"
-  },
-  {
-    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print('Add milk');\n  print('Add eggs');\n}\n```",
-    "options": [
-      "Add milk\\nAdd eggs",
-      "Add eggs\\nAdd milk",
-      "Error",
-      "Nothing"
-    ],
-    "answer": ["Add milk\\nAdd eggs"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the blank to complete the Dart program that prints \"Add eggs\":\n\n```dart\n%fill% main() {\n  print('Add eggs');\n}\n```",
-    "answer": [
-      "void"
-    ],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the Dart code to print \"Go to school\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
-    "options": [
-      "print",
-      "('Go to school')",
-      ";"
-    ],
-    "answer": [
-      "print",
-      "('Go to school')",
+      "'Go to school'",
       ";"
     ],
     "type": "order"
@@ -448,15 +370,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Eat breakfast\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Eat breakfast\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Eat breakfast')",
-      ";"
+      "'Eat breakfast'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Eat breakfast')",
+      "'Eat breakfast'",
       ";"
     ],
     "type": "order"
@@ -480,15 +407,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Brush your teeth\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Brush your teeth\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Brush your teeth')",
-      ";"
+      "'Brush your teeth'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Brush your teeth')",
+      "'Brush your teeth'",
       ";"
     ],
     "type": "order"
@@ -501,7 +433,7 @@
       "Error",
       "Nothing"
     ],
-    "answer": ["Cook on the stove\nEat pancakes!"],
+    "answer": ["Cook on the stove\\nEat pancakes!"],
     "type": "mcq"
   },
   {
@@ -512,15 +444,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Wake up\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Wake up\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Wake up')",
-      ";"
+      "'Wake up'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Wake up')",
+      "'Wake up'",
       ";"
     ],
     "type": "order"
@@ -544,15 +481,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the Dart code to print \"Go to school\" to the console:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "question": "Complete the Dart code to print \"Go to school\" to the console:\n\n```dart\nvoid main() {\n  %order%(%order%)%order%\n}\n```",
     "options": [
       "print",
-      "('Go to school')",
-      ";"
+      "'Go to school'",
+      ";",
+      "console",
+      "log",
+      "output",
+      "echo",
+      "display"
     ],
     "answer": [
       "print",
-      "('Go to school')",
+      "'Go to school'",
       ";"
     ],
     "type": "order"

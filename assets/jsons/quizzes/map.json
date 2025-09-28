@@ -1,14 +1,5 @@
 [
-  {
-    "question": "Complete the map declaration:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order% student = {'name': 'John', 'age': 20};\n  print(student);\n}\n```",
-    "options": [
-      "Map<String, dynamic>"
-    ],
-    "answer": [
-      "Map<String, dynamic>"
-    ],
-    "type": "order"
-  },
+  
   {
     "question": "What will this code output?\n\n```dart\nvoid main() {\n  Map<String, int> scores = {'math': 95, 'english': 88};\n  print(scores['math']);\n}\n```",
     "options": [
