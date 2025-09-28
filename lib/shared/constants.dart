@@ -25,7 +25,8 @@ class AppData {
           videos: [
             "https://youtu.be/rUs7H9fZdV4?si=eHzomTSWcXNWfkbX",
             "https://youtu.be/Sqpr3HMx-I0?si=RtZYIO1Pk5WBkMWu"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/variables.json"),
       CourseModel(
           title: "Operators",
           path: "assets/courses/operators.md",
@@ -34,49 +35,59 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=JJF28iLSAQA",
             "https://youtu.be/cgiIK0VVmXM?si=fEIfGbCqvuG0iuOA"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/operator.json"),
       CourseModel(
-        title: "Comments",
-        path: "assets/courses/comments.md",
-        id: 3,
-        desc: "Learn how to write comments in Dart code.",
-        videos: [
-          "https://youtu.be/8XKL78pi_Y4?si=mqDg4XmywN3yzgJs",
-        ],
-      ),
+          title: "Comments",
+          path: "assets/courses/comments.md",
+          id: 3,
+          desc: "Learn how to write comments in Dart code.",
+          videos: [
+            "https://youtu.be/8XKL78pi_Y4?si=mqDg4XmywN3yzgJs",
+          ],
+          quiz: "assets/jsons/quizzes/comments.json"),
       CourseModel(
           title: "Input/Output",
           path: "assets/courses/input_output.md",
           id: 4,
           canPractice: false,
           desc: "Learn how to handle input and output in Dart applications.",
-          videos: ["https://youtu.be/rFP953T0lfQ?si=1N1Usu2sDOzX5SnW"]),
+          videos: ["https://youtu.be/rFP953T0lfQ?si=1N1Usu2sDOzX5SnW"],
+          quiz: "assets/jsons/quizzes/input_output.json"),
       CourseModel(
-          title: "Control Flow",
-          path: "assets/courses/control_flow.md",
-          id: 5,
-          desc:
-              "Understand control flow statements in Dart such as if-else and switch-case.",
-          videos: ["https://www.youtube.com/watch?v=5udl_LBpAHk"]),
+        title: "Control Flow",
+        path: "assets/courses/control_flow.md",
+        id: 5,
+        desc:
+            "Understand control flow statements in Dart such as if-else and switch-case.",
+        videos: [
+          "https://www.youtube.com/watch?v=5udl_LBpAHk",
+        ],
+        quiz: "assets/jsons/quizzes/control_flow.json",
+      ),
       CourseModel(
-          title: "Switch case",
-          path: "assets/courses/switch_case.md",
-          id: 6,
-          desc:
-              "Learn how to use switch-case statements in Dart for multi-way branching.",
-          videos: [
-            "https://youtu.be/TxmO6QJ-r2o?si=L56DLpJRQ8IdauLh",
-            "https://www.youtube.com/watch?v=OLo2s1em8_8"
-          ]),
+        title: "Switch case",
+        path: "assets/courses/switch_case.md",
+        id: 6,
+        desc:
+            "Learn how to use switch-case statements in Dart for multi-way branching.",
+        videos: [
+          "https://youtu.be/TxmO6QJ-r2o?si=L56DLpJRQ8IdauLh",
+          "https://www.youtube.com/watch?v=OLo2s1em8_8"
+        ],
+        quiz: "assets/jsons/quizzes/switch_case.json",
+      ),
       CourseModel(
-          title: "For Loops",
-          path: "assets/courses/for_loops.md",
-          id: 7,
-          desc: "Learn how to use for loops in Dart for iteration.",
-          videos: [
-            "https://www.youtube.com/watch?v=Q1y7u6JbDHM",
-            "https://youtu.be/lDyGYxsAxTU?si=1uL4wB_Quf85fa5A"
-          ]),
+        title: "For Loops",
+        path: "assets/courses/for_loops.md",
+        id: 7,
+        desc: "Learn how to use for loops in Dart for iteration.",
+        videos: [
+          "https://www.youtube.com/watch?v=Q1y7u6JbDHM",
+          "https://youtu.be/lDyGYxsAxTU?si=1uL4wB_Quf85fa5A"
+        ],
+        quiz: "assets/jsons/quizzes/for_loop.json",
+      ),
       CourseModel(
           title: "While Loops",
           path: "assets/courses/while_loop.md",

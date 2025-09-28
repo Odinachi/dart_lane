@@ -1,0 +1,939 @@
+[
+  {
+    "question": "Complete the following Dart code to declare an integer variable:\n\n```dart\nvoid main() {\n  %order% %order% %order% 5;\n}\n```",
+    "options": [
+      "int",
+      "age",
+      "="
+    ],
+    "answer": [
+      "int",
+      "age",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  var myBox = 'toy car';\n  print(myBox);\n}\n```",
+    "options": [
+      "toy car",
+      "myBox",
+      "Error",
+      "var"
+    ],
+    "answer": ["toy car"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare a String variable:\n\n```dart\nvoid main() {\n  %fill% name = 'David';\n}\n```",
+    "answer": [
+      "String"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare a double variable:\n\n```dart\nvoid main() {\n  %order% %order% %order% 3.5;\n}\n```",
+    "options": [
+      "double",
+      "height",
+      "="
+    ],
+    "answer": [
+      "double",
+      "height",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What data type is best for storing whole numbers?\n\n```dart\nvoid main() {\n  ? age = 10;\n}\n```",
+    "options": [
+      "int",
+      "double",
+      "String",
+      "bool"
+    ],
+    "answer": ["int"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare a boolean variable:\n\n```dart\nvoid main() {\n  %fill% isHappy = true;\n}\n```",
+    "answer": [
+      "bool"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to print a variable:\n\n```dart\nvoid main() {\n  String name = 'Alice';\n  %order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(name)",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(name)",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  int number = 10;\n  print(number + 5);\n}\n```",
+    "options": [
+      "15",
+      "10",
+      "5",
+      "Error"
+    ],
+    "answer": ["15"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to use var keyword:\n\n```dart\nvoid main() {\n  %fill% candy = 'lollipop';\n}\n```",
+    "answer": [
+      "var"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare a boolean:\n\n```dart\nvoid main() {\n  %order% %order% %order% true;\n}\n```",
+    "options": [
+      "bool",
+      "isReady",
+      "="
+    ],
+    "answer": [
+      "bool",
+      "isReady",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What data type would Dart infer for this variable?\n\n```dart\nvoid main() {\n  var count = 3;\n}\n```",
+    "options": [
+      "int",
+      "double",
+      "String",
+      "bool"
+    ],
+    "answer": ["int"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare an integer:\n\n```dart\nvoid main() {\n  %fill% score = 100;\n}\n```",
+    "answer": [
+      "int"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to assign a string:\n\n```dart\nvoid main() {\n  String city;\n  %order% %order% %order%\n}\n```",
+    "options": [
+      "city",
+      "=",
+      "'London';"
+    ],
+    "answer": [
+      "city",
+      "=",
+      "'London';"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  double price = 2.5;\n  print(price);\n}\n```",
+    "options": [
+      "2.5",
+      "2",
+      "Error",
+      "price"
+    ],
+    "answer": ["2.5"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare a double variable:\n\n```dart\nvoid main() {\n  %fill% temperature = 36.5;\n}\n```",
+    "answer": [
+      "double"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare a string with var:\n\n```dart\nvoid main() {\n  %order% %order% %order% 'Hello';\n}\n```",
+    "options": [
+      "var",
+      "message",
+      "="
+    ],
+    "answer": [
+      "var",
+      "message",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What data type stores true or false values?\n\n```dart\nvoid main() {\n  ? isActive = false;\n}\n```",
+    "options": [
+      "bool",
+      "int",
+      "String",
+      "double"
+    ],
+    "answer": ["bool"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to complete the variable assignment:\n\n```dart\nvoid main() {\n  String fruit %fill% 'apple';\n}\n```",
+    "answer": [
+      "="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to print a number:\n\n```dart\nvoid main() {\n  int age = 25;\n  %order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(age)",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(age)",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  bool isReady = true;\n  print(isReady);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "isReady",
+      "Error"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare a variable with var:\n\n```dart\nvoid main() {\n  %fill% number = 42;\n}\n```",
+    "answer": [
+      "var"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare and print a string:\n\n```dart\nvoid main() {\n  %order% %order% %order% 'World';\n  print(greeting);\n}\n```",
+    "options": [
+      "String",
+      "greeting",
+      "="
+    ],
+    "answer": [
+      "String",
+      "greeting",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What data type would Dart infer for this variable?\n\n```dart\nvoid main() {\n  var price = 19.99;\n}\n```",
+    "options": [
+      "double",
+      "int",
+      "String",
+      "bool"
+    ],
+    "answer": ["double"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to complete the boolean declaration:\n\n```dart\nvoid main() {\n  bool isComplete %fill% false;\n}\n```",
+    "answer": [
+      "="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to add two numbers:\n\n```dart\nvoid main() {\n  int a = 5;\n  int b = 3;\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "a",
+      "+",
+      "b);"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "a",
+      "+",
+      "b);"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  String name = 'Bob';\n  print(name);\n}\n```",
+    "options": [
+      "Bob",
+      "name",
+      "String",
+      "Error"
+    ],
+    "answer": ["Bob"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare an integer variable:\n\n```dart\nvoid main() {\n  %fill% count = 0;\n}\n```",
+    "answer": [
+      "int"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare a double:\n\n```dart\nvoid main() {\n  %order% %order% %order% 98.6;\n}\n```",
+    "options": [
+      "double",
+      "temp",
+      "="
+    ],
+    "answer": [
+      "double",
+      "temp",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What data type is used for text in Dart?\n\n```dart\nvoid main() {\n  ? message = 'Hello';\n}\n```",
+    "options": [
+      "String",
+      "int",
+      "bool",
+      "double"
+    ],
+    "answer": ["String"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to use quotes for a string:\n\n```dart\nvoid main() {\n  String color = %fill%red%fill%;\n}\n```",
+    "answer": [
+      "'"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare a boolean false:\n\n```dart\nvoid main() {\n  %order% %order% %order% false;\n}\n```",
+    "options": [
+      "bool",
+      "isVisible",
+      "="
+    ],
+    "answer": [
+      "bool",
+      "isVisible",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  var animal = 'cat';\n  print(animal);\n}\n```",
+    "options": [
+      "cat",
+      "animal",
+      "var",
+      "Error"
+    ],
+    "answer": ["cat"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare a string variable:\n\n```dart\nvoid main() {\n  %fill% hobby = 'reading';\n}\n```",
+    "answer": [
+      "String"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to print a calculation:\n\n```dart\nvoid main() {\n  double x = 4.5;\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "x",
+      "*",
+      "2);"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "x",
+      "*",
+      "2);"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What data type would Dart infer for this variable?\n\n```dart\nvoid main() {\n  var isOpen = true;\n}\n```",
+    "options": [
+      "bool",
+      "String",
+      "int",
+      "double"
+    ],
+    "answer": ["bool"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to assign a value:\n\n```dart\nvoid main() {\n  int points;\n  points %fill% 150;\n}\n```",
+    "answer": [
+      "="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare with var:\n\n```dart\nvoid main() {\n  %order% %order% %order% 7.2;\n}\n```",
+    "options": [
+      "var",
+      "weight",
+      "="
+    ],
+    "answer": [
+      "var",
+      "weight",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  int result = 8 + 2;\n  print(result);\n}\n```",
+    "options": [
+      "10",
+      "8",
+      "2",
+      "Error"
+    ],
+    "answer": ["10"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare a double:\n\n```dart\nvoid main() {\n  %fill% distance = 5.5;\n}\n```",
+    "answer": [
+      "double"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare a string:\n\n```dart\nvoid main() {\n  %order% %order% %order% 'pizza';\n}\n```",
+    "options": [
+      "String",
+      "food",
+      "="
+    ],
+    "answer": [
+      "String",
+      "food",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the correct way to declare a boolean variable?\n\n```dart\nvoid main() {\n  ? isDone = true;\n}\n```",
+    "options": [
+      "bool isDone = true;",
+      "boolean isDone = true;",
+      "Bool isDone = true;",
+      "BOOL isDone = true;"
+    ],
+    "answer": ["bool isDone = true;"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to complete the variable name:\n\n```dart\nvoid main() {\n  String %fill%Name = 'John';\n}\n```",
+    "answer": [
+      "first"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to use var with integer:\n\n```dart\nvoid main() {\n  %order% %order% %order% 99;\n}\n```",
+    "options": [
+      "var",
+      "level",
+      "="
+    ],
+    "answer": [
+      "var",
+      "level",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  double height = 1.75;\n  print(height);\n}\n```",
+    "options": [
+      "1.75",
+      "1",
+      "height",
+      "Error"
+    ],
+    "answer": ["1.75"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare a boolean:\n\n```dart\nvoid main() {\n  %fill% canFly = false;\n}\n```",
+    "answer": [
+      "bool"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare and assign:\n\n```dart\nvoid main() {\n  %order% %order% %order% 'blue';\n}\n```",
+    "options": [
+      "var",
+      "color",
+      "="
+    ],
+    "answer": [
+      "var",
+      "color",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What data type can hold decimal numbers?\n\n```dart\nvoid main() {\n  ? pi = 3.14;\n}\n```",
+    "options": [
+      "double",
+      "int",
+      "String",
+      "bool"
+    ],
+    "answer": ["double"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to complete the semicolon:\n\n```dart\nvoid main() {\n  int age = 20%fill%\n}\n```",
+    "answer": [
+      ";"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to print a boolean:\n\n```dart\nvoid main() {\n  bool isRunning = true;\n  %order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(isRunning)",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(isRunning)",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  var score = 85;\n  print(score);\n}\n```",
+    "options": [
+      "85",
+      "score",
+      "var",
+      "Error"
+    ],
+    "answer": ["85"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare an integer:\n\n```dart\nvoid main() {\n  %fill% year = 2024;\n}\n```",
+    "answer": [
+      "int"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare a double:\n\n```dart\nvoid main() {\n  %order% %order% %order% 12.5;\n}\n```",
+    "options": [
+      "double",
+      "length",
+      "="
+    ],
+    "answer": [
+      "double",
+      "length",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What data type would Dart infer for this variable?\n\n```dart\nvoid main() {\n  var message = 'Hello World';\n}\n```",
+    "options": [
+      "String",
+      "int",
+      "bool",
+      "double"
+    ],
+    "answer": ["String"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to use double quotes:\n\n```dart\nvoid main() {\n  String title = %fill%Dart Programming%fill%;\n}\n```",
+    "answer": [
+      "\""
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare a boolean true:\n\n```dart\nvoid main() {\n  %order% %order% %order% true;\n}\n```",
+    "options": [
+      "bool",
+      "isActive",
+      "="
+    ],
+    "answer": [
+      "bool",
+      "isActive",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  String pet = 'dog';\n  print(pet);\n}\n```",
+    "options": [
+      "dog",
+      "pet",
+      "String",
+      "Error"
+    ],
+    "answer": ["dog"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare with var:\n\n```dart\nvoid main() {\n  %fill% speed = 60;\n}\n```",
+    "answer": [
+      "var"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to subtract numbers:\n\n```dart\nvoid main() {\n  int total = 20;\n  int used = 5;\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "total",
+      "-",
+      "used);"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "total",
+      "-",
+      "used);"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Which data type is used for whole numbers in Dart?\n\n```dart\nvoid main() {\n  ? count = 15;\n}\n```",
+    "options": [
+      "int",
+      "double",
+      "String",
+      "bool"
+    ],
+    "answer": ["int"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to assign a string value:\n\n```dart\nvoid main() {\n  String country;\n  country %fill% 'USA';\n}\n```",
+    "answer": [
+      "="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare a string with var:\n\n```dart\nvoid main() {\n  %order% %order% %order% 'bicycle';\n}\n```",
+    "options": [
+      "var",
+      "transport",
+      "="
+    ],
+    "answer": [
+      "var",
+      "transport",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  bool isEmpty = false;\n  print(isEmpty);\n}\n```",
+    "options": [
+      "false",
+      "true",
+      "isEmpty",
+      "Error"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare a double variable:\n\n```dart\nvoid main() {\n  %fill% radius = 3.14;\n}\n```",
+    "answer": [
+      "double"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to print with string:\n\n```dart\nvoid main() {\n  String greeting = 'Hi';\n  %order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(greeting)",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(greeting)",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What data type stores true/false values?\n\n```dart\nvoid main() {\n  ? flag = true;\n}\n```",
+    "options": [
+      "bool",
+      "int",
+      "String",
+      "double"
+    ],
+    "answer": ["bool"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to complete variable declaration:\n\n```dart\nvoid main() {\n  int %fill% = 100;\n}\n```",
+    "answer": [
+      "maximum"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare with var:\n\n```dart\nvoid main() {\n  %order% %order% %order% 4.8;\n}\n```",
+    "options": [
+      "var",
+      "rating",
+      "="
+    ],
+    "answer": [
+      "var",
+      "rating",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  double price = 9.99;\n  print(price);\n}\n```",
+    "options": [
+      "9.99",
+      "9",
+      "price",
+      "Error"
+    ],
+    "answer": ["9.99"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare a string:\n\n```dart\nvoid main() {\n  %fill% language = 'Dart';\n}\n```",
+    "answer": [
+      "String"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare boolean:\n\n```dart\nvoid main() {\n  %order% %order% %order% false;\n}\n```",
+    "options": [
+      "bool",
+      "isEnabled",
+      "="
+    ],
+    "answer": [
+      "bool",
+      "isEnabled",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What data type would Dart infer for this variable?\n\n```dart\nvoid main() {\n  var temperature = 25;\n}\n```",
+    "options": [
+      "int",
+      "double",
+      "String",
+      "bool"
+    ],
+    "answer": ["int"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to use single quotes:\n\n```dart\nvoid main() {\n  String season = %fill%summer%fill%;\n}\n```",
+    "answer": [
+      "'"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to multiply numbers:\n\n```dart\nvoid main() {\n  int width = 5;\n  int height = 3;\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "width",
+      "*",
+      "height);"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "width",
+      "*",
+      "height);"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  var city = 'Paris';\n  print(city);\n}\n```",
+    "options": [
+      "Paris",
+      "city",
+      "var",
+      "Error"
+    ],
+    "answer": ["Paris"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare an integer:\n\n```dart\nvoid main() {\n  %fill% quantity = 12;\n}\n```",
+    "answer": [
+      "int"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare a double:\n\n```dart\nvoid main() {\n  %order% %order% %order% 15.7;\n}\n```",
+    "options": [
+      "double",
+      "volume",
+      "="
+    ],
+    "answer": [
+      "double",
+      "volume",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Which keyword lets Dart automatically determine the data type?\n\n```dart\nvoid main() {\n  ? name = 'Alice';\n}\n```",
+    "options": [
+      "var",
+      "auto",
+      "type",
+      "infer"
+    ],
+    "answer": ["var"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to assign a boolean value:\n\n```dart\nvoid main() {\n  bool isReady;\n  isReady %fill% true;\n}\n```",
+    "answer": [
+      "="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare string with var:\n\n```dart\nvoid main() {\n  %order% %order% %order% 'guitar';\n}\n```",
+    "options": [
+      "var",
+      "instrument",
+      "="
+    ],
+    "answer": [
+      "var",
+      "instrument",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  int result = 15 / 3;\n  print(result);\n}\n```",
+    "options": [
+      "5.0",
+      "5",
+      "15",
+      "Error"
+    ],
+    "answer": ["5.0"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare with var keyword:\n\n```dart\nvoid main() {\n  %fill% isVisible = false;\n}\n```",
+    "answer": [
+      "var"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to print a double:\n\n```dart\nvoid main() {\n  double weight = 65.5;\n  %order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(weight)",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(weight)",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What data type is used for text containing letters and words?\n\n```dart\nvoid main() {\n  ? description = 'A beautiful day';\n}\n```",
+    "options": [
+      "String",
+      "int",
+      "bool",
+      "double"
+    ],
+    "answer": ["String"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to complete the statement:\n\n```dart\nvoid main() {\n  double pi = 3.14159%fill%\n}\n```",
+    "answer": [
+      ";"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to declare a boolean:\n\n```dart\nvoid main() {\n  %order% %order% %order% true;\n}\n```",
+    "options": [
+      "bool",
+      "hasAccess",
+      "="
+    ],
+    "answer": [
+      "bool",
+      "hasAccess",
+      "="
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  String fruit = 'banana';\n  print(fruit);\n}\n```",
+    "options": [
+      "banana",
+      "fruit",
+      "String",
+      "Error"
+    ],
+    "answer": ["banana"],
+    "type": "mcq"
+  }
+]

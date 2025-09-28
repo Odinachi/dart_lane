@@ -147,12 +147,17 @@ class _CourseDetailsState extends State<CourseDetails> {
                           bottom: 0,
                           child: AnimatedBottomNav(
                             onQuiz: () {
-                              AppRouter.push(
-                                AppRouter.quiz,
-                                arg: CourseQuizArg(
-                                  course: courseNotifier.value,
-                                ),
-                              );
+                              if (courseNotifier.value.quiz != null) {
+                                AppRouter.push(
+                                  AppRouter.quiz,
+                                  arg: CourseQuizArg(
+                                    course: courseNotifier.value,
+                                  ),
+                                );
+                              } else {
+                                AppRouter.showMessage(
+                                    "No quiz available for this course");
+                              }
                             },
                             isVisible: show,
                             onPrevious: () {

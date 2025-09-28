@@ -1,0 +1,541 @@
+[
+  {
+    "question": "Complete the following Dart code to print a message:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "('Hello, friend!')",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "('Hello, friend!')",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print('Hello, friend!');\n}\n```",
+    "options": [
+      "Hello, friend!",
+      "print('Hello, friend!');",
+      "Error",
+      "Nothing"
+    ],
+    "answer": ["Hello, friend!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to print a message:\n\n```dart\nvoid main() {\n  %fill%('Welcome!');\n}\n```",
+    "answer": [
+      "print"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to import dart:io:\n\n```dart\n%order% %order%\nvoid main() {\n  print('Hello');\n}\n```",
+    "options": [
+      "import",
+      "'dart:io';"
+    ],
+    "answer": [
+      "import",
+      "'dart:io';"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What do you need to import to use input in Dart console apps?\n\n```dart\n? 'dart:io';\nvoid main() {\n  String? name = stdin.readLineSync();\n}\n```",
+    "options": [
+      "import",
+      "include",
+      "require",
+      "use"
+    ],
+    "answer": ["import"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to import the dart:io library:\n\n```dart\nimport %fill%;\nvoid main() {\n  print('Hello');\n}\n```",
+    "answer": [
+      "'dart:io'"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to read user input:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  print('What is your name?');\n  %order% %order% %order%\n}\n```",
+    "options": [
+      "String?",
+      "name =",
+      "stdin.readLineSync();"
+    ],
+    "answer": [
+      "String?",
+      "name =",
+      "stdin.readLineSync();"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does stdin.readLineSync() do in Dart?\n\n```dart\nimport 'dart:io';\nvoid main() {\n  String? input = stdin.readLineSync();\n}\n```",
+    "options": [
+      "Waits for the user to type something",
+      "Prints text to console",
+      "Clears the screen",
+      "Closes the program"
+    ],
+    "answer": ["Waits for the user to type something"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to read a line from standard input:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  String? input = %fill%;\n}\n```",
+    "answer": [
+      "stdin.readLineSync()"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to use string interpolation:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  String? name = stdin.readLineSync();\n  %order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "('Hello, $name!')",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "('Hello, $name!')",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program do?\n\n```dart\nimport 'dart:io';\nvoid main() {\n  print('What is your name?');\n  String? name = stdin.readLineSync();\n  print('Hello, $name!');\n}\n```",
+    "options": [
+      "Ask for name, wait for input, then greet the user",
+      "Just print 'What is your name?'",
+      "Print an error",
+      "Do nothing"
+    ],
+    "answer": ["Ask for name, wait for input, then greet the user"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to use string interpolation:\n\n```dart\nvoid main() {\n  String name = 'Alice';\n  print('Hello, %fill%name!');\n}\n```",
+    "answer": [
+      "$"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to print multiple lines:\n\n```dart\nvoid main() {\n  %order%%order%%order%\n  %order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "('First line')",
+      ";",
+      "print",
+      "('Second line')",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "('First line')",
+      ";",
+      "print",
+      "('Second line')",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print('Line 1');\n  print('Line 2');\n}\n```",
+    "options": [
+      "Line 1\\nLine 2",
+      "Line 1 Line 2",
+      "Line 2\\nLine 1",
+      "Error"
+    ],
+    "answer": ["Line 1\\nLine 2"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to complete the print statement:\n\n```dart\nvoid main() {\n  print%fill%'Welcome to Dart!'%fill%;\n}\n```",
+    "answer": [
+      "("
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to ask for user's age:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  %order%%order%%order%\n  String? age = stdin.readLineSync();\n}\n```",
+    "options": [
+      "print",
+      "('What is your age?')",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "('What is your age?')",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the print() function do in Dart?\n\n```dart\nvoid main() {\n  print('Hello World');\n}\n```",
+    "options": [
+      "Shows output to the user",
+      "Gets input from the user",
+      "Imports a library",
+      "Declares a variable"
+    ],
+    "answer": ["Shows output to the user"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to declare a nullable string for input:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  %fill% input = stdin.readLineSync();\n}\n```",
+    "answer": [
+      "String?"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code for a simple conversation:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  print('What do you want?');\n  %order% %order% %order%\n  print('Yum! I heard you want $snack!');\n}\n```",
+    "options": [
+      "String?",
+      "snack =",
+      "stdin.readLineSync();"
+    ],
+    "answer": [
+      "String?",
+      "snack =",
+      "stdin.readLineSync();"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code output if the user types 'cookies'?\n\n```dart\nimport 'dart:io';\nvoid main() {\n  print('What do you want?');\n  String? snack = stdin.readLineSync();\n  print('Yum! I heard you want $snack!');\n}\n```",
+    "options": [
+      "What do you want?\\nYum! I heard you want cookies!",
+      "Yum! I heard you want cookies!",
+      "What do you want?",
+      "Error"
+    ],
+    "answer": ["What do you want?\\nYum! I heard you want cookies!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to complete the variable assignment:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  String? name %fill% stdin.readLineSync();\n}\n```",
+    "answer": [
+      "="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to print a number:\n\n```dart\nvoid main() {\n  int age = 25;\n  %order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(age)",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(age)",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the purpose of the dart:io library?\n\n```dart\nimport 'dart:io';\nvoid main() {\n  String? input = stdin.readLineSync();\n}\n```",
+    "options": [
+      "Provides input/output features for console apps",
+      "Handles mobile app interfaces",
+      "Manages database connections",
+      "Creates web applications"
+    ],
+    "answer": ["Provides input/output features for console apps"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to print with string interpolation:\n\n```dart\nvoid main() {\n  String city = 'Paris';\n  print('I live in %fill%city');\n}\n```",
+    "answer": [
+      "$"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to create an interactive program:\n\n```dart\n%order% %order%\nvoid main() {\n  print('Enter your favorite color:');\n  String? color = stdin.readLineSync();\n  print('Nice choice! $color is beautiful.');\n}\n```",
+    "options": [
+      "import",
+      "'dart:io';"
+    ],
+    "answer": [
+      "import",
+      "'dart:io';"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when you run a Dart program with stdin.readLineSync()?\n\n```dart\nimport 'dart:io';\nvoid main() {\n  String? input = stdin.readLineSync();\n  print(input);\n}\n```",
+    "options": [
+      "The program waits for user input before continuing",
+      "The program prints immediately",
+      "The program crashes",
+      "Nothing happens"
+    ],
+    "answer": ["The program waits for user input before continuing"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to complete the print function call:\n\n```dart\nvoid main() {\n  print('Hello'%fill%;\n}\n```",
+    "answer": [
+      ")"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to ask for and greet a user:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  %order%%order%%order%\n  String? name = stdin.readLineSync();\n  print('Nice to meet you, $name!');\n}\n```",
+    "options": [
+      "print",
+      "('What is your name?')",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "('What is your name?')",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is input in programming?\n\n```dart\nimport 'dart:io';\nvoid main() {\n  String? userInput = stdin.readLineSync();\n}\n```",
+    "options": [
+      "Information given to the program by the user",
+      "Information shown by the program to the user",
+      "A type of variable",
+      "A programming language"
+    ],
+    "answer": ["Information given to the program by the user"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to import the required library:\n\n```dart\n%fill% 'dart:io';\nvoid main() {\n  String? input = stdin.readLineSync();\n}\n```",
+    "answer": [
+      "import"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to print a welcome message:\n\n```dart\nvoid main() {\n  %order% %order%\n}\n```",
+    "options": [
+      "print('Welcome to Dart programming!')",
+      ";"
+    ],
+    "answer": [
+      "print('Welcome to Dart programming!')",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  String greeting = 'Hello';\n  String name = 'World';\n  print('$greeting, $name!');\n}\n```",
+    "options": [
+      "Hello, World!",
+      "$greeting, $name!",
+      "greeting, name!",
+      "Error"
+    ],
+    "answer": ["Hello, World!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to create a variable for user input:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  String? %fill% = stdin.readLineSync();\n}\n```",
+    "answer": [
+      "input"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to use input in output:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  print('Enter a number:');\n  String? number = stdin.readLineSync();\n  %order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "('You entered: $number')",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "('You entered: $number')",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is output in programming?\n\n```dart\nvoid main() {\n  print('This is output!');\n}\n```",
+    "options": [
+      "Information shown by the program to the user",
+      "Information given to the program by the user",
+      "A type of variable",
+      "An error message"
+    ],
+    "answer": ["Information shown by the program to the user"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to use the stdin object:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  String? input = %fill%.readLineSync();\n}\n```",
+    "answer": [
+      "stdin"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code for a simple calculator prompt:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  %order%%order%%order%\n  %order%%order%%order%\n  String? num1 = stdin.readLineSync();\n  String? num2 = stdin.readLineSync();\n}\n```",
+    "options": [
+      "print",
+      "('Enter first number:')",
+      ";",
+      "print",
+      "('Enter second number:')",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "('Enter first number:')",
+      ";",
+      "print",
+      "('Enter second number:')",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What type should you use for variables that store user input?\n\n```dart\nimport 'dart:io';\nvoid main() {\n  ? userInput = stdin.readLineSync();\n}\n```",
+    "options": [
+      "String?",
+      "String",
+      "int",
+      "bool"
+    ],
+    "answer": ["String?"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to complete string interpolation:\n\n```dart\nvoid main() {\n  int score = 95;\n  print('Your score is: %fill%score');\n}\n```",
+    "answer": [
+      "$"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to print multiple variables:\n\n```dart\nvoid main() {\n  String name = 'Alice';\n  int age = 25;\n  %order% %order%\n}\n```",
+    "options": [
+      "print('Name: $name, Age: $age')",
+      ";"
+    ],
+    "answer": [
+      "print('Name: $name, Age: $age')",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will happen if you forget to import dart:io when using stdin?\n\n```dart\nvoid main() {\n  String? input = stdin.readLineSync();\n}\n```",
+    "options": [
+      "The program will have an error",
+      "The program will run normally",
+      "Only print statements will work",
+      "The program will wait forever"
+    ],
+    "answer": ["The program will have an error"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to end the print statement:\n\n```dart\nvoid main() {\n  print('Hello Dart'%fill%\n}\n```",
+    "answer": [
+      ");"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to create a chatbot response:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  print('How are you feeling today?');\n  %order% %order% %order%\n  print('I understand you feel $feeling.');\n}\n```",
+    "options": [
+      "String?",
+      "feeling =",
+      "stdin.readLineSync();"
+    ],
+    "answer": [
+      "String?",
+      "feeling =",
+      "stdin.readLineSync();"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the relationship between input and output?\n\n```dart\nimport 'dart:io';\nvoid main() {\n  print('Enter your name:'); // Output\n  String? name = stdin.readLineSync(); // Input\n  print('Hello $name!'); // Output\n}\n```",
+    "options": [
+      "Input is data from user, output is data to user",
+      "They are the same thing",
+      "Input is for mobile, output is for console",
+      "Input comes after output always"
+    ],
+    "answer": ["Input is data from user, output is data to user"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to complete the method call:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  String? input = stdin.%fill%();\n}\n```",
+    "answer": [
+      "readLineSync"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code for a food ordering program:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  %order%%order%%order%\n  String? food = stdin.readLineSync();\n  print('Great choice! One $food coming up!');\n}\n```",
+    "options": [
+      "print",
+      "('What would you like to eat?')",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "('What would you like to eat?')",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What makes Dart wait for user input?\n\n```dart\nimport 'dart:io';\nvoid main() {\n  print('Type something:');\n  String? input = stdin.readLineSync();\n  print('You typed: $input');\n}\n```",
+    "options": [
+      "stdin.readLineSync()",
+      "print()",
+      "import 'dart:io'",
+      "String?"
+    ],
+    "answer": ["stdin.readLineSync()"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to complete the import statement:\n\n```dart\nimport %fill%dart:io%fill%;\nvoid main() {\n  String? input = stdin.readLineSync();\n}\n```",
+    "answer": [
+      "'"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to echo user input:\n\n```dart\nimport 'dart:io';\nvoid main() {\n  String? input = stdin.readLineSync();\n  %order% %order%\n}\n```",
+    "options": [
+      "print(input)",
+      ";"
+    ],
+    "answer": [
+      "print(input)",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this program do?\n\n```dart\nimport 'dart:io';\nvoid main() {\n  print('Tell me a secret:');\n  String? secret = stdin.readLineSync();\n  print('Your secret is safe with me!');\n}\n```",
+    "options": [
+      "Ask for input, wait for user to type, then respond",
+      "Just print the first message",
+      "Only print the last message",
+      "Print both messages immediately"
+    ],
+    "answer": ["Ask for input, wait for user to type, then respond"],
+    "type": "mcq"
+  }
+]

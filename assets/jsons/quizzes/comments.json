@@ -1,0 +1,535 @@
+[
+  {
+    "question": "Complete the following Dart code to add a single-line comment:\n\n```dart\nvoid main() {\n  %order% %order%\n  print('Hello');\n}\n```",
+    "options": [
+      "//",
+      "This is a comment"
+    ],
+    "answer": [
+      "//",
+      "This is a comment"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  // print('Hidden');\n  print('Visible');\n}\n```",
+    "options": [
+      "Visible",
+      "Hidden",
+      "Hidden\\nVisible",
+      "Error"
+    ],
+    "answer": ["Visible"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to create a single-line comment:\n\n```dart\nvoid main() {\n  %fill% This is my favorite number\n  print(7);\n}\n```",
+    "answer": [
+      "//"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to add a multi-line comment:\n\n```dart\nvoid main() {\n  %order% %order% %order%\n  print('Hello');\n}\n```",
+    "options": [
+      "/*",
+      "This is a comment",
+      "*/"
+    ],
+    "answer": [
+      "/*",
+      "This is a comment",
+      "*/"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print('Start');\n  // print('Middle');\n  print('End');\n}\n```",
+    "options": [
+      "Start\\nEnd",
+      "Start\\nMiddle\\nEnd",
+      "Middle\\nEnd",
+      "Error"
+    ],
+    "answer": ["Start\\nEnd"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to start a multi-line comment:\n\n```dart\nvoid main() {\n  %fill% I like ice cream,\n     especially chocolate */\n  print('Yum!');\n}\n```",
+    "answer": [
+      "/*"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code with a comment:\n\n```dart\nvoid main() {\n  %order% %order% %order%\n  print('Abracadabra!');\n}\n```",
+    "options": [
+      "//",
+      "Start the magic trick",
+      "🎩✨"
+    ],
+    "answer": [
+      "//",
+      "Start the magic trick",
+      "🎩✨"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  /* print(10); */\n  print(5);\n}\n```",
+    "options": [
+      "5",
+      "10",
+      "10\\n5",
+      "Error"
+    ],
+    "answer": ["5"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to end a multi-line comment:\n\n```dart\nvoid main() {\n  /* This is a long comment\n     that spans multiple lines %fill%\n  print('Done');\n}\n```",
+    "answer": [
+      "*/"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to comment out a line:\n\n```dart\nvoid main() {\n  print('First');\n  %order% %order%\n  print('Last');\n}\n```",
+    "options": [
+      "//",
+      "print('Second');"
+    ],
+    "answer": [
+      "//",
+      "print('Second');"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print('Wake up');\n  /* print('Brush teeth');\n     print('Eat breakfast'); */\n  print('Go to school');\n}\n```",
+    "options": [
+      "Wake up\\nGo to school",
+      "Wake up\\nBrush teeth\\nEat breakfast\\nGo to school",
+      "Go to school",
+      "Error"
+    ],
+    "answer": ["Wake up\\nGo to school"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for a single-line comment:\n\n```dart\nvoid main() {\n  %fill% Pull a rabbit from the hat 🐇\n  print('🐇 appears!');\n}\n```",
+    "answer": [
+      "//"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code with a multi-line comment:\n\n```dart\nvoid main() {\n  %order%\n  %order%\n  %order%\n  print('Code runs!');\n}\n```",
+    "options": [
+      "/*",
+      "This code is commented out",
+      "*/"
+    ],
+    "answer": [
+      "/*",
+      "This code is commented out",
+      "*/"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  // This is a comment\n  print('Hello World');\n}\n```",
+    "options": [
+      "Hello World",
+      "This is a comment",
+      "This is a comment\\nHello World",
+      "Error"
+    ],
+    "answer": ["Hello World"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to comment out this line:\n\n```dart\nvoid main() {\n  print('Active');\n  %fill% print('Inactive');\n}\n```",
+    "answer": [
+      "//"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to create a comment:\n\n```dart\nvoid main() {\n  %order% %order%\n  print('Running');\n}\n```",
+    "options": [
+      "//",
+      "This line will execute"
+    ],
+    "answer": [
+      "//",
+      "This line will execute"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print('A');\n  // print('B');\n  // print('C');\n  print('D');\n}\n```",
+    "options": [
+      "A\\nD",
+      "A\\nB\\nC\\nD",
+      "B\\nC",
+      "Error"
+    ],
+    "answer": ["A\\nD"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for multi-line comment start:\n\n```dart\nvoid main() {\n  %fill%\n  This is a multi-line comment\n  that explains the code\n  */\n  print('Working');\n}\n```",
+    "answer": [
+      "/*"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code with comments:\n\n```dart\nvoid main() {\n  %order% %order% %order%\n  print('Magic!');\n  %order% %order% %order%\n}\n```",
+    "options": [
+      "//",
+      "Start magic trick",
+      "//",
+      "End magic trick"
+    ],
+    "answer": [
+      "//",
+      "Start magic trick",
+      "//",
+      "End magic trick"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  /* \n  print('Hidden1');\n  print('Hidden2');\n  */\n  print('Shown');\n}\n```",
+    "options": [
+      "Shown",
+      "Hidden1\\nHidden2\\nShown",
+      "Hidden1\\nHidden2",
+      "Error"
+    ],
+    "answer": ["Shown"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to close a multi-line comment:\n\n```dart\nvoid main() {\n  /* This comment\n     spans multiple lines\n     and ends here %fill%\n  print('Execute');\n}\n```",
+    "answer": [
+      "*/"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to add a descriptive comment:\n\n```dart\nvoid main() {\n  %order% %order% %order%\n  print(42);\n}\n```",
+    "options": [
+      "//",
+      "The answer to everything",
+      "is 42"
+    ],
+    "answer": [
+      "//",
+      "The answer to everything",
+      "is 42"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print('Line 1');\n  /*\n  print('Line 2');\n  */\n  print('Line 3');\n}\n```",
+    "options": [
+      "Line 1\\nLine 3",
+      "Line 1\\nLine 2\\nLine 3",
+      "Line 2",
+      "Error"
+    ],
+    "answer": ["Line 1\\nLine 3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for a comment symbol:\n\n```dart\nvoid main() {\n  %fill% TODO: Add more features later\n  print('Current version');\n}\n```",
+    "answer": [
+      "//"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code with a comment:\n\n```dart\nvoid main() {\n  %order% %order%\n  print('🐶');\n}\n```",
+    "options": [
+      "//",
+      "This prints a dog emoji"
+    ],
+    "answer": [
+      "//",
+      "This prints a dog emoji"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  // print('Comment');\n  print('Code');\n  // Another comment\n}\n```",
+    "options": [
+      "Code",
+      "Comment\\nCode",
+      "Comment",
+      "Error"
+    ],
+    "answer": ["Code"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to start a single-line comment:\n\n```dart\nvoid main() {\n  print('Active code');\n  %fill% This line is commented out\n}\n```",
+    "answer": [
+      "//"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to comment multiple lines:\n\n```dart\nvoid main() {\n  print('Before');\n  %order%\n  print('Hidden line 1');\n  print('Hidden line 2');\n  %order%\n  print('After');\n}\n```",
+    "options": [
+      "/*",
+      "*/"
+    ],
+    "answer": [
+      "/*",
+      "*/"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  /* First comment */\n  print('Hello');\n  /* Second comment */\n  print('World');\n}\n```",
+    "options": [
+      "Hello\\nWorld",
+      "First comment\\nHello\\nSecond comment\\nWorld",
+      "Hello",
+      "Error"
+    ],
+    "answer": ["Hello\\nWorld"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for comment syntax:\n\n```dart\nvoid main() {\n  %fill% Reminder: Test this function\n  print('Function running');\n}\n```",
+    "answer": [
+      "//"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code with inline comments:\n\n```dart\nvoid main() {\n  print('Step 1'); %order% %order%\n  print('Step 2'); %order% %order%\n}\n```",
+    "options": [
+      "//",
+      "First step",
+      "//",
+      "Second step"
+    ],
+    "answer": [
+      "//",
+      "First step",
+      "//",
+      "Second step"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print('Start');\n  // Commented out: print('Middle');\n  print('End');\n}\n```",
+    "options": [
+      "Start\\nEnd",
+      "Start\\nMiddle\\nEnd",
+      "Commented out: print('Middle');\\nEnd",
+      "Error"
+    ],
+    "answer": ["Start\\nEnd"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to create a multi-line comment:\n\n```dart\nvoid main() {\n  %fill%\n  This is a detailed explanation\n  of what the code does\n  */\n  print('Executed');\n}\n```",
+    "answer": [
+      "/*"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to add explanatory comments:\n\n```dart\nvoid main() {\n  %order% %order%\n  int age = 10;\n  %order% %order%\n  print(age);\n}\n```",
+    "options": [
+      "//",
+      "Declare age variable",
+      "//",
+      "Print the age"
+    ],
+    "answer": [
+      "//",
+      "Declare age variable",
+      "//",
+      "Print the age"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  /* \n     Multi-line comment\n     with multiple lines\n  */\n  print('Only this runs');\n}\n```",
+    "options": [
+      "Only this runs",
+      "Multi-line comment\\nwith multiple lines\\nOnly this runs",
+      "Multi-line comment",
+      "Error"
+    ],
+    "answer": ["Only this runs"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to end a multi-line comment:\n\n```dart\nvoid main() {\n  /*\n  Temporary code removal\n  print('Debug info');\n  %fill%\n  print('Final result');\n}\n```",
+    "answer": [
+      "*/"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code with a comment:\n\n```dart\nvoid main() {\n  %order% %order% %order%\n  print('🎂');\n}\n```",
+    "options": [
+      "//",
+      "Birthday cake",
+      "emoji"
+    ],
+    "answer": [
+      "//",
+      "Birthday cake",
+      "emoji"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print('A'); // Comment after code\n  // print('B'); // This line is commented\n  print('C');\n}\n```",
+    "options": [
+      "A\\nC",
+      "A\\nB\\nC",
+      "A\\nComment after code\\nC",
+      "Error"
+    ],
+    "answer": ["A\\nC"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for a comment:\n\n```dart\nvoid main() {\n  %fill% Note to self: optimize this later\n  print('Current implementation');\n}\n```",
+    "answer": [
+      "//"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to temporarily disable code:\n\n```dart\nvoid main() {\n  print('Active');\n  %order%\n  print('Disabled');\n  %order%\n  print('Active again');\n}\n```",
+    "options": [
+      "/*",
+      "*/"
+    ],
+    "answer": [
+      "/*",
+      "*/"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  // Starting the program\n  print('Program started');\n  /* \n  Debug information would go here\n  print('Debug: Variable values');\n  */\n  print('Program ended');\n}\n```",
+    "options": [
+      "Program started\\nProgram ended",
+      "Starting the program\\nProgram started\\nProgram ended",
+      "Program started\\nDebug: Variable values\\nProgram ended",
+      "Error"
+    ],
+    "answer": ["Program started\\nProgram ended"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to comment a line:\n\n```dart\nvoid main() {\n  print('Keep this');\n  %fill% print('Remove this');\n  print('Keep this too');\n}\n```",
+    "answer": [
+      "//"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code with documentation comments:\n\n```dart\nvoid main() {\n  %order% %order% %order%\n  %order% %order% %order%\n  print('Hello Dart!');\n}\n```",
+    "options": [
+      "//",
+      "This program demonstrates",
+      "//",
+      "basic Dart syntax"
+    ],
+    "answer": [
+      "//",
+      "This program demonstrates",
+      "//",
+      "basic Dart syntax"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print('Line 1');\n  // Single line comment\n  /* Multi-line\n     comment here */\n  print('Line 2');\n}\n```",
+    "options": [
+      "Line 1\\nLine 2",
+      "Line 1\\nSingle line comment\\nLine 2",
+      "Single line comment\\nMulti-line comment here",
+      "Error"
+    ],
+    "answer": ["Line 1\\nLine 2"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to start a comment:\n\n```dart\nvoid main() {\n  %fill% TODO: Implement error handling\n  print('Basic functionality');\n}\n```",
+    "answer": [
+      "//"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code with a block comment:\n\n```dart\nvoid main() {\n  %order%\n  This entire section is commented out\n  print('Hidden');\n  print('Also hidden');\n  %order%\n  print('Visible');\n}\n```",
+    "options": [
+      "/*",
+      "*/"
+    ],
+    "answer": [
+      "/*",
+      "*/"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print('Before comment');\n  /* This is a comment\n     spanning multiple\n     lines */\n  print('After comment');\n}\n```",
+    "options": [
+      "Before comment\\nAfter comment",
+      "Before comment\\nThis is a comment spanning multiple lines\\nAfter comment",
+      "After comment",
+      "Error"
+    ],
+    "answer": ["Before comment\\nAfter comment"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for comment closure:\n\n```dart\nvoid main() {\n  /* Comment starts here\n     and continues\n     until it ends %fill%\n  print('This will run');\n}\n```",
+    "answer": [
+      "*/"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code with helpful comments:\n\n```dart\nvoid main() {\n  %order% %order% %order%\n  var name = 'Alice';\n  %order% %order% %order%\n  print('Hello, $name!');\n}\n```",
+    "options": [
+      "//",
+      "Store user name",
+      "//",
+      "Greet the user"
+    ],
+    "answer": [
+      "//",
+      "Store user name",
+      "//",
+      "Greet the user"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  // print('This won\\'t show');\n  print('This will show');\n  /* print('This also won\\'t show'); */\n}\n```",
+    "options": [
+      "This will show",
+      "This won't show\\nThis will show\\nThis also won't show",
+      "This won't show",
+      "Error"
+    ],
+    "answer": ["This will show"],
+    "type": "mcq"
+  }
+]

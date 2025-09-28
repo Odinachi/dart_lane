@@ -1,0 +1,1057 @@
+[
+  {
+    "question": "Complete the following Dart code to add two numbers:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "2 + 3",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "2 + 3",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print(5 - 2);\n}\n```",
+    "options": [
+      "3",
+      "7",
+      "52",
+      "Error"
+    ],
+    "answer": ["3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to multiply 4 by 2:\n\n```dart\nvoid main() {\n  print(4 %fill% 2);\n}\n```",
+    "answer": [
+      "*"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to divide 10 by 2:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "10 / 2",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "10 / 2",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print(4 * 2);\n}\n```",
+    "options": [
+      "8",
+      "6",
+      "2",
+      "Error"
+    ],
+    "answer": ["8"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to subtract numbers:\n\n```dart\nvoid main() {\n  print(7 %fill% 3);\n}\n```",
+    "answer": [
+      "-"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to find the modulo:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "7 % 2",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "7 % 2",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print(7 % 2);\n}\n```",
+    "options": [
+      "1",
+      "3",
+      "7",
+      "2"
+    ],
+    "answer": ["1"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to add numbers:\n\n```dart\nvoid main() {\n  print(5 %fill% 4);\n}\n```",
+    "answer": [
+      "+"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to check if 5 is greater than 3:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "5 > 3",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "5 > 3",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print(4 < 2);\n}\n```",
+    "options": [
+      "false",
+      "true",
+      "4",
+      "2"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to check equality:\n\n```dart\nvoid main() {\n  print(6 %fill% 6);\n}\n```",
+    "answer": [
+      "=="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to check if numbers are not equal:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "7 != 5",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "7 != 5",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print(6 == 6);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "6",
+      "Error"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to check if a number is less than another:\n\n```dart\nvoid main() {\n  print(3 %fill% 8);\n}\n```",
+    "answer": [
+      "<"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to assign and add:\n\n```dart\nvoid main() {\n  int x = 5;\n  %order%%order%%order%\n  print(x);\n}\n```",
+    "options": [
+      "x",
+      "+=",
+      "2;"
+    ],
+    "answer": [
+      "x",
+      "+=",
+      "2;"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  int x = 5;\n  x += 2;\n  print(x);\n}\n```",
+    "options": [
+      "7",
+      "5",
+      "2",
+      "Error"
+    ],
+    "answer": ["7"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to multiply and assign:\n\n```dart\nvoid main() {\n  int x = 3;\n  x %fill% 4;\n}\n```",
+    "answer": [
+      "*="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code using logical AND:\n\n```dart\nvoid main() {\n  bool hasCandy = true;\n  bool isHappy = true;\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "hasCandy && isHappy",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "hasCandy && isHappy",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  bool hasCandy = true;\n  bool isHappy = true;\n  print(hasCandy && isHappy);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to use logical OR:\n\n```dart\nvoid main() {\n  print(true %fill% false);\n}\n```",
+    "answer": [
+      "||"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to use logical NOT:\n\n```dart\nvoid main() {\n  bool isHappy = true;\n  %order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "!isHappy",
+      ");"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "!isHappy",
+      ");"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print(!true);\n}\n```",
+    "options": [
+      "false",
+      "true",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for division operator:\n\n```dart\nvoid main() {\n  print(8 %fill% 4);\n}\n```",
+    "answer": [
+      "/"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to subtract:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "9 - 4",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "9 - 4",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the result of 10 / 2 in Dart?\n\n```dart\nvoid main() {\n  print(10 / 2);\n}\n```",
+    "options": [
+      "5.0",
+      "5",
+      "10",
+      "2"
+    ],
+    "answer": ["5.0"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to use greater than operator:\n\n```dart\nvoid main() {\n  print(8 %fill% 3);\n}\n```",
+    "answer": [
+      ">"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to check if numbers are equal:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "4 == 4",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "4 == 4",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print(5 != 3);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "5",
+      "3"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for the modulo operator:\n\n```dart\nvoid main() {\n  print(10 %fill% 3);\n}\n```",
+    "answer": [
+      "%"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to multiply:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "6 * 3",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "6 * 3",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print(10 % 3);\n}\n```",
+    "options": [
+      "1",
+      "3",
+      "10",
+      "0"
+    ],
+    "answer": ["1"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to assign a value:\n\n```dart\nvoid main() {\n  int x;\n  x %fill% 10;\n}\n```",
+    "answer": [
+      "="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code for logical OR:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "true || false",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "true || false",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print(false || true);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for logical AND:\n\n```dart\nvoid main() {\n  print(true %fill% false);\n}\n```",
+    "answer": [
+      "&&"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to check less than:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "2 < 5",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "2 < 5",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the result of 3 + 4 in Dart?\n\n```dart\nvoid main() {\n  print(3 + 4);\n}\n```",
+    "options": [
+      "7",
+      "34",
+      "1",
+      "Error"
+    ],
+    "answer": ["7"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for not equal operator:\n\n```dart\nvoid main() {\n  print(5 %fill% 8);\n}\n```",
+    "answer": [
+      "!="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to add and assign:\n\n```dart\nvoid main() {\n  int y = 3;\n  %order%%order%%order%\n}\n```",
+    "options": [
+      "y",
+      "+=",
+      "5;"
+    ],
+    "answer": [
+      "y",
+      "+=",
+      "5;"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  int x = 2;\n  x *= 3;\n  print(x);\n}\n```",
+    "options": [
+      "6",
+      "5",
+      "2",
+      "3"
+    ],
+    "answer": ["6"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for logical NOT:\n\n```dart\nvoid main() {\n  print(%fill%false);\n}\n```",
+    "answer": [
+      "!"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to divide:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "12 / 4",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "12 / 4",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print(9 > 6);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "9",
+      "6"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to multiply and assign:\n\n```dart\nvoid main() {\n  int z = 4;\n  z %fill% 2;\n}\n```",
+    "answer": [
+      "*="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code using logical AND:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "false && true",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "false && true",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print(false && true);\n}\n```",
+    "options": [
+      "false",
+      "true",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for addition:\n\n```dart\nvoid main() {\n  print(7 %fill% 2);\n}\n```",
+    "answer": [
+      "+"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code for modulo operation:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "8 % 3",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "8 % 3",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the result of 8 % 3 in Dart?\n\n```dart\nvoid main() {\n  print(8 % 3);\n}\n```",
+    "options": [
+      "2",
+      "8",
+      "3",
+      "5"
+    ],
+    "answer": ["2"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for greater than or equal:\n\n```dart\nvoid main() {\n  print(5 %fill% 5);\n}\n```",
+    "answer": [
+      ">="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to subtract and assign:\n\n```dart\nvoid main() {\n  int a = 10;\n  %order%%order%%order%\n}\n```",
+    "options": [
+      "a",
+      "-=",
+      "3;"
+    ],
+    "answer": [
+      "a",
+      "-=",
+      "3;"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  int b = 8;\n  b -= 3;\n  print(b);\n}\n```",
+    "options": [
+      "5",
+      "8",
+      "3",
+      "11"
+    ],
+    "answer": ["5"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for less than or equal:\n\n```dart\nvoid main() {\n  print(4 %fill% 6);\n}\n```",
+    "answer": [
+      "<="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code for equality check:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "7 == 8",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "7 == 8",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print(7 == 8);\n}\n```",
+    "options": [
+      "false",
+      "true",
+      "7",
+      "8"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for subtraction:\n\n```dart\nvoid main() {\n  print(15 %fill% 6);\n}\n```",
+    "answer": [
+      "-"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to multiply:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "7 * 4",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "7 * 4",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print(7 * 4);\n}\n```",
+    "options": [
+      "28",
+      "11",
+      "3",
+      "Error"
+    ],
+    "answer": ["28"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for division:\n\n```dart\nvoid main() {\n  print(20 %fill% 5);\n}\n```",
+    "answer": [
+      "/"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code using logical OR:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "false || false",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "false || false",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the result of false || false in Dart?\n\n```dart\nvoid main() {\n  print(false || false);\n}\n```",
+    "options": [
+      "false",
+      "true",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to divide and assign:\n\n```dart\nvoid main() {\n  int c = 20;\n  c %fill% 4;\n}\n```",
+    "answer": [
+      "/="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to check not equal:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "9 != 9",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "9 != 9",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print(9 != 9);\n}\n```",
+    "options": [
+      "false",
+      "true",
+      "9",
+      "Error"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for multiplication:\n\n```dart\nvoid main() {\n  print(3 %fill% 5);\n}\n```",
+    "answer": [
+      "*"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code for less than comparison:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "10 < 15",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "10 < 15",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print(10 < 15);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "10",
+      "15"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for logical NOT:\n\n```dart\nvoid main() {\n  bool isReady = false;\n  print(%fill%isReady);\n}\n```",
+    "answer": [
+      "!"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to add:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "8 + 7",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "8 + 7",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print(8 + 7);\n}\n```",
+    "options": [
+      "15",
+      "1",
+      "56",
+      "Error"
+    ],
+    "answer": ["15"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for assignment operator:\n\n```dart\nvoid main() {\n  int value;\n  value %fill% 25;\n}\n```",
+    "answer": [
+      "="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code using logical AND with variables:\n\n```dart\nvoid main() {\n  bool a = true;\n  bool b = false;\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "a && b",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "a && b",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the result of true && false in Dart?\n\n```dart\nvoid main() {\n  bool a = true;\n  bool b = false;\n  print(a && b);\n}\n```",
+    "options": [
+      "false",
+      "true",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for greater than:\n\n```dart\nvoid main() {\n  print(12 %fill% 8);\n}\n```",
+    "answer": [
+      ">"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to find remainder:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "11 % 4",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "11 % 4",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print(11 % 4);\n}\n```",
+    "options": [
+      "3",
+      "2",
+      "7",
+      "4"
+    ],
+    "answer": ["3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for equality comparison:\n\n```dart\nvoid main() {\n  print(10 %fill% 10);\n}\n```",
+    "answer": [
+      "=="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to subtract:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "20 - 8",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "20 - 8",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following Dart code?\n\n```dart\nvoid main() {\n  print(20 - 8);\n}\n```",
+    "options": [
+      "12",
+      "28",
+      "20",
+      "8"
+    ],
+    "answer": ["12"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank to use logical OR with variables:\n\n```dart\nvoid main() {\n  bool x = false;\n  bool y = true;\n  print(x %fill% y);\n}\n```",
+    "answer": [
+      "||"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code for division:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "16 / 4",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "16 / 4",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  print(16 / 4);\n}\n```",
+    "options": [
+      "4.0",
+      "4",
+      "16",
+      "Error"
+    ],
+    "answer": ["4.0"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for less than comparison:\n\n```dart\nvoid main() {\n  print(6 %fill% 10);\n}\n```",
+    "answer": [
+      "<"
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code to multiply variables:\n\n```dart\nvoid main() {\n  int p = 4;\n  int q = 6;\n  %order%%order%%order%%order%%order%\n}\n```",
+    "options": [
+      "print",
+      "(",
+      "p * q",
+      ")",
+      ";"
+    ],
+    "answer": [
+      "print",
+      "(",
+      "p * q",
+      ")",
+      ";"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the result of multiplying 4 and 6?\n\n```dart\nvoid main() {\n  int p = 4;\n  int q = 6;\n  print(p * q);\n}\n```",
+    "options": [
+      "24",
+      "10",
+      "2",
+      "Error"
+    ],
+    "answer": ["24"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blank for not equal comparison:\n\n```dart\nvoid main() {\n  print(15 %fill% 20);\n}\n```",
+    "answer": [
+      "!="
+    ],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the following Dart code using compound assignment:\n\n```dart\nvoid main() {\n  int num = 12;\n  %order%%order%%order%\n  print(num);\n}\n```",
+    "options": [
+      "num",
+      "+=",
+      "8;"
+    ],
+    "answer": [
+      "num",
+      "+=",
+      "8;"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this Dart program print?\n\n```dart\nvoid main() {\n  int num = 12;\n  num += 8;\n  print(num);\n}\n```",
+    "options": [
+      "20",
+      "12",
+      "8",
+      "4"
+    ],
+    "answer": ["20"],
+    "type": "mcq"
+  }
+]

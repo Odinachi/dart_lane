@@ -1,4 +1,3 @@
-import 'package:dartcoder/features/courses/views/widget/full_screen_video.dart';
 import 'package:dartcoder/shared/assets.dart';
 import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/shared/theme.dart';
