@@ -1,0 +1,509 @@
+[
+  {
+    "question": "Complete the list declaration:\n\n```dart\nvoid main() {\n  %order%%order%%order% numbers = [1, 2, 3];\n  print(numbers);\n}\n```",
+    "options": [
+      "List<int>"
+    ],
+    "answer": [
+      "List<int>"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  List<String> fruits = ['apple', 'banana', 'orange'];\n  print(fruits[1]);\n}\n```",
+    "options": [
+      "banana",
+      "apple", 
+      "orange",
+      "Error"
+    ],
+    "answer": ["banana"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to add an element to the list:\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  numbers.%fill%(4);\n  print(numbers);\n}\n```",
+    "answer": ["add"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  List<String> colors = ['red', 'green', 'blue'];\n  colors.removeAt(1);\n  print(colors);\n}\n```",
+    "options": [
+      "['red', 'blue']",
+      "['red', 'green']",
+      "['green', 'blue']",
+      "Error"
+    ],
+    "answer": ["['red', 'blue']"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you declare a constant list in Dart?\n\n```dart\nvoid main() {\n  var %fill% = [1, 2, 3];\n  print(fixedNumbers);\n}\n```",
+    "answer": ["fixedNumbers"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  numbers.insert(1, 4);\n  print(numbers);\n}\n```",
+    "options": [
+      "[1, 4, 2, 3]",
+      "[4, 1, 2, 3]",
+      "[1, 2, 4, 3]",
+      "Error"
+    ],
+    "answer": ["[1, 4, 2, 3]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create a list with three double values:\n\n```dart\nvoid main() {\n  List<%fill%> prices = [19.99, 9.99, 14.99];\n  print(prices);\n}\n```",
+    "answer": ["double"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  List<String> animals = ['cat', 'dog', 'fish'];\n  animals[0] = 'bird';\n  print(animals);\n}\n```",
+    "options": [
+      "['bird', 'dog', 'fish']",
+      "['cat', 'dog', 'fish']",
+      "['cat', 'bird', 'fish']",
+      "Error"
+    ],
+    "answer": ["['bird', 'dog', 'fish']"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you make a list unmodifiable in Dart?\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3];\n  var unmodifiableNumbers = List.unmodifiable(numbers);\n  unmodifiableNumbers.%fill%(4);\n  print(unmodifiableNumbers);\n}\n```",
+    "answer": ["add"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the output of this code?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.length);\n}\n```",
+    "options": [
+      "3",
+      "null",
+      "Error",
+      "1, 2, 3"
+    ],
+    "answer": ["3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a list of strings:\n\n```dart\nvoid main() {\n  List<%fill%> fruits = ['apple', 'banana', 'cherry'];\n  print(fruits);\n}\n```",
+    "answer": ["String"],
+    "type": "fill"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  numbers.remove(2);\n  print(numbers);\n}\n```",
+    "options": [
+      "[1, 3]",
+      "[2, 3]",
+      "[1, 2]",
+      "Error"
+    ],
+    "answer": ["[1, 3]"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you declare an empty list in Dart?\n\n```dart\nvoid main() {\n  var %fill% = [];\n  print(emptyList);\n}\n```",
+    "answer": ["emptyList"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<String> names = ['John', 'Doe', 'Jane'];\n  print(names.join(' '));\n}\n```",
+    "options": [
+      "John Doe Jane",
+      "['John', 'Doe', 'Jane']",
+      "Error",
+      "John,Doe,Jane"
+    ],
+    "answer": ["John Doe Jane"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to add multiple values to a list:\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  numbers.%fill%([4, 5, 6]);\n  print(numbers);\n}\n```",
+    "answer": ["addAll"],
+    "type": "fill"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.first);\n}\n```",
+    "options": [
+      "1",
+      "3",
+      "Error",
+      "null"
+    ],
+    "answer": ["1"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a list of integers:\n\n```dart\nvoid main() {\n  List<%fill%> numbers = [1, 2, 3];\n  print(numbers);\n}\n```",
+    "answer": ["int"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<String> words = ['hello', 'world'];\n  print(words.length);\n}\n```",
+    "options": [
+      "2",
+      "5",
+      "Error",
+      "10"
+    ],
+    "answer": ["2"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you create a fixed-length list in Dart?\n\n```dart\nvoid main() {\n  var fixedList = List<%fill%>(3);\n  print(fixedList);\n}\n```",
+    "answer": ["int"],
+    "type": "fill"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.last);\n}\n```",
+    "options": [
+      "1",
+      "3",
+      "Error",
+      "null"
+    ],
+    "answer": ["3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a list of booleans:\n\n```dart\nvoid main() {\n  List<%fill%> flags = [true, false, true];\n  print(flags);\n}\n```",
+    "answer": ["bool"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<String> items = ['a', 'b', 'c'];\n  items.sort();\n  print(items);\n}\n```",
+    "options": [
+      "['a', 'b', 'c']",
+      "['c', 'b', 'a']",
+      "Error",
+      "['b', 'a', 'c']"
+    ],
+    "answer": ["['a', 'b', 'c']"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you check if a list contains a specific value?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.%fill%(2));\n}\n```",
+    "answer": ["contains"],
+    "type": "fill"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.reversed);\n}\n```",
+    "options": [
+      "[3, 2, 1]",
+      "[1, 2, 3]",
+      "Error",
+      "[2, 1, 3]"
+    ],
+    "answer": ["[3, 2, 1]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a list of runtime type:\n\n```dart\nvoid main() {\n  var items = List<%fill%>();\n  items.add('apple');\n  items.add(1);\n  print(items);\n}\n```",
+    "answer": ["dynamic"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  numbers.clear();\n  print(numbers);\n}\n```",
+    "options": [
+      "[]",
+      "[null]",
+      "Error",
+      "[1, 2, 3]"
+    ],
+    "answer": ["[]"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you convert a set to a list in Dart?\n\n```dart\nvoid main() {\n  Set<int> numberSet = {1, 2, 3};\n  List<int> numberList = numberSet.%fill%();\n  print(numberList);\n}\n```",
+    "answer": ["toList"],
+    "type": "fill"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nvoid main() {\n  List<String> names = ['John', 'Doe', 'Jane'];\n  print(names.sublist(1));\n}\n```",
+    "options": [
+      "['Doe', 'Jane']",
+      "['John', 'Doe']",
+      "Error",
+      "['Jane']"
+    ],
+    "answer": ["['Doe', 'Jane']"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to find the index of an element:\n\n```dart\nvoid main() {\n  List<String> fruits = ['apple', 'banana', 'cherry'];\n  int index = fruits.%fill%('banana');\n  print(index);\n}\n```",
+    "answer": ["indexOf"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.reduce((a, b) => a + b));\n}\n```",
+    "options": [
+      "6",
+      "Error",
+      "1, 2, 3",
+      "null"
+    ],
+    "answer": ["6"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you create a list with a specific length and fill it with a value?\n\n```dart\nvoid main() {\n  var list = List.filled(3, %fill%);\n  print(list);\n}\n```",
+    "answer": ["0"],
+    "type": "fill"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  List<String> words = ['dart', 'flutter', 'river'];\n  print(words.where((word) => word.contains('r')));\n}\n```",
+    "options": [
+      "['river']",
+      "['dart', 'river']",
+      "Error",
+      "['flutter', 'river']"
+    ],
+    "answer": ["['dart', 'river']"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a list of compile-time constant:\n\n```dart\nvoid main() {\n  var colors = const <%fill%>[Colors.red, Colors.green, Colors.blue];\n  print(colors);\n}\n```",
+    "answer": ["Color"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.skip(1));\n}\n```",
+    "options": [
+      "[2, 3]",
+      "[1, 2]",
+      "Error",
+      "[3]"
+    ],
+    "answer": ["[2, 3]"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you convert a list to a set in Dart?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  Set<int> numberSet = numbers.%fill%();\n  print(numberSet);\n}\n```",
+    "answer": ["toSet"],
+    "type": "fill"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nvoid main() {\n  List<String> fruits = ['apple', 'banana', 'apple'];\n  print(fruits.toSet());\n}\n```",
+    "options": [
+      "['apple', 'banana']",
+      "['banana', 'apple']",
+      "Error",
+      "['apple', 'apple', 'banana']"
+    ],
+    "answer": ["['apple', 'banana']"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create a list from a range:\n\n```dart\nvoid main() {\n  var list = List.generate(5, (index) => index * 2);\n  print(%fill%);\n}\n```",
+    "answer": ["list"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.every((number) => number > 0));\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you create a list from another list in Dart?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  List<int> moreNumbers = List.from(numbers);\n  print(moreNumbers);\n}\n```",
+    "options": [
+      "List.copy(numbers)",
+      "List.clone(numbers)",
+      "List.from(numbers)",
+      "Error"
+    ],
+    "answer": ["List.from(numbers)"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a list of nullable integers:\n\n```dart\nvoid main() {\n  List<%fill%> numbers = [1, 2, 3];\n  print(numbers);\n}\n```",
+    "answer": ["int?"],
+    "type": "fill"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.fold(0, (prev, element) => prev + element));\n}\n```",
+    "options": [
+      "6",
+      "123",
+      "Error",
+      "null"
+    ],
+    "answer": ["6"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you create an empty growable list in Dart?\n\n```dart\nvoid main() {\n  var %fill% = List.empty(growable: true);\n  print(emptyGrowableList);\n}\n```",
+    "answer": ["emptyGrowableList"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<String> items = ['one', 'two', 'three'];\n  print(items.reversed.toList());\n}\n```",
+    "options": [
+      "['three', 'two', 'one']",
+      "['one', 'two', 'three']",
+      "Error",
+      "['two', 'one', 'three']"
+    ],
+    "answer": ["['three', 'two', 'one']"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to filter a list:\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3, 4, 5];\n  var evenNumbers = numbers.%fill%((number) => number.isEven);\n  print(evenNumbers);\n}\n```",
+    "answer": ["where"],
+    "type": "fill"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nvoid main() {\n  List<String> words = ['dart', 'flutter', 'river'];\n  print(words.any((word) => word.contains('u')));\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you create a list with initial values in Dart?\n\n```dart\nvoid main() {\n  var %fill% = [1, 2, 3];\n  print(initializedList);\n}\n```",
+    "answer": ["initializedList"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.skipWhile((number) => number < 3));\n}\n```",
+    "options": [
+      "[3]",
+      "[1, 2, 3]",
+      "Error",
+      "[2, 3]"
+    ],
+    "answer": ["[3]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a list of compile-time constant:\n\n```dart\nvoid main() {\n  var colors = const <%fill%>[Colors.red, Colors.green, Colors.blue];\n  print(colors);\n}\n```",
+    "answer": ["Color"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.take(2));\n}\n```",
+    "options": [
+      "[1, 2]",
+      "[2, 3]",
+      "Error",
+      "[1, 2, 3]"
+    ],
+    "answer": ["[1, 2]"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you convert a list to a set in Dart?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  Set<int> numberSet = numbers.%fill%();\n  print(numberSet);\n}\n```",
+    "answer": ["toSet"],
+    "type": "fill"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nvoid main() {\n  List<String> fruits = ['apple', 'banana', 'apple'];\n  print(fruits.toSet());\n}\n```",
+    "options": [
+      "['apple', 'banana']",
+      "['banana', 'apple']",
+      "Error",
+      "['apple', 'apple', 'banana']"
+    ],
+    "answer": ["['apple', 'banana']"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create a list from a range:\n\n```dart\nvoid main() {\n  var list = List.generate(5, (index) => index * 2);\n  print(%fill%);\n}\n```",
+    "answer": ["list"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.every((number) => number > 0));\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you create a list from another list in Dart?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  List<int> moreNumbers = List.from(numbers);\n  print(moreNumbers);\n}\n```",
+    "options": [
+      "List.copy(numbers)",
+      "List.clone(numbers)",
+      "List.from(numbers)",
+      "Error"
+    ],
+    "answer": ["List.from(numbers)"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a list of nullable integers:\n\n```dart\nvoid main() {\n  List<%fill%> numbers = [1, 2, 3];\n  print(numbers);\n}\n```",
+    "answer": ["int?"],
+    "type": "fill"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.fold(0, (prev, element) => prev + element));\n}\n```",
+    "options": [
+      "6",
+      "123",
+      "Error",
+      "null"
+    ],
+    "answer": ["6"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you create an empty growable list in Dart?\n\n```dart\nvoid main() {\n  var %fill% = List.empty(growable: true);\n  print(emptyGrowableList);\n}\n```",
+    "answer": ["emptyGrowableList"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<String> items = ['one', 'two', 'three'];\n  print(items.reversed.toList());\n}\n```",
+    "options": [
+      "['three', 'two', 'one']",
+      "['one', 'two', 'three']",
+      "Error",
+      "['two', 'one', 'three']"
+    ],
+    "answer": ["['three', 'two', 'one']"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to filter a list:\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3, 4, 5];\n  var evenNumbers = numbers.%fill%((number) => number.isEven);\n  print(evenNumbers);\n}\n```",
+    "answer": ["where"],
+    "type": "fill"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nvoid main() {\n  List<String> words = ['dart', 'flutter', 'river'];\n  print(words.any((word) => word.contains('u')));\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you create a list with initial values in Dart?\n\n```dart\nvoid main() {\n  var %fill% = [1, 2, 3];\n  print(initializedList);\n}\n```",
+    "answer": ["initializedList"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of this code?\n\n```dart\nvoid main() {\n  List<int> numbers = [1, 2, 3];\n  print(numbers.skipWhile((number) => number < 3));\n}\n```",
+    "options": [
+      "[3]",
+      "[1, 2, 3]",
+      "Error",
+      "[2, 3]"
+    ],
+    "answer": ["[3]"],
+    "type": "mcq"
+  }
+]

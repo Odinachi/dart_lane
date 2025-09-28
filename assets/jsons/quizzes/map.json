@@ -1,0 +1,572 @@
+[
+  {
+    "question": "Complete the map declaration:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order% student = {'name': 'John', 'age': 20};\n  print(student);\n}\n```",
+    "options": [
+      "Map<String, dynamic>"
+    ],
+    "answer": [
+      "Map<String, dynamic>"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  Map<String, int> scores = {'math': 95, 'english': 88};\n  print(scores['math']);\n}\n```",
+    "options": [
+      "95",
+      "math",
+      "88", 
+      "Error"
+    ],
+    "answer": ["95"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the syntax to access a map value:\n\n```dart\nvoid main() {\n  Map<String, String> colors = {'red': '#FF0000', 'blue': '#0000FF'};\n  print(colors%fill%'red'%fill%);\n}\n```",
+    "answer": ["[", "]"],
+    "type": "fill"
+  },
+  {
+    "question": "Given the map `var map = {'a': 1, 'b': 2};`, how would you access the value `2`?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  print(map%fill%'b'%fill%);\n}\n```",
+    "answer": ["[", "]"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map['a'] = 3;\n  print(map);\n}\n```",
+    "options": [
+      "{a: 3, b: 2}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: 3, b: 2}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you add a new key-value pair to an existing map?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map.%fill%('c', 3);\n  print(map);\n}\n```",
+    "answer": ["putIfAbsent"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map.remove('a');\n  print(map);\n}\n```",
+    "options": [
+      "{b: 2}",
+      "{a: 1}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{b: 2}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to iterate over map keys:\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  for (var key in map.%fill%) {\n    print(key);\n  }\n}\n```",
+    "answer": ["keys"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the code to iterate over map values:\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  for (var value in map.%fill%) {\n    print(value);\n  }\n}\n```",
+    "answer": ["values"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map['c'] ??= 3;\n  print(map);\n}\n```",
+    "options": [
+      "{a: 1, b: 2, c: 3}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: 1, b: 2, c: 3}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you check if a map contains a specific key?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  if (map.%fill%('a')) {\n    print('Key exists');\n  } else {\n    print('Key does not exist');\n  }\n}\n```",
+    "answer": ["containsKey"],
+    "type": "fill"
+  },
+  {
+    "question": "How can you check if a map contains a specific value?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  if (map.%fill%('value')) {\n    print('Value exists');\n  } else {\n    print('Value does not exist');\n  }\n}\n```",
+    "answer": ["containsValue"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var keys = map.keys.toList();\n  print(keys);\n}\n```",
+    "options": [
+      "['a', 'b']",
+      "['b', 'a']",
+      "Error",
+      "[]"
+    ],
+    "answer": ["['a', 'b']"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var values = map.values.toList();\n  print(values);\n}\n```",
+    "options": [
+      "[1, 2]",
+      "[2, 1]",
+      "Error",
+      "[]"
+    ],
+    "answer": ["[1, 2]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to clear all entries in a map:\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map.%fill%();\n  print(map);\n}\n```",
+    "answer": ["clear"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map.addAll({'c': 3, 'd': 4});\n  print(map);\n}\n```",
+    "options": [
+      "{a: 1, b: 2, c: 3, d: 4}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: 1, b: 2, c: 3, d: 4}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a map from two lists, one of keys and one of values?\n\n```dart\nvoid main() {\n  var keys = ['a', 'b', 'c'];\n  var values = [1, 2, 3];\n  var map = %fill%<String, int>(keys, values);\n  print(map);\n}\n```",
+    "answer": ["Map.fromIterables"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var entries = map.entries;\n  print(entries);\n}\n```",
+    "options": [
+      "Instance of 'MapEntry'",
+      "Error",
+      "[]",
+      "[MapEntry(a: 1), MapEntry(b: 2)]"
+    ],
+    "answer": ["Instance of 'MapEntry'"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you convert a map to a list of its keys?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var keysList = map.%fill%();\n  print(keysList);\n}\n```",
+    "answer": ["keys.toList"],
+    "type": "fill"
+  },
+  {
+    "question": "How can you convert a map to a list of its values?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var valuesList = map.%fill%();\n  print(valuesList);\n}\n```",
+    "answer": ["values.toList"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var result = map.map((key, value) => MapEntry(key, value * 2));\n  print(result);\n}\n```",
+    "options": [
+      "{a: 2, b: 4}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: 2, b: 4}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you filter a map based on its values?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2, 'c': 3};\n  var filtered = map.%fill%((key, value) => value > 1);\n  print(filtered);\n}\n```",
+    "answer": ["where"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2, 'c': 3};\n  var keys = map.keys.toList(growable: false);\n  print(keys);\n}\n```",
+    "options": [
+      "['a', 'b', 'c']",
+      "['c', 'b', 'a']",
+      "Error",
+      "[]"
+    ],
+    "answer": ["['a', 'b', 'c']"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2, 'c': 3};\n  var values = map.values.toList(growable: false);\n  print(values);\n}\n```",
+    "options": [
+      "[1, 2, 3]",
+      "[3, 2, 1]",
+      "Error",
+      "[]"
+    ],
+    "answer": ["[1, 2, 3]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create an unmodifiable map:\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var unmodifiableMap = Map.%fill%(map);\n  print(unmodifiableMap);\n}\n```",
+    "answer": ["unmodifiable"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var jsonString = json.encode(map);\n  print(jsonString);\n}\n```",
+    "options": [
+      "{'a': 1, 'b': 2}",
+      "Error",
+      "{}",
+      "[a: 1, b: 2]"
+    ],
+    "answer": ["{'a': 1, 'b': 2}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you decode a JSON string to a map?\n\n```dart\nvoid main() {\n  var jsonString = '{\"a\": 1, \"b\": 2}';\n  var map = json.%fill%(jsonString);\n  print(map);\n}\n```",
+    "answer": ["decode"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var jsonString = json.encode(map);\n  var decodedMap = json.decode(jsonString);\n  print(decodedMap);\n}\n```",
+    "options": [
+      "{a: 1, b: 2}",
+      "Error",
+      "{}",
+      "[a: 1, b: 2]"
+    ],
+    "answer": ["{a: 1, b: 2}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a map from an iterable of keys and an iterable of values?\n\n```dart\nvoid main() {\n  var keys = ['a', 'b', 'c'];\n  var values = [1, 2, 3];\n  var map = Map.fromIterables(%fill%, %fill%);\n  print(map);\n}\n```",
+    "answer": ["keys", "values"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var jsonString = json.encode(map);\n  var decodedMap = json.decode(jsonString);\n  print(decodedMap['a']);\n}\n```",
+    "options": [
+      "1",
+      "Error",
+      "null",
+      "a"
+    ],
+    "answer": ["1"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you safely access a value in a map that might not exist?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var value = map.%fill%('c', defaultValue: 0);\n  print(value);\n}\n```",
+    "answer": ["putIfAbsent"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map.update('a', (value) => value + 1);\n  print(map);\n}\n```",
+    "options": [
+      "{a: 2, b: 2}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: 2, b: 2}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you update multiple values in a map at once?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map.%fill%({'a': 3, 'b': 4});\n  print(map);\n}\n```",
+    "answer": ["updateAll"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map.forEach((key, value) { map[key] = value * 2; });\n  print(map);\n}\n```",
+    "options": [
+      "{a: 2, b: 4}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: 2, b: 4}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a map with a specific type for keys and values?\n\n```dart\nvoid main() {\n  var map = Map<%fill%, %fill%>();\n  map['a'] = 1;\n  print(map);\n}\n```",
+    "answer": ["String", "int"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var keys = map.keys.toList();\n  keys.sort();\n  print(keys);\n}\n```",
+    "options": [
+      "['a', 'b']",
+      "['b', 'a']",
+      "Error",
+      "[]"
+    ],
+    "answer": ["['a', 'b']"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var values = map.values.toList();\n  values.sort((a, b) => b.compareTo(a));\n  print(values);\n}\n```",
+    "options": [
+      "[2, 1]",
+      "[1, 2]",
+      "Error",
+      "[]"
+    ],
+    "answer": ["[2, 1]"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create a map with constant values:\n\n```dart\nvoid main() {\n  var map = const {%fill%: 1, %fill%: 2};\n  print(map);\n}\n```",
+    "answer": ["a", "b"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var copy = Map.from(map);\n  copy['a'] = 3;\n  print(map);\n}\n```",
+    "options": [
+      "{a: 1, b: 2}",
+      "{a: 3, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: 1, b: 2}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a map with a mix of constant and variable values?\n\n```dart\nvoid main() {\n  var a = 1;\n  var map = {%fill%: a, 'b': 2};\n  print(map);\n}\n```",
+    "answer": ["const"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var keys = map.keys.toList();\n  keys.shuffle();\n  print(keys);\n}\n```",
+    "options": [
+      "Random order of ['a', 'b']",
+      "['a', 'b']",
+      "Error",
+      "[]"
+    ],
+    "answer": ["Random order of ['a', 'b']"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create a map with a function as a value:\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map['c'] = %fill%;\n  print(map);\n}\n```",
+    "answer": ["() => 3"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map['c'] = () => 3;\n  print(map['c']());\n}\n```",
+    "options": [
+      "3",
+      "Error",
+      "null",
+      "c"
+    ],
+    "answer": ["3"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a map where the keys are generated by a function?\n\n```dart\nvoid main() {\n  var map = Map.generate(3, (index) => MapEntry(index, index * 2));\n  print(map);\n}\n```",
+    "answer": ["generate"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = Map.generate(3, (index) => MapEntry(index, index * 2));\n  print(map);\n}\n```",
+    "options": [
+      "{0: 0, 1: 2, 2: 4}",
+      "{0: 1, 1: 2, 2: 3}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{0: 0, 1: 2, 2: 4}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create a map with a default value for missing keys:\n\n```dart\nvoid main() {\n  var map = Map<String, int>.fromIterables(keys, values);\n  map.putIfAbsent('d', () => 4);\n  print(map);\n}\n```",
+    "answer": ["putIfAbsent"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map.update('b', (value) => value * 2);\n  print(map);\n}\n```",
+    "options": [
+      "{a: 1, b: 4}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: 1, b: 4}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a map that delegates to another map?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var proxy = MapView(map);\n  proxy['c'] = 3;\n  print(map);\n}\n```",
+    "answer": ["MapView"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var proxy = MapView(map);\n  proxy['a'] = 3;\n  print(map);\n}\n```",
+    "options": [
+      "{a: 3, b: 2}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: 3, b: 2}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create a map with a custom equality function:\n\n```dart\nvoid main() {\n  var map = Map<%fill%, %fill%>(equals: (a, b) => a == b);\n  map['a'] = 1;\n  print(map);\n}\n```",
+    "answer": ["String", "int"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var proxy = map.map((key, value) => MapEntry(key, value * 2));\n  print(proxy);\n}\n```",
+    "options": [
+      "{a: 2, b: 4}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: 2, b: 4}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a map that is a view of a subset of another map?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2, 'c': 3};\n  var subMap = map.map((key, value) => MapEntry(key, value)).where((key, value) => value > 1);\n  print(subMap);\n}\n```",
+    "answer": ["where"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2, 'c': 3};\n  var subMap = map.map((key, value) => MapEntry(key, value)).where((key, value) => value > 1);\n  print(subMap);\n}\n```",
+    "options": [
+      "{b: 2, c: 3}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{b: 2, c: 3}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create a map with a custom hash code function:\n\n```dart\nvoid main() {\n  var map = Map<%fill%, %fill%>(hashCode: (key) => key.hashCode);\n  map['a'] = 1;\n  print(map);\n}\n```",
+    "answer": ["String", "int"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var proxy = map.map((key, value) => MapEntry(key, value * 2));\n  print(proxy);\n}\n```",
+    "options": [
+      "{a: 2, b: 4}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: 2, b: 4}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a map that is a view of another map with a different value type?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var view = map.map((key, value) => MapEntry(key, value.toString()));\n  print(view);\n}\n```",
+    "answer": ["map"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var view = map.map((key, value) => MapEntry(key, value.toString()));\n  print(view);\n}\n```",
+    "options": [
+      "{a: '1', b: '2'}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: '1', b: '2'}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create a map with a custom merge function:\n\n```dart\nvoid main() {\n  var map = Map<%fill%, %fill%>(merge: (a, b) => a + b);\n  map['a'] = 1;\n  print(map);\n}\n```",
+    "answer": ["String", "int"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var proxy = map.map((key, value) => MapEntry(key, value * 2));\n  print(proxy);\n}\n```",
+    "options": [
+      "{a: 2, b: 4}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: 2, b: 4}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a map that is a view of another map with a different key type?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var view = map.map((key, value) => MapEntry(key.toString(), value));\n  print(view);\n}\n```",
+    "answer": ["map"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var view = map.map((key, value) => MapEntry(key.toString(), value));\n  print(view);\n}\n```",
+    "options": [
+      "{a: 1, b: 2}",
+      "{a: '1', b: '2'}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: '1', b: '2'}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create a map with a custom forEach function:\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map.forEach((key, value) => print('\\$key: \\$value'));\n}\n```",
+    "answer": ["forEach"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  map.forEach((key, value) => print('\\$key: \\$value'));\n}\n```",
+    "options": [
+      "a: 1 b: 2",
+      "Error",
+      "null",
+      "[]"
+    ],
+    "answer": ["a: 1 b: 2"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a map that is a view of another map with a different value type and a different key type?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var view = map.map((key, value) => MapEntry(key.toString(), value.toString()));\n  print(view);\n}\n```",
+    "answer": ["map"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var view = map.map((key, value) => MapEntry(key.toString(), value.toString()));\n  print(view);\n}\n```",
+    "options": [
+      "{a: '1', b: '2'}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: '1', b: '2'}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create a map with a custom toString function:\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var proxy = map.map((key, value) => MapEntry(key, value.toString()));\n  print(proxy);\n}\n```",
+    "answer": ["toString"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var proxy = map.map((key, value) => MapEntry(key, value.toString()));\n  print(proxy);\n}\n```",
+    "options": [
+      "{a: '1', b: '2'}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: '1', b: '2'}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the code to create a map with a custom operator[] function:\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var proxy = map.map((key, value) => MapEntry(key, value * 2));\n  print(proxy['a']);\n}\n```",
+    "answer": ["operator[]"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var proxy = map.map((key, value) => MapEntry(key, value * 2));\n  print(proxy['a']);\n}\n```",
+    "options": [
+      "2",
+      "Error",
+      "null",
+      "a"
+    ],
+    "answer": ["2"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a map that is a view of another map with a different key type and a different value type?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var view = map.map((key, value) => MapEntry(key.toString(), value.toString()));\n  print(view);\n}\n```",
+    "answer": ["map"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'a': 1, 'b': 2};\n  var view = map.map((key, value) => MapEntry(key.toString(), value.toString()));\n  print(view);\n}\n```",
+    "options": [
+      "{a: '1', b: '2'}",
+      "{a: 1, b: 2}",
+      "Error",
+      "{}"
+    ],
+    "answer": ["{a: '1', b: '2'}"],
+    "type": "mcq"
+  }
+]

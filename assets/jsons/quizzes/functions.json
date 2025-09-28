@@ -1,0 +1,1338 @@
+[
+  {
+    "question": "Complete the function declaration:\n\n```dart\n%order% %order% greet() {\n  print('Hello World');\n}\n\nvoid main() {\n  greet();\n}\n```",
+    "options": [
+      "void"
+    ],
+    "answer": [
+      "void"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this function return?\n\n```dart\nint add(int a, int b) {\n  return a + b;\n}\n\nvoid main() {\n  print(add(5, 3));\n}\n```",
+    "options": [
+      "8",
+      "5", 
+      "3",
+      "Error"
+    ],
+    "answer": ["8"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the return type for this function:\n\n```dart\n%fill% multiply(int x, int y) {\n  return x * y;\n}\n\nvoid main() {\n  print(multiply(4, 5));\n}\n```",
+    "answer": ["int"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the function with parameters:\n\n```dart\nvoid %order%(%order% %order% name) {\n  print('Hello $name');\n}\n\nvoid main() {\n  sayHello('Alice');\n}\n```",
+    "options": [
+      "sayHello",
+      "String",
+      "name"
+    ],
+    "answer": [
+      "sayHello",
+      "String",
+      "name"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does this function output?\n\n```dart\nString getName() {\n  return 'John';\n}\n\nvoid main() {\n  String result = getName();\n  print('Name: $result');\n}\n```",
+    "options": [
+      "Name: John",
+      "John",
+      "Name:",
+      "Error"
+    ],
+    "answer": ["Name: John"],
+    "type": "mcq"
+  },
+  {
+    "question": "Which of the following is a valid optional parameter in Dart?\n\n```dart\nvoid functionName(String name, {int age}) {\n  // function body\n}\n\nvoid main() {\n  functionName('Alice', age: 30);\n}\n```",
+    "options": [
+      "age: 30",
+      "30",
+      "age",
+      "Error"
+    ],
+    "answer": ["age: 30"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a named parameter in a Dart function?\n\n```dart\nvoid functionName(String name, {int age}) {\n  // function body\n}\n\nvoid main() {\n  functionName('Alice', age: 30);\n}\n```",
+    "options": [
+      "age",
+      "int age",
+      "age: int",
+      "Error"
+    ],
+    "answer": ["age: int"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid printNumbers({int a, int b}) {\n  print(a);\n  print(b);\n}\n\nvoid main() {\n  printNumbers(a: 5, b: 10);\n}\n```",
+    "options": [
+      "5\n10",
+      "10\n5",
+      "Error",
+      "Nothing"
+    ],
+    "answer": ["5\n10"],
+    "type": "mcq"
+  },
+  {
+    "question": "Identify the error in the following function:\n\n```dart\nvoid functionName(String name, [int age]) {\n  // function body\n}\n\nvoid main() {\n  functionName('Alice', 30);\n}\n```",
+    "options": [
+      "No error",
+      "Missing required parameter 'age'",
+      "Too many positional arguments",
+      "Error"
+    ],
+    "answer": ["No error"],
+    "type": "mcq"
+  },
+  {
+    "question": "What is the default value of an uninitialized int variable in Dart?\n\n```dart\nvoid main() {\n  int a;\n  print(a);\n}\n```",
+    "options": [
+      "0",
+      "null",
+      "Error",
+      "Undefined"
+    ],
+    "answer": ["null"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that returns no value in Dart?\n\n```dart\nvoid functionName() {\n  // function body\n}\n\nvoid main() {\n  functionName();\n}\n```",
+    "options": [
+      "return;",
+      "return null;",
+      "void",
+      "Error"
+    ],
+    "answer": ["void"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var list = [1, 2, 3];\n  list.forEach((item) {\n    print(item);\n  });\n}\n```",
+    "options": [
+      "1\n2\n3",
+      "123",
+      "Error",
+      "Nothing"
+    ],
+    "answer": ["1\n2\n3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Identify the type of the following function:\n\n```dart\nint calculate(int a, int b) {\n  return a + b;\n}\n\nvoid main() {\n  print(calculate(5, 3));\n}\n```",
+    "options": [
+      "Arrow function",
+      "Anonymous function",
+      "Recursive function",
+      "Error"
+    ],
+    "answer": ["Error"],
+    "type": "mcq"
+  },
+  {
+    "question": "What is the purpose of the => operator in Dart?\n\n```dart\nvoid main() {\n  var list = [1, 2, 3];\n  var squared = list.map((item) => item * item);\n  print(squared);\n}\n```",
+    "options": [
+      "Defines a function",
+      "Returns a value",
+      "Both a and b",
+      "Error"
+    ],
+    "answer": ["Both a and b"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a recursive function in Dart?\n\n```dart\nint factorial(int n) {\n  if (n <= 1) {\n    return 1;\n  }\n  return n * factorial(n - 1);\n}\n\nvoid main() {\n  print(factorial(5));\n}\n```",
+    "options": [
+      "factorial(n - 1)",
+      "this function",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["this function"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 10;\n  var y = 20;\n  var z = x > y ? x : y;\n  print(z);\n}\n```",
+    "options": [
+      "10",
+      "20",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["20"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to return the maximum of two numbers:\n\n```dart\nint %order%(int a, int b) {\n  // function body\n}\n\nvoid main() {\n  print(maximum(5, 10));\n}\n```",
+    "options": [
+      "maximum",
+      "int",
+      "a, b"
+    ],
+    "answer": [
+      "maximum",
+      "int",
+      "a, b"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var set = {1, 2, 3};\n  set.add(4);\n  print(set);\n}\n```",
+    "options": [
+      "{1, 2, 3, 4}",
+      "{1, 2, 4}",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["{1, 2, 3, 4}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes another function as a parameter?\n\n```dart\nvoid higherOrderFunction(void Function() callback) {\n  // function body\n}\n\nvoid main() {\n  higherOrderFunction(() {\n    print('Hello from callback');\n  });\n}\n```",
+    "options": [
+      "void higherOrderFunction(void Function() callback)",
+      "higherOrderFunction(void Function() callback)",
+      "void higherOrderFunction(callback)",
+      "Error"
+    ],
+    "answer": ["void higherOrderFunction(void Function() callback)"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var map = {'one': 1, 'two': 2};\n  map['three'] = 3;\n  print(map);\n}\n```",
+    "options": [
+      "{one: 1, two: 2, three: 3}",
+      "{'one': 1, 'two': 2, 'three': 3}",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["{'one': 1, 'two': 2, 'three': 3}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to return the sum of all elements in a list:\n\n```dart\nint %order%(List<int> numbers) {\n  // function body\n}\n\nvoid main() {\n  print(sum([1, 2, 3, 4, 5]));\n}\n```",
+    "options": [
+      "sum",
+      "int",
+      "numbers"
+    ],
+    "answer": [
+      "sum",
+      "int",
+      "numbers"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var str = 'Hello';\n  str += ' World';\n  print(str);\n}\n```",
+    "options": [
+      "Hello World",
+      "HelloWorld",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["Hello World"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that can have a variable number of arguments?\n\n```dart\nvoid variableArgumentsFunction(String name, [int age]) {\n  // function body\n}\n\nvoid main() {\n  variableArgumentsFunction('Alice', 30);\n  variableArgumentsFunction('Bob');\n}\n```",
+    "options": [
+      "Using square brackets for optional positional parameters",
+      "Using curly braces for named parameters",
+      "Both a and b",
+      "Error"
+    ],
+    "answer": ["Using square brackets for optional positional parameters"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = x++ * 2;\n  print(y);\n}\n```",
+    "options": [
+      "10",
+      "12",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["10"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to check if a number is even:\n\n```dart\nbool %order%(int number) {\n  // function body\n}\n\nvoid main() {\n  print(isEven(4));\n}\n```",
+    "options": [
+      "isEven",
+      "bool",
+      "number"
+    ],
+    "answer": [
+      "isEven",
+      "bool",
+      "number"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 10;\n  var y = 20;\n  print(x > y ? 'x is greater' : 'y is greater');\n}\n```",
+    "options": [
+      "x is greater",
+      "y is greater",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["y is greater"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that returns a function in Dart?\n\n```dart\nFunction returningFunction() {\n  return () {\n    print('Hello from returned function');\n  };\n}\n\nvoid main() {\n  var func = returningFunction();\n  func();\n}\n```",
+    "options": [
+      "returningFunction()",
+      "Function returningFunction()",
+      "Function()",
+      "Error"
+    ],
+    "answer": ["Function returningFunction()"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var list = [1, 2, 3];\n  var iterator = list.iterator;\n  while (iterator.moveNext()) {\n    print(iterator.current);\n  }\n}\n```",
+    "options": [
+      "1\n2\n3",
+      "123",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["1\n2\n3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to return the factorial of a number:\n\n```dart\nint %order%(int n) {\n  // function body\n}\n\nvoid main() {\n  print(factorial(5));\n}\n```",
+    "options": [
+      "factorial",
+      "int",
+      "n"
+    ],
+    "answer": [
+      "factorial",
+      "int",
+      "n"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 10;\n  var y = 20;\n  print(x < y ? 'x is smaller' : 'y is smaller');\n}\n```",
+    "options": [
+      "x is smaller",
+      "y is smaller",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["x is smaller"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a list as an argument?\n\n```dart\nvoid listArgumentFunction(List<String> items) {\n  // function body\n}\n\nvoid main() {\n  listArgumentFunction(['apple', 'banana', 'cherry']);\n}\n```",
+    "options": [
+      "listArgumentFunction(List<String> items)",
+      "void listArgumentFunction(List<String> items)",
+      "void listArgumentFunction(items)",
+      "Error"
+    ],
+    "answer": ["void listArgumentFunction(List<String> items)"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var str = 'Dart';\n  str[0] = 'd';\n  print(str);\n}\n```",
+    "options": [
+      "dart",
+      "Dart",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["Error"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to reverse a string:\n\n```dart\nString %order%(String str) {\n  // function body\n}\n\nvoid main() {\n  print(reverse('Dart')); // 'traD'\n}\n```",
+    "options": [
+      "reverse",
+      "String",
+      "str"
+    ],
+    "answer": [
+      "reverse",
+      "String",
+      "str"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = ++x * 2;\n  print(y);\n}\n```",
+    "options": [
+      "10",
+      "12",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["12"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that can return multiple values?\n\n```dart\nList<int> multipleReturnValuesFunction() {\n  return [1, 2, 3];\n}\n\nvoid main() {\n  var values = multipleReturnValuesFunction();\n  print(values);\n}\n```",
+    "options": [
+      "Using a list as the return type",
+      "Using varargs",
+      "Using a map",
+      "Error"
+    ],
+    "answer": ["Using a list as the return type"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 10;\n  var y = 5;\n  print(x ~/ y);\n}\n```",
+    "options": [
+      "2",
+      "2.0",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["2"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to find the minimum of two numbers:\n\n```dart\nint %order%(int a, int b) {\n  // function body\n}\n\nvoid main() {\n  print(minimum(5, 10));\n}\n```",
+    "options": [
+      "minimum",
+      "int",
+      "a, b"
+    ],
+    "answer": [
+      "minimum",
+      "int",
+      "a, b"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 10;\n  var y = 20;\n  print(x == y);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a map as an argument?\n\n```dart\nvoid mapArgumentFunction(Map<String, int> entries) {\n  // function body\n}\n\nvoid main() {\n  mapArgumentFunction({'apple': 1, 'banana': 2});\n}\n```",
+    "options": [
+      "mapArgumentFunction(Map<String, int> entries)",
+      "void mapArgumentFunction(Map<String, int> entries)",
+      "void mapArgumentFunction(entries)",
+      "Error"
+    ],
+    "answer": ["void mapArgumentFunction(Map<String, int> entries)"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x & y);\n}\n```",
+    "options": [
+      "0",
+      "15",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["0"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to concatenate two strings:\n\n```dart\nString %order%(String a, String b) {\n  // function body\n}\n\nvoid main() {\n  print(concatenate('Hello', ' World')); // 'Hello World'\n}\n```",
+    "options": [
+      "concatenate",
+      "String",
+      "a, b"
+    ],
+    "answer": [
+      "concatenate",
+      "String",
+      "a, b"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 2;\n  print(x % y);\n}\n```",
+    "options": [
+      "1",
+      "2",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["1"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a variable number of named arguments?\n\n```dart\nvoid namedArgumentsFunction({String name, int age}) {\n  // function body\n}\n\nvoid main() {\n  namedArgumentsFunction(name: 'Alice', age: 30);\n}\n```",
+    "options": [
+      "Using curly braces for named parameters",
+      "Using square brackets for optional positional parameters",
+      "Both a and b",
+      "Error"
+    ],
+    "answer": ["Using curly braces for named parameters"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 10;\n  var y = 20;\n  print(x == 10 && y == 20);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the power of a number:\n\n```dart\ndouble %order%(double base, int exponent) {\n  // function body\n}\n\nvoid main() {\n  print(power(2, 3)); // 8\n}\n```",
+    "options": [
+      "power",
+      "double",
+      "base, exponent"
+    ],
+    "answer": [
+      "power",
+      "double",
+      "base, exponent"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x < 10 || y > 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a fixed number of arguments followed by a variable number of arguments?\n\n```dart\nvoid fixedAndVariableArgumentsFunction(int fixedArg1, int fixedArg2, [int varArg1, int varArg2]) {\n  // function body\n}\n\nvoid main() {\n  fixedAndVariableArgumentsFunction(1, 2, 3, 4);\n}\n```",
+    "options": [
+      "Using square brackets for optional positional parameters after required parameters",
+      "Using curly braces for named parameters after required parameters",
+      "Both a and b",
+      "Error"
+    ],
+    "answer": ["Using square brackets for optional positional parameters after required parameters"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x > 5 ? 'x is greater' : 'y is greater');\n}\n```",
+    "options": [
+      "x is greater",
+      "y is greater",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["y is greater"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to merge two maps:\n\n```dart\nMap<K, V> %order%<K, V>(Map<K, V> map1, Map<K, V> map2) {\n  // function body\n}\n\nvoid main() {\n  var map1 = {'a': 1, 'b': 2};\n  var map2 = {'b': 3, 'c': 4};\n  print(mergeMaps(map1, map2));\n}\n```",
+    "options": [
+      "mergeMaps",
+      "Map<K, V>",
+      "map1, map2"
+    ],
+    "answer": [
+      "mergeMaps",
+      "Map<K, V>",
+      "map1, map2"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x == 5 && y == 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a list and a callback function as arguments?\n\n```dart\nvoid listAndCallbackFunction(List<int> numbers, void Function(int) callback) {\n  // function body\n}\n\nvoid main() {\n  listAndCallbackFunction([1, 2, 3], (number) {\n    print(number * number);\n  });\n}\n```",
+    "options": [
+      "listAndCallbackFunction(List<int> numbers, void Function(int) callback)",
+      "void listAndCallbackFunction(List<int> numbers, void Function(int) callback)",
+      "void listAndCallbackFunction(numbers, callback)",
+      "Error"
+    ],
+    "answer": ["void listAndCallbackFunction(List<int> numbers, void Function(int) callback)"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x != 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to remove duplicates from a list:\n\n```dart\nList<T> %order%<T>(List<T> items) {\n  // function body\n}\n\nvoid main() {\n  print(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));\n}\n```",
+    "options": [
+      "removeDuplicates",
+      "List<T>",
+      "items"
+    ],
+    "answer": [
+      "removeDuplicates",
+      "List<T>",
+      "items"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x <= 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a fixed number of arguments followed by named arguments?\n\n```dart\nvoid fixedAndNamedArgumentsFunction(int fixedArg1, int fixedArg2, {String name, int age}) {\n  // function body\n}\n\nvoid main() {\n  fixedAndNamedArgumentsFunction(1, 2, name: 'Alice', age: 30);\n}\n```",
+    "options": [
+      "Using curly braces for named parameters after required parameters",
+      "Using square brackets for optional positional parameters after required parameters",
+      "Both a and b",
+      "Error"
+    ],
+    "answer": ["Using curly braces for named parameters after required parameters"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x > 5 || y < 15);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the average of a list of numbers:\n\n```dart\ndouble %order%(List<int> numbers) {\n  // function body\n}\n\nvoid main() {\n  print(average([1, 2, 3, 4, 5])); // 3.0\n}\n```",
+    "options": [
+      "average",
+      "double",
+      "numbers"
+    ],
+    "answer": [
+      "average",
+      "double",
+      "numbers"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x == 5 && y != 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a callback function as an argument and returns a value?\n\n```dart\nint callbackAsArgument(void Function() callback) {\n  callback();\n  return 42;\n}\n\nvoid main() {\n  var result = callbackAsArgument(() {\n    print('Hello from callback');\n  });\n  print(result);\n}\n```",
+    "options": [
+      "callbackAsArgument(void Function() callback)",
+      "void callbackAsArgument(void Function() callback)",
+      "int callbackAsArgument(callback)",
+      "Error"
+    ],
+    "answer": ["int callbackAsArgument(void Function() callback)"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x < 5 && y > 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to flatten a list of lists:\n\n```dart\nList<T> %order%<T>(List<List<T>> list) {\n  // function body\n}\n\nvoid main() {\n  print(flatten([[1, 2], [3, 4], [5]]));\n}\n```",
+    "options": [
+      "flatten",
+      "List<T>",
+      "list"
+    ],
+    "answer": [
+      "flatten",
+      "List<T>",
+      "list"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x > 5 && y < 15);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a list and a fixed number of additional arguments?\n\n```dart\nvoid listAndFixedArgumentsFunction(List<int> numbers, int fixedArg1, int fixedArg2) {\n  // function body\n}\n\nvoid main() {\n  listAndFixedArgumentsFunction([1, 2, 3], 4, 5);\n}\n```",
+    "options": [
+      "listAndFixedArgumentsFunction(List<int> numbers, int fixedArg1, int fixedArg2)",
+      "void listAndFixedArgumentsFunction(List<int> numbers, int fixedArg1, int fixedArg2)",
+      "void listAndFixedArgumentsFunction(numbers, fixedArg1, fixedArg2)",
+      "Error"
+    ],
+    "answer": ["void listAndFixedArgumentsFunction(List<int> numbers, int fixedArg1, int fixedArg2)"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x == 5 || y == 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the sum of squares of a list of numbers:\n\n```dart\nint %order%(List<int> numbers) {\n  // function body\n}\n\nvoid main() {\n  print(sumOfSquares([1, 2, 3, 4, 5])); // 55\n}\n```",
+    "options": [
+      "sumOfSquares",
+      "int",
+      "numbers"
+    ],
+    "answer": [
+      "sumOfSquares",
+      "int",
+      "numbers"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x != 5 || y != 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a variable number of positional arguments followed by named arguments?\n\n```dart\nvoid variableAndNamedArgumentsFunction(String name, [int age, String city]) {\n  // function body\n}\n\nvoid main() {\n  variableAndNamedArgumentsFunction('Alice', 30, 'New York');\n}\n```",
+    "options": [
+      "Using square brackets for optional positional parameters followed by curly braces for named parameters",
+      "Using curly braces for named parameters followed by square brackets for optional positional parameters",
+      "Both a and b",
+      "Error"
+    ],
+    "answer": ["Using square brackets for optional positional parameters followed by curly braces for named parameters"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x > 5 && y < 15);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the product of a list of numbers:\n\n```dart\nint %order%(List<int> numbers) {\n  // function body\n}\n\nvoid main() {\n  print(product([1, 2, 3, 4, 5])); // 120\n}\n```",
+    "options": [
+      "product",
+      "int",
+      "numbers"
+    ],
+    "answer": [
+      "product",
+      "int",
+      "numbers"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x < 5 || y > 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a fixed number of arguments followed by optional named arguments?\n\n```dart\nvoid fixedAndOptionalNamedArgumentsFunction(int fixedArg1, int fixedArg2, {String name, int age}) {\n  // function body\n}\n\nvoid main() {\n  fixedAndOptionalNamedArgumentsFunction(1, 2, name: 'Alice', age: 30);\n}\n```",
+    "options": [
+      "Using curly braces for named parameters after required parameters",
+      "Using square brackets for optional positional parameters after required parameters",
+      "Both a and b",
+      "Error"
+    ],
+    "answer": ["Using curly braces for named parameters after required parameters"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x == 5 && y == 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the difference between the maximum and minimum values in a list:\n\n```dart\nint %order%(List<int> numbers) {\n  // function body\n}\n\nvoid main() {\n  print(range([1, 2, 3, 4, 5])); // 4\n}\n```",
+    "options": [
+      "range",
+      "int",
+      "numbers"
+    ],
+    "answer": [
+      "range",
+      "int",
+      "numbers"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x != 5 || y != 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a list and a variable number of additional arguments?\n\n```dart\nvoid listAndVariableArgumentsFunction(List<int> numbers, [int varArg1, int varArg2]) {\n  // function body\n}\n\nvoid main() {\n  listAndVariableArgumentsFunction([1, 2, 3], 4, 5);\n}\n```",
+    "options": [
+      "listAndVariableArgumentsFunction(List<int> numbers, [int varArg1, int varArg2])",
+      "void listAndVariableArgumentsFunction(List<int> numbers, [int varArg1, int varArg2])",
+      "void listAndVariableArgumentsFunction(numbers, varArg1, varArg2)",
+      "Error"
+    ],
+    "answer": ["void listAndVariableArgumentsFunction(List<int> numbers, [int varArg1, int varArg2])"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x < 5 && y > 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the sum of cubes of a list of numbers:\n\n```dart\nint %order%(List<int> numbers) {\n  // function body\n}\n\nvoid main() {\n  print(sumOfCubes([1, 2, 3, 4, 5])); // 225\n}\n```",
+    "options": [
+      "sumOfCubes",
+      "int",
+      "numbers"
+    ],
+    "answer": [
+      "sumOfCubes",
+      "int",
+      "numbers"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x > 5 || y < 15);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a fixed number of arguments followed by optional positional arguments?\n\n```dart\nvoid fixedAndOptionalArgumentsFunction(int fixedArg1, int fixedArg2, [int optArg1, int optArg2]) {\n  // function body\n}\n\nvoid main() {\n  fixedAndOptionalArgumentsFunction(1, 2, 3, 4);\n}\n```",
+    "options": [
+      "Using square brackets for optional positional parameters after required parameters",
+      "Using curly braces for named parameters after required parameters",
+      "Both a and b",
+      "Error"
+    ],
+    "answer": ["Using square brackets for optional positional parameters after required parameters"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x == 5 && y == 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the sum of even numbers in a list:\n\n```dart\nint %order%(List<int> numbers) {\n  // function body\n}\n\nvoid main() {\n  print(sumOfEvens([1, 2, 3, 4, 5])); // 6\n}\n```",
+    "options": [
+      "sumOfEvens",
+      "int",
+      "numbers"
+    ],
+    "answer": [
+      "sumOfEvens",
+      "int",
+      "numbers"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x != 5 && y != 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a list and a map as arguments?\n\n```dart\nvoid listAndMapFunction(List<int> numbers, Map<String, int> entries) {\n  // function body\n}\n\nvoid main() {\n  listAndMapFunction([1, 2, 3], {'one': 1, 'two': 2});\n}\n```",
+    "options": [
+      "listAndMapFunction(List<int> numbers, Map<String, int> entries)",
+      "void listAndMapFunction(List<int> numbers, Map<String, int> entries)",
+      "void listAndMapFunction(numbers, entries)",
+      "Error"
+    ],
+    "answer": ["void listAndMapFunction(List<int> numbers, Map<String, int> entries)"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x < 5 || y > 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the sum of odd numbers in a list:\n\n```dart\nint %order%(List<int> numbers) {\n  // function body\n}\n\nvoid main() {\n  print(sumOfOdds([1, 2, 3, 4, 5])); // 9\n}\n```",
+    "options": [
+      "sumOfOdds",
+      "int",
+      "numbers"
+    ],
+    "answer": [
+      "sumOfOdds",
+      "int",
+      "numbers"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x == 5 || y == 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a variable number of arguments and returns their product?\n\n```dart\nint productFunction(int a, [int b, int c]) {\n  var product = a;\n  if (b != null) product *= b;\n  if (c != null) product *= c;\n  return product;\n}\n\nvoid main() {\n  print(productFunction(2, 3, 4)); // 24\n}\n```",
+    "options": [
+      "productFunction(int a, [int b, int c])",
+      "void productFunction(int a, [int b, int c])",
+      "int productFunction(a, b, c)",
+      "Error"
+    ],
+    "answer": ["int productFunction(int a, [int b, int c])"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x > 5 && y < 15);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the sum of a range of numbers:\n\n```dart\nint %order%(int start, int end) {\n  // function body\n}\n\nvoid main() {\n  print(sumRange(1, 10)); // 55\n}\n```",
+    "options": [
+      "sumRange",
+      "int",
+      "start, end"
+    ],
+    "answer": [
+      "sumRange",
+      "int",
+      "start, end"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x <= 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a list and an optional callback function as arguments?\n\n```dart\nvoid listAndOptionalCallbackFunction(List<int> numbers, [void Function(int) callback]) {\n  // function body\n}\n\nvoid main() {\n  listAndOptionalCallbackFunction([1, 2, 3], (number) {\n    print(number * number);\n  });\n}\n```",
+    "options": [
+      "listAndOptionalCallbackFunction(List<int> numbers, [void Function(int) callback])",
+      "void listAndOptionalCallbackFunction(List<int> numbers, [void Function(int) callback])",
+      "void listAndOptionalCallbackFunction(numbers, callback)",
+      "Error"
+    ],
+    "answer": ["void listAndOptionalCallbackFunction(List<int> numbers, [void Function(int) callback])"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x > 5 || y < 15);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the sum of squares of a range of numbers:\n\n```dart\nint %order%(int start, int end) {\n  // function body\n}\n\nvoid main() {\n  print(sumOfSquaresRange(1, 5)); // 55\n}\n```",
+    "options": [
+      "sumOfSquaresRange",
+      "int",
+      "start, end"
+    ],
+    "answer": [
+      "sumOfSquaresRange",
+      "int",
+      "start, end"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x == 5 && y == 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a variable number of arguments and an optional named argument?\n\n```dart\nvoid variableArgumentsAndNamedFunction(String name, [int age, String city]) {\n  // function body\n}\n\nvoid main() {\n  variableArgumentsAndNamedFunction('Alice', 30, 'New York');\n}\n```",
+    "options": [
+      "Using square brackets for optional positional parameters followed by curly braces for named parameters",
+      "Using curly braces for named parameters followed by square brackets for optional positional parameters",
+      "Both a and b",
+      "Error"
+    ],
+    "answer": ["Using square brackets for optional positional parameters followed by curly braces for named parameters"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x < 5 && y > 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the sum of cubes of a range of numbers:\n\n```dart\nint %order%(int start, int end) {\n  // function body\n}\n\nvoid main() {\n  print(sumOfCubesRange(1, 5)); // 225\n}\n```",
+    "options": [
+      "sumOfCubesRange",
+      "int",
+      "start, end"
+    ],
+    "answer": [
+      "sumOfCubesRange",
+      "int",
+      "start, end"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x != 5 && y != 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a list, a map, and a callback function as arguments?\n\n```dart\nvoid listMapAndCallbackFunction(List<int> numbers, Map<String, int> entries, void Function(int) callback) {\n  // function body\n}\n\nvoid main() {\n  listMapAndCallbackFunction([1, 2, 3], {'one': 1, 'two': 2}, (number) {\n    print(number * number);\n  });\n}\n```",
+    "options": [
+      "listMapAndCallbackFunction(List<int> numbers, Map<String, int> entries, void Function(int) callback)",
+      "void listMapAndCallbackFunction(List<int> numbers, Map<String, int> entries, void Function(int) callback)",
+      "void listMapAndCallbackFunction(numbers, entries, callback)",
+      "Error"
+    ],
+    "answer": ["void listMapAndCallbackFunction(List<int> numbers, Map<String, int> entries, void Function(int) callback)"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x > 5 || y < 15);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the sum of a list of strings interpreted as numbers:\n\n```dart\nint %order%(List<String> numbers) {\n  // function body\n}\n\nvoid main() {\n  print(sumOfStringNumbers(['1', '2', '3', '4', '5'])); // 15\n}\n```",
+    "options": [
+      "sumOfStringNumbers",
+      "int",
+      "numbers"
+    ],
+    "answer": [
+      "sumOfStringNumbers",
+      "int",
+      "numbers"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x == 5 && y != 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a variable number of arguments and an optional positional argument?\n\n```dart\nvoid variableArgumentsAndOptionalFunction(String name, [int age, String city]) {\n  // function body\n}\n\nvoid main() {\n  variableArgumentsAndOptionalFunction('Alice', 30, 'New York');\n}\n```",
+    "options": [
+      "Using square brackets for optional positional parameters followed by curly braces for named parameters",
+      "Using curly braces for named parameters followed by square brackets for optional positional parameters",
+      "Both a and b",
+      "Error"
+    ],
+    "answer": ["Using square brackets for optional positional parameters followed by curly braces for named parameters"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x < 5 && y > 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the sum of a list of boolean values interpreted as numbers:\n\n```dart\nint %order%(List<bool> values) {\n  // function body\n}\n\nvoid main() {\n  print(sumOfBooleanNumbers([true, false, true, true])); // 3\n}\n```",
+    "options": [
+      "sumOfBooleanNumbers",
+      "int",
+      "values"
+    ],
+    "answer": [
+      "sumOfBooleanNumbers",
+      "int",
+      "values"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x != 5 || y != 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a list, a map, and an optional callback function as arguments?\n\n```dart\nvoid listMapAndOptionalCallbackFunction(List<int> numbers, Map<String, int> entries, [void Function(int) callback]) {\n  // function body\n}\n\nvoid main() {\n  listMapAndOptionalCallbackFunction([1, 2, 3], {'one': 1, 'two': 2}, (number) {\n    print(number * number);\n  });\n}\n```",
+    "options": [
+      "listMapAndOptionalCallbackFunction(List<int> numbers, Map<String, int> entries, [void Function(int) callback])",
+      "void listMapAndOptionalCallbackFunction(List<int> numbers, Map<String, int> entries, [void Function(int) callback])",
+      "void listMapAndOptionalCallbackFunction(numbers, entries, callback)",
+      "Error"
+    ],
+    "answer": ["void listMapAndOptionalCallbackFunction(List<int> numbers, Map<String, int> entries, [void Function(int) callback])"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x > 5 && y < 15);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the sum of a list of characters interpreted as numbers:\n\n```dart\nint %order%(List<String> chars) {\n  // function body\n}\n\nvoid main() {\n  print(sumOfCharNumbers(['1', '2', '3', '4', '5'])); // 15\n}\n```",
+    "options": [
+      "sumOfCharNumbers",
+      "int",
+      "chars"
+    ],
+    "answer": [
+      "sumOfCharNumbers",
+      "int",
+      "chars"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x == 5 && y == 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a variable number of arguments and an optional named argument?\n\n```dart\nvoid variableArgumentsAndNamedOptionalFunction(String name, [int age, String city]) {\n  // function body\n}\n\nvoid main() {\n  variableArgumentsAndNamedOptionalFunction('Alice', 30, 'New York');\n}\n```",
+    "options": [
+      "Using square brackets for optional positional parameters followed by curly braces for named parameters",
+      "Using curly braces for named parameters followed by square brackets for optional positional parameters",
+      "Both a and b",
+      "Error"
+    ],
+    "answer": ["Using square brackets for optional positional parameters followed by curly braces for named parameters"],
+    "type": "mcq"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x < 5 || y > 5);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Complete the function to calculate the sum of a list of boolean values interpreted as integers:\n\n```dart\nint %order%(List<bool> values) {\n  // function body\n}\n\nvoid main() {\n  print(sumOfBooleanInts([true, false, true, true])); // 3\n}\n```",
+    "options": [
+      "sumOfBooleanInts",
+      "int",
+      "values"
+    ],
+    "answer": [
+      "sumOfBooleanInts",
+      "int",
+      "values"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output of the following code?\n\n```dart\nvoid main() {\n  var x = 5;\n  var y = 10;\n  print(x != 5 && y != 10);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "None of the above"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How do you define a function that takes a list, a map, and an optional callback function as arguments?\n\n```dart\nvoid listMapAndOptionalCallbackFunction(List<int> numbers, Map<String, int> entries, [void Function(int) callback]) {\n  // function body\n}\n\nvoid main() {\n  listMapAndOptionalCallbackFunction([1, 2, 3], {'one': 1, 'two': 2}, (number) {\n    print(number * number);\n  });\n}\n```",
+    "options": [
+      "listMapAndOptionalCallbackFunction(List<int> numbers, Map<String, int> entries, [void Function(int) callback])",
+      "void listMapAndOptionalCallbackFunction(List<int> numbers, Map<String, int> entries, [void Function(int) callback])",
+      "void listMapAndOptionalCallbackFunction(numbers, entries, callback)",
+      "Error"
+    ],
+    "answer": ["void listMapAndOptionalCallbackFunction(List<int> numbers, Map<String, int> entries, [void Function(int) callback])"],
+    "type": "mcq"
+  }
+]

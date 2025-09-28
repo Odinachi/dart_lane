@@ -1,0 +1,651 @@
+[
+  {
+    "question": "Complete the nullable variable declaration:\n\n```dart\nvoid main() {\n  %order%%order% name = null;\n  print(name);\n}\n```",
+    "options": [
+      "String?"
+    ],
+    "answer": [
+      "String?"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the ? operator mean in Dart null safety?\n\n```dart\nString? nullableString;\n```",
+    "options": [
+      "The variable can be null",
+      "The variable cannot be null",
+      "It's a conditional operator",
+      "It's an error"
+    ],
+    "answer": ["The variable can be null"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-aware operator:\n\n```dart\nvoid main() {\n  String? name = null;\n  print(name %fill%%fill% 'Default Name');\n}\n```",
+    "answer": ["?", "?"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the non-nullable variable declaration:\n\n```dart\nvoid main() {\n  %order% age = 25;\n  print(age);\n}\n```",
+    "options": [
+      "int"
+    ],
+    "answer": [
+      "int"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  String? message = null;\n  print(message ?? 'Hello World');\n}\n```",
+    "options": [
+      "Hello World",
+      "null",
+      "Error",
+      "Nothing"
+    ],
+    "answer": ["Hello World"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null assertion operator:\n\n```dart\nvoid main() {\n  String? name = 'John';\n  String nonNullName = name%fill%;\n  print(nonNullName);\n}\n```",
+    "answer": ["!"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null check condition:\n\n```dart\nvoid main() {\n  String? email = getEmail();\n  %order% %order%%order% %order% %order% {\n    print('Email: $email');\n  }\n}\n```",
+    "options": [
+      "if",
+      "(email != null)"
+    ],
+    "answer": [
+      "if",
+      "(email != null)"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when you use the null assertion operator on a null value?\n\n```dart\nvoid main() {\n  String? name = null;\n  print(name!);\n}\n```",
+    "options": [
+      "Runtime error",
+      "Prints null",
+      "Compilation error",
+      "Prints empty string"
+    ],
+    "answer": ["Runtime error"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the conditional access operator:\n\n```dart\nvoid main() {\n  String? text = 'Hello';\n  print(text%fill%length);\n}\n```",
+    "answer": ["?."],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the late variable declaration:\n\n```dart\nvoid main() {\n  %order% String name;\n  name = 'Alice';\n  print(name);\n}\n```",
+    "options": [
+      "late"
+    ],
+    "answer": [
+      "late"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nvoid main() {\n  String? greeting = null;\n  String result = greeting ?? 'Hi there!';\n  print(result);\n}\n```",
+    "options": [
+      "Hi there!",
+      "null",
+      "Error",
+      "Nothing"
+    ],
+    "answer": ["Hi there!"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-aware assignment operator:\n\n```dart\nvoid main() {\n  String? title = null;\n  title %fill%%fill% 'Default Title';\n  print(title);\n}\n```",
+    "answer": ["?", "="],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the nullable function parameter:\n\n```dart\nvoid greet(%order%%order% name) {\n  print('Hello, ${name ?? 'Guest'}');\n}\n```",
+    "options": [
+      "String?"
+    ],
+    "answer": [
+      "String?"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Which declaration is correct for a non-nullable string?\n\n```dart\nvoid main() {\n  // Which one?\n}\n```",
+    "options": [
+      "String name = 'John';",
+      "String? name = 'John';",
+      "String name = null;",
+      "String? name = null;"
+    ],
+    "answer": ["String name = 'John';"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the required keyword:\n\n```dart\nclass Person {\n  final String name;\n  \n  Person({%fill% this.name});\n}\n```",
+    "answer": ["required"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null safety cast:\n\n```dart\nvoid main() {\n  Object? value = 'Hello';\n  String text = value %order% String;\n  print(text);\n}\n```",
+    "options": [
+      "as"
+    ],
+    "answer": [
+      "as"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  int? number = null;\n  print(number?.toString() ?? 'No number');\n}\n```",
+    "options": [
+      "No number",
+      "null",
+      "Error",
+      "0"
+    ],
+    "answer": ["No number"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null check pattern:\n\n```dart\nvoid main() {\n  String? data = getData();\n  %fill% (data != null) {\n    print('Data length: ${data.length}');\n  }\n}\n```",
+    "answer": ["if"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the nullable list declaration:\n\n```dart\nvoid main() {\n  %order%%order%%order% numbers = null;\n  print(numbers?.length);\n}\n```",
+    "options": [
+      "List<int>?"
+    ],
+    "answer": [
+      "List<int>?"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the difference between String and String?\n\n```dart\nString nonNullable = 'Hello';\nString? nullable = null;\n```",
+    "options": [
+      "String? can be null, String cannot",
+      "No difference",
+      "String is faster",
+      "String? is deprecated"
+    ],
+    "answer": ["String? can be null, String cannot"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-aware spread operator:\n\n```dart\nvoid main() {\n  List<int>? numbers = null;\n  List<int> result = [1, 2, %fill%numbers];\n  print(result);\n}\n```",
+    "answer": ["...?"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null safety function return type:\n\n```dart\n%order%%order% getName() {\n  return null;\n}\n```",
+    "options": [
+      "String?"
+    ],
+    "answer": [
+      "String?"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will happen with this code?\n\n```dart\nvoid main() {\n  late String name;\n  print(name);\n}\n```",
+    "options": [
+      "Runtime error",
+      "Prints null",
+      "Compilation error",
+      "Prints empty string"
+    ],
+    "answer": ["Runtime error"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null check before method call:\n\n```dart\nvoid main() {\n  String? text = 'Hello World';\n  %fill% (text != null) {\n    print(text.toUpperCase());\n  }\n}\n```",
+    "answer": ["if"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the nullable map declaration:\n\n```dart\nvoid main() {\n  %order%%order%%order%%order% data = null;\n  print(data?['key']);\n}\n```",
+    "options": [
+      "Map<String, String>?"
+    ],
+    "answer": [
+      "Map<String, String>?"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the ?? operator do?\n\n```dart\nvoid main() {\n  String? name = null;\n  String result = name ?? 'Unknown';\n}\n```",
+    "options": [
+      "Returns right operand if left is null",
+      "Returns left operand if right is null",
+      "Compares two values",
+      "Concatenates strings"
+    ],
+    "answer": ["Returns right operand if left is null"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-aware method call:\n\n```dart\nvoid main() {\n  String? message = null;\n  int? length = message%fill%length;\n  print(length);\n}\n```",
+    "answer": ["?."],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null safety class property:\n\n```dart\nclass User {\n  %order%%order% email;\n  \n  User(this.email);\n}\n```",
+    "options": [
+      "String?"
+    ],
+    "answer": [
+      "String?"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nvoid main() {\n  List<int>? numbers = [1, 2, 3];\n  print(numbers?.length ?? 0);\n}\n```",
+    "options": [
+      "3",
+      "0",
+      "null",
+      "Error"
+    ],
+    "answer": ["3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the type promotion check:\n\n```dart\nvoid main() {\n  String? name = getName();\n  if (name %fill% null) {\n    print(name.length); // name is now String, not String?\n  }\n}\n```",
+    "answer": ["!="],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the nullable function with default value:\n\n```dart\nvoid greet([%order%%order% name = 'Guest']) {\n  print('Hello, $name');\n}\n```",
+    "options": [
+      "String"
+    ],
+    "answer": [
+      "String"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Which operator safely accesses properties of nullable objects?\n\n```dart\nString? text = getText();\nint? length = text.length; // This might cause error\n```",
+    "options": [
+      "?. (null-aware access)",
+      "! (null assertion)",
+      "?? (null coalescing)",
+      "as (type cast)"
+    ],
+    "answer": ["?. (null-aware access)"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null assertion for known non-null value:\n\n```dart\nvoid main() {\n  String? text = 'Hello';\n  String definiteText = text%fill%;\n  print(definiteText.length);\n}\n```",
+    "answer": ["!"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the late initialization pattern:\n\n```dart\nclass Database {\n  %order% String connectionString;\n  \n  void initialize() {\n    connectionString = 'localhost:3306';\n  }\n}\n```",
+    "options": [
+      "late"
+    ],
+    "answer": [
+      "late"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens with null-aware assignment?\n\n```dart\nvoid main() {\n  String? name = 'John';\n  name ??= 'Default';\n  print(name);\n}\n```",
+    "options": [
+      "Prints 'John'",
+      "Prints 'Default'",
+      "Error",
+      "Prints null"
+    ],
+    "answer": ["Prints 'John'"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the nullable constructor parameter:\n\n```dart\nclass Person {\n  String name;\n  \n  Person(%fill% name) : name = name ?? 'Unknown';\n}\n```",
+    "answer": ["String?"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null-safe collection access:\n\n```dart\nvoid main() {\n  List<String>? items = getItems();\n  print(items%order%%order%);\n}\n```",
+    "options": [
+      "?.",
+      "length"
+    ],
+    "answer": [
+      "?.",
+      "length"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  String? value = null;\n  value ??= 'Assigned';\n  print(value);\n}\n```",
+    "options": [
+      "Assigned",
+      "null",
+      "Error",
+      "Nothing"
+    ],
+    "answer": ["Assigned"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null check with logical operator:\n\n```dart\nvoid main() {\n  String? first = 'Hello';\n  String? second = null;\n  if (first != null %fill% second != null) {\n    print('Both are not null');\n  }\n}\n```",
+    "answer": ["&&"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the nullable optional parameter:\n\n```dart\nvoid processData({%order%%order% data}) {\n  print(data ?? 'No data provided');\n}\n```",
+    "options": [
+      "String?"
+    ],
+    "answer": [
+      "String?"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Which is the correct way to handle a nullable string?\n\n```dart\nString? getUserName() => null;\n\nvoid main() {\n  String? name = getUserName();\n  // Which approach?\n}\n```",
+    "options": [
+      "print(name ?? 'Anonymous');",
+      "print(name!);",
+      "print(name);",
+      "String result = name;"
+    ],
+    "answer": ["print(name ?? 'Anonymous');"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-safe cascade operator:\n\n```dart\nvoid main() {\n  StringBuffer? buffer = StringBuffer();\n  buffer%fill%%fill%write('Hello')%fill%%fill%write(' World');\n  print(buffer.toString());\n}\n```",
+    "answer": ["?", ".", "?", "."],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null safety migration pattern:\n\n```dart\nvoid main() {\n  String? oldStyle = null;\n  %order% newStyle = oldStyle ?? 'default';\n  print(newStyle);\n}\n```",
+    "options": [
+      "String"
+    ],
+    "answer": [
+      "String"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nvoid main() {\n  Map<String, String>? config = null;\n  print(config?['theme'] ?? 'light');\n}\n```",
+    "options": [
+      "light",
+      "null",
+      "Error",
+      "theme"
+    ],
+    "answer": ["light"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-aware list operation:\n\n```dart\nvoid main() {\n  List<int>? numbers = null;\n  List<int> result = [...%fill%numbers ?? []];\n  print(result);\n}\n```",
+    "answer": [""],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null safety getter:\n\n```dart\nclass User {\n  String? _name;\n  \n  %order%%order% get name => _name ?? 'Anonymous';\n}\n```",
+    "options": [
+      "String"
+    ],
+    "answer": [
+      "String"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does this pattern accomplish?\n\n```dart\nvoid main() {\n  String? input = getInput();\n  if (input != null) {\n    processString(input); // input is promoted to String\n  }\n}\n```",
+    "options": [
+      "Type promotion from String? to String",
+      "Type casting",
+      "Null assertion",
+      "Default value assignment"
+    ],
+    "answer": ["Type promotion from String? to String"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the conditional assignment:\n\n```dart\nvoid main() {\n  String? title = getTitle();\n  String displayTitle = title %fill% 'Untitled';\n  print(displayTitle);\n}\n```",
+    "answer": ["??"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null-safe factory constructor:\n\n```dart\nclass Config {\n  final String value;\n  \n  Config(this.value);\n  \n  factory Config.fromNullable(%order%%order% value) {\n    return Config(value ?? 'default');\n  }\n}\n```",
+    "options": [
+      "String?"
+    ],
+    "answer": [
+      "String?"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  String? first = null;\n  String? second = 'World';\n  print('${first ?? 'Hello'} ${second ?? 'There'}');\n}\n```",
+    "options": [
+      "Hello World",
+      "null World",
+      "Hello There",
+      "Error"
+    ],
+    "answer": ["Hello World"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null safety assertion message:\n\n```dart\nvoid main() {\n  String? name = getName();\n  assert(name %fill% null, 'Name cannot be null');\n  print(name!.length);\n}\n```",
+    "answer": ["!="],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the nullable extension method:\n\n```dart\nextension on %order%%order% {\n  bool get isNullOrEmpty => this == null || this!.isEmpty;\n}\n```",
+    "options": [
+      "String?"
+    ],
+    "answer": [
+      "String?"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Which statement about late variables is correct?\n\n```dart\nlate String name;\n```",
+    "options": [
+      "Must be initialized before first use",
+      "Can remain uninitialized forever",
+      "Automatically initialized to null",
+      "Cannot be reassigned"
+    ],
+    "answer": ["Must be initialized before first use"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-safe ternary operator:\n\n```dart\nvoid main() {\n  String? status = getStatus();\n  String message = status %fill% null ? status! : 'Unknown';\n  print(message);\n}\n```",
+    "answer": ["!="],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null-safe async function:\n\n```dart\nFuture<%order%%order%> fetchData() async {\n  // Might return null\n  return await apiCall();\n}\n```",
+    "options": [
+      "String?"
+    ],
+    "answer": [
+      "String?"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nvoid main() {\n  List<String?> items = ['apple', null, 'banana'];\n  print(items.length);\n}\n```",
+    "options": [
+      "3",
+      "2",
+      "Error",
+      "null"
+    ],
+    "answer": ["3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-aware string interpolation:\n\n```dart\nvoid main() {\n  String? name = null;\n  print('Hello, ${name %fill% 'Guest'}!');\n}\n```",
+    "answer": ["??"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the nullable enum handling:\n\n```dart\nenum Status { active, inactive }\n\nvoid main() {\n  %order%%order? status = getStatus();\n  print(status?.name ?? 'unknown');\n}\n```",
+    "options": [
+      "Status"
+    ],
+    "answer": [
+      "Status"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the purpose of the required keyword?\n\n```dart\nclass Person {\n  Person({required String name, String? email});\n}\n```",
+    "options": [
+      "Makes non-nullable parameters mandatory",
+      "Makes parameters nullable",
+      "Provides default values",
+      "Enables late initialization"
+    ],
+    "answer": ["Makes non-nullable parameters mandatory"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-safe collection filtering:\n\n```dart\nvoid main() {\n  List<String?> items = ['a', null, 'b', null, 'c'];\n  List<String> nonNulls = items.whereType<%fill%>().toList();\n  print(nonNulls);\n}\n```",
+    "answer": ["String"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null safety mixin:\n\n```dart\nmixin Validator {\n  bool isValid(%order%%order? value) {\n    return value != null && value.isNotEmpty;\n  }\n}\n```",
+    "options": [
+      "String"
+    ],
+    "answer": [
+      "String"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nvoid main() {\n  String? text = '';\n  print(text?.isEmpty ?? true);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "null",
+      "Error"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-safe function composition:\n\n```dart\nvoid main() {\n  String? input = getInput();\n  String? result = input%fill%toUpperCase()%fill%trim();\n  print(result ?? 'No result');\n}\n```",
+    "answer": ["?.", "?."],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null safety typedef:\n\n```dart\ntypedef StringProcessor = String? Function(%order%%order?);\n\nvoid main() {\n  StringProcessor processor = (input) => input?.toUpperCase();\n}\n```",
+    "options": [
+      "String"
+    ],
+    "answer": [
+      "String"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Which approach is safest for nullable collections?\n\n```dart\nList<String>? items = getItems();\n```",
+    "options": [
+      "items?.forEach((item) => print(item));",
+      "items!.forEach((item) => print(item));",
+      "for (var item in items) print(item);",
+      "items.forEach((item) => print(item));"
+    ],
+    "answer": ["items?.forEach((item) => print(item));"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-safe stream handling:\n\n```dart\nvoid main() {\n  Stream<String?>? dataStream = getStream();\n  dataStream%fill%listen((data) {\n    print(data ?? 'No data');\n  });\n}\n```",
+    "answer": ["?."],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null safety pattern matching:\n\n```dart\nvoid processValue(%order%%order? value) {\n  switch (value) {\n    case null:\n      print('Value is null');\n      break;\n    default:\n      print('Value: $value');\n  }\n}\n```",
+    "options": [
+      "String"
+    ],
+    "answer": [
+      "String"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code print?\n\n```dart\nvoid main() {\n  Map<String, String?> data = {'key': null};\n  print(data['key'] ?? 'default');\n}\n```",
+    "options": [
+      "default",
+      "null",
+      "key",
+      "Error"
+    ],
+    "answer": ["default"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-safe constructor call:\n\n```dart\nvoid main() {\n  String? name = getName();\n  Person person = Person(name %fill% 'Anonymous');\n}\n\nclass Person {\n  final String name;\n  Person(this.name);\n}\n```",
+    "answer": ["??"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null safety error handling:\n\n```dart\nvoid main() {\n  try {\n    String? data = getData();\n    print(data%order%);\n  } catch (e) {\n    print('Error: $e');\n  }\n}\n```",
+    "options": [
+      "!"
+    ],
+    "answer": [
+      "!"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the main benefit of Dart's null safety?\n\n```dart\nString name = 'John'; // Non-nullable\nString? optionalName = null; // Nullable\n```",
+    "options": [
+      "Prevents null reference errors at compile time",
+      "Makes code run faster",
+      "Reduces memory usage",
+      "Simplifies syntax"
+    ],
+    "answer": ["Prevents null reference errors at compile time"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the null-safe final assignment:\n\n```dart\nclass Config {\n  final String? _value;\n  \n  Config(String? value) : _value = value;\n  \n  String get displayValue => _value %fill% 'Not set';\n}\n```",
+    "answer": ["??"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the null safety best practice:\n\n```dart\nvoid processUser(%order% user) {\n  // Always guaranteed to be non-null\n  print('Processing: ${user.name}');\n}\n\nclass User {\n  final String name;\n  User(this.name);\n}\n```",
+    "options": [
+      "User"
+    ],
+    "answer": [
+      "User"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this final example output?\n\n```dart\nvoid main() {\n  String? first = null;\n  String? second = null;\n  String result = first ?? second ?? 'fallback';\n  print(result);\n}\n```",
+    "options": [
+      "fallback",
+      "null",
+      "Error",
+      "Nothing"
+    ],
+    "answer": ["fallback"],
+    "type": "mcq"
+  }
+]

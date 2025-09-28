@@ -1,0 +1,524 @@
+[
+  {
+    "question": "Complete the enum declaration:\n\n```dart\n%order% Color {\n  red,\n  green, \n  blue\n}\n\nvoid main() {\n  print(Color.red);\n}\n```",
+    "options": [
+      "enum"
+    ],
+    "answer": [
+      "enum"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this code output?\n\n```dart\nenum Day {\n  monday,\n  tuesday,\n  wednesday\n}\n\nvoid main() {\n  print(Day.tuesday);\n}\n```",
+    "options": [
+      "Day.tuesday",
+      "tuesday",
+      "1",
+      "Error"
+    ],
+    "answer": ["Day.tuesday"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the enum value access:\n\n```dart\nenum Status {\n  pending,\n  completed,\n  failed\n}\n\nvoid main() {\n  Status current = Status%fill%pending;\n  print(current);\n}\n```",
+    "answer": ["."],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum with multiple values:\n\n```dart\n%order% Season {\n  spring,\n  summer,\n  autumn,\n  winter\n}\n\nvoid main() {\n  print(Season.summer);\n}\n```",
+    "options": [
+      "enum"
+    ],
+    "answer": [
+      "enum"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the index of the first enum value?\n\n```dart\nenum Priority {\n  low,\n  medium,\n  high\n}\n\nvoid main() {\n  print(Priority.low.index);\n}\n```",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "Error"
+    ],
+    "answer": ["0"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the property to get enum index:\n\n```dart\nenum Grade {\n  a,\n  b,\n  c\n}\n\nvoid main() {\n  print(Grade.b.%fill%);\n}\n```",
+    "answer": ["index"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum declaration for traffic lights:\n\n```dart\n%order% TrafficLight {\n  %order%,\n  %order%,\n  %order%\n}\n\nvoid main() {\n  print(TrafficLight.red);\n}\n```",
+    "options": [
+      "enum",
+      "red",
+      "yellow",
+      "green"
+    ],
+    "answer": [
+      "enum",
+      "red",
+      "yellow", 
+      "green"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this enum comparison output?\n\n```dart\nenum Size {\n  small,\n  medium,\n  large\n}\n\nvoid main() {\n  Size mySize = Size.medium;\n  print(mySize == Size.medium);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Size.medium",
+      "Error"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the enum name:\n\n```dart\nenum %fill% {\n  cat,\n  dog,\n  bird\n}\n\nvoid main() {\n  print(Animal.cat);\n}\n```",
+    "answer": ["Animal"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the switch statement with enum:\n\n```dart\nenum Weather {\n  sunny,\n  rainy,\n  cloudy\n}\n\nvoid main() {\n  Weather today = Weather.sunny;\n  %order% (today) {\n    %order% Weather.sunny:\n      print('Wear sunglasses');\n      break;\n    %order% Weather.rainy:\n      print('Take umbrella');\n      break;\n    %order%:\n      print('Normal day');\n  }\n}\n```",
+    "options": [
+      "switch",
+      "case",
+      "case", 
+      "default"
+    ],
+    "answer": [
+      "switch",
+      "case",
+      "case",
+      "default"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How many values does this enum have?\n\n```dart\nenum Direction {\n  north,\n  south,\n  east,\n  west\n}\n```",
+    "options": [
+      "4",
+      "3",
+      "5", 
+      "Error"
+    ],
+    "answer": ["4"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the values property:\n\n```dart\nenum Fruit {\n  apple,\n  banana,\n  orange\n}\n\nvoid main() {\n  print(Fruit.%fill%.length);\n}\n```",
+    "answer": ["values"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum iteration:\n\n```dart\nenum Color {\n  red,\n  green,\n  blue\n}\n\nvoid main() {\n  %order% (Color color in Color.%order%) {\n    print(color);\n  }\n}\n```",
+    "options": [
+      "for",
+      "values"
+    ],
+    "answer": [
+      "for",
+      "values"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the output when printing enum values?\n\n```dart\nenum Planet {\n  mercury,\n  venus,\n  earth\n}\n\nvoid main() {\n  for (Planet p in Planet.values) {\n    print(p);\n  }\n}\n```",
+    "options": [
+      "Planet.mercury\\nPlanet.venus\\nPlanet.earth",
+      "mercury\\nvenus\\nearth",
+      "0\\n1\\n2",
+      "Error"
+    ],
+    "answer": ["Planet.mercury\\nPlanet.venus\\nPlanet.earth"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the name property:\n\n```dart\nenum Sport {\n  football,\n  basketball,\n  tennis\n}\n\nvoid main() {\n  print(Sport.football.%fill%);\n}\n```",
+    "answer": ["name"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum with enhanced features:\n\n```dart\n%order% Vehicle {\n  car('Car'),\n  bike('Bicycle'),\n  bus('Bus');\n  \n  %order% %order% %order%;\n  %order%(this.name);\n}\n\nvoid main() {\n  print(Vehicle.car.name);\n}\n```",
+    "options": [
+      "enum",
+      "final",
+      "String",
+      "name",
+      "const Vehicle"
+    ],
+    "answer": [
+      "enum",
+      "final",
+      "String", 
+      "name",
+      "const Vehicle"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will enhanced enum output?\n\n```dart\nenum Status {\n  active('Active'),\n  inactive('Inactive');\n  \n  final String label;\n  const Status(this.label);\n}\n\nvoid main() {\n  print(Status.active.label);\n}\n```",
+    "options": [
+      "Active",
+      "Status.active",
+      "active",
+      "Error"
+    ],
+    "answer": ["Active"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the constructor parameter:\n\n```dart\nenum Priority {\n  low(1),\n  medium(2),\n  high(3);\n  \n  final int %fill%;\n  const Priority(this.level);\n}\n```",
+    "answer": ["level"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum method:\n\n```dart\nenum Temperature {\n  cold,\n  warm,\n  hot;\n  \n  %order% %order% isComfortable() {\n    return this == Temperature.warm;\n  }\n}\n\nvoid main() {\n  print(Temperature.warm.isComfortable());\n}\n```",
+    "options": [
+      "bool"
+    ],
+    "answer": [
+      "bool"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does this enum method return?\n\n```dart\nenum Size {\n  small,\n  medium,\n  large;\n  \n  bool isBig() {\n    return this == Size.large;\n  }\n}\n\nvoid main() {\n  print(Size.small.isBig());\n}\n```",
+    "options": [
+      "false",
+      "true",
+      "Size.small",
+      "Error"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the enum value comparison:\n\n```dart\nenum Level {\n  beginner,\n  intermediate,\n  advanced\n}\n\nvoid main() {\n  Level myLevel = Level.beginner;\n  if (myLevel %fill% Level.beginner) {\n    print('Starting level');\n  }\n}\n```",
+    "answer": ["=="],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum with string values:\n\n```dart\n%order% HttpMethod {\n  get('GET'),\n  post('POST'),\n  put('PUT');\n  \n  %order% %order% %order%;\n  %order% HttpMethod(this.%order%);\n}\n```",
+    "options": [
+      "enum",
+      "final",
+      "String",
+      "method",
+      "const",
+      "method"
+    ],
+    "answer": [
+      "enum",
+      "final",
+      "String",
+      "method", 
+      "const",
+      "method"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the index of 'medium' in this enum?\n\n```dart\nenum Difficulty {\n  easy,\n  medium,\n  hard\n}\n\nvoid main() {\n  print(Difficulty.medium.index);\n}\n```",
+    "options": [
+      "1",
+      "0",
+      "2",
+      "Error"
+    ],
+    "answer": ["1"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the toString override:\n\n```dart\nenum State {\n  loading,\n  success,\n  error;\n  \n  @override\n  String %fill%() {\n    return name.toUpperCase();\n  }\n}\n```",
+    "answer": ["toString"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum with multiple properties:\n\n```dart\n%order% Coffee {\n  espresso('Espresso', 2.5),\n  latte('Latte', 4.0),\n  cappuccino('Cappuccino', 3.5);\n  \n  %order% %order% %order%;\n  %order% %order% %order%;\n  %order% Coffee(this.%order%, this.%order%);\n}\n```",
+    "options": [
+      "enum",
+      "final",
+      "String",
+      "name",
+      "final", 
+      "double",
+      "price",
+      "const",
+      "name",
+      "price"
+    ],
+    "answer": [
+      "enum",
+      "final",
+      "String",
+      "name",
+      "final",
+      "double", 
+      "price",
+      "const",
+      "name",
+      "price"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What will this complex enum output?\n\n```dart\nenum Grade {\n  a(90),\n  b(80),\n  c(70);\n  \n  final int minScore;\n  const Grade(this.minScore);\n  \n  bool isPassing() {\n    return minScore >= 70;\n  }\n}\n\nvoid main() {\n  print(Grade.c.isPassing());\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "70",
+      "Error"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the static method:\n\n```dart\nenum UserRole {\n  admin,\n  user,\n  guest;\n  \n  %fill% UserRole fromString(String role) {\n    return UserRole.values.firstWhere(\n      (r) => r.name == role\n    );\n  }\n}\n```",
+    "answer": ["static"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum factory constructor:\n\n```dart\n%order% ResponseCode {\n  success(200),\n  notFound(404),\n  error(500);\n  \n  %order% %order% %order%;\n  %order% ResponseCode(this.%order%);\n  \n  %order% ResponseCode.%order%(int code) {\n    return ResponseCode.values.firstWhere((r) => r.code == code);\n  }\n}\n```",
+    "options": [
+      "enum",
+      "final",
+      "int", 
+      "code",
+      "const",
+      "code",
+      "factory",
+      "fromCode"
+    ],
+    "answer": [
+      "enum",
+      "final",
+      "int",
+      "code",
+      "const", 
+      "code",
+      "factory",
+      "fromCode"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "Which enum value has the highest index?\n\n```dart\nenum Priority {\n  lowest,\n  low,\n  medium,\n  high,\n  highest\n}\n```",
+    "options": [
+      "Priority.highest (index 4)",
+      "Priority.high (index 3)",
+      "Priority.lowest (index 0)",
+      "Error"
+    ],
+    "answer": ["Priority.highest (index 4)"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the getter method:\n\n```dart\nenum FileSize {\n  small(1024),\n  medium(1048576),\n  large(1073741824);\n  \n  final int bytes;\n  const FileSize(this.bytes);\n  \n  String %fill% displaySize {\n    return '${bytes ~/ 1024} KB';\n  }\n}\n```",
+    "answer": ["get"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum with switch expression:\n\n```dart\nenum Operation {\n  add,\n  subtract,\n  multiply\n}\n\nvoid main() {\n  Operation op = Operation.add;\n  String symbol = %order% (op) {\n    Operation.add %order% '+',\n    Operation.subtract %order% '-',\n    Operation.multiply %order% '*',\n  };\n  print(symbol);\n}\n```",
+    "options": [
+      "switch",
+      "=>",
+      "=>", 
+      "=>"
+    ],
+    "answer": [
+      "switch",
+      "=>",
+      "=>",
+      "=>"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What does the values property return?\n\n```dart\nenum Color {\n  red,\n  green,\n  blue\n}\n\nvoid main() {\n  print(Color.values.runtimeType);\n}\n```",
+    "options": [
+      "List<Color>",
+      "Iterable<Color>",
+      "Set<Color>",
+      "Array<Color>"
+    ],
+    "answer": ["List<Color>"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the enum comparison method:\n\n```dart\nenum Version {\n  v1(1),\n  v2(2),\n  v3(3);\n  \n  final int number;\n  const Version(this.number);\n  \n  bool isNewerThan(Version other) {\n    return this.number %fill% other.number;\n  }\n}\n```",
+    "answer": [">"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum with interface implementation:\n\n```dart\nabstract class Drawable {\n  void draw();\n}\n\n%order% Shape %order% Drawable {\n  circle,\n  square,\n  triangle;\n  \n  @override\n  %order% %order%() {\n    print('Drawing $name');\n  }\n}\n```",
+    "options": [
+      "enum",
+      "implements",
+      "void",
+      "draw"
+    ],
+    "answer": [
+      "enum",
+      "implements", 
+      "void",
+      "draw"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when you try to create enum instances?\n\n```dart\nenum Status {\n  active,\n  inactive\n}\n\nvoid main() {\n  Status newStatus = Status(); // This line\n}\n```",
+    "options": [
+      "Compilation error - cannot instantiate enum",
+      "Creates new Status instance",
+      "Returns Status.active",
+      "Returns null"
+    ],
+    "answer": ["Compilation error - cannot instantiate enum"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the extension method:\n\n```dart\nenum Day {\n  monday,\n  tuesday,\n  wednesday\n}\n\n%fill% on Day {\n  bool get isWeekday {\n    return this != Day.saturday && this != Day.sunday;\n  }\n}\n```",
+    "answer": ["extension"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum serialization:\n\n```dart\n%order% Theme {\n  light('light'),\n  dark('dark');\n  \n  %order% %order% %order%;\n  %order% Theme(this.%order%);\n  \n  %order% %order% toJson() {\n    return {'theme': value};\n  }\n}\n```",
+    "options": [
+      "enum",
+      "final",
+      "String", 
+      "value",
+      "const",
+      "value",
+      "Map<String, String>"
+    ],
+    "answer": [
+      "enum",
+      "final",
+      "String",
+      "value",
+      "const",
+      "value", 
+      "Map<String, String>"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What is the result of enum equality check?\n\n```dart\nenum Status {\n  loading,\n  success,\n  error\n}\n\nvoid main() {\n  Status a = Status.loading;\n  Status b = Status.loading;\n  print(a == b);\n  print(identical(a, b));\n}\n```",
+    "options": [
+      "true\\ntrue",
+      "true\\nfalse", 
+      "false\\nfalse",
+      "Error"
+    ],
+    "answer": ["true\\ntrue"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the compareTo method:\n\n```dart\nenum Priority {\n  low,\n  medium,\n  high;\n  \n  int %fill%(Priority other) {\n    return this.index.compareTo(other.index);\n  }\n}\n```",
+    "answer": ["compareTo"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum with mixin:\n\n```dart\nmixin Printable {\n  void printInfo();\n}\n\n%order% Device %order% Printable {\n  phone,\n  tablet,\n  laptop;\n  \n  @override\n  %order% %order%() {\n    print('Device: $name');\n  }\n}\n```",
+    "options": [
+      "enum",
+      "with",
+      "void",
+      "printInfo"
+    ],
+    "answer": [
+      "enum",
+      "with",
+      "void", 
+      "printInfo"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "How do you get all enum values as a list?\n\n```dart\nenum Color {\n  red,\n  green,\n  blue\n}\n\nvoid main() {\n  List<Color> allColors = Color.values;\n  print(allColors.length);\n}\n```",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "Error"
+    ],
+    "answer": ["3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the enum constructor with validation:\n\n```dart\nenum Score {\n  low(0, 39),\n  medium(40, 79),\n  high(80, 100);\n  \n  final int min;\n  final int max;\n  \n  const Score(this.min, this.max) : %fill%(min <= max);\n}\n```",
+    "answer": ["assert"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the enum pattern matching:\n\n```dart\nenum Result {\n  success,\n  failure,\n  pending\n}\n\nvoid handleResult(Result result) {\n  %order% (result) {\n    %order% Result.success:\n      print('Operation succeeded');\n    %order% Result.failure:\n      print('Operation failed');\n    %order% Result.pending:\n      print('Operation pending');\n  }\n}\n```",
+    "options": [
+      "switch",
+      "case",
+      "case",
+      "case"
+    ],
+    "answer": [
+      "switch",
+      "case", 
+      "case",
+      "case"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What's the output of this enum conversion?\n\n```dart\nenum Status {\n  active,\n  inactive\n}\n\nvoid main() {\n  String statusName = Status.active.name;\n  int statusIndex = Status.active.index;\n  print('$statusName: $statusIndex');\n}\n```",
+    "options": [
+      "active: 0",
+      "Status.active: 0",
+      "active: 1", 
+      "Error"
+    ],
+    "answer": ["active: 0"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the enum iteration with index:\n\n```dart\nenum Planet {\n  mercury,\n  venus,\n  earth\n}\n\nvoid main() {\n  for (int i = 0; i < Planet.values.%fill%; i++) {\n    print('${i}: ${Planet.values[i]}');\n  }\n}\n```",
+    "answer": ["length"],
+    "type": "fill"
+  },
+  {
+    "question": "Complete the final enum example:\n\n```dart\n%order% NetworkState {\n  connected('Connected', true),\n  disconnected('Disconnected', false),\n  connecting('Connecting...', false);\n  \n  %order% %order% %order%;\n  %order% %order% %order%;\n  %order% NetworkState(this.%order%, this.%order%);\n  \n  %order% %order% get statusMessage {\n    return isOnline ? 'Online: $message' : 'Offline: $message';\n  }\n}\n```",
+    "options": [
+      "enum",
+      "final",
+      "String",
+      "message",
+      "final", 
+      "bool",
+      "isOnline",
+      "const",
+      "message",
+      "isOnline",
+      "String",
+      "get"
+    ],
+    "answer": [
+      "enum",
+      "final",
+      "String",
+      "message",
+      "final",
+      "bool",
+      "isOnline", 
+      "const",
+      "message",
+      "isOnline",
+      "String",
+      "get"
+    ],
+    "type": "order"
+  }
+]

@@ -1,0 +1,1159 @@
+[
+  {
+    "question": "Complete the set declaration:\n\n```dart\nvoid main() {\n  %order%%order%%order% uniqueNumbers = {1, 2, 3};\n  print(uniqueNumbers);\n}\n```",
+    "options": [
+      "Set<int>"
+    ],
+    "answer": [
+      "Set<int>"
+    ],
+    "type": "order"
+  },
+  {
+    "question": "What happens when you add duplicate values to a Set?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  numbers.add(2);\n  print(numbers);\n}\n```",
+    "options": [
+      "{1, 2, 3} - duplicates ignored",
+      "{1, 2, 3, 2} - duplicates added",
+      "Error",
+      "{2, 3}"
+    ],
+    "answer": ["{1, 2, 3} - duplicates ignored"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to add an element to the set:\n\n```dart\nvoid main() {\n  Set<String> colors = {'red', 'blue'};\n  colors.%fill%('green');\n  print(colors);\n}\n```",
+    "answer": ["add"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  numbers.addAll([3, 4, 5]);\n  print(numbers);\n}\n```",
+    "options": [
+      "{1, 2, 3, 4, 5}",
+      "{3, 4, 5}",
+      "{1, 2, 3, 4, 5, 3}",
+      "Error"
+    ],
+    "answer": ["{1, 2, 3, 4, 5}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you remove all elements from a set?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3, 4, 5};\n  numbers.%fill%();\n  print(numbers);\n}\n```",
+    "answer": ["clear"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<String> fruits = {'apple', 'banana', 'orange'};\n  fruits.remove('banana');\n  print(fruits);\n}\n```",
+    "options": [
+      "{'apple', 'orange'}",
+      "{'banana', 'orange'}",
+      "{'apple', 'banana'}",
+      "Error"
+    ],
+    "answer": ["{'apple', 'orange'}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to check if a set contains a value:\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3, 4, 5};\n  if (numbers.%fill%(3)) {\n    print('Found!');\n  } else {\n    print('Not found!');\n  }\n}\n```",
+    "answer": ["contains"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {3, 4, 5};\n  a.intersection(b);\n  print(a);\n}\n```",
+    "options": [
+      "{1, 2, 3}",
+      "{3}",
+      "{1, 2, 3, 4, 5}",
+      "Error"
+    ],
+    "answer": ["{3}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you find the number of elements in a set?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3, 4, 5};\n  print('Number of elements: ' + numbers.%fill%().toString());\n}\n```",
+    "answer": ["length"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<String> letters = {'a', 'b', 'c'};\n  letters.add('a');\n  print(letters);\n}\n```",
+    "options": [
+      "{'a', 'b', 'c'}",
+      "{'a', 'b', 'c', 'a'}",
+      "Error",
+      "{'b', 'c'}"
+    ],
+    "answer": ["{'a', 'b', 'c'}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create an empty set:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%;\n  print(numbers);\n}\n```",
+    "answer": ["{}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  numbers.removeWhere((number) => number > 2);\n  print(numbers);\n}\n```",
+    "options": [
+      "{1, 2}",
+      "{2, 3}",
+      "{1, 2, 3}",
+      "Error"
+    ],
+    "answer": ["{1, 2}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you combine two sets?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {3, 4, 5};\n  Set<int> c = a.%fill%(b);\n  print(c);\n}\n```",
+    "answer": ["union"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<String> colors = {'red', 'green', 'blue'};\n  colors.forEach((color) => print(color));\n}\n```",
+    "options": [
+      "red green blue",
+      "Error",
+      "('red', 'green', 'blue')",
+      "['red', 'green', 'blue']"
+    ],
+    "answer": ["red green blue"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to check if two sets are equal:\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {3, 2, 1};\n  if (a.%fill%(b)) {\n    print('Equal!');\n  } else {\n    print('Not equal!');\n  }\n}\n```",
+    "answer": ["containsAll"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var doubled = numbers.map((number) => number * 2);\n  print(doubled);\n}\n```",
+    "options": [
+      "{2, 4, 6}",
+      "Error",
+      "Instance of 'MappedIterable'",
+      "[2, 4, 6]"
+    ],
+    "answer": ["Instance of 'MappedIterable'"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set from a list?\n\n```dart\nvoid main() {\n  List<int> numberList = [1, 2, 2, 3];\n  Set<int> numberSet = %fill%;\n  print(numberSet);\n}\n```",
+    "answer": ["Set.from(numberList)"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var isEmpty = numbers.isEmpty;\n  print(isEmpty);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to make a set from a range of numbers:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%(1, 5);\n  print(numbers);\n}\n```",
+    "answer": ["Set.fromIterable(Iterable.generate(5, (i) => i + 1))"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var mapped = numbers.map((number) => number.toString());\n  print(mapped);\n}\n```",
+    "options": [
+      "{'1', '2', '3'}",
+      "Error",
+      "Instance of 'MappedIterable'",
+      "['1', '2', '3']"
+    ],
+    "answer": ["Instance of 'MappedIterable'"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you check if a set is a subset of another set?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2};\n  Set<int> b = {1, 2, 3};\n  if (a.%fill%(b)) {\n    print('a is a subset of b');\n  } else {\n    print('a is not a subset of b');\n  }\n}\n```",
+    "answer": ["isSubset"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  numbers.addAll([4, 5, 6]);\n  var result = numbers.every((number) => number > 0);\n  print(result);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with values from 1 to 5:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{1, 2, 3, 4, 5}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var filtered = numbers.where((number) => number.isEven);\n  print(filtered);\n}\n```",
+    "options": [
+      "{2}",
+      "{1, 3}",
+      "{1, 2, 3}",
+      "Error"
+    ],
+    "answer": ["{2}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you convert a set to a list?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  List<int> numberList = %fill%;\n  print(numberList);\n}\n```",
+    "answer": ["numbers.toList()"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var reduced = numbers.reduce((a, b) => a + b);\n  print(reduced);\n}\n```",
+    "options": [
+      "6",
+      "Error",
+      "Instance of 'Set'",
+      "[1, 2, 3]"
+    ],
+    "answer": ["6"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set from a string:\n\n```dart\nvoid main() {\n  String str = 'hello';\n  Set<String> charSet = %fill%;\n  print(charSet);\n}\n```",
+    "answer": ["str.split('').toSet()"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var anyAboveTwo = numbers.any((number) => number > 2);\n  print(anyAboveTwo);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you find the difference between two sets?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {3, 4, 5};\n  Set<int> c = a.%fill%(b);\n  print(c);\n}\n```",
+    "answer": ["difference"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var sum = numbers.fold(0, (prev, element) => prev + element);\n  print(sum);\n}\n```",
+    "options": [
+      "6",
+      "Error",
+      "Instance of 'Set'",
+      "[1, 2, 3]"
+    ],
+    "answer": ["6"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the square of each number from 1 to 5:\n\n```dart\nvoid main() {\n  Set<int> squares = %fill%:\n  print(squares);\n}\n```",
+    "answer": ["{1, 4, 9, 16, 25}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var firstElement = numbers.elementAt(0);\n  print(firstElement);\n}\n```",
+    "options": [
+      "1",
+      "Error",
+      "Instance of 'Set'",
+      "[1, 2, 3]"
+    ],
+    "answer": ["1"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you check if a set is disjoint with another set?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {4, 5, 6};\n  if (a.%fill%(b)) {\n    print('Disjoint sets');\n  } else {\n    print('Overlapping sets');\n  }\n}\n```",
+    "answer": ["intersection"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  numbers.clear();\n  print(numbers);\n}\n```",
+    "options": [
+      "null",
+      "Error",
+      "[]",
+      "{}"
+    ],
+    "answer": ["{}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values from a string:\n\n```dart\nvoid main() {\n  String str = 'dart';\n  Set<String> charSet = %fill%;\n  print(charSet);\n}\n```",
+    "answer": ["str.split('').toSet()"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allAboveZero = numbers.every((number) => number > 0);\n  print(allAboveZero);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you find the union of two sets?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {3, 4, 5};\n  Set<int> c = a.%fill%(b);\n  print(c);\n}\n```",
+    "answer": ["union"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var isDisjoint = numbers.intersection({4, 5, 6}).isEmpty;\n  print(isDisjoint);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 1, 2, 3:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{1, 2, 3}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var noneAboveOne = numbers.every((number) => number > 1);\n  print(noneAboveOne);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with a specific type?\n\n```dart\nvoid main() {\n  Set<%fill%> numbers = {1, 2, 3};\n  print(numbers);\n}\n```",
+    "answer": ["int"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var firstElementOrNull = numbers.lookup(0);\n  print(firstElementOrNull);\n}\n```",
+    "options": [
+      "1",
+      "null",
+      "Error",
+      "Instance of 'Set'"
+    ],
+    "answer": ["null"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 5, 10, 15:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{5, 10, 15}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allLessThanFour = numbers.every((number) => number < 4);\n  print(allLessThanFour);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with elements from another set?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = %fill%;\n  print(b);\n}\n```",
+    "answer": ["Set.from(a)"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  numbers.remove(1);\n  print(numbers);\n}\n```",
+    "options": [
+      "{2, 3}",
+      "{1, 2, 3}",
+      "{1, 3}",
+      "Error"
+    ],
+    "answer": ["{2, 3}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values from a string:\n\n```dart\nvoid main() {\n  String str = 'dart';\n  Set<String> charSet = %fill%;\n  print(charSet);\n}\n```",
+    "answer": ["str.split('').toSet()"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allAboveZero = numbers.every((number) => number > 0);\n  print(allAboveZero);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you find the union of two sets?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {3, 4, 5};\n  Set<int> c = a.%fill%(b);\n  print(c);\n}\n```",
+    "answer": ["union"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var isDisjoint = numbers.intersection({4, 5, 6}).isEmpty;\n  print(isDisjoint);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 1, 2, 3:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{1, 2, 3}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var noneAboveOne = numbers.every((number) => number > 1);\n  print(noneAboveOne);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with a specific type?\n\n```dart\nvoid main() {\n  Set<%fill%> numbers = {1, 2, 3};\n  print(numbers);\n}\n```",
+    "answer": ["int"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var firstElementOrNull = numbers.lookup(0);\n  print(firstElementOrNull);\n}\n```",
+    "options": [
+      "1",
+      "null",
+      "Error",
+      "Instance of 'Set'"
+    ],
+    "answer": ["null"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 5, 10, 15:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{5, 10, 15}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allLessThanFour = numbers.every((number) => number < 4);\n  print(allLessThanFour);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with elements from another set?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = %fill%;\n  print(b);\n}\n```",
+    "answer": ["Set.from(a)"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  numbers.remove(1);\n  print(numbers);\n}\n```",
+    "options": [
+      "{2, 3}",
+      "{1, 2, 3}",
+      "{1, 3}",
+      "Error"
+    ],
+    "answer": ["{2, 3}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values from a string:\n\n```dart\nvoid main() {\n  String str = 'dart';\n  Set<String> charSet = %fill%;\n  print(charSet);\n}\n```",
+    "answer": ["str.split('').toSet()"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allAboveZero = numbers.every((number) => number > 0);\n  print(allAboveZero);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you find the union of two sets?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {3, 4, 5};\n  Set<int> c = a.%fill%(b);\n  print(c);\n}\n```",
+    "answer": ["union"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var isDisjoint = numbers.intersection({4, 5, 6}).isEmpty;\n  print(isDisjoint);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 1, 2, 3:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{1, 2, 3}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var noneAboveOne = numbers.every((number) => number > 1);\n  print(noneAboveOne);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with a specific type?\n\n```dart\nvoid main() {\n  Set<%fill%> numbers = {1, 2, 3};\n  print(numbers);\n}\n```",
+    "answer": ["int"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var firstElementOrNull = numbers.lookup(0);\n  print(firstElementOrNull);\n}\n```",
+    "options": [
+      "1",
+      "null",
+      "Error",
+      "Instance of 'Set'"
+    ],
+    "answer": ["null"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 5, 10, 15:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{5, 10, 15}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allLessThanFour = numbers.every((number) => number < 4);\n  print(allLessThanFour);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with elements from another set?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = %fill%;\n  print(b);\n}\n```",
+    "answer": ["Set.from(a)"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  numbers.remove(1);\n  print(numbers);\n}\n```",
+    "options": [
+      "{2, 3}",
+      "{1, 2, 3}",
+      "{1, 3}",
+      "Error"
+    ],
+    "answer": ["{2, 3}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values from a string:\n\n```dart\nvoid main() {\n  String str = 'dart';\n  Set<String> charSet = %fill%;\n  print(charSet);\n}\n```",
+    "answer": ["str.split('').toSet()"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allAboveZero = numbers.every((number) => number > 0);\n  print(allAboveZero);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you find the union of two sets?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {3, 4, 5};\n  Set<int> c = a.%fill%(b);\n  print(c);\n}\n```",
+    "answer": ["union"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var isDisjoint = numbers.intersection({4, 5, 6}).isEmpty;\n  print(isDisjoint);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 1, 2, 3:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{1, 2, 3}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var noneAboveOne = numbers.every((number) => number > 1);\n  print(noneAboveOne);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with a specific type?\n\n```dart\nvoid main() {\n  Set<%fill%> numbers = {1, 2, 3};\n  print(numbers);\n}\n```",
+    "answer": ["int"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var firstElementOrNull = numbers.lookup(0);\n  print(firstElementOrNull);\n}\n```",
+    "options": [
+      "1",
+      "null",
+      "Error",
+      "Instance of 'Set'"
+    ],
+    "answer": ["null"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 5, 10, 15:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{5, 10, 15}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allLessThanFour = numbers.every((number) => number < 4);\n  print(allLessThanFour);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with elements from another set?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = %fill%;\n  print(b);\n}\n```",
+    "answer": ["Set.from(a)"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  numbers.remove(1);\n  print(numbers);\n}\n```",
+    "options": [
+      "{2, 3}",
+      "{1, 2, 3}",
+      "{1, 3}",
+      "Error"
+    ],
+    "answer": ["{2, 3}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values from a string:\n\n```dart\nvoid main() {\n  String str = 'dart';\n  Set<String> charSet = %fill%;\n  print(charSet);\n}\n```",
+    "answer": ["str.split('').toSet()"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allAboveZero = numbers.every((number) => number > 0);\n  print(allAboveZero);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you find the union of two sets?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {3, 4, 5};\n  Set<int> c = a.%fill%(b);\n  print(c);\n}\n```",
+    "answer": ["union"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var isDisjoint = numbers.intersection({4, 5, 6}).isEmpty;\n  print(isDisjoint);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 1, 2, 3:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{1, 2, 3}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var noneAboveOne = numbers.every((number) => number > 1);\n  print(noneAboveOne);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with a specific type?\n\n```dart\nvoid main() {\n  Set<%fill%> numbers = {1, 2, 3};\n  print(numbers);\n}\n```",
+    "answer": ["int"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var firstElementOrNull = numbers.lookup(0);\n  print(firstElementOrNull);\n}\n```",
+    "options": [
+      "1",
+      "null",
+      "Error",
+      "Instance of 'Set'"
+    ],
+    "answer": ["null"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 5, 10, 15:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{5, 10, 15}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allLessThanFour = numbers.every((number) => number < 4);\n  print(allLessThanFour);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with elements from another set?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = %fill%;\n  print(b);\n}\n```",
+    "answer": ["Set.from(a)"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  numbers.remove(1);\n  print(numbers);\n}\n```",
+    "options": [
+      "{2, 3}",
+      "{1, 2, 3}",
+      "{1, 3}",
+      "Error"
+    ],
+    "answer": ["{2, 3}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values from a string:\n\n```dart\nvoid main() {\n  String str = 'dart';\n  Set<String> charSet = %fill%;\n  print(charSet);\n}\n```",
+    "answer": ["str.split('').toSet()"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allAboveZero = numbers.every((number) => number > 0);\n  print(allAboveZero);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you find the union of two sets?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {3, 4, 5};\n  Set<int> c = a.%fill%(b);\n  print(c);\n}\n```",
+    "answer": ["union"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var isDisjoint = numbers.intersection({4, 5, 6}).isEmpty;\n  print(isDisjoint);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 1, 2, 3:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{1, 2, 3}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var noneAboveOne = numbers.every((number) => number > 1);\n  print(noneAboveOne);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with a specific type?\n\n```dart\nvoid main() {\n  Set<%fill%> numbers = {1, 2, 3};\n  print(numbers);\n}\n```",
+    "answer": ["int"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var firstElementOrNull = numbers.lookup(0);\n  print(firstElementOrNull);\n}\n```",
+    "options": [
+      "1",
+      "null",
+      "Error",
+      "Instance of 'Set'"
+    ],
+    "answer": ["null"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 5, 10, 15:\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%:\n  print(numbers);\n}\n```",
+    "answer": ["{5, 10, 15}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allLessThanFour = numbers.every((number) => number < 4);\n  print(allLessThanFour);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with a specific implementation?\n\n```dart\nvoid main() {\n  Set<int> numbers = %fill%;\n  print(numbers);\n}\n```",
+    "answer": ["Set<int>.from([1, 2, 3])"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var lastOrNull = numbers.lookup(3);\n  print(lastOrNull);\n}\n```",
+    "options": [
+      "3",
+      "null",
+      "Error",
+      "Instance of 'Set'"
+    ],
+    "answer": ["3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 1, 3, 6, 10, 15, 21, 28, 36, 45:\n\n```dart\nvoid main() {\n  Set<int> triangularNumbers = %fill%;\n  print(triangularNumbers);\n}\n```",
+    "answer": ["{1, 3, 6, 10, 15, 21, 28, 36, 45}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var anyAboveFour = numbers.any((number) => number > 4);\n  print(anyAboveFour);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set with a specific structure?\n\n```dart\nvoid main() {\n  Set<int> numbers = Set%fill%();\n  numbers.addAll([1, 2, 3]);\n  print(numbers);\n}\n```",
+    "answer": ["<int>"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  numbers.retainWhere((number) => number.isOdd);\n  print(numbers);\n}\n```",
+    "options": [
+      "{1, 3}",
+      "{2}",
+      "{1, 2, 3}",
+      "Error"
+    ],
+    "answer": ["{1, 3}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the blanks to create a set with the values 1, 2, 3, 5, 8, 13, 21, 34, 55:\n\n```dart\nvoid main() {\n  Set<int> fibonacciNumbers = %fill%;\n  print(fibonacciNumbers);\n}\n```",
+    "answer": ["{1, 2, 3, 5, 8, 13, 21, 34, 55}"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var allPositive = numbers.every((number) => number > 0);\n  print(allPositive);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you create a set using the spread operator?\n\n```dart\nvoid main() {\n  List<int> list = [1, 2, 3];\n  Set<int> numbers = {%fill%list};\n  print(numbers);\n}\n```",
+    "answer": ["..."],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<String> words = {'hello', 'world'};\n  words.addAll(['dart', 'programming']);\n  print(words.length);\n}\n```",
+    "options": [
+      "4",
+      "2",
+      "6",
+      "Error"
+    ],
+    "answer": ["4"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to get the first element of a set:\n\n```dart\nvoid main() {\n  Set<int> numbers = {5, 10, 15};\n  var firstElement = numbers.%fill%;\n  print(firstElement);\n}\n```",
+    "answer": ["first"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {2, 3, 4};\n  print(a.intersection(b));\n}\n```",
+    "options": [
+      "{2, 3}",
+      "{1, 2, 3, 4}",
+      "{1, 4}",
+      "Error"
+    ],
+    "answer": ["{2, 3}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you check if a set is empty?\n\n```dart\nvoid main() {\n  Set<int> numbers = {};\n  if (numbers.%fill%) {\n    print('Set is empty');\n  }\n}\n```",
+    "answer": ["isEmpty"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3, 4, 5};\n  numbers.removeWhere((n) => n % 2 == 0);\n  print(numbers);\n}\n```",
+    "options": [
+      "{1, 3, 5}",
+      "{2, 4}",
+      "{1, 2, 3, 4, 5}",
+      "Error"
+    ],
+    "answer": ["{1, 3, 5}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to create a set from another iterable:\n\n```dart\nvoid main() {\n  List<String> fruits = ['apple', 'banana', 'apple'];\n  Set<String> uniqueFruits = Set.%fill%(fruits);\n  print(uniqueFruits);\n}\n```",
+    "answer": ["from"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var doubled = numbers.map((n) => n * 2).toSet();\n  print(doubled);\n}\n```",
+    "options": [
+      "{2, 4, 6}",
+      "{1, 2, 3}",
+      "Error",
+      "Instance of 'Set'"
+    ],
+    "answer": ["{2, 4, 6}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you get a single element from a set?\n\n```dart\nvoid main() {\n  Set<int> numbers = {42};\n  var element = numbers.%fill%;\n  print(element);\n}\n```",
+    "answer": ["single"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<String> colors = {'red', 'green', 'blue'};\n  var hasRed = colors.contains('red');\n  print(hasRed);\n}\n```",
+    "options": [
+      "true",
+      "false",
+      "Error",
+      "null"
+    ],
+    "answer": ["true"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to iterate over set elements:\n\n```dart\nvoid main() {\n  Set<String> animals = {'cat', 'dog', 'bird'};\n  animals.%fill%((animal) {\n    print('Animal: $animal');\n  });\n}\n```",
+    "answer": ["forEach"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {3, 1, 4, 1, 5};\n  print(numbers.length);\n}\n```",
+    "options": [
+      "4",
+      "5",
+      "3",
+      "Error"
+    ],
+    "answer": ["4"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you convert a set to a string?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  String result = numbers.%fill%();\n  print(result);\n}\n```",
+    "answer": ["toString"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2};\n  Set<int> b = {3, 4};\n  print(a.union(b));\n}\n```",
+    "options": [
+      "{1, 2, 3, 4}",
+      "{1, 2}",
+      "{3, 4}",
+      "Error"
+    ],
+    "answer": ["{1, 2, 3, 4}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to find elements that satisfy a condition:\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3, 4, 5};\n  var evenNumbers = numbers.%fill%((n) => n % 2 == 0);\n  print(evenNumbers);\n}\n```",
+    "answer": ["where"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<String> fruits = {'apple', 'banana'};\n  fruits.remove('apple');\n  print(fruits.contains('apple'));\n}\n```",
+    "options": [
+      "false",
+      "true",
+      "Error",
+      "null"
+    ],
+    "answer": ["false"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you check if all elements satisfy a condition?\n\n```dart\nvoid main() {\n  Set<int> numbers = {2, 4, 6};\n  bool allEven = numbers.%fill%((n) => n % 2 == 0);\n  print(allEven);\n}\n```",
+    "answer": ["every"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var sum = numbers.reduce((a, b) => a + b);\n  print(sum);\n}\n```",
+    "options": [
+      "6",
+      "3",
+      "Error",
+      "123"
+    ],
+    "answer": ["6"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to check if any element satisfies a condition:\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 3, 5};\n  bool hasEven = numbers.%fill%((n) => n % 2 == 0);\n  print(hasEven);\n}\n```",
+    "answer": ["any"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<String> words = {'dart', 'flutter', 'mobile'};\n  var lengths = words.map((w) => w.length);\n  print(lengths.toList());\n}\n```",
+    "options": [
+      "[4, 7, 6]",
+      "[dart, flutter, mobile]",
+      "Error",
+      "{4, 7, 6}"
+    ],
+    "answer": ["[4, 7, 6]"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you get an element at a specific index?\n\n```dart\nvoid main() {\n  Set<String> colors = {'red', 'green', 'blue'};\n  var secondColor = colors.%fill%(1);\n  print(secondColor);\n}\n```",
+    "answer": ["elementAt"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> original = {1, 2, 3};\n  Set<int> copy = Set.from(original);\n  original.add(4);\n  print(copy.length);\n}\n```",
+    "options": [
+      "3",
+      "4",
+      "Error",
+      "0"
+    ],
+    "answer": ["3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to skip elements:\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3, 4, 5};\n  var skipped = numbers.%fill%(2);\n  print(skipped.toSet());\n}\n```",
+    "answer": ["skip"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {5, 2, 8, 1};\n  var max = numbers.reduce((a, b) => a > b ? a : b);\n  print(max);\n}\n```",
+    "options": [
+      "8",
+      "1",
+      "5",
+      "Error"
+    ],
+    "answer": ["8"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you take only the first n elements?\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3, 4, 5};\n  var firstThree = numbers.%fill%(3);\n  print(firstThree.toSet());\n}\n```",
+    "answer": ["take"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<String> fruits = {'apple', 'banana', 'cherry'};\n  var sorted = fruits.toList()..sort();\n  print(Set.from(sorted));\n}\n```",
+    "options": [
+      "{apple, banana, cherry}",
+      "{cherry, banana, apple}",
+      "Error",
+      "[apple, banana, cherry]"
+    ],
+    "answer": ["{apple, banana, cherry}"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to fold/accumulate values:\n\n```dart\nvoid main() {\n  Set<int> numbers = {1, 2, 3};\n  var product = numbers.%fill%(1, (prev, curr) => prev * curr);\n  print(product);\n}\n```",
+    "answer": ["fold"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2, 3};\n  Set<int> b = {3, 4, 5};\n  print(a.difference(b));\n}\n```",
+    "options": [
+      "{1, 2}",
+      "{3, 4, 5}",
+      "{4, 5}",
+      "Error"
+    ],
+    "answer": ["{1, 2}"],
+    "type": "mcq"
+  },
+  {
+    "question": "How can you join set elements into a string?\n\n```dart\nvoid main() {\n  Set<String> words = {'Hello', 'World'};\n  String sentence = words.%fill%(' ');\n  print(sentence);\n}\n```",
+    "answer": ["join"],
+    "type": "fill"
+  },
+  {
+    "question": "What is the result of the following code?\n\n```dart\nvoid main() {\n  Set<int> numbers = {};\n  numbers.addAll([1, 2, 2, 3, 3, 3]);\n  print(numbers.length);\n}\n```",
+    "options": [
+      "3",
+      "6",
+      "0",
+      "Error"
+    ],
+    "answer": ["3"],
+    "type": "mcq"
+  },
+  {
+    "question": "Fill in the method to check if sets are disjoint:\n\n```dart\nvoid main() {\n  Set<int> a = {1, 2};\n  Set<int> b = {3, 4};\n  bool disjoint = a.intersection(b).%fill%;\n  print(disjoint);\n}\n```",
+    "answer": ["isEmpty"],
+    "type": "fill"
+  },
+  {
+    "question": "What will be the output of the following code?\n\n```dart\nvoid main() {\n  Set<String> names = {'Alice', 'Bob', 'Charlie'};\n  var longNames = names.where((name) => name.length > 4);\n  print(longNames.toSet());\n}\n```",
+    "options": [
+      "{Alice, Charlie}",
+      "{Bob}",
+      "{Alice, Bob, Charlie}",
+      "Error"
+    ],
+    "answer": ["{Alice, Charlie}"],
+    "type": "mcq"
+  }
+]

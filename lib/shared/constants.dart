@@ -96,7 +96,8 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=u4j1EAnd6RU",
             "https://www.youtube.com/watch?v=YZg_0yvueu8"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/while_loop.json"),
       CourseModel(
           title: "Do-While Loops",
           path: "assets/courses/do_while.md",
@@ -104,7 +105,8 @@ class AppData {
           desc: "Learn how to use do-while loops in Dart for iteration.",
           videos: [
             "https://youtu.be/pGGWQr46Ee0?si=v3LmGckwoOWyDZqc",
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/do_while.json"),
       CourseModel(
           title: "List",
           path: "assets/courses/list.md",
@@ -112,7 +114,8 @@ class AppData {
           desc: "Learn about lists in Dart and how to use them.",
           videos: [
             "https://www.youtube.com/watch?v=sAWPh3Hzdvs",
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/list.json"),
       CourseModel(
           title: "Sets",
           path: "assets/courses/sets.md",
@@ -120,7 +123,8 @@ class AppData {
           desc: "Learn about sets in Dart and how to use them.",
           videos: [
             "https://www.youtube.com/watch?v=AbfbANY1X2U",
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/sets.json"),
       CourseModel(
           title: "Maps",
           path: "assets/courses/map.md",
@@ -129,7 +133,8 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=792ek6Y9940",
             "https://www.youtube.com/watch?v=wkF28m7jZVw"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/map.json"),
       CourseModel(
           title: "Functions",
           path: "assets/courses/functions.md",
@@ -138,7 +143,8 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=NsrlCADdWdw",
             "https://www.youtube.com/watch?v=EpVgqc7jy9o"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/functions.json"),
       CourseModel(
           title: "Enums",
           path: "assets/courses/enum.md",
@@ -147,7 +153,8 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=r6-zUB2YVNE",
             "https://www.youtube.com/watch?v=UPrtRkBdwWk"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/enum.json"),
       CourseModel(
           title: "Null Safety",
           path: "assets/courses/null_safe.md",
@@ -156,7 +163,8 @@ class AppData {
           videos: [
             "https://www.youtube.com/watch?v=iYhOU9AuaFs",
             "https://www.youtube.com/watch?v=nf5eqagjw8c"
-          ]),
+          ],
+          quiz: "assets/jsons/quizzes/null_safe.json"),
     ],
     "Intermediate": [
       CourseModel(
