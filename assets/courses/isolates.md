@@ -50,6 +50,20 @@ void makeDessert() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **the performance problems of single-threaded execution**:
+
+1. **Sequential Blocking**: Each function runs completely before the next one starts, creating a bottleneck where tasks wait in line.
+
+2. **CPU Underutilization**: Only one CPU core is used while others remain idle, wasting available processing power.
+
+3. **UI Freezing Simulation**: The heavy loops represent CPU-intensive tasks that would freeze the user interface in a real application.
+
+4. **Cumulative Delay**: Total execution time is the sum of all individual task times (5+3+4=12 seconds) instead of running concurrently.
+
+5. **Resource Waste**: Modern devices have multiple cores, but this approach uses only one, leaving performance on the table.
+
 **Problems:**
 
 - Everything runs **sequentially** (one after another) ⏳
@@ -190,33 +204,23 @@ void main() async {
 }
 ```
 
-**Sample Output:**
+**🔍 What This Code Does:**
 
-```
-🏪 FRIDAY NIGHT DINNER RUSH! 🏪
-📋 Orders: Pizza, Salad, Dessert
-⏰ Starting parallel kitchen work...
+This code demonstrates **true parallel processing using Dart isolates**:
 
-🎵 Playing background music while workers cook...
-📞 Taking new phone orders...
-💳 Processing payments at counter...
-👨‍🍳 Pizza chef started working...
-🥗 Salad maker started working...
-🍰 Dessert specialist started working...
-✅ Salad Maker: 🥗 Caesar Salad ready!
-   🥬 Cut: 500000000 vegetables
-✅ Dessert Specialist: 🍰 Chocolate Cake ready!
-   🥄 Mixed batter: 800000000 times
-✅ Pizza Chef: 🍕 Margherita Pizza ready!
-   📊 Processed: 1000000000 ingredients
+1. **Isolate Creation**: `Isolate.spawn()` creates separate execution contexts that run on different CPU cores or threads.
 
-🎉 ALL ORDERS COMPLETE! 🎉
-📦 Completed orders:
-   • 🥗 Caesar Salad ready!
-   • 🍰 Chocolate Cake ready!
-   • 🍕 Margherita Pizza ready!
-⚡ Total time: Much faster with parallel cooking!
-```
+2. **Message Passing Architecture**: Uses `SendPort` and `ReceivePort` to establish communication channels between isolates and the main thread.
+
+3. **Concurrent Execution**: All three workers start simultaneously, utilizing multiple CPU cores to reduce total execution time.
+
+4. **Asynchronous Communication**: The main thread continues executing while isolates work, keeping the UI responsive.
+
+5. **Result Aggregation**: Collects results from different isolates as they complete, handling variable completion times.
+
+6. **Memory Isolation**: Each isolate has its own memory space, preventing race conditions and ensuring thread safety.
+
+7. **Non-Blocking Main Thread**: The main thread remains available for UI updates and user interactions while heavy work happens in background isolates.
 
 ---
 
@@ -386,6 +390,24 @@ void checkGameReady(int completed) {
   }
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **real-world game engine architecture using isolates**:
+
+1. **Specialized Processing Units**: Each isolate handles a specific game system (AI, Physics, Graphics), mimicking real game engine architecture.
+
+2. **Data Packaging**: Complex data structures are passed to isolates through lists, showing how to handle multiple parameters.
+
+3. **Game State Simulation**: Each processor simulates intensive calculations that would occur in actual game systems.
+
+4. **System Coordination**: Demonstrates how different game systems can run independently while coordinating through the main thread.
+
+5. **Performance Critical Design**: Game engines require consistent frame rates, making parallel processing essential for smooth gameplay.
+
+6. **Resource Distribution**: Distributes computational load across multiple cores, ensuring no single system becomes a bottleneck.
+
+7. **Scalable Architecture**: Shows how complex applications can benefit from isolate-based parallel processing.
 
 ---
 
@@ -571,6 +593,24 @@ void checkFactoryComplete(int completed) {
   }
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **enterprise-level data processing with multiple isolates**:
+
+1. **Data Stream Processing**: Each isolate handles a different data type (CSV, images, emails), simulating real business processing workflows.
+
+2. **Business Intelligence Simulation**: The CSV processor demonstrates financial data analysis with aggregations and categorizations.
+
+3. **Complex Data Structures**: Shows how to pass and return complex data structures (Maps, Lists) between isolates.
+
+4. **Factory Pattern**: Main thread acts as a factory controller, coordinating multiple processing units while maintaining oversight.
+
+5. **Scalable Processing**: Demonstrates how businesses can handle multiple data streams simultaneously for improved efficiency.
+
+6. **Real-world Application**: Models actual enterprise scenarios where different data types need concurrent processing.
+
+7. **Performance Monitoring**: Includes completion tracking and status reporting for production-ready applications.
 
 ---
 

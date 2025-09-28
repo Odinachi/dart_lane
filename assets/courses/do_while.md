@@ -26,7 +26,7 @@ So you:
 void main() {
   int candies = 0;
 
-  while (candies > 0) {  // Check condition FIRST
+  while (candies > 0) {
     print('🍬 Eating candy #$candies');
     candies--;
   }
@@ -34,6 +34,18 @@ void main() {
   print('Result: No candies eaten because we had 0 to start!');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **condition-first execution with while loops**:
+
+1. **Pre-Condition Check**: The `while (candies > 0)` condition is evaluated before any loop body execution occurs.
+
+2. **Zero Execution Scenario**: Since `candies` starts at 0, the condition `0 > 0` is false from the beginning, so the loop body never executes.
+
+3. **Skip-If-False Logic**: When the initial condition is false, the entire loop is bypassed, demonstrating while loop's "check first" behavior.
+
+4. **No Side Effects**: No variables are modified and no actions are performed when the condition fails initially.
 
 **Output:**
 
@@ -50,11 +62,23 @@ void main() {
   do {
     candies++;
     print('🍬 Trying candy #$candies - it\'s delicious!');
-  } while (candies < 3);  // Check condition AFTER doing
+  } while (candies < 3);
 
   print('🎉 Finished trying candies!');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **action-first execution with do-while loops**:
+
+1. **Guaranteed First Execution**: The loop body executes immediately without checking any condition first.
+
+2. **Post-Condition Check**: The `while (candies < 3)` condition is evaluated only after the first execution completes.
+
+3. **Minimum One Iteration**: Even if the condition would be false initially, the loop ensures at least one execution occurs.
+
+4. **Variable Modification**: The `candies++` happens before the condition check, ensuring the loop variable changes affect the condition evaluation.
 
 **Output:**
 
@@ -109,31 +133,21 @@ void main() {
 }
 ```
 
-**Sample Output:**
+**🔍 What This Code Does:**
 
-```
-🎮 ARCADE ADVENTURE GAME 🎮
+This code demonstrates **game loop logic with compound exit conditions**:
 
-💖 Starting level 1 with 3 lives
-🏃 Running through obstacles...
-⚔️ Fighting the boss...
-✅ Level 1 completed!
-🎊 Moving to level 2!
+1. **Guaranteed Game Start**: The do-while ensures the player always plays at least one level, regardless of initial conditions.
 
-💖 Starting level 2 with 3 lives
-🏃 Running through obstacles...
-⚔️ Fighting the boss...
-💀 Oops! Lost a life. Lives remaining: 2
-🔄 Trying level 2 again...
+2. **Dynamic State Management**: Variables `lives` and `level` change during execution, affecting future iterations and exit conditions.
 
-💖 Starting level 2 with 2 lives
-🏃 Running through obstacles...
-⚔️ Fighting the boss...
-✅ Level 2 completed!
-🎊 Moving to level 3!
+3. **Compound Exit Logic**: The loop continues while both `lives > 0` AND `level <= 5`, showing how multiple conditions control loop termination.
 
-🏆 Congratulations! You completed all levels!
-```
+4. **Pseudo-Random Outcomes**: Uses `DateTime.now().millisecond % 3` to simulate random game outcomes, making each run different.
+
+5. **Conditional Progression**: Level increases only on success, while lives decrease only on failure, modeling real game mechanics.
+
+6. **Post-Loop Analysis**: After the loop, checks the final state to determine if the player won or lost.
 
 ---
 
@@ -202,53 +216,23 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🛍️ SHOPPING MALL ADVENTURE 🛍️
+This code demonstrates **resource management with sequential processing**:
 
-💰 Current money: $100.00
-🛒 Items in cart: 0
+1. **Collection Processing**: Uses a List of Maps to store item data with multiple properties (name, price, emoji).
 
-👀 Looking at: 👕 Cool T-Shirt - $25.99
-✅ Bought Cool T-Shirt! Added to cart 🛒
-💸 Spent $25.99
+2. **Financial Transaction Logic**: Tracks money spending with precise decimal calculations using `toStringAsFixed(2)` for currency formatting.
 
-💰 Current money: $74.01
-🛒 Items in cart: 1
+3. **Conditional Purchasing**: Only purchases items if sufficient funds are available, demonstrating real-world shopping constraints.
 
-👀 Looking at: 👟 Sneakers - $79.99
-💸 Not enough money for Sneakers
-💔 Moving on to the next item...
+4. **Dynamic Collection Building**: Builds the `shoppingCart` list progressively based on successful purchases.
 
-💰 Current money: $74.01
-🛒 Items in cart: 1
+5. **Index-Based Iteration**: Uses `itemsBought` as both a counter and index to process items sequentially.
 
-👀 Looking at: 🎒 Backpack - $45.50
-✅ Bought Backpack! Added to cart 🛒
-💸 Spent $45.50
+6. **Multiple Exit Strategies**: Loop can end due to no money left, all items considered, or explicit break statement.
 
-💰 Current money: $28.51
-🛒 Items in cart: 2
-
-👀 Looking at: 🕶️ Sunglasses - $19.99
-✅ Bought Sunglasses! Added to cart 🛒
-💸 Spent $19.99
-
-💰 Current money: $8.52
-🛒 Items in cart: 3
-
-👀 Looking at: ⌚ Watch - $89.95
-💸 Not enough money for Watch
-💔 Moving on to the next item...
-
-🎉 SHOPPING COMPLETE! 🎉
-💰 Money left: $8.52
-🛍️ Items purchased:
-   1. 👕 Cool T-Shirt
-   2. 🎒 Backpack
-   3. 🕶️ Sunglasses
-```
+7. **State Persistence**: All changes (money, cart contents, items considered) persist across loop iterations.
 
 ---
 
@@ -260,7 +244,7 @@ void main() {
 
   String playerName = 'Chef Mario';
   int pizzasMade = 0;
-  int timeRemaining = 5; // 5 rounds
+  int timeRemaining = 5;
   int score = 0;
 
   print('👨‍🍳 Welcome $playerName to the Pizza Championship!');
@@ -334,76 +318,23 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🍕 PIZZA MAKING CHAMPIONSHIP 🍕
+This code demonstrates **structured competition simulation with quality assessment**:
 
-👨‍🍳 Welcome Chef Mario to the Pizza Championship!
-🎯 Goal: Make as many pizzas as possible!
-⏰ You have 5 rounds!
+1. **Multi-Step Process Simulation**: Uses a List of strings to represent pizza-making steps, processed with a foreach loop.
 
-🍕 === ROUND 1 ===
-👨‍🍳 Chef Mario is making pizza #1...
-   🫓 Rolling the dough...
-   🍅 Adding tomato sauce...
-   🧀 Sprinkling cheese...
-   🍄 Adding toppings...
-   🔥 Baking in the oven...
-✅ Pizza completed! Quality: Perfect! 🤩 (+10 points)
-📊 Current score: 10 points
-⏰ Rounds remaining: 4
+2. **Random Quality System**: Generates pseudo-random quality ratings (1-3) using microsecond timing, creating variable outcomes.
 
-🍕 === ROUND 2 ===
-👨‍🍳 Chef Mario is making pizza #2...
-   🫓 Rolling the dough...
-   🍅 Adding tomato sauce...
-   🧀 Sprinkling cheese...
-   🍄 Adding toppings...
-   🔥 Baking in the oven...
-✅ Pizza completed! Quality: Great 😊 (+8 points)
-📊 Current score: 18 points
-⏰ Rounds remaining: 3
+3. **Switch-Case Scoring**: Uses switch statement to assign different point values and emojis based on quality levels.
 
-🍕 === ROUND 3 ===
-👨‍🍳 Chef Mario is making pizza #3...
-   🫓 Rolling the dough...
-   🍅 Adding tomato sauce...
-   🧀 Sprinkling cheese...
-   🍄 Adding toppings...
-   🔥 Baking in the oven...
-✅ Pizza completed! Quality: Good 🙂 (+5 points)
-📊 Current score: 23 points
-⏰ Rounds remaining: 2
+4. **Progressive Scoring**: Accumulates score across rounds while tracking remaining rounds, simulating tournament progression.
 
-🍕 === ROUND 4 ===
-👨‍🍳 Chef Mario is making pizza #4...
-   🫓 Rolling the dough...
-   🍅 Adding tomato sauce...
-   🧀 Sprinkling cheese...
-   🍄 Adding toppings...
-   🔥 Baking in the oven...
-✅ Pizza completed! Quality: Great 😊 (+8 points)
-📊 Current score: 31 points
-⏰ Rounds remaining: 1
+5. **Countdown Logic**: Decrements `timeRemaining` each iteration, creating a finite competition with guaranteed end.
 
-🍕 === ROUND 5 ===
-👨‍🍳 Chef Mario is making pizza #5...
-   🫓 Rolling the dough...
-   🍅 Adding tomato sauce...
-   🧀 Sprinkling cheese...
-   🍄 Adding toppings...
-   🔥 Baking in the oven...
-✅ Pizza completed! Quality: Perfect! 🤩 (+10 points)
-📊 Current score: 41 points
-⏰ Rounds remaining: 0
+6. **Performance Classification**: Final scoring system categorizes performance into medal tiers based on total accumulated points.
 
-🏁 CHAMPIONSHIP COMPLETE! 🏁
-👨‍🍳 Chef Mario's Final Results:
-🍕 Pizzas made: 5
-🏆 Final score: 41 points
-🥇 GOLD MEDAL! Amazing performance!
-```
+7. **Round-Based Structure**: Each iteration represents a complete round with consistent steps but variable outcomes.
 
 ---
 
@@ -488,6 +419,24 @@ void main() {
   print('\n📱 Phone session ended.');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **interactive menu system with resource management**:
+
+1. **Persistent Menu Display**: The do-while ensures the menu appears at least once, even if initial conditions might suggest otherwise.
+
+2. **State-Driven Interface**: Displays current user and battery level each iteration, showing how UI updates based on changing state.
+
+3. **Resource Consumption Modeling**: Different actions consume different amounts of battery, simulating real phone usage patterns.
+
+4. **Multiple Exit Conditions**: Loop can end through user choice (power off) or system condition (low battery), showing flexible termination.
+
+5. **Switch-Based Action Handling**: Uses switch statement to handle different user choices with distinct behaviors and battery impacts.
+
+6. **Conditional Flow Control**: Uses boolean flags (`keepRunning`) to control loop continuation based on user actions or system state.
+
+7. **Realistic Simulation**: Models actual phone behavior including battery drain, user interactions, and automatic shutdown warnings.
 
 ---
 
@@ -575,6 +524,24 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **complex game logic with multiple win conditions and scoring systems**:
+
+1. **Multi-Dice Simulation**: Generates three independent random dice values using different multipliers (7, 13) to ensure variety.
+
+2. **Pattern Recognition**: Checks for specific dice combinations (triple sixes, any triple, pairs) using logical operators and conditional chains.
+
+3. **Tiered Scoring System**: Implements different point values for different achievements (base roll + bonus for patterns).
+
+4. **Multiple Termination Conditions**: Game can end due to jackpot, player choice, or maximum roll limit, showing complex exit logic.
+
+5. **Progressive Difficulty**: Uses roll count limits to prevent infinite games while maintaining player agency.
+
+6. **Statistical Simulation**: Uses pseudo-random generation to simulate dice probability while ensuring reproducible behavior.
+
+7. **Achievement Recognition**: Provides immediate feedback for special combinations, enhancing user engagement through reward systems.
+
 ---
 
 ## 🧠 Key Differences: While vs Do-While
@@ -588,7 +555,7 @@ void demonstrateLoopDifference() {
   // While loop example
   print('📋 WHILE LOOP (Check first, then do):');
   int whileCounter = 5;
-  while (whileCounter < 3) {  // This condition is false from start
+  while (whileCounter < 3) {
     print('   This will never print');
     whileCounter++;
   }
@@ -600,7 +567,7 @@ void demonstrateLoopDifference() {
   do {
     print('   This prints at least once!');
     doWhileCounter++;
-  } while (doWhileCounter < 3);  // Same false condition
+  } while (doWhileCounter < 3);
   print('   Do-while loop: Ran 1 time\n');
 
   print('🎯 KEY DIFFERENCE: Do-while ALWAYS runs at least once!');
@@ -610,6 +577,20 @@ void main() {
   demonstrateLoopDifference();
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **the fundamental execution difference between loop types**:
+
+1. **Condition Evaluation Timing**: Shows how while loops check conditions before execution, while do-while loops check after execution.
+
+2. **Zero-Iteration Scenario**: Demonstrates that while loops can execute zero times when initial conditions are false.
+
+3. **Guaranteed Execution**: Proves that do-while loops always execute at least once, regardless of initial condition values.
+
+4. **Identical Conditions**: Uses the same false condition (`counter < 3` with counter = 5) to highlight the behavioral difference.
+
+5. **Educational Comparison**: Provides side-by-side demonstration of when each loop type is appropriate for different scenarios.
 
 **Output:**
 
@@ -703,6 +684,21 @@ Try creating do-while loops for these scenarios:
 3. **🎯 Dart Game**: Throw at least one dart, continue until bullseye
 4. **📝 Quiz Game**: Ask at least one question, continue until wrong
 5. **🍔 Restaurant Order**: Show menu at least once, order until done
+
+---
+
+## 🎉 Remember This!
+
+Do-while loops are like **trying a new restaurant** 🍽️:
+
+- **🚪 You go in at least once** (do the action first)
+- **🍽️ You try the food** (execute the code)
+- **🤔 Then you decide** (check the while condition)
+- **🔄 You might come back** (loop continues if condition is true)
+
+**The Magic**: Even if you're not sure you'll like it, you **try it at least once** before deciding whether to return!
+
+That's the power of do-while - **guaranteed first execution** with **conditional repetition**! 🎪✨ 2. **🎵 Music Playlist**: Play at least one song, ask to continue 3. **🎯 Dart Game**: Throw at least one dart, continue until bullseye 4. **📝 Quiz Game**: Ask at least one question, continue until wrong 5. **🍔 Restaurant Order**: Show menu at least once, order until done
 
 ---
 

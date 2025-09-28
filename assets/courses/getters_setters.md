@@ -33,6 +33,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **the security risks of direct field access**:
+
+1. **No Data Protection**: The `balance` field is public, allowing unrestricted read and write access from anywhere in the code.
+
+2. **Invalid State Creation**: Direct access permits setting impossible values like negative balances or unrealistic amounts.
+
+3. **No Business Logic**: There's no validation, logging, or processing when the balance changes, bypassing important banking rules.
+
+4. **Audit Trail Missing**: Changes to the balance happen silently without any record of who made the change or when.
+
+5. **Breaking Encapsulation**: The internal state is exposed directly, making the class fragile and hard to maintain.
+
 **Problems:**
 
 - No security! 🔓
@@ -80,20 +94,21 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🔍 Checking account balance...
-Current balance: $1000.0
-💰 Processing balance change...
-✅ Balance updated to $1200.0
-💰 Processing balance change...
-❌ Invalid amount! Balance cannot be negative.
-🔍 Checking account balance...
-Final balance: $1200.0
-```
+This code demonstrates **controlled access through getters and setters**:
 
-**Amazing!** Now our data is safe and controlled! 🛡️✨
+1. **Data Encapsulation**: The underscore prefix `_balance` makes the field private, preventing direct external access.
+
+2. **Controlled Reading**: The getter provides a controlled way to access the balance, with optional logging or processing.
+
+3. **Input Validation**: The setter validates that the new balance is non-negative before allowing the change.
+
+4. **Audit Logging**: Both getter and setter print messages, creating an audit trail of balance access and modifications.
+
+5. **Business Rule Enforcement**: The setter enforces banking business rules by rejecting invalid transactions.
+
+6. **Error Handling**: Invalid inputs are handled gracefully with informative error messages rather than silent failures.
 
 ---
 
@@ -200,50 +215,23 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🎮 CREATING NEW CHARACTER
+This code demonstrates **complex game mechanics implemented through getters and setters**:
 
-🎮 Player name set to: DragonSlayer
+1. **Default Value Handling**: The name getter returns a default value when no name is set, preventing empty player names.
 
-📊 === PLAYER STATS ===
-👤 Name: DragonSlayer
-❤️ Health: 100/100
-📈 Level: 1
-⚡ Experience: 0 XP
-🎯 XP to next level: 1000
-═════════════════════════
+2. **String Sanitization**: The name setter trims whitespace and validates non-empty input, ensuring clean data storage.
 
-⚔️ BATTLE SEQUENCE
-❤️ DragonSlayer's health: 75/100
-💚 DragonSlayer is at full health!
+3. **Range Clamping**: The health setter clamps values between 0 and 100, preventing invalid health states.
 
-🏆 QUEST COMPLETED
-⚡ DragonSlayer gained experience! Total: 800 XP
-⚡ DragonSlayer gained experience! Total: 1200 XP
-🎉 LEVEL UP! DragonSlayer is now level 2!
-✨ Health fully restored!
+4. **Automatic Level Calculation**: Experience setter automatically calculates and updates player level based on XP thresholds.
 
-📊 === PLAYER STATS ===
-👤 Name: DragonSlayer
-❤️ Health: 100/100
-📈 Level: 2
-⚡ Experience: 1200 XP
-🎯 XP to next level: 800
-═════════════════════════
+5. **Cascading Effects**: Level-up triggers multiple changes (health restoration, level increment), showing interconnected game systems.
 
-💀 DANGEROUS BATTLE
-💀 DragonSlayer has died!
+6. **Computed Properties**: `experienceToNextLevel` calculates derived values without storing redundant data.
 
-📊 === PLAYER STATS ===
-👤 Name: DragonSlayer
-❤️ Health: 0/100
-📈 Level: 2
-⚡ Experience: 1200 XP
-🎯 XP to next level: 800
-═════════════════════════
-```
+7. **Game Event Notification**: Setters provide immediate feedback for important game events (death, level-up, healing).
 
 ---
 
@@ -373,82 +361,23 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🛍️ WELCOME TO DART STORE!
+This code demonstrates **advanced data processing and business logic in getters and setters**:
 
-🛒 Customer set to: Sarah Johnson
+1. **String Formatting**: The customerName setter applies title case formatting to names, ensuring consistent data presentation.
 
-🛒 === SHOPPING CART ===
-👤 Customer: Sarah Johnson
-📦 Items (0/10):
-   (Empty cart)
-💰 Subtotal: $0.00
-═════════════════════════
+2. **Immutable Collections**: The items getter returns an unmodifiable list, preventing external modification while allowing read access.
 
-🛒 SHOPPING SPREE
-➕ Added Gaming Mouse ($49.99)
-➕ Added Mechanical Keyboard ($129.99)
-➕ Added Monitor ($299.99)
-🏷️ Discount set to 15.0%
+3. **Computed Properties**: Properties like `finalPrice` calculate values dynamically based on other fields without storing redundant data.
 
-🛒 === SHOPPING CART ===
-👤 Customer: Sarah Johnson
-📦 Items (3/10):
-   1. Gaming Mouse
-   2. Mechanical Keyboard
-   3. Monitor
-💰 Subtotal: $479.97
-🏷️ Discount: 15.0%
-✨ Final Price: $407.97
-═════════════════════════
+4. **Business Rule Validation**: Discount percentage is constrained to realistic business limits (0-50%).
 
-🏷️ DISCOUNT EXPERIMENTS
-❌ Discount cannot be negative!
-⚠️ Maximum discount is 50%
-🏷️ Discount set to 20.0%
+5. **State Queries**: Boolean getters like `isFull` and `isEmpty` provide convenient ways to check object state.
 
-🛒 === SHOPPING CART ===
-👤 Customer: Sarah Johnson
-📦 Items (3/10):
-   1. Gaming Mouse
-   2. Mechanical Keyboard
-   3. Monitor
-💰 Subtotal: $479.97
-🏷️ Discount: 20.0%
-✨ Final Price: $383.98
-═════════════════════════
+6. **Data Encapsulation**: Internal collections and calculations are protected while providing controlled access through getters.
 
-📦 FILLING CART
-➕ Added Item 4 ($10.00)
-➕ Added Item 5 ($10.00)
-➕ Added Item 6 ($10.00)
-➕ Added Item 7 ($10.00)
-➕ Added Item 8 ($10.00)
-➕ Added Item 9 ($10.00)
-➕ Added Item 10 ($10.00)
-🛒 Cart is full! Cannot add more items.
-🛒 Cart is full! Cannot add more items.
-
-🛒 === SHOPPING CART ===
-👤 Customer: Sarah Johnson
-📦 Items (10/10):
-   1. Gaming Mouse
-   2. Mechanical Keyboard
-   3. Monitor
-   4. Item 4
-   5. Item 5
-   6. Item 6
-   7. Item 7
-   8. Item 8
-   9. Item 9
-   10. Item 10
-💰 Subtotal: $549.97
-🏷️ Discount: 20.0%
-✨ Final Price: $439.98
-═════════════════════════
-```
+7. **Real-time Calculations**: Final price updates automatically when discount or total price changes, maintaining data consistency.
 
 ---
 
@@ -552,21 +481,6 @@ class SmartPhone {
 
   String get securityStatus => _isLocked ? 'Secure 🔒' : 'Unlocked 🔓';
 
-  void displayStatus() {
-    print('\n📱 === PHONE STATUS ===');
-    print('📱 Model: $model');
-    print('🔋 Battery: $batteryLevel% ($batteryStatus)');
-    print('💡 Brightness: ${brightness.toStringAsFixed(1)}%');
-    print('🔐 Security: $securityStatus');
-    print('🖼️ Wallpaper: $wallpaper');
-
-    if (needsCharging) {
-      print('⚠️ Recommendation: Charge your phone soon!');
-    }
-
-    print('═' * 25);
-  }
-
   void simulateUsage(int minutes) {
     print('\n📱 Using phone for $minutes minutes...');
 
@@ -618,71 +532,23 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-📱 SMART PHONE SIMULATOR
+This code demonstrates **realistic device simulation with intelligent feedback systems**:
 
-📱 Phone model set to: iPhone 15 Pro
+1. **Realistic Hardware Limits**: Battery and brightness values are constrained to realistic ranges (0-100) with appropriate clamping.
 
-📱 === PHONE STATUS ===
-📱 Model: iPhone 15 Pro
-🔋 Battery: 100% (Excellent 🟢)
-💡 Brightness: 50.0%
-🔐 Security: Secure 🔒
-🖼️ Wallpaper: Default
-═════════════════════════
+2. **Contextual User Feedback**: Different battery levels trigger different warning messages, simulating real device behavior.
 
-🔓 UNLOCKING PHONE
-🔓 Phone unlocked - welcome back!
+3. **Graduated Responses**: Brightness setter provides different feedback messages based on the intensity level being set.
 
-⚙️ ADJUSTING SETTINGS
-🌞 Screen bright at 75.0%
-🖼️ Wallpaper changed to: Sunset Beach 🌅
+4. **Derived Status Information**: Computed properties like `batteryStatus` and `needsCharging` provide meaningful interpretations of raw data.
 
-📱 Using phone for 30 minutes...
-🔋 Battery: 66%
-⏰ Usage complete
+5. **Usage Simulation**: `simulateUsage()` method demonstrates how getters and setters integrate with other object behaviors.
 
-📱 Using phone for 45 minutes...
-🔋 Battery: 18%
-⏰ Usage complete
+6. **Hardware Interaction Modeling**: The relationship between brightness and battery drain shows realistic device physics simulation.
 
-📱 === PHONE STATUS ===
-📱 Model: iPhone 15 Pro
-🔋 Battery: 18% (Critical 🔴)
-💡 Brightness: 75.0%
-🔐 Security: Unlocked 🔓
-🖼️ Wallpaper: Sunset Beach 🌅
-⚠️ Recommendation: Charge your phone soon!
-═════════════════════════
-
-🧪 TESTING LIMITS
-☀️ Screen at maximum brightness
-🌑 Screen at minimum brightness
-🪫 LOW BATTERY WARNING: 5%
-
-📱 === PHONE STATUS ===
-📱 Model: iPhone 15 Pro
-🔋 Battery: 5% (Critical 🔴)
-💡 Brightness: 0.0%
-🔐 Security: Unlocked 🔓
-🖼️ Wallpaper: Sunset Beach 🌅
-⚠️ Recommendation: Charge your phone soon!
-═════════════════════════
-
-🔌 CHARGING PHONE
-🔌 Phone fully charged!
-🔒 Phone locked for security
-
-📱 === PHONE STATUS ===
-📱 Model: iPhone 15 Pro
-🔋 Battery: 100% (Excellent 🟢)
-💡 Brightness: 0.0%
-🔐 Security: Secure 🔒
-🖼️ Wallpaper: Sunset Beach 🌅
-═════════════════════════
-```
+7. **User Experience Design**: Feedback messages are designed to inform users about device state changes clearly.
 
 ---
 
@@ -704,6 +570,18 @@ class Circle {
   // No setters - these are read-only!
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **immutable computed properties**:
+
+1. **Read-Only Access**: Properties with only getters prevent external modification while allowing data access.
+
+2. **Computed Values**: Area and circumference are calculated dynamically from the radius, ensuring they're always current.
+
+3. **Mathematical Relationships**: Shows how getters can encapsulate mathematical formulas and derived values.
+
+4. **Data Consistency**: Since computed values can't be set independently, they always reflect the current radius value.
 
 ### 2. **Write-Only Properties** (Setter Only)
 
@@ -727,6 +605,18 @@ class SecuritySystem {
   }
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **write-only properties for security**:
+
+1. **Security by Design**: No getter prevents external code from reading the password, enhancing security.
+
+2. **Input Validation**: Setter validates password strength requirements before accepting new values.
+
+3. **Controlled Access**: Password verification is handled through a dedicated method rather than direct comparison.
+
+4. **Privacy Protection**: Sensitive data can be written but not read, following security best practices.
 
 ### 3. **Computed Properties** (Dynamic Values)
 
@@ -755,6 +645,20 @@ class Temperature {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **unit conversion and computed properties**:
+
+1. **Unit Conversion**: Getters and setters automatically convert between temperature scales (Celsius, Fahrenheit, Kelvin).
+
+2. **Single Source of Truth**: All temperatures are stored in Celsius internally, with conversions calculated on demand.
+
+3. **Bidirectional Conversion**: Both getters and setters are provided for each scale, allowing flexible input/output.
+
+4. **Descriptive Properties**: The description getter provides human-readable interpretation of temperature values.
+
+5. **Mathematical Accuracy**: Conversion formulas are encapsulated within the class, preventing calculation errors.
+
 ---
 
 ## 📊 Quick Reference Guide
@@ -777,6 +681,104 @@ class MyClass {
   String get uppercaseValue => _privateValue.toUpperCase();
 }
 ```
+
+### Common Patterns
+
+| Pattern         | Use Case              | Example                                   |
+| --------------- | --------------------- | ----------------------------------------- |
+| **Validation**  | Ensure data integrity | Check age > 0, name not empty             |
+| **Formatting**  | Clean up input        | Trim whitespace, capitalize names         |
+| **Logging**     | Track access/changes  | Print when values are read/written        |
+| **Computation** | Derived values        | Calculate area from radius                |
+| **Security**    | Control access        | Hide sensitive data, validate permissions |
+
+---
+
+## 🎯 When to Use Getters and Setters
+
+**✅ Great for:**
+
+- **Private data** that needs controlled access
+- **Validation** of input values
+- **Computed properties** that change based on other values
+- **Logging** and debugging data access
+- **API compatibility** when internal structure changes
+
+**❌ Not needed for:**
+
+- Simple public data that doesn't need protection
+- Values that never change after creation
+- Performance-critical code where overhead matters
+
+---
+
+## 🚀 Practice Challenges
+
+Create getters and setters for these scenarios:
+
+1. **🏠 Smart Home**: Temperature, lights, security system
+2. **🎵 Music Player**: Volume, current song, playlist
+3. **🚗 Car Dashboard**: Speed, fuel, engine temperature
+4. **👤 User Profile**: Email validation, password strength, avatar
+
+---
+
+## 🎉 Remember This!
+
+Getters and Setters are like having **smart assistants** for your data 🤖:
+
+- **🔍 Getters** = "Here's your data, sir/madam!" (with any processing needed)
+- **✍️ Setters** = "Let me safely store that for you!" (with validation and security)
+- **🛡️ Privacy** = The underscore `_` creates a secure vault
+- **🧠 Computed** = Smart properties that calculate themselves
+
+Think of them as **VIP bouncers** at a fancy club - they decide who gets in, who gets out, and they keep everything safe and organized! 🕺💃✨
+
+**Pro Tip**: Use getters and setters when you need **control**, **validation**, or **extra processing**. For simple data, direct access is perfectly fine! 🎯
+double get celsius => \_celsius;
+set celsius(double temp) => \_celsius = temp;
+
+// Computed getters
+double get fahrenheit => (\_celsius \* 9 / 5) + 32;
+double get kelvin => \_celsius + 273.15;
+
+// Computed setters
+set fahrenheit(double temp) => \_celsius = (temp - 32) \* 5 / 9;
+set kelvin(double temp) => \_celsius = temp - 273.15;
+
+String get description {
+if (\_celsius < 0) return 'Freezing 🥶';
+if (\_celsius < 15) return 'Cold 🧥';
+if (\_celsius < 25) return 'Cool 😊';
+if (\_celsius < 30) return 'Warm ☀️';
+return 'Hot 🔥';
+}
+}
+
+````
+
+---
+
+## 📊 Quick Reference Guide
+
+### Basic Syntax
+
+```dart
+class MyClass {
+  String _privateValue = '';
+
+  // Getter
+  String get value => _privateValue;
+
+  // Setter
+  set value(String newValue) {
+    _privateValue = newValue;
+  }
+
+  // Read-only computed property
+  String get uppercaseValue => _privateValue.toUpperCase();
+}
+````
 
 ### Common Patterns
 

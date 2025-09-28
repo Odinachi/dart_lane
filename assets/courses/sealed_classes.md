@@ -42,6 +42,20 @@ class Robot extends Animal {  // This doesn't make sense!
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **the lack of control in traditional inheritance hierarchies**:
+
+1. **Open Extension**: Abstract classes allow unlimited extension, meaning any developer can add new subtypes anywhere in the codebase.
+
+2. **Design Intent Violation**: Classes like `Alien` and `Robot` extending `Animal` violate the original design intent of modeling real animals.
+
+3. **Unpredictable Type System**: With unlimited extensions, it becomes impossible to know all possible subtypes at compile time.
+
+4. **Pattern Matching Issues**: Switch statements and pattern matching become unreliable because new subtypes can appear unexpectedly.
+
+5. **Maintenance Nightmare**: Code that handles `Animal` types must constantly be updated as new subtypes are added throughout the application.
+
 **Problems:**
 
 - **No control** over who extends your class 😵
@@ -105,22 +119,21 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🐾 ANIMAL SANCTUARY 🐾
+This code demonstrates **controlled inheritance with sealed classes**:
 
-This is a dog!
-🐕 Woof! Woof!
+1. **Sealed Declaration**: The `sealed` keyword restricts extensions to only subtypes defined in the same library/file.
 
-This is a cat!
-🐱 Meow! Purr!
+2. **Exhaustive Type System**: Dart's compiler knows exactly which subtypes exist (`Dog`, `Cat`, `Bird`), enabling complete type safety.
 
-This is a bird!
-🐦 Tweet! Chirp!
-```
+3. **Pattern Matching Excellence**: Switch expressions can be exhaustive without default cases because all possibilities are known.
 
-**Amazing!** Dart **guarantees** that only Dog, Cat, and Bird can be Animals!
+4. **Compile-Time Safety**: Attempting to extend `Animal` from another file would result in a compilation error.
+
+5. **Design Preservation**: The sealed class maintains the original design intent by preventing inappropriate extensions.
+
+6. **Type-Specific Behavior**: Each subtype can have its own methods (`bark()`, `meow()`, `chirp()`) while sharing the common sealed parent.
 
 ---
 
@@ -203,35 +216,21 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🎮 RPG GAME ENGINE 🎮
+This code demonstrates **sealed classes in game development for action systems**:
 
-📋 Processing Movement action...
-🚶 Moving to position (10, 5)
-✅ Action completed!
+1. **Action Modeling**: Each subtype represents a distinct player action with specific data (coordinates, target, item name).
 
-📋 Processing Combat action...
-⚔️ Attacking Goblin for 25 damage!
-✅ Action completed!
+2. **Type-Safe Game Logic**: The `GameEngine` can handle all possible actions without fear of missing cases or runtime errors.
 
-📋 Processing Inventory action...
-🎒 Using Health Potion from inventory
-✅ Action completed!
+3. **Data Encapsulation**: Each action type carries relevant data (`Move` has coordinates, `Attack` has target and damage).
 
-📋 Processing Recovery action...
-😴 Resting to restore health and mana
-✅ Action completed!
+4. **Switch Expression Usage**: Shows both switch statements and switch expressions working seamlessly with sealed types.
 
-📋 Processing Movement action...
-🚶 Moving to position (15, 8)
-✅ Action completed!
+5. **Guaranteed Coverage**: The compiler ensures that all possible player actions are handled in the game engine.
 
-📋 Processing Combat action...
-⚔️ Attacking Dragon for 50 damage!
-✅ Action completed!
-```
+6. **Extensibility Control**: New actions can only be added by modifying the same file, ensuring coordinated updates to game logic.
 
 ---
 
@@ -358,6 +357,22 @@ void main() {
   print('💎 Net Income: \$${(totalRevenue - totalFees).toStringAsFixed(2)}');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **sealed classes for financial systems with complex business logic**:
+
+1. **Payment Method Modeling**: Each payment type has specific required fields (card details, email, account numbers).
+
+2. **Business Logic Variation**: Different payment methods require different processing steps and fees.
+
+3. **Security Considerations**: Shows how sensitive data (card numbers) can be partially masked while maintaining type safety.
+
+4. **Financial Calculations**: Demonstrates method-specific fee calculations and change computation for cash payments.
+
+5. **Audit Trail**: Each payment method can log different information relevant to its processing requirements.
+
+6. **Compliance**: Payment processing often has strict regulatory requirements that benefit from compile-time guarantees.
 
 ---
 
@@ -535,6 +550,22 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **sealed classes with guard conditions for complex decision making**:
+
+1. **Weather Modeling**: Each weather condition contains relevant meteorological data (temperature, rainfall, wind speed).
+
+2. **Guard Clauses**: Uses `when` conditions to create more specific pattern matching based on data values.
+
+3. **Multi-Factor Decisions**: Combines weather type with specific measurements to provide nuanced recommendations.
+
+4. **Domain-Specific Logic**: Models real-world weather advisory systems that consider multiple factors.
+
+5. **Hierarchical Recommendations**: Different severity levels (thunderstorms vs regular rain) trigger different advice.
+
+6. **Type-Safe Weather Processing**: Ensures all weather conditions are handled while allowing for condition-specific logic.
+
 ---
 
 ## 🚨 Error Handling System
@@ -697,6 +728,22 @@ void main() async {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **generic sealed classes for robust error handling**:
+
+1. **Generic Result Type**: `Result<T>` can wrap any data type while maintaining the same success/failure/loading states.
+
+2. **Comprehensive Error Information**: `Failure` class captures multiple error details (message, code, exception) for debugging.
+
+3. **Progress Tracking**: `Loading` state includes progress information for long-running operations.
+
+4. **Type-Safe State Management**: Switch expressions ensure all possible states are handled in UI code.
+
+5. **Functional Programming Patterns**: Follows functional programming principles for error handling, similar to Rust's `Result` type.
+
+6. **UI Integration**: Shows how sealed classes integrate with user interface code for consistent state presentation.
+
 ---
 
 ## 🧠 Key Benefits of Sealed Classes
@@ -739,6 +786,20 @@ String getStatusMessage(Status status) {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **exhaustive pattern matching guarantees**:
+
+1. **Compile-Time Completeness**: The compiler ensures every possible subtype is handled in the switch expression.
+
+2. **No Default Case Needed**: Unlike regular classes, sealed classes don't require default cases because all possibilities are known.
+
+3. **Automatic IDE Support**: IDEs can provide warnings when cases are missing and suggest completions.
+
+4. **Refactoring Safety**: Adding new subtypes automatically breaks existing switch expressions, forcing updates.
+
+5. **Type-Safe Data Access**: Each case can safely access subtype-specific properties without casting.
+
 ### 2. **Type Safety**
 
 ```dart
@@ -760,6 +821,18 @@ class QueryError extends DatabaseResult {
 // ❌ This would be caught at compile time:
 // class UnknownResult extends DatabaseResult { } // ERROR!
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **compile-time type safety enforcement**:
+
+1. **Extension Prevention**: Sealed classes cannot be extended outside their defining library, preventing unauthorized subtypes.
+
+2. **Predictable Type System**: Code working with `DatabaseResult` knows exactly which types are possible.
+
+3. **Compile-Time Errors**: Attempts to create new subtypes result in compilation errors, not runtime surprises.
+
+4. **API Stability**: Library authors can guarantee that sealed class hierarchies won't be extended by consumers.
 
 ### 3. **Better IDE Support**
 
@@ -790,6 +863,18 @@ void handleState(UiState state) {
   }
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **enhanced IDE support for sealed classes**:
+
+1. **Intelligent Code Completion**: IDEs can suggest all possible subtypes when creating switch statements.
+
+2. **Missing Case Detection**: IDEs highlight when switch expressions don't cover all possible cases.
+
+3. **Refactoring Support**: Renaming or modifying subtypes automatically updates all usage locations.
+
+4. **Type Hints**: IDEs provide better type information and documentation for sealed class hierarchies.
 
 ---
 

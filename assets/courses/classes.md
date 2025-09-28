@@ -18,13 +18,27 @@ And each **cookie** you make with that cutter is an **Object** - a real thing yo
 
 ```dart
 void main() {
-  // ❌ This is tedious and repetitive!
   print('Cookie 1: Chocolate chip, round, 3 inches');
   print('Cookie 2: Chocolate chip, round, 3 inches');
   print('Cookie 3: Chocolate chip, round, 3 inches');
-  // ... imagine making 100 cookies this way! 😵
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates the **problems with repetitive, hardcoded data**:
+
+1. **Code Duplication**: Each cookie description is written separately with identical information repeated multiple times.
+
+2. **Maintenance Nightmare**: If you want to change the cookie size from 3 to 4 inches, you'd need to update every single line manually.
+
+3. **No Behavior**: These are just static text strings with no ability to perform actions or respond to changes.
+
+4. **Scalability Issues**: Imagine creating 100 or 1000 cookies this way - the code would become unmanageable.
+
+5. **No Data Organization**: Cookie properties (flavor, shape, size) are mixed together in strings rather than being structured data.
+
+6. **Error-Prone**: Easy to make typos or inconsistencies when manually typing each cookie description.
 
 **Problem**: Too much repetition! What if we want to change the size of ALL cookies? We'd have to update every single line!
 
@@ -48,7 +62,6 @@ class Cookie {
 }
 
 void main() {
-  // Create actual cookies (objects) from our cookie class
   Cookie cookie1 = Cookie();
   Cookie cookie2 = Cookie();
   Cookie cookie3 = Cookie();
@@ -60,6 +73,24 @@ void main() {
   cookie2.eat();
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **object-oriented programming fundamentals** with classes:
+
+1. **Class Definition**: `class Cookie` creates a blueprint that defines what all cookies should have (properties) and do (methods).
+
+2. **Properties**: `flavor`, `shape`, and `sizeInches` are attributes that every cookie object will possess with default values.
+
+3. **Methods**: `describe()` and `eat()` define behaviors that all cookie objects can perform, using their own property values.
+
+4. **Object Instantiation**: `Cookie()` creates actual cookie objects from the class blueprint - each is a separate instance.
+
+5. **Encapsulation**: Related data (cookie properties) and functions (cookie behaviors) are grouped together in one logical unit.
+
+6. **Reusability**: The class can be used to create as many cookie objects as needed without repeating code.
+
+7. **Consistency**: All cookies created from this class will have the same structure and available behaviors.
 
 **Output:**
 
@@ -97,7 +128,6 @@ class Cookie {
 }
 
 void main() {
-  // Make different types of cookies
   Cookie cookie1 = Cookie();
   cookie1.flavor = 'Chocolate Chip';
   cookie1.shape = 'Square';
@@ -123,6 +153,24 @@ void main() {
   cookie3.eat();
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **object customization and state management**:
+
+1. **Individual Customization**: Each cookie object can have its properties modified independently after creation.
+
+2. **State Management**: The `hasIcing` boolean property tracks the state of each cookie, which can be changed by calling `addIcing()`.
+
+3. **Dynamic Behavior**: The `describe()` method produces different output based on each object's current state (icing status).
+
+4. **Method Side Effects**: The `addIcing()` method both changes the object's state (`hasIcing = true`) and produces output.
+
+5. **Object Independence**: Changes to one cookie object (cookie1.flavor) don't affect other cookie objects (cookie2, cookie3).
+
+6. **Conditional Logic**: Uses ternary operator to display different text based on the `hasIcing` property value.
+
+7. **Real-world Modeling**: Demonstrates how objects can represent real-world entities with changeable characteristics.
 
 **Output:**
 
@@ -182,6 +230,24 @@ void main() {
   cookie3.eat();
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **constructor usage and parameter initialization**:
+
+1. **Constructor Definition**: `Cookie(this.flavor, this.shape, this.sizeInches, this.hasIcing)` creates a constructor that takes parameters and assigns them to properties.
+
+2. **Property Declaration**: Properties are declared without default values since they'll be set through the constructor.
+
+3. **Shorthand Syntax**: `this.propertyName` in the constructor parameter list is Dart's shorthand for assigning parameters to properties.
+
+4. **Required Parameters**: All four parameters must be provided when creating a cookie object, ensuring complete initialization.
+
+5. **Immediate Initialization**: Objects are fully configured at creation time rather than requiring separate property assignments.
+
+6. **Type Safety**: Constructor parameters have defined types, preventing incorrect data from being passed.
+
+7. **Efficiency**: One-line object creation replaces multiple property assignment statements.
 
 **Output:**
 
@@ -254,6 +320,24 @@ void main() {
   dog3.sleep(); // Max is tired!
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **real-world object modeling** with a Dog class:
+
+1. **Different Domain**: Shows how the same class concepts apply to different problem domains (dogs instead of cookies).
+
+2. **Meaningful Properties**: Each dog has realistic attributes (name, breed, age, color) that define its characteristics.
+
+3. **Behavioral Methods**: Methods like `bark()`, `play()`, and `sleep()` represent actual dog behaviors rather than just data display.
+
+4. **Personalization**: Each method uses the dog's name to create personalized output, showing object identity.
+
+5. **Individual Personalities**: Each dog object can perform the same behaviors but with their own identity (different names, breeds).
+
+6. **String Escaping**: Uses `\'` to escape apostrophes in the `introduce()` method string.
+
+7. **Object Interaction**: Demonstrates how multiple objects of the same class can exist and behave independently.
 
 **Output:**
 
@@ -357,6 +441,24 @@ void main() {
   car2.stopEngine();
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **complex object behavior and state management**:
+
+1. **Constructor Body**: Uses a constructor with a body to initialize some properties (`speed`, `isEngineOn`) to default values while others come from parameters.
+
+2. **State Dependencies**: Methods like `accelerate()` check the `isEngineOn` state before performing actions, modeling real-world constraints.
+
+3. **Conditional Logic**: Each method uses if-statements to handle different scenarios (engine on/off, speed limits).
+
+4. **State Modification**: Methods modify object properties (`speed`, `isEngineOn`) to reflect changes in the car's state.
+
+5. **Validation Logic**: `brake()` method prevents negative speed values, showing input validation within methods.
+
+6. **Error Prevention**: `accelerate()` prevents driving without engine, demonstrating business rule enforcement.
+
+7. **Complex Interactions**: Methods affect multiple properties (stopping engine also sets speed to 0), showing interconnected object behavior.
 
 **Output:**
 
@@ -478,6 +580,26 @@ void main() {
   phone2.usePhone(25);
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **advanced object-oriented programming concepts**:
+
+1. **Collection Properties**: Uses `List<String>` to store multiple installed apps, showing how objects can contain collections.
+
+2. **Default Collections**: Initializes `installedApps` with pre-installed apps, simulating real smartphone behavior.
+
+3. **Resource Management**: Tracks `batteryLevel` as a finite resource that decreases with usage and can be replenished.
+
+4. **Method Parameters**: `usePhone(int minutes)` and `installApp(String appName)` show methods accepting parameters for customized behavior.
+
+5. **Side Effects**: Actions like installing apps and using the phone have multiple effects (add app, reduce battery).
+
+6. **Conditional Warnings**: Battery usage triggers low battery warnings when level drops below threshold.
+
+7. **State Validation**: Most methods check if phone is powered on before performing actions, enforcing realistic constraints.
+
+8. **List Operations**: Uses `add()` to append apps and `join()` to display them as formatted text.
 
 **Output:**
 

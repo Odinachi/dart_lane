@@ -38,6 +38,20 @@ void processGrade(String letter) {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **the inefficiencies and readability issues of chained if-else statements**:
+
+1. **Repetitive Structure**: Each condition follows the same pattern of checking equality, creating verbose and repetitive code.
+
+2. **Sequential Evaluation**: The program must check each condition in order until it finds a match, making execution slower with more conditions.
+
+3. **Maintenance Difficulty**: Adding, removing, or modifying conditions requires careful attention to the chain structure to avoid breaking the logic.
+
+4. **Readability Issues**: The nested structure becomes harder to scan visually as the number of conditions grows.
+
+5. **Error-Prone**: Easy to accidentally use assignment (`=`) instead of equality (`==`) or miss an `else` keyword.
+
 **Problems:**
 
 - Lots of repetitive `if-else` chains! 📋
@@ -171,6 +185,20 @@ void main() {
 💰 Price: $3.00
 ✅ Order processed!
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **real-world application of switch-case with string handling**:
+
+1. **Case Sensitivity Handling**: Uses `.toLowerCase()` to make the switch case-insensitive, improving user experience.
+
+2. **Multiple Statements per Case**: Shows how each case can contain multiple statements before the break, allowing complex actions.
+
+3. **Business Logic Implementation**: Each case includes both product delivery and pricing information, modeling real business operations.
+
+4. **User-Friendly Error Handling**: The default case provides helpful feedback about available options rather than just an error message.
+
+5. **Consistent Processing Flow**: Every path through the switch ends with the same confirmation message, ensuring consistent user feedback.
 
 ---
 
@@ -555,6 +583,18 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **grouping multiple cases for shared behavior**:
+
+1. **Logical Grouping**: Groups weekdays and weekend days separately, reducing code duplication while maintaining clarity.
+
+2. **Fall-Through Pattern**: Multiple case labels before a single action create an implicit "OR" condition.
+
+3. **Category-Based Logic**: Models real-world scenarios where multiple inputs should trigger the same response.
+
+4. **Maintenance Efficiency**: Adding new weekdays or weekend days only requires adding case labels, not duplicating logic.
+
 ### Switch with Numbers
 
 ```dart
@@ -587,6 +627,18 @@ void main() {
   processScore(45);
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **mathematical preprocessing for range-based switching**:
+
+1. **Range Conversion**: Uses integer division (`~/`) to convert continuous ranges into discrete case values.
+
+2. **Grade Boundaries**: Models standard grading systems where score ranges map to letter grades.
+
+3. **Mathematical Transformation**: Shows how to use switch-case for range-based logic by transforming the input.
+
+4. **Efficient Range Handling**: Avoids complex if-else chains for range checking by preprocessing the value.
 
 ---
 

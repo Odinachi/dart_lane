@@ -20,13 +20,26 @@ But you don't want these notes to be read out loud when someone reads your diary
 
 ```dart
 void main() {
-  // ❌ Without comments, code can be confusing!
   int x = 25;
   int y = x * 2 + 10;
   double z = y / 3.5;
   print(z);
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **the problem of uncommented code**:
+
+1. **Unclear Variable Names**: `x`, `y`, and `z` are generic names that provide no context about their purpose or meaning.
+
+2. **Magic Numbers**: The numbers `25`, `2`, `10`, and `3.5` appear without explanation, making it impossible to understand their significance.
+
+3. **Mysterious Calculations**: The mathematical operations `x * 2 + 10` and division by `3.5` have no apparent logic or business context.
+
+4. **No Documentation**: Zero comments mean future developers (including the original author) must reverse-engineer the code's intent.
+
+5. **Maintenance Nightmare**: Changes become risky because nobody knows what the code is supposed to accomplish or why specific values were chosen.
 
 **Problems:**
 
@@ -49,13 +62,27 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **the power of meaningful comments and variable names**:
+
+1. **Context Establishment**: The opening comment `// 🍕 Pizza calculation for the school party` immediately establishes the purpose and domain.
+
+2. **Descriptive Variable Names**: `students`, `totalSlices`, `pizzasNeeded` are self-documenting and clearly indicate what each variable represents.
+
+3. **Inline Explanations**: End-of-line comments explain the reasoning behind each calculation step.
+
+4. **Business Logic Documentation**: Comments reveal the business rules (2 slices per student, 10 extra, 3.5 slices per pizza average).
+
+5. **Future-Proof Code**: Any developer can understand, modify, or debug this code months later without confusion.
+
+6. **Clear Output**: The print statement ties the calculation back to its real-world purpose.
+
 **Output:**
 
 ```
 We need 17.14285714285714 pizzas for the party! 🍕
 ```
-
-**Amazing!** Now everyone understands what the code does! 🎉
 
 ---
 
@@ -77,6 +104,20 @@ void main() {
   int age = 12; // Student's age in years
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **various single-line comment patterns**:
+
+1. **Standalone Comments**: Comments on their own lines provide section headers or explanations for code blocks below.
+
+2. **Inline Comments**: Comments at the end of lines explain specific variables or statements immediately.
+
+3. **Comment Stacking**: Multiple consecutive single-line comments create longer explanations while maintaining readability.
+
+4. **Flexibility**: Single-line comments can be easily added, removed, or modified without affecting surrounding code structure.
+
+5. **IDE Support**: Most editors provide keyboard shortcuts to quickly toggle single-line comments on/off.
 
 ### 2. Multi-Line Comments (`/* */`)
 
@@ -100,6 +141,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **multi-line comment usage patterns**:
+
+1. **Block Comments**: Multi-line comments create clean blocks of documentation that span multiple lines.
+
+2. **Formatting Flexibility**: Allows for formatted text with asterisks or other characters for visual organization.
+
+3. **Code Disabling**: Efficiently comments out entire code blocks for testing or debugging purposes.
+
+4. **Nested Structure**: Can contain complex explanations, algorithms descriptions, or usage instructions.
+
+5. **Single Operation**: Opening `/*` and closing `*/` markers make it easy to comment/uncomment large sections.
+
 ### 3. Documentation Comments (`///`)
 
 Special comments for documenting functions and classes:
@@ -118,6 +173,20 @@ void main() {
   print('Area: $area square units');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **documentation comments for API documentation**:
+
+1. **API Documentation**: Triple-slash comments create official documentation that tools can extract and format.
+
+2. **Parameter Documentation**: Square brackets `[width]` and `[height]` create linkable references in generated documentation.
+
+3. **Return Value Description**: Clearly states what the function returns and in what format.
+
+4. **Tool Integration**: IDEs and documentation generators use these comments to provide auto-completion and help text.
+
+5. **Professional Standard**: Follows Dart's official documentation conventions for libraries and public APIs.
 
 ---
 
@@ -181,6 +250,22 @@ void main() {
   /// FIXME: Shield animation bug needs fixing
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **comprehensive commenting in a real-world application**:
+
+1. **Section Organization**: Uses ASCII art separators to create clear visual sections in the code structure.
+
+2. **Variable Documentation**: Each variable has inline comments explaining its purpose and constraints (e.g., "out of 100").
+
+3. **Business Rules Documentation**: Multi-line comment block explains game mechanics that affect code behavior.
+
+4. **Contextual Comments**: Comments provide game-specific context (HP, MP, XP) that domain experts understand.
+
+5. **Development Notes**: Uses TODO and FIXME comments to track future development and known issues.
+
+6. **User-Friendly Output**: Combines emoji and clear labels to make the output engaging and readable.
 
 **Output:**
 
@@ -290,6 +375,22 @@ void main() {
   /// TODO: Include attendance data in final grade
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **educational software documentation with detailed business rules**:
+
+1. **Domain-Specific Comments**: Uses educational terminology (grades, subjects, honor roll) that stakeholders understand.
+
+2. **Business Rules Documentation**: Multi-line comment clearly defines the grading scale that drives the conditional logic.
+
+3. **Section Headers**: Divides the application into logical sections (student info, scores, calculations, display).
+
+4. **Subject Context**: Inline comments specify what each subject score represents (algebra vs geometry, etc.).
+
+5. **Stakeholder Notes**: Documentation comments include information relevant to teachers and administrators.
+
+6. **Formula Documentation**: Explains calculation methods (total points out of 500, division by 5 for average).
 
 **Output:**
 
@@ -434,6 +535,24 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **e-commerce application documentation with business logic**:
+
+1. **Data Structure Documentation**: Multi-line comment explains the format and constraints of cart items.
+
+2. **Business Logic Comments**: Documents discount rules (10% for premium), shipping policies (free over $50), and tax rates.
+
+3. **Financial Calculations**: Each calculation step is clearly separated and documented for audit and maintenance purposes.
+
+4. **Customer Experience**: Comments explain member benefits and policies that affect the user experience.
+
+5. **Feature Planning**: TODO comments track planned enhancements and business requirements.
+
+6. **Visual Formatting**: Uses ASCII characters and consistent spacing to create a professional receipt layout.
+
+7. **Currency Handling**: Consistent use of `toStringAsFixed(2)` for proper currency display formatting.
+
 ---
 
 ## 🎨 Comment Best Practices
@@ -455,6 +574,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Shows:**
+
+This code demonstrates **effective commenting practices**:
+
+1. **Purpose-Driven Comments**: Comments explain the business purpose (class party pizza planning) rather than just describing syntax.
+
+2. **Reasoning Documentation**: The 20% buffer comment explains why extra slices are needed, providing business context.
+
+3. **Meaningful Variable Names**: Variable names are self-documenting, reducing the need for excessive comments.
+
+4. **Strategic Comment Placement**: Comments appear before complex calculations or business decisions, not for obvious operations.
+
+5. **Domain Knowledge**: Comments capture domain-specific knowledge that wouldn't be obvious to new developers.
+
 ### ❌ Bad Comments
 
 ```dart
@@ -469,6 +602,20 @@ void main() {
   print(y);
 }
 ```
+
+**🔍 What This Code Shows:**
+
+This code demonstrates **ineffective commenting anti-patterns**:
+
+1. **Stating the Obvious**: Comments like "This is a variable" add no value and create noise.
+
+2. **Redundant Information**: "Adding numbers" is already clear from the code `x + 3`.
+
+3. **No Context**: Comments don't explain why these operations are being performed or what they accomplish.
+
+4. **Poor Variable Names**: Generic names like `x` and `y` require more documentation to be meaningful.
+
+5. **Comment Clutter**: Every line has a comment, making the code harder to read rather than easier.
 
 **Why these are bad:**
 
@@ -555,6 +702,20 @@ void main() {
   print('This line will also run');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **different techniques for disabling code temporarily**:
+
+1. **Single-Line Commenting**: Adding `//` before a line prevents it from executing while preserving the code for potential restoration.
+
+2. **Block Commenting**: Using `/* */` to disable multiple lines at once, useful for testing alternative implementations.
+
+3. **Selective Execution**: Shows how parts of a program can run while other parts are disabled for debugging or testing.
+
+4. **Code Preservation**: Commented-out code remains in the source for reference or potential re-enablement.
+
+5. **Development Workflow**: Common practice during development for A/B testing different approaches or isolating bugs.
 
 **Output:**
 

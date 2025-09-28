@@ -42,6 +42,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **the dangers of using dynamic typing without constraints**:
+
+1. **Type Erasure**: Using `dynamic` removes all compile-time type checking, making the code unsafe and prone to runtime errors.
+
+2. **Runtime Type Errors**: The code compiles successfully but crashes at runtime when trying to assign an `int` to a `String` variable.
+
+3. **No IDE Support**: IDEs cannot provide autocomplete, refactoring, or error detection because the type is unknown at compile time.
+
+4. **Maintenance Nightmares**: Developers must manually track what types are stored in the box, leading to bugs and confusion.
+
+5. **Silent Failures**: Type mismatches only become apparent when the code runs, making debugging difficult and expensive.
+
 **Problems:**
 
 - No type safety! 💥
@@ -93,16 +107,21 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-📦 Stored String: Chocolate Chip Cookie
-📦 Stored int: 42
-📤 Retrieved: Chocolate Chip Cookie
-📤 Retrieved: 42
-🍪 Cookie: Chocolate Chip Cookie
-🔢 Number: 42
-```
+This code demonstrates **the power of generics for type safety**:
+
+1. **Parameterized Types**: `<T>` creates a type parameter that can be replaced with any concrete type when instantiating the class.
+
+2. **Compile-Time Safety**: The compiler enforces type constraints, preventing `cookieBox.store(123)` from compiling.
+
+3. **Type Specialization**: `MagicBox<String>` and `MagicBox<int>` are specialized versions that only work with their specific types.
+
+4. **Null Safety Integration**: Uses nullable types (`T?`) to handle empty states safely within Dart's null safety system.
+
+5. **Runtime Type Information**: `something.runtimeType` shows how generic types maintain type information at runtime.
+
+6. **IDE Intelligence**: IDEs can provide autocomplete and error detection because the types are known at compile time.
 
 ---
 
@@ -216,46 +235,23 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🎮 RPG INVENTORY SYSTEM
+This code demonstrates **practical generic implementation in game development**:
 
-=== WEAPON INVENTORY ===
-✅ Added Iron Sword (⚔️ 25 dmg) to inventory
-✅ Added Magic Staff (⚔️ 35 dmg) to inventory
-✅ Added Silver Bow (⚔️ 30 dmg) to inventory
-❌ Inventory full! Cannot add Dragon Blade (⚔️ 50 dmg)
+1. **Generic Container**: `GameInventory<T>` can hold any type of item while maintaining type safety for specific inventories.
 
-🎒 INVENTORY (3/3):
-   1. Iron Sword (⚔️ 25 dmg)
-   2. Magic Staff (⚔️ 35 dmg)
-   3. Silver Bow (⚔️ 30 dmg)
+2. **Capacity Management**: Implements real game mechanics like inventory limits and full/empty state checking.
 
-=== POTION INVENTORY ===
-✅ Added Health Potion (💚 +50 HP) to inventory
-✅ Added Mana Potion (💚 +30 HP) to inventory
-✅ Added Super Healing (💚 +100 HP) to inventory
+3. **Type Specialization**: Separate inventories for `Weapon` and `Potion` types ensure items can't be accidentally mixed or mishandled.
 
-🎒 INVENTORY (3/5):
-   1. Health Potion (💚 +50 HP)
-   2. Mana Potion (💚 +30 HP)
-   3. Super Healing (💚 +100 HP)
+4. **Polymorphic Behavior**: Both `Weapon` and `Potion` classes override `toString()` to provide meaningful representations.
 
-=== USING ITEMS ===
-🗑️ Removed Iron Sword (⚔️ 25 dmg) from inventory
-🗑️ Removed Mana Potion (💚 +30 HP) from inventory
-⚔️ Equipped: Iron Sword
-🧪 Drank: Mana Potion
+5. **Collection Encapsulation**: Uses private `_items` list with public getter returning unmodifiable view for data protection.
 
-🎒 INVENTORY (2/3):
-   1. Magic Staff (⚔️ 35 dmg)
-   2. Silver Bow (⚔️ 30 dmg)
+6. **Business Logic Integration**: Generic type system integrates seamlessly with game-specific logic like damage values and healing amounts.
 
-🎒 INVENTORY (2/5):
-   1. Health Potion (💚 +50 HP)
-   2. Super Healing (💚 +100 HP)
-```
+7. **Index-Based Operations**: Safe item removal with bounds checking demonstrates defensive programming with generics.
 
 ---
 
@@ -399,6 +395,22 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **complex e-commerce logic with nested generics**:
+
+1. **Nested Generic Types**: `CartItem<T>` is itself a generic class used within the generic `ShoppingCart<T>` class.
+
+2. **Quantity Management**: Automatically updates quantities for existing items instead of creating duplicates.
+
+3. **Financial Calculations**: Uses `fold()` to aggregate totals across all cart items with proper decimal handling.
+
+4. **Product Comparison**: Uses `toString()` for product comparison, allowing flexible equality checking.
+
+5. **Type-Safe E-commerce**: Each cart specializes in one product type, preventing mixing incompatible products.
+
+6. **Immutable Operations**: Cart modifications return feedback but don't expose internal state directly.
+
 ---
 
 ## 🏥 Generic Data Structures
@@ -488,6 +500,22 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **implementing classic data structures with generics**:
+
+1. **LIFO Principle**: Implements Last-In-First-Out behavior with `push()` adding to end and `pop()` removing from end.
+
+2. **Safe Operations**: All operations check for empty state and return nullable types to prevent crashes.
+
+3. **Generic Flexibility**: The same stack implementation works for any type (`String` for browser history, `int` for calculations).
+
+4. **State Visibility**: Provides multiple ways to inspect stack state (`peek()`, `isEmpty`, `size`, `display()`).
+
+5. **Visual Representation**: `display()` method shows stack contents with clear indication of the top element.
+
+6. **Real-World Applications**: Demonstrates browser history and calculator use cases that utilize stack behavior.
+
 ### Queue Implementation
 
 ```dart
@@ -563,6 +591,20 @@ void main() {
   print('✅ All customers served!');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **FIFO queue implementation with generics**:
+
+1. **FIFO Principle**: Implements First-In-First-Out behavior with `enqueue()` adding to end and `dequeue()` removing from beginning.
+
+2. **Customer Service Model**: Perfect example of real-world queue usage where customers are served in arrival order.
+
+3. **Position Tracking**: `front()` and `rear()` methods allow inspection of queue endpoints without modification.
+
+4. **Service Simulation**: Main function demonstrates complete customer service workflow using the queue.
+
+5. **Generic Type Safety**: Ensures queue only contains the specified type (String for customer names in this case).
 
 ---
 
@@ -661,6 +703,22 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **generic functions and advanced type constraints**:
+
+1. **Bounded Generics**: `T extends Comparable<T>` constrains the type parameter to only types that can be compared.
+
+2. **Algorithm Generalization**: `findMax()` works with any comparable type (numbers, strings, dates) using the same algorithm.
+
+3. **Type-Safe Operations**: `swap()` can swap elements of any type while maintaining type safety and bounds checking.
+
+4. **Higher-Order Functions**: `filterItems()` and `transformItems()` accept function parameters, enabling functional programming patterns.
+
+5. **Multiple Type Parameters**: `transformItems<T, R>()` uses two type parameters for input and output types, enabling type transformations.
+
+6. **Function Type Annotations**: Uses proper function type syntax like `bool Function(T)` for type-safe callbacks.
+
 ---
 
 ## 🎯 Generic Constraints
@@ -743,6 +801,22 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **generic constraints for enhanced type safety**:
+
+1. **Interface Constraints**: `T extends Comparable<T>` ensures only sortable types can be used in `SortedList`.
+
+2. **Automatic Sorting**: Because of the constraint, `_items.sort()` is guaranteed to work without runtime type checking.
+
+3. **Class Hierarchy Constraints**: `T extends Animal` ensures `AnimalShelter` only accepts animal subtypes.
+
+4. **Method Availability**: Constraints guarantee certain methods (like `makeSound()`) are available on the generic type.
+
+5. **Type Specialization**: `AnimalShelter<Dog>` and `AnimalShelter<Cat>` create specialized shelters while maintaining common behavior.
+
+6. **Compile-Time Validation**: Constraints are checked at compile time, preventing invalid type usage before runtime.
+
 ---
 
 ## 🧠 Built-in Generic Collections
@@ -797,6 +871,22 @@ void main() {
   print(allFruits);
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **Dart's built-in generic collection types and methods**:
+
+1. **Type-Safe Collections**: Each collection (`List<String>`, `Set<String>`, `Map<String, int>`) enforces type constraints.
+
+2. **Automatic Deduplication**: `Set<String>` automatically removes duplicate 'red' entries, showing set behavior.
+
+3. **Nested Generic Types**: `List<Map<String, dynamic>>` shows how generics can be nested for complex data structures.
+
+4. **Functional Methods**: `where()`, `map()`, `reduce()`, and `fold()` demonstrate generic functional programming methods.
+
+5. **Type Inference**: Dart can often infer generic types from context, reducing boilerplate code.
+
+6. **Collection Transformations**: Shows how to transform data while maintaining type safety throughout the pipeline.
 
 ---
 

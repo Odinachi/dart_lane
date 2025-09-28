@@ -52,6 +52,20 @@ void makeVeggiePizza() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **the problem of code duplication without function abstraction**:
+
+1. **Massive Code Duplication**: Each pizza function repeats the same base steps (dough, sauce, cheese, baking), violating the DRY principle.
+
+2. **Maintenance Nightmare**: If the base pizza-making process changes, you'd need to update it in multiple places.
+
+3. **Scalability Issues**: Adding new pizza types means copying and pasting the entire function with minor modifications.
+
+4. **Inconsistency Risk**: Manual duplication increases the chance of inconsistencies between different pizza-making processes.
+
+5. **No Flexibility**: The rigid structure prevents dynamic behavior based on different topping requirements.
+
 **Problems:**
 
 - Lots of repeated code! 📋📋📋
@@ -108,43 +122,21 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🏪 MARIO'S PIZZA SHOP - RUSH HOUR! 🏪
+This code demonstrates **higher-order functions as behavior parameterization**:
 
-🍕 Getting dough...
-🍅 Adding tomato sauce...
-🧀 Adding mozzarella cheese...
-🍖 Adding pepperoni slices...
-🔥 Baking in oven...
-✅ Pepperoni pizza ready!
+1. **Function as Parameter**: `makePizza()` accepts a `Function addToppings` parameter, allowing different behaviors to be injected.
 
-🍕 Getting dough...
-🍅 Adding tomato sauce...
-🧀 Adding mozzarella cheese...
-🥬 Adding bell peppers, mushrooms, and olives...
-🔥 Baking in oven...
-✅ Veggie Supreme pizza ready!
+2. **Code Reusability**: The common pizza-making process is written once and reused with different topping functions.
 
-🍕 Getting dough...
-🍅 Adding tomato sauce...
-🧀 Adding mozzarella cheese...
-🍍 Adding pineapple and ham...
-🔥 Baking in oven...
-✅ Hawaiian pizza ready!
+3. **Behavior Injection**: Different topping functions (`addPepperoni`, `addVeggies`, `addHawaiian`) provide specialized behavior.
 
-🍕 Getting dough...
-🍅 Adding tomato sauce...
-🧀 Adding mozzarella cheese...
-🥓 Adding bacon...
-🍖 Adding pepperoni...
-🌭 Adding sausage...
-🔥 Baking in oven...
-✅ Meat Lovers pizza ready!
-```
+4. **Anonymous Function Support**: Shows how anonymous functions can be used for one-off custom behaviors (Meat Lovers pizza).
 
-**Amazing!** One smart manager function handles all the different pizza types! 🎉
+5. **Separation of Concerns**: Base pizza process is separated from specific topping logic, improving maintainability.
+
+6. **Dynamic Execution**: The `addToppings()` call executes whatever function was passed in, enabling runtime behavior selection.
 
 ---
 
@@ -227,47 +219,25 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🎮 ADVENTURE GAME - PLAYER ACTIONS 🎮
+This code demonstrates **object-oriented higher-order functions with state modification**:
 
-=== Starting Stats ===
-👤 Sir Brave - Health: 100 HP, XP: 0
+1. **Stateful Object Manipulation**: Action functions receive and modify Player objects, showing how higher-order functions work with mutable state.
 
-⚡ Healing Potion in progress...
-💚 Sir Brave restored 20 health!
-✅ Healing Potion completed!
+2. **Action Wrapper Pattern**: `performAction()` provides a consistent interface for executing different player actions with logging.
 
-👤 Sir Brave - Health: 100 HP, XP: 0
-⚡ Combat Training in progress...
-⭐ Sir Brave gained 50 experience!
-✅ Combat Training completed!
+3. **Type-Safe Parameters**: Action functions are typed to accept `Player` objects, ensuring type safety in the higher-order function pattern.
 
-👤 Sir Brave - Health: 100 HP, XP: 50
-⚡ Monster Attack in progress...
-💥 Sir Brave took 15 damage!
-✅ Monster Attack completed!
+4. **Side Effects Management**: Each action function performs side effects (modifying player stats) while maintaining clear separation of concerns.
 
-👤 Sir Brave - Health: 85 HP, XP: 50
-⚡ Quest Completion in progress...
-🎉 Sir Brave leveled up! Full health restored!
-✅ Quest Completion completed!
+5. **Game State Validation**: Functions like `healPlayer()` include bounds checking to maintain valid game states.
 
-👤 Sir Brave - Health: 100 HP, XP: 150
-⚡ Magic Ritual in progress...
-✨ Sir Brave performed a magic ritual!
-🔮 Gained health and magical knowledge!
-✅ Magic Ritual completed!
-
-👤 Sir Brave - Health: 100 HP, XP: 175
-```
+6. **Consistent User Feedback**: The wrapper function provides consistent progress and completion messages for all actions.
 
 ---
 
 ## 🏭 Function Factory: Creating Specialized Workers
-
-Higher-order functions can also **return new functions**:
 
 ```dart
 // Function that creates greeting functions for different languages
@@ -360,37 +330,21 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🏭 FUNCTION FACTORY - CUSTOM WORKERS 🏭
+This code demonstrates **function factories that return specialized functions**:
 
-=== Language Greeting Service ===
-👋 Hello, Alice!
-👋 ¡Hola, Carlos!
-👋 Bonjour, Marie!
-👋 Konnichiwa, Yuki!
+1. **Function Generation**: Each factory function creates and returns new functions with specific behaviors based on input parameters.
 
-=== Math Operation Service ===
-➕ 15 + 25 = 40
-✖️ 7 × 8 = 56
-➖ 50 - 18 = 32
+2. **Closure Capture**: Created functions capture variables from their creation context (like `language` and `start` values).
 
-=== Countdown Service ===
-🚀 Rocket Launch:
-⏰ 5...
-⏰ 4...
-⏰ 3...
-⏰ 2...
-⏰ 1...
-🚀 BLAST OFF!
+3. **Specialization Pattern**: Factory functions produce specialized workers (greeters, math operators, countdowns) rather than generic functions.
 
-🎮 Game Start:
-⏰ 3...
-⏰ 2...
-⏰ 1...
-🚀 BLAST OFF!
-```
+4. **Dynamic Function Creation**: Functions are created at runtime based on string parameters, enabling flexible behavior configuration.
+
+5. **Type Flexibility**: Different factories return functions with different signatures, showing the versatility of the pattern.
+
+6. **Parameterized Behavior**: The countdown factory shows how creation-time parameters influence the generated function's behavior.
 
 ---
 
@@ -496,6 +450,22 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **event-driven programming with higher-order functions**:
+
+1. **Event Handler Factory**: `createButtonHandler()` generates event handler functions that are bound to specific app actions.
+
+2. **Closure State Binding**: Generated handlers capture the `app` instance, allowing them to modify application state when called.
+
+3. **Callback Pattern**: Buttons store function references in their `onPressed` property, implementing the observer/callback pattern.
+
+4. **Dynamic Event Binding**: Event handlers are created and assigned dynamically based on string action types.
+
+5. **State Encapsulation**: The App class maintains its own state while exposing methods that can be called by generated handlers.
+
+6. **Null Safety Integration**: Uses Dart's null safety features with nullable function types and null-aware operators.
+
 ---
 
 ## 🔄 Data Processing Pipeline
@@ -584,6 +554,22 @@ void main() {
   print('Formatted names: $formattedNames');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **generic higher-order functions for data processing pipelines**:
+
+1. **Generic Type Safety**: Uses generic types `<T>` and `<T, R>` to ensure type safety while maintaining flexibility across different data types.
+
+2. **Transformation Pipeline**: `processData()` applies multiple transformations sequentially, creating a data processing pipeline.
+
+3. **Function Composition**: Multiple transformation functions are composed together to create complex data processing workflows.
+
+4. **Functional Programming Patterns**: Implements common functional programming operations (map, filter, reduce) using higher-order functions.
+
+5. **Type Casting**: Uses `cast<T>()` to maintain type safety after map operations that might change types temporarily.
+
+6. **Aggregation Pattern**: `aggregateData()` implements the fold/reduce pattern with an initial value and accumulator function.
 
 ---
 
@@ -691,11 +677,25 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **callback-based animation systems with higher-order functions**:
+
+1. **Callback Pattern**: `animate()` accepts completion callback functions that execute when animations finish.
+
+2. **Animation Chaining**: `chainAnimations()` coordinates multiple animations with their respective completion handlers.
+
+3. **Handler Factory**: `createCompletionHandler()` generates specialized callback functions with custom messages.
+
+4. **Sequence Composition**: `createSequenceRunner()` creates functions that execute multiple actions in sequence.
+
+5. **Asynchronous Simulation**: Though synchronous in this example, the pattern simulates how real animations would work with async callbacks.
+
+6. **Event-Driven Architecture**: Demonstrates how UI animations can trigger subsequent actions through callback functions.
+
 ---
 
 ## 🧠 Built-in Higher-Order Functions
-
-Dart has many built-in higher-order functions for collections:
 
 ```dart
 void main() {
@@ -753,40 +753,23 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🔧 BUILT-IN HIGHER-ORDER FUNCTIONS 🔧
+This code demonstrates **Dart's built-in higher-order collection methods**:
 
-Original numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-Original fruits: [apple, banana, cherry, date]
+1. **Map Transformation**: `map()` applies transformation functions to each element, creating new collections with modified values.
 
-=== MAP (Transform) ===
-Doubled: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-Uppercased: [APPLE, BANANA, CHERRY, DATE]
-With emojis: [apple 🍎, banana 🍎, cherry 🍎, date 🍎]
+2. **Filtering with Where**: `where()` uses predicate functions to filter collections, keeping only elements that satisfy the condition.
 
-=== WHERE (Filter) ===
-Even numbers: [2, 4, 6, 8, 10]
-Long fruit names: [banana, cherry]
+3. **Reduction Operations**: `reduce()` combines all elements using a binary operation function, producing a single result of the same type.
 
-=== REDUCE (Combine) ===
-Sum of all numbers: 55
-Longest fruit name: banana
+4. **Fold Accumulation**: `fold()` starts with an initial value and accumulates results, allowing different result types than the input.
 
-=== FOLD (Accumulate) ===
-Product of all numbers: 3628800
-Sentence: I like: apple banana cherry date
+5. **Side-Effect Execution**: `forEach()` executes functions for their side effects rather than transforming data.
 
-=== forEach (Execute) ===
-Number 1: ⭐
-Number 2: ⭐⭐
-Number 3: ⭐⭐⭐
-Number 4: ⭐⭐⭐⭐
-Number 5: ⭐⭐⭐⭐⭐
+6. **Method Chaining**: Demonstrates how multiple higher-order functions can be chained together for complex data processing.
 
-🎊 All built-in higher-order functions demonstrated!
-```
+7. **Anonymous Function Usage**: Shows various anonymous function syntaxes (arrow functions, block functions) used with built-in methods.
 
 ---
 

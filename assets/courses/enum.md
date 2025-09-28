@@ -36,6 +36,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **the problems with using strings for categorical data**:
+
+1. **No Type Safety**: The function accepts any string value, including invalid options like "gigantic" or misspelled words like "smal".
+
+2. **Case Sensitivity Issues**: "LARGE" vs "large" are different strings, leading to potential inconsistencies in handling.
+
+3. **Runtime Errors**: Invalid strings only cause problems at runtime, not during compilation, making bugs harder to catch early.
+
+4. **No IDE Support**: There's no autocomplete or IntelliSense help when typing pizza sizes, increasing the chance of typos.
+
+5. **Maintenance Nightmare**: If you need to add or change valid sizes, you must search through all code to update string literals manually.
+
 **Problems:**
 
 - **Typos** cause bugs 🐛
@@ -66,6 +80,22 @@ void main() {
   // orderPizza('gigantic');     // ❌ Compiler error - can't do this!
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **the power of enum-based type safety**:
+
+1. **Compile-Time Safety**: The enum restricts function parameters to only valid pizza sizes, preventing invalid values at compile time.
+
+2. **IDE Integration**: Modern IDEs provide autocomplete for enum values, making development faster and reducing typos.
+
+3. **Consistent Naming**: The `.name` property provides consistent string representation without case sensitivity issues.
+
+4. **Code Readability**: `PizzaSize.small` is more descriptive and intention-revealing than just `'small'`.
+
+5. **Refactoring Safety**: If you rename an enum value, IDEs can automatically update all references throughout the codebase.
+
+6. **Documentation**: The enum declaration serves as living documentation of all valid pizza sizes in one place.
 
 **Output:**
 
@@ -176,35 +206,23 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🎮 ADVENTURE GAME STATUS TRACKER
+This code demonstrates **enum-driven state management in object-oriented programming**:
 
-🎮 Player: DragonSlayer
-😴 Status: idle - Standing around, waiting for action
-❤️ Health: 100/100
+1. **State Machine Implementation**: The `PlayerStatus` enum defines all possible player states, creating a clear state machine model.
 
-🔄 DragonSlayer changed from idle to running
-🎮 Player: DragonSlayer
-🏃‍♂️ Status: running - Moving quickly across the battlefield
-❤️ Health: 100/100
+2. **Switch-Case Pattern**: Uses comprehensive switch statements to map enum values to specific behaviors (emojis, descriptions).
 
-🔄 DragonSlayer changed from running to jumping
-🎮 Player: DragonSlayer
-🦘 Status: jumping - Leaping over obstacles
-❤️ Health: 100/100
+3. **Type-Safe State Transitions**: The `changeStatus()` method only accepts valid `PlayerStatus` values, preventing invalid state transitions.
 
-🔄 DragonSlayer changed from jumping to fighting
-🎮 Player: DragonSlayer
-⚔️ Status: fighting - Engaged in combat with enemies
-❤️ Health: 25/100
+4. **Exhaustive Handling**: Switch statements must handle all enum cases, ensuring no status is forgotten in the implementation.
 
-🔄 DragonSlayer changed from fighting to dead
-🎮 Player: DragonSlayer
-💀 Status: dead - Game over - respawn needed
-❤️ Health: 0/100
-```
+5. **Behavioral Association**: Each enum value has associated behaviors (emoji, description) that are consistently applied through methods.
+
+6. **State History**: The system tracks state changes by displaying transitions, useful for debugging and user feedback.
+
+7. **Object Encapsulation**: The enum works seamlessly with class properties to create cohesive object behavior.
 
 ---
 
@@ -319,43 +337,21 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🌤️ WEATHER FORECAST CENTER
+This code demonstrates **domain-specific enum usage with comprehensive business logic**:
 
-🌍 Weather in New York:
-☀️ Condition: sunny - Clear skies and bright sunshine
-🌡️ Temperature: 75°F
-👕 Clothing advice: Light clothes, sunglasses, sunscreen
-🎯 Activity: Perfect for outdoor sports, picnics, or beach trips
+1. **Domain Modeling**: The `WeatherCondition` enum accurately models real-world weather states that are mutually exclusive.
 
-🌍 Weather in Seattle:
-🌧️ Condition: rainy - Steady rainfall expected
-🌡️ Temperature: 58°F
-👕 Clothing advice: Raincoat, umbrella, waterproof shoes
-🎯 Activity: Great day for indoor activities, reading, or movies
+2. **Multi-Method Integration**: The enum drives multiple related methods (emoji, description, clothing advice, activities), showing comprehensive integration.
 
-🌍 Weather in Chicago:
-⛈️ Condition: stormy - Thunderstorms with lightning
-🌡️ Temperature: 62°F
-👕 Clothing advice: Stay indoors if possible!
-🎯 Activity: Board games, video games, or cozy indoor time
+3. **Business Rule Implementation**: Each weather condition triggers specific advice and recommendations, embedding domain knowledge in the code.
 
-🌍 Weather in Denver:
-❄️ Condition: snowy - Snow falling, roads may be slippery
-🌡️ Temperature: 28°F
-👕 Clothing advice: Heavy coat, warm boots, gloves
-🎯 Activity: Time for snowball fights, skiing, or hot cocoa
+4. **Consistent User Experience**: The enum ensures consistent presentation and advice across all weather reports.
 
-🌍 Weather in Los Angeles:
-☁️ Condition: cloudy - Overcast with gray clouds
-🌡️ Temperature: 68°F
-👕 Clothing advice: Light jacket, comfortable clothes
-🎯 Activity: Good for hiking, walking, or outdoor activities
+5. **Scalable Architecture**: Adding new weather conditions requires updating the enum and related switch statements, providing clear extension points.
 
-📱 Stay safe and check weather updates regularly!
-```
+6. **Data-Driven Presentation**: The enum values drive visual representation (emojis) and textual content (descriptions), separating data from presentation logic.
 
 ---
 
@@ -466,6 +462,22 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **finite state machine implementation using enums**:
+
+1. **Cyclic State Machine**: The enum represents a traffic light's cyclic states with defined transitions (red→green→yellow→red).
+
+2. **State Transition Logic**: The `changeLight()` method implements specific transition rules, ensuring traffic lights follow real-world patterns.
+
+3. **Time-Based Behavior**: Each state has associated timing (30s for green, 5s for yellow, 45s for red), modeling real traffic control systems.
+
+4. **State History Tracking**: Captures the previous state before transitions, useful for logging and debugging state changes.
+
+5. **Deterministic Behavior**: The enum ensures predictable state transitions that follow traffic safety protocols.
+
+6. **Real-World Modeling**: Accurately represents actual traffic light operation with appropriate timing and sequencing.
+
 ---
 
 ## 🎵 Music Player Example
@@ -546,11 +558,6 @@ class MusicPlayer {
     }
   }
 
-  void stop() {
-    state = PlaybackState.stopped;
-    print('⏹️ Stopped playback');
-  }
-
   void toggleRepeat() {
     switch (repeatMode) {
       case RepeatMode.off:
@@ -598,6 +605,22 @@ void main() {
   player.displayPlayerStatus();
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **multiple enum usage for complex state management**:
+
+1. **Multiple State Dimensions**: Uses two different enums (`PlaybackState` and `RepeatMode`) to manage independent aspects of the music player.
+
+2. **State-Dependent Operations**: Methods like `play()` and `pause()` check current state before allowing operations, preventing invalid transitions.
+
+3. **Cyclic Enum Behavior**: The `toggleRepeat()` method cycles through repeat modes in a predictable sequence.
+
+4. **Conditional Logic**: Operations validate current state before executing, providing user-friendly feedback for invalid actions.
+
+5. **Independent State Management**: The two enums operate independently, showing how multiple enums can coexist in a single class.
+
+6. **User Interface Logic**: Each state change provides immediate feedback, making the system responsive and user-friendly.
 
 ---
 
@@ -764,6 +787,24 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **computed enum properties and complex enum interactions**:
+
+1. **Computed Enum Values**: The `batteryLevel` getter dynamically maps numeric percentages to meaningful enum categories.
+
+2. **Multi-Enum Logic**: Combines `BatteryLevel` and `ChargingStatus` enums to provide comprehensive battery status information.
+
+3. **Threshold-Based Categorization**: Uses percentage ranges to automatically categorize battery levels, providing semantic meaning to raw numbers.
+
+4. **Speed Calculations**: Different charging types have different rates, embedded as business rules in enum-driven switch statements.
+
+5. **Time Estimation**: Combines current percentage, charging status, and charging speed to calculate realistic time estimates.
+
+6. **Context-Aware Messaging**: Battery warnings and time estimates change based on both level and charging status, providing relevant information.
+
+7. **Real-World Modeling**: Accurately represents actual phone battery behavior with appropriate categorization and charging characteristics.
+
 ---
 
 ## 🧠 Enum Properties and Methods
@@ -784,6 +825,18 @@ void main() {
   print('Uppercase: ${favoriteColor.name.toUpperCase()}'); // RED
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **enum introspection capabilities**:
+
+1. **Built-in String Conversion**: The `.name` property provides automatic string representation of enum values without manual mapping.
+
+2. **Dynamic String Manipulation**: Shows how enum names can be processed like regular strings (uppercase, formatting, etc.).
+
+3. **Debugging Support**: The `.name` property is invaluable for logging, debugging, and displaying enum values to users.
+
+4. **Consistent Naming**: Provides standardized string representation that matches the enum declaration exactly.
 
 ### Using .values Property
 
@@ -807,6 +860,18 @@ void main() {
   }
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **enum iteration and collective operations**:
+
+1. **Complete Enumeration**: The `.values` property provides access to all enum values as a List, enabling iteration over all possibilities.
+
+2. **Dynamic Processing**: Allows processing of all enum values without hardcoding each one, making code more maintainable.
+
+3. **Conditional Logic**: Shows how to apply different logic to different enum values during iteration (weekend vs weekday emoji).
+
+4. **Exhaustive Operations**: Ensures that operations consider all enum values, preventing missed cases when new values are added.
 
 ### Enhanced Enums (Advanced)
 
@@ -838,6 +903,22 @@ void main() {
   }
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **advanced enum capabilities with associated data and methods**:
+
+1. **Parameterized Enums**: Each enum value can have associated data (mass, radius) passed through constructors.
+
+2. **Computed Properties**: The `surfaceGravity` getter performs calculations using the associated data, providing derived values.
+
+3. **Instance Methods**: The `surfaceWeight()` method operates on the enum's data to provide functionality beyond simple categorization.
+
+4. **Scientific Modeling**: Demonstrates how enums can model complex real-world entities with both data and behavior.
+
+5. **Immutable Data**: Uses `final` fields to ensure enum data cannot be modified after construction.
+
+6. **Physics Integration**: Implements actual physics formulas (gravitational force) within the enum structure.
 
 ---
 

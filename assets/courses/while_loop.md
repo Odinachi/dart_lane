@@ -29,6 +29,18 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **the limitations of for loops when the number of repetitions is unknown**:
+
+1. **Unknown Iterations**: For loops require a known count, but many real-world scenarios depend on changing conditions.
+
+2. **Dynamic Conditions**: The number of repetitions may depend on user input, random events, or external factors.
+
+3. **Inflexibility**: For loops are not ideal when you can't predict how many times an action should repeat.
+
+4. **Motivation for While Loops**: Highlights the need for a loop that continues based on a condition, not a fixed count.
+
 **Problems:**
 
 - We don't always know the exact number of repetitions! 🤷‍♀️
@@ -66,25 +78,19 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🏰 GUARDING THE MAGICAL TREASURE VAULT 🏰
+This code demonstrates **how while loops repeat actions until a condition changes**:
 
-👮‍♀️ Security guard starts shift...
-🚪 Vault door status: UNLOCKED 🔓
+1. **Condition-Based Repetition**: The loop continues as long as the vault door is unlocked.
 
-👁️ Minute 1: Still guarding the unlocked vault...
-👁️ Minute 2: Still guarding the unlocked vault...
-👁️ Minute 3: Still guarding the unlocked vault...
-👁️ Minute 4: Still guarding the unlocked vault...
-👁️ Minute 5: Still guarding the unlocked vault...
-🔒 *CLICK* The vault door automatically locks!
+2. **Dynamic Exit**: The loop stops automatically when the condition (`!doorIsLocked`) becomes false.
 
-✅ Guard duty complete!
-⏰ Total time guarded: 5 minutes
-🏰 The treasure is now secure!
-```
+3. **State Change Inside Loop**: The variable controlling the loop (`doorIsLocked`) is updated inside the loop body.
+
+4. **Flexible Duration**: The number of repetitions is not fixed and depends on runtime events.
+
+5. **Real-World Analogy**: Models scenarios where you keep doing something until a situation changes.
 
 **Amazing!** The loop ran until the condition changed! 🎉
 
@@ -164,6 +170,22 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **using while loops for unpredictable, condition-based game logic**:
+
+1. **Multiple Conditions**: The loop continues as long as the player is alive and has potions.
+
+2. **Random Events**: Damage taken each round is randomized, making the number of iterations unpredictable.
+
+3. **Stateful Updates**: Player health and potion count are updated inside the loop.
+
+4. **Conditional Actions**: Healing only occurs when health is low and potions are available.
+
+5. **Game Simulation**: Models real game mechanics where outcomes depend on changing state and random events.
+
+---
+
 ### Treasure Hunt Game
 
 ```dart
@@ -227,6 +249,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **while loops for adventure and exploration games**:
+
+1. **Goal-Oriented Loop**: The loop continues until the treasure is found or steps run out.
+
+2. **Randomized Events**: Each iteration simulates a different event, making the adventure unpredictable.
+
+3. **Progress Tracking**: Variables track steps, clues, and treasure status.
+
+4. **Dynamic Termination**: The loop can end early if the treasure is found.
+
+5. **Replayability**: The randomness and conditions make each run unique.
+
 ---
 
 ## 🏪 Real-World Examples
@@ -282,6 +318,22 @@ void main() {
   print('🏦 Thank you for banking with us!');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **while loops for transaction systems with limited attempts**:
+
+1. **User Attempts**: The loop allows multiple withdrawal attempts up to a maximum.
+
+2. **Multiple Exit Conditions**: The loop ends if the transaction is successful or attempts run out.
+
+3. **Input Validation**: Checks for invalid amounts, insufficient funds, and daily limits.
+
+4. **Stateful Updates**: Account balance and attempt count are updated inside the loop.
+
+5. **Security Modeling**: Simulates real ATM behavior with card retention after too many failures.
+
+---
 
 ### Download Progress Monitor
 
@@ -344,6 +396,20 @@ String createProgressBar(double progress) {
   return '[$bar]';
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **while loops for monitoring and updating progress**:
+
+1. **Continuous Monitoring**: The loop continues until the download is complete or the connection fails.
+
+2. **Progress Calculation**: Updates and displays progress bar and download stats each iteration.
+
+3. **Variable Speed**: Simulates fluctuating download speeds.
+
+4. **Error Handling**: Handles connection loss and incomplete downloads.
+
+5. **User Feedback**: Provides real-time updates and a summary at the end.
 
 ---
 
@@ -413,6 +479,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **while loops for queue processing and resource management**:
+
+1. **Queue Processing**: Processes orders until the queue is empty or the restaurant closes.
+
+2. **Simulated Timing**: Each pizza takes a variable amount of time, tracked and accumulated.
+
+3. **Stateful Updates**: Orders are removed from the queue and stats are updated each iteration.
+
+4. **Conditional Closure**: The restaurant closes after a certain total cooking time.
+
+5. **Operational Reporting**: Provides a summary of completed and remaining orders.
+
 ---
 
 ## 🎯 User Input Simulation
@@ -476,6 +556,22 @@ void main() {
   }
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **while loops for authentication and limited attempts**:
+
+1. **Access Control**: The loop continues until the correct password is entered or attempts run out.
+
+2. **Feedback and Hints**: Provides hints and feedback after each failed attempt.
+
+3. **Security Enforcement**: Locks the account after too many failed attempts.
+
+4. **Stateful Updates**: Tracks attempts and access status.
+
+5. **User Experience**: Simulates real login systems with helpful messaging.
+
+---
 
 ### Number Guessing Game
 
@@ -544,6 +640,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **while loops for interactive guessing games**:
+
+1. **Unknown Iterations**: The loop continues until the correct number is guessed or guesses run out.
+
+2. **Hint System**: Provides feedback and hints after each guess.
+
+3. **Performance Tracking**: Tracks the number of guesses and rates performance.
+
+4. **Replayability**: The logic supports different outcomes and user experiences.
+
+5. **Game Over Handling**: Handles both win and loss scenarios gracefully.
+
 ---
 
 ## 🌡️ Monitoring Systems
@@ -605,6 +715,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **while loops for automated control systems**:
+
+1. **Continuous Adjustment**: The loop runs until the target temperature is reached or a timeout occurs.
+
+2. **Dynamic Updates**: Temperature is adjusted up or down each iteration.
+
+3. **Tolerance Handling**: Stops when the temperature is within an acceptable range.
+
+4. **Efficiency Reporting**: Provides a summary of operation and energy efficiency.
+
+5. **Safety Mechanism**: Includes a maximum time limit to prevent infinite loops.
+
 ---
 
 ## ⚠️ Important: Avoiding Infinite Loops
@@ -660,6 +784,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **how to avoid infinite loops and ensure loop safety**:
+
+1. **Bad Examples**: Shows common mistakes that lead to infinite loops (unchanging condition, wrong update).
+
+2. **Good Examples**: Demonstrates safe patterns where the loop condition can become false.
+
+3. **Safety Tips**: Provides practical advice for writing safe, terminating loops.
+
+4. **Debugging Help**: Encourages testing with simple examples to catch logic errors early.
+
+5. **Best Practices**: Reinforces the importance of updating the condition variable inside the loop.
+
 ---
 
 ## 🔄 While vs For Loops Comparison
@@ -703,14 +841,19 @@ void main() {
 }
 ```
 
-### Decision Guide
+**🔍 What This Code Does:**
 
-| Use **While Loop** When:                | Use **For Loop** When:        |
-| --------------------------------------- | ----------------------------- |
-| ✅ You don't know exact count           | ✅ You know exact repetitions |
-| ✅ Condition might change unpredictably | ✅ Simple counting (0 to N)   |
-| ✅ User input dependent                 | ✅ Iterating through lists    |
-| ✅ Waiting for external events          | ✅ Mathematical sequences     |
+This code demonstrates **the differences and appropriate use cases for while and for loops**:
+
+1. **For Loops**: Best for known, fixed repetitions (counting, iterating over lists).
+
+2. **While Loops**: Best for unknown or condition-based repetitions.
+
+3. **Random Events**: Shows how while loops can handle unpredictable outcomes (coin flips).
+
+4. **Decision Table**: Provides a quick guide for choosing the right loop type.
+
+5. **Practical Examples**: Illustrates both loop types with real code.
 
 ---
 
@@ -740,6 +883,22 @@ while (!condition && attempts < maxAttempts) {
   attempts++;
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **common while loop patterns and their use cases**:
+
+1. **Counter-Based Loops**: Repeat a fixed number of times with a counter.
+
+2. **Condition-Based Loops**: Continue until a flag or condition changes.
+
+3. **Backup Counters**: Use a maximum attempt counter for extra safety.
+
+4. **Pattern Table**: Shows typical conditions and when to use them.
+
+5. **Practical Reference**: Serves as a quick guide for writing safe and effective while loops.
+
+---
 
 ### Common Conditions
 

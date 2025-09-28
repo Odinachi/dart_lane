@@ -66,6 +66,22 @@ Captain Amazing is saving people from danger! 🛡️🦸‍♂️
 Captain Amazing is taking a well-deserved break 😴
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **the foundation of inheritance with a base parent class**:
+
+1. **Base Class Definition**: `SuperDad` serves as the parent class that defines common superhero characteristics and behaviors.
+
+2. **Property Encapsulation**: Contains fundamental properties (`name`, `age`, `superpower`) that all superheroes would need.
+
+3. **Behavioral Methods**: Implements core superhero abilities (`fly()`, `savePeople()`) that can be inherited by child classes.
+
+4. **Information Display**: Provides a standard way to display superhero information that child classes can use or override.
+
+5. **Constructor Pattern**: Uses a straightforward constructor that accepts all necessary parameters for superhero initialization.
+
+6. **Method Consistency**: All methods follow consistent naming and output patterns that child classes can build upon.
+
 ---
 
 ## 👧 Child Class: The Next Generation
@@ -142,6 +158,22 @@ Wonder Kid is taking a nap with favorite teddy bear! 🧸😴
 ```
 
 **Amazing!** SuperKid can do everything SuperDad can do, plus has their own special abilities!
+
+**🔍 What This Code Does:**
+
+This code demonstrates **inheritance with extension and method overriding**:
+
+1. **Class Extension**: `extends SuperDad` establishes inheritance, giving `SuperKid` access to all parent methods and properties.
+
+2. **Constructor Delegation**: Uses `super(name, age, superpower)` to call the parent constructor, ensuring proper initialization of inherited properties.
+
+3. **Property Extension**: Adds new properties (`school`, `favoriteToy`) specific to the child class, extending the parent's data model.
+
+4. **Method Addition**: Implements new methods (`playWithToys()`, `goToSchool()`) that are unique to the child class.
+
+5. **Method Override**: Uses `@override` annotation to replace the parent's `rest()` method with child-specific behavior.
+
+6. **Behavioral Specialization**: Child class maintains the parent's interface while providing specialized implementations appropriate for a kid superhero.
 
 ---
 
@@ -349,6 +381,22 @@ Ace is soaring through the sky with 6.5ft wingspan! 🐦✈️
 Ace is building a cozy nest! 🐦🏠
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **polymorphism and specialized inheritance in a class hierarchy**:
+
+1. **Polymorphic Design**: All animals share the same base interface (`eat()`, `sleep()`, `makeSound()`, `displayInfo()`) enabling polymorphic treatment.
+
+2. **Method Overriding**: Each animal class overrides `makeSound()` with species-specific implementations, demonstrating behavioral polymorphism.
+
+3. **Smart Constructor Logic**: Child constructors intelligently set parent properties (e.g., Cat sets habitat based on `isIndoor` boolean).
+
+4. **Conditional Behavior**: Methods like `hunt()` and `fly()` demonstrate how object properties affect method behavior within inheritance.
+
+5. **Type Checking**: Uses `is` operator to determine specific animal types, allowing access to specialized methods not available in the base class.
+
+6. **Collection Polymorphism**: Shows how different animal types can be stored in a single `List<Animal>` while maintaining their unique behaviors.
+
 ---
 
 ## 🚗 Vehicle Inheritance Hierarchy
@@ -513,6 +561,84 @@ void main() {
   }
 }
 ```
+
+**Output:**
+
+```
+🚗 VEHICLE SHOWROOM 🚗
+
+============================================================
+🚗 Vehicle Specifications:
+  🏷️ Brand: Toyota
+  📋 Model: Camry
+  📅 Year: 2023
+  🎨 Color: Blue
+  💨 Max Speed: 120 mph
+
+Blue 2023 Toyota Camry is starting up! 🔥
+Toyota Camry: BEEP BEEP! 📯
+
+🚗 CAR FEATURES:
+  🚪 Doors: 4
+  ⛽ Fuel Type: Gasoline
+  ❄️ AC: Yes
+Camry trunk is now open! 🧳
+Camry is playing your favorite music! 🎵
+Toyota Camry has stopped 🛑
+
+============================================================
+🚗 Vehicle Specifications:
+  🏷️ Brand: Yamaha
+  📋 Model: YZF-R1
+  📅 Year: 2024
+  🎨 Color: Red
+  💨 Max Speed: 186 mph
+
+Red 2024 Yamaha YZF-R1 is starting up! 🔥
+Yamaha YZF-R1: BEEP BEEP! 📯
+
+🏍️ MOTORCYCLE FEATURES:
+  🏍️ Type: Sport
+  👥 Sidecar: No
+YZF-R1 is doing an awesome wheelie! 🏍️🤸‍♂️
+YZF-R1 is leaning smoothly into the turn! 🏍️💨
+Yamaha YZF-R1 has stopped 🛑
+
+============================================================
+🚗 Vehicle Specifications:
+  🏷️ Brand: Ford
+  📋 Model: F-150
+  📅 Year: 2022
+  🎨 Color: White
+  💨 Max Speed: 100 mph
+
+White 2022 Ford F-150 is starting up! 🔥
+Ford F-150: BEEP BEEP! 📯
+
+🚛 TRUCK FEATURES:
+  📦 Cargo Capacity: 5 tons
+  🛞 Wheels: 6
+  🚚 Trailer: No
+F-150 is loading 5 tons of cargo! 📦🚛
+F-150 finished unloading at the destination! 📦✅
+Ford F-150 has stopped 🛑
+```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **inheritance with vehicle-specific specialization**:
+
+1. **Common Vehicle Properties**: Base class contains universal vehicle attributes (brand, model, year, color, maxSpeed) shared across all vehicle types.
+
+2. **Specialized Properties**: Each vehicle type adds unique properties (car doors, motorcycle sidecar, truck cargo capacity) specific to that vehicle category.
+
+3. **Method Enhancement**: Overridden methods like `start()` maintain the base interface while adding type-specific behavior (air conditioning for cars, engine sounds).
+
+4. **Behavioral Differentiation**: Each vehicle type has unique methods (`wheelie()` for motorcycles, `loadCargo()` for trucks) that reflect real-world capabilities.
+
+5. **Sound Customization**: Different `honk()` implementations show how the same action can vary dramatically between vehicle types.
+
+6. **Constructor Chaining**: Demonstrates proper constructor delegation while adding type-specific parameter handling.
 
 ---
 
@@ -738,6 +864,91 @@ void main() {
   }
 }
 ```
+
+**Output:**
+
+```
+⚔️ EPIC FANTASY ADVENTURE ⚔️
+
+🎭 PARTY ASSEMBLY:
+📊 Sir Braveheart's Stats:
+  📈 Level: 5
+  ❤️ Health: 120/140
+  ⭐ Experience: 2400
+
+📊 Mystic Luna's Stats:
+  📈 Level: 4
+  ❤️ Health: 80/100
+  ⭐ Experience: 1800
+
+📊 Swift Arrow's Stats:
+  📈 Level: 4
+  ❤️ Health: 90/110
+  ⭐ Experience: 1900
+
+⚔️ BATTLE BEGINS!
+==================================================
+
+🌊 ROUND 1: Party attacks!
+⚔️ Sir Braveheart performs a basic attack!
+🛡️ Sir Braveheart raises their shield and blocks the attack!
+😤 Sir Braveheart enters berserker rage! Attack power doubled!
+🏃‍♂️ Sir Braveheart charges forward with Battle Axe ready!
+
+⚔️ Mystic Luna performs a basic attack!
+🔮 Mystic Luna casts a Elemental spell! Mana: 90/100
+✨ Mystic Luna teleports to safety! Mana: 75/100
+
+⚔️ Swift Arrow performs a basic attack!
+🎯 Swift Arrow takes careful aim and shoots with 95% accuracy!
+🏹 Swift Arrow shoots an arrow with Elven Longbow! Arrows left: 29
+🏹🏹🏹 Swift Arrow shoots multiple arrows at once! Arrows left: 26
+
+==================================================
+💥 ROUND 2: Enemy counterattack!
+💥 Sir Braveheart took 30 damage! Health: 90/140
+💥 Mystic Luna took 30 damage! Health: 50/100
+💥 Swift Arrow took 30 damage! Health: 60/110
+
+==================================================
+
+💚 ROUND 3: Recovery time!
+💚 Sir Braveheart healed for 15! Health: 105/140
+🧙‍♂️ Mystic Luna meditates and restores full mana!
+🪓 Swift Arrow crafted 10 new arrows! Total arrows: 36
+
+🎊 FINAL STATS:
+📊 Sir Braveheart's Stats:
+  📈 Level: 5
+  ❤️ Health: 105/140
+  ⭐ Experience: 2400
+
+📊 Mystic Luna's Stats:
+  📈 Level: 4
+  ❤️ Health: 50/100
+  ⭐ Experience: 1800
+
+📊 Swift Arrow's Stats:
+  📈 Level: 4
+  ❤️ Health: 60/110
+  ⭐ Experience: 1900
+```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **game development patterns using inheritance with resource management**:
+
+1. **Base Game Mechanics**: `GameCharacter` provides fundamental RPG mechanics (leveling, health, damage) that all character types need.
+
+2. **Resource Management**: Different classes manage different resources (Warrior uses armor, Mage uses mana, Archer uses arrows) showing specialized resource systems.
+
+3. **Conditional Abilities**: Methods check resource availability before executing (mana for spells, arrows for shots), implementing game balance mechanics.
+
+4. **Class-Specific Combat**: Each class overrides `basicAttack()` with unique implementations that reflect their combat style and resource usage.
+
+5. **Fallback Behaviors**: When resources are depleted, classes provide alternative actions (staff attack when out of mana, melee when out of arrows).
+
+6. **Character Progression**: Demonstrates how inheritance can model character advancement systems in games while maintaining class-specific abilities.
 
 ---
 

@@ -25,6 +25,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **the catastrophic impact of unhandled exceptions**:
+
+1. **Immediate Program Termination**: Division by zero throws an `IntegerDivisionByZeroException` that crashes the entire program instantly.
+
+2. **Unreachable Code**: All statements after the exception are never executed, leaving the program in an incomplete state.
+
+3. **Poor User Experience**: Users see technical error messages instead of user-friendly feedback.
+
+4. **No Recovery Mechanism**: The program has no way to handle the error gracefully or provide alternative behavior.
+
+5. **Resource Leaks**: Any resources (files, network connections, etc.) opened before the crash may not be properly closed.
+
 **Problems:**
 
 - Program crashes completely! 💥
@@ -59,22 +73,19 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🗺️ Starting the treasure hunt adventure!
+This code demonstrates **robust error handling with graceful recovery**:
 
-🌉 Attempting to cross the rickety bridge...
-🪢 Bridge collapsed! Caught by safety rope!
-⚠️ Error: IntegerDivisionByZeroException
-🗺️ Finding alternative route to treasure...
-🔥 Sending signal flare to base camp
-📻 Adventure status reported safely
+1. **Exception Containment**: The `try` block isolates risky code, preventing exceptions from crashing the entire program.
 
-✅ Explorer returns home safely!
-```
+2. **Error Recovery**: The `catch` block provides alternative behavior when errors occur, maintaining program flow.
 
-**Amazing!** The program didn't crash - it handled the error gracefully! 🎉
+3. **Guaranteed Cleanup**: The `finally` block ensures critical cleanup code always executes, regardless of success or failure.
+
+4. **User-Friendly Messaging**: Provides meaningful, context-appropriate messages instead of technical error details.
+
+5. **Program Continuity**: The program continues executing after error handling, demonstrating resilience.
 
 ---
 
@@ -125,39 +136,19 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🏥 CITY GENERAL HOSPITAL - SURGERY DEPARTMENT
+This code demonstrates **critical system error handling in life-or-death scenarios**:
 
-🏥 Starting surgery for Alice Johnson
-👨‍⚕️ Surgeon is scrubbed in and ready
-🔬 Making initial incision...
-🩺 Monitoring vital signs...
-⚕️ Surgery proceeding smoothly
-🧵 Closing incision with sutures
-✅ Surgery completed successfully!
-🧼 Surgeon washing hands and cleaning equipment
-📋 Updating patient medical records
-👥 Briefing medical team on procedure
-🏥 Operating room being sterilized for next patient
+1. **Medical Protocol Simulation**: Models real-world medical procedures where errors must be handled systematically and professionally.
 
-🏥 Starting surgery for Bob Smith
-👨‍⚕️ Surgeon is scrubbed in and ready
-🔬 Making initial incision...
-🩺 Monitoring vital signs...
-🚨 MEDICAL EMERGENCY!
-⚠️ Complication: Exception: Unexpected bleeding detected!
-📞 Calling specialist for consultation
-💉 Administering emergency treatment
-🏃‍♂️ Patient stabilized and moved to ICU
-🧼 Surgeon washing hands and cleaning equipment
-📋 Updating patient medical records
-👥 Briefing medical team on procedure
-🏥 Operating room being sterilized for next patient
+2. **Emergency Response**: The catch block demonstrates proper escalation procedures when complications arise.
 
-📊 All surgical procedures documented and complete
-```
+3. **Mandatory Cleanup**: The finally block ensures crucial post-procedure activities (sterilization, documentation) always occur.
+
+4. **Professional Standards**: Shows how error handling maintains professional standards even during emergencies.
+
+5. **System Reliability**: Demonstrates how critical systems use exception handling to maintain operational integrity.
 
 ---
 
@@ -268,6 +259,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **game engine error handling with player guidance**:
+
+1. **Game State Validation**: Checks game conditions (mana, inventory, level) before allowing actions to proceed.
+
+2. **Intelligent Error Messages**: Provides specific error messages that help players understand what went wrong.
+
+3. **Contextual Help**: Analyzes error messages to provide relevant suggestions for player recovery.
+
+4. **Game State Integrity**: Finally block ensures game state is always updated and saved, preventing data loss.
+
+5. **Player Experience**: Maintains immersive gameplay even when actions fail by providing constructive feedback.
+
 ---
 
 ## 📱 File Download Manager
@@ -347,6 +352,20 @@ void main() {
   print('📊 Download manager session ended');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **robust system resource management with user guidance**:
+
+1. **Precondition Validation**: Checks system conditions (network, disk space, file size) before attempting resource-intensive operations.
+
+2. **User-Centric Error Handling**: Provides practical, actionable solutions that users can actually implement.
+
+3. **Resource Management**: Finally block ensures temporary resources are cleaned up regardless of success or failure.
+
+4. **System Integration**: Shows how applications interact with system services while handling potential failures gracefully.
+
+5. **Progressive Enhancement**: Different error conditions trigger different helpful responses, enhancing user experience.
 
 ---
 
@@ -479,6 +498,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **business process automation with intelligent fallback strategies**:
+
+1. **Business Rule Validation**: Checks multiple business constraints (inventory, capacity, ingredients) before processing orders.
+
+2. **Inventory Management**: Tracks and validates resource availability in real-time during order processing.
+
+3. **Customer Service**: Provides alternative options when primary requests cannot be fulfilled, maintaining customer satisfaction.
+
+4. **Transaction Consistency**: Finally block ensures all administrative tasks (receipts, notifications, inventory updates) are completed.
+
+5. **Operational Transparency**: Displays current inventory status to help with future order planning and decision-making.
+
 ---
 
 ## 💾 Database Connection Manager
@@ -597,6 +630,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **enterprise-level transaction management with ACID properties**:
+
+1. **Transaction Management**: Uses unique transaction IDs to track and manage database operations ensuring data consistency.
+
+2. **Connection Pooling**: Manages database connections efficiently, opening and closing them based on activity.
+
+3. **Data Validation**: Enforces business rules and data integrity constraints before executing database operations.
+
+4. **Rollback Mechanism**: Implements proper transaction rollback when errors occur, maintaining database consistency.
+
+5. **Resource Cleanup**: Finally block ensures all database resources (connections, locks, transactions) are properly released.
+
 ---
 
 ## 🔧 Multiple Exception Types
@@ -672,6 +719,20 @@ void main() {
   print('🎓 All exception types demonstrated!');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **sophisticated exception handling with type-specific responses**:
+
+1. **Exception Type Discrimination**: Uses `on` keywords to catch specific exception types, enabling targeted error handling.
+
+2. **Hierarchical Error Handling**: Demonstrates how specific exceptions are caught first, with generic catch-all handling remaining cases.
+
+3. **Error Context Preservation**: Shows how to access exception details (like `e.message`) for more informative error reporting.
+
+4. **Educational Error Responses**: Each exception type receives a tailored solution suggestion appropriate to that error category.
+
+5. **Comprehensive Coverage**: Demonstrates both system exceptions (division by zero, range errors) and custom business exceptions.
 
 ---
 

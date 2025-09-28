@@ -58,26 +58,21 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🧮 MAGICAL CALCULATOR SPACESHIP 🧮
+This code demonstrates **practical applications of arithmetic operators in real-world scenarios**:
 
-⛽ Tank 1: 150 units
-⛽ Tank 2: 200 units
-🚀 Total fuel: 350 units
+1. **Addition for Aggregation**: Uses `+` to combine fuel from multiple tanks, showing how addition accumulates quantities.
 
-🌌 Journey Report:
-⚡ Speed: 25.5 units/hour
-⏰ Time: 4.0 hours
-📏 Distance traveled: 102.0 units
+2. **Multiplication for Calculations**: Demonstrates `*` operator for computing distance using the physics formula `distance = speed × time`.
 
-💰 Treasure Distribution:
-🪙 Total coins: 1000
-👥 Crew members: 4
-💎 Coins per person: 250
-🎁 Leftover coins: 0
-```
+3. **Integer Division for Fair Distribution**: Uses `~/` to divide treasure equally among crew members, ensuring whole number results.
+
+4. **Modulo for Remainders**: Uses `%` operator to find leftover coins that can't be divided evenly, useful in distribution problems.
+
+5. **Mixed Data Types**: Shows how arithmetic works with both integers and doubles, with Dart handling type conversions automatically.
+
+---
 
 ### All Arithmetic Operators
 
@@ -103,24 +98,19 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🎪 ARITHMETIC OPERATORS CIRCUS 🎪
+This code demonstrates **the complete set of arithmetic operators with concrete examples**:
 
-🎭 Our magical numbers: a = 17, b = 5
+1. **Operator Comparison**: Shows all arithmetic operators applied to the same values (17 and 5) for easy comparison.
 
-➕ Addition: 17 + 5 = 22
-➖ Subtraction: 17 - 5 = 12
-✖️ Multiplication: 17 * 5 = 85
-➗ Division: 17 / 5 = 3.4
-🔢 Integer Division: 17 ~/ 5 = 3
-📦 Modulo (Remainder): 17 % 5 = 2
+2. **Division Types**: Illustrates the difference between regular division (`/`) which returns a double, and integer division (`~/`) which returns an integer.
 
-🎯 Special Cases:
-🤖 Increment: a++ makes a become 18
-⬇️ Decrement: a-- makes a become 17
-```
+3. **Modulo Understanding**: Demonstrates how modulo (`%`) returns the remainder after division (17 ÷ 5 = 3 remainder 2).
+
+4. **Increment/Decrement**: Shows pre-increment (`++a`) and pre-decrement (`--a`) operators that modify variables in place.
+
+5. **Type Awareness**: Demonstrates how different operators produce different result types (int vs double).
 
 ---
 
@@ -159,26 +149,21 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-⚖️ SPACE TRAFFIC CONTROL ⚖️
+This code demonstrates **comparison operators in a traffic control system**:
 
-🚀 Spaceship speed: 75 mph
-🚦 Speed limit: 60 mph
-🐌 Minimum speed: 30 mph
+1. **Range Checking**: Uses `>` and `<` to determine if values fall outside acceptable ranges (speed limits).
 
-🔍 SPEED ANALYSIS:
-Is speeding? true
-Within limit? false
-Too slow? false
-Exactly at limit? false
-Different from limit? true
-Fast enough? true
+2. **Boundary Testing**: Uses `<=` and `>=` to include boundary values in range checks.
 
-🚨 TRAFFIC CONTROL DECISION:
-⚠️ SLOW DOWN! You are speeding!
-```
+3. **Equality Testing**: Uses `==` to check for exact matches and `!=` to check for differences.
+
+4. **Boolean Results**: All comparison operations return boolean values that can be used in conditional statements.
+
+5. **Real-World Logic**: Models actual traffic control decisions based on speed comparisons.
+
+6. **Conditional Flow**: Shows how comparison results drive program flow through if-else statements.
 
 ---
 
@@ -248,30 +233,21 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🎮 ADVENTURE GAME QUEST SYSTEM 🎮
+This code demonstrates **complex logical decision-making using boolean operators**:
 
-👤 PLAYER STATUS:
-📊 Level: 15
-🗝️ Has key: true
-🗺️ Has map: false
-💰 Gold coins: 250
+1. **AND Logic (`&&`)**: Requires ALL conditions to be true, used for mandatory requirements like having both a key AND sufficient level.
 
-🧠 QUEST ELIGIBILITY CHECKS:
-🏰 Can enter dungeon: true
-   (Needs key AND level 10+)
-🧭 Has navigation tool: true
-   (Has key OR map)
-🗺️ Needs to buy map: true
-   (Does NOT have map)
-⚔️ Can start epic quest: true
-   (High level AND navigation tool AND enough gold)
+2. **OR Logic (`||`)**: Requires ANY condition to be true, used for alternative requirements like having EITHER a key OR a map.
 
-🎯 QUEST RECOMMENDATIONS:
-🌟 Ready for the EPIC QUEST! Good luck, hero!
-```
+3. **NOT Logic (`!`)**: Inverts boolean values, useful for checking what's missing or opposite conditions.
+
+4. **Complex Expressions**: Combines multiple logical operators with parentheses to create sophisticated eligibility rules.
+
+5. **Real Game Logic**: Models actual game mechanics where players must meet multiple criteria to access content.
+
+6. **Readable Code**: Uses descriptive variable names and comments to make complex logical expressions understandable.
 
 ---
 
@@ -338,35 +314,21 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-⚡ SUPERHERO POWER-UP SYSTEM ⚡
+This code demonstrates **assignment operators as shortcuts for common update patterns**:
 
-🦸‍♀️ INITIAL HERO STATS:
-💪 Strength: 50
-⚡ Speed: 30
-🧠 Intelligence: 40
+1. **Compound Assignment**: Shows how `+=`, `-=`, `*=`, etc. are shorthand for longer expressions that modify variables.
 
-🔋 APPLYING POWER-UPS:
+2. **Code Efficiency**: Demonstrates cleaner, more readable code compared to writing `variable = variable + value`.
 
-⚡ Energy charged to: 100
-💪 Strength boosted by 20! New strength: 70
-⚡ Energy consumed (-30)! Remaining: 70
-🏃 Speed doubled! New speed: 60
-🧠 Intelligence halved (thinking too hard)! New intelligence: 20
-❤️ Lives after modulo: 1
+3. **Different Operations**: Shows compound assignment works with all arithmetic operators (`+`, `-`, `*`, `/`, `~/`, `%`).
 
-🎊 FINAL HERO STATS:
-💪 Final Strength: 70
-⚡ Final Speed: 60
-🧠 Final Intelligence: 20
-⚡ Final Energy: 70
-❤️ Final Lives: 1
+4. **Progressive Changes**: Models how game characters' stats evolve over time through various power-ups and events.
 
-🌟 TOTAL POWER LEVEL: 150
-🏆 LEGENDARY HERO STATUS ACHIEVED!
-```
+5. **Integer Division Assignment**: Uses `~/=` to show compound assignment with integer division, useful for calculations that need whole numbers.
+
+6. **Practical Applications**: Each example represents real scenarios like consuming energy, gaining experience, or applying effects.
 
 ---
 
@@ -454,7 +416,6 @@ void main() {
       loyaltyPoints *= 2; // Double points for premium members
     }
     print('⭐ Loyalty points earned: $loyaltyPoints');
-
   } else {
     print('❌ Insufficient funds!');
     print('💸 Need \$${difference.toStringAsFixed(2)} more');
@@ -469,6 +430,22 @@ void main() {
   }
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **comprehensive e-commerce calculations using multiple operator types**:
+
+1. **Financial Calculations**: Uses arithmetic operators for subtotals, discounts, and shipping calculations common in e-commerce.
+
+2. **Conditional Logic**: Combines logical operators to determine discount eligibility based on membership and purchase amount.
+
+3. **Tiered Pricing**: Shows how comparison operators implement business rules like minimum purchase amounts for free shipping.
+
+4. **Error Prevention**: Uses `.abs()` method and careful comparisons to handle edge cases in financial calculations.
+
+5. **Loyalty Programs**: Demonstrates compound assignment (`*= 2`) for bonus calculations in customer reward systems.
+
+6. **Business Intelligence**: Shows how operators enable complex business logic like suggesting alternative purchases when budgets are exceeded.
 
 ---
 
@@ -563,6 +540,22 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **complex game mechanics using various operator combinations**:
+
+1. **Random Number Generation**: Uses modulo operator with timestamps to simulate dice rolls (random 1-6 values).
+
+2. **Combat Calculations**: Combines arithmetic operators for damage calculation (attack + dice - defense).
+
+3. **Boundary Enforcement**: Uses comparison and conditional operators to enforce minimum damage and prevent negative health.
+
+4. **Loop Control**: Uses logical AND (`&&`) in while loop to continue combat until one character is defeated.
+
+5. **Progressive Feedback**: Uses comparison operators to provide dynamic status updates based on current health levels.
+
+6. **Game State Management**: Shows how operators maintain and update complex game state through multiple rounds of combat.
+
 ---
 
 ## 📊 Operator Precedence: The Order of Operations
@@ -598,6 +591,20 @@ void main() {
   print('8. = += -= Assignment');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **the critical importance of operator precedence in programming**:
+
+1. **Mathematical Order**: Shows how multiplication and division execute before addition and subtraction, following mathematical conventions.
+
+2. **Parentheses Override**: Demonstrates how parentheses can change execution order, just like in mathematics.
+
+3. **Logical Precedence**: Shows that AND (`&&`) has higher precedence than OR (`||`), affecting boolean expression evaluation.
+
+4. **Common Pitfalls**: Highlights expressions where precedence might cause unexpected results if not understood properly.
+
+5. **Best Practices**: Implicitly suggests using parentheses for clarity even when not strictly necessary.
 
 ---
 
@@ -650,6 +657,22 @@ void main() {
   print('Starts with "Expecto": ${favoriteSpell.startsWith("Expecto")}');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **string manipulation using operators and methods**:
+
+1. **String Concatenation**: Uses `+` operator to combine multiple strings, though string interpolation is generally preferred.
+
+2. **String Interpolation**: Shows `$variable` syntax for embedding variables in strings, which is more readable and efficient.
+
+3. **String Multiplication**: Demonstrates the `*` operator for repeating strings, useful for creating patterns or padding.
+
+4. **Case-Sensitive Comparison**: Shows how string equality (`==`) is case-sensitive and how to handle case-insensitive comparisons.
+
+5. **String Properties**: Uses `.length` property with comparison operators to compare string sizes.
+
+6. **String Methods**: Demonstrates `.contains()`, `.startsWith()`, and other string analysis methods for text processing.
 
 ---
 

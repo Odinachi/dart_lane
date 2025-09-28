@@ -15,12 +15,10 @@ Nobody gets assigned this task by name — it's just a job that needs doing. The
 These are like having assigned chores with your name on them:
 
 ```dart
-// This function has a name: "calculateTip"
 double calculateTip(double bill) {
   return bill * 0.15;
 }
 
-// This function has a name: "greetCustomer"
 void greetCustomer(String name) {
   print('Welcome, $name! Enjoy your meal!');
 }
@@ -31,6 +29,20 @@ void main() {
   print('Tip: \$${tip}');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **traditional named functions** with clear identifiers:
+
+1. **Function Declaration**: `calculateTip` and `greetCustomer` are declared with specific names that describe their purpose.
+
+2. **Reusability**: These named functions can be called multiple times throughout the program from any scope where they're accessible.
+
+3. **Type Safety**: Each function specifies parameter types (`double`, `String`) and return types, providing compile-time error checking.
+
+4. **Clear Intent**: Function names make the code self-documenting - `calculateTip(50.0)` immediately tells you what's happening.
+
+5. **Memory Storage**: Named functions are stored in memory with their identifiers and can be referenced throughout the program's execution.
 
 **Output:**
 
@@ -49,21 +61,32 @@ These are like spontaneous helpers — no name tags needed!
 
 ```dart
 void main() {
-  // Store anonymous function in a variable
   var makeSound = () {
     print('🔊 Beep beep!');
   };
 
-  // Use it
   makeSound(); // Output: 🔊 Beep beep!
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **basic anonymous function creation and usage**:
+
+1. **Anonymous Declaration**: The function `() { print('🔊 Beep beep!'); }` has no name - it's defined inline without an identifier.
+
+2. **Variable Storage**: The anonymous function is stored in the variable `makeSound`, which acts as a reference to the function.
+
+3. **Type Inference**: Dart automatically determines that `makeSound` is of type `Function` based on the assigned value.
+
+4. **Immediate Usability**: Once stored in a variable, the anonymous function can be called just like a named function using parentheses.
+
+5. **Scope Limitation**: This function only exists within the scope where it's defined (inside `main()` in this case).
 
 ### Anonymous Function with Parameters
 
 ```dart
 void main() {
-  // Anonymous function that takes parameters
   var multiplyByTwo = (int number) {
     return number * 2;
   };
@@ -73,11 +96,24 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code shows **anonymous functions with parameters and return values**:
+
+1. **Parameter Definition**: `(int number)` defines that this function accepts one integer parameter named `number`.
+
+2. **Return Value**: The function calculates and returns the input multiplied by 2, demonstrating that anonymous functions can return values.
+
+3. **Variable Assignment**: The anonymous function is stored in `multiplyByTwo` variable for later use.
+
+4. **Multiple Calls**: Shows how the same anonymous function can be called multiple times with different arguments (7 and 25).
+
+5. **Type Safety**: The parameter type `int` ensures only integers can be passed to this function.
+
 ### Arrow Function Syntax (Super Short!)
 
 ```dart
 void main() {
-  // Short way to write anonymous functions
   var addFive = (int x) => x + 5;
   var isEven = (int num) => num % 2 == 0;
 
@@ -86,6 +122,20 @@ void main() {
   print(isEven(7));      // Output: false
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **arrow function syntax** for concise anonymous functions:
+
+1. **Arrow Syntax**: The `=>` operator provides a shorthand for simple functions that return a single expression.
+
+2. **Expression Evaluation**: `x + 5` is automatically returned without needing an explicit `return` statement.
+
+3. **Boolean Logic**: `isEven` uses modulo operator (`%`) to determine if a number is even by checking if remainder is 0.
+
+4. **Concise Code**: Arrow functions reduce boilerplate code for simple operations, making code more readable.
+
+5. **Implicit Return**: The expression after `=>` is automatically returned, eliminating the need for curly braces and return statements.
 
 ---
 
@@ -97,15 +147,28 @@ Sometimes you want to run a function right away, just once:
 void main() {
   print('Starting app...');
 
-  // Run this function immediately!
   () {
     print('🎉 App initialized!');
     print('Ready for users!');
-  }(); // ← These parentheses run it immediately
+  }();
 
   print('App is running...');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **immediately invoked function expressions (IIFE)**:
+
+1. **Immediate Execution**: The `()` at the end of the function definition executes it immediately upon creation.
+
+2. **One-Time Use**: This function runs once and cannot be called again since it's not stored in a variable.
+
+3. **Isolation**: Creates a temporary scope for initialization code that doesn't pollute the main function scope.
+
+4. **Sequential Execution**: The function executes in order with the surrounding code, useful for setup tasks.
+
+5. **No Storage**: Unlike stored anonymous functions, this executes and disappears immediately.
 
 **Output:**
 
@@ -129,28 +192,40 @@ void main() {
 
   print('=== RESTAURANT ORDERS ===');
 
-  // Anonymous function to process each order
   orders.forEach((order) {
     print('✅ Preparing: $order');
   });
 
   print('\n=== PRICE CALCULATION ===');
 
-  // Anonymous function to add tax to each price
   var pricesWithTax = prices.map((price) {
-    return price * 1.08; // 8% tax
+    return price * 1.08;
   }).toList();
 
-  // Show original vs taxed prices
   for (int i = 0; i < orders.length; i++) {
     print('${orders[i]}: \$${prices[i]} → \$${pricesWithTax[i].toStringAsFixed(2)} (with tax)');
   }
 
-  // Anonymous function to find total
   var total = pricesWithTax.reduce((sum, price) => sum + price);
   print('\n💰 Total bill: \$${total.toStringAsFixed(2)}');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **practical applications of anonymous functions** in data processing:
+
+1. **forEach with Anonymous Function**: `orders.forEach((order) {...})` applies an anonymous function to each item in the list, printing each order.
+
+2. **Map Transformation**: `prices.map((price) {...})` transforms each price by applying 8% tax using an anonymous function, creating a new list.
+
+3. **Functional Programming**: Shows how anonymous functions enable functional programming paradigms for data transformation.
+
+4. **Reduce Operation**: `reduce((sum, price) => sum + price)` uses an arrow function to accumulate all prices into a total sum.
+
+5. **List Processing Pipeline**: Demonstrates chaining operations (map, toList, reduce) with anonymous functions for data processing workflows.
+
+6. **Real-World Application**: Simulates actual restaurant billing system with tax calculation and total computation.
 
 **Output:**
 
@@ -187,7 +262,6 @@ void main() {
 
   print('🎮 GAME LEADERBOARD 🎮\n');
 
-  // Anonymous function to determine rank emoji
   var getRankEmoji = (int score) {
     if (score > 1400) return '🏆';
     if (score > 1000) return '🥈';
@@ -195,13 +269,11 @@ void main() {
     return '🎯';
   };
 
-  // Anonymous function to format player info
   playerScores.forEach((player) {
     String emoji = getRankEmoji(player['score'] as int);
     print('$emoji ${player['name']}: ${player['score']} points');
   });
 
-  // Find the winner using anonymous function
   var winner = playerScores.reduce((a, b) =>
     (a['score'] as int) > (b['score'] as int) ? a : b
   );
@@ -209,6 +281,22 @@ void main() {
   print('\n🎊 Winner: ${winner['name']} with ${winner['score']} points!');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **complex anonymous function applications** with conditional logic:
+
+1. **Conditional Anonymous Function**: `getRankEmoji` uses conditional statements to return different emojis based on score ranges.
+
+2. **Map Data Processing**: Works with List of Maps (representing player data) showing how anonymous functions handle complex data structures.
+
+3. **Type Casting**: Uses `as int` to safely cast dynamic map values to integers for comparison operations.
+
+4. **Nested Function Calls**: Combines `forEach` with custom anonymous function calls, showing function composition.
+
+5. **Comparison Logic**: The `reduce` operation uses ternary operator in arrow function to find the highest scoring player.
+
+6. **Dynamic Content**: Anonymous functions generate dynamic content (emojis, formatting) based on data values.
 
 **Output:**
 
@@ -231,11 +319,9 @@ void main() {
 
 ```dart
 void main() {
-  // Simulating button clicks
   var buttons = ['Save', 'Cancel', 'Delete'];
 
   buttons.forEach((buttonName) {
-    // Anonymous function handles each button differently
     var handleClick = () {
       switch(buttonName) {
         case 'Save': print('💾 Data saved successfully!'); break;
@@ -250,6 +336,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **event handler simulation** using anonymous functions:
+
+1. **Dynamic Event Handlers**: Creates different anonymous functions for each button based on the button name.
+
+2. **Closure Behavior**: Each anonymous function captures the `buttonName` variable from its surrounding scope (closure).
+
+3. **Switch Logic**: Uses switch statements within anonymous functions to handle different button behaviors.
+
+4. **Event Simulation**: Simulates clicking each button and executing its corresponding handler function.
+
+5. **Modular Design**: Each button gets its own handler function, demonstrating how anonymous functions can encapsulate specific behaviors.
+
 ### 2. Data Filtering
 
 ```dart
@@ -261,7 +361,6 @@ void main() {
     {'name': 'Noah', 'grade': 96},
   ];
 
-  // Anonymous function to filter honor students (grade > 90)
   var honorStudents = students.where((student) {
     return (student['grade'] as int) > 90;
   }).toList();
@@ -272,6 +371,20 @@ void main() {
   });
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **data filtering** with anonymous functions:
+
+1. **Filtering Logic**: `where()` method uses an anonymous function to test each student against a condition (grade > 90).
+
+2. **Predicate Function**: The anonymous function acts as a predicate, returning true/false to determine if items should be included.
+
+3. **Method Chaining**: Chains `where()` and `toList()` methods to filter and convert the result back to a list.
+
+4. **Dynamic Filtering**: The filter condition is defined inline, making it easy to modify without creating separate named functions.
+
+5. **Result Processing**: Uses `forEach` with another anonymous function to display the filtered results with formatting.
 
 ---
 
@@ -292,19 +405,14 @@ void main() {
 ### Syntax Patterns
 
 ```dart
-// Basic anonymous function
 () { print('Hello!'); }
 
-// With parameters
 (String name) { print('Hi $name!'); }
 
-// Arrow function (short form)
 (int x) => x * 2
 
-// Immediately invoked
 (() { print('Run now!'); })();
 
-// Stored in variable
 var myFunc = (int a, int b) => a + b;
 ```
 

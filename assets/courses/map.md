@@ -32,6 +32,20 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **the inefficiency of using separate lists for related data**:
+
+1. **Data Separation**: Maintains two separate lists where the relationship between items is only implied by their position.
+
+2. **Linear Search Required**: Uses `indexOf()` which must search through the entire codes list sequentially to find a match.
+
+3. **Index Synchronization Risk**: If the two lists get out of sync, the wrong relationships will be established.
+
+4. **Error-Prone Operations**: Requires careful index management and null checking to avoid runtime errors.
+
+5. **Performance Issues**: O(n) lookup time makes this approach inefficient for large datasets.
+
 **Problems:**
 
 - Two separate lists to maintain 📋📋
@@ -59,17 +73,19 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🔑 Code HP1 unlocks: Harry Potter and the Sorcerer's Stone
-🔑 Code WOZ unlocks: The Wonderful Wizard of Oz
+This code demonstrates **efficient key-value data organization with maps**:
 
-📚 Complete magical library:
-{HP1: Harry Potter and the Sorcerer's Stone, WOZ: The Wonderful Wizard of Oz, ALW: Alice's Adventures in Wonderland}
-```
+1. **Direct Association**: Each key is directly paired with its corresponding value, eliminating the need for index synchronization.
 
-**Perfect!** Now each code is directly connected to its book! 🎯
+2. **O(1) Lookup Time**: Map access using bracket notation `[]` provides constant-time lookup regardless of map size.
+
+3. **Type Safety**: `Map<String, String>` ensures both keys and values are strings, preventing type-related errors.
+
+4. **Immutable Relationships**: Once established, key-value relationships remain consistent and can't be accidentally misaligned.
+
+5. **Simplified Access Pattern**: Clean, readable syntax for both storing and retrieving related data.
 
 ---
 
@@ -114,16 +130,19 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🍽️ WELCOME TO MARIO'S RESTAURANT! 🍽️
+This code demonstrates **coordinated data management using multiple related maps**:
 
-📋 Order #103:
-🍽️ Dish: 🍝 Spaghetti Carbonara
-💰 Price: $14.25
-✅ Order confirmed!
-```
+1. **Parallel Data Structures**: Uses two maps with the same keys to store different attributes (dish names and prices).
+
+2. **Safe Key Checking**: `containsKey()` method prevents runtime errors by verifying key existence before access.
+
+3. **Null Safety with Assertions**: Uses `!` operator after map access to assert that values exist, working with Dart's null safety.
+
+4. **Business Logic Integration**: Models real restaurant ordering systems where item numbers correspond to dishes and prices.
+
+5. **Formatted Output**: Uses `toStringAsFixed(2)` for proper currency formatting in business applications.
 
 ---
 
@@ -194,30 +213,21 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🎮 PLAYER INVENTORY SYSTEM 🎮
+This code demonstrates **complex game state management with maps and functional programming**:
 
-🎒 Current Inventory:
-  📦 Health Potion: 5 (125 gold each = 125 total)
-  📦 Magic Sword: 1 (500 gold each = 500 total)
-  📦 Gold Coins: 150 (150 gold each = 150 total)
-  📦 Shield: 1 (200 gold each = 200 total)
+1. **Inventory Tracking**: Uses maps to model game inventory where items map to quantities, simulating RPG game mechanics.
 
-💎 Total Inventory Worth: 975 gold
+2. **Map Iteration with forEach**: `forEach()` method processes each key-value pair, demonstrating functional programming patterns.
 
-🧪 Used 1 Health Potion! Remaining: 4
-✨ Found a Bow! Added to inventory.
-🏹 Now you have 1 Bow(s)
+3. **Null-Aware Operations**: Uses `??` operator to provide default values when keys don't exist in maps.
 
-🎒 Updated Inventory:
-  📦 Health Potion: 4
-  📦 Magic Sword: 1
-  📦 Gold Coins: 150
-  📦 Shield: 1
-  📦 Bow: 1
-```
+4. **Dynamic Map Updates**: Shows how to modify map values during runtime for item consumption and acquisition.
+
+5. **Cross-Reference Calculations**: Combines data from multiple maps (inventory quantities × item values) to calculate total worth.
+
+6. **Safe Item Management**: Implements bounds checking to prevent using items that don't exist or are out of stock.
 
 ---
 
@@ -286,32 +296,19 @@ void main() {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-📱 SMART PHONE CONTACTS 📱
+This code demonstrates **contact management system with multiple data sources**:
 
-🔍 Searching for: Mom
+1. **Related Data Management**: Uses separate maps for different contact attributes while maintaining key consistency.
 
-📞 Mom's phone: 555-0123
-📧 Mom's email: mom@family.com
+2. **Data Aggregation**: Combines information from multiple maps during display, showing how to merge related datasets.
 
-✅ Added new contact: School
+3. **Graceful Degradation**: Uses null coalescing to handle missing email addresses with user-friendly defaults.
 
-📋 ALL CONTACTS:
-👤 Mom: 555-0123 | mom@family.com
-👤 Dad: 555-0124 | dad@family.com
-👤 Best Friend: 555-0125 | bestie@email.com
-👤 Pizza Place: 555-PIZZA | No email
-👤 Doctor: 555-0126 | appointments@clinic.com
-👤 School: 555-0127 | info@school.edu
+4. **Contact Operations**: Demonstrates adding, searching, and removing contacts with immediate feedback.
 
-🗑️ Removed Pizza Place from contacts
-
-📊 Contact Statistics:
-📞 Total contacts: 5
-📧 Contacts with email: 5
-```
+5. **Statistical Analysis**: Calculates and displays summary statistics about the contact database.
 
 ---
 
@@ -398,41 +395,19 @@ String getLetterGrade(int percentage) {
 }
 ```
 
-**Output:**
+**🔍 What This Code Does:**
 
-```
-🎓 GRADE MANAGEMENT SYSTEM 🎓
+This code demonstrates **nested maps and educational data processing**:
 
-📊 Alice's Report Card:
-  📚 Math: 92% (A)
-  📚 Science: 88% (B)
-  📚 English: 95% (A)
-  📚 History: 90% (A)
-  🎯 Average: 91.2% (A)
-  🏆 Honor Roll Student! 🏆
+1. **Nested Map Structure**: `Map<String, Map<String, int>>` creates a two-level hierarchy modeling students and their subject grades.
 
-📊 Bob's Report Card:
-  📚 Math: 78% (C)
-  📚 Science: 85% (B)
-  📚 English: 80% (B)
-  📚 History: 77% (C)
-  🎯 Average: 80.0% (B)
-  ⭐ Good Performance!
+2. **Nested Iteration**: Uses nested `forEach()` calls to process both outer (students) and inner (subjects) map levels.
 
-📊 Charlie's Report Card:
-  📚 Math: 96% (A)
-  📚 Science: 94% (A)
-  📚 English: 89% (B)
-  📚 History: 93% (A)
-  🎯 Average: 93.0% (A)
-  🏆 Honor Roll Student! 🏆
+3. **Statistical Calculations**: Computes averages, totals, and performs grade classifications using helper functions.
 
-🥇 SUBJECT CHAMPIONS:
-  🏆 Math: Charlie (96%)
-  🏆 Science: Charlie (94%)
-  🏆 English: Alice (95%)
-  🏆 History: Charlie (93%)
-```
+4. **Academic Logic**: Implements real grading systems with letter grades and honor roll determination.
+
+5. **Complex Data Analysis**: Finds top performers across subjects by iterating through nested data structures.
 
 ---
 
@@ -533,6 +508,20 @@ void displayCart(Map<String, int> cart, Map<String, dynamic> products) {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **e-commerce functionality with complex data structures**:
+
+1. **Mixed Data Types**: Uses `Map<String, dynamic>` to store different data types (strings, numbers, booleans) in product records.
+
+2. **Inventory Management**: Implements stock checking and cart quantity validation to prevent overselling.
+
+3. **Function Modularization**: Separates cart operations into dedicated functions for better code organization.
+
+4. **Business Logic**: Handles real-world scenarios like adding duplicate items and checking stock availability.
+
+5. **Financial Calculations**: Performs price calculations with proper decimal formatting for monetary values.
+
 ---
 
 ## 🌍 Country Information System
@@ -625,6 +614,22 @@ String formatNumber(int number) {
   return number.toString().replaceAllMapped(RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (Match m) => '${m[1]},');
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **complex data analysis and geographic information systems**:
+
+1. **Hierarchical Data Modeling**: Models real-world geographic data with countries, continents, and demographic information.
+
+2. **Dynamic Map Building**: Constructs `continentCountries` map on-the-fly by analyzing existing data structures.
+
+3. **Data Aggregation**: Groups countries by continent, demonstrating classification and organization algorithms.
+
+4. **Comparative Analysis**: Finds the most populous country by iterating through all records and comparing values.
+
+5. **String Processing**: Uses regular expressions in `formatNumber()` to add comma separators to large numbers.
+
+6. **International Data**: Handles diverse data types including arrays (languages) and various number formats.
 
 ---
 

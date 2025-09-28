@@ -46,6 +46,22 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **conditional logic with if-else statements**:
+
+1. **Decision Making**: Uses `if-else if-else` chain to make different decisions based on the traffic light color.
+
+2. **String Comparison**: Compares the `lightColor` variable using equality operator (`==`) to determine which branch to execute.
+
+3. **Variable Modification**: Changes the `speed` variable based on the condition, showing how control flow affects program state.
+
+4. **Multiple Conditions**: Demonstrates handling multiple specific cases (green, yellow, red) plus a default case for unexpected values.
+
+5. **Sequential Evaluation**: Only one branch executes - the first condition that evaluates to `true`.
+
+6. **Real-World Logic**: Models actual traffic light behavior that drivers follow every day.
+
 **Output:**
 
 ```
@@ -118,6 +134,22 @@ void main() {
   checkCharacterStatus('Archer', 0, 50);
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **complex conditional logic with nested if statements**:
+
+1. **Early Return**: Uses `return` statement to exit the function immediately when health is 0 or below, preventing further execution.
+
+2. **Nested Conditions**: Shows how if statements can be nested inside other if statements for complex decision trees.
+
+3. **Multiple Parameter Logic**: Makes decisions based on multiple input parameters (`characterClass`, `health`, `mana`).
+
+4. **Threshold-Based Logic**: Uses numeric comparisons (`< 20`, `>= 50`) to create different alert levels and ability thresholds.
+
+5. **Class-Specific Behavior**: Demonstrates how the same function can behave differently based on character class input.
+
+6. **Game State Management**: Models real game mechanics where character abilities depend on current health/mana levels.
 
 **Output:**
 
@@ -224,6 +256,24 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **comprehensive business logic with multiple conditional branches**:
+
+1. **Multi-Step Processing**: Combines price determination, availability checking, tax calculation, and payment processing in sequence.
+
+2. **Dynamic Pricing**: Uses if-else chains to set different prices based on menu items and dietary preferences.
+
+3. **Business Rules**: Implements real-world restaurant logic like vegetarian substitutions and tax calculations.
+
+4. **Input Validation**: Checks for unknown menu items and handles them gracefully with error messages.
+
+5. **Financial Calculations**: Demonstrates currency handling with proper formatting using `toStringAsFixed(2)`.
+
+6. **Payment Processing**: Validates payment amounts and calculates change, modeling real point-of-sale systems.
+
+7. **Time Estimation**: Provides cooking time estimates based on item complexity.
+
 ---
 
 ## 🔄 The Power of Loops: Repetitive Tasks
@@ -273,6 +323,24 @@ void main() {
   circusShow();
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **for loop control with embedded conditional logic**:
+
+1. **Counter-Controlled Loops**: Uses `for (int act = 1; act <= 5; act++)` to execute exactly 5 iterations with a predictable counter.
+
+2. **Loop Variable Usage**: The loop counter `act` is used both for display and conditional logic within the loop body.
+
+3. **Progressive Difficulty**: Shows how loop iterations can represent increasing complexity (simple swing → quadruple flip).
+
+4. **Audience Response Logic**: Demonstrates how conditions inside loops can create different responses based on iteration number.
+
+5. **Multiple Loops**: Uses separate for loops for different performance segments, showing loop independence.
+
+6. **Ternary Operators**: Uses nested ternary operators `? :` for concise conditional string selection.
+
+7. **Entertainment Simulation**: Models a real-world scenario where each iteration represents a progression in performance.
 
 **Output:**
 
@@ -375,6 +443,24 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **while loop with complex exit conditions**:
+
+1. **Multiple Exit Conditions**: The while loop continues until any of three conditions are met: found all treasures, hit a trap, or exceeded step limit.
+
+2. **State Tracking**: Maintains multiple variables (`steps`, `treasuresFound`, `foundTrap`) that change during loop execution and affect loop continuation.
+
+3. **Compound Boolean Logic**: Uses logical operators (`&&`, `!`) to combine multiple conditions in the while statement.
+
+4. **Pseudo-Random Events**: Uses modulo operator (`steps % 4`) to create predictable but varied game events.
+
+5. **Progressive Difficulty**: Traps only appear after step 10, showing how loop conditions can change based on iteration count.
+
+6. **Dynamic Feedback**: Provides different messages based on progress milestones (first treasure, halfway point, completion).
+
+7. **Game Loop Pattern**: Models a common game programming pattern where loops run until win/lose conditions are met.
+
 ---
 
 ## 📚 Student Grade Calculator
@@ -476,6 +562,24 @@ void main() {
 }
 ```
 
+**🔍 What This Code Does:**
+
+This code demonstrates **data analysis with loops and comprehensive conditional logic**:
+
+1. **Input Validation**: Checks for empty score lists and exits early with appropriate message.
+
+2. **Statistical Analysis**: Uses a for loop to calculate multiple statistics in a single pass (total, highest, lowest, passing count).
+
+3. **Index-Based Iteration**: Uses `for (int i = 0; i < scores.length; i++)` to access both array elements and their positions.
+
+4. **Accumulation Pattern**: Demonstrates common loop pattern of maintaining running totals and comparisons.
+
+5. **Grade Classification**: Uses threshold-based conditional logic to convert numeric scores to letter grades and visual feedback.
+
+6. **Comprehensive Reporting**: Combines loop-gathered data with conditional logic to provide detailed analysis and recommendations.
+
+7. **Educational Domain Logic**: Models real-world academic grading systems with appropriate thresholds and feedback.
+
 ---
 
 ## 🎯 Advanced Control Flow: Switch Statements
@@ -559,6 +663,24 @@ void main() {
   planetInformation('Pluto'); // Not a planet anymore!
 }
 ```
+
+**🔍 What This Code Does:**
+
+This code demonstrates **switch statement for handling multiple discrete values**:
+
+1. **Case Matching**: Uses switch statement to match exact string values, more readable than long if-else chains for many options.
+
+2. **String Preprocessing**: Calls `toLowerCase()` to handle case-insensitive input matching.
+
+3. **Break Statements**: Each case ends with `break` to prevent fall-through to subsequent cases.
+
+4. **Default Case**: Handles unexpected input values gracefully with helpful error messages and suggestions.
+
+5. **Structured Data Display**: Each case provides consistent information structure (name, description, day length, fun fact).
+
+6. **Educational Content**: Delivers factual information in an engaging format with appropriate emoji and formatting.
+
+7. **Input Validation**: Demonstrates robust input handling for user-facing applications.
 
 ---
 
