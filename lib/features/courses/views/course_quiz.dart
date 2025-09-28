@@ -159,16 +159,12 @@ class _CourseQuizState extends State<CourseQuiz> {
                 },
                 itemBuilder: (context, index) {
                   final e = quizzes[index];
-                  print(
-                      "kkkkkk ${e.userAnswer}vs ${e.answer} and ${e.isCorrect}");
                   return SingleChildScrollView(
                     child: Column(
                       key: ValueKey(e.question),
                       children: [
                         QuestionWidget(
                             onType: (index, val) {
-                              print("Answer at index $index: $val");
-
                               if (e.type == "fill") {
                                 // For fill-in-the-blank, update specific index
                                 List<String> currentAnswers =
