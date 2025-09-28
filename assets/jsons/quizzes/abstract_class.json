@@ -1,274 +1,280 @@
 [
   {
-    "question": "Complete the abstract class declaration:\n\n```dart\n%order% class Animal {\n  void makeSound();\n}\n```",
+    "question": "Complete the abstract class declaration for game characters:\n\n```dart\n%order% class GameCharacter {\n  String name;\n  int health = 100;\n  \n  GameCharacter(this.name);\n  \n  void %order%(); // Abstract method\n  \n  void showHealth() {\n    print('$name has $health health remaining 💚');\n  }\n}\n```",
     "options": [
-      "abstract"
+      "abstract",
+      "attack"
     ],
     "answer": [
-      "abstract"
+      "abstract",
+      "attack"
     ],
     "type": "order"
   },
   {
-    "question": "What will this code output?\n\n```dart\nabstract class Animal {\n  void makeSound();\n}\n\nclass Dog extends Animal {\n  @override\n  void makeSound() {\n    print('Woof! 🐶');\n  }\n}\n\nvoid main() {\n  Dog dog = Dog();\n  dog.makeSound();\n}\n```",
+    "question": "What will this abstract class implementation output?\n\n```dart\nabstract class Animal {\n  void makeSound();\n  void sleep() {\n    print('Sleeping... 😴');\n  }\n}\n\nclass Dog extends Animal {\n  @override\n  void makeSound() {\n    print('Woof! 🐶');\n  }\n}\n\nvoid main() {\n  Dog dog = Dog();\n  dog.makeSound();\n  dog.sleep();\n}\n```",
     "options": [
+      "Woof! 🐶\\nSleeping... 😴",
+      "Sleeping... 😴\\nWoof! 🐶",
       "Woof! 🐶",
-      "makeSound",
-      "Animal",
       "Error"
     ],
-    "answer": ["Woof! 🐶"],
+    "answer": ["Woof! 🐶\\nSleeping... 😴"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the keyword to create an abstract class:\n\n```dart\n%fill% class Shape {\n  void draw();\n}\n```",
+    "question": "Fill in the keyword to create an abstract class:\n\n```dart\n%fill% class Shape {\n  double calculateArea();\n  void draw();\n}\n```",
     "answer": ["abstract"],
     "type": "fill"
   },
   {
-    "question": "Complete the abstract method declaration:\n\n```dart\nabstract class Vehicle {\n  %order% startEngine();\n}\n```",
+    "question": "Complete the concrete class that extends the abstract Shape class:\n\n```dart\nabstract class Shape {\n  String color;\n  Shape(this.color);\n  \n  double calculateArea();\n  void draw();\n}\n\nclass Circle %order% Shape {\n  double radius;\n  \n  Circle(String color, this.radius) : %order%(color);\n  \n  %order%\n  double calculateArea() {\n    return 3.14159 * radius * radius;\n  }\n  \n  %order%\n  void draw() {\n    print('Drawing a circle ⭕');\n  }\n}\n```",
     "options": [
-      "void"
+      "extends",
+      "super",
+      "@override",
+      "@override"
     ],
     "answer": [
-      "void"
+      "extends",
+      "super",
+      "@override",
+      "@override"
     ],
     "type": "order"
   },
   {
-    "question": "What is an abstract class?\n\n```dart\nabstract class Animal {\n  void makeSound();\n  void sleep() {\n    print('Sleeping...');\n  }\n}\n```",
+    "question": "What is an abstract class in Dart?\n\n```dart\nabstract class Vehicle {\n  void startEngine();\n  void honk() {\n    print('Beep beep! 📯');\n  }\n}\n```",
     "options": [
-      "A blueprint class that cannot be instantiated directly",
-      "A regular class with extra features",
+      "A blueprint class that cannot be instantiated directly but can have both abstract and concrete methods",
+      "A regular class with extra performance features",
       "A class that only contains variables",
-      "A class that runs faster than normal classes"
+      "A class that automatically implements all methods"
     ],
-    "answer": ["A blueprint class that cannot be instantiated directly"],
+    "answer": ["A blueprint class that cannot be instantiated directly but can have both abstract and concrete methods"],
     "type": "mcq"
   },
   {
     "question": "Fill in what happens when you try to create an abstract class instance:\n\n```dart\nabstract class Animal {\n  void makeSound();\n}\n\nvoid main() {\n  Animal animal = Animal(); // This causes %fill%\n}\n```",
-    "answer": ["error"],
+    "answer": ["compilation error"],
     "type": "fill"
   },
   {
-    "question": "Complete the concrete class implementation:\n\n```dart\nabstract class Bird {\n  void fly();\n}\n\nclass Eagle %order% Bird {\n  @override\n  void fly() {\n    print('Eagle soars high!');\n  }\n}\n```",
+    "question": "Complete the abstract class with both abstract and concrete methods:\n\n```dart\nabstract class Bird {\n  String species;\n  Bird(this.species);\n  \n  // Abstract method\n  void %order%();\n  \n  // Concrete method\n  void %order%() {\n    print('$species is sleeping... 😴');\n  }\n  \n  // Another abstract method\n  String %order%();\n}\n```",
     "options": [
-      "extends"
+      "fly",
+      "sleep",
+      "getHabitat"
     ],
     "answer": [
-      "extends"
+      "fly",
+      "sleep",
+      "getHabitat"
     ],
     "type": "order"
   },
   {
-    "question": "What must a concrete class do when extending an abstract class?\n\n```dart\nabstract class Shape {\n  void draw();\n  void calculateArea();\n}\n\nclass Circle extends Shape {\n  // What must be implemented here?\n}\n```",
+    "question": "What must a concrete class do when extending an abstract class?\n\n```dart\nabstract class Shape {\n  void draw();\n  double calculateArea();\n  void describe() {\n    print('This is a shape');\n  }\n}\n\nclass Circle extends Shape {\n  // What must be implemented here?\n}\n```",
     "options": [
-      "Must implement all abstract methods",
+      "Must implement all abstract methods (draw and calculateArea)",
       "Must implement only some methods",
-      "Nothing special required",
-      "Must be abstract too"
+      "Must override all methods including concrete ones",
+      "Nothing special required"
     ],
-    "answer": ["Must implement all abstract methods"],
+    "answer": ["Must implement all abstract methods (draw and calculateArea)"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the override annotation:\n\n```dart\nabstract class Animal {\n  void makeSound();\n}\n\nclass Cat extends Animal {\n  %fill%\n  void makeSound() {\n    print('Meow! 🐱');\n  }\n}\n```",
+    "question": "Fill in the override annotation for implementing abstract methods:\n\n```dart\nabstract class Animal {\n  void makeSound();\n}\n\nclass Cat extends Animal {\n  %fill%\n  void makeSound() {\n    print('Meow! 🐱');\n  }\n}\n```",
     "answer": ["@override"],
     "type": "fill"
   },
   {
-    "question": "Complete the abstract class with concrete method:\n\n```dart\nabstract class Animal {\n  void makeSound();\n  \n  %order% sleep() {\n    print('Sleeping... 😴');\n  }\n}\n```",
+    "question": "Complete the template method pattern example:\n\n```dart\nabstract class DataProcessor {\n  // Template method - defines the process\n  final void %order%() {\n    %order%();\n    %order%();\n    %order%();\n    print('Processing complete! ✅');\n  }\n  \n  // Abstract methods - steps that vary by implementation\n  void loadData();\n  void validateData();\n  void saveData();\n}\n```",
     "options": [
-      "void"
+      "process",
+      "loadData",
+      "validateData",
+      "saveData"
     ],
     "answer": [
-      "void"
+      "process",
+      "loadData",
+      "validateData",
+      "saveData"
     ],
     "type": "order"
   },
   {
-    "question": "What will this mixed abstract class output?\n\n```dart\nabstract class Animal {\n  void makeSound();\n  \n  void sleep() {\n    print('Sleeping... 😴');\n  }\n}\n\nclass Dog extends Animal {\n  @override\n  void makeSound() {\n    print('Woof!');\n  }\n}\n\nvoid main() {\n  Dog dog = Dog();\n  dog.makeSound();\n  dog.sleep();\n}\n```",
+    "question": "What will this template method pattern output?\n\n```dart\nabstract class CookingProcess {\n  final void cook() {\n    prepareIngredients();\n    cookFood();\n    serve();\n    print('Meal ready! 🍽️');\n  }\n  \n  void prepareIngredients();\n  void cookFood();\n  void serve();\n}\n\nclass PastaChef extends CookingProcess {\n  @override\n  void prepareIngredients() => print('Boiling water 💧');\n  \n  @override\n  void cookFood() => print('Cooking pasta 🍝');\n  \n  @override\n  void serve() => print('Adding sauce 🍅');\n}\n\nvoid main() {\n  PastaChef chef = PastaChef();\n  chef.cook();\n}\n```",
     "options": [
-      "Woof!\\nSleeping... 😴",
-      "Sleeping... 😴\\nWoof!",
-      "Woof!",
+      "Boiling water 💧\\nCooking pasta 🍝\\nAdding sauce 🍅\\nMeal ready! 🍽️",
+      "Meal ready! 🍽️\\nBoiling water 💧\\nCooking pasta 🍝\\nAdding sauce 🍅",
+      "Cooking pasta 🍝",
       "Error"
     ],
-    "answer": ["Woof!\\nSleeping... 😴"],
+    "answer": ["Boiling water 💧\\nCooking pasta 🍝\\nAdding sauce 🍅\\nMeal ready! 🍽️"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the concrete method call:\n\n```dart\nabstract class Vehicle {\n  void start();\n  \n  void honk() {\n    print('Beep beep!');\n  }\n}\n\nclass Car extends Vehicle {\n  @override\n  void start() {\n    print('Car starting');\n  }\n  \n  void testHorn() {\n    %fill%();\n  }\n}\n```",
-    "answer": ["honk"],
+    "question": "Fill in the final keyword for template method:\n\n```dart\nabstract class Algorithm {\n  %fill% void execute() {\n    step1();\n    step2();\n  }\n  \n  void step1();\n  void step2();\n}\n```",
+    "answer": ["final"],
     "type": "fill"
   },
   {
-    "question": "Complete the abstract method with return type:\n\n```dart\nabstract class Shape {\n  %order% calculateArea();\n}\n```",
+    "question": "Complete the abstract class with constructor and properties:\n\n```dart\nabstract class Animal {\n  String %order%;\n  String %order%;\n  \n  %order%(this.name, this.species);\n  \n  void makeSound();\n  \n  void introduce() {\n    print('I am $name, a $species');\n  }\n}\n```",
     "options": [
-      "double"
-    ],
-    "answer": [
-      "double"
-    ],
-    "type": "order"
-  },
-  {
-    "question": "What will this abstract method implementation return?\n\n```dart\nabstract class Shape {\n  double calculateArea();\n}\n\nclass Rectangle extends Shape {\n  double width = 5.0;\n  double height = 3.0;\n  \n  @override\n  double calculateArea() {\n    return width * height;\n  }\n}\n\nvoid main() {\n  Rectangle rect = Rectangle();\n  print(rect.calculateArea());\n}\n```",
-    "options": [
-      "15.0",
-      "8.0",
-      "5.0",
-      "Error"
-    ],
-    "answer": ["15.0"],
-    "type": "mcq"
-  },
-  {
-    "question": "Fill in the return statement:\n\n```dart\nabstract class Animal {\n  String getName();\n}\n\nclass Dog extends Animal {\n  @override\n  String getName() {\n    %fill% 'Buddy';\n  }\n}\n```",
-    "answer": ["return"],
-    "type": "fill"
-  },
-  {
-    "question": "Complete the abstract class with constructor:\n\n```dart\nabstract class Animal {\n  String name;\n  \n  %order%(this.name);\n  \n  void makeSound();\n}\n```",
-    "options": [
+      "name",
+      "species",
       "Animal"
     ],
     "answer": [
+      "name",
+      "species",
       "Animal"
     ],
     "type": "order"
   },
   {
-    "question": "Can abstract classes have constructors?\n\n```dart\nabstract class Vehicle {\n  String brand;\n  \n  Vehicle(this.brand);\n  \n  void start();\n}\n```",
+    "question": "Can abstract classes have constructors?\n\n```dart\nabstract class Vehicle {\n  String brand;\n  int year;\n  \n  Vehicle(this.brand, this.year);\n  \n  void start();\n  void displayInfo() {\n    print('$year $brand');\n  }\n}\n```",
     "options": [
-      "Yes, abstract classes can have constructors",
+      "Yes, abstract classes can have constructors to initialize common properties",
       "No, abstract classes cannot have constructors",
       "Only if they have no abstract methods",
       "Only if they are final"
     ],
-    "answer": ["Yes, abstract classes can have constructors"],
+    "answer": ["Yes, abstract classes can have constructors to initialize common properties"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the super constructor call:\n\n```dart\nabstract class Animal {\n  String name;\n  Animal(this.name);\n  void makeSound();\n}\n\nclass Dog extends Animal {\n  Dog(String name) : %fill%(name);\n  \n  @override\n  void makeSound() {\n    print('$name says Woof!');\n  }\n}\n```",
+    "question": "Fill in the super constructor call:\n\n```dart\nabstract class GameCharacter {\n  String name;\n  int health;\n  \n  GameCharacter(this.name, this.health);\n  \n  void attack();\n}\n\nclass Wizard extends GameCharacter {\n  int mana;\n  \n  Wizard(String name, int health, this.mana) : %fill%(name, health);\n  \n  @override\n  void attack() {\n    print('$name casts a fireball! 🔥');\n  }\n}\n```",
     "answer": ["super"],
     "type": "fill"
   },
   {
-    "question": "Complete the abstract class with properties:\n\n```dart\nabstract class Shape {\n  %order% color;\n  %order% size;\n  \n  Shape(this.color, this.size);\n  \n  void draw();\n}\n```",
+    "question": "Complete the abstract class with properties and methods:\n\n```dart\nabstract class Drawable {\n  String %order%;\n  double %order%;\n  \n  Drawable(this.color, this.size);\n  \n  void %order%(); // Abstract method\n  void %order%(); // Abstract method\n  \n  void displayInfo() {\n    print('$color drawable with size $size');\n  }\n}\n```",
     "options": [
-      "String",
-      "double"
+      "color",
+      "size",
+      "draw",
+      "erase"
     ],
     "answer": [
-      "String",
-      "double"
+      "color",
+      "size",
+      "draw",
+      "erase"
     ],
     "type": "order"
   },
   {
-    "question": "What properties can concrete classes access from abstract parent?\n\n```dart\nabstract class Vehicle {\n  String brand = 'Generic';\n  int wheels = 4;\n  \n  void start();\n}\n\nclass Car extends Vehicle {\n  @override\n  void start() {\n    print('$brand car with $wheels wheels starting');\n  }\n}\n```",
+    "question": "What properties and methods can concrete classes access from abstract parent?\n\n```dart\nabstract class Vehicle {\n  String brand = 'Generic';\n  int wheels = 4;\n  \n  void start();\n  \n  void displaySpecs() {\n    print('$brand with $wheels wheels');\n  }\n}\n\nclass Car extends Vehicle {\n  @override\n  void start() {\n    print('$brand car with $wheels wheels starting');\n  }\n}\n```",
     "options": [
-      "All non-private properties from the abstract class",
+      "All non-private properties and concrete methods from the abstract class",
       "Only abstract methods",
       "No properties can be accessed",
       "Only final properties"
     ],
-    "answer": ["All non-private properties from the abstract class"],
+    "answer": ["All non-private properties and concrete methods from the abstract class"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the property access:\n\n```dart\nabstract class Animal {\n  String species = 'Unknown';\n  void makeSound();\n}\n\nclass Dog extends Animal {\n  @override\n  void makeSound() {\n    print('I am a %fill% and I say Woof!');\n  }\n}\n```",
-    "answer": ["$species"],
+    "question": "Fill in the property access:\n\n```dart\nabstract class Animal {\n  String species = 'Unknown';\n  String habitat = 'Wild';\n  \n  void makeSound();\n}\n\nclass Dog extends Animal {\n  @override\n  void makeSound() {\n    print('I am a %fill% from %fill% and I say Woof!');\n  }\n}\n```",
+    "answer": ["$species", "$habitat"],
     "type": "fill"
   },
   {
-    "question": "Complete the abstract class with getter:\n\n```dart\nabstract class Shape {\n  double width;\n  double height;\n  \n  Shape(this.width, this.height);\n  \n  %order% get area;\n}\n```",
+    "question": "Complete the abstract class with abstract getter:\n\n```dart\nabstract class Shape {\n  double width;\n  double height;\n  \n  Shape(this.width, this.height);\n  \n  %order% get %order%; // Abstract getter\n  \n  void describe() {\n    print('Shape with area: $area');\n  }\n}\n```",
     "options": [
-      "double"
+      "double",
+      "area"
     ],
     "answer": [
-      "double"
+      "double",
+      "area"
     ],
     "type": "order"
   },
   {
-    "question": "What will this abstract getter implementation return?\n\n```dart\nabstract class Rectangle {\n  double width;\n  double height;\n  \n  Rectangle(this.width, this.height);\n  \n  double get area;\n}\n\nclass MyRectangle extends Rectangle {\n  MyRectangle(double w, double h) : super(w, h);\n  \n  @override\n  double get area => width * height;\n}\n\nvoid main() {\n  MyRectangle rect = MyRectangle(4, 5);\n  print(rect.area);\n}\n```",
+    "question": "What will this abstract getter implementation return?\n\n```dart\nabstract class Rectangle {\n  double width;\n  double height;\n  \n  Rectangle(this.width, this.height);\n  \n  double get area;\n  double get perimeter;\n}\n\nclass MyRectangle extends Rectangle {\n  MyRectangle(double w, double h) : super(w, h);\n  \n  @override\n  double get area => width * height;\n  \n  @override\n  double get perimeter => 2 * (width + height);\n}\n\nvoid main() {\n  MyRectangle rect = MyRectangle(4, 5);\n  print('Area: ${rect.area}, Perimeter: ${rect.perimeter}');\n}\n```",
     "options": [
-      "20.0",
-      "9.0",
-      "4.0",
+      "Area: 20.0, Perimeter: 18.0",
+      "Area: 9.0, Perimeter: 9.0",
+      "Area: 4.0, Perimeter: 5.0",
       "Error"
     ],
-    "answer": ["20.0"],
+    "answer": ["Area: 20.0, Perimeter: 18.0"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the getter implementation:\n\n```dart\nabstract class Circle {\n  double radius;\n  Circle(this.radius);\n  double get area;\n}\n\nclass MyCircle extends Circle {\n  MyCircle(double r) : super(r);\n  \n  @override\n  double %fill% area => 3.14159 * radius * radius;\n}\n```",
-    "answer": ["get"],
+    "question": "Fill in the getter implementation:\n\n```dart\nabstract class Circle {\n  double radius;\n  Circle(this.radius);\n  double get area;\n  double get circumference;\n}\n\nclass MyCircle extends Circle {\n  MyCircle(double r) : super(r);\n  \n  @override\n  double %fill% area => 3.14159 * radius * radius;\n  \n  @override\n  double %fill% circumference => 2 * 3.14159 * radius;\n}\n```",
+    "answer": ["get", "get"],
     "type": "fill"
   },
   {
-    "question": "Complete the abstract class with setter:\n\n```dart\nabstract class Temperature {\n  double _value = 0.0;\n  \n  %order% celsius(%order% temp);\n  \n  double get celsius => _value;\n}\n```",
+    "question": "Complete the abstract class with abstract setter:\n\n```dart\nabstract class Temperature {\n  double _celsius = 0.0;\n  \n  %order% %order% celsius(%order% temp);\n  \n  double get celsius => _celsius;\n  \n  double get fahrenheit => (_celsius * 9 / 5) + 32;\n}\n```",
     "options": [
+      "set",
       "set",
       "double"
     ],
     "answer": [
+      "set",
       "set",
       "double"
     ],
     "type": "order"
   },
   {
-    "question": "What must be implemented for abstract setters?\n\n```dart\nabstract class Account {\n  set balance(double amount);\n  double get balance;\n}\n\nclass BankAccount extends Account {\n  // What must be here?\n}\n```",
+    "question": "What must be implemented for abstract setters and getters?\n\n```dart\nabstract class Account {\n  set balance(double amount);\n  double get balance;\n  String get accountType;\n}\n\nclass BankAccount extends Account {\n  // What must be here?\n}\n```",
     "options": [
-      "Both the setter and getter must be implemented",
+      "All abstract setters, getters, and methods must be implemented",
       "Only the setter needs implementation",
       "Only the getter needs implementation",
       "Nothing needs to be implemented"
     ],
-    "answer": ["Both the setter and getter must be implemented"],
+    "answer": ["All abstract setters, getters, and methods must be implemented"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the setter implementation:\n\n```dart\nabstract class Person {\n  set name(String newName);\n  String get name;\n}\n\nclass Student extends Person {\n  String _name = '';\n  \n  @override\n  %fill% name(String newName) {\n    _name = newName;\n  }\n  \n  @override\n  String get name => _name;\n}\n```",
-    "answer": ["set"],
+    "question": "Fill in the setter implementation:\n\n```dart\nabstract class Person {\n  set name(String newName);\n  String get name;\n  set age(int newAge);\n  int get age;\n}\n\nclass Student extends Person {\n  String _name = '';\n  int _age = 0;\n  \n  @override\n  %fill% name(String newName) {\n    _name = newName.trim();\n  }\n  \n  @override\n  String get name => _name;\n  \n  @override\n  %fill% age(int newAge) {\n    _age = newAge > 0 ? newAge : 0;\n  }\n  \n  @override\n  int get age => _age;\n}\n```",
+    "answer": ["set", "set"],
     "type": "fill"
   },
   {
-    "question": "Complete the multiple abstract methods:\n\n```dart\nabstract class Drawable {\n  void %order%();\n  void %order%();\n  void %order%(String color);\n}\n```",
+    "question": "Complete the multiple abstract methods implementation:\n\n```dart\nabstract class MediaPlayer {\n  void %order%();\n  void %order%();\n  void %order%();\n  void %order%(int volume);\n  \n  void displayStatus() {\n    print('Media player status');\n  }\n}\n\nclass AudioPlayer extends MediaPlayer {\n  @override\n  void play() => print('🎵 Playing audio');\n  \n  @override\n  void pause() => print('⏸️ Audio paused');\n  \n  @override\n  void stop() => print('⏹️ Audio stopped');\n  \n  @override\n  void setVolume(int volume) => print('🔊 Volume set to $volume');\n}\n```",
     "options": [
-      "draw",
-      "erase",
-      "setColor"
+      "play",
+      "pause",
+      "stop",
+      "setVolume"
     ],
     "answer": [
-      "draw",
-      "erase",
-      "setColor"
+      "play",
+      "pause",
+      "stop",
+      "setVolume"
     ],
     "type": "order"
   },
   {
-    "question": "What happens if you don't implement all abstract methods?\n\n```dart\nabstract class Vehicle {\n  void start();\n  void stop();\n  void honk();\n}\n\nclass Car extends Vehicle {\n  @override\n  void start() {\n    print('Car starting');\n  }\n  // Missing stop() and honk() implementations\n}\n```",
+    "question": "What happens if you don't implement all abstract methods?\n\n```dart\nabstract class Vehicle {\n  void start();\n  void stop();\n  void honk();\n  void checkFuel();\n}\n\nclass Car extends Vehicle {\n  @override\n  void start() {\n    print('Car starting');\n  }\n  @override\n  void stop() {\n    print('Car stopping');\n  }\n  // Missing honk() and checkFuel() implementations\n}\n```",
     "options": [
-      "Compilation error",
+      "Compilation error - must implement all abstract methods",
       "Runtime error",
-      "Code works fine",
+      "Code works fine with partial implementation",
       "Only warnings are shown"
     ],
-    "answer": ["Compilation error"],
+    "answer": ["Compilation error - must implement all abstract methods"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the missing method implementation:\n\n```dart\nabstract class Animal {\n  void eat();\n  void sleep();\n}\n\nclass Dog extends Animal {\n  @override\n  void eat() {\n    print('Dog eating');\n  }\n  \n  @override\n  void %fill%() {\n    print('Dog sleeping');\n  }\n}\n```",
-    "answer": ["sleep"],
+    "question": "Fill in the missing method implementations:\n\n```dart\nabstract class DatabaseConnection {\n  void connect();\n  void disconnect();\n  void executeQuery(String query);\n}\n\nclass MySQLConnection extends DatabaseConnection {\n  @override\n  void connect() {\n    print('Connecting to MySQL');\n  }\n  \n  @override\n  void %fill%() {\n    print('Disconnecting from MySQL');\n  }\n  \n  @override\n  void %fill%(String query) {\n    print('Executing: $query');\n  }\n}\n```",
+    "answer": ["disconnect", "executeQuery"],
     "type": "fill"
   },
   {
-    "question": "Complete the abstract class hierarchy:\n\n```dart\nabstract class Animal {\n  void makeSound();\n}\n\n%order% class Mammal %order% Animal {\n  void giveBirth() {\n    print('Giving birth to live babies');\n  }\n}\n```",
+    "question": "Complete the abstract class hierarchy:\n\n```dart\nabstract class Animal {\n  void makeSound();\n  void move();\n}\n\n%order% class Mammal %order% Animal {\n  void breathe() {\n    print('Breathing air through lungs');\n  }\n  \n  void giveBirth();\n}\n\nclass Dog extends Mammal {\n  @override\n  void makeSound() => print('Woof!');\n  \n  @override\n  void move() => print('Running on four legs');\n  \n  @override\n  void giveBirth() => print('Giving birth to puppies');\n}\n```",
     "options": [
       "abstract",
       "extends"
@@ -280,25 +286,27 @@
     "type": "order"
   },
   {
-    "question": "Can an abstract class extend another abstract class?\n\n```dart\nabstract class Shape {\n  void draw();\n}\n\nabstract class ColoredShape extends Shape {\n  void setColor(String color);\n}\n```",
+    "question": "Can an abstract class extend another abstract class?\n\n```dart\nabstract class Shape {\n  void draw();\n}\n\nabstract class ColoredShape extends Shape {\n  String color;\n  ColoredShape(this.color);\n  \n  void setColor(String newColor);\n  \n  void displayColor() {\n    print('Color: $color');\n  }\n}\n\nclass Circle extends ColoredShape {\n  Circle(String color) : super(color);\n  \n  @override\n  void draw() => print('Drawing circle');\n  \n  @override\n  void setColor(String newColor) => color = newColor;\n}\n```",
     "options": [
-      "Yes, abstract classes can extend other abstract classes",
+      "Yes, abstract classes can extend other abstract classes, creating inheritance chains",
       "No, abstract classes cannot extend anything",
       "Only if both are final",
       "Only if they have no methods"
     ],
-    "answer": ["Yes, abstract classes can extend other abstract classes"],
+    "answer": ["Yes, abstract classes can extend other abstract classes, creating inheritance chains"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the abstract class extension:\n\n```dart\nabstract class Vehicle {\n  void start();\n}\n\nabstract class FlyingVehicle %fill% Vehicle {\n  void takeOff();\n}\n```",
+    "question": "Fill in the abstract class extension:\n\n```dart\nabstract class Vehicle {\n  void start();\n}\n\nabstract class FlyingVehicle %fill% Vehicle {\n  void takeOff();\n  void land();\n}\n\nclass Airplane extends FlyingVehicle {\n  @override\n  void start() => print('Starting engines');\n  \n  @override\n  void takeOff() => print('Taking off');\n  \n  @override\n  void land() => print('Landing');\n}\n```",
     "answer": ["extends"],
     "type": "fill"
   },
   {
-    "question": "Complete the concrete class from abstract hierarchy:\n\n```dart\nabstract class Animal {\n  void makeSound();\n}\n\nabstract class Bird extends Animal {\n  void fly();\n}\n\nclass Eagle %order% Bird {\n  @override\n  void makeSound() {\n    print('Eagle screeches');\n  }\n  \n  @override\n  void fly() {\n    print('Eagle soars');\n  }\n}\n```",
+    "question": "Complete the concrete class from abstract hierarchy:\n\n```dart\nabstract class Animal {\n  void makeSound();\n  void eat();\n}\n\nabstract class Bird extends Animal {\n  void fly();\n  String getHabitat();\n}\n\nclass Eagle %order% Bird {\n  @override\n  void makeSound() {\n    print('Eagle screeches 🦅');\n  }\n  \n  @override\n  void eat() {\n    print('Eagle hunts for fish');\n  }\n  \n  @override\n  void fly() {\n    print('Eagle soars high');\n  }\n  \n  @override\n  String getHabitat() {\n    return 'Mountains and forests';\n  }\n}\n```",
     "options": [
-      "extends"
+      "extends",
+      "implements",
+      "with"
     ],
     "answer": [
       "extends"
@@ -306,118 +314,126 @@
     "type": "order"
   },
   {
-    "question": "What methods must the concrete class implement from the hierarchy?\n\n```dart\nabstract class A {\n  void methodA();\n}\n\nabstract class B extends A {\n  void methodB();\n}\n\nclass C extends B {\n  // What must be implemented?\n}\n```",
+    "question": "What methods must the concrete class implement from the hierarchy?\n\n```dart\nabstract class Device {\n  void powerOn();\n  void powerOff();\n}\n\nabstract class SmartDevice extends Device {\n  void connectToWifi();\n  void updateFirmware();\n}\n\nclass SmartPhone extends SmartDevice {\n  // What must be implemented?\n}\n```",
     "options": [
-      "Both methodA() and methodB()",
-      "Only methodB()",
-      "Only methodA()",
+      "All abstract methods from both Device and SmartDevice classes",
+      "Only SmartDevice methods",
+      "Only Device methods",
       "No methods need implementation"
     ],
-    "answer": ["Both methodA() and methodB()"],
+    "answer": ["All abstract methods from both Device and SmartDevice classes"],
     "type": "mcq"
   },
   {
-    "question": "Fill in all required method implementations:\n\n```dart\nabstract class Shape {\n  void draw();\n}\n\nabstract class ColoredShape extends Shape {\n  void setColor(String color);\n}\n\nclass Circle extends ColoredShape {\n  @override\n  void %fill%() {\n    print('Drawing circle');\n  }\n  \n  @override\n  void %fill%(String color) {\n    print('Setting color to $color');\n  }\n}\n```",
-    "answer": ["draw", "setColor"],
+    "question": "Fill in all required method implementations:\n\n```dart\nabstract class Shape {\n  void draw();\n  double calculateArea();\n}\n\nabstract class ColoredShape extends Shape {\n  void setColor(String color);\n  String getColor();\n}\n\nclass Rectangle extends ColoredShape {\n  double width, height;\n  String _color = 'white';\n  \n  Rectangle(this.width, this.height);\n  \n  @override\n  void %fill%() {\n    print('Drawing rectangle');\n  }\n  \n  @override\n  double %fill%() {\n    return width * height;\n  }\n  \n  @override\n  void %fill%(String color) {\n    _color = color;\n  }\n  \n  @override\n  String %fill%() {\n    return _color;\n  }\n}\n```",
+    "answer": ["draw", "calculateArea", "setColor", "getColor"],
     "type": "fill"
   },
   {
-    "question": "Complete the abstract class with static method:\n\n```dart\nabstract class MathUtils {\n  double calculate(double x);\n  \n  %order% %order% double pi = 3.14159;\n}\n```",
+    "question": "Complete the abstract class with static members:\n\n```dart\nabstract class MathUtils {\n  double calculate(double x);\n  \n  %order% %order% double pi = 3.14159;\n  \n  %order% String getVersion() {\n    return 'MathUtils v1.0';\n  }\n}\n```",
     "options": [
       "static",
-      "const"
+      "const",
+      "static"
     ],
     "answer": [
       "static",
-      "const"
+      "const",
+      "static"
     ],
     "type": "order"
   },
   {
-    "question": "Can abstract classes have static methods?\n\n```dart\nabstract class Helper {\n  void abstractMethod();\n  \n  static void staticHelper() {\n    print('Static helper method');\n  }\n}\n```",
+    "question": "Can abstract classes have static methods and constants?\n\n```dart\nabstract class DatabaseHelper {\n  void connect();\n  \n  static const String version = '2.1.0';\n  \n  static void logInfo(String message) {\n    print('DB Info: $message');\n  }\n  \n  static DatabaseHelper createConnection(String type) {\n    // Factory method implementation\n    if (type == 'mysql') return MySQLConnection();\n    return PostgreSQLConnection();\n  }\n}\n```",
     "options": [
-      "Yes, abstract classes can have static methods",
-      "No, abstract classes cannot have static methods",
+      "Yes, abstract classes can have static methods, constants, and factory methods",
+      "No, abstract classes cannot have static members",
       "Only if they are final",
       "Only if they have no abstract methods"
     ],
-    "answer": ["Yes, abstract classes can have static methods"],
+    "answer": ["Yes, abstract classes can have static methods, constants, and factory methods"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the static method call:\n\n```dart\nabstract class Utility {\n  void process();\n  \n  static void log(String message) {\n    print('Log: $message');\n  }\n}\n\nvoid main() {\n  Utility.%fill%('Hello world');\n}\n```",
-    "answer": ["log"],
+    "question": "Fill in the static method call:\n\n```dart\nabstract class Utility {\n  void process();\n  \n  static void logMessage(String message) {\n    print('Log: $message');\n  }\n  \n  static const String appName = 'MyApp';\n}\n\nvoid main() {\n  Utility.%fill%('Application started');\n  print('Running: ${Utility.%fill%}');\n}\n```",
+    "answer": ["logMessage", "appName"],
     "type": "fill"
   },
   {
-    "question": "Complete the interface-like abstract class:\n\n```dart\nabstract class %order% {\n  void fly();\n  void land();\n  void navigate();\n}\n```",
+    "question": "Complete the interface-like abstract classes:\n\n```dart\nabstract class %order% {\n  void fly();\n  void land();\n  double getMaxAltitude();\n}\n\nabstract class %order% {\n  void swim();\n  void dive();\n  int getMaxDepth();\n}\n\nclass Duck implements Flyable, Swimmable {\n  @override\n  void fly() => print('Duck flying');\n  \n  @override\n  void land() => print('Duck landing');\n  \n  @override\n  double getMaxAltitude() => 100.0;\n  \n  @override\n  void swim() => print('Duck swimming');\n  \n  @override\n  void dive() => print('Duck diving');\n  \n  @override\n  int getMaxDepth() => 2;\n}\n```",
     "options": [
-      "Flyable"
+      "Flyable",
+      "Swimmable"
     ],
     "answer": [
-      "Flyable"
+      "Flyable",
+      "Swimmable"
     ],
     "type": "order"
   },
   {
-    "question": "What is the difference between abstract classes and interfaces in Dart?\n\n```dart\nabstract class AbstractClass {\n  void abstractMethod();\n  void concreteMethod() {\n    print('Implemented');\n  }\n}\n\nclass Interface {\n  void method() {\n    print('Default implementation');\n  }\n}\n```",
+    "question": "What's the difference between extends and implements with abstract classes?\n\n```dart\nabstract class Animal {\n  String name;\n  Animal(this.name);\n  void makeSound();\n  void breathe() {\n    print('$name is breathing');\n  }\n}\n\nclass Dog extends Animal {\n  Dog(String name) : super(name);\n  @override\n  void makeSound() => print('Woof!');\n}\n\nclass Robot implements Animal {\n  @override\n  String name = 'RobotDog';\n  @override\n  void makeSound() => print('Beep!');\n  @override\n  void breathe() => print('Robot does not breathe');\n}\n```",
     "options": [
-      "Abstract classes can have concrete methods, interfaces provide default implementations",
+      "extends inherits implementation and state, implements only provides contract",
       "No difference in Dart",
-      "Abstract classes are faster",
-      "Interfaces cannot have methods"
+      "extends is faster than implements",
+      "implements cannot be used with abstract classes"
     ],
-    "answer": ["Abstract classes can have concrete methods, interfaces provide default implementations"],
+    "answer": ["extends inherits implementation and state, implements only provides contract"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the implements keyword:\n\n```dart\nabstract class Drawable {\n  void draw();\n}\n\nclass Circle %fill% Drawable {\n  @override\n  void draw() {\n    print('Drawing circle');\n  }\n}\n```",
+    "question": "Fill in the implements keyword:\n\n```dart\nabstract class Drawable {\n  void draw();\n  void erase();\n}\n\nclass Circle %fill% Drawable {\n  @override\n  void draw() {\n    print('Drawing circle');\n  }\n  \n  @override\n  void erase() {\n    print('Erasing circle');\n  }\n}\n```",
     "answer": ["implements"],
     "type": "fill"
   },
   {
-    "question": "Complete the factory constructor in abstract class:\n\n```dart\nabstract class Animal {\n  void makeSound();\n  \n  %order% Animal.%order%(String type) {\n    if (type == 'dog') return Dog();\n    if (type == 'cat') return Cat();\n    throw Exception('Unknown animal type');\n  }\n}\n```",
+    "question": "Complete the factory constructor in abstract class:\n\n```dart\nabstract class Logger {\n  void log(String message);\n  \n  %order% Logger.%order%(String type) {\n    switch (type) {\n      case 'console':\n        return %order%();\n      case 'file':\n        return FileLogger();\n      case 'database':\n        return DatabaseLogger();\n      default:\n        return ConsoleLogger();\n    }\n  }\n}\n```",
     "options": [
       "factory",
-      "create"
+      "create",
+      "ConsoleLogger"
     ],
     "answer": [
       "factory",
-      "create"
+      "create",
+      "ConsoleLogger"
     ],
     "type": "order"
   },
   {
-    "question": "What does a factory constructor in abstract class allow?\n\n```dart\nabstract class Shape {\n  void draw();\n  \n  factory Shape.create(String type) {\n    if (type == 'circle') return Circle();\n    if (type == 'square') return Square();\n    return Circle();\n  }\n}\n```",
+    "question": "What does a factory constructor in abstract class allow?\n\n```dart\nabstract class Vehicle {\n  void start();\n  \n  factory Vehicle.create(String type, String brand) {\n    switch (type) {\n      case 'car':\n        return Car(brand);\n      case 'motorcycle':\n        return Motorcycle(brand);\n      case 'truck':\n        return Truck(brand);\n      default:\n        return Car(brand);\n    }\n  }\n}\n```",
     "options": [
-      "Creates instances of concrete subclasses",
+      "Creates instances of concrete subclasses based on parameters",
       "Creates instances of the abstract class directly",
       "Prevents inheritance",
       "Makes the class final"
     ],
-    "answer": ["Creates instances of concrete subclasses"],
+    "answer": ["Creates instances of concrete subclasses based on parameters"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the factory return:\n\n```dart\nabstract class Vehicle {\n  void start();\n  \n  factory Vehicle.create(String type) {\n    if (type == 'car') %fill% Car();\n    return Bike();\n  }\n}\n```",
-    "answer": ["return"],
+    "question": "Fill in the factory return:\n\n```dart\nabstract class PaymentProcessor {\n  void processPayment(double amount);\n  \n  factory PaymentProcessor.create(String type) {\n    switch (type) {\n      case 'credit':\n        %fill% CreditCardProcessor();\n      case 'paypal':\n        %fill% PayPalProcessor();\n      default:\n        %fill% CashProcessor();\n    }\n  }\n}\n```",
+    "answer": ["return", "return", "return"],
     "type": "fill"
   },
   {
-    "question": "Complete the abstract class with final method:\n\n```dart\nabstract class Animal {\n  void makeSound();\n  \n  %order% void describe() {\n    print('This is an animal');\n    makeSound();\n  }\n}\n```",
+    "question": "Complete the abstract class with final template method:\n\n```dart\nabstract class Animal {\n  String name;\n  Animal(this.name);\n  \n  void makeSound();\n  \n  %order% void %order%() {\n    print('Hello, I am $name!');\n    makeSound();\n    print('Nice to meet you! 😊');\n  }\n}\n```",
     "options": [
-      "final"
+      "final",
+      "introduce"
     ],
     "answer": [
-      "final"
+      "final",
+      "introduce"
     ],
     "type": "order"
   },
   {
-    "question": "What does a final method in abstract class do?\n\n```dart\nabstract class Base {\n  void abstractMethod();\n  \n  final void finalMethod() {\n    print('Cannot be overridden');\n  }\n}\n\nclass Child extends Base {\n  @override\n  void abstractMethod() {\n    print('Implemented');\n  }\n  \n  // Cannot override finalMethod\n}\n```",
+    "question": "What does a final method in abstract class do?\n\n```dart\nabstract class GameCharacter {\n  String name;\n  int health;\n  \n  GameCharacter(this.name, this.health);\n  \n  void attack();\n  \n  final void takeDamage(int damage) {\n    health -= damage;\n    if (health <= 0) {\n      print('$name has been defeated!');\n    } else {\n      print('$name takes $damage damage. Health: $health');\n    }\n  }\n}\n```",
     "options": [
       "Prevents the method from being overridden in child classes",
-      "Makes the method faster",
+      "Makes the method run faster",
       "Makes the method static",
       "Makes the method private"
     ],
@@ -425,74 +441,70 @@
     "type": "mcq"
   },
   {
-    "question": "Fill in the template method pattern:\n\n```dart\nabstract class Algorithm {\n  void step1();\n  void step2();\n  \n  final void execute() {\n    %fill%();\n    %fill%();\n    print('Algorithm complete');\n  }\n}\n```",
-    "answer": ["step1", "step2"],
+    "question": "Fill in the template method pattern with final:\n\n```dart\nabstract class TestFramework {\n  void setUp();\n  void runTest();\n  void tearDown();\n  \n  %fill% void executeTest() {\n    %fill%();\n    %fill%();\n    %fill%();\n    print('Test execution completed');\n  }\n}\n```",
+    "answer": ["final", "setUp", "runTest", "tearDown"],
     "type": "fill"
   },
   {
-    "question": "Complete the abstract class with private method:\n\n```dart\nabstract class Processor {\n  void process();\n  \n  void %order%() {\n    print('Internal helper method');\n  }\n}\n```",
+    "question": "Complete the abstract class with private helper method:\n\n```dart\nabstract class Processor {\n  void process();\n  \n  void %order%() {\n    print('Starting internal validation...');\n  }\n  \n  void execute() {\n    _validateInput();\n    process();\n    print('Execution completed');\n  }\n}\n```",
     "options": [
-      "_helper"
+      "_validateInput",
+      "process",
+      "execute"
     ],
     "answer": [
-      "_helper"
+      "_validateInput"
     ],
     "type": "order"
   },
   {
-    "question": "Can abstract classes have private methods?\n\n```dart\nabstract class Service {\n  void publicMethod();\n  \n  void _privateHelper() {\n    print('Private method in abstract class');\n  }\n}\n```",
+    "question": "Can abstract classes have private methods?\n\n```dart\nabstract class Service {\n  void publicMethod();\n  \n  void _privateHelper() {\n    print('Private method in abstract class');\n  }\n  \n  void commonOperation() {\n    _privateHelper();\n    publicMethod();\n  }\n}\n```",
     "options": [
-      "Yes, abstract classes can have private methods",
+      "Yes, abstract classes can have private methods for internal implementation",
       "No, abstract classes cannot have private methods",
       "Only if they are static",
       "Only if they are final"
     ],
-    "answer": ["Yes, abstract classes can have private methods"],
+    "answer": ["Yes, abstract classes can have private methods for internal implementation"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the private method call:\n\n```dart\nabstract class Worker {\n  void work();\n  \n  void _setup() {\n    print('Setting up');\n  }\n  \n  void initialize() {\n    %fill%();\n    print('Initialized');\n  }\n}\n```",
-    "answer": ["_setup"],
+    "question": "Fill in the private method call:\n\n```dart\nabstract class Worker {\n  void work();\n  \n  void _setup() {\n    print('Setting up workspace...');\n  }\n  \n  void _cleanup() {\n    print('Cleaning up workspace...');\n  }\n  \n  void executeWork() {\n    %fill%();\n    work();\n    %fill%();\n  }\n}\n```",
+    "answer": ["_setup", "_cleanup"],
     "type": "fill"
   },
   {
-    "question": "Complete the abstract class documentation:\n\n```dart\n/// Base class for all %order% in the game\n/// Provides common behavior and requires implementation of makeSound\nabstract class Animal {\n  /// Makes the sound specific to each animal type\n  void makeSound();\n  \n  /// Common sleeping behavior for all animals\n  void sleep() {\n    print('Sleeping... 😴');\n  }\n}\n```",
+    "question": "Complete the comprehensive abstract class example:\n\n```dart\nabstract class %order% {\n  String name;\n  int health;\n  int mana;\n  \n  // Constructor\n  GameCharacter(this.name, this.health, this.mana);\n  \n  // Abstract methods - must be implemented\n  void %order%();\n  void %order%();\n  String get %order%();\n  \n  // Concrete methods - shared implementation\n  void displayStats() {\n    print('$name - Health: $health, Mana: $mana');\n  }\n  \n  // Final method - cannot be overridden\n  %order% void levelUp() {\n    health += 10;\n    mana += 5;\n    print('$name leveled up! 🎉');\n  }\n  \n  // Private helper method\n  void _regenerate() {\n    if (health < 100) health += 2;\n    if (mana < 50) mana += 1;\n  }\n  \n  // Template method\n  final void performAction() {\n    _regenerate();\n    displayStats();\n    attack();\n    performSpecialMove();\n  }\n}\n```",
     "options": [
-      "animals"
+      "GameCharacter",
+      "attack",
+      "performSpecialMove",
+      "characterType",
+      "final"
     ],
     "answer": [
-      "animals"
+      "GameCharacter",
+      "attack",
+      "performSpecialMove",
+      "characterType",
+      "final"
     ],
     "type": "order"
   },
   {
-    "question": "What is the main benefit of abstract classes?\n\n```dart\nabstract class DatabaseConnection {\n  void connect();\n  void disconnect();\n  \n  void executeQuery(String query) {\n    connect();\n    print('Executing: $query');\n    disconnect();\n  }\n}\n```",
+    "question": "What is the main benefit of abstract classes?\n\n```dart\nabstract class DatabaseConnection {\n  String connectionString;\n  bool isConnected = false;\n  \n  DatabaseConnection(this.connectionString);\n  \n  // Abstract methods - each DB implements differently\n  void connect();\n  void disconnect();\n  void executeQuery(String query);\n  \n  // Common template method\n  final void performTransaction(List<String> queries) {\n    connect();\n    for (String query in queries) {\n      executeQuery(query);\n    }\n    disconnect();\n    print('Transaction completed successfully');\n  }\n}\n```",
     "options": [
-      "Provides a common interface while allowing different implementations",
+      "Provides a common interface with shared code while enforcing implementation contracts",
       "Makes code run faster",
       "Reduces memory usage",
       "Prevents all inheritance"
     ],
-    "answer": ["Provides a common interface while allowing different implementations"],
+    "answer": ["Provides a common interface with shared code while enforcing implementation contracts"],
     "type": "mcq"
   },
   {
-    "question": "Fill in the use case for abstract classes:\n\n```dart\n// Abstract classes are perfect for defining %fill%\n// when you know WHAT needs to be done but not HOW\nabstract class PaymentProcessor {\n  void processPayment(double amount);\n  \n  void logTransaction(double amount) {\n    print('Transaction logged: \\$$amount');\n  }\n}\n```",
+    "question": "Fill in the use case description:\n\n```dart\n// Abstract classes are perfect for defining %fill%\n// when you know WHAT needs to be done but not exactly HOW\nabstract class PaymentProcessor {\n  double processingFee = 2.50;\n  \n  // What varies by payment method\n  bool validatePayment(double amount);\n  void processPayment(double amount);\n  void sendReceipt();\n  \n  // What's common for all payment methods\n  final void handlePayment(double amount) {\n    if (validatePayment(amount)) {\n      double total = amount + processingFee;\n      processPayment(total);\n      sendReceipt();\n      logTransaction(total);\n    }\n  }\n  \n  void logTransaction(double amount) {\n    print('Transaction logged: \\$${amount.toStringAsFixed(2)}');\n  }\n}\n```",
     "answer": ["contracts"],
     "type": "fill"
-  },
-  {
-    "question": "Complete the final abstract class example:\n\n```dart\nabstract class %order% {\n  String name;\n  \n  GameCharacter(this.name);\n  \n  // Abstract methods - must be implemented\n  void %order%();\n  void %order%();\n  \n  // Concrete method - shared by all characters\n  void introduce() {\n    print('I am $name!');\n    displayStats();\n    performSpecialAttack();\n  }\n}\n```",
-    "options": [
-      "GameCharacter",
-      "displayStats",
-      "performSpecialAttack"
-    ],
-    "answer": [
-      "GameCharacter",
-      "displayStats",
-      "performSpecialAttack"
-    ],
-    "type": "order"
   }
 ]

@@ -1,10 +1,12 @@
 [
   {
-    "question": "Complete the anonymous function assignment:\n\n```dart\nvoid main() {\n  var sayHi = %order% {\n    print('Hi there!');\n  };\n  \n  sayHi();\n}\n```",
+    "question": "Complete the anonymous function assignment:\n\n```dart\nvoid main() {\n  var sayHi = %order% {\n    print('Hi there!');\n  };\n  \n  sayHi%order%;\n}\n```",
     "options": [
+      "()",
       "()"
     ],
     "answer": [
+      "()",
       "()"
     ],
     "type": "order"
@@ -54,12 +56,14 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function with parameter:\n\n```dart\nvoid main() {\n  var doubleIt = (%order% x) {\n    return x * 2;\n  };\n  \n  print(doubleIt(5));\n}\n```",
+    "question": "Complete the anonymous function with parameter and return:\n\n```dart\nvoid main() {\n  var doubleIt = (%order% x) {\n    %order% x * 2;\n  };\n  \n  print(doubleIt(5));\n}\n```",
     "options": [
-      "int"
+      "int",
+      "return"
     ],
     "answer": [
-      "int"
+      "int",
+      "return"
     ],
     "type": "order"
   },
@@ -80,12 +84,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the arrow function syntax:\n\n```dart\nvoid main() {\n  var triple = (int x) %order% x * 3;\n  print(triple(6));\n}\n```",
+    "question": "Complete the arrow function syntax with parameter and expression:\n\n```dart\nvoid main() {\n  var triple = (%order% x) %order% x %order% 3;\n  print(triple(6));\n}\n```",
     "options": [
-      "=>"
+      "int",
+      "=>",
+      "*"
     ],
     "answer": [
-      "=>"
+      "int",
+      "=>",
+      "*"
     ],
     "type": "order"
   },
@@ -106,12 +114,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function in forEach:\n\n```dart\nvoid main() {\n  var items = ['apple', 'banana', 'cherry'];\n  \n  items.forEach(%order% item) {\n    print('Fruit: $item');\n  });\n}\n```",
+    "question": "Complete the anonymous function in forEach with parameter type and body:\n\n```dart\nvoid main() {\n  var items = ['apple', 'banana', 'cherry'];\n  \n  items.forEach((%order% %order%) {\n    print('Fruit: %order%');\n  });\n}\n```",
     "options": [
-      "((String"
+      "String",
+      "item",
+      "$item"
     ],
     "answer": [
-      "((String"
+      "String",
+      "item",
+      "$item"
     ],
     "type": "order"
   },
@@ -132,12 +144,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function with map:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3];\n  \n  var doubled = numbers.map(%order% n) => n * 2).toList();\n  print(doubled);\n}\n```",
+    "question": "Complete the anonymous function with map including type, parameter, and operation:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3];\n  \n  var doubled = numbers.map((%order% %order%) => %order% * 2).toList();\n  print(doubled);\n}\n```",
     "options": [
-      "((int"
+      "int",
+      "n",
+      "n"
     ],
     "answer": [
-      "((int"
+      "int",
+      "n",
+      "n"
     ],
     "type": "order"
   },
@@ -158,12 +174,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function with where:\n\n```dart\nvoid main() {\n  var ages = [15, 22, 30, 17, 25];\n  \n  var adults = ages.where(%order% age) => age >= 18).toList();\n  print(adults);\n}\n```",
+    "question": "Complete the anonymous function with where including type, parameter, and condition:\n\n```dart\nvoid main() {\n  var ages = [15, 22, 30, 17, 25];\n  \n  var adults = ages.where((%order% %order%) => %order% >= 18).toList();\n  print(adults);\n}\n```",
     "options": [
-      "((int"
+      "int",
+      "age",
+      "age"
     ],
     "answer": [
-      "((int"
+      "int",
+      "age",
+      "age"
     ],
     "type": "order"
   },
@@ -184,14 +204,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function with reduce:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3, 4];\n  \n  var sum = numbers.reduce(%order% a, %order% b) => a + b);\n  print(sum);\n}\n```",
+    "question": "Complete the anonymous function with reduce including types and operation:\n\n```dart\nvoid main() {\n  var numbers = [1, 2, 3, 4];\n  \n  var sum = numbers.reduce((%order% %order%, %order% %order%) => %order% + %order%);\n  print(sum);\n}\n```",
     "options": [
-      "((int",
-      "int"
+      "int",
+      "a",
+      "int",
+      "b",
+      "a",
+      "b"
     ],
     "answer": [
-      "((int",
-      "int"
+      "int",
+      "a",
+      "int",
+      "b",
+      "a",
+      "b"
     ],
     "type": "order"
   },
@@ -212,14 +240,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function with sort:\n\n```dart\nvoid main() {\n  var names = ['Charlie', 'Alice', 'Bob'];\n  \n  names.sort(%order% a, %order% b) => a.compareTo(b));\n  print(names);\n}\n```",
+    "question": "Complete the anonymous function with sort including types, parameters, and method:\n\n```dart\nvoid main() {\n  var names = ['Charlie', 'Alice', 'Bob'];\n  \n  names.sort((%order% %order%, %order% %order%) => %order%.compareTo(%order%));\n  print(names);\n}\n```",
     "options": [
-      "((String",
-      "String"
+      "String",
+      "a",
+      "String",
+      "b",
+      "a",
+      "b"
     ],
     "answer": [
-      "((String",
-      "String"
+      "String",
+      "a",
+      "String",
+      "b",
+      "a",
+      "b"
     ],
     "type": "order"
   },
@@ -240,12 +276,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function with any:\n\n```dart\nvoid main() {\n  var numbers = [1, 3, 5, 7];\n  \n  bool hasEven = numbers.any(%order% n) => n % 2 == 0);\n  print(hasEven);\n}\n```",
+    "question": "Complete the anonymous function with any including type, parameter, and condition:\n\n```dart\nvoid main() {\n  var numbers = [1, 3, 5, 7];\n  \n  bool hasEven = numbers.any((%order% %order%) => %order% % 2 == 0);\n  print(hasEven);\n}\n```",
     "options": [
-      "((int"
+      "int",
+      "n",
+      "n"
     ],
     "answer": [
-      "((int"
+      "int",
+      "n",
+      "n"
     ],
     "type": "order"
   },
@@ -266,12 +306,16 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function with every:\n\n```dart\nvoid main() {\n  var ages = [18, 21, 25, 30];\n  \n  bool allAdults = ages.every(%order% age) => age >= 18);\n  print(allAdults);\n}\n```",
+    "question": "Complete the anonymous function with every including type, parameter, and condition:\n\n```dart\nvoid main() {\n  var ages = [18, 21, 25, 30];\n  \n  bool allAdults = ages.every((%order% %order%) => %order% >= 18);\n  print(allAdults);\n}\n```",
     "options": [
-      "((int"
+      "int",
+      "age",
+      "age"
     ],
     "answer": [
-      "((int"
+      "int",
+      "age",
+      "age"
     ],
     "type": "order"
   },
@@ -292,14 +336,24 @@
     "type": "fill"
   },
   {
-    "question": "Complete the nested anonymous function:\n\n```dart\nvoid main() {\n  var createMultiplier = (%order% factor) {\n    return (%order% x) => x * factor;\n  };\n  \n  var double = createMultiplier(2);\n  print(double(5));\n}\n```",
+    "question": "Complete the nested anonymous function with types and arrow syntax:\n\n```dart\nvoid main() {\n  var createMultiplier = (%order% %order%) {\n    return (%order% %order%) %order% %order% * %order%;\n  };\n  \n  var double = createMultiplier(2);\n  print(double(5));\n}\n```",
     "options": [
       "int",
-      "int"
+      "factor",
+      "int",
+      "x",
+      "=>",
+      "x",
+      "factor"
     ],
     "answer": [
       "int",
-      "int"
+      "factor",
+      "int",
+      "x",
+      "=>",
+      "x",
+      "factor"
     ],
     "type": "order"
   },
@@ -320,16 +374,28 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function with multiple parameters:\n\n```dart\nvoid main() {\n  var calculator = (%order% a, %order% b, %order% operation) {\n    return operation(a, b);\n  };\n  \n  var result = calculator(10, 5, (x, y) => x + y);\n  print(result);\n}\n```",
+    "question": "Complete the anonymous function with multiple parameters and types:\n\n```dart\nvoid main() {\n  var calculator = (%order% %order%, %order% %order%, %order% %order%) {\n    return %order%(%order%, %order%);\n  };\n  \n  var result = calculator(10, 5, (x, y) => x + y);\n  print(result);\n}\n```",
     "options": [
       "int",
+      "a",
       "int",
-      "Function"
+      "b",
+      "Function",
+      "operation",
+      "operation",
+      "a",
+      "b"
     ],
     "answer": [
       "int",
-      "int", 
-      "Function"
+      "a",
+      "int",
+      "b",
+      "Function",
+      "operation",
+      "operation",
+      "a",
+      "b"
     ],
     "type": "order"
   },
@@ -350,14 +416,20 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function with conditional logic:\n\n```dart\nvoid main() {\n  var checkNumber = (%order% n) {\n    %order% (n > 0) {\n      return 'positive';\n    } else if (n < 0) {\n      return 'negative';\n    } else {\n      return 'zero';\n    }\n  };\n}\n```",
+    "question": "Complete the anonymous function with conditional logic and type:\n\n```dart\nvoid main() {\n  var checkNumber = (%order% %order%) {\n    %order% (%order% > 0) {\n      return 'positive';\n    } else if (%order% < 0) {\n      return 'negative';\n    } else {\n      return 'zero';\n    }\n  };\n}\n```",
     "options": [
       "int",
-      "if"
+      "n",
+      "if",
+      "n",
+      "n"
     ],
     "answer": [
       "int",
-      "if"
+      "n",
+      "if",
+      "n",
+      "n"
     ],
     "type": "order"
   },
@@ -378,14 +450,22 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function with string interpolation:\n\n```dart\nvoid main() {\n  var formatName = (%order% first, %order% last) {\n    return 'Name: $first $last';\n  };\n  \n  print(formatName('John', 'Doe'));\n}\n```",
+    "question": "Complete the anonymous function with string interpolation and types:\n\n```dart\nvoid main() {\n  var formatName = (%order% %order%, %order% %order%) {\n    return 'Name: %order% %order%';\n  };\n  \n  print(formatName('John', 'Doe'));\n}\n```",
     "options": [
       "String",
-      "String"
+      "first",
+      "String",
+      "last",
+      "$first",
+      "$last"
     ],
     "answer": [
       "String",
-      "String"
+      "first",
+      "String",
+      "last",
+      "$first",
+      "$last"
     ],
     "type": "order"
   },
@@ -406,12 +486,26 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function with list operations:\n\n```dart\nvoid main() {\n  var processNumbers = (%order%%order%%order% numbers) {\n    return numbers.where((n) => n > 0).map((n) => n * 2).toList();\n  };\n  \n  print(processNumbers([-1, 2, -3, 4, 5]));\n}\n```",
+    "question": "Complete the anonymous function with list operations and types:\n\n```dart\nvoid main() {\n  var processNumbers = (%order%<%order%> %order%) {\n    return %order%.where((%order%) => %order% > 0).map((%order%) => %order% * 2).toList();\n  };\n  \n  print(processNumbers([-1, 2, -3, 4, 5]));\n}\n```",
     "options": [
-      "List<int>"
+      "List",
+      "int",
+      "numbers",
+      "numbers",
+      "n",
+      "n",
+      "n",
+      "n"
     ],
     "answer": [
-      "List<int>"
+      "List",
+      "int",
+      "numbers",
+      "numbers",
+      "n",
+      "n",
+      "n",
+      "n"
     ],
     "type": "order"
   },
@@ -432,14 +526,26 @@
     "type": "fill"
   },
   {
-    "question": "Complete the anonymous function with error handling:\n\n```dart\nvoid main() {\n  var safeDivide = (%order% a, %order% b) {\n    try {\n      return a / b;\n    } catch (e) {\n      return 0.0;\n    }\n  };\n  \n  print(safeDivide(10, 0));\n}\n```",
+    "question": "Complete the anonymous function with error handling and types:\n\n```dart\nvoid main() {\n  var safeDivide = (%order% %order%, %order% %order%) {\n    %order% {\n      return %order% / %order%;\n    } %order% (e) {\n      return 0.0;\n    }\n  };\n  \n  print(safeDivide(10, 0));\n}\n```",
     "options": [
       "double",
-      "double"
+      "a",
+      "double",
+      "b",
+      "try",
+      "a",
+      "b",
+      "catch"
     ],
     "answer": [
       "double",
-      "double"
+      "a",
+      "double",
+      "b",
+      "try",
+      "a",
+      "b",
+      "catch"
     ],
     "type": "order"
   },
@@ -460,16 +566,30 @@
     "type": "fill"
   },
   {
-    "question": "Complete the final anonymous function example:\n\n```dart\nvoid main() {\n  var createFormatter = (%order% prefix, %order% suffix) {\n    return (%order% text) => '$prefix $text $suffix';\n  };\n  \n  var htmlFormatter = createFormatter('<b>', '</b>');\n  print(htmlFormatter('Hello World'));\n}\n```",
+    "question": "Complete the final anonymous function example with types and arrow syntax:\n\n```dart\nvoid main() {\n  var createFormatter = (%order% %order%, %order% %order%) {\n    return (%order% %order%) %order% '%order% %order% %order%';\n  };\n  \n  var htmlFormatter = createFormatter('<b>', '</b>');\n  print(htmlFormatter('Hello World'));\n}\n```",
     "options": [
       "String",
+      "prefix",
       "String",
-      "String"
+      "suffix",
+      "String",
+      "text",
+      "=>",
+      "$prefix",
+      "$text",
+      "$suffix"
     ],
     "answer": [
       "String",
+      "prefix",
       "String",
-      "String"
+      "suffix",
+      "String",
+      "text",
+      "=>",
+      "$prefix",
+      "$text",
+      "$suffix"
     ],
     "type": "order"
   }
