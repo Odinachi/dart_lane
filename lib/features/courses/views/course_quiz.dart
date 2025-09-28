@@ -157,8 +157,6 @@ class _CourseQuizState extends State<CourseQuiz> {
                                         e.copyWith(userAnswer: updatedAnswers);
                                   } else if ((e.userAnswer?.length ?? 0) <
                                       (e.answer?.length ?? 0)) {
-                                    print(
-                                        "kkk user ${e.answer?.length} < ${e.answer?.length ?? 0}");
                                     final updatedAnswers =
                                         List<String>.from(e.userAnswer ?? []);
                                     updatedAnswers.add(op);
@@ -263,7 +261,7 @@ class _CourseQuizState extends State<CourseQuiz> {
                                         ),
                                         child: Icon(
                                           Icons.circle,
-                                          size: 10.sp,
+                                          size: 10,
                                           color: selected
                                               ? AppColors.appBlue
                                               : Colors.transparent,
@@ -278,7 +276,7 @@ class _CourseQuizState extends State<CourseQuiz> {
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .bodyLarge
-                                                ?.copyWith(fontSize: 15.sp)),
+                                                ?.copyWith(fontSize: 15)),
                                       ),
                                     ],
                                   ),

@@ -33,7 +33,7 @@ class _CoursesListScreenState extends State<CoursesListScreen> {
                 children: [
                   Text(e.key,
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          fontSize: 20.sp, fontWeight: FontWeight.bold)),
+                          fontSize: 20, fontWeight: FontWeight.bold)),
                   SizedBox(height: 10.h),
                   ListView.builder(
                       itemBuilder: (_, i) {
@@ -75,14 +75,14 @@ class _CoursesListScreenState extends State<CoursesListScreen> {
                                         .textTheme
                                         .bodyLarge
                                         ?.copyWith(
-                                            fontSize: 15.sp,
+                                            fontSize: 15,
                                             fontWeight: FontWeight.w500)),
                                 subtitle: course.desc != null
                                     ? Text(course.desc!,
                                         style: Theme.of(context)
                                             .textTheme
                                             .bodyMedium
-                                            ?.copyWith(fontSize: 12.sp))
+                                            ?.copyWith(fontSize: 12))
                                     : null,
                               ),
                             ),
