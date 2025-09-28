@@ -148,32 +148,34 @@ class _QuestionWidgetState extends State<QuestionWidget> {
         final fillIndex = currentFillIndex; // Capture current index
         codeSpans.add(WidgetSpan(
           child: Container(
-            width: 60,
+            constraints: const BoxConstraints(minWidth: 60, maxWidth: 150),
             height: 30,
             margin: const EdgeInsets.symmetric(horizontal: 2),
-            child: TextFormField(
-              maxLines: 1,
-              textInputAction: TextInputAction.done,
-              initialValue: (widget.userAnswer != null &&
-                      widget.userAnswer is List &&
-                      widget.userAnswer.length > fillIndex)
-                  ? widget.userAnswer[fillIndex]
-                  : '',
-              onChanged: (newValue) {
-                if (widget.onType != null) {
-                  widget.onType!(fillIndex, newValue ?? '');
-                }
-              },
-              onFieldSubmitted: (newValue) {
-                if (widget.onType != null) {
-                  widget.onType!(fillIndex, newValue ?? '');
-                }
-              },
-              style: const TextStyle(fontSize: 12),
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                contentPadding: EdgeInsets.all(4),
-                isDense: true,
+            child: IntrinsicWidth(
+              child: TextFormField(
+                maxLines: 1,
+                textInputAction: TextInputAction.done,
+                initialValue: (widget.userAnswer != null &&
+                        widget.userAnswer is List &&
+                        widget.userAnswer.length > fillIndex)
+                    ? widget.userAnswer[fillIndex]
+                    : '',
+                onChanged: (newValue) {
+                  if (widget.onType != null) {
+                    widget.onType!(fillIndex, newValue ?? '');
+                  }
+                },
+                onFieldSubmitted: (newValue) {
+                  if (widget.onType != null) {
+                    widget.onType!(fillIndex, newValue ?? '');
+                  }
+                },
+                style: const TextStyle(fontSize: 12),
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  contentPadding: EdgeInsets.all(4),
+                  isDense: true,
+                ),
               ),
             ),
           ),
