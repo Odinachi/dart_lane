@@ -145,21 +145,28 @@ class _QuestionWidgetState extends State<QuestionWidget> {
           ));
         }
       } else if (placeholder == '%fill%') {
+        final fillIndex = currentFillIndex; // Capture current index
         codeSpans.add(WidgetSpan(
           child: Container(
             width: 60,
             height: 30,
             margin: const EdgeInsets.symmetric(horizontal: 2),
             child: TextFormField(
+              maxLines: 1,
               textInputAction: TextInputAction.done,
               initialValue: (widget.userAnswer != null &&
                       widget.userAnswer is List &&
-                      widget.userAnswer.length > currentFillIndex)
-                  ? widget.userAnswer[currentFillIndex]
+                      widget.userAnswer.length > fillIndex)
+                  ? widget.userAnswer[fillIndex]
                   : '',
+              onChanged: (newValue) {
+                if (widget.onType != null) {
+                  widget.onType!(fillIndex, newValue ?? '');
+                }
+              },
               onFieldSubmitted: (newValue) {
                 if (widget.onType != null) {
-                  widget.onType!(currentFillIndex, newValue ?? '');
+                  widget.onType!(fillIndex, newValue ?? '');
                 }
               },
               style: const TextStyle(fontSize: 12),

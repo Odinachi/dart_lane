@@ -159,16 +159,35 @@ class _CourseQuizState extends State<CourseQuiz> {
                 },
                 itemBuilder: (context, index) {
                   final e = quizzes[index];
-
+                  print(
+                      "kkkkkk ${e.userAnswer}vs ${e.answer} and ${e.isCorrect}");
                   return SingleChildScrollView(
                     child: Column(
                       key: ValueKey(e.question),
                       children: [
                         QuestionWidget(
                             onType: (index, val) {
-                              print("kkkkk Answer: $val $index");
+                              print("Answer at index $index: $val");
 
-                              quizzes[index] = e.copyWith(userAnswer: [val]);
+                              if (e.type == "fill") {
+                                // For fill-in-the-blank, update specific index
+                                List<String> currentAnswers =
+                                    List<String>.from(e.userAnswer ?? []);
+
+                                // Ensure the list is long enough
+                                while (currentAnswers.length <= index) {
+                                  currentAnswers.add('');
+                                }
+
+                                currentAnswers[index] = val;
+                                quizzes[quizzes.indexOf(e)] =
+                                    e.copyWith(userAnswer: currentAnswers);
+                              } else {
+                                // For other types, keep existing behavior
+                                quizzes[quizzes.indexOf(e)] =
+                                    e.copyWith(userAnswer: [val]);
+                              }
+
                               setState(() {});
                             },
                             answerType: e.type ?? "mcq",
