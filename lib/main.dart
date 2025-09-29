@@ -20,13 +20,13 @@ void main() async {
   await cacheService.init();
   NotificationService().init();
   runApp(
-    ValueListenableBuilder(
-        valueListenable: isDarkTheme,
-        builder: (_, isDark, __) {
-          return ScreenUtilInit(
-            builder: (context, child) => BlocProvider<AppCubit>(
-              create: (context) => AppCubit(firebaseServices: firebaseService),
-              child: MultiBlocListener(
+    BlocProvider(
+      create: (context) => AppCubit(firebaseServices: firebaseService),
+      child: ValueListenableBuilder(
+          valueListenable: isDarkTheme,
+          builder: (_, isDark, __) {
+            return ScreenUtilInit(
+              builder: (context, child) => MultiBlocListener(
                 listeners: [
                   BlocListener<AppCubit, AppState>(listener: (_, state) {
                     if (state is AuthLogout) {
@@ -54,9 +54,9 @@ void main() async {
                       : AppRouter.onboarding,
                 ),
               ),
-            ),
-          );
-        }),
+            );
+          }),
+    ),
   );
 }
 

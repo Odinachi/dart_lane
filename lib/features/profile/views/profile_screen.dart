@@ -1,4 +1,6 @@
 import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
+import 'package:dartcoder/features/courses/models/course_model.dart';
+import 'package:dartcoder/features/courses/views/course_details.dart';
 import 'package:dartcoder/main.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
@@ -17,6 +19,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  final courseList = AppData.courses.values.toList();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -125,6 +128,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
         body: BlocBuilder<AppCubit, AppState>(builder: (_, state) {
           final user = context.read<AppCubit>().profile;
           final userProgress = context.read<AppCubit>().userProgress;
+          final currentCourse = courseList
+              .reduce((value, element) => value + element)
+              .where((e) =>
+                  e.id == context.read<AppCubit>().userProgress?.currentCourse)
+              .firstOrNull;
+
+          CourseModel? nextCourse;
+          if (currentCourse != null && currentCourse.id != 30) {
+            nextCourse = courseList
+                .reduce((value, element) => value + element)
+                .where((e) => e.id == ((currentCourse.id ?? 0) + 1))
+                .firstOrNull;
+          }
           return Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -163,66 +179,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ?.copyWith(fontSize: 18, fontWeight: FontWeight.bold)),
               ),
               SizedBox(height: 20.h),
-              userProgress != null
+              currentCourse != null
                   ? Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          margin: EdgeInsets.only(
-                              bottom: 10.h, left: 20.w, right: 20.w),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.r),
-                            color: Theme.of(context).scaffoldBackgroundColor,
-                            border: Border.all(
-                                color: AppColors.grey.withValues(alpha: .1)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: AppColors.grey.withValues(alpha: .05),
-                                blurRadius: 8,
-                                spreadRadius: 2,
-                                offset: const Offset(0, 4),
-                              ),
-                              BoxShadow(
-                                color: AppColors.grey.withValues(alpha: .01),
-                                blurRadius: 4,
-                                spreadRadius: 1,
-                                offset: const Offset(0, 2),
-                              ),
-                            ],
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 15.w, vertical: 10.h),
-                            child: ListTile(
-                              contentPadding: EdgeInsets.zero,
-                              title: Text('Dart Basics',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyLarge
-                                      ?.copyWith(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w600)),
-                              subtitle: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                      "Learn the basics of Dart programming language",
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyMedium
-                                          ?.copyWith(fontSize: 12)),
-                                  SizedBox(height: 20.h),
-                                  SizedBox(
-                                    width: 100.w,
-                                    child: AppButton(
-                                      text: "Continue",
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
+                        actionContainer(
+                            title: currentCourse.title,
+                            desc: currentCourse.desc,
+                            onTap: () {
+                              AppRouter.push(AppRouter.courseDetails,
+                                  arg:
+                                      CourseDetailsArgs(course: currentCourse));
+                            }),
+                        SizedBox(height: 20.h),
+                        if (nextCourse != null)
+                          actionContainer(
+                              actionText: "Start",
+                              title: nextCourse.title,
+                              desc: nextCourse.desc,
+                              isNext: true,
+                              onTap: () {
+                                AppRouter.push(AppRouter.courseDetails,
+                                    arg:
+                                        CourseDetailsArgs(course: nextCourse!));
+                              }),
                       ],
                     )
                   : Column(
@@ -244,6 +224,70 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ],
           );
         }),
+      ),
+    );
+  }
+
+  Widget actionContainer(
+      {String? title,
+      String? desc,
+      VoidCallback? onTap,
+      String? actionText,
+      bool isNext = false}) {
+    return Container(
+      margin: EdgeInsets.only(bottom: 10.h, left: 20.w, right: 20.w),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.r),
+        color: Theme.of(context).scaffoldBackgroundColor,
+        border: Border.all(color: AppColors.grey.withValues(alpha: .1)),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.grey.withValues(alpha: .05),
+            blurRadius: 8,
+            spreadRadius: 2,
+            offset: const Offset(0, 4),
+          ),
+          BoxShadow(
+            color: AppColors.grey.withValues(alpha: .01),
+            blurRadius: 4,
+            spreadRadius: 1,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
+        child: ListTile(
+          contentPadding: EdgeInsets.zero,
+          title: Text(title ?? "",
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyLarge
+                  ?.copyWith(fontSize: 18, fontWeight: FontWeight.w600)),
+          subtitle: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(desc ?? "",
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium
+                      ?.copyWith(fontSize: 12)),
+              SizedBox(height: 20.h),
+              SizedBox(
+                width: isNext ? 80.w : 100.w,
+                child: AppButton(
+                  backgroundColor:
+                      isNext ? AppColors.appBlue.withValues(alpha: 0.2) : null,
+                  textColor: isNext ? AppColors.appBlue : null,
+                  onTap: onTap,
+                  text: actionText ?? "Continue",
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

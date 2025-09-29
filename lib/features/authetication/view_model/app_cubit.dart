@@ -74,8 +74,25 @@ class AppCubit extends Cubit<AppState> {
     }
   }
 
-  void updatePassedCourses(num id) async =>
-      firebaseServices.updatePassedCourses(id);
-  void updateCurrentCourse(num id) async =>
-      firebaseServices.updateCurrentCourse(id);
+  void updatePassedCourses(num id) async {
+    userProgress ??= userProgress
+        ?.copyWith(passedCourses: [...?userProgress?.passedCourses, id]);
+    emit(AuthInitial());
+    await firebaseServices.updatePassedCourses(id);
+  }
+
+  void updateCurrentCourse(num id) async {
+    print("Updating current course to $id");
+
+    if (userProgress == null) {
+      userProgress = UserProgressModel(
+        currentCourse: id,
+      );
+    } else {
+      userProgress = userProgress?.copyWith(currentCourse: id);
+    }
+
+    emit(AuthInitial());
+    await firebaseServices.updateCurrentCourse(id);
+  }
 }
