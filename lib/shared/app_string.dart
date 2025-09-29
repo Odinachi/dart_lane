@@ -32,4 +32,27 @@ class AppString {
   static const String videos = "Videos";
 
   static const String next = "Next";
+
+  static const String joined = "Joined";
+  static const String courseProgress = "Course Progress";
+  static const String diveIn = "Dive in";
+
+  static const String createProfile = "Create Profile";
+
+  static const String save = "Save";
+
+  static const String firstName = "First Name";
+  static const String lastName = "Last Name";
+
+  static const String expert = "Expert";
+  static const String intermediate = "Intermediate";
+  static const String beginner = "Beginner";
+  static const String selectDartLevel = "Select Dart Level";
+  static const String pleaseSelectDartLevel = "Please select your Dart level";
+  static const String firstNameRequired = "First name is required";
+  static const String firstNameMinLength =
+      "First name must be at least 2 characters";
+  static const String lastNameRequired = "Last name is required";
+  static const String lastNameMinLength =
+      "Last name must be at least 2 characters";
 }

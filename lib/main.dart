@@ -23,20 +23,36 @@ void main() async {
     ValueListenableBuilder(
         valueListenable: isDarkTheme,
         builder: (_, isDark, __) {
-          return BlocProvider(
-            create: (context) =>
-                AuthCubit(firebaseServices: FirebaseServices()),
-            child: ScreenUtilInit(
-              builder: (context, child) => MaterialApp(
-                navigatorKey: AppRouter.navKey,
-                themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
-                theme: lightTheme,
-                darkTheme: darkTheme,
-                debugShowCheckedModeBanner: false,
-                onGenerateRoute: AppRouter.generateRoute,
-                initialRoute: FirebaseAuth.instance.currentUser != null
-                    ? AppRouter.dashboard
-                    : AppRouter.onboarding,
+          return ScreenUtilInit(
+            builder: (context, child) => BlocProvider<AuthCubit>(
+              create: (context) => AuthCubit(firebaseServices: firebaseService),
+              child: MultiBlocListener(
+                listeners: [
+                  BlocListener<AuthCubit, AuthState>(listener: (_, state) {
+                    if (state is AuthLogout) {
+                      AppRouter.pushAndClear(AppRouter.onboarding);
+                    } else if (state is AuthSuccessful) {
+                      AppRouter.pushAndClear(AppRouter.dashboard);
+                    } else if (state is AuthError) {
+                      AppRouter.showMessage(state.message);
+                    } else if (state is AuthProfileMissing) {
+                      AppRouter.push(AppRouter.createProfile);
+                    } else if (state is AuthProfileCreated) {
+                      AppRouter.pushAndClear(AppRouter.dashboard);
+                    }
+                  })
+                ],
+                child: MaterialApp(
+                  navigatorKey: AppRouter.navKey,
+                  themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
+                  theme: lightTheme,
+                  darkTheme: darkTheme,
+                  debugShowCheckedModeBanner: false,
+                  onGenerateRoute: AppRouter.generateRoute,
+                  initialRoute: FirebaseAuth.instance.currentUser != null
+                      ? AppRouter.dashboard
+                      : AppRouter.onboarding,
+                ),
               ),
             ),
           );
@@ -45,5 +61,5 @@ void main() async {
 }
 
 final cacheService = CacheService();
-
+final firebaseService = FirebaseServices();
 final editor = TextEditor(cacheService: cacheService);

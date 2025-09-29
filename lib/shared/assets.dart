@@ -13,11 +13,13 @@ class AssetsImageFile {
   List<AppAssetImage> get values => [appImg];
 }
 
-class AssetsJson {
-  const AssetsJson();
-//Sample
+class AppAssetsJson {
+  const AppAssetsJson();
+
   LottieImage get trophy =>
       const LottieImage('assets/jsons/lottie/trophy.json');
+  LottieImage get jumpIn =>
+      const LottieImage('assets/jsons/lottie/jump_in.json');
 }
 
 class AssetsSvgs {
@@ -36,7 +38,7 @@ class Assets {
   Assets._();
 
   static const AssetsImageFile images = AssetsImageFile();
-  static const AssetsJson json = AssetsJson();
+  static const AppAssetsJson json = AppAssetsJson();
   static const AssetsSvgs svgs = AssetsSvgs();
 }
 

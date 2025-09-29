@@ -1,5 +1,6 @@
 import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../features/courses/models/course_model.dart';
@@ -385,4 +386,66 @@ class AppButton extends StatelessWidget {
       ),
     );
   }
+}
+
+// Reusable TextFormField widget
+class AppTextFormField extends StatelessWidget {
+  final TextEditingController controller;
+  final String labelText;
+  final String? Function(String?)? validator;
+
+  const AppTextFormField({
+    super.key,
+    required this.controller,
+    required this.labelText,
+    this.validator,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: controller,
+      cursorColor: AppColors.appBlue,
+      textCapitalization: TextCapitalization.words,
+      inputFormatters: [FilteringTextInputFormatter.allow(RegExp("[a-zA-Z]"))],
+      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+          ),
+      decoration: InputDecoration(
+        labelText: labelText,
+        labelStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+            ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+          borderSide: BorderSide(color: AppColors.grey),
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+          borderSide: BorderSide(color: AppColors.grey),
+        ),
+      ),
+      validator: validator ??
+          (value) {
+            if (value == null || value.trim().isEmpty) {
+              return 'This field is required';
+            }
+            return null;
+          },
+    );
+  }
+}
+
+Widget loadingWidget(BuildContext context) {
+  return Container(
+      height: double.infinity,
+      width: double.infinity,
+      color: AppColors.black.withValues(alpha: 0.5),
+      child: Center(
+        child: CircularProgressIndicator(
+          color: Theme.of(context).textTheme.bodyMedium?.color,
+        ),
+      ));
 }

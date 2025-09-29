@@ -1,4 +1,3 @@
-import 'package:dartcoder/main.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
 import 'package:dartcoder/shared/constants.dart';
@@ -20,44 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(AppString.dashboard),
-        actions: [
-          PopupMenuButton(
-            initialValue: null,
-            onSelected: (v) {
-              if (v == "theme") {
-                isDarkTheme.value = !isDarkTheme.value;
-              }
-            },
-            itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-              PopupMenuItem(
-                  value: "theme",
-                  child: ValueListenableBuilder(
-                      valueListenable: isDarkTheme,
-                      builder: (_, isDark, __) {
-                        return Row(
-                          children: [
-                            Icon(
-                              isDark ? Icons.sunny : Icons.dark_mode,
-                              color: isDark ? AppColors.white : AppColors.black,
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.only(left: 3.0),
-                              child: Text("Theme"),
-                            ),
-                          ],
-                        );
-                      })),
-            ],
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Icon(
-                Icons.settings_outlined,
-                size: 20.sp,
-              ),
-            ),
-          ),
-          SizedBox(width: 20.w),
-        ],
       ),
       body: SingleChildScrollView(
         child: Padding(

@@ -20,13 +20,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: BlocConsumer<AuthCubit, AuthState>(listener: (context, state) {
-      if (state is AuthSuccessful) {
-        AppRouter.pushAndClear(AppRouter.dashboard);
-      } else if (state is AuthError) {
-        AppRouter.showMessage(state.message);
-      }
-    }, builder: (context, state) {
+        body: BlocBuilder<AuthCubit, AuthState>(builder: (context, state) {
       return Stack(
         children: [
           SafeArea(
@@ -146,16 +140,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
             ),
           ),
-          if (state is AuthLoading)
-            Container(
-                height: double.infinity,
-                width: double.infinity,
-                color: AppColors.black.withValues(alpha: 0.5),
-                child: Center(
-                  child: CircularProgressIndicator(
-                    color: Theme.of(context).textTheme.bodyMedium?.color,
-                  ),
-                ))
+          if (state is AuthLoading) loadingWidget(context)
         ],
       );
     }));

@@ -8,19 +8,22 @@
         {
             "name": "dartcoder",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": ["--dart-define=CLIENT_ID=203138295761-36t5p33807npsggtpqsii7rbvl6nh52o.apps.googleusercontent.com", "--dart-define=REDIRECT_URI=https://dartcoder-d57cb.firebaseapp.com/__/auth/handler"]
         },
         {
             "name": "dartcoder (profile mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "flutterMode": "profile",
+            "args": ["--dart-define=CLIENT_ID=203138295761-36t5p33807npsggtpqsii7rbvl6nh52o.apps.googleusercontent.com", "--dart-define=REDIRECT_URI=https://dartcoder-d57cb.firebaseapp.com/__/auth/handler"]
         },
         {
             "name": "dartcoder (release mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
+            "flutterMode": "release",
+            "args": ["--dart-define=CLIENT_ID=203138295761-36t5p33807npsggtpqsii7rbvl6nh52o.apps.googleusercontent.com", "--dart-define=REDIRECT_URI=https://dartcoder-d57cb.firebaseapp.com/__/auth/handler"]
         }
     ]
 }

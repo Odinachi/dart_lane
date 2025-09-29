@@ -1,10 +1,15 @@
+import 'package:dartcoder/features/authetication/view_model/auth_cubit.dart';
+import 'package:dartcoder/features/authetication/views/onboarding_screen.dart';
 import 'package:dartcoder/features/courses/views/courses_list_screen.dart';
 import 'package:dartcoder/features/editor/views/editor_screen.dart';
+import 'package:dartcoder/features/profile/views/profile_screen.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
 import 'package:dartcoder/shared/theme.dart';
 import 'package:dartcoder/features/dashboard/views/home.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -20,6 +25,8 @@ class _DashboardScreenState extends State<DashboardScreen>
   @override
   void initState() {
     super.initState();
+
+    context.read<AuthCubit>().getUserProfile();
     tabController = TabController(length: 4, vsync: this);
   }
 
@@ -82,7 +89,14 @@ class _DashboardScreenState extends State<DashboardScreen>
               ),
               CoursesListScreen(),
               Editor(),
-              SizedBox(),
+              FirebaseAuth.instance.currentUser != null
+                  ? ProfileScreen(
+                      onDiveIn: () {
+                        tabController.index = 1;
+                        setState(() {});
+                      },
+                    )
+                  : const OnboardingScreen(),
             ]),
       ),
     );

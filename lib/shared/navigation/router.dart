@@ -1,3 +1,4 @@
+import 'package:dartcoder/features/authetication/views/create_profile_screen.dart';
 import 'package:dartcoder/features/authetication/views/onboarding_screen.dart';
 import 'package:dartcoder/features/courses/views/course_quiz.dart';
 import 'package:dartcoder/features/courses/views/quiz_score_screen.dart';
@@ -26,6 +27,8 @@ class AppRouter {
                 CourseDetails(arg: settings.arguments as CourseDetailsArgs?));
       case editor:
         return CupertinoPageRoute(builder: (_) => const Editor());
+      case createProfile:
+        return CupertinoPageRoute(builder: (_) => const CreateProfileScreen());
       case quiz:
         return CupertinoPageRoute(
             builder: (_) =>
@@ -47,6 +50,7 @@ class AppRouter {
   static const String editor = "/editor";
   static const String quiz = "/quiz";
   static const String quizScore = "/quiz_score";
+  static const String createProfile = "/create_profile";
 
   static Future push(String routeName, {Object? arg}) async =>
       await navKey.currentState?.pushNamed(routeName, arguments: arg);
@@ -89,5 +93,30 @@ class AppRouter {
       clipBehavior: Clip.antiAlias,
       behavior: SnackBarBehavior.floating,
     ));
+  }
+
+  static Future showConfirmation(String s,
+      {required Null Function() onConfirm}) {
+    return showDialog(
+        context: navKey.currentContext!,
+        builder: (context) {
+          return AlertDialog(
+            title: const Text("Confirm"),
+            content: Text(s),
+            actions: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text("Cancel")),
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                    onConfirm();
+                  },
+                  child: const Text("Confirm")),
+            ],
+          );
+        });
   }
 }

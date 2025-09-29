@@ -10,6 +10,7 @@
 .history
 .svn/
 .swiftpm/
+.vscode/
 migrate_working_dir/
 firebase.json
 
@@ -19,6 +20,7 @@ firebase.json
 *.iws
 .idea/
 lib/firebase_options.dart
+makefile
 
 
 

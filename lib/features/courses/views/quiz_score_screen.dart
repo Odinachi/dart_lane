@@ -8,7 +8,6 @@ import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:lottie/lottie.dart';
 
 class QuizScoreScreen extends StatefulWidget {
   const QuizScoreScreen({super.key, this.arg});
@@ -71,14 +70,15 @@ class _QuizScoreScreenState extends State<QuizScoreScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Lottie.asset(Assets.json.trophy.path,
+                Assets.json.trophy.lottie(
                     height: 150.h,
                     width: 150.w,
-                    fit: BoxFit.contain, onLoaded: (composition) {
-                  if (percentage >= 80) {
-                    _controller.play();
-                  }
-                }),
+                    fit: BoxFit.contain,
+                    onLoaded: (composition) {
+                      if (percentage >= 80) {
+                        _controller.play();
+                      }
+                    }),
                 SizedBox(height: 20.h),
                 Text(
                   percentage >= 80 ? "Congratulations!" : "Quiz Completed!",
