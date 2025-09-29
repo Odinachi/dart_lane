@@ -78,6 +78,9 @@ class AppCubit extends Cubit<AppState> {
   }
 
   void updatePassedCourses(num id) async {
+    if (FirebaseAuth.instance.currentUser == null) {
+      return;
+    }
     userProgress ??= userProgress
         ?.copyWith(passedCourses: [...?userProgress?.passedCourses, id]);
     emit(AuthInitial());
@@ -85,6 +88,9 @@ class AppCubit extends Cubit<AppState> {
   }
 
   void updateCurrentCourse(num id) async {
+    if (FirebaseAuth.instance.currentUser == null) {
+      return;
+    }
     if (userProgress == null) {
       userProgress = UserProgressModel(
         currentCourse: id,
