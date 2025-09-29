@@ -19,7 +19,7 @@ class AppString {
   static const String learnDsa =
       "Learn DSA in Dart and improve your problem solving skills.";
   static const String learnTheBasics =
-      "Learn the basics of Dart Programming Language with interractive lessons and quizzes.";
+      "Learn the basics of Dart programming language.";
   static const String startLearningDart =
       "Start your journey into Dart programming language.";
 

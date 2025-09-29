@@ -84,7 +84,7 @@ class _CourseQuizState extends State<CourseQuiz> {
                 },
                 child: Container(
                   height: 40.h,
-                  width: 30.w,
+                  width: 40.h,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.r),
                       border: Border.all(color: AppColors.appBlue)),
