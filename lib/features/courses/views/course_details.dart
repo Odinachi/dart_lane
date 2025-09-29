@@ -182,7 +182,7 @@ class _CourseDetailsState extends State<CourseDetails> {
                               }
                             },
                             onEditor: () {
-                              AppRouter.push(AppRouter.editor);
+                              AppRouter.push(AppRouter.editor, arg: true);
                             },
                             onNext: () {
                               if (courseNotifier.value.id != 33) {

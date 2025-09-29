@@ -11,14 +11,16 @@ import 'package:flutter_highlight/themes/nord.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:highlight/languages/dart.dart';
 
-class Editor extends StatefulWidget {
-  const Editor({super.key});
+class EditorScreen extends StatefulWidget {
+  const EditorScreen({super.key, this.isPractice});
 
+  final bool? isPractice;
   @override
-  State<Editor> createState() => _EditorState();
+  State<EditorScreen> createState() => _EditorScreenState();
 }
 
-class _EditorState extends State<Editor> with SingleTickerProviderStateMixin {
+class _EditorScreenState extends State<EditorScreen>
+    with SingleTickerProviderStateMixin {
   final controller = CodeController(
     language: dart,
   );
@@ -181,7 +183,7 @@ class _EditorState extends State<Editor> with SingleTickerProviderStateMixin {
       appBar: AppBar(
         leadingWidth: 90,
         centerTitle: true,
-        automaticallyImplyLeading: false,
+        automaticallyImplyLeading: widget.isPractice == true ? true : false,
         leading: (_tabController.index != 0)
             ? GestureDetector(
                 onTap: () {
