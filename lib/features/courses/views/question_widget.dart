@@ -162,12 +162,12 @@ class _QuestionWidgetState extends State<QuestionWidget> {
                     : '',
                 onChanged: (newValue) {
                   if (widget.onType != null) {
-                    widget.onType!(fillIndex, newValue ?? '');
+                    widget.onType!(fillIndex, newValue);
                   }
                 },
                 onFieldSubmitted: (newValue) {
                   if (widget.onType != null) {
-                    widget.onType!(fillIndex, newValue ?? '');
+                    widget.onType!(fillIndex, newValue);
                   }
                 },
                 style: const TextStyle(fontSize: 12),

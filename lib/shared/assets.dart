@@ -116,14 +116,13 @@ class SvgImage {
       double? height,
       BoxFit fit = BoxFit.contain,
       Color? color}) {
-    return SvgPicture.asset(
-      _assetName,
-      key: key,
-      width: width?.w,
-      height: height?.h,
-      fit: fit,
-      color: color,
-    );
+    return SvgPicture.asset(_assetName,
+        key: key,
+        width: width?.w,
+        height: height?.h,
+        fit: fit,
+        colorFilter:
+            color != null ? ColorFilter.mode(color, BlendMode.srcIn) : null);
   }
 
   String get path => _assetName;

@@ -1,4 +1,4 @@
-package com.example.dartcoder
+package com.odibillz.dartcoder
 
 import io.flutter.embedding.android.FlutterActivity
 

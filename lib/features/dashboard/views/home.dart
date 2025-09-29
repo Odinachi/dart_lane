@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:dartcoder/main.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';

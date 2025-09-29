@@ -2,7 +2,7 @@ import 'package:dartcoder/features/authetication/views/onboarding_screen.dart';
 import 'package:dartcoder/features/courses/views/course_quiz.dart';
 import 'package:dartcoder/features/courses/views/quiz_score_screen.dart';
 import 'package:dartcoder/features/dashboard/views/dashboard_screen.dart';
-import 'package:dartcoder/features/dashboard/views/home.dart';
+
 import 'package:dartcoder/features/editor/views/editor_screen.dart';
 import 'package:dartcoder/shared/theme.dart';
 import 'package:dartcoder/features/courses/views/course_details.dart';

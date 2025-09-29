@@ -1,4 +1,3 @@
-import 'package:dartcoder/shared/assets.dart';
 import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';

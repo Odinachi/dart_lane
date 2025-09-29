@@ -3,9 +3,7 @@ import 'dart:async';
 import 'package:dart_eval/dart_eval.dart';
 import 'package:dart_style/dart_style.dart';
 import 'package:dartcoder/main.dart';
-import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/shared/text_editor.dart';
-import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_code_editor/flutter_code_editor.dart';
 import 'package:flutter_highlight/themes/atom-one-light.dart';
@@ -215,7 +213,7 @@ class _EditorState extends State<Editor> with SingleTickerProviderStateMixin {
                             : Theme.of(context)
                                 .iconTheme
                                 .color
-                                ?.withOpacity(.5),
+                                ?.withValues(alpha: .5),
                         Icons.undo,
                         size: 30,
                       ),
@@ -236,7 +234,7 @@ class _EditorState extends State<Editor> with SingleTickerProviderStateMixin {
                             : Theme.of(context)
                                 .iconTheme
                                 .color
-                                ?.withOpacity(.5),
+                                ?.withValues(alpha: .5),
                         Icons.redo,
                         size: 30,
                       ),

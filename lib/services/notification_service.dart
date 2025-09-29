@@ -1,5 +1,6 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter/material.dart';
+
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 class NotificationService {
   static final NotificationService _instance = NotificationService._internal();
@@ -8,6 +9,7 @@ class NotificationService {
 
   final FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
 
   Future<void> init() async {
     const AndroidInitializationSettings initializationSettingsAndroid =
@@ -18,9 +20,6 @@ class NotificationService {
       requestAlertPermission: true,
       requestBadgePermission: true,
       requestSoundPermission: true,
-      onDidReceiveLocalNotification: (id, title, body, payload) async {
-        // Handle iOS notification tapped logic here if needed
-      },
     );
 
     final InitializationSettings initializationSettings =
@@ -35,15 +34,11 @@ class NotificationService {
         // Handle notification tapped logic here if needed
       },
     );
-    await requestPermissions();
+    // await requestPermissions();
+    await _initFirebaseMessaging();
   }
 
   Future<void> requestPermissions() async {
-    await _flutterLocalNotificationsPlugin
-        .resolvePlatformSpecificImplementation<
-            AndroidFlutterLocalNotificationsPlugin>()
-        ?.requestPermission();
-
     await _flutterLocalNotificationsPlugin
         .resolvePlatformSpecificImplementation<
             IOSFlutterLocalNotificationsPlugin>()
@@ -52,6 +47,36 @@ class NotificationService {
           badge: true,
           sound: true,
         );
+  }
+
+  Future<void> _initFirebaseMessaging() async {
+    // Request permissions for iOS
+    await _firebaseMessaging.requestPermission();
+
+    // Handle foreground messages
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      _showFirebaseNotification(message);
+    });
+
+    // Handle background & terminated state notification taps
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+      // Handle notification tap logic here if needed
+    });
+
+    // Optionally handle background messages (must be a top-level function)
+    // See Firebase Messaging docs for background handler setup
+  }
+
+  void _showFirebaseNotification(RemoteMessage message) {
+    final notification = message.notification;
+    if (notification != null) {
+      showNotification(
+        id: notification.hashCode,
+        title: notification.title ?? '',
+        body: notification.body ?? '',
+        payload: message.data.toString(),
+      );
+    }
   }
 
   Future<void> showNotification({

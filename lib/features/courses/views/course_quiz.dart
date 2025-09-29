@@ -4,7 +4,7 @@ import 'package:dartcoder/features/courses/models/course_model.dart';
 import 'package:dartcoder/features/courses/models/quiz_model.dart';
 import 'package:dartcoder/features/courses/views/question_widget.dart';
 import 'package:dartcoder/features/courses/views/quiz_score_screen.dart';
-import 'package:dartcoder/main.dart';
+
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/constants.dart';
 import 'package:dartcoder/shared/navigation/router.dart';
@@ -12,8 +12,6 @@ import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:markdown_widget/config/configs.dart';
-import 'package:markdown_widget/widget/markdown.dart';
 
 class CourseQuiz extends StatefulWidget {
   const CourseQuiz({super.key, this.arg});
@@ -251,7 +249,7 @@ class _CourseQuizState extends State<CourseQuiz> {
                                     ),
                                     child: Text(op)),
                               );
-                            }).toList()
+                            })
                           ]),
                         if (e.type == "mcq")
                           ...?e.options?.map((op) {
@@ -334,7 +332,7 @@ class _CourseQuizState extends State<CourseQuiz> {
                                 ),
                               ),
                             );
-                          }).toList(),
+                          }),
                       ],
                     ),
                   );
