@@ -5,10 +5,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-part 'auth_state.dart';
+part 'app_state.dart';
 
-class AuthCubit extends Cubit<AuthState> {
-  AuthCubit({required this.firebaseServices}) : super(AuthInitial());
+class AppCubit extends Cubit<AppState> {
+  AppCubit({required this.firebaseServices}) : super(AuthInitial());
   final FirebaseServices firebaseServices;
 
   UserModel? profile;
@@ -73,4 +73,9 @@ class AuthCubit extends Cubit<AuthState> {
       emit(AuthError("Profile creation failed"));
     }
   }
+
+  void updatePassedCourses(num id) async =>
+      firebaseServices.updatePassedCourses(id);
+  void updateCurrentCourse(num id) async =>
+      firebaseServices.updateCurrentCourse(id);
 }

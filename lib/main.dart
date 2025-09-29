@@ -1,4 +1,4 @@
-import 'package:dartcoder/features/authetication/view_model/auth_cubit.dart';
+import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
 import 'package:dartcoder/firebase_options.dart';
 import 'package:dartcoder/services/cache_service.dart';
 import 'package:dartcoder/services/firebase_services.dart';
@@ -24,11 +24,11 @@ void main() async {
         valueListenable: isDarkTheme,
         builder: (_, isDark, __) {
           return ScreenUtilInit(
-            builder: (context, child) => BlocProvider<AuthCubit>(
-              create: (context) => AuthCubit(firebaseServices: firebaseService),
+            builder: (context, child) => BlocProvider<AppCubit>(
+              create: (context) => AppCubit(firebaseServices: firebaseService),
               child: MultiBlocListener(
                 listeners: [
-                  BlocListener<AuthCubit, AuthState>(listener: (_, state) {
+                  BlocListener<AppCubit, AppState>(listener: (_, state) {
                     if (state is AuthLogout) {
                       AppRouter.pushAndClear(AppRouter.onboarding);
                     } else if (state is AuthSuccessful) {

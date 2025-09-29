@@ -1,4 +1,4 @@
-import 'package:dartcoder/features/authetication/view_model/auth_cubit.dart';
+import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
 import 'package:dartcoder/main.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
@@ -29,12 +29,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 if (v == "theme") {
                   isDarkTheme.value = !isDarkTheme.value;
                 } else if (v == "logout") {
-                  context.read<AuthCubit>().signOut();
+                  context.read<AppCubit>().signOut();
                 } else if (v == "delete_account") {
                   AppRouter.showConfirmation(
                       "Are you sure you want to delete your account? This action is irreversible.",
                       onConfirm: () {
-                    context.read<AuthCubit>().deleteAccount();
+                    context.read<AppCubit>().deleteAccount();
                   });
                 }
               },
@@ -122,9 +122,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
           automaticallyImplyLeading: false,
           title: const Text(AppString.profile),
         ),
-        body: BlocBuilder<AuthCubit, AuthState>(builder: (_, state) {
-          final user = context.read<AuthCubit>().profile;
-          final userProgress = context.read<AuthCubit>().userProgress;
+        body: BlocBuilder<AppCubit, AppState>(builder: (_, state) {
+          final user = context.read<AppCubit>().profile;
+          final userProgress = context.read<AppCubit>().userProgress;
           return Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [

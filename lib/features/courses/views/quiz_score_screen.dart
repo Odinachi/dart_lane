@@ -1,4 +1,5 @@
 import 'package:confetti/confetti.dart';
+import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
 import 'package:dartcoder/features/courses/views/course_details.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
@@ -6,6 +7,7 @@ import 'package:dartcoder/shared/constants.dart';
 import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,7 +25,13 @@ class _QuizScoreScreenState extends State<QuizScoreScreen> {
   @override
   void initState() {
     _controller = ConfettiController(duration: const Duration(seconds: 10));
+    final percentage = ((widget.arg?.correctAnswers ?? 0) /
+        (widget.arg?.totalQuestions ?? 1) *
+        100);
 
+    if (percentage >= 80) {
+      context.read<AppCubit>().updatePassedCourses(widget.arg?.courseId ?? 0);
+    }
     super.initState();
   }
 

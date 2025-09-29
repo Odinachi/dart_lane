@@ -1,4 +1,4 @@
-import 'package:dartcoder/features/authetication/view_model/auth_cubit.dart';
+import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
 import 'package:dartcoder/features/authetication/views/onboarding_screen.dart';
 import 'package:dartcoder/features/courses/views/courses_list_screen.dart';
 import 'package:dartcoder/features/editor/views/editor_screen.dart';
@@ -26,7 +26,7 @@ class _DashboardScreenState extends State<DashboardScreen>
   void initState() {
     super.initState();
 
-    context.read<AuthCubit>().getUserProfile();
+    context.read<AppCubit>().getUserProfile();
     tabController = TabController(length: 4, vsync: this);
   }
 

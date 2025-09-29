@@ -1,3 +1,4 @@
+import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
 import 'package:dartcoder/features/courses/views/course_quiz.dart';
 import 'package:dartcoder/features/courses/views/widget/video_player.dart';
 import 'package:dartcoder/shared/app_string.dart';
@@ -6,6 +7,7 @@ import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/views/widgets/animted_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 
@@ -170,6 +172,9 @@ class _CourseDetailsState extends State<CourseDetails> {
                                     .firstOrNull;
                                 if (item != null) {
                                   loadData(item);
+                                  context
+                                      .read<AppCubit>()
+                                      .updateCurrentCourse(item.id ?? 0);
                                 }
                               } else {
                                 AppRouter.showMessage(
@@ -189,6 +194,9 @@ class _CourseDetailsState extends State<CourseDetails> {
                                     .firstOrNull;
                                 if (item != null) {
                                   loadData(item);
+                                  context
+                                      .read<AppCubit>()
+                                      .updateCurrentCourse(item.id ?? 0);
                                 }
                               } else {
                                 AppRouter.showMessage(

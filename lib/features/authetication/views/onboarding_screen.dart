@@ -1,4 +1,4 @@
-import 'package:dartcoder/features/authetication/view_model/auth_cubit.dart';
+import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
 
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
@@ -20,7 +20,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: BlocBuilder<AuthCubit, AuthState>(builder: (context, state) {
+        body: BlocBuilder<AppCubit, AppState>(builder: (context, state) {
       return Stack(
         children: [
           SafeArea(
@@ -55,7 +55,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                         AppButton(
                           onTap: () {
-                            context.read<AuthCubit>().signIn(false);
+                            context.read<AppCubit>().signIn(false);
                           },
                           textColor: AppColors.white,
                           backgroundColor: AppColors.black,
@@ -68,7 +68,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         SizedBox(height: 10.h),
                         AppButton(
                           onTap: () {
-                            context.read<AuthCubit>().signIn(true);
+                            context.read<AppCubit>().signIn(true);
                           },
                           backgroundColor:
                               AppColors.white.withValues(alpha: 0.1),

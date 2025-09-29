@@ -1,4 +1,4 @@
-import 'package:dartcoder/features/authetication/view_model/auth_cubit.dart';
+import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/constants.dart';
 import 'package:dartcoder/shared/navigation/router.dart';
@@ -28,7 +28,7 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AuthCubit, AuthState>(builder: (_, state) {
+    return BlocBuilder<AppCubit, AppState>(builder: (_, state) {
       return Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
@@ -45,7 +45,7 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
                     onTap: () {
                       if ((_formKey.currentState?.validate() ?? false) &&
                           selectedLevel != null) {
-                        context.read<AuthCubit>().createProfile(
+                        context.read<AppCubit>().createProfile(
                               firstName: firstNameController.text,
                               lastName: lastNameController.text,
                               currentLevel: selectedLevel!,
