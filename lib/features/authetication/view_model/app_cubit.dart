@@ -33,6 +33,9 @@ class AppCubit extends Cubit<AppState> {
   }
 
   void getUserProfile() async {
+    if (FirebaseAuth.instance.currentUser == null) {
+      return;
+    }
     emit(AuthLoading());
     profile = (await firebaseServices.getProfile()).user;
     if (profile != null) {
@@ -82,8 +85,6 @@ class AppCubit extends Cubit<AppState> {
   }
 
   void updateCurrentCourse(num id) async {
-    print("Updating current course to $id");
-
     if (userProgress == null) {
       userProgress = UserProgressModel(
         currentCourse: id,

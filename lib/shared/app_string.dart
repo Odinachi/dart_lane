@@ -55,4 +55,6 @@ class AppString {
   static const String lastNameRequired = "Last name is required";
   static const String lastNameMinLength =
       "Last name must be at least 2 characters";
+
+  static const String comingSoon = "Coming Soon";
 }

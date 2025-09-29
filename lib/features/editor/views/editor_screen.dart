@@ -181,6 +181,7 @@ class _EditorState extends State<Editor> with SingleTickerProviderStateMixin {
       appBar: AppBar(
         leadingWidth: 90,
         centerTitle: true,
+        automaticallyImplyLeading: false,
         leading: (_tabController.index != 0)
             ? GestureDetector(
                 onTap: () {

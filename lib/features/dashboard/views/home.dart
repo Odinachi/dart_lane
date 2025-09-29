@@ -1,6 +1,7 @@
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
 import 'package:dartcoder/shared/constants.dart';
+import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Text(AppString.dashboard),
       ),
       body: SingleChildScrollView(
@@ -32,7 +34,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   image: Assets.images.dsa,
                   title: AppString.dsaCourse,
                   desc: AppString.learnDsa,
-                  onTap: () {}),
+                  onTap: () {
+                    AppRouter.showMessage(AppString.comingSoon);
+                  }),
             ],
           ),
         ),
