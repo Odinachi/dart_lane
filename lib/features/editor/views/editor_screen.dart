@@ -183,16 +183,14 @@ class _EditorState extends State<Editor> with SingleTickerProviderStateMixin {
       appBar: AppBar(
         leadingWidth: 90,
         centerTitle: true,
-        leading: GestureDetector(
-          onTap: () {
-            if (_tabController.index == 0) {
-              AppRouter.pop();
-            } else {
-              _tabController.animateTo(0);
-            }
-          },
-          child: const Icon(Icons.arrow_back_ios),
-        ),
+        leading: (_tabController.index != 0)
+            ? GestureDetector(
+                onTap: () {
+                  _tabController.animateTo(0);
+                },
+                child: const Icon(Icons.arrow_back_ios),
+              )
+            : null,
         title: const Text('Dartic'),
         actions: [
           ValueListenableBuilder(
@@ -258,7 +256,7 @@ class _EditorState extends State<Editor> with SingleTickerProviderStateMixin {
             },
             itemBuilder: (BuildContext context) => <PopupMenuEntry>[
               const PopupMenuItem(value: "clear", child: Text('Clear')),
-              const PopupMenuItem(value: "format", child: Text('Format')),
+              const PopupMenuItem(value: "format", child: Text('Beautify')),
             ],
             child: const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
