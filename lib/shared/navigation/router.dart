@@ -26,7 +26,9 @@ class AppRouter {
             builder: (_) =>
                 CourseDetails(arg: settings.arguments as CourseDetailsArgs?));
       case editor:
-        return CupertinoPageRoute(builder: (_) =>  EditorScreen(isPractice: settings.arguments as bool?));
+        return CupertinoPageRoute(
+            builder: (_) =>
+                EditorScreen(arg: settings.arguments as EditorScreenArg?));
       case createProfile:
         return CupertinoPageRoute(builder: (_) => const CreateProfileScreen());
       case quiz:

@@ -1,6 +1,7 @@
 import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
 import 'package:dartcoder/features/courses/views/course_quiz.dart';
 import 'package:dartcoder/features/courses/views/widget/video_player.dart';
+import 'package:dartcoder/features/editor/views/editor_screen.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/constants.dart';
 import 'package:dartcoder/shared/navigation/router.dart';
@@ -65,9 +66,7 @@ class _CourseDetailsState extends State<CourseDetails> {
     super.dispose();
   }
 
-  MarkdownConfig config = isDarkTheme.value
-      ? MarkdownConfig.darkConfig
-      : MarkdownConfig.defaultConfig;
+ 
 
   final showNav = ValueNotifier(false);
 
@@ -182,7 +181,8 @@ class _CourseDetailsState extends State<CourseDetails> {
                               }
                             },
                             onEditor: () {
-                              AppRouter.push(AppRouter.editor, arg: true);
+                              AppRouter.push(AppRouter.editor,
+                                  arg: EditorScreenArg(isPractice: true));
                             },
                             onNext: () {
                               if (courseNotifier.value.id != 33) {

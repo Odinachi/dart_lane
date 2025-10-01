@@ -88,7 +88,9 @@ class _DashboardScreenState extends State<DashboardScreen>
                 },
               ),
               CoursesListScreen(),
-              EditorScreen(),
+              EditorScreen(
+                arg: EditorScreenArg(dsa: false, isPractice: false),
+              ),
               FirebaseAuth.instance.currentUser != null
                   ? ProfileScreen(
                       onDiveIn: () {

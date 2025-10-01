@@ -1,7 +1,9 @@
+import 'package:dartcoder/main.dart';
 import 'package:dartcoder/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:markdown_widget/config/configs.dart';
 
 import '../features/courses/models/course_model.dart';
 
@@ -449,3 +451,7 @@ Widget loadingWidget(BuildContext context) {
         ),
       ));
 }
+
+MarkdownConfig config = isDarkTheme.value
+    ? MarkdownConfig.darkConfig
+    : MarkdownConfig.defaultConfig;

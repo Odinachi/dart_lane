@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:dart_eval/dart_eval.dart';
 import 'package:dart_style/dart_style.dart';
+import 'package:dartcoder/features/editor/views/widgets/dsa_question_widget.dart';
 import 'package:dartcoder/main.dart';
 import 'package:dartcoder/shared/text_editor.dart';
 import 'package:flutter/material.dart';
@@ -12,9 +13,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:highlight/languages/dart.dart';
 
 class EditorScreen extends StatefulWidget {
-  const EditorScreen({super.key, this.isPractice});
+  const EditorScreen({super.key, this.arg});
 
-  final bool? isPractice;
+  final EditorScreenArg? arg;
   @override
   State<EditorScreen> createState() => _EditorScreenState();
 }
@@ -40,8 +41,9 @@ class _EditorScreenState extends State<EditorScreen>
   void initState() {
     controller.text = cacheService.getCode() ?? baseCode;
     editor.setText(controller.fullText);
-    _tabController = TabController(length: 2, vsync: this)
-      ..addListener(_listen);
+    _tabController =
+        TabController(length: widget.arg?.dsa == true ? 3 : 2, vsync: this)
+          ..addListener(_listen);
 
     controller.addListener(() {
       final text = controller.text;
@@ -98,7 +100,7 @@ class _EditorScreenState extends State<EditorScreen>
 
   Future<void> _runCode() async {
     cacheService.saveCode(controller.fullText);
-    _tabController.animateTo(1);
+    _tabController.animateTo(widget.arg?.dsa == true ? 2 : 1);
     _unfocus();
     _outputNotifier.value = "";
 
@@ -163,111 +165,122 @@ class _EditorScreenState extends State<EditorScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: _tabController.index == 0
-          ? GestureDetector(
-              onTap: _runCode,
-              child: Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Theme.of(context).primaryColor,
-                    ),
-                    shape: BoxShape.circle,
-                  ),
-                  child: Icon(
-                    Icons.play_arrow,
-                    size: 50,
-                    color: Theme.of(context).primaryColor,
-                  )),
-            )
-          : null,
+      floatingActionButton:
+          _tabController.index == (widget.arg?.dsa == true ? 1 : 0)
+              ? GestureDetector(
+                  onTap: _runCode,
+                  child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.play_arrow,
+                        size: 50,
+                        color: Theme.of(context).primaryColor,
+                      )),
+                )
+              : null,
       appBar: AppBar(
         leadingWidth: 90,
         centerTitle: true,
-        automaticallyImplyLeading: widget.isPractice == true ? true : false,
+        automaticallyImplyLeading:
+            widget.arg?.isPractice == true || widget.arg?.dsa == true
+                ? true
+                : false,
         leading: (_tabController.index != 0)
             ? GestureDetector(
                 onTap: () {
-                  _tabController.animateTo(0);
+                  _tabController.animateTo(_tabController.index == 2
+                      ? 1
+                      : _tabController.index == 1
+                          ? 0
+                          : 0);
                 },
                 child: const Icon(Icons.arrow_back_ios),
               )
             : null,
         title: const Text('Dartic'),
-        actions: [
-          ValueListenableBuilder(
-              valueListenable: editor.state,
-              builder: (_, state, __) {
-                return Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    GestureDetector(
-                      onTap: state.canUndo
-                          ? () {
-                              editor.undo();
-                              controller.text = editor.text;
-                            }
-                          : null,
-                      child: Icon(
-                        color: state.canUndo
-                            ? null
-                            : Theme.of(context)
-                                .iconTheme
-                                .color
-                                ?.withValues(alpha: .5),
-                        Icons.undo,
-                        size: 30,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    GestureDetector(
-                      onTap: state.canRedo
-                          ? () {
-                              editor.redo();
-                              controller.text = editor.text;
-                            }
-                          : null,
-                      child: Icon(
-                        color: state.canRedo
-                            ? null
-                            : Theme.of(context)
-                                .iconTheme
-                                .color
-                                ?.withValues(alpha: .5),
-                        Icons.redo,
-                        size: 30,
-                      ),
-                    ),
+        actions: _tabController.index == (widget.arg?.dsa == true ? 1 : 0)
+            ? [
+                ValueListenableBuilder(
+                    valueListenable: editor.state,
+                    builder: (_, state, __) {
+                      return Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          GestureDetector(
+                            onTap: state.canUndo
+                                ? () {
+                                    editor.undo();
+                                    controller.text = editor.text;
+                                  }
+                                : null,
+                            child: Icon(
+                              color: state.canUndo
+                                  ? null
+                                  : Theme.of(context)
+                                      .iconTheme
+                                      .color
+                                      ?.withValues(alpha: .5),
+                              Icons.undo,
+                              size: 30,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          GestureDetector(
+                            onTap: state.canRedo
+                                ? () {
+                                    editor.redo();
+                                    controller.text = editor.text;
+                                  }
+                                : null,
+                            child: Icon(
+                              color: state.canRedo
+                                  ? null
+                                  : Theme.of(context)
+                                      .iconTheme
+                                      .color
+                                      ?.withValues(alpha: .5),
+                              Icons.redo,
+                              size: 30,
+                            ),
+                          ),
+                        ],
+                      );
+                    }),
+                PopupMenuButton(
+                  initialValue: null,
+                  onSelected: (v) {
+                    if (v == "clear") {
+                      editor.setText(baseCode);
+                      controller.text = baseCode;
+                    } else if (v == "format") {
+                      controller.text = beautify(controller.text);
+                    }
+                  },
+                  itemBuilder: (BuildContext context) => <PopupMenuEntry>[
+                    const PopupMenuItem(value: "clear", child: Text('Clear')),
+                    const PopupMenuItem(
+                        value: "format", child: Text('Beautify')),
                   ],
-                );
-              }),
-          PopupMenuButton(
-            initialValue: null,
-            onSelected: (v) {
-              if (v == "clear") {
-                editor.setText(baseCode);
-                controller.text = baseCode;
-              } else if (v == "format") {
-                controller.text = beautify(controller.text);
-              }
-            },
-            itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-              const PopupMenuItem(value: "clear", child: Text('Clear')),
-              const PopupMenuItem(value: "format", child: Text('Beautify')),
-            ],
-            child: const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: Icon(
-                Icons.more_vert,
-                size: 30,
-              ),
-            ),
-          ),
-        ],
+                  child: const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Icon(
+                      Icons.more_vert,
+                      size: 30,
+                    ),
+                  ),
+                ),
+              ]
+            : null,
       ),
       body: Padding(
         padding: EdgeInsets.only(top: 10.0, bottom: 10.h),
@@ -280,7 +293,8 @@ class _EditorScreenState extends State<EditorScreen>
                 splashFactory: NoSplash.splashFactory,
                 indicator: const BoxDecoration(),
                 dividerColor: Colors.transparent,
-                tabs: const [
+                tabs: [
+                  if (widget.arg?.dsa ?? false) Text("Question"),
                   Text("Code"),
                   Text("Output"),
                 ],
@@ -288,6 +302,7 @@ class _EditorScreenState extends State<EditorScreen>
             ),
             Expanded(
               child: TabBarView(controller: _tabController, children: [
+                if (widget.arg?.dsa == true) DsaQuestionWidget(),
                 ValueListenableBuilder(
                     valueListenable: isDarkTheme,
                     builder: (_, isDark, __) {
@@ -328,4 +343,10 @@ class _EditorScreenState extends State<EditorScreen>
       ),
     );
   }
+}
+
+class EditorScreenArg {
+  EditorScreenArg({this.dsa, this.isPractice});
+  final bool? isPractice;
+  final bool? dsa;
 }
