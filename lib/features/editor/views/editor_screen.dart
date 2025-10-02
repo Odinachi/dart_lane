@@ -3,8 +3,11 @@ import 'dart:async';
 import 'package:dart_eval/dart_eval.dart';
 import 'package:dart_eval/dart_eval_bridge.dart';
 import 'package:dart_style/dart_style.dart';
+import 'package:dartcoder/features/editor/models/test_case.dart';
 import 'package:dartcoder/features/editor/views/widgets/dsa_question_widget.dart';
+import 'package:dartcoder/features/editor/views/widgets/test_results_widget.dart';
 import 'package:dartcoder/main.dart';
+import 'package:dartcoder/services/test_runner_service.dart';
 import 'package:dartcoder/shared/text_editor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_code_editor/flutter_code_editor.dart';
@@ -28,6 +31,8 @@ class _EditorScreenState extends State<EditorScreen>
   );
 
   final _outputNotifier = ValueNotifier<String>("");
+  final _testResultNotifier = ValueNotifier<TestRunResult?>(null);
+  final _isTestingNotifier = ValueNotifier<bool>(false);
   late final TabController _tabController;
 
   void _listen() => setState(() {});
@@ -43,7 +48,7 @@ class _EditorScreenState extends State<EditorScreen>
     controller.text = cacheService.getCode() ?? baseCode;
     editor.setText(controller.fullText);
     _tabController =
-        TabController(length: widget.arg?.dsa == true ? 3 : 2, vsync: this)
+        TabController(length: widget.arg?.dsa == true ? 4 : 2, vsync: this)
           ..addListener(_listen);
 
     controller.addListener(() {
@@ -80,6 +85,9 @@ class _EditorScreenState extends State<EditorScreen>
   void dispose() {
     _tabController.removeListener(_listen);
     _debounce?.cancel();
+    _outputNotifier.dispose();
+    _testResultNotifier.dispose();
+    _isTestingNotifier.dispose();
     super.dispose();
   }
 
@@ -143,6 +151,36 @@ class _EditorScreenState extends State<EditorScreen>
     }
   }
 
+  Future<void> _runTests() async {
+    if (widget.arg?.dsa != true) return;
+
+    cacheService.saveCode(controller.fullText);
+    _tabController.animateTo(3); // Navigate to test results tab
+    _unfocus();
+
+    _isTestingNotifier.value = true;
+    _testResultNotifier.value = null;
+
+    try {
+      final result = await TestRunnerService.runTests(
+        userCode: controller.fullText,
+        testSuite: DsaQuestionWidget.testSuite,
+      );
+      _testResultNotifier.value = result;
+    } catch (e) {
+      // Handle test execution error
+      _testResultNotifier.value = TestRunResult(
+        testSuite: DsaQuestionWidget.testSuite,
+        results: [],
+        passedCount: 0,
+        totalCount: 0,
+        totalExecutionTime: Duration.zero,
+      );
+    } finally {
+      _isTestingNotifier.value = false;
+    }
+  }
+
   String beautify(String i) {
     final importRegex = RegExp(r'import\s+[^;]+;', multiLine: true);
 
@@ -164,27 +202,77 @@ class _EditorScreenState extends State<EditorScreen>
 
   void _unfocus() => FocusScope.of(context).unfocus();
 
+  Widget? _buildFloatingActionButtons() {
+    if (_tabController.index == (widget.arg?.dsa == true ? 1 : 0)) {
+      // Code editor tab - show run and test buttons
+      if (widget.arg?.dsa == true) {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            // Test button
+            GestureDetector(
+              onTap: _runTests,
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.blue,
+                  ),
+                  shape: BoxShape.circle,
+                ),
+                child: const Icon(
+                  Icons.quiz,
+                  size: 50,
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+            // Run button
+            GestureDetector(
+              onTap: _runCode,
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Theme.of(context).primaryColor,
+                  ),
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(
+                  Icons.play_arrow,
+                  size: 50,
+                  color: Theme.of(context).primaryColor,
+                ),
+              ),
+            ),
+          ],
+        );
+      } else {
+        // Non-DSA mode - just run button
+        return GestureDetector(
+          onTap: _runCode,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Theme.of(context).primaryColor,
+              ),
+              shape: BoxShape.circle,
+            ),
+            child: Icon(
+              Icons.play_arrow,
+              size: 50,
+              color: Theme.of(context).primaryColor,
+            ),
+          ),
+        );
+      }
+    }
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton:
-          _tabController.index == (widget.arg?.dsa == true ? 1 : 0)
-              ? GestureDetector(
-                  onTap: _runCode,
-                  child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Theme.of(context).primaryColor,
-                        ),
-                        shape: BoxShape.circle,
-                      ),
-                      child: Icon(
-                        Icons.play_arrow,
-                        size: 50,
-                        color: Theme.of(context).primaryColor,
-                      )),
-                )
-              : null,
+      floatingActionButton: _buildFloatingActionButtons(),
       appBar: AppBar(
         leadingWidth: 90,
         centerTitle: true,
@@ -195,11 +283,13 @@ class _EditorScreenState extends State<EditorScreen>
         leading: (_tabController.index != 0)
             ? GestureDetector(
                 onTap: () {
-                  _tabController.animateTo(_tabController.index == 2
-                      ? 1
-                      : _tabController.index == 1
-                          ? 0
-                          : 0);
+                  _tabController.animateTo(_tabController.index == 3
+                      ? 2
+                      : _tabController.index == 2
+                          ? 1
+                          : _tabController.index == 1
+                              ? 0
+                              : 0);
                 },
                 child: const Icon(Icons.arrow_back_ios),
               )
@@ -299,6 +389,7 @@ class _EditorScreenState extends State<EditorScreen>
                   if (widget.arg?.dsa ?? false) Text("Question"),
                   Text("Code"),
                   Text("Output"),
+                  if (widget.arg?.dsa ?? false) Text("Tests"),
                 ],
               ),
             ),
@@ -337,7 +428,22 @@ class _EditorScreenState extends State<EditorScreen>
                           child: Text(output),
                         ),
                       );
-                    })
+                    }),
+                if (widget.arg?.dsa == true)
+                  ValueListenableBuilder<bool>(
+                    valueListenable: _isTestingNotifier,
+                    builder: (_, isTesting, __) {
+                      return ValueListenableBuilder<TestRunResult?>(
+                        valueListenable: _testResultNotifier,
+                        builder: (_, testResult, __) {
+                          return TestResultsWidget(
+                            testResult: testResult,
+                            isLoading: isTesting,
+                          );
+                        },
+                      );
+                    },
+                  ),
               ]),
             ),
           ],
