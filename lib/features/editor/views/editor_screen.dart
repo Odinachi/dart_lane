@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:dart_eval/dart_eval.dart';
+import 'package:dart_eval/dart_eval_bridge.dart';
 import 'package:dart_style/dart_style.dart';
 import 'package:dartcoder/features/editor/views/widgets/dsa_question_widget.dart';
 import 'package:dartcoder/main.dart';
@@ -152,7 +153,8 @@ class _EditorScreenState extends State<EditorScreen>
 
     String formattedCode;
     try {
-      formattedCode = DartFormatter().format(cleanedCode);
+      formattedCode =
+          DartFormatter(languageVersion: Version(3, 9, 2)).format(cleanedCode);
     } catch (_) {
       formattedCode = cleanedCode;
     }
