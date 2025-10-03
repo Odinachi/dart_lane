@@ -49,7 +49,6 @@ dependencies:
   flutter_screenutil: ^5.9.3
   shimmer_animation: ^2.2.2
   youtube_player_flutter: ^9.0.3
-  video_player: ^2.8.1
   equatable: ^2.0.7
   confetti: ^0.8.0
   firebase_messaging: ^16.0.2

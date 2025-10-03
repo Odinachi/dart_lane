@@ -15,6 +15,7 @@ class AppString {
   static const String profile = "Profile";
   static const String learnDart = "Learn Dart";
   static const String dartCourse = "Dart Course";
+  static const String dsa = "DSA";
   static const String dsaCourse = "DSA in Dart";
   static const String learnDsa =
       "Learn DSA in Dart and improve your problem solving skills.";

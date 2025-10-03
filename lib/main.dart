@@ -1,4 +1,5 @@
 import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
+import 'package:dartcoder/features/editor/view_model/editor_cubit.dart';
 import 'package:dartcoder/firebase_options.dart';
 import 'package:dartcoder/services/cache_service.dart';
 import 'package:dartcoder/services/firebase_services.dart';
@@ -20,8 +21,15 @@ void main() async {
   await cacheService.init();
   NotificationService().init();
   runApp(
-    BlocProvider(
-      create: (context) => AppCubit(firebaseServices: firebaseService),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider<AppCubit>(
+          create: (context) => AppCubit(firebaseServices: firebaseService),
+        ),
+        BlocProvider<EditorCubit>(
+          create: (context) => EditorCubit(firebaseServices: firebaseService),
+        ),
+      ],
       child: ValueListenableBuilder(
           valueListenable: isDarkTheme,
           builder: (_, isDark, __) {
@@ -40,7 +48,14 @@ void main() async {
                     } else if (state is AuthProfileCreated) {
                       AppRouter.pushAndClear(AppRouter.dashboard);
                     }
-                  })
+                  }),
+                  BlocListener<EditorCubit, EditorState>(
+                    listener: (_, state) {
+                      if (state is EditorError) {
+                        AppRouter.showMessage(state.message);
+                      }
+                    },
+                  ),
                 ],
                 child: MaterialApp(
                   navigatorKey: AppRouter.navKey,

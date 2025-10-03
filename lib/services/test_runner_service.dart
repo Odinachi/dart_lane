@@ -14,11 +14,11 @@ class TestRunnerService {
     final results = <TestResult>[];
     final stopwatch = Stopwatch()..start();
 
-    for (final testCase in testSuite.testCases) {
+    for (final testCase in (testSuite.testCases ?? [])) {
       final result = await _runSingleTest(
         userCode: userCode,
         testCase: testCase,
-        functionName: testSuite.functionName,
+        functionName: testSuite.functionName ?? "",
       );
       results.add(result);
     }
@@ -47,7 +47,7 @@ class TestRunnerService {
       final testCode = _generateTestCode(
         userCode: userCode,
         functionName: functionName,
-        inputs: testCase.inputs,
+        inputs: testCase.inputs ?? [],
       );
 
       // Compile and execute with timeout

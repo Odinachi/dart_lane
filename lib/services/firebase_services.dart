@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartcoder/features/authetication/models/user_model.dart';
 import 'package:dartcoder/features/authetication/models/user_progress.dart';
+import 'package:dartcoder/features/editor/models/dsa_list_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
@@ -171,6 +172,55 @@ class FirebaseServices {
         return (deleted: false, error: e.message);
       }
       return (deleted: false, error: e.toString());
+    }
+  }
+
+  Future<
+      ({
+        List<DsaListModel>? documents,
+        DocumentSnapshot? lastDocument,
+        String? error
+      })> fetchDSA({
+    int limit = 10,
+    DocumentSnapshot? startAfterDocument,
+  }) async {
+    try {
+      var query = _firestore
+          .collection('DSA')
+          .withConverter(
+              fromFirestore: (snapshot, _) =>
+                  DsaListModel.fromJson(snapshot.data()!, id: snapshot.id),
+              toFirestore: (model, _) => model.toJson())
+          .orderBy("difficulty")
+          .limit(limit);
+
+      if (startAfterDocument != null) {
+        query = query.startAfterDocument(startAfterDocument);
+      }
+
+      final dsaSnapshot = await query.get();
+      final data = dsaSnapshot.docs.map((doc) => doc.data()).toList();
+
+      return (
+        documents: data,
+        lastDocument:
+            dsaSnapshot.docs.isNotEmpty ? dsaSnapshot.docs.last : null,
+        error: null
+      );
+    } catch (e) {
+      return (documents: null, lastDocument: null, error: e.toString());
+    }
+  }
+
+
+ fetchDsaProblems(String id) async {
+    try {
+      final collectionSnapshot = await _firestore.collection('DSA').doc(id).collection("problems").get();
+      return collectionSnapshot.docs
+          .map((doc) => DsaListModel.fromJson(doc.data()))
+          .toList();
+    } catch (e) {
+      return <DsaListModel>[];
     }
   }
 }

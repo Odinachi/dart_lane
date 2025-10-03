@@ -36,8 +36,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: AppString.dsaCourse,
                   desc: AppString.learnDsa,
                   onTap: () {
-                    AppRouter.push(AppRouter.editor,
-                        arg: EditorScreenArg(dsa: true, isPractice: true));
+                    AppRouter.push(AppRouter.dsaList);
+                    // AppRouter.push(AppRouter.editor,
+                    //     arg: EditorScreenArg(dsa: true, isPractice: true));
                   }),
             ],
           ),

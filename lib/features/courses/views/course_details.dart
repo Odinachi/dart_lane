@@ -13,7 +13,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 
 import '../models/course_model.dart';
-import '../../../main.dart';
 
 class CourseDetails extends StatefulWidget {
   const CourseDetails({super.key, this.arg});

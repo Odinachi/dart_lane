@@ -130,7 +130,7 @@ class TestResultsWidget extends StatelessWidget {
           color: color,
         ),
         title: Text(
-          result.testCase.name,
+          result.testCase.name ?? "",
           style: TextStyle(
             fontWeight: FontWeight.w600,
             color: passed ? Colors.green[700] : Colors.red[700],
@@ -160,7 +160,8 @@ class TestResultsWidget extends StatelessWidget {
                   _buildDetailRow('Description', result.testCase.description!),
                   SizedBox(height: 8.h),
                 ],
-                _buildDetailRow('Input', _formatInput(result.testCase.inputs)),
+                _buildDetailRow(
+                    'Input', _formatInput(result.testCase.inputs ?? [])),
                 SizedBox(height: 8.h),
                 _buildDetailRow(
                     'Expected', _formatOutput(result.testCase.expectedOutput)),

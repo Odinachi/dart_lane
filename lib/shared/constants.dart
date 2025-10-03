@@ -455,3 +455,62 @@ Widget loadingWidget(BuildContext context) {
 MarkdownConfig config = isDarkTheme.value
     ? MarkdownConfig.darkConfig
     : MarkdownConfig.defaultConfig;
+
+
+
+class ShadowContainer extends StatelessWidget {
+  const ShadowContainer({
+    super.key,
+    required this.course,
+  });
+
+  final CourseModel course;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(
+          bottom: 10.h, left: 5.w, right: 5.w),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.r),
+        color: Theme.of(context).scaffoldBackgroundColor,
+        border: Border.all(
+            color: AppColors.grey.withValues(alpha: .1)),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.grey.withValues(alpha: .05),
+            blurRadius: 8,
+            spreadRadius: 2,
+            offset: const Offset(0, 4),
+          ),
+          BoxShadow(
+            color: AppColors.grey.withValues(alpha: .01),
+            blurRadius: 4,
+            spreadRadius: 1,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 15.w),
+        child: ListTile(
+          contentPadding: EdgeInsets.zero,
+          title: Text(course.title ?? '',
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyLarge
+                  ?.copyWith(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500)),
+          subtitle: course.desc != null
+              ? Text(course.desc!,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium
+                      ?.copyWith(fontSize: 12))
+              : null,
+        ),
+      ),
+    );
+  }
+}
