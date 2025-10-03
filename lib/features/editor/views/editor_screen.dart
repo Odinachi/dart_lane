@@ -3,13 +3,17 @@ import 'dart:async';
 import 'package:dart_eval/dart_eval.dart';
 import 'package:dart_eval/dart_eval_bridge.dart';
 import 'package:dart_style/dart_style.dart';
+import 'package:dartcoder/features/editor/models/dsa_list_model.dart';
 import 'package:dartcoder/features/editor/models/test_case.dart';
+import 'package:dartcoder/features/editor/view_model/editor_cubit.dart';
 import 'package:dartcoder/features/editor/views/widgets/dsa_question_widget.dart';
 import 'package:dartcoder/features/editor/views/widgets/test_results_widget.dart';
 import 'package:dartcoder/main.dart';
 import 'package:dartcoder/services/test_runner_service.dart';
+import 'package:dartcoder/shared/constants.dart';
 import 'package:dartcoder/shared/text_editor.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_code_editor/flutter_code_editor.dart';
 import 'package:flutter_highlight/themes/atom-one-light.dart';
 import 'package:flutter_highlight/themes/nord.dart';
@@ -48,7 +52,7 @@ class _EditorScreenState extends State<EditorScreen>
     controller.text = cacheService.getCode() ?? baseCode;
     editor.setText(controller.fullText);
     _tabController =
-        TabController(length: widget.arg?.dsa == true ? 4 : 2, vsync: this)
+        TabController(length: widget.arg?.dsa != null ? 4 : 2, vsync: this)
           ..addListener(_listen);
 
     controller.addListener(() {
@@ -78,6 +82,10 @@ class _EditorScreenState extends State<EditorScreen>
         );
       }
     });
+
+    if (widget.arg?.dsa != null) {
+      context.read<EditorCubit>().getProblemsForDSA(widget.arg?.dsa?.id ?? "");
+    }
     super.initState();
   }
 
@@ -109,7 +117,7 @@ class _EditorScreenState extends State<EditorScreen>
 
   Future<void> _runCode() async {
     cacheService.saveCode(controller.fullText);
-    _tabController.animateTo(widget.arg?.dsa == true ? 2 : 1);
+    _tabController.animateTo(widget.arg?.dsa != null ? 2 : 1);
     _unfocus();
     _outputNotifier.value = "";
 
@@ -152,7 +160,7 @@ class _EditorScreenState extends State<EditorScreen>
   }
 
   Future<void> _runTests() async {
-    if (widget.arg?.dsa != true) return;
+    if (widget.arg?.dsa == null) return;
 
     cacheService.saveCode(controller.fullText);
     _tabController.animateTo(3); // Navigate to test results tab
@@ -164,13 +172,13 @@ class _EditorScreenState extends State<EditorScreen>
     try {
       final result = await TestRunnerService.runTests(
         userCode: controller.fullText,
-        testSuite: DsaQuestionWidget.testSuite,
+        testSuite: testSuite,
       );
       _testResultNotifier.value = result;
     } catch (e) {
       // Handle test execution error
       _testResultNotifier.value = TestRunResult(
-        testSuite: DsaQuestionWidget.testSuite,
+        testSuite: testSuite,
         results: [],
         passedCount: 0,
         totalCount: 0,
@@ -203,9 +211,9 @@ class _EditorScreenState extends State<EditorScreen>
   void _unfocus() => FocusScope.of(context).unfocus();
 
   Widget? _buildFloatingActionButtons() {
-    if (_tabController.index == (widget.arg?.dsa == true ? 1 : 0)) {
+    if (_tabController.index == (widget.arg?.dsa != null ? 1 : 0)) {
       // Code editor tab - show run and test buttons
-      if (widget.arg?.dsa == true) {
+      if (widget.arg?.dsa != null) {
         return Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -215,14 +223,14 @@ class _EditorScreenState extends State<EditorScreen>
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Colors.blue,
+                    color: Theme.of(context).primaryColor,
                   ),
                   shape: BoxShape.circle,
                 ),
-                child: const Icon(
-                  Icons.quiz,
+                child: Icon(
+                  Icons.check,
                   size: 50,
-                  color: Colors.blue,
+                  color: Theme.of(context).primaryColor,
                 ),
               ),
             ),
@@ -269,6 +277,7 @@ class _EditorScreenState extends State<EditorScreen>
     return null;
   }
 
+  TestSuite? testSuite;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -277,7 +286,7 @@ class _EditorScreenState extends State<EditorScreen>
         leadingWidth: 90,
         centerTitle: true,
         automaticallyImplyLeading:
-            widget.arg?.isPractice == true || widget.arg?.dsa == true
+            widget.arg?.isPractice == true || widget.arg?.dsa != null
                 ? true
                 : false,
         leading: (_tabController.index != 0)
@@ -295,7 +304,7 @@ class _EditorScreenState extends State<EditorScreen>
               )
             : null,
         title: const Text('Dartic'),
-        actions: _tabController.index == (widget.arg?.dsa == true ? 1 : 0)
+        actions: _tabController.index == (widget.arg?.dsa != null ? 1 : 0)
             ? [
                 ValueListenableBuilder(
                     valueListenable: editor.state,
@@ -356,12 +365,18 @@ class _EditorScreenState extends State<EditorScreen>
                       controller.text = baseCode;
                     } else if (v == "format") {
                       controller.text = beautify(controller.text);
+                    } else if (v == "solution") {
+                      controller.text = beautify(testSuite?.answer ?? "");
                     }
                   },
                   itemBuilder: (BuildContext context) => <PopupMenuEntry>[
                     const PopupMenuItem(value: "clear", child: Text('Clear')),
                     const PopupMenuItem(
                         value: "format", child: Text('Beautify')),
+                    if (widget.arg?.dsa != null &&
+                        testSuite?.answer?.isNotEmpty == true)
+                      const PopupMenuItem(
+                          value: "solution", child: Text('Solution')),
                   ],
                   child: const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -374,81 +389,97 @@ class _EditorScreenState extends State<EditorScreen>
               ]
             : null,
       ),
-      body: Padding(
-        padding: EdgeInsets.only(top: 10.0, bottom: 10.h),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10.0),
-              child: TabBar(
-                controller: _tabController,
-                splashFactory: NoSplash.splashFactory,
-                indicator: const BoxDecoration(),
-                dividerColor: Colors.transparent,
-                tabs: [
-                  if (widget.arg?.dsa ?? false) Text("Question"),
-                  Text("Code"),
-                  Text("Output"),
-                  if (widget.arg?.dsa ?? false) Text("Tests"),
-                ],
-              ),
-            ),
-            Expanded(
-              child: TabBarView(controller: _tabController, children: [
-                if (widget.arg?.dsa == true) DsaQuestionWidget(),
-                ValueListenableBuilder(
-                    valueListenable: isDarkTheme,
-                    builder: (_, isDark, __) {
-                      return CodeTheme(
-                        data: CodeThemeData(
-                            styles: isDark ? nordTheme : atomOneLightTheme),
-                        child: Container(
-                          color: isDark
-                              ? const Color(0xff2E3440)
-                              : const Color(0xfffafafa),
-                          child: CodeField(
-                            expands: true,
-                            onChanged: _onTextChanged,
-                            gutterStyle: const GutterStyle(
-                              showFoldingHandles: false,
-                              width: 70,
-                            ),
-                            controller: controller,
+      body: BlocBuilder<EditorCubit, EditorState>(builder: (_, state) {
+        if (state is EditorProblem) {
+          testSuite = state.problem;
+        }
+        return SizedBox(
+          height: double.infinity,
+          width: double.infinity,
+          child: Stack(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 10.0, bottom: 10.h),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10.0),
+                      child: TabBar(
+                        controller: _tabController,
+                        splashFactory: NoSplash.splashFactory,
+                        indicator: const BoxDecoration(),
+                        dividerColor: Colors.transparent,
+                        tabs: [
+                          if (widget.arg?.dsa != null) Text("Question"),
+                          Text("Code"),
+                          Text("Output"),
+                          if (widget.arg?.dsa != null) Text("Tests"),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: TabBarView(controller: _tabController, children: [
+                        if (widget.arg?.dsa != null)
+                          DsaQuestionWidget(text: testSuite?.question ?? ""),
+                        ValueListenableBuilder(
+                            valueListenable: isDarkTheme,
+                            builder: (_, isDark, __) {
+                              return CodeTheme(
+                                data: CodeThemeData(
+                                    styles:
+                                        isDark ? nordTheme : atomOneLightTheme),
+                                child: Container(
+                                  color: isDark
+                                      ? const Color(0xff2E3440)
+                                      : const Color(0xfffafafa),
+                                  child: CodeField(
+                                    expands: false,
+                                    onChanged: _onTextChanged,
+                                    gutterStyle: const GutterStyle(
+                                      showFoldingHandles: false,
+                                      width: 70,
+                                    ),
+                                    controller: controller,
+                                  ),
+                                ),
+                              );
+                            }),
+                        ValueListenableBuilder(
+                            valueListenable: _outputNotifier,
+                            builder: (_, output, __) {
+                              return SingleChildScrollView(
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 20, vertical: 20),
+                                  child: Text(output),
+                                ),
+                              );
+                            }),
+                        if (widget.arg?.dsa != null)
+                          ValueListenableBuilder<bool>(
+                            valueListenable: _isTestingNotifier,
+                            builder: (_, isTesting, __) {
+                              return ValueListenableBuilder<TestRunResult?>(
+                                valueListenable: _testResultNotifier,
+                                builder: (_, testResult, __) {
+                                  return TestResultsWidget(
+                                    testResult: testResult,
+                                    isLoading: isTesting,
+                                  );
+                                },
+                              );
+                            },
                           ),
-                        ),
-                      );
-                    }),
-                ValueListenableBuilder(
-                    valueListenable: _outputNotifier,
-                    builder: (_, output, __) {
-                      return SingleChildScrollView(
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 20),
-                          child: Text(output),
-                        ),
-                      );
-                    }),
-                if (widget.arg?.dsa == true)
-                  ValueListenableBuilder<bool>(
-                    valueListenable: _isTestingNotifier,
-                    builder: (_, isTesting, __) {
-                      return ValueListenableBuilder<TestRunResult?>(
-                        valueListenable: _testResultNotifier,
-                        builder: (_, testResult, __) {
-                          return TestResultsWidget(
-                            testResult: testResult,
-                            isLoading: isTesting,
-                          );
-                        },
-                      );
-                    },
-                  ),
-              ]),
-            ),
-          ],
-        ),
-      ),
+                      ]),
+                    ),
+                  ],
+                ),
+              ),
+              if (state is EditorLoadingProblems) loadingWidget(context)
+            ],
+          ),
+        );
+      }),
     );
   }
 }
@@ -456,5 +487,5 @@ class _EditorScreenState extends State<EditorScreen>
 class EditorScreenArg {
   EditorScreenArg({this.dsa, this.isPractice});
   final bool? isPractice;
-  final bool? dsa;
+  final DsaListModel? dsa;
 }

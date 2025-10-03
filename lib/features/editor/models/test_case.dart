@@ -1,3 +1,5 @@
+import 'dart:convert' as j;
+
 class TestResult {
   final TestCase testCase;
   final dynamic actualOutput;
@@ -15,14 +17,14 @@ class TestResult {
 }
 
 class TestRunResult {
-  final TestSuite testSuite;
+  final TestSuite? testSuite;
   final List<TestResult> results;
   final int passedCount;
   final int totalCount;
   final Duration totalExecutionTime;
 
   const TestRunResult({
-    required this.testSuite,
+    this.testSuite,
     required this.results,
     required this.passedCount,
     required this.totalCount,
@@ -67,23 +69,26 @@ class TestCase {
 class TestSuite {
   final String? answer;
   final String? description;
+  final String? question;
   final String? functionName;
   final List<TestCase>? testCases;
 
-  const TestSuite({
-    this.answer,
-    this.functionName,
-    this.testCases,
-    this.description,
-  });
+  const TestSuite(
+      {this.answer,
+      this.functionName,
+      this.testCases,
+      this.description,
+      this.question});
 
   factory TestSuite.fromJson(Map<String, dynamic> json) {
     return TestSuite(
       answer: json['answer'],
       description: json['description'],
       functionName: json['function_name'],
+      question: json['question'],
       testCases: (json['test_cases'] as List<dynamic>? ?? [])
-          .map((testCase) => TestCase.fromJson(testCase))
+          .map((testCase) => TestCase.fromJson(
+              testCase is String ? j.json.decode(testCase) : testCase))
           .toList(),
     );
   }
@@ -93,6 +98,7 @@ class TestSuite {
       'answer': answer,
       'description': description,
       'function_name': functionName,
+      'question': question,
       'test_cases': testCases?.map((testCase) => testCase.toJson()).toList(),
     };
   }

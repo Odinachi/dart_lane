@@ -1,4 +1,4 @@
-import 'package:dartcoder/features/editor/views/editor_screen.dart';
+
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
 import 'package:dartcoder/shared/constants.dart';
@@ -37,8 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   desc: AppString.learnDsa,
                   onTap: () {
                     AppRouter.push(AppRouter.dsaList);
-                    // AppRouter.push(AppRouter.editor,
-                    //     arg: EditorScreenArg(dsa: true, isPractice: true));
+
                   }),
             ],
           ),

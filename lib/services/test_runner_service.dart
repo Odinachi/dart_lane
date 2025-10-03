@@ -9,16 +9,16 @@ class TestRunnerService {
   /// Runs a test suite against the provided user code
   static Future<TestRunResult> runTests({
     required String userCode,
-    required TestSuite testSuite,
+    TestSuite? testSuite,
   }) async {
     final results = <TestResult>[];
     final stopwatch = Stopwatch()..start();
 
-    for (final testCase in (testSuite.testCases ?? [])) {
+    for (final testCase in (testSuite?.testCases ?? [])) {
       final result = await _runSingleTest(
         userCode: userCode,
         testCase: testCase,
-        functionName: testSuite.functionName ?? "",
+        functionName: testSuite?.functionName ?? "",
       );
       results.add(result);
     }
@@ -165,7 +165,7 @@ String _serializeResult(dynamic result) {
     try {
       final compiler = Compiler();
       final program = compiler.compileWriteAndLoad({
-        'test_runner': {
+        'dart_coder': {
           'main.dart': code,
         }
       });
@@ -173,7 +173,7 @@ String _serializeResult(dynamic result) {
       await runZoned(
         () async {
           final result =
-              program.executeLib('package:test_runner/main.dart', 'main');
+              program.executeLib('package:dart_coder/main.dart', 'main');
           if (result is Future) {
             await result;
           }

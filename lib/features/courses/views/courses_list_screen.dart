@@ -1,8 +1,6 @@
-import 'package:dartcoder/features/courses/models/course_model.dart';
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/constants.dart';
 import 'package:dartcoder/shared/navigation/router.dart';
-import 'package:dartcoder/shared/theme.dart';
 import 'package:dartcoder/features/courses/views/course_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -40,12 +38,13 @@ class _CoursesListScreenState extends State<CoursesListScreen> {
                   ListView.builder(
                       itemBuilder: (_, i) {
                         final course = e.value[i];
-                        return GestureDetector(
+                        return ShadowContainer(
                           onTap: () {
                             AppRouter.push(AppRouter.courseDetails,
                                 arg: CourseDetailsArgs(course: course));
                           },
-                          child: ShadowContainer(course: course),
+                          title: course.title,
+                          desc: course.desc,
                         );
                       },
                       shrinkWrap: true,

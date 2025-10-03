@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartcoder/features/authetication/models/user_model.dart';
 import 'package:dartcoder/features/authetication/models/user_progress.dart';
 import 'package:dartcoder/features/editor/models/dsa_list_model.dart';
+import 'package:dartcoder/features/editor/models/test_case.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
@@ -212,15 +213,20 @@ class FirebaseServices {
     }
   }
 
-
- fetchDsaProblems(String id) async {
+  Future<({TestSuite? data, String? error})> fetchDsaProblems(String id) async {
     try {
-      final collectionSnapshot = await _firestore.collection('DSA').doc(id).collection("problems").get();
-      return collectionSnapshot.docs
-          .map((doc) => DsaListModel.fromJson(doc.data()))
-          .toList();
+      final data = await _firestore
+          .collection('DSA')
+          .doc(id)
+          .collection("problem")
+          .get();
+      if (data.docs.isNotEmpty && data.docs.firstOrNull != null) {
+        return (data: TestSuite.fromJson(data.docs.first.data()), error: null);
+      }
+
+      return (data: null, error: "No problems found");
     } catch (e) {
-      return <DsaListModel>[];
+      return (data: null, error: e.toString());
     }
   }
 }

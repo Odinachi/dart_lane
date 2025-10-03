@@ -456,59 +456,95 @@ MarkdownConfig config = isDarkTheme.value
     ? MarkdownConfig.darkConfig
     : MarkdownConfig.defaultConfig;
 
-
-
 class ShadowContainer extends StatelessWidget {
-  const ShadowContainer({
-    super.key,
-    required this.course,
-  });
+  const ShadowContainer(
+      {super.key, this.desc, this.difficulty, this.title, this.onTap});
 
-  final CourseModel course;
+  final String? title;
+  final String? desc;
+  final String? difficulty;
+  final VoidCallback? onTap;
+
+  Color _getDifficultyColor(String difficulty) {
+    switch (difficulty.toLowerCase()) {
+      case 'easy':
+        return Colors.green;
+      case 'medium':
+        return Colors.orange;
+      case 'hard':
+        return Colors.red;
+      default:
+        return Colors.grey;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(
-          bottom: 10.h, left: 5.w, right: 5.w),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.r),
-        color: Theme.of(context).scaffoldBackgroundColor,
-        border: Border.all(
-            color: AppColors.grey.withValues(alpha: .1)),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.grey.withValues(alpha: .05),
-            blurRadius: 8,
-            spreadRadius: 2,
-            offset: const Offset(0, 4),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        margin: EdgeInsets.only(bottom: 10.h, left: 5.w, right: 5.w),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.r),
+          color: Theme.of(context).scaffoldBackgroundColor,
+          border: Border.all(color: AppColors.grey.withValues(alpha: .1)),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.grey.withValues(alpha: .05),
+              blurRadius: 8,
+              spreadRadius: 2,
+              offset: const Offset(0, 4),
+            ),
+            BoxShadow(
+              color: AppColors.grey.withValues(alpha: .01),
+              blurRadius: 4,
+              spreadRadius: 1,
+              offset: const Offset(0, 2),
+            ),
+          ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: ListTile(
+            contentPadding: EdgeInsets.zero,
+            title: Text(
+              title ?? 'Default',
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                  ),
+            ),
+            subtitle: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if (desc != null)
+                  Text(
+                    desc!,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          fontSize: 12,
+                        ),
+                  ),
+                if (difficulty != null)
+                  Container(
+                    margin: const EdgeInsets.only(top: 8),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: _getDifficultyColor(difficulty ?? ""),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Text(
+                      difficulty ?? "",
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+              ],
+            ),
           ),
-          BoxShadow(
-            color: AppColors.grey.withValues(alpha: .01),
-            blurRadius: 4,
-            spreadRadius: 1,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15.w),
-        child: ListTile(
-          contentPadding: EdgeInsets.zero,
-          title: Text(course.title ?? '',
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyLarge
-                  ?.copyWith(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500)),
-          subtitle: course.desc != null
-              ? Text(course.desc!,
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyMedium
-                      ?.copyWith(fontSize: 12))
-              : null,
         ),
       ),
     );
