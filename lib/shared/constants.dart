@@ -483,7 +483,7 @@ class ShadowContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        margin: EdgeInsets.only(bottom: 10.h, left: 5.w, right: 5.w),
+        margin: EdgeInsets.only(bottom: 20.h, left: 5.w, right: 5.w),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.r),
           color: Theme.of(context).scaffoldBackgroundColor,
