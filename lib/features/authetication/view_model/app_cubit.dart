@@ -104,9 +104,18 @@ class AppCubit extends Cubit<AppState> {
   }
 
   void markProblemAsSolved(String id) async {
-    userProgress ??=
-        userProgress?.copyWith(passedDsa: [...?userProgress?.passedDsa, id]);
+    if (userProgress?.passedDsa?.contains(id) == true) {
+      return;
+    }
+    if (userProgress == null) {
+      userProgress = UserProgressModel(
+        passedDsa: [id],
+      );
+    } else {
+      userProgress =
+          userProgress?.copyWith(passedDsa: [...?userProgress?.passedDsa, id]);
+    }
     await firebaseServices.markProblemAsSolved(id);
-    emit(AppUpdateProgress(id: id));
+    emit(AppUpdateProgress());
   }
 }

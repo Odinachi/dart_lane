@@ -95,8 +95,6 @@ class EditorCubit extends Cubit<EditorState> {
     }
   }
 
- 
-
   void getProblemsForDSA(String id) async {
     try {
       emit(EditorLoadingProblems());

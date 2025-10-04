@@ -14,11 +14,14 @@ class CacheService {
     sharedPreferences = await SharedPreferences.getInstance();
   }
 
-  void saveCode(String code) async {
-    await sharedPreferences.setString(_codeKey, code);
+  void saveCode(String code, {String? key}) async {
+    await sharedPreferences.setString(key ?? _codeKey, code);
   }
 
-  void deleteCode() async => await sharedPreferences.remove(_codeKey);
+  void deleteCode({String? key}) async {
+    await sharedPreferences.remove(key ?? _codeKey);
+  }
 
-  String? getCode() => sharedPreferences.getString(_codeKey);
+  String? getCode({String? key}) =>
+      sharedPreferences.getString(key ?? _codeKey);
 }

@@ -50,8 +50,10 @@ class _EditorScreenState extends State<EditorScreen>
 
   @override
   void initState() {
-    controller.text = cacheService.getCode() ?? baseCode;
-    editor.setText(controller.fullText);
+    controller.text =
+        cacheService.getCode(key: widget.arg?.dsa?.id) ?? baseCode;
+
+    editor.setText(controller.fullText, key: widget.arg?.dsa?.id);
     _tabController =
         TabController(length: widget.arg?.dsa != null ? 4 : 2, vsync: this)
           ..addListener(_listen);
@@ -111,13 +113,13 @@ class _EditorScreenState extends State<EditorScreen>
 
     _debounce = Timer(const Duration(milliseconds: 500), () {
       if (_isSubstantialChange(editor.text, newText)) {
-        editor.setText(newText);
+        editor.setText(newText, key: widget.arg?.dsa?.id);
       }
     });
   }
 
   Future<void> _runCode() async {
-    cacheService.saveCode(controller.fullText);
+    cacheService.saveCode(controller.fullText, key: widget.arg?.dsa?.id);
     _tabController.animateTo(widget.arg?.dsa != null ? 2 : 1);
     _unfocus();
     _outputNotifier.value = "";
@@ -163,7 +165,7 @@ class _EditorScreenState extends State<EditorScreen>
   Future<void> _runTests() async {
     if (widget.arg?.dsa == null) return;
 
-    cacheService.saveCode(controller.fullText);
+    cacheService.saveCode(controller.fullText, key: widget.arg?.dsa?.id);
     _tabController.animateTo(3); // Navigate to test results tab
     _unfocus();
 
@@ -324,7 +326,7 @@ class _EditorScreenState extends State<EditorScreen>
                           GestureDetector(
                             onTap: state.canUndo
                                 ? () {
-                                    editor.undo();
+                                    editor.undo(key: widget.arg?.dsa?.id);
                                     controller.text = editor.text;
                                   }
                                 : null,
@@ -345,7 +347,7 @@ class _EditorScreenState extends State<EditorScreen>
                           GestureDetector(
                             onTap: state.canRedo
                                 ? () {
-                                    editor.redo();
+                                    editor.redo(key: widget.arg?.dsa?.id);
                                     controller.text = editor.text;
                                   }
                                 : null,
@@ -367,7 +369,7 @@ class _EditorScreenState extends State<EditorScreen>
                   initialValue: null,
                   onSelected: (v) {
                     if (v == "clear") {
-                      editor.setText(baseCode);
+                      editor.setText(baseCode, key: widget.arg?.dsa?.id);
                       controller.text = baseCode;
                     } else if (v == "format") {
                       controller.text = beautify(controller.text);
@@ -395,7 +397,28 @@ class _EditorScreenState extends State<EditorScreen>
               ]
             : null,
       ),
-      body: BlocBuilder<EditorCubit, EditorState>(builder: (_, state) {
+      body: BlocConsumer<EditorCubit, EditorState>(listener: (context, state) {
+        if (state is EditorProblem) {
+          Future.delayed(Duration(milliseconds: 1000), () {
+            if (widget.arg?.dsa != null &&
+                controller.text.contains(testSuite?.functionName ?? "") ==
+                    false) {
+              if (widget.arg?.dsa != null &&
+                  controller.text.contains(testSuite?.functionName ?? "") ==
+                      false) {
+                controller.text = '''void main() {
+  print("Hello, Dartic!");
+}
+
+ ${testSuite?.functionName}() {
+  // Write your code here and specify the return type
+}
+''';
+              }
+            }
+          });
+        }
+      }, builder: (_, state) {
         if (state is EditorProblem) {
           testSuite = state.problem;
         }

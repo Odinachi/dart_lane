@@ -24,35 +24,35 @@ class TextEditor {
 
   String _currentText = "";
 
-  void setText(String newText) {
+  void setText(String newText, {String? key}) {
     state.value.undoStack.add(_currentText);
     _currentText = newText;
     state.value.redoStack.clear();
 
-    _updateNotifier();
+    _updateNotifier(key: key);
   }
 
-  void undo() {
+  void undo({String? key}) {
     if (state.value.undoStack.isNotEmpty) {
       state.value.redoStack.add(_currentText);
       _currentText = state.value.undoStack.removeLast();
 
-      _updateNotifier();
+      _updateNotifier(key: key);
     }
   }
 
-  void redo() {
+  void redo({String? key}) {
     if (state.value.redoStack.isNotEmpty) {
       state.value.undoStack.add(_currentText);
       _currentText = state.value.redoStack.removeLast();
 
-      _updateNotifier();
+      _updateNotifier(key: key);
     }
   }
 
   String get text => _currentText;
 
-  void _updateNotifier() {
+  void _updateNotifier({String? key}) {
     state.value = TextEditorState(
       undoStack: List.from(state.value.undoStack),
       redoStack: List.from(state.value.redoStack),
@@ -60,7 +60,10 @@ class TextEditor {
       canUndo: state.value.undoStack.length > 1,
       canRedo: state.value.redoStack.isNotEmpty,
     );
-    cacheService.saveCode(_currentText);
+    cacheService.saveCode(
+      _currentText,
+      key: key,
+    );
   }
 }
 

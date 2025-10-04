@@ -118,7 +118,7 @@ class _DsaListScreenState extends State<DsaListScreen> {
                     }
 
                     final dsaItem = dsaList[index];
-                    return ShadowContainer(
+                   return ShadowContainer(
                       completed: context
                           .read<AppCubit>()
                           .userProgress
