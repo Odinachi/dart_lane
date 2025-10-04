@@ -179,17 +179,7 @@ class _EditorScreenState extends State<EditorScreen>
 
       if (_testResultNotifier.value?.passedCount ==
           testSuite?.testCases?.length) {
-        context
-            .read<EditorCubit>()
-            .markProblemAsSolved(widget.arg?.dsa?.id ?? "");
-
-        context.read<AppCubit>().userProgress = context
-            .read<AppCubit>()
-            .userProgress
-            ?.copyWith(
-                passedDsa:
-                    (context.read<AppCubit>().userProgress?.passedDsa ?? [])
-                      ..add(widget.arg?.dsa?.id ?? ""));
+        context.read<AppCubit>().markProblemAsSolved(widget.arg?.dsa?.id ?? "");
       }
     } catch (e) {
       // Handle test execution error
@@ -449,7 +439,7 @@ class _EditorScreenState extends State<EditorScreen>
                                       ? const Color(0xff2E3440)
                                       : const Color(0xfffafafa),
                                   child: CodeField(
-                                    expands: false,
+                                    expands: true,
                                     onChanged: _onTextChanged,
                                     gutterStyle: const GutterStyle(
                                       showFoldingHandles: false,

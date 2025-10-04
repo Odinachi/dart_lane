@@ -13,6 +13,11 @@ class AuthProfileExists extends AppState {}
 class AuthProfileCreated extends AppState {}
 
 class AuthProfileMissing extends AppState {}
+class AppUpdateProgress extends AppState {
+  final String? id;
+
+  AppUpdateProgress({this.id});
+}
 
 class AuthLogout extends AppState {}
 

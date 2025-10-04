@@ -102,4 +102,11 @@ class AppCubit extends Cubit<AppState> {
     emit(AuthInitial());
     await firebaseServices.updateCurrentCourse(id);
   }
+
+  void markProblemAsSolved(String id) async {
+    userProgress ??=
+        userProgress?.copyWith(passedDsa: [...?userProgress?.passedDsa, id]);
+    await firebaseServices.markProblemAsSolved(id);
+    emit(AppUpdateProgress(id: id));
+  }
 }

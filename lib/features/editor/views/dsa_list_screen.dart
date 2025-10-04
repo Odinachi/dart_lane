@@ -87,38 +87,37 @@ class _DsaListScreenState extends State<DsaListScreen> {
         title: Text(AppString.dsa),
       ),
       body: SafeArea(
-        child: BlocBuilder<EditorCubit, EditorState>(
-          builder: (_, state) {
-            final cubit = context.read<EditorCubit>();
-            final dsaList = cubit.dsaList;
-            if (state is EditorLoading) {
-              return const Center(child: CircularProgressIndicator());
-            } else if (state is DSAListLoaded || state is EditorInitial) {
-              if (dsaList.isEmpty &&
-                  state is DSAListLoaded &&
-                  !state.isRefreshing) {
-                return const Center(
-                  child: Text('No DSA problems found'),
-                );
+        child: BlocBuilder<AppCubit, AppState>(builder: (_, __) {
+          return BlocBuilder<EditorCubit, EditorState>(
+            builder: (_, state) {
+              final cubit = context.read<EditorCubit>();
+              final dsaList = cubit.dsaList;
+              if (state is EditorLoading) {
+                return const Center(child: CircularProgressIndicator());
+              } else if (state is DSAListLoaded || state is EditorInitial) {
+                if (dsaList.isEmpty &&
+                    state is DSAListLoaded &&
+                    !state.isRefreshing) {
+                  return const Center(
+                    child: Text('No DSA problems found'),
+                  );
+                }
               }
-            }
 
-            return RefreshIndicator(
-              onRefresh: _onRefresh,
-              child: ListView.builder(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                controller: _scrollController,
-                physics: const AlwaysScrollableScrollPhysics(),
-                itemCount: _getListItemCount(dsaList, state),
-                itemBuilder: (_, index) {
-                  if (index == dsaList.length) {
-                    // Loading indicator at the bottom
-                    return _buildBottomLoader(state);
-                  }
+              return RefreshIndicator(
+                onRefresh: _onRefresh,
+                child: ListView.builder(
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  controller: _scrollController,
+                  physics: const AlwaysScrollableScrollPhysics(),
+                  itemCount: _getListItemCount(dsaList, state),
+                  itemBuilder: (_, index) {
+                    if (index == dsaList.length) {
+                      // Loading indicator at the bottom
+                      return _buildBottomLoader(state);
+                    }
 
-                  final dsaItem = dsaList[index];
-                  return BlocBuilder<AppCubit, AppState>(
-                      builder: (context, state) {
+                    final dsaItem = dsaList[index];
                     return ShadowContainer(
                       completed: context
                           .read<AppCubit>()
@@ -134,12 +133,12 @@ class _DsaListScreenState extends State<DsaListScreen> {
                       desc: dsaItem.description,
                       difficulty: dsaItem.difficulty,
                     );
-                  });
-                },
-              ),
-            );
-          },
-        ),
+                  },
+                ),
+              );
+            },
+          );
+        }),
       ),
     );
   }

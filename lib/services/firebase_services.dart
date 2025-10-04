@@ -239,7 +239,7 @@ class FirebaseServices {
           .doc('current');
 
       await progressDoc.set({
-        'current_dsa': FieldValue.arrayUnion([id])
+        'passed_dsa': FieldValue.arrayUnion([id])
       }, SetOptions(merge: true));
     } catch (e) {
       // Handle error if needed
