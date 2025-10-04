@@ -1,3 +1,4 @@
+import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
 import 'package:dartcoder/features/editor/view_model/editor_cubit.dart';
 import 'package:dartcoder/features/editor/views/editor_screen.dart';
 import 'package:dartcoder/shared/app_string.dart';
@@ -116,15 +117,24 @@ class _DsaListScreenState extends State<DsaListScreen> {
                   }
 
                   final dsaItem = dsaList[index];
-                  return ShadowContainer(
-                    onTap: () {
-                      AppRouter.push(AppRouter.editor,
-                          arg: EditorScreenArg(dsa: dsaItem, isPractice: true));
-                    },
-                    title: dsaItem.problemName,
-                    desc: dsaItem.description,
-                    difficulty: dsaItem.difficulty,
-                  );
+                  return BlocBuilder<AppCubit, AppState>(
+                      builder: (context, state) {
+                    return ShadowContainer(
+                      completed: context
+                          .read<AppCubit>()
+                          .userProgress
+                          ?.passedDsa
+                          ?.contains(dsaItem.id),
+                      onTap: () {
+                        AppRouter.push(AppRouter.editor,
+                            arg: EditorScreenArg(
+                                dsa: dsaItem, isPractice: true));
+                      },
+                      title: dsaItem.problemName,
+                      desc: dsaItem.description,
+                      difficulty: dsaItem.difficulty,
+                    );
+                  });
                 },
               ),
             );

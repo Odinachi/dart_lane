@@ -1,9 +1,9 @@
-
 import 'package:dartcoder/shared/app_string.dart';
 import 'package:dartcoder/shared/assets.dart';
 import 'package:dartcoder/shared/constants.dart';
 import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/shared/theme.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -36,8 +36,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: AppString.dsaCourse,
                   desc: AppString.learnDsa,
                   onTap: () {
-                    AppRouter.push(AppRouter.dsaList);
-
+                    FirebaseAuth.instance.currentUser == null
+                        ? AppRouter.pushAndClear(AppRouter.onboarding)
+                        : AppRouter.push(AppRouter.dsaList);
                   }),
             ],
           ),

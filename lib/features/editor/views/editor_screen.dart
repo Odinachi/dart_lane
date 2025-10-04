@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:dart_eval/dart_eval.dart';
 import 'package:dart_eval/dart_eval_bridge.dart';
 import 'package:dart_style/dart_style.dart';
+import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
 import 'package:dartcoder/features/editor/models/dsa_list_model.dart';
 import 'package:dartcoder/features/editor/models/test_case.dart';
 import 'package:dartcoder/features/editor/view_model/editor_cubit.dart';
@@ -175,6 +176,21 @@ class _EditorScreenState extends State<EditorScreen>
         testSuite: testSuite,
       );
       _testResultNotifier.value = result;
+
+      if (_testResultNotifier.value?.passedCount ==
+          testSuite?.testCases?.length) {
+        context
+            .read<EditorCubit>()
+            .markProblemAsSolved(widget.arg?.dsa?.id ?? "");
+
+        context.read<AppCubit>().userProgress = context
+            .read<AppCubit>()
+            .userProgress
+            ?.copyWith(
+                passedDsa:
+                    (context.read<AppCubit>().userProgress?.passedDsa ?? [])
+                      ..add(widget.arg?.dsa?.id ?? ""));
+      }
     } catch (e) {
       // Handle test execution error
       _testResultNotifier.value = TestRunResult(

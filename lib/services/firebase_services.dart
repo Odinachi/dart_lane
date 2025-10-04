@@ -229,4 +229,20 @@ class FirebaseServices {
       return (data: null, error: e.toString());
     }
   }
+
+  Future<void> markProblemAsSolved(String id) async {
+    try {
+      final progressDoc = _firestore
+          .collection('Users')
+          .doc(_auth.currentUser?.uid)
+          .collection('progress')
+          .doc('current');
+
+      await progressDoc.set({
+        'current_dsa': FieldValue.arrayUnion([id])
+      }, SetOptions(merge: true));
+    } catch (e) {
+      // Handle error if needed
+    }
+  }
 }

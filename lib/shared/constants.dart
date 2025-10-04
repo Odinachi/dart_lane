@@ -458,12 +458,18 @@ MarkdownConfig config = isDarkTheme.value
 
 class ShadowContainer extends StatelessWidget {
   const ShadowContainer(
-      {super.key, this.desc, this.difficulty, this.title, this.onTap});
+      {super.key,
+      this.desc,
+      this.difficulty,
+      this.title,
+      this.onTap,
+      this.completed});
 
   final String? title;
   final String? desc;
   final String? difficulty;
   final VoidCallback? onTap;
+  final bool? completed;
 
   Color _getDifficultyColor(String difficulty) {
     switch (difficulty.toLowerCase()) {
@@ -487,7 +493,10 @@ class ShadowContainer extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.r),
           color: Theme.of(context).scaffoldBackgroundColor,
-          border: Border.all(color: AppColors.grey.withValues(alpha: .1)),
+          border: Border.all(
+              color: completed == true
+                  ? AppColors.green
+                  : AppColors.grey.withValues(alpha: .1)),
           boxShadow: [
             BoxShadow(
               color: AppColors.grey.withValues(alpha: .05),

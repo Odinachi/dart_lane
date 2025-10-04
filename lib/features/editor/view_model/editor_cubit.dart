@@ -95,6 +95,10 @@ class EditorCubit extends Cubit<EditorState> {
     }
   }
 
+  void markProblemAsSolved(String id) async {
+    await firebaseServices.markProblemAsSolved(id);
+  }
+
   void getProblemsForDSA(String id) async {
     try {
       emit(EditorLoadingProblems());
