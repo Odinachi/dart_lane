@@ -170,20 +170,27 @@ String _serializeResult(dynamic result) {
         }
       });
 
-      await runZoned(
+      runZoned(
         () async {
-          final result =
-              program.executeLib('package:dart_coder/main.dart', 'main');
-          if (result is Future) {
-            await result;
-          }
-          timer.cancel();
-          if (!completer.isCompleted) {
-            completer.complete(output);
+          try {
+            final result =
+                program.executeLib('package:dart_coder/main.dart', 'main');
+            if (result is Future) {
+              await result;
+            }
+            timer.cancel();
+            if (!completer.isCompleted) {
+              completer.complete(output);
+            }
+          } catch (e) {
+            timer.cancel();
+            if (!completer.isCompleted) {
+              completer.completeError('Runtime Error: $e');
+            }
           }
         },
         zoneSpecification: ZoneSpecification(
-          handleUncaughtError: (self, zone, error, _, stackTrace) {
+          handleUncaughtError: (self, parent, zone, error, stackTrace) {
             timer.cancel();
             if (!completer.isCompleted) {
               completer.completeError('Runtime Error: $error');

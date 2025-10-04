@@ -88,12 +88,11 @@ class _DsaListScreenState extends State<DsaListScreen> {
       body: SafeArea(
         child: BlocBuilder<EditorCubit, EditorState>(
           builder: (_, state) {
+            final cubit = context.read<EditorCubit>();
+            final dsaList = cubit.dsaList;
             if (state is EditorLoading) {
               return const Center(child: CircularProgressIndicator());
             } else if (state is DSAListLoaded || state is EditorInitial) {
-              final cubit = context.read<EditorCubit>();
-              final dsaList = cubit.dsaList;
-
               if (dsaList.isEmpty &&
                   state is DSAListLoaded &&
                   !state.isRefreshing) {
@@ -101,37 +100,34 @@ class _DsaListScreenState extends State<DsaListScreen> {
                   child: Text('No DSA problems found'),
                 );
               }
-
-              return RefreshIndicator(
-                onRefresh: _onRefresh,
-                child: ListView.builder(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  controller: _scrollController,
-                  physics: const AlwaysScrollableScrollPhysics(),
-                  itemCount: _getListItemCount(dsaList, state),
-                  itemBuilder: (_, index) {
-                    if (index == dsaList.length) {
-                      // Loading indicator at the bottom
-                      return _buildBottomLoader(state);
-                    }
-
-                    final dsaItem = dsaList[index];
-                    return ShadowContainer(
-                      onTap: () {
-                        AppRouter.push(AppRouter.editor,
-                            arg: EditorScreenArg(
-                                dsa: dsaItem, isPractice: true));
-                      },
-                      title: dsaItem.problemName,
-                      desc: dsaItem.description,
-                      difficulty: dsaItem.difficulty,
-                    );
-                  },
-                ),
-              );
             }
 
-            return const SizedBox.shrink();
+            return RefreshIndicator(
+              onRefresh: _onRefresh,
+              child: ListView.builder(
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                controller: _scrollController,
+                physics: const AlwaysScrollableScrollPhysics(),
+                itemCount: _getListItemCount(dsaList, state),
+                itemBuilder: (_, index) {
+                  if (index == dsaList.length) {
+                    // Loading indicator at the bottom
+                    return _buildBottomLoader(state);
+                  }
+
+                  final dsaItem = dsaList[index];
+                  return ShadowContainer(
+                    onTap: () {
+                      AppRouter.push(AppRouter.editor,
+                          arg: EditorScreenArg(dsa: dsaItem, isPractice: true));
+                    },
+                    title: dsaItem.problemName,
+                    desc: dsaItem.description,
+                    difficulty: dsaItem.difficulty,
+                  );
+                },
+              ),
+            );
           },
         ),
       ),

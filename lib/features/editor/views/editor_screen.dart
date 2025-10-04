@@ -131,22 +131,22 @@ class _EditorScreenState extends State<EditorScreen>
 
       await runZoned(
         () async {
-          final result =
-              program.executeLib('package:dart_coder/main.dart', 'main');
+          try {
+            final result =
+                program.executeLib('package:dart_coder/main.dart', 'main');
 
-          if (result is Future) {
-            await result;
+            if (result is Future) {
+              await result;
+            }
+          } catch (e, stackTrace) {
+            _outputNotifier.value += 'Runtime Error: $e\n';
+            _outputNotifier.value += 'Stack Trace: $stackTrace\n';
           }
         },
         zoneSpecification: ZoneSpecification(
-          handleUncaughtError: (self, zone, error, _, stackTrace) {
+          handleUncaughtError: (self, parent, zone, error, stackTrace) {
             _outputNotifier.value += 'Uncaught Error: $error\n';
             _outputNotifier.value += 'Stack Trace: $stackTrace\n';
-          },
-          errorCallback: (self, zone, error, _, stackTrace) {
-            _outputNotifier.value += 'Uncaught Error: $error\n';
-            _outputNotifier.value += 'Stack Trace: $stackTrace\n';
-            return null;
           },
           print: (self, parent, zone, line) {
             _outputNotifier.value += '$line\n';
