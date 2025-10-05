@@ -5,9 +5,11 @@ import 'package:dartcoder/shared/assets.dart';
 import 'package:dartcoder/shared/constants.dart';
 import 'package:dartcoder/shared/navigation/router.dart';
 import 'package:dartcoder/shared/theme.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -101,6 +103,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                         children: [
                           TextSpan(
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () async {
+                                final uri = Uri.parse(
+                                    'https://dartcoder-d57cb.web.app/terms.html');
+                                if (await canLaunchUrl(uri)) {
+                                  await launchUrl(uri,
+                                      mode: LaunchMode.externalApplication);
+                                }
+                              },
                             text: AppString.termsOfService,
                             style: Theme.of(context)
                                 .textTheme
@@ -123,6 +134,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 ),
                           ),
                           TextSpan(
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () async {
+                                final uri = Uri.parse(
+                                    'https://dartcoder-d57cb.web.app/privacy_policy.html');
+                                if (await canLaunchUrl(uri)) {
+                                  await launchUrl(uri,
+                                      mode: LaunchMode.externalApplication);
+                                }
+                              },
                             text: AppString.privacyPolicy,
                             style: Theme.of(context)
                                 .textTheme
