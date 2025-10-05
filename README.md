@@ -1,4 +1,4 @@
-# **Dartlane**
+# **Dartic**
 
 A comprehensive Flutter-based Dart learning platform with an integrated code editor, real-time compiler, interactive tutorials, and coding challenges. Inspired by DartPad but enhanced with educational features and progress tracking.
 
