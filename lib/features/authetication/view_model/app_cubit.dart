@@ -13,7 +13,9 @@ class AppCubit extends Cubit<AppState> {
 
   UserModel? profile;
   UserProgressModel? userProgress;
-  void signIn(bool isGoogle) async {
+  void signIn(
+    bool isGoogle,
+  ) async {
     emit(AuthLoading());
 
     final auth = isGoogle
@@ -21,7 +23,12 @@ class AppCubit extends Cubit<AppState> {
         : await firebaseServices.signInWithApple();
 
     if (auth.account != null) {
+      ;
       emit(AuthSuccessful());
+      createProfile(
+        firstName: auth.givenName ?? "",
+        lastName: auth.familyName ?? "",
+      );
     } else {
       emit(AuthError(auth.error ?? "Sign in failed"));
     }
@@ -38,7 +45,7 @@ class AppCubit extends Cubit<AppState> {
     }
     emit(AuthLoading());
     profile = (await firebaseServices.getProfile()).user;
-    if (profile != null) {
+    if (profile?.currentLevel != null) {
       userProgress = (await firebaseServices.getUserProgress()).progress;
       emit(AuthProfileExists());
     } else {
@@ -60,7 +67,7 @@ class AppCubit extends Cubit<AppState> {
   void createProfile(
       {required String firstName,
       required String lastName,
-      required String currentLevel}) async {
+      String? currentLevel}) async {
     emit(AuthLoading());
     final result = await firebaseServices.saveProfile(UserModel(
         uid: FirebaseAuth.instance.currentUser?.uid ?? '',

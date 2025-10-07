@@ -27,6 +27,14 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
   ];
 
   @override
+  void initState() {
+    firstNameController.text =
+        context.read<AppCubit>().profile?.firstName ?? "";
+    lastNameController.text = context.read<AppCubit>().profile?.lastName ?? "";
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return BlocBuilder<AppCubit, AppState>(builder: (_, state) {
       return Scaffold(

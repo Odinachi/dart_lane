@@ -5,20 +5,27 @@ import 'package:dartcoder/features/editor/models/dsa_list_model.dart';
 import 'package:dartcoder/features/editor/models/test_case.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:highlight/languages/go.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class FirebaseServices {
   final _auth = FirebaseAuth.instance;
   final _firestore = FirebaseFirestore.instance;
 
-  Future<OAuthCredential?> _getAppleCredential(isGoogle) async {
+  Future<({OAuthCredential? oAuth, String? familyName, String? givenName})>
+      _getAppleCredential(isGoogle) async {
     if (isGoogle) {
       await GoogleSignIn.instance.initialize();
       final googleUser =
           (await GoogleSignIn.instance.authenticate()).authentication;
-
-      return GoogleAuthProvider.credential(
+      final auth = GoogleAuthProvider.credential(
         idToken: googleUser.idToken,
+      );
+
+      return (
+        oAuth: auth,
+        familyName: auth.appleFullPersonName?.familyName,
+        givenName: auth.appleFullPersonName?.givenName
       );
     } else {
       final appleCredential = await SignInWithApple.getAppleIDCredential(
@@ -31,43 +38,83 @@ class FirebaseServices {
         ],
       );
 
-      return OAuthProvider("apple.com").credential(
-        idToken: appleCredential.identityToken,
-        accessToken: appleCredential.authorizationCode,
+      return (
+        oAuth: OAuthProvider("apple.com").credential(
+          idToken: appleCredential.identityToken,
+          accessToken: appleCredential.authorizationCode,
+        ),
+        familyName: appleCredential.familyName,
+        givenName: appleCredential.givenName
       );
     }
   }
 
   // Google Sign-In
-  Future<({UserCredential? account, String? error})> signInWithGoogle() async {
+  Future<
+      ({
+        UserCredential? account,
+        String? familyName,
+        String? givenName,
+        String? error
+      })> signInWithGoogle() async {
     try {
       final credential = await _getAppleCredential(true);
       return (
-        account: await _auth.signInWithCredential(credential!),
-        error: null
+        account: await _auth.signInWithCredential(credential.oAuth!),
+        error: null,
+        familyName: credential.familyName,
+        givenName: credential.givenName,
       );
     } catch (e) {
       if (e is FirebaseAuthException) {
-        return (account: null, error: e.message);
+        return (
+          account: null,
+          error: e.message,
+          familyName: null,
+          givenName: null
+        );
       }
-      return (account: null, error: e.toString());
+      return (
+        account: null,
+        error: e.toString(),
+        familyName: null,
+        givenName: null
+      );
     }
   }
 
   // Apple Sign-In
-  Future<({UserCredential? account, String? error})> signInWithApple() async {
+  Future<
+      ({
+        UserCredential? account,
+        String? familyName,
+        String? givenName,
+        String? error
+      })> signInWithApple() async {
     try {
       final credential = await _getAppleCredential(false);
       return (
-        account: await _auth.signInWithCredential(credential!),
-        error: null
+        account: await _auth.signInWithCredential(credential.oAuth!),
+        error: null,
+        familyName: credential.familyName,
+        givenName: credential.givenName,
       );
     } catch (e) {
       if (e is FirebaseAuthException) {
-        return (account: null, error: e.message);
+        return (
+          account: null,
+          error: e.message,
+          familyName: null,
+          givenName: null
+        );
       }
 
-      return (account: null, error: e.toString());
+      return (
+        account: null,
+        error: e.toString(),
+        familyName: null,
+        givenName: null
+      );
     }
   }
 
@@ -153,11 +200,11 @@ class FirebaseServices {
             _auth.currentUser?.providerData.firstOrNull?.providerId ==
                 'google.com');
 
-        if (cred == null) {
+        if (cred.oAuth == null) {
           return (deleted: false, error: "Re-authentication failed.");
         }
         // Reauthenticate user before deletion
-        await user.reauthenticateWithCredential(cred);
+        await user.reauthenticateWithCredential(cred.oAuth!);
 
         // Delete user data from Firestore
         await _firestore.collection('Users').doc(user.uid).delete();
