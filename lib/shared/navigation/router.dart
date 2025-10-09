@@ -1,5 +1,5 @@
-import 'package:dartcoder/features/authetication/views/create_profile_screen.dart';
-import 'package:dartcoder/features/authetication/views/onboarding_screen.dart';
+import 'package:dartcoder/features/authentication/views/create_profile_screen.dart';
+import 'package:dartcoder/features/authentication/views/onboarding_screen.dart';
 import 'package:dartcoder/features/courses/views/course_quiz.dart';
 import 'package:dartcoder/features/courses/views/quiz_score_screen.dart';
 import 'package:dartcoder/features/dashboard/views/dashboard_screen.dart';

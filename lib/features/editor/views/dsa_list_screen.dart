@@ -1,4 +1,4 @@
-import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
+import 'package:dartcoder/features/authentication/view_model/app_cubit.dart';
 import 'package:dartcoder/features/editor/view_model/editor_cubit.dart';
 import 'package:dartcoder/features/editor/views/editor_screen.dart';
 import 'package:dartcoder/shared/app_string.dart';

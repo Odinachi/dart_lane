@@ -1,5 +1,5 @@
-import 'package:dartcoder/features/authetication/models/user_model.dart';
-import 'package:dartcoder/features/authetication/models/user_progress.dart';
+import 'package:dartcoder/features/authentication/models/user_model.dart';
+import 'package:dartcoder/features/authentication/models/user_progress.dart';
 import 'package:dartcoder/services/firebase_services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 

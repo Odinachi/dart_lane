@@ -1,5 +1,5 @@
-import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
-import 'package:dartcoder/features/authetication/views/onboarding_screen.dart';
+import 'package:dartcoder/features/authentication/view_model/app_cubit.dart';
+import 'package:dartcoder/features/authentication/views/onboarding_screen.dart';
 import 'package:dartcoder/features/courses/views/courses_list_screen.dart';
 import 'package:dartcoder/features/editor/views/editor_screen.dart';
 import 'package:dartcoder/features/profile/views/profile_screen.dart';

@@ -1,4 +1,4 @@
-import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
+import 'package:dartcoder/features/authentication/view_model/app_cubit.dart';
 import 'package:dartcoder/features/courses/models/course_model.dart';
 import 'package:dartcoder/features/courses/views/course_details.dart';
 import 'package:dartcoder/main.dart';

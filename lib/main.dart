@@ -1,6 +1,6 @@
-import 'package:dartcoder/features/authetication/view_model/app_cubit.dart';
+import 'package:dartcoder/features/authentication/view_model/app_cubit.dart';
 import 'package:dartcoder/features/editor/view_model/editor_cubit.dart';
-import 'package:dartcoder/firebase_options.dart';
+
 import 'package:dartcoder/services/cache_service.dart';
 import 'package:dartcoder/services/firebase_services.dart';
 import 'package:dartcoder/services/notification_service.dart';
