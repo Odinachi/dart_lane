@@ -8,8 +8,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 part 'app_state.dart';
 
 class AppCubit extends Cubit<AppState> {
-  AppCubit({required this.firebaseServices}) : super(AuthInitial());
+  AppCubit({FirebaseAuth? firebaseAuth, required this.firebaseServices})
+      : firebaseAuth = firebaseAuth ?? FirebaseAuth.instance,
+        super(AuthInitial());
   final FirebaseServices firebaseServices;
+  final FirebaseAuth firebaseAuth;
 
   UserModel? profile;
   UserProgressModel? userProgress;
@@ -40,7 +43,7 @@ class AppCubit extends Cubit<AppState> {
   }
 
   void getUserProfile() async {
-    if (FirebaseAuth.instance.currentUser == null) {
+    if (firebaseAuth.currentUser == null) {
       return;
     }
     emit(AuthLoading());
@@ -70,12 +73,12 @@ class AppCubit extends Cubit<AppState> {
       String? currentLevel}) async {
     emit(AuthLoading());
     final result = await firebaseServices.saveProfile(UserModel(
-        uid: FirebaseAuth.instance.currentUser?.uid ?? '',
+        uid: firebaseAuth.currentUser?.uid ?? '',
         firstName: firstName,
         lastName: lastName,
         createdAt: DateTime.now(),
         currentLevel: currentLevel,
-        email: FirebaseAuth.instance.currentUser?.email ?? ''));
+        email: firebaseAuth.currentUser?.email ?? ''));
     if (result.success == true) {
       profile = (await firebaseServices.getProfile()).user;
       emit(AuthProfileCreated());
@@ -85,7 +88,7 @@ class AppCubit extends Cubit<AppState> {
   }
 
   void updatePassedCourses(num id) async {
-    if (FirebaseAuth.instance.currentUser == null) {
+    if (firebaseAuth.currentUser == null) {
       return;
     }
     userProgress ??= userProgress
@@ -95,7 +98,7 @@ class AppCubit extends Cubit<AppState> {
   }
 
   void updateCurrentCourse(num id) async {
-    if (FirebaseAuth.instance.currentUser == null) {
+    if (firebaseAuth.currentUser == null) {
       return;
     }
     if (userProgress == null) {

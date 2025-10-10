@@ -17,6 +17,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.62"
+  adaptive_number:
+    dependency: transitive
+    description:
+      name: adaptive_number
+      sha256: "3a567544e9b5c9c803006f51140ad544aedc79604fd4f3f2c1380003f97c1d77"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   analyzer:
     dependency: transitive
     description:
@@ -210,6 +218,14 @@ packages:
       url: "https://github.com/Odinachi/dart_eval.git"
     source: git
     version: "0.8.2"
+  dart_jsonwebtoken:
+    dependency: transitive
+    description:
+      name: dart_jsonwebtoken
+      sha256: "21ce9f8a8712f741e8d6876a9c82c0f8a257fe928c4378a91d8527b92a3fd413"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.0"
   dart_style:
     dependency: "direct main"
     description:
@@ -242,6 +258,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.4.5"
+  ed25519_edwards:
+    dependency: transitive
+    description:
+      name: ed25519_edwards
+      sha256: "6ce0112d131327ec6d42beede1e5dfd526069b18ad45dcf654f15074ad9276cd"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.1"
   equatable:
     dependency: "direct main"
     description:
@@ -314,6 +338,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.0"
+  firebase_auth_mocks:
+    dependency: "direct dev"
+    description:
+      name: firebase_auth_mocks
+      sha256: ee1076150ea51d181ae24d5f8e2686a1926b7cc54e25c0deaa8ac58705025551
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.15.1"
   firebase_auth_platform_interface:
     dependency: transitive
     description:
@@ -394,6 +426,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  fixnum:
+    dependency: transitive
+    description:
+      name: fixnum
+      sha256: b6dc7065e46c974bc7c5f143080a6764ec7a4be6da1285ececdc37be96de53be
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -601,6 +641,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.2.1"
+  google_sign_in_mocks:
+    dependency: "direct dev"
+    description:
+      name: google_sign_in_mocks
+      sha256: "3e3cc386fbaa11822f7fa4056cf25de4f1328b9eb9281685d5a13f6ba4dc895d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.1"
   google_sign_in_platform_interface:
     dependency: transitive
     description:
@@ -793,6 +841,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
+  mock_exceptions:
+    dependency: transitive
+    description:
+      name: mock_exceptions
+      sha256: "6e3e623712d2c6106ffe9e14732912522b565ddaa82a8dcee6cd4441b5984056"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.8.2"
   mocktail:
     dependency: "direct dev"
     description:
@@ -889,6 +945,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  pointycastle:
+    dependency: transitive
+    description:
+      name: pointycastle
+      sha256: "92aa3841d083cc4b0f4709b5c74fd6409a3e6ba833ffc7dc6a8fee096366acf5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.0"
   pool:
     dependency: transitive
     description:
@@ -1102,6 +1166,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.10.1"
+  sprintf:
+    dependency: transitive
+    description:
+      name: sprintf
+      sha256: "1fc9ffe69d4df602376b52949af107d8f5703b77cda567c4d7d86a0693120f23"
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.0.0"
   stack_trace:
     dependency: transitive
     description:
@@ -1246,6 +1318,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.4"
+  uuid:
+    dependency: transitive
+    description:
+      name: uuid
+      sha256: a5be9ef6618a7ac1e964353ef476418026db906c4facdedaa299b7a2e71690ff
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.5.1"
   vector_graphics:
     dependency: transitive
     description:
