@@ -12,7 +12,7 @@ class FirebaseServices {
   final _firestore = FirebaseFirestore.instance;
 
   Future<({OAuthCredential? oAuth, String? familyName, String? givenName})>
-      _getAppleCredential(isGoogle) async {
+      _getAppleCredential(bool isGoogle) async {
     if (isGoogle) {
       await GoogleSignIn.instance.initialize();
       final googleUser =
