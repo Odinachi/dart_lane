@@ -23,7 +23,6 @@ class AppCubit extends Cubit<AppState> {
         : await firebaseServices.signInWithApple();
 
     if (auth.account != null) {
-      ;
       emit(AuthSuccessful());
       createProfile(
         firstName: auth.givenName ?? "",
