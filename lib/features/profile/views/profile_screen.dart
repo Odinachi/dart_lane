@@ -127,7 +127,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         body: BlocBuilder<AppCubit, AppState>(builder: (_, state) {
           final user = context.read<AppCubit>().profile;
-          final userProgress = context.read<AppCubit>().userProgress;
           final currentCourse = courseList
               .reduce((value, element) => value + element)
               .where((e) =>

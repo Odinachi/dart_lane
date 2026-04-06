@@ -75,7 +75,7 @@ final darkTheme = ThemeData(
   ),
   iconTheme: const IconThemeData(color: Colors.white),
   dividerColor: Colors.blueGrey,
-  tabBarTheme:  TabBarThemeData(
+  tabBarTheme: TabBarThemeData(
     labelColor: Colors.white,
     unselectedLabelColor: Colors.white70,
     indicator: UnderlineTabIndicator(

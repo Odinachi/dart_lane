@@ -131,7 +131,7 @@ void main() {
             error: null
           ),
         );
-        // ✅ Use the mocked firebaseAuth instance instead of FirebaseAuth.instance
+
         when(() => mockFirebaseAuth.currentUser).thenReturn(mockUser);
         return appCubit;
       },
@@ -147,7 +147,7 @@ void main() {
           (_) async =>
               (user: UserModel(uid: '123', firstName: 'Samuel'), error: null),
         );
-        // ✅ Use the mocked firebaseAuth instance
+
         when(() => mockFirebaseAuth.currentUser).thenReturn(mockUser);
         return appCubit;
       },
@@ -214,7 +214,7 @@ void main() {
       build: () {
         when(() => mockFirebaseServices.updatePassedCourses(any()))
             .thenAnswer((_) async {});
-        // ✅ Use the mocked firebaseAuth instance
+
         when(() => mockFirebaseAuth.currentUser).thenReturn(mockUser);
         return appCubit;
       },
@@ -228,7 +228,7 @@ void main() {
       build: () {
         when(() => mockFirebaseServices.updateCurrentCourse(any()))
             .thenAnswer((_) async {});
-        // ✅ Use the mocked firebaseAuth instance
+
         when(() => mockFirebaseAuth.currentUser).thenReturn(mockUser);
         return appCubit;
       },
