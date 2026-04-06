@@ -181,7 +181,11 @@ class _EditorScreenState extends State<EditorScreen>
 
       if (_testResultNotifier.value?.passedCount ==
           testSuite?.testCases?.length) {
-        context.read<AppCubit>().markProblemAsSolved(widget.arg?.dsa?.id ?? "");
+        if (mounted) {
+          context
+              .read<AppCubit>()
+              .markProblemAsSolved(widget.arg?.dsa?.id ?? "");
+        }
       }
     } catch (e) {
       // Handle test execution error

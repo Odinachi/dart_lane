@@ -5,7 +5,6 @@ import 'package:dartcoder/features/editor/models/dsa_list_model.dart';
 import 'package:dartcoder/features/editor/models/test_case.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:highlight/languages/go.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class FirebaseServices {
@@ -13,7 +12,7 @@ class FirebaseServices {
   final _firestore = FirebaseFirestore.instance;
 
   Future<({OAuthCredential? oAuth, String? familyName, String? givenName})>
-      _getAppleCredential(isGoogle) async {
+      _getAppleCredential(bool isGoogle) async {
     if (isGoogle) {
       await GoogleSignIn.instance.initialize();
       final googleUser =
