@@ -32,7 +32,6 @@ class UserProgressModel {
       );
 
   Map<String, dynamic> toJson() => {
-    
         "current_course": currentCourse,
         "passed_courses": passedCourses == null
             ? []

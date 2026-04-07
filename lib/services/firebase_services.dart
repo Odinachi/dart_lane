@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dartcoder/features/authetication/models/user_model.dart';
-import 'package:dartcoder/features/authetication/models/user_progress.dart';
+import 'package:dartcoder/features/authentication/models/user_model.dart';
+import 'package:dartcoder/features/authentication/models/user_progress.dart';
 import 'package:dartcoder/features/editor/models/dsa_list_model.dart';
 import 'package:dartcoder/features/editor/models/test_case.dart';
 import 'package:firebase_auth/firebase_auth.dart';
